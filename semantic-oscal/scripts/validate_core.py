@@ -48,10 +48,17 @@ def fail(section, msg):
     fails.append(f"[{section}] {msg}")
 
 # ---------------- canonical form ----------------
+def _canon(o):
+    # RFC 8785 member ordering: UTF-16 code units, not code points (P9b-3).
+    if isinstance(o, dict):
+        return {k: _canon(o[k]) for k in sorted(o.keys(), key=lambda s: s.encode("utf-16-be"))}
+    if isinstance(o, list):
+        return [_canon(x) for x in o]
+    return o
 def canonical(obj):
     o = copy.deepcopy(obj)
     if isinstance(o, dict): o.pop("annotations", None)
-    return json.dumps(o, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+    return json.dumps(_canon(o), separators=(",", ":"), ensure_ascii=False)
 def sdig(obj):
     return "sha256:" + hashlib.sha256(canonical(obj).encode("utf-8")).hexdigest()
 
@@ -216,6 +223,8 @@ def validate_object(section, path, obj):
     if viol: fail(section, f"{path}: optional empty containers present: {viol}")
     if t == "requirement":
         sids = {s["id"] for s in obj["statements"]}
+        if len(sids) != len(obj["statements"]):
+            fail(section, f"{path}: duplicate statement ids (unique-within, B.1.3) — identity addressing becomes ambiguous")
         for s in obj["statements"]:
             declared = {p["name"] for p in s.get("parameters", [])}
             for lang, txt in s["prose"].items():
@@ -242,6 +251,8 @@ def validate_bundle(bdir):
         ok(section)
     listed = {e["path"]: e for e in manifest.get("objects", [])}
     typec = collections.Counter()
+    seen_ids = {}
+    bundle_objs = {}
     for rel, entry in listed.items():
         fp = os.path.join(bdir, rel)
         if not os.path.exists(fp):
@@ -256,6 +267,18 @@ def validate_bundle(bdir):
         if t: typec[t] += 1
         if obj.get("id") != entry["id"]:
             fail(section, f"{rel}: manifest id != object id")
+        if obj.get("id") in seen_ids:
+            fail(section, f"{rel}: object id already used by {seen_ids[obj['id']]} (unique-within — the twin-catalog corpse)")
+        seen_ids[obj.get("id")] = rel
+        if t: bundle_objs[obj["id"]] = (t, obj)
+    # closure-required refs: Set members MUST land in the bundle (B.1.1;
+    # mapping endpoints and party URIs are landmark refs — normative
+    # taxonomy is backlog #16)
+    for oid, (t, obj) in bundle_objs.items():
+        if t == "requirementSet":
+            for m in obj.get("members", []):
+                if m["ref"] not in bundle_objs:
+                    fail(section, f"{oid}: member ref does not close in bundle: {m['ref']}")
     on_disk = set()
     for base, _, files in os.walk(bdir):
         for fn in files:

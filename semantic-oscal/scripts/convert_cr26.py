@@ -28,9 +28,16 @@ def w(p,o):
     fp=os.path.join(OUT,p); os.makedirs(os.path.dirname(fp),exist_ok=True)
     open(fp,"w",encoding="utf-8").write(json.dumps(o,indent=1,ensure_ascii=False)+"\n")
 def shaf(p): return "sha256:"+hashlib.sha256(open(os.path.join(OUT,p),"rb").read()).hexdigest()
+def _canon(o):
+    if isinstance(o, dict):
+        return {k: _canon(o[k]) for k in sorted(o.keys(), key=lambda s: s.encode("utf-16-be"))}
+    if isinstance(o, list):
+        return [_canon(x) for x in o]
+    return o
+
 def sdig(o):
     o=copy.deepcopy(o); o.pop("annotations",None)
-    return "sha256:"+hashlib.sha256(json.dumps(o,sort_keys=True,separators=(",",":"),ensure_ascii=False).encode()).hexdigest()
+    return "sha256:"+hashlib.sha256(json.dumps(_canon(o),separators=(",",":"),ensure_ascii=False).encode()).hexdigest()
 def slug(s): return re.sub(r"[^a-z0-9]+","-",(s or "").lower()).strip("-")[:60] or "x"
 
 LANG="en"   # corpus language: payload free text is language-tagged {LANG: value}
@@ -392,8 +399,8 @@ def stub(path,fid,mods,props):
         "note":"ILLUSTRATIVE STUB - normative schemas ship with the v0.6 schema deliverable",
         "schema":{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","properties":props}})
 stub("schemas/terminology-stub.json",F_TERM.split("@")[0],[],{"terms":{"type":"object"}})
-stub("schemas/reporting-obligation-stub.json",F_REP.split("@")[0],[],{"notification":{"type":"array"}})
-stub("schemas/effectivity-stub.json",F_EFF.split("@")[0],[],{"default":{"type":"object"}})
+stub("schemas/reporting-obligation-stub.json",F_REP.split("@")[0],["assessment"],{"notification":{"type":"array"}})
+stub("schemas/effectivity-stub.json",F_EFF.split("@")[0],["selection"],{"default":{"type":"object"}})
 stub("schemas/assessment-criteria-stub.json",F_ACRIT.split("@")[0],["assessment"],{"required-artifacts":{"type":"array"}})
 stub("schemas/cr26-scope-stub.json",F_SCOPE.split("@")[0],["selection"],{"classes":{"type":"array"}})
 stub("schemas/cr26-narrative-stub.json",F_NARR.split("@")[0],[],
@@ -434,7 +441,7 @@ j={"source":d["info"]["title"],"version":VER,
    "dangling-related":dangling_related,
    "unmapped":[{"path":p,"count":n} for p,n in unmapped],
    "path-map":[{"path":p,"count":n,"level":l,"destination":t} for p,n,l,t in rows]}
-json.dump(j,open(RJS,"w"),ensure_ascii=False,indent=1)
+json.dump(j,open(RJS,"w",encoding="utf-8"),ensure_ascii=False,indent=1)
 
 md=[f"# CR26 -> Semantic Core: Coverage Report (computed)\n",
  f"Source: **{d['info']['title']}** v{VER} (bespoke JSON; not OSCAL).\n",

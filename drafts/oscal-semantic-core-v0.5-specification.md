@@ -23,7 +23,9 @@ complexity.
 
 **Lineage.** v0.1 → pass 1 → v0.2 → pass 2 + census r1/r2 → v0.3 → passes
 3 (SOL) + 4 (H) → v0.4 → passes 5 (Grok, validating), 6 (P6-F1…4),
-7 (P7-B1…4, gaps, mapping), 8 (P8-E1…4, gaps) → **v0.5**.
+7 (P7-B1…4, gaps, mapping), 8 (P8-E1…4, gaps) → **v0.5** → v0.6 cycle:
+review rounds 1–2 (adjudicated, F.6/F.7) + P9 twin adversarial runs
+(adjudicated, F.8).
 
 ---
 
@@ -261,7 +263,7 @@ the lattice is the first machine-checkable encoding of that distinction.
 
 - `elapsed-duration {num, unit ∈ seconds|minutes|hours}` — computable
   everywhere.
-- `calendar-period {num, unit ∈ days|bizdays|months|years, calendar-ref?,
+- `calendar-period {num, unit ∈ days|bizdays|weeks|months|years, calendar-ref?,
   timezone?, cutoff?}` — **representable without context, computable only
   with it**: deadline arithmetic over a calendar-period without a resolvable
   calendar context MUST fail closed with an explained error. CR26's
@@ -352,6 +354,8 @@ modality):**
 | `set-parameter` | MUST validate against the parameter's declared type / cardinality / choices / range (P6-F2); out-of-bounds only via Deviation. Additionally, an authority MAY declare per parameter `tightening: lower | higher | none`; a change against the declared direction ⇒ Deviation (CR26 deadlines would declare `lower`) |
 | `detach-facet` | Deviation when the facet's `modifies-semantics` ≠ [] |
 | `replace-prose` | carries `intent: editorial | substantive`; substantive ⇒ Deviation |
+| `set-field` | whitelisted non-normative fields only (`title`, `label`, `sequence`, `annotations`) — the whitelist is a schema enum since the P9 cycle; anything normative goes through its own operation |
+| `attach-facet` | Deviation when the attached facet's `modifies-semantics` ≠ [] (symmetric with detach — B.3) |
 | `add-relation` / `remove-relation` | free (relations are informative; normative cross-framework claims are Mapping objects, D20, with their own lifecycle) |
 | `excludes` | **selection, never weakening — no Deviation** |
 
@@ -667,6 +671,13 @@ replaces; NIST IR 8477 / OLIR (relationship semantics).
    validate green — 5,478 object validations, both digests re-verified
    per object, by-statement keys and `{param:}` bindings checked, every
    object matching exactly one kernel shape; all nine types exercised.
+   P9 scope correction: 5,478 = 5,470 manifest-listed objects + 8
+   manifest checks; the example bundle's 13 objects (the only instances
+   of the five lifecycle types) are shape-checked without digest
+   verification. Appendix-B items parked "at gate item 2" that this
+   delivery did not include (B.1.3 negative corpus, B.1.8 conditional
+   instantiation, B.1.7 DSSE profile) are re-parked in backlog #18 —
+   they did not silently close.
 3. **Lifecycle corpus** beyond catalogs: NIST SSP/AP/AR/POA&M + 1.2.2
    Mapping examples; FedRAMP implementation/assessment data; CSA CAIQ;
    SCF mappings; representative PCI customized-approach cases. In scope

@@ -1,8 +1,11 @@
 # OSCAL Semantic Core — Decision Rationale Register (v0.5)
-## Every decision, justified against the three north-star criteria
+## Every decision, justified against the four north-star tests
 ### 2026-07-18
 
-**The three tests (session directive).** Every decision below is justified
+**The four tests (session directive; P9 Finding 0 erratum: this header
+once said "three" — the scoring axes below FOLD tests 3 and 4 into one
+complexity axis, which is a presentation choice, not a different north
+star).** Every decision below is justified
 against: **Customer** — a measured need of the authorities and users (ISM,
 BSI, CR26 census; SCF/CIS/CSA/NIST-lifecycle evidence), never taste;
 **Simplicity** — fewer concepts, fewer ambiguities, learnable and

@@ -1,7 +1,9 @@
 {
  "id": "https://ns.oscal.org/stdlib/facet/effectivity",
  "version": "1.0.0",
- "modifies-semantics": [],
+ "modifies-semantics": [
+  "selection"
+ ],
  "note": "ILLUSTRATIVE STUB - normative schemas ship with the v0.6 schema deliverable",
  "schema": {
   "$schema": "https://json-schema.org/draft/2020-12/schema",

@@ -92,8 +92,10 @@ attestations with semantic digests — the converters in
 **normative kernel JSON Schema**, six stdlib facet descriptors, a
 54-vector conformance corpus, and the reference validator
 ([`validate_core.py`](semantic-oscal/scripts/validate_core.py)) — which
-validates all nine corpus bundles green: 5,478 objects, both digests
-re-verified each, every object matching exactly one kernel shape.
+validates the eight corpus bundles plus the example bundle green:
+5,470 manifest-listed objects with both digests re-verified each (plus 8
+manifest checks and 13 example objects shape-checked without digests),
+every object matching exactly one kernel shape.
 
 ### As a human
 
@@ -119,8 +121,8 @@ schema-conformant JSON.
 ### As a specification
 
 - [`drafts/oscal-semantic-core-v0.5-specification.md`](drafts/oscal-semantic-core-v0.5-specification.md) — the normative draft
-- [`drafts/oscal-semantic-core-decision-rationale-register.md`](drafts/oscal-semantic-core-decision-rationale-register.md) — 21 decisions, each scored against the north star, with rejected alternatives
-- [`drafts/oscal-semantic-core-v0.6-spec-feedback-backlog.md`](drafts/oscal-semantic-core-v0.6-spec-feedback-backlog.md) — 11 open items, evidence + disposition + source each
+- [`drafts/oscal-semantic-core-decision-rationale-register.md`](drafts/oscal-semantic-core-decision-rationale-register.md) — 22 decisions, each scored against the north star, with rejected alternatives
+- [`drafts/oscal-semantic-core-v0.6-spec-feedback-backlog.md`](drafts/oscal-semantic-core-v0.6-spec-feedback-backlog.md) — the living input queue for v0.6: items enter with counts, leave via register entries
 
 ### As evidence
 
@@ -139,7 +141,9 @@ The census corpora (gate 1):
 | [FedRAMP-CR26](converted_examples/FedRAMP-CR26/cr26-coverage-report.md) | CR26 bespoke JSON, v2026.07.14.01 | 292 Requirements · 373 Mappings · 91 Sets · 4 Tailorings | 7,294 / 7,294 |
 
 Validation corpora (converted 2026-07-21; the model held without kernel
-changes):
+changes beyond the same morning's already-decided D9-rev parameter
+`label`/`default` — evidenced by the census corpus (BSI ×179), decided
+before these conversions ran, and first exercised by DE.C3A):
 
 | Corpus | Source | Emitted | Coverage |
 |---|---|---|---|
@@ -150,8 +154,10 @@ changes):
 | [DE.C3A](converted_examples/DE.C3A/c3a-coverage-report.md) | BSI C3A v1.0, OSCAL 1.2.2 (GS++ grammar family) | 30 Requirements · 30 typed parameters (first `label`/`default` use) · 9 Sets | 1,093 / 1,093 |
 
 The reports declare every conversion rule with counts, and report source
-defects rather than repairing them — the BSI run surfaces all 216
-pseudo-placeholders for the authors' queue.
+defects rather than repairing them — the BSI run surfaces all 213
+pseudo-placeholders in the current GS++ catalog for the authors' queue
+(the census figure of 216 included MS-TLS's 3, dropped from the corpus
+2026-07-21).
 
 ### Orientation
 
