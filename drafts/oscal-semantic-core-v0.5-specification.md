@@ -766,7 +766,9 @@ than the register's prose) and the deep-research open items. Full
 entries in the register ("Amendments — v0.6 cycle, round 2"); normative
 in D3/D9/D13, the schema, and Appendices A–C. Backlog #13/#14/#15/#21/
 #22/#23/#25/#27/#28 **closed**; #20/#24/#26 **narrowed** (residuals on
-the converter rerun / gate-4 engines); #10/#12/#18 open. Summary:
+the converter rerun / gate-4 engines); **#12 decided** (D9 rev 2 — the
+`text` primitive; EU-27-languages rationale; delivery rides the rerun);
+#10/#18 open. Summary:
 **#25** op-law completed (`set-parameter` bounds/tightening +
 `remove-relation(required)` now enforced — the P6-F2 backdoor was
 shipped unenforced); **#24** tier reported distinctly (spec:399), proven
