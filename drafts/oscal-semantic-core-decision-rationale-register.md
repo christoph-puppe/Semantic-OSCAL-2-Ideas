@@ -455,6 +455,23 @@ catalogs into every bundle that maps to them.
 **Trade-off.** A consumer resolving a landmark ref needs the other
 bundle — exactly what Mapping provenance and pinning are for.
 
+## P9-applied — The layered tier anchor *(backlog #19, closed 2026-07-21)*
+**Decision.** Tier is derived, never stipulated: id-origin match against
+the selected content = authority-CLAIMED; an in-bundle Attestation by
+the content's authority covering the Tailoring (digest-verified) =
+authority-PROVEN, and proof beats prefix; else consumer. Deviation
+duties bind at consumer tier; claimed/proven are reported distinctly.
+**Customer.** P9b-6 proved two conformant tools could disagree on one
+bundle's validity because the duty hinged on a tier no artifact carried
+— the implementation-defined-behavior pattern D15 exists to abolish.
+**Simplicity.** One string comparison for the claim; one digest + one
+origin comparison for the proof. Both offline, both sealed-mode.
+**Complexity ↓.** No tier field to author, forge, or forget — the data
+already says who selected whose content and who signed.
+**Trade-off.** Prefix claims are honest-publisher signals (anyone can
+mint under a URI they don't control) — which is exactly why the proven
+layer exists and why tools MUST report the difference.
+
 ## P9-applied — Facet enforcement executable *(backlog #17, closed 2026-07-21)*
 **Decision.** The Portable-tier rule runs: stdlib facet payloads
 validate against the normative descriptors; non-stdlib facets validate

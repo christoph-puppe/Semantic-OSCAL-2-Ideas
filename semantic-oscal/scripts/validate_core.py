@@ -106,6 +106,77 @@ def facet_errors(objs_or_obj, pinned, path="?"):
                 errs.append(f"{pth}: facet '{key}' payload violates its schema: {err.message[:110]} @ {'/'.join(map(str, err.absolute_path))}")
     return errs
 
+# tier anchor (backlog #19, layered - D13 rev 2): id-prefix derivation gives
+# authority-CLAIMED; an in-bundle Attestation whose signer shares the selected
+# content's origin and whose subjects include the Tailoring (digest-verified)
+# upgrades to authority-PROVEN; anything else is consumer. Deviation duties
+# bind at consumer tier only; claimed/proven are reported distinctly.
+STDLIB_DECL = {}
+for _fn in sorted(os.listdir(os.path.join(SKILL, "schemas", "stdlib"))):
+    if _fn.endswith(".json"):
+        _d = json.load(open(os.path.join(SKILL, "schemas", "stdlib", _fn), encoding="utf-8"))
+        STDLIB_DECL[_d["id"]] = _d.get("modifies-semantics", [])
+
+def uri_origin(u):
+    p = str(u).split("/")
+    return "/".join(p[:3]) if str(u).startswith("http") and len(p) >= 3 else str(u)
+
+def derive_tier(tobj, objs, sdig_fn):
+    origins = set()
+    for s in tobj.get("selects", []):
+        origins.add(uri_origin(s["set-ref"]) if "set-ref" in s else "<predicate>")
+    content_origin = next(iter(origins)) if len(origins) == 1 and "<predicate>" not in origins else None
+    claimed = content_origin is not None and uri_origin(tobj["id"]) == content_origin
+    if content_origin:
+        for (t, o) in objs.values():
+            if t != "attestation" or uri_origin(o.get("signer", "")) != content_origin:
+                continue
+            for subj in o.get("subject-semantic-digests", []):
+                if isinstance(subj, dict) and subj.get("id") == tobj["id"] \
+                   and subj.get("semantic-digest") == sdig_fn(tobj):
+                    return "authority-proven"
+    return "authority-claimed" if claimed else "consumer"
+
+def tailoring_duty_errors(objs, pinned_decl=None, sdig_fn=None):
+    """Op-law enforcement with the derived tier (D13 + #19)."""
+    errs = []
+    pd = pinned_decl or {}
+    for oid, (t, tobj) in objs.items():
+        if t != "tailoring": continue
+        tier = derive_tier(tobj, objs, sdig_fn or sdig)
+        for op in tobj.get("operations", []):
+            has_dev = "deviation" in op or "deviation-ref" in op
+            duty = None
+            if op["op"] == "set-modality":
+                tgt = objs.get(op["requirement-ref"])
+                if tgt and tgt[0] == "requirement":
+                    stmt = next((s for s in tgt[1]["statements"] if s["id"] == op.get("statement-id")), None)
+                    if stmt:
+                        v = modality_verdict_py(stmt["modality"], op["modality"])
+                        if v != "monotone": duty = f"non-monotone set-modality ({v})"
+            elif op["op"] == "replace-prose" and op.get("intent") == "substantive":
+                duty = "substantive replace-prose"
+            elif op["op"] in ("attach-facet", "detach-facet"):
+                base = str(op.get("facet", "")).rsplit("@", 1)[0]
+                decl = STDLIB_DECL.get(base, pd.get(base))
+                if decl: duty = f"{op['op']} of a semantics-bearing facet {decl}"
+            if duty and not has_dev and tier == "consumer":
+                errs.append(f"{oid}: {duty} without a Deviation at consumer tier "
+                            f"(derived tier: {tier}; B.1.6/D13 rev 2)")
+    return errs
+
+OBL_ORD = {"unspecified": 0, "may": 1, "should": 2, "must": 3}
+PRO_ORD = {"unspecified": 0, "should-not": 1, "must-not": 2}
+def modality_verdict_py(frm, to):
+    if frm == to or frm == "unspecified": return "monotone"
+    if to == "unspecified": return "easing"
+    if frm == "may" and to == "may-only": return "monotone"
+    if frm == "may-only" and to == "may": return "easing"
+    if "may-only" in (frm, to): return "axis-change"
+    if frm in OBL_ORD and to in OBL_ORD: return "monotone" if OBL_ORD[to] >= OBL_ORD[frm] else "easing"
+    if frm in PRO_ORD and to in PRO_ORD: return "monotone" if PRO_ORD[to] >= PRO_ORD[frm] else "easing"
+    return "axis-change"
+
 # per-type optional array/object fields (D3.3: optional empties MUST be absent;
 # required fields stay even when empty)
 OPTIONAL_CONTAINERS = {"aliases", "canonical-alias", "replaces", "relations", "facets",
@@ -300,6 +371,29 @@ def inferType_single(o):
 DEV_NEXT = {"investigating": {"pending", "withdrawn"}, "pending": {"approved", "withdrawn"},
             "approved": set(), "withdrawn": set()}
 FIND_NEXT = {"open": {"in-remediation", "closed"}, "in-remediation": {"closed"}, "closed": set()}
+def run_tiers():
+    v = json.load(open(os.path.join(CONF, "tier-vectors.json"), encoding="utf-8"))
+    for case in v["vectors"]:
+        # substitute live-computed digests BEFORE type inference — the
+        # COMPUTE placeholder would otherwise fail the digest pattern
+        by_id = {o["id"]: o for o in case["objects"]}
+        for o in case["objects"]:
+            for subj in o.get("subject-semantic-digests", []) or []:
+                if isinstance(subj, dict) and subj.get("semantic-digest") == "COMPUTE":
+                    tgt = by_id.get(subj["id"])
+                    if tgt: subj["semantic-digest"] = sdig(tgt)
+        objs = {}
+        for o in case["objects"]:
+            t = inferType_single(o)
+            if t: objs[o["id"]] = (t, o)
+        tobj = next(o for (t, o) in objs.values() if t == "tailoring")
+        tier = derive_tier(tobj, objs, sdig)
+        errs = tailoring_duty_errors(objs)
+        got = "invalid" if errs else "valid"
+        okv = tier == case["expected-tier"] and got == case["expected"]
+        if okv: ok("tier")
+        else: fail("tier", f"{case['name']}: expected {case['expected-tier']}/{case['expected']}, got {tier}/{got} ({errs[:1]})")
+
 def run_lifecycle():
     v = json.load(open(os.path.join(CONF, "lifecycle-vectors.json"), encoding="utf-8"))
     for case in v["deviation-transitions"]:
@@ -445,8 +539,10 @@ def validate_bundle(bdir):
             pinned[sd["id"]] = REGISTRY(sd.get("schema", {"type": "object"}))
         except Exception as e:
             fail(section, f"{fe['path']}: pinned facet schema unreadable: {e}")
-    # reference taxonomy (#16) + facet payloads (#17)
+    # reference taxonomy (#16) + facet payloads (#17) + tier duties (#19)
     for e in closure_errors(bundle_objs):
+        fail(section, e)
+    for e in tailoring_duty_errors(bundle_objs):
         fail(section, e)
     for e in facet_errors([(oid, o) for oid, (t, o) in bundle_objs.items()], pinned):
         fail(section, e)
@@ -473,8 +569,8 @@ def validate_examples():
 
 # ---------------- run ----------------
 print("== conformance corpus ==")
-run_jcs(); run_modality(); run_parameters(); run_tailoring(); run_attestation(); run_facets(); run_references(); run_lifecycle()
-for k in ("jcs", "modality", "parameter", "tailoring", "attestation", "facet", "reference", "lifecycle"):
+run_jcs(); run_modality(); run_parameters(); run_tailoring(); run_attestation(); run_facets(); run_references(); run_lifecycle(); run_tiers()
+for k in ("jcs", "modality", "parameter", "tailoring", "attestation", "facet", "reference", "lifecycle", "tier"):
     print(f"  {k}: {counts[k]} pass, {counts[k + ':FAIL']} fail")
 
 print("== bundles ==")

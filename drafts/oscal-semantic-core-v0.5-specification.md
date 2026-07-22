@@ -386,6 +386,22 @@ converter had to synthesize base prose just to have something to
 in the census and its mechanism (Tailoring) already exists, so it fails
 the D22 promotion bar on tests 1 and 2.
 
+**The tier anchor — layered (rev. v0.6 cycle — R3 #19).** The tier that
+decides Deviation duties is DERIVED from data, never stipulated:
+(1) **authority-claimed** iff the Tailoring's id URI origin (scheme +
+host) equals the single origin of all selected Sets' ids — a predicate
+select or mixed-origin selects block the claim, because tailoring
+across authorities is consumer work by definition; (2)
+**authority-proven** iff additionally (or instead — proof beats prefix)
+an in-bundle Attestation whose signer shares the selected content's
+origin lists the Tailoring among its subjects with a verifying semantic
+digest; (3) otherwise **consumer**. Duties bind at consumer tier only;
+conformant tools report claimed and proven distinctly, because a prefix
+is an honest-publisher signal while a signature is evidence — the same
+layering as the two digest domains. Derivation vectors:
+`tier-vectors.json` (8 cases, incl. proof rescuing a cross-origin id
+and an authority attestation over the wrong subject proving nothing).
+
 **Deterministic resolution (normative algorithm, Appendix B):** operations
 are an **ordered list**, applied sequentially after selection; **two
 operations addressing the same target within one Tailoring = validation
