@@ -1,0 +1,119 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AT-2.6",
+ "version": "5.2.0",
+ "label": "AT-2(6)",
+ "lifecycle": "active",
+ "title": "Cyber Threat Environment",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide literacy training on the cyber threat environment; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Reflect current cyber threat information in system operations."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Since threats continue to change over time, threat literacy training by the organization is dynamic. Moreover, threat literacy training is not performed in isolation from the system operations that support organizational mission and business functions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "at-2.6_obj",
+     "label": "AT-02(06)",
+     "children": [
+      {
+       "id": "at-2.6_obj.a",
+       "label": "AT-02(06)(a)",
+       "prose": {
+        "en": "literacy training on the cyber threat environment is provided;"
+       }
+      },
+      {
+       "id": "at-2.6_obj.b",
+       "label": "AT-02(06)(b)",
+       "prose": {
+        "en": "system operations reflects current cyber threat information."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AT-02(06)-Examine",
+     "objects": [
+      {
+       "en": "System security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "literacy training and awareness policy"
+      },
+      {
+       "en": "procedures addressing literacy training and awareness training implementation"
+      },
+      {
+       "en": "literacy training and awareness curriculum"
+      },
+      {
+       "en": "literacy training and awareness materials"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AT-02(06)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel who receive literacy training and awareness"
+      },
+      {
+       "en": "organizational personnel with responsibilities for basic literacy training and awareness"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  }
+ ]
+}

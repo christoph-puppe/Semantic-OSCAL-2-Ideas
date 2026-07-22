@@ -1,0 +1,95 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/RA-2.1",
+ "version": "5.2.0",
+ "label": "RA-2(1)",
+ "lifecycle": "active",
+ "title": "Impact-level Prioritization",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Conduct an impact-level prioritization of organizational systems to obtain additional granularity on system impact levels."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations apply the \"high-water mark\" concept to each system categorized in accordance with FIPS 199 , resulting in systems designated as low impact, moderate impact, or high impact. Organizations that desire additional granularity in the system impact designations for risk-based decision-making, can further partition the systems into sub-categories of the initial system categorization. For example, an impact-level prioritization on a moderate-impact system can produce three new sub-categories: low-moderate systems, moderate-moderate systems, and high-moderate systems. Impact-level prioritization and the resulting sub-categories of the system give organizations an opportunity to focus their investments related to security control selection and the tailoring of control baselines in responding to identified risks. Impact-level prioritization can also be used to determine those systems that may be of heightened interest or value to adversaries or represent a critical loss to the federal enterprise, sometimes described as high value assets. For such high value assets, organizations may be more focused on complexity, aggregation, and information exchanges. Systems with high value assets can be prioritized by partitioning high-impact systems into low-high systems, moderate-high systems, and high-high systems. Alternatively, organizations can apply the guidance in CNSSI 1253 for security objective-related categorization."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ra-2.1_obj",
+     "label": "RA-02(01)",
+     "prose": {
+      "en": "an impact-level prioritization of organizational systems is conducted to obtain additional granularity on system impact levels."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "RA-02(01)-Examine",
+     "objects": [
+      {
+       "en": "Risk assessment policy"
+      },
+      {
+       "en": "security and privacy planning policy and procedures"
+      },
+      {
+       "en": "procedures addressing security categorization of organizational information and systems"
+      },
+      {
+       "en": "security categorization documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "RA-02(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with security categorization and risk assessment responsibilities"
+      },
+      {
+       "en": "organizational personnel with security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "RA-02(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for security categorization"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-2"
+  }
+ ]
+}

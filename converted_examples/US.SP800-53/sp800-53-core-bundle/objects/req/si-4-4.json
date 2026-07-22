@@ -1,0 +1,249 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-4.4",
+ "version": "5.2.0",
+ "label": "SI-4(4)",
+ "lifecycle": "active",
+ "title": "Inbound and Outbound Communications Traffic",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Determine criteria for unusual or unauthorized activities or conditions for inbound and outbound communications traffic;"
+   },
+   "parameters": [
+    {
+     "name": "si-04.04_odp.01",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "si-04.04_odp.02",
+     "type": "string",
+     "label": "unusual or unauthorized activities or conditions"
+    },
+    {
+     "name": "si-04.04_odp.03",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "si-04.04_odp.04",
+     "type": "string",
+     "label": "unusual or unauthorized activities or conditions"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Monitor inbound and outbound communications traffic {param:si-4.4_prm_1} for {param:si-4.4_prm_2}."
+   },
+   "parameters": [
+    {
+     "name": "si-4.4_prm_1",
+     "type": "string",
+     "label": "organization-defined frequency"
+    },
+    {
+     "name": "si-4.4_prm_2",
+     "type": "string",
+     "label": "organization-defined unusual or unauthorized activities or conditions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Unusual or unauthorized activities or conditions related to system inbound and outbound communications traffic includes internal traffic that indicates the presence of malicious code or unauthorized use of legitimate code or credentials within organizational systems or propagating among system components, signaling to external systems, and the unauthorized exporting of information. Evidence of malicious code or unauthorized use of legitimate code or credentials is used to identify potentially compromised systems or system components."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-4.4_obj",
+     "label": "SI-04(04)",
+     "children": [
+      {
+       "id": "si-4.4_obj.a",
+       "label": "SI-04(04)(a)",
+       "children": [
+        {
+         "id": "si-4.4_obj.a-1",
+         "label": "SI-04(04)(a)[01]",
+         "prose": {
+          "en": "criteria for unusual or unauthorized activities or conditions for inbound communications traffic are defined;"
+         }
+        },
+        {
+         "id": "si-4.4_obj.a-2",
+         "label": "SI-04(04)(a)[02]",
+         "prose": {
+          "en": "criteria for unusual or unauthorized activities or conditions for outbound communications traffic are defined;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "si-4.4_obj.b",
+       "label": "SI-04(04)(b)",
+       "children": [
+        {
+         "id": "si-4.4_obj.b-1",
+         "label": "SI-04(04)(b)[01]",
+         "prose": {
+          "en": "inbound communications traffic is monitored {param:si-04.04_odp.01} for {param:si-04.04_odp.02};"
+         }
+        },
+        {
+         "id": "si-4.4_obj.b-2",
+         "label": "SI-04(04)(b)[02]",
+         "prose": {
+          "en": "outbound communications traffic is monitored {param:si-04.04_odp.03} for {param:si-04.04_odp.04}."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-04(04)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing system monitoring tools and techniques"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system monitoring tools and techniques documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system protocols"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-04(04)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for monitoring the system"
+      },
+      {
+       "en": "organizational personnel responsible for the intrusion detection system"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-04(04)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for intrusion detection and system monitoring"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing intrusion detection and system monitoring capabilities"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the monitoring of inbound and outbound communications traffic"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-4.4_prm_1": {
+     "aggregates": [
+      "si-04.04_odp.01",
+      "si-04.04_odp.03"
+     ]
+    },
+    "si-4.4_prm_2": {
+     "aggregates": [
+      "si-04.04_odp.02",
+      "si-04.04_odp.04"
+     ]
+    },
+    "si-04.04_odp.01": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to monitor inbound communications traffic for unusual or unauthorized activities or conditions is defined;"
+      }
+     ]
+    },
+    "si-04.04_odp.02": {
+     "guidelines": [
+      {
+       "en": "unusual or unauthorized activities or conditions that are to be monitored in inbound communications traffic are defined;"
+      }
+     ]
+    },
+    "si-04.04_odp.03": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to monitor outbound communications traffic for unusual or unauthorized activities or conditions is defined;"
+      }
+     ]
+    },
+    "si-04.04_odp.04": {
+     "guidelines": [
+      {
+       "en": "unusual or unauthorized activities or conditions that are to be monitored in outbound communications traffic are defined;"
+      }
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

@@ -1,0 +1,176 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SR-4.2",
+ "version": "5.2.0",
+ "label": "SR-4(2)",
+ "lifecycle": "active",
+ "title": "Track and Trace",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish and maintain unique identification of the following systems and critical system components for tracking through the supply chain: {param:sr-04.02_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sr-04.02_odp",
+     "type": "string",
+     "label": "systems and critical system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Tracking the unique identification of systems and system components during development and transport activities provides a foundational identity structure for the establishment and maintenance of provenance. For example, system components may be labeled using serial numbers or tagged using radio-frequency identification tags. Labels and tags can help provide better visibility into the provenance of a system or system component. A system or system component may have more than one unique identifier. Identification methods are sufficient to support a forensic investigation after a supply chain compromise or event."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sr-4.2_obj",
+     "label": "SR-04(02)",
+     "children": [
+      {
+       "id": "sr-4.2_obj-1",
+       "label": "SR-04(02)[01]",
+       "prose": {
+        "en": "the unique identification of {param:sr-04.02_odp} is established for tracking through the supply chain;"
+       }
+      },
+      {
+       "id": "sr-4.2_obj-2",
+       "label": "SR-04(02)[02]",
+       "prose": {
+        "en": "the unique identification of {param:sr-04.02_odp} is maintained for tracking through the supply chain."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SR-04(02)-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management policy and procedures"
+      },
+      {
+       "en": "system and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing supply chain protection"
+      },
+      {
+       "en": "procedures addressing the integration of information security requirements into the acquisition process"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "list of supply chain elements, processes, and actors (associated with the system, system component, or system service) requiring implementation of unique identification processes, procedures, tools, mechanisms, equipment, techniques, and/or configurations"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SR-04(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and services acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain protection responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibilities for establishing and retaining the unique identification of supply chain elements, processes, and actors"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SR-04(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for defining, establishing, and retaining unique identification for supply chain elements, processes, and actors"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the definition, establishment, and retention of unique identification for supply chain elements, processes, and actors"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sr-04.02_odp": {
+     "guidelines": [
+      {
+       "en": "systems and critical system components that require unique identification for tracking through the supply chain are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sr-4.2_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-2"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-12.14",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-12.14",
+    "mode": "merged-into",
+    "label": "SA-12(14)",
+    "title": "Identity and Traceability"
+   }
+  ]
+ }
+}

@@ -1,0 +1,164 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-4.5",
+ "version": "5.2.0",
+ "label": "SA-4(5)",
+ "lifecycle": "active",
+ "title": "System, Component, and Service Configurations",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Deliver the system, component, or service with {param:sa-04.05_odp} implemented; and"
+   },
+   "parameters": [
+    {
+     "name": "sa-04.05_odp",
+     "type": "string",
+     "label": "security configurations"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Use the configurations as the default for any subsequent system, component, or service reinstallation or upgrade."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Examples of security configurations include the U.S. Government Configuration Baseline (USGCB), Security Technical Implementation Guides (STIGs), and any limitations on functions, ports, protocols, and services. Security characteristics can include requiring that default passwords have been changed."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-4.5_obj",
+     "label": "SA-04(05)",
+     "children": [
+      {
+       "id": "sa-4.5_obj.a",
+       "label": "SA-04(05)(a)",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to deliver the system, component, or service with {param:sa-04.05_odp} implemented;"
+       }
+      },
+      {
+       "id": "sa-4.5_obj.b",
+       "label": "SA-04(05)(b)",
+       "prose": {
+        "en": "the configurations are used as the default for any subsequent system, component, or service reinstallation or upgrade."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-04(05)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing the integration of security requirements, descriptions, and criteria into the acquisition process"
+      },
+      {
+       "en": "solicitation documents"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "security configurations to be implemented by the developer of the system, system component, or system service"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-04(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with acquisition/contracting responsibilities"
+      },
+      {
+       "en": "organizational personnel with the responsibility to determine system security requirements"
+      },
+      {
+       "en": "system developers or service provider"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-04(05)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms used to verify that the configuration of the system, component, or service is delivered as specified"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-04.05_odp": {
+     "guidelines": [
+      {
+       "en": "security configurations for the system, component, or service are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-4.5_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-4"
+  }
+ ]
+}

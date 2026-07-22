@@ -1,0 +1,145 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-28.3",
+ "version": "5.2.0",
+ "label": "SC-28(3)",
+ "lifecycle": "active",
+ "title": "Cryptographic Keys",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide protected storage for cryptographic keys {param:sc-28.03_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "sc-28.03_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "{param:sc-28.03_odp.02} "
+      },
+      {
+       "value": "hardware-protected key store"
+      }
+     ]
+    },
+    {
+     "name": "sc-28.03_odp.02",
+     "type": "string",
+     "label": "safeguards"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "A Trusted Platform Module (TPM) is an example of a hardware-protected data store that can be used to protect cryptographic keys."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-28.3_obj",
+     "label": "SC-28(03)",
+     "prose": {
+      "en": "protected storage for cryptographic keys is provided using {param:sc-28.03_odp.01}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-28(03)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing the protection of information at rest"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "cryptographic mechanisms and associated configuration documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-28(03)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-28(03)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing hardware-based key store protection"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-28.03_odp.01": {
+     "alt-identifiers": [
+      "sc-28.3_prm_1"
+     ]
+    },
+    "sc-28.03_odp.02": {
+     "guidelines": [
+      {
+       "en": "safeguards for protecting the storage of cryptographic keys are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-28.3_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-28"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  }
+ ]
+}

@@ -1,0 +1,127 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-16.2",
+ "version": "5.2.0",
+ "label": "AU-16(2)",
+ "lifecycle": "active",
+ "title": "Sharing of Audit Information",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide cross-organizational audit information to {param:au-16.02_odp.01} based on {param:au-16.02_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "au-16.02_odp.01",
+     "type": "string",
+     "label": "organizations"
+    },
+    {
+     "name": "au-16.02_odp.02",
+     "type": "string",
+     "label": "cross-organizational sharing agreements"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Due to the distributed nature of the audit information, cross-organization sharing of audit information may be essential for effective analysis of the auditing being performed. For example, the audit records of one organization may not provide sufficient information to determine the appropriate or inappropriate use of organizational information resources by individuals in other organizations. In some instances, only individuals’ home organizations have the appropriate knowledge to make such determinations, thus requiring the sharing of audit information among organizations."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-16.2_obj",
+     "label": "AU-16(02)",
+     "prose": {
+      "en": "cross-organizational audit information is provided to {param:au-16.02_odp.01} based on {param:au-16.02_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-16(02)-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "procedures addressing cross-organizational sharing of audit information"
+      },
+      {
+       "en": "information sharing agreements"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-16(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for sharing cross-organizational audit information"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "au-16.02_odp.01": {
+     "guidelines": [
+      {
+       "en": "organizations with which cross-organizational audit information is to be shared are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-16.2_prm_1"
+     ]
+    },
+    "au-16.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "cross-organizational sharing agreements to be used when providing cross-organizational audit information to organizations are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-16.2_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

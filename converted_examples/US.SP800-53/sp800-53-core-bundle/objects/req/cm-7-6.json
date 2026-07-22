@@ -1,0 +1,164 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-7.6",
+ "version": "5.2.0",
+ "label": "CM-7(6)",
+ "lifecycle": "active",
+ "title": "Confined Environments with Limited Privileges",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require that the following user-installed software execute in a confined physical or virtual machine environment with limited privileges: {param:cm-07.06_odp}."
+   },
+   "parameters": [
+    {
+     "name": "cm-07.06_odp",
+     "type": "string",
+     "label": "user-installed software"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations identify software that may be of concern regarding its origin or potential for containing malicious code. For this type of software, user installations occur in confined environments of operation to limit or contain damage from malicious code that may be executed."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-7.6_obj",
+     "label": "CM-07(06)",
+     "prose": {
+      "en": "{param:cm-07.06_odp} is required to be executed in a confined physical or virtual machine environment with limited privileges."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-07(06)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing least functionality in the system"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list or record of software required to execute in a confined environment"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "common secure configuration checklists"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-07(06)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for identifying and/or managing user-installed software and associated privileges"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-07(06)-Test",
+     "objects": [
+      {
+       "en": "Organizational process for identifying user-installed software required to execute in a confined environment"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the confinement of user-installed software to physical or virtual machine environments"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing privilege limitations on user-installed software"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-07.06_odp": {
+     "guidelines": [
+      {
+       "en": "user-installed software required to be executed in a confined environment is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-7.6_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-44"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7.11",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SI-7.11",
+    "mode": "renamed",
+    "label": "SI-07(11)",
+    "title": "Confined Environments with Limited Privileges"
+   }
+  ]
+ }
+}

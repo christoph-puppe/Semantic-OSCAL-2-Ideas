@@ -1,0 +1,117 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-12.3",
+ "version": "5.2.0",
+ "label": "IA-12(3)",
+ "lifecycle": "active",
+ "title": "Identity Evidence Validation and Verification",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require that the presented identity evidence be validated and verified through {param:ia-12.03_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ia-12.03_odp",
+     "type": "string",
+     "label": "methods of validation and verification"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Validation and verification of identity evidence increases the assurance that accounts and identifiers are being established for the correct user and authenticators are being bound to that user. Validation refers to the process of confirming that the evidence is genuine and authentic, and the data contained in the evidence is correct, current, and related to an individual. Verification confirms and establishes a linkage between the claimed identity and the actual existence of the user presenting the evidence. Acceptable methods for validating and verifying identity evidence are consistent with the risks to the systems, roles, and privileges associated with the users account."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-12.3_obj",
+     "label": "IA-12(03)",
+     "prose": {
+      "en": "the presented identity evidence is validated and verified through {param:ia-12.03_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-12(03)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "procedures addressing identity proofing"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-12(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system operations responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with identification and authentication responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-12(03)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing identification and authentication capabilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ia-12.03_odp": {
+     "guidelines": [
+      {
+       "en": "methods of validation and verification of identity evidence are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-12.3_prm_1"
+     ],
+     "alt-label": "organizational defined methods of validation and verification"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-12"
+  }
+ ]
+}

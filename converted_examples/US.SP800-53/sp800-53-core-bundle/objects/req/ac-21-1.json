@@ -1,0 +1,125 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-21.1",
+ "version": "5.2.0",
+ "label": "AC-21(1)",
+ "lifecycle": "active",
+ "title": "Automated Decision Support",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Employ {param:ac-21.01_odp} to enforce information-sharing decisions by authorized users based on access authorizations of sharing partners and access restrictions on information to be shared."
+   },
+   "parameters": [
+    {
+     "name": "ac-21.01_odp",
+     "type": "string",
+     "label": "automated mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Automated mechanisms are used to enforce information sharing decisions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-21.1_obj",
+     "label": "AC-21(01)",
+     "prose": {
+      "en": "{param:ac-21.01_odp} are employed to enforce information-sharing decisions by authorized users based on access authorizations of sharing partners and access restrictions on information to be shared."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-21(01)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing user-based collaboration and information sharing (including restrictions)"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system-generated list of users authorized to make information-sharing/collaboration decisions"
+      },
+      {
+       "en": "system-generated list of sharing partners and access authorizations"
+      },
+      {
+       "en": "system-generated list of access restrictions regarding information to be shared"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-21(01)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-21(01)-Test",
+     "objects": [
+      {
+       "en": "Automated mechanisms implementing access authorizations supporting information-sharing/user collaboration decisions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-21.01_odp": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms employed to enforce information-sharing decisions by authorized users are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-21.1_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-21"
+  }
+ ]
+}

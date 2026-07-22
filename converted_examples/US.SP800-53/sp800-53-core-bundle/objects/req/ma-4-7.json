@@ -1,0 +1,130 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-4.7",
+ "version": "5.2.0",
+ "label": "MA-4(7)",
+ "lifecycle": "active",
+ "title": "Disconnect Verification",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Verify session and network connection termination after the completion of nonlocal maintenance and diagnostic sessions."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Verifying the termination of a connection once maintenance is completed ensures that connections established during nonlocal maintenance and diagnostic sessions have been terminated and are no longer available for use."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-4.7_obj",
+     "label": "MA-04(07)",
+     "children": [
+      {
+       "id": "ma-4.7_obj-1",
+       "label": "MA-04(07)[01]",
+       "prose": {
+        "en": "session connection termination is verified after the completion of nonlocal maintenance and diagnostic sessions;"
+       }
+      },
+      {
+       "id": "ma-4.7_obj-2",
+       "label": "MA-04(07)[02]",
+       "prose": {
+        "en": "network connection termination is verified after the completion of nonlocal maintenance and diagnostic sessions."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-04(07)-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing nonlocal system maintenance"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "session/network termination logs"
+      },
+      {
+       "en": "cryptographic mechanisms protecting nonlocal maintenance activities"
+      },
+      {
+       "en": "maintenance records"
+      },
+      {
+       "en": "diagnostic records"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-04(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities"
+      },
+      {
+       "en": "network engineers"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MA-04(07)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing remote disconnect verifications of terminated nonlocal maintenance and diagnostic sessions"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-12"
+  }
+ ]
+}

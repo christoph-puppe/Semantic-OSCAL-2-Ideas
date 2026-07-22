@@ -1,0 +1,137 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-39.2",
+ "version": "5.2.0",
+ "label": "SC-39(2)",
+ "lifecycle": "active",
+ "title": "Separate Execution Domain Per Thread",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Maintain a separate execution domain for each thread in {param:sc-39.02_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sc-39.02_odp",
+     "type": "string",
+     "label": "multi-threaded processing"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "None."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-39.2_obj",
+     "label": "SC-39(02)",
+     "prose": {
+      "en": "a separate execution domain is maintained for each thread in {param:sc-39.02_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-39(02)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "list of system execution domains for each thread in multi-threaded processing"
+      },
+      {
+       "en": "system documentation for multi-threaded processing"
+      },
+      {
+       "en": "system documentation from vendors, manufacturers, or developers"
+      },
+      {
+       "en": "independent verification and validation documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-39(02)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "system developers/integrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-39(02)-Test",
+     "objects": [
+      {
+       "en": "System capability implementing a separate execution domain for each thread in multi-threaded processing"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-39.02_odp": {
+     "guidelines": [
+      {
+       "en": "multi-thread processing for which a separate execution domain is to be maintained for each thread is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-39.2_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-39"
+  }
+ ]
+}

@@ -1,0 +1,197 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-10",
+ "version": "5.2.0",
+ "label": "CP-10",
+ "lifecycle": "active",
+ "title": "System Recovery and Reconstitution",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide for the recovery and reconstitution of the system to a known state within {param:cp-10_prm_1} after a disruption, compromise, or failure."
+   },
+   "parameters": [
+    {
+     "name": "cp-10_prm_1",
+     "type": "string",
+     "label": "organization-defined time period consistent with recovery time and recovery point objectives"
+    },
+    {
+     "name": "cp-10_odp.01",
+     "type": "string",
+     "label": "time period"
+    },
+    {
+     "name": "cp-10_odp.02",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Recovery is executing contingency plan activities to restore organizational mission and business functions. Reconstitution takes place following recovery and includes activities for returning systems to fully operational states. Recovery and reconstitution operations reflect mission and business priorities; recovery point, recovery time, and reconstitution objectives; and organizational metrics consistent with contingency plan requirements. Reconstitution includes the deactivation of interim system capabilities that may have been needed during recovery operations. Reconstitution also includes assessments of fully restored system capabilities, reestablishment of continuous monitoring activities, system reauthorization (if required), and activities to prepare the system and organization for future disruptions, breaches, compromises, or failures. Recovery and reconstitution capabilities can include automated mechanisms and manual procedures. Organizations establish recovery time and recovery point objectives as part of contingency planning."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-10_obj",
+     "label": "CP-10",
+     "children": [
+      {
+       "id": "cp-10_obj-1",
+       "label": "CP-10[01]",
+       "prose": {
+        "en": "the recovery of the system to a known state is provided within {param:cp-10_odp.01} after a disruption, compromise, or failure;"
+       }
+      },
+      {
+       "id": "cp-10_obj-2",
+       "label": "CP-10[02]",
+       "prose": {
+        "en": "a reconstitution of the system to a known state is provided within {param:cp-10_odp.02} after a disruption, compromise, or failure."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-10-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing system backup"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "system backup test results"
+      },
+      {
+       "en": "contingency plan test results"
+      },
+      {
+       "en": "contingency plan test documentation"
+      },
+      {
+       "en": "redundant secondary system for system backups"
+      },
+      {
+       "en": "location(s) of redundant secondary backup system(s)"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-10-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency planning, recovery, and/or reconstitution responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-10-Test",
+     "objects": [
+      {
+       "en": "Organizational processes implementing system recovery and reconstitution operations"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing system recovery and reconstitution operations"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cp-10_prm_1": {
+     "aggregates": [
+      "cp-10_odp.01",
+      "cp-10_odp.02"
+     ]
+    },
+    "cp-10_odp.01": {
+     "guidelines": [
+      {
+       "en": "time period consistent with recovery time and recovery point objectives for the recovery of the system is determined;"
+      }
+     ]
+    },
+    "cp-10_odp.02": {
+     "guidelines": [
+      {
+       "en": "time period consistent with recovery time and recovery point objectives for the reconstitution of the system is determined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-34r1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-24"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-13"
+  }
+ ]
+}

@@ -1,0 +1,191 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-3.10",
+ "version": "5.2.0",
+ "label": "SI-3(10)",
+ "lifecycle": "active",
+ "title": "Malicious Code Analysis",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ the following tools and techniques to analyze the characteristics and behavior of malicious code: {param:si-03.10_odp} ; and"
+   },
+   "parameters": [
+    {
+     "name": "si-03.10_odp",
+     "type": "string",
+     "label": "tools and techniques"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Incorporate the results from malicious code analysis into organizational incident response and flaw remediation processes."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The use of malicious code analysis tools provides organizations with a more in-depth understanding of adversary tradecraft (i.e., tactics, techniques, and procedures) and the functionality and purpose of specific instances of malicious code. Understanding the characteristics of malicious code facilitates effective organizational responses to current and future threats. Organizations can conduct malicious code analyses by employing reverse engineering techniques or by monitoring the behavior of executing code."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-3.10_obj",
+     "label": "SI-03(10)",
+     "children": [
+      {
+       "id": "si-3.10_obj.a",
+       "label": "SI-03(10)(a)",
+       "prose": {
+        "en": "{param:si-03.10_odp} are employed to analyze the characteristics and behavior of malicious code;"
+       }
+      },
+      {
+       "id": "si-3.10_obj.b",
+       "label": "SI-03(10)(b)",
+       "children": [
+        {
+         "id": "si-3.10_obj.b-1",
+         "label": "SI-03(10)(b)[01]",
+         "prose": {
+          "en": "the results from malicious code analysis are incorporated into organizational incident response processes;"
+         }
+        },
+        {
+         "id": "si-3.10_obj.b-2",
+         "label": "SI-03(10)(b)[02]",
+         "prose": {
+          "en": "the results from malicious code analysis are incorporated into organizational flaw remediation processes."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-03(10)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing malicious code protection"
+      },
+      {
+       "en": "procedures addressing incident response"
+      },
+      {
+       "en": "procedures addressing flaw remediation"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "malicious code protection mechanisms, tools, and techniques"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "results from malicious code analyses"
+      },
+      {
+       "en": "records of flaw remediation events resulting from malicious code analyses"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-03(10)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for malicious code protection"
+      },
+      {
+       "en": "organizational personnel responsible for flaw remediation"
+      },
+      {
+       "en": "organizational personnel responsible for incident response/management"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-03(10)-Test",
+     "objects": [
+      {
+       "en": "Organizational process for incident response"
+      },
+      {
+       "en": "organizational process for flaw remediation"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing malicious code protection capabilities"
+      },
+      {
+       "en": "tools and techniques for the analysis of malicious code characteristics and behavior"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-03.10_odp": {
+     "guidelines": [
+      {
+       "en": "tools and techniques to be employed to analyze the characteristics and behavior of malicious code are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-3.10_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-3"
+  }
+ ]
+}

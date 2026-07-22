@@ -1,0 +1,137 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-3.8",
+ "version": "5.2.0",
+ "label": "AC-3(8)",
+ "lifecycle": "active",
+ "title": "Revocation of Access Authorizations",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Enforce the revocation of access authorizations resulting from changes to the security attributes of subjects and objects based on {param:ac-03.08_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ac-03.08_odp",
+     "type": "string",
+     "label": "rules"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Revocation of access rules may differ based on the types of access revoked. For example, if a subject (i.e., user or process acting on behalf of a user) is removed from a group, access may not be revoked until the next time the object is opened or the next time the subject attempts to access the object. Revocation based on changes to security labels may take effect immediately. Organizations provide alternative approaches on how to make revocations immediate if systems cannot provide such capability and immediate revocation is necessary."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-3.8_obj",
+     "label": "AC-03(08)",
+     "children": [
+      {
+       "id": "ac-3.8_obj-1",
+       "label": "AC-03(08)[01]",
+       "prose": {
+        "en": "revocation of access authorizations is enforced, resulting from changes to the security attributes of subjects based on {param:ac-03.08_odp};"
+       }
+      },
+      {
+       "id": "ac-3.8_obj-2",
+       "label": "AC-03(08)[02]",
+       "prose": {
+        "en": "revocation of access authorizations is enforced resulting from changes to the security attributes of objects based on {param:ac-03.08_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-03(08)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing access enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "rules governing revocation of access authorizations, system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-03(08)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with access enforcement responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-03(08)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing access enforcement functions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-03.08_odp": {
+     "guidelines": [
+      {
+       "en": "rules governing the timing of revocations of access authorizations are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-3.8_prm_1"
+     ],
+     "alt-label": "rules governing the timing of revocations of access authorizations"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  }
+ ]
+}

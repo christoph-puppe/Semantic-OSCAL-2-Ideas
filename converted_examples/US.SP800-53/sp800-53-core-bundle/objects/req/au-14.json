@@ -1,0 +1,278 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-14",
+ "version": "5.2.0",
+ "label": "AU-14",
+ "lifecycle": "active",
+ "title": "Session Audit",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide and implement the capability for {param:au-14_odp.01} to {param:au-14_odp.02} the content of a user session under {param:au-14_odp.03} ; and"
+   },
+   "parameters": [
+    {
+     "name": "au-14_odp.01",
+     "type": "string",
+     "label": "users or roles"
+    },
+    {
+     "name": "au-14_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "record"
+      },
+      {
+       "value": "view"
+      },
+      {
+       "value": "hear"
+      },
+      {
+       "value": "log"
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "au-14_odp.03",
+     "type": "string",
+     "label": "circumstances"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Develop, integrate, and use session auditing activities in consultation with legal counsel and in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Session audits can include monitoring keystrokes, tracking websites visited, and recording information and/or file transfers. Session audit capability is implemented in addition to event logging and may involve implementation of specialized session capture technology. Organizations consider how session auditing can reveal information about individuals that may give rise to privacy risk as well as how to mitigate those risks. Because session auditing can impact system and network performance, organizations activate the capability under well-defined situations (e.g., the organization is suspicious of a specific individual). Organizations consult with legal counsel, civil liberties officials, and privacy officials to ensure that any legal, privacy, civil rights, or civil liberties issues, including the use of personally identifiable information, are appropriately addressed."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-14_obj",
+     "label": "AU-14",
+     "children": [
+      {
+       "id": "au-14_obj.a",
+       "label": "AU-14a.",
+       "children": [
+        {
+         "id": "au-14_obj.a-1",
+         "label": "AU-14a.[01]",
+         "prose": {
+          "en": "{param:au-14_odp.01} are provided with the capability to {param:au-14_odp.02} the content of a user session under {param:au-14_odp.03};"
+         }
+        },
+        {
+         "id": "au-14_obj.a-2",
+         "label": "AU-14a.[02]",
+         "prose": {
+          "en": "the capability for {param:au-14_odp.01} to {param:au-14_odp.02} the content of a user session under {param:au-14_odp.03} is implemented;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "au-14_obj.b",
+       "label": "AU-14b.",
+       "children": [
+        {
+         "id": "au-14_obj.b-1",
+         "label": "AU-14b.[01]",
+         "prose": {
+          "en": "session auditing activities are developed in consultation with legal counsel and in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines;"
+         }
+        },
+        {
+         "id": "au-14_obj.b-2",
+         "label": "AU-14b.[02]",
+         "prose": {
+          "en": "session auditing activities are integrated in consultation with legal counsel and in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines;"
+         }
+        },
+        {
+         "id": "au-14_obj.b-3",
+         "label": "AU-14b.[03]",
+         "prose": {
+          "en": "session auditing activities are used in consultation with legal counsel and in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines;"
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-14-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "procedures addressing user session auditing"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-14-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "legal counsel"
+      },
+      {
+       "en": "personnel with civil liberties responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AU-14-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing user session auditing capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "au-14_odp.01": {
+     "guidelines": [
+      {
+       "en": "users or roles who can audit the content of a user session are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-14_prm_1"
+     ]
+    },
+    "au-14_odp.02": {
+     "alt-identifiers": [
+      "au-14_prm_2"
+     ]
+    },
+    "au-14_odp.03": {
+     "guidelines": [
+      {
+       "en": "circumstances under which the content of a user session can be audited are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-14_prm_3"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-12"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-14.2",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/AU-14.2",
+    "mode": "merged-into",
+    "label": "AU-14(02)",
+    "title": "Capture and Record Content"
+   }
+  ]
+ }
+}

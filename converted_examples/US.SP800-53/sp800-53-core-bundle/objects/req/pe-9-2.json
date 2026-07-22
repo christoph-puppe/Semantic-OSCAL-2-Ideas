@@ -1,0 +1,116 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-9.2",
+ "version": "5.2.0",
+ "label": "PE-9(2)",
+ "lifecycle": "active",
+ "title": "Automatic Voltage Controls",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ automatic voltage controls for {param:pe-09.02_odp}."
+   },
+   "parameters": [
+    {
+     "name": "pe-09.02_odp",
+     "type": "string",
+     "label": "critical system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Automatic voltage controls can monitor and control voltage. Such controls include voltage regulators, voltage conditioners, and voltage stabilizers."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-9.2_obj",
+     "label": "PE-09(02)",
+     "prose": {
+      "en": "automatic voltage controls for {param:pe-09.02_odp} are employed."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-09(02)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing voltage control"
+      },
+      {
+       "en": "security plan"
+      },
+      {
+       "en": "list of critical system components requiring automatic voltage controls"
+      },
+      {
+       "en": "automatic voltage control mechanisms and associated configurations"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-09(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for environmental protection of system components"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-09(02)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing automatic voltage controls"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-09.02_odp": {
+     "guidelines": [
+      {
+       "en": "the critical system components that require automatic voltage controls are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-9.2_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-9"
+  }
+ ]
+}

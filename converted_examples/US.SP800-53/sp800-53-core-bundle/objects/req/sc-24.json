@@ -1,0 +1,190 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-24",
+ "version": "5.2.0",
+ "label": "SC-24",
+ "lifecycle": "active",
+ "title": "Fail in Known State",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Fail to a {param:sc-24_odp.02} for the following failures on the indicated components while preserving {param:sc-24_odp.03} in failure: {param:sc-24_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "sc-24_odp.01",
+     "type": "string",
+     "label": "types of system failures on system components"
+    },
+    {
+     "name": "sc-24_odp.02",
+     "type": "string",
+     "label": "known system state"
+    },
+    {
+     "name": "sc-24_odp.03",
+     "type": "string",
+     "label": "system state information"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Failure in a known state addresses security concerns in accordance with the mission and business needs of organizations. Failure in a known state prevents the loss of confidentiality, integrity, or availability of information in the event of failures of organizational systems or system components. Failure in a known safe state helps to prevent systems from failing to a state that may cause injury to individuals or destruction to property. Preserving system state information facilitates system restart and return to the operational mode with less disruption of mission and business processes."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-24_obj",
+     "label": "SC-24",
+     "prose": {
+      "en": "{param:sc-24_odp.01} fail to a {param:sc-24_odp.02} while preserving {param:sc-24_odp.03} in failure."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-24-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing system failure to known state"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of failures requiring system to fail in a known state"
+      },
+      {
+       "en": "state information to be preserved in system failure"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-24-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-24-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the fail in known state capability"
+      },
+      {
+       "en": "mechanisms preserving system state information in the event of a system failure"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-24_odp.01": {
+     "guidelines": [
+      {
+       "en": "types of system failures for which the system components fail to a known state are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-24_prm_3"
+     ],
+     "alt-label": "list of organization-defined types of system failures on organization-defined system components"
+    },
+    "sc-24_odp.02": {
+     "guidelines": [
+      {
+       "en": "known system state to which system components fail in the event of a system failure is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-24_prm_1"
+     ]
+    },
+    "sc-24_odp.03": {
+     "guidelines": [
+      {
+       "en": "system state information to be preserved in the event of a system failure is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-24_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-22"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-13"
+  }
+ ]
+}

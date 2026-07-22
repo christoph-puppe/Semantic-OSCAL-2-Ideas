@@ -1,0 +1,197 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-4.4",
+ "version": "5.2.0",
+ "label": "MA-4(4)",
+ "lifecycle": "active",
+ "title": "Authentication and Separation of Maintenance Sessions",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Protect nonlocal maintenance sessions by:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employing {param:ma-04.04_odp} ; and"
+   },
+   "parameters": [
+    {
+     "name": "ma-04.04_odp",
+     "type": "string",
+     "label": "authenticators that are replay resistant"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Separating the maintenance sessions from other network sessions with the system by either:"
+   }
+  },
+  {
+   "id": "smt.b.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Physically separated communications paths; or"
+   }
+  },
+  {
+   "id": "smt.b.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Logically separated communications paths."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Communications paths can be logically separated using encryption."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-4.4_obj",
+     "label": "MA-04(04)",
+     "children": [
+      {
+       "id": "ma-4.4_obj.a",
+       "label": "MA-04(04)(a)",
+       "prose": {
+        "en": "nonlocal maintenance sessions are protected by employing {param:ma-04.04_odp};"
+       }
+      },
+      {
+       "id": "ma-4.4_obj.b",
+       "label": "MA-04(04)(b)",
+       "children": [
+        {
+         "id": "ma-4.4_obj.b.1",
+         "label": "MA-04(04)(b)(01)",
+         "prose": {
+          "en": "nonlocal maintenance sessions are protected by separating maintenance sessions from other network sessions with the system by physically separated communication paths; or"
+         }
+        },
+        {
+         "id": "ma-4.4_obj.b.2",
+         "label": "MA-04(04)(b)(02)",
+         "prose": {
+          "en": "nonlocal maintenance sessions are protected by logically separated communication paths."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-04(04)-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing nonlocal system maintenance"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "maintenance records"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-04(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities"
+      },
+      {
+       "en": "network engineers"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MA-04(04)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for protecting nonlocal maintenance sessions"
+      },
+      {
+       "en": "mechanisms implementing replay-resistant authenticators"
+      },
+      {
+       "en": "mechanisms implementing logically separated/encrypted communication paths"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ma-04.04_odp": {
+     "guidelines": [
+      {
+       "en": "authenticators that are replay resistant are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ma-4.4_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-4"
+  }
+ ]
+}

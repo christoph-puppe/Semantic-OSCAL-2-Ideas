@@ -1,0 +1,150 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-24",
+ "version": "5.2.0",
+ "label": "PM-24",
+ "lifecycle": "active",
+ "title": "Data Integrity Board",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish a Data Integrity Board to:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review proposals to conduct or participate in a matching program; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Conduct an annual review of all matching programs in which the agency has participated."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "A Data Integrity Board is the board of senior officials designated by the head of a federal agency and is responsible for, among other things, reviewing the agency’s proposals to conduct or participate in a matching program and conducting an annual review of all matching programs in which the agency has participated. As a general matter, a matching program is a computerized comparison of records from two or more automated PRIVACT systems of records or an automated system of records and automated records maintained by a non-federal agency (or agent thereof). A matching program either pertains to Federal benefit programs or Federal personnel or payroll records. At a minimum, the Data Integrity Board includes the Inspector General of the agency, if any, and the senior agency official for privacy."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-24_obj",
+     "label": "PM-24",
+     "prose": {
+      "en": "a Data Integrity Board is established;"
+     },
+     "children": [
+      {
+       "id": "pm-24_obj.a",
+       "label": "PM-24a.",
+       "prose": {
+        "en": "the Data Integrity Board reviews proposals to conduct or participate in a matching program;"
+       }
+      },
+      {
+       "id": "pm-24_obj.b",
+       "label": "PM-24b.",
+       "prose": {
+        "en": "the Data Integrity Board conducts an annual review of all matching programs in which the agency has participated."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-24-Examine",
+     "objects": [
+      {
+       "en": "Privacy program plan"
+      },
+      {
+       "en": "privacy program documents relating to the Data Integrity Board, including documents establishing the board, its charter of operations, and any plans and reports"
+      },
+      {
+       "en": "computer matching agreements and notices"
+      },
+      {
+       "en": "information sharing agreements"
+      },
+      {
+       "en": "memoranda of understanding"
+      },
+      {
+       "en": "records documenting annual reviews"
+      },
+      {
+       "en": "governing requirements, including laws, executive orders, regulations, standards, and guidance"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-24-Interview",
+     "objects": [
+      {
+       "en": "members of the Data Integrity Board (e.g., the chief information officer, senior information security officer, senior agency official for privacy, and agency Inspector General)"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.govinfo.gov/content/pkg/STATUTE-88/pdf/STATUTE-88-Pg1896.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A108/omb_circular_a-108.pdf"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-19"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-23"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-8"
+  }
+ ]
+}

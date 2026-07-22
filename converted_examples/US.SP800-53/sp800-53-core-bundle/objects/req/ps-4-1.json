@@ -1,0 +1,115 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PS-4.1",
+ "version": "5.2.0",
+ "label": "PS-4(1)",
+ "lifecycle": "active",
+ "title": "Post-employment Requirements",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Notify terminated individuals of applicable, legally binding post-employment requirements for the protection of organizational information; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require terminated individuals to sign an acknowledgment of post-employment requirements as part of the organizational termination process."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations consult with the Office of the General Counsel regarding matters of post-employment requirements on terminated individuals."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ps-4.1_obj",
+     "label": "PS-04(01)",
+     "children": [
+      {
+       "id": "ps-4.1_obj.a",
+       "label": "PS-04(01)(a)",
+       "prose": {
+        "en": "terminated individuals are notified of applicable, legally binding post-employment requirements for the protection of organizational information;"
+       }
+      },
+      {
+       "id": "ps-4.1_obj.b",
+       "label": "PS-04(01)(b)",
+       "prose": {
+        "en": "terminated individuals are required to sign an acknowledgement of post-employment requirements as part of the organizational termination process."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PS-04(01)-Examine",
+     "objects": [
+      {
+       "en": "Personnel security policy"
+      },
+      {
+       "en": "procedures addressing personnel termination"
+      },
+      {
+       "en": "signed post-employment acknowledgement forms"
+      },
+      {
+       "en": "list of applicable, legally binding post-employment requirements"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PS-04(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personnel security responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PS-04(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for post-employment requirements"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-4"
+  }
+ ]
+}

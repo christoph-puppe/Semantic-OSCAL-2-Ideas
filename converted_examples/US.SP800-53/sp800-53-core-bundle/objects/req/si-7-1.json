@@ -1,0 +1,351 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-7.1",
+ "version": "5.2.0",
+ "label": "SI-7(1)",
+ "lifecycle": "active",
+ "title": "Integrity Checks",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Perform an integrity check of {param:si-7.1_prm_1} {param:si-7.1_prm_2}."
+   },
+   "parameters": [
+    {
+     "name": "si-7.1_prm_1",
+     "type": "string",
+     "label": "organization-defined software, firmware, and information"
+    },
+    {
+     "name": "si-7.1_prm_2",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "at startup"
+      },
+      {
+       "value": "at {param:si-7.1_prm_3} "
+      },
+      {
+       "value": "{param:si-7.1_prm_4} "
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "si-07.01_odp.01",
+     "type": "string",
+     "label": "software"
+    },
+    {
+     "name": "si-07.01_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "at startup"
+      },
+      {
+       "value": "at {param:si-07.01_odp.03} "
+      },
+      {
+       "value": "{param:si-07.01_odp.04} "
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "si-07.01_odp.03",
+     "type": "string",
+     "label": "transitional states or security-relevant events"
+    },
+    {
+     "name": "si-07.01_odp.04",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "si-07.01_odp.05",
+     "type": "string",
+     "label": "firmware"
+    },
+    {
+     "name": "si-07.01_odp.06",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "at startup"
+      },
+      {
+       "value": "at {param:si-07.01_odp.07} "
+      },
+      {
+       "value": "{param:si-07.01_odp.08} "
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "si-07.01_odp.07",
+     "type": "string",
+     "label": "transitional states or security-relevant events"
+    },
+    {
+     "name": "si-07.01_odp.08",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "si-07.01_odp.09",
+     "type": "string",
+     "label": "information"
+    },
+    {
+     "name": "si-07.01_odp.10",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "at startup"
+      },
+      {
+       "value": "at {param:si-07.01_odp.11} "
+      },
+      {
+       "value": "{param:si-07.01_odp.12} "
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "si-07.01_odp.11",
+     "type": "string",
+     "label": "transitional states or security-relevant events"
+    },
+    {
+     "name": "si-07.01_odp.12",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "si-7.1_prm_3",
+     "type": "string",
+     "label": "organization-defined transitional states or security-relevant events"
+    },
+    {
+     "name": "si-7.1_prm_4",
+     "type": "string",
+     "label": "organization-defined frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Security-relevant events include the identification of new threats to which organizational systems are susceptible and the installation of new hardware, software, or firmware. Transitional states include system startup, restart, shutdown, and abort."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-7.1_obj",
+     "label": "SI-07(01)",
+     "children": [
+      {
+       "id": "si-7.1_obj-1",
+       "label": "SI-07(01)[01]",
+       "prose": {
+        "en": "an integrity check of {param:si-07.01_odp.01} is performed {param:si-07.01_odp.02};"
+       }
+      },
+      {
+       "id": "si-7.1_obj-2",
+       "label": "SI-07(01)[02]",
+       "prose": {
+        "en": "an integrity check of {param:si-07.01_odp.05} is performed {param:si-07.01_odp.06};"
+       }
+      },
+      {
+       "id": "si-7.1_obj-3",
+       "label": "SI-07(01)[03]",
+       "prose": {
+        "en": "an integrity check of {param:si-07.01_odp.09} is performed {param:si-07.01_odp.10}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-07(01)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing software, firmware, and information integrity testing"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "integrity verification tools and associated documentation"
+      },
+      {
+       "en": "records of integrity scans"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-07(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for software, firmware, and/or information integrity"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-07(01)-Test",
+     "objects": [
+      {
+       "en": "Software, firmware, and information integrity verification tools"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-7.1_prm_1": {
+     "aggregates": [
+      "si-07.01_odp.01",
+      "si-07.01_odp.05",
+      "si-07.01_odp.09"
+     ]
+    },
+    "si-7.1_prm_2": {
+     "aggregates": [
+      "si-07.01_odp.02",
+      "si-07.01_odp.06",
+      "si-07.01_odp.10"
+     ]
+    },
+    "si-7.1_prm_3": {
+     "aggregates": [
+      "si-07.01_odp.03",
+      "si-07.01_odp.07",
+      "si-07.01_odp.11"
+     ]
+    },
+    "si-7.1_prm_4": {
+     "aggregates": [
+      "si-07.01_odp.04",
+      "si-07.01_odp.08",
+      "si-07.01_odp.12"
+     ]
+    },
+    "si-07.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "software on which an integrity check is to be performed is defined;"
+      }
+     ]
+    },
+    "si-07.01_odp.03": {
+     "guidelines": [
+      {
+       "en": "transitional states or security-relevant events requiring integrity checks (on software) are defined (if selected);"
+      }
+     ]
+    },
+    "si-07.01_odp.04": {
+     "guidelines": [
+      {
+       "en": "frequency with which to perform an integrity check (on software) is defined (if selected);"
+      }
+     ]
+    },
+    "si-07.01_odp.05": {
+     "guidelines": [
+      {
+       "en": "firmware on which an integrity check is to be performed is defined;"
+      }
+     ]
+    },
+    "si-07.01_odp.07": {
+     "guidelines": [
+      {
+       "en": "transitional states or security-relevant events requiring integrity checks (on firmware) are defined (if selected);"
+      }
+     ]
+    },
+    "si-07.01_odp.08": {
+     "guidelines": [
+      {
+       "en": "frequency with which to perform an integrity check (on firmware) is defined (if selected);"
+      }
+     ]
+    },
+    "si-07.01_odp.09": {
+     "guidelines": [
+      {
+       "en": "information on which an integrity check is to be performed is defined;"
+      }
+     ]
+    },
+    "si-07.01_odp.11": {
+     "guidelines": [
+      {
+       "en": "transitional states or security-relevant events requiring integrity checks (of information) are defined (if selected);"
+      }
+     ]
+    },
+    "si-07.01_odp.12": {
+     "guidelines": [
+      {
+       "en": "frequency with which to perform an integrity check (of information) is defined (if selected);"
+      }
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  }
+ ]
+}

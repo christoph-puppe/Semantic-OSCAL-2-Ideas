@@ -1,0 +1,141 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-18.3",
+ "version": "5.2.0",
+ "label": "SC-18(3)",
+ "lifecycle": "active",
+ "title": "Prevent Downloading and Execution",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Prevent the download and execution of {param:sc-18.03_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sc-18.03_odp",
+     "type": "string",
+     "label": "unacceptable mobile code"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "None."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-18.3_obj",
+     "label": "SC-18(03)",
+     "children": [
+      {
+       "id": "sc-18.3_obj-1",
+       "label": "SC-18(03)[01]",
+       "prose": {
+        "en": "the download of {param:sc-18.03_odp} is prevented;"
+       }
+      },
+      {
+       "id": "sc-18.3_obj-2",
+       "label": "SC-18(03)[02]",
+       "prose": {
+        "en": "the execution of {param:sc-18.03_odp} is prevented."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-18(03)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing mobile code"
+      },
+      {
+       "en": "mobile code usage restrictions"
+      },
+      {
+       "en": "mobile code implementation policy and procedures"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-18(03)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel with responsibilities for managing mobile code"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-18(03)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms preventing the download and execution of unacceptable mobile code"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-18.03_odp": {
+     "guidelines": [
+      {
+       "en": "unacceptable mobile code to be prevented from downloading and executing is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-18.3_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-18"
+  }
+ ]
+}

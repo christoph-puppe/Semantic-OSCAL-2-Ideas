@@ -1,0 +1,155 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-16.9",
+ "version": "5.2.0",
+ "label": "AC-16(9)",
+ "lifecycle": "active",
+ "title": "Attribute Reassignment — Regrading Mechanisms",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Change security and privacy attributes associated with information only via regrading mechanisms validated using {param:ac-16.9_prm_1}."
+   },
+   "parameters": [
+    {
+     "name": "ac-16.9_prm_1",
+     "type": "string",
+     "label": "organization-defined techniques or procedures"
+    },
+    {
+     "name": "ac-16.09_odp.01",
+     "type": "string",
+     "label": "techniques or procedures"
+    },
+    {
+     "name": "ac-16.09_odp.02",
+     "type": "string",
+     "label": "techniques or procedures"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "A regrading mechanism is a trusted process authorized to re-classify and re-label data in accordance with a defined policy exception. Validated regrading mechanisms are used by organizations to provide the requisite levels of assurance for attribute reassignment activities. The validation is facilitated by ensuring that regrading mechanisms are single purpose and of limited function. Since security and privacy attribute changes can directly affect policy enforcement actions, implementing trustworthy regrading mechanisms is necessary to help ensure that such mechanisms perform in a consistent and correct mode of operation."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-16.9_obj",
+     "label": "AC-16(09)",
+     "children": [
+      {
+       "id": "ac-16.9_obj-1",
+       "label": "AC-16(09)[01]",
+       "prose": {
+        "en": "security attributes associated with information are changed only via regrading mechanisms validated using {param:ac-16.09_odp.01};"
+       }
+      },
+      {
+       "id": "ac-16.9_obj-2",
+       "label": "AC-16(09)[02]",
+       "prose": {
+        "en": "privacy attributes associated with information are changed only via regrading mechanisms validated using {param:ac-16.09_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-16(09)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing reassignment of security attributes to information"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-16(09)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for reassigning association of security and privacy attributes to information"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-16(09)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing techniques or procedures for reassigning association of security and privacy attributes to information"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-16.9_prm_1": {
+     "aggregates": [
+      "ac-16.09_odp.01",
+      "ac-16.09_odp.02"
+     ]
+    },
+    "ac-16.09_odp.01": {
+     "guidelines": [
+      {
+       "en": "techniques or procedures used to validate regrading mechanisms for security attributes are defined;"
+      }
+     ]
+    },
+    "ac-16.09_odp.02": {
+     "guidelines": [
+      {
+       "en": "techniques or procedures used to validate regrading mechanisms for privacy attributes are defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-16"
+  }
+ ]
+}

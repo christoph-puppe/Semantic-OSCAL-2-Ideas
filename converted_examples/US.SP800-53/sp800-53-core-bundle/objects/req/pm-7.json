@@ -1,0 +1,190 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-7",
+ "version": "5.2.0",
+ "label": "PM-7",
+ "lifecycle": "active",
+ "title": "Enterprise Architecture",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop and maintain an enterprise architecture with consideration for information security, privacy, and the resulting risk to organizational operations and assets, individuals, other organizations, and the Nation."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The integration of security and privacy requirements and controls into the enterprise architecture helps to ensure that security and privacy considerations are addressed throughout the system development life cycle and are explicitly related to the organization’s mission and business processes. The process of security and privacy requirements integration also embeds into the enterprise architecture and the organization’s security and privacy architectures consistent with the organizational risk management strategy. For PM-7, security and privacy architectures are developed at a system-of-systems level, representing all organizational systems. For PL-8 , the security and privacy architectures are developed at a level that represents an individual system. The system-level architectures are consistent with the security and privacy architectures defined for the organization. Security and privacy requirements and control integration are most effectively accomplished through the rigorous application of the Risk Management Framework SP 800-37 and supporting security standards and guidelines."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-7_obj",
+     "label": "PM-07",
+     "children": [
+      {
+       "id": "pm-7_obj-1",
+       "label": "PM-07[01]",
+       "prose": {
+        "en": "an enterprise architecture is developed with consideration for information security;"
+       }
+      },
+      {
+       "id": "pm-7_obj-2",
+       "label": "PM-07[02]",
+       "prose": {
+        "en": "an enterprise architecture is maintained with consideration for information security;"
+       }
+      },
+      {
+       "id": "pm-7_obj-3",
+       "label": "PM-07[03]",
+       "prose": {
+        "en": "an enterprise architecture is developed with consideration for privacy;"
+       }
+      },
+      {
+       "id": "pm-7_obj-4",
+       "label": "PM-07[04]",
+       "prose": {
+        "en": "an enterprise architecture is maintained with consideration for privacy;"
+       }
+      },
+      {
+       "id": "pm-7_obj-5",
+       "label": "PM-07[05]",
+       "prose": {
+        "en": "an enterprise architecture is developed with consideration for the resulting risk to organizational operations and assets, individuals, other organizations, and the Nation;"
+       }
+      },
+      {
+       "id": "pm-7_obj-6",
+       "label": "PM-07[06]",
+       "prose": {
+        "en": "an enterprise architecture is maintained with consideration for the resulting risk to organizational operations and assets, individuals, other organizations, and the Nation."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-07-Examine",
+     "objects": [
+      {
+       "en": "Information security program plan"
+      },
+      {
+       "en": "privacy program plan"
+      },
+      {
+       "en": "enterprise architecture documentation"
+      },
+      {
+       "en": "procedures addressing enterprise architecture development"
+      },
+      {
+       "en": "results of risk assessments of enterprise architecture"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-07-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy program planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel responsible for developing enterprise architecture"
+      },
+      {
+       "en": "organizational personnel responsible for risk assessments of enterprise architecture"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PM-07-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for enterprise architecture development"
+      },
+      {
+       "en": "mechanisms supporting the enterprise architecture and its development"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-37r2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-39"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-17"
+  }
+ ]
+}

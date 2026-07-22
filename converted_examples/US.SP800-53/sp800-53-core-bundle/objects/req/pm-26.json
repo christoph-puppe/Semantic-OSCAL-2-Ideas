@@ -1,0 +1,312 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-26",
+ "version": "5.2.0",
+ "label": "PM-26",
+ "lifecycle": "active",
+ "title": "Complaint Management",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Implement a process for receiving and responding to complaints, concerns, or questions from individuals about the organizational security and privacy practices that includes:"
+   },
+   "parameters": [
+    {
+     "name": "pm-26_odp.01",
+     "type": "string",
+     "label": "time period"
+    },
+    {
+     "name": "pm-26_odp.02",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Mechanisms that are easy to use and readily accessible by the public;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "All information necessary for successfully filing complaints;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Tracking mechanisms to ensure all complaints received are reviewed and addressed within {param:pm-26_prm_1};"
+   },
+   "parameters": [
+    {
+     "name": "pm-26_prm_1",
+     "type": "string",
+     "label": "organization-defined time period"
+    }
+   ]
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Acknowledgement of receipt of complaints, concerns, or questions from individuals within {param:pm-26_odp.03} ; and"
+   },
+   "parameters": [
+    {
+     "name": "pm-26_odp.03",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Response to complaints, concerns, or questions from individuals within {param:pm-26_odp.04}."
+   },
+   "parameters": [
+    {
+     "name": "pm-26_odp.04",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Complaints, concerns, and questions from individuals can serve as valuable sources of input to organizations and ultimately improve operational models, uses of technology, data collection practices, and controls. Mechanisms that can be used by the public include telephone hotline, email, or web-based forms. The information necessary for successfully filing complaints includes contact information for the senior agency official for privacy or other official designated to receive complaints. Privacy complaints may also include personally identifiable information which is handled in accordance with relevant policies and processes."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-26_obj",
+     "label": "PM-26",
+     "children": [
+      {
+       "id": "pm-26_obj-1",
+       "label": "PM-26[01]",
+       "prose": {
+        "en": "a process for receiving complaints, concerns, or questions from individuals about organizational security and privacy practices is implemented;"
+       }
+      },
+      {
+       "id": "pm-26_obj-2",
+       "label": "PM-26[02]",
+       "prose": {
+        "en": "a process for responding to complaints, concerns, or questions from individuals about organizational security and privacy practices is implemented;"
+       }
+      },
+      {
+       "id": "pm-26_obj.a",
+       "label": "PM-26a.",
+       "children": [
+        {
+         "id": "pm-26_obj.a-1",
+         "label": "PM-26a.[01]",
+         "prose": {
+          "en": "the complaint management process includes mechanisms that are easy to use by the public;"
+         }
+        },
+        {
+         "id": "pm-26_obj.a-2",
+         "label": "PM-26a.[02]",
+         "prose": {
+          "en": "the complaint management process includes mechanisms that are readily accessible by the public;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-26_obj.b",
+       "label": "PM-26b.",
+       "prose": {
+        "en": "the complaint management process includes all information necessary for successfully filing complaints;"
+       }
+      },
+      {
+       "id": "pm-26_obj.c",
+       "label": "PM-26c.",
+       "children": [
+        {
+         "id": "pm-26_obj.c-1",
+         "label": "PM-26c.[01]",
+         "prose": {
+          "en": "the complaint management process includes tracking mechanisms to ensure that all complaints are reviewed within {param:pm-26_odp.01};"
+         }
+        },
+        {
+         "id": "pm-26_obj.c-2",
+         "label": "PM-26c.[02]",
+         "prose": {
+          "en": "the complaint management process includes tracking mechanisms to ensure that all complaints are addressed within {param:pm-26_odp.02};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-26_obj.d",
+       "label": "PM-26d.",
+       "prose": {
+        "en": "the complaint management process includes acknowledging the receipt of complaints, concerns, or questions from individuals within {param:pm-26_odp.03};"
+       }
+      },
+      {
+       "id": "pm-26_obj.e",
+       "label": "PM-26e.",
+       "prose": {
+        "en": "the complaint management process includes responding to complaints, concerns, or questions from individuals within {param:pm-26_odp.04}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-26-Examine",
+     "objects": [
+      {
+       "en": "Privacy program plan"
+      },
+      {
+       "en": "procedures addressing complaint management"
+      },
+      {
+       "en": "complaint documentation"
+      },
+      {
+       "en": "procedures addressing the reviews of complaints"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-26-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with privacy program responsibilities"
+      },
+      {
+       "en": "organizational personnel with privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PM-26-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for complaint management"
+      },
+      {
+       "en": "mechanisms supporting complaint management"
+      },
+      {
+       "en": "tools used by the public to submit complaints, concerns, and questions (e.g., telephone, hotline, email, or web-based forms"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pm-26_prm_1": {
+     "aggregates": [
+      "pm-26_odp.01",
+      "pm-26_odp.02"
+     ]
+    },
+    "pm-26_odp.01": {
+     "guidelines": [
+      {
+       "en": "the time period in which complaints (including concerns or questions) from individuals are to be reviewed is defined;"
+      }
+     ]
+    },
+    "pm-26_odp.02": {
+     "guidelines": [
+      {
+       "en": "the time period in which complaints (including concerns or questions) from individuals are to be addressed is defined;"
+      }
+     ]
+    },
+    "pm-26_odp.03": {
+     "guidelines": [
+      {
+       "en": "the time period for acknowledging the receipt of complaints is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pm-26_prm_2"
+     ]
+    },
+    "pm-26_odp.04": {
+     "guidelines": [
+      {
+       "en": "the time period for responding to complaints is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pm-26_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-22"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-18"
+  }
+ ]
+}

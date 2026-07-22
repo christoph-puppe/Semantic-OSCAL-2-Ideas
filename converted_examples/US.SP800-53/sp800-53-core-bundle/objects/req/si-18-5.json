@@ -1,0 +1,136 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-18.5",
+ "version": "5.2.0",
+ "label": "SI-18(5)",
+ "lifecycle": "active",
+ "title": "Notice of Correction or Deletion",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Notify {param:si-18.05_odp} and individuals that the personally identifiable information has been corrected or deleted."
+   },
+   "parameters": [
+    {
+     "name": "si-18.05_odp",
+     "type": "string",
+     "label": "recipients"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "When personally identifiable information is corrected or deleted, organizations take steps to ensure that all authorized recipients of such information, and the individual with whom the information is associated or their designated representatives, are informed of the corrected or deleted information."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-18.5_obj",
+     "label": "SI-18(05)",
+     "prose": {
+      "en": "{param:si-18.05_odp} and individuals are notified when the personally identifiable information has been corrected or deleted."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-18(05)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "system configuration"
+      },
+      {
+       "en": "individual requests for corrections or deletions"
+      },
+      {
+       "en": "notifications of correction or deletion action"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-18(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for sending correction or deletion notices"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-18(05)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for notifications of correction or deletion"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing notifications of correction or deletion"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-18.05_odp": {
+     "guidelines": [
+      {
+       "en": "recipients of personally identifiable information to be notified when the personally identifiable information has been corrected or deleted are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-18.5_prm_1"
+     ],
+     "alt-label": "recipients of personally identifiable information"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-18"
+  }
+ ]
+}

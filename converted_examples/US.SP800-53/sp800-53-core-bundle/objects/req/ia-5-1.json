@@ -1,0 +1,306 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-5.1",
+ "version": "5.2.0",
+ "label": "IA-5(1)",
+ "lifecycle": "active",
+ "title": "Password-based Authentication",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "For password-based authentication:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Maintain a list of commonly-used, expected, or compromised passwords and update the list {param:ia-05.01_odp.01} and when organizational passwords are suspected to have been compromised directly or indirectly;"
+   },
+   "parameters": [
+    {
+     "name": "ia-05.01_odp.01",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Verify, when users create or update passwords, that the passwords are not found on the list of commonly-used, expected, or compromised passwords in IA-5(1)(a);"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Transmit passwords only over cryptographically-protected channels;"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Store passwords using an approved salted key derivation function, preferably using a keyed hash;"
+   }
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Require immediate selection of a new password upon account recovery;"
+   }
+  },
+  {
+   "id": "smt.f",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Allow user selection of long passwords and passphrases, including spaces and all printable characters;"
+   }
+  },
+  {
+   "id": "smt.g",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Employ automated tools to assist the user in selecting strong password authenticators; and"
+   }
+  },
+  {
+   "id": "smt.h",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Enforce the following composition and complexity rules: {param:ia-05.01_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ia-05.01_odp.02",
+     "type": "string",
+     "label": "composition and complexity rules"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Password-based authentication applies to passwords regardless of whether they are used in single-factor or multi-factor authentication. Long passwords or passphrases are preferable over shorter passwords. Enforced composition rules provide marginal security benefits while decreasing usability. However, organizations may choose to establish certain rules for password generation (e.g., minimum character length for long passwords) under certain circumstances and can enforce this requirement in IA-5(1)(h). Account recovery can occur, for example, in situations when a password is forgotten. Cryptographically protected passwords include salted one-way cryptographic hashes of passwords. The list of commonly used, compromised, or expected passwords includes passwords obtained from previous breach corpuses, dictionary words, and repetitive or sequential characters. The list includes context-specific words, such as the name of the service, username, and derivatives thereof."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-5.1_obj",
+     "label": "IA-05(01)",
+     "children": [
+      {
+       "id": "ia-5.1_obj.a",
+       "label": "IA-05(01)(a)",
+       "prose": {
+        "en": "for password-based authentication, a list of commonly used, expected, or compromised passwords is maintained and updated {param:ia-05.01_odp.01} and when organizational passwords are suspected to have been compromised directly or indirectly;"
+       }
+      },
+      {
+       "id": "ia-5.1_obj.b",
+       "label": "IA-05(01)(b)",
+       "prose": {
+        "en": "for password-based authentication when passwords are created or updated by users, the passwords are verified not to be found on the list of commonly used, expected, or compromised passwords in IA-05(01)(a);"
+       }
+      },
+      {
+       "id": "ia-5.1_obj.c",
+       "label": "IA-05(01)(c)",
+       "prose": {
+        "en": "for password-based authentication, passwords are only transmitted over cryptographically protected channels;"
+       }
+      },
+      {
+       "id": "ia-5.1_obj.d",
+       "label": "IA-05(01)(d)",
+       "prose": {
+        "en": "for password-based authentication, passwords are stored using an approved salted key derivation function, preferably using a keyed hash;"
+       }
+      },
+      {
+       "id": "ia-5.1_obj.e",
+       "label": "IA-05(01)(e)",
+       "prose": {
+        "en": "for password-based authentication, immediate selection of a new password is required upon account recovery;"
+       }
+      },
+      {
+       "id": "ia-5.1_obj.f",
+       "label": "IA-05(01)(f)",
+       "prose": {
+        "en": "for password-based authentication, user selection of long passwords and passphrases is allowed, including spaces and all printable characters;"
+       }
+      },
+      {
+       "id": "ia-5.1_obj.g",
+       "label": "IA-05(01)(g)",
+       "prose": {
+        "en": "for password-based authentication, automated tools are employed to assist the user in selecting strong password authenticators;"
+       }
+      },
+      {
+       "id": "ia-5.1_obj.h",
+       "label": "IA-05(01)(h)",
+       "prose": {
+        "en": "for password-based authentication, {param:ia-05.01_odp.02} are enforced."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-05(01)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "password policy"
+      },
+      {
+       "en": "procedures addressing authenticator management"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "password configurations and associated documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-05(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with authenticator management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-05(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing password-based authenticator management capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ia-05.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to update the list of commonly used, expected, or compromised passwords is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-5.1_prm_1"
+     ]
+    },
+    "ia-05.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "authenticator composition and complexity rules are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-5.1_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-6"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5.4",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/IA-5.4",
+    "mode": "merged-into",
+    "label": "IA-05(04)",
+    "title": "Automated Support for Password Strength Determination"
+   }
+  ]
+ }
+}

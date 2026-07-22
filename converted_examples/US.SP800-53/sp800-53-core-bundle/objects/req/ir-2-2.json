@@ -1,0 +1,125 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-2.2",
+ "version": "5.2.0",
+ "label": "IR-2(2)",
+ "lifecycle": "active",
+ "title": "Automated Training Environments",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide an incident response training environment using {param:ir-02.02_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ir-02.02_odp",
+     "type": "string",
+     "label": "automated mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Automated mechanisms can provide a more thorough and realistic incident response training environment. This can be accomplished, for example, by providing more complete coverage of incident response issues, selecting more realistic training scenarios and environments, and stressing the response capability."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-2.2_obj",
+     "label": "IR-02(02)",
+     "prose": {
+      "en": "an incident response training environment is provided using {param:ir-02.02_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-02(02)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing incident response training"
+      },
+      {
+       "en": "incident response training curriculum"
+      },
+      {
+       "en": "incident response training materials"
+      },
+      {
+       "en": "automated mechanisms supporting incident response training"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-02(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident response training and operational responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IR-02(02)-Test",
+     "objects": [
+      {
+       "en": "Automated mechanisms that provide a thorough and realistic incident response training environment"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ir-02.02_odp": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used in an incident response training environment are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-2.2_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-2"
+  }
+ ]
+}

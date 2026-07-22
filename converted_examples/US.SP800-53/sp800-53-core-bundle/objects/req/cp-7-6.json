@@ -1,0 +1,102 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-7.6",
+ "version": "5.2.0",
+ "label": "CP-7(6)",
+ "lifecycle": "active",
+ "title": "Inability to Return to Primary Site",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Plan and prepare for circumstances that preclude returning to the primary processing site."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "There may be situations that preclude an organization from returning to the primary processing site such as if a natural disaster (e.g., flood or a hurricane) damaged or destroyed a facility and it was determined that rebuilding in the same location was not prudent."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-7.6_obj",
+     "label": "CP-07(06)",
+     "children": [
+      {
+       "id": "cp-7.6_obj-1",
+       "label": "CP-07(06)[01]",
+       "prose": {
+        "en": "circumstances that preclude returning to the primary processing site are planned for;"
+       }
+      },
+      {
+       "id": "cp-7.6_obj-2",
+       "label": "CP-07(06)[02]",
+       "prose": {
+        "en": "circumstances that preclude returning to the primary processing site are prepared for."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-07(06)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing alternate processing sites"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "alternate processing site"
+      },
+      {
+       "en": "alternate processing site agreements"
+      },
+      {
+       "en": "alternate processing site configurations"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-07(06)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system reconstitution responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-7"
+  }
+ ]
+}

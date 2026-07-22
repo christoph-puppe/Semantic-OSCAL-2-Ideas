@@ -1,0 +1,154 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SR-9.1",
+ "version": "5.2.0",
+ "label": "SR-9(1)",
+ "lifecycle": "active",
+ "title": "Multiple Stages of System Development Life Cycle",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ anti-tamper technologies, tools, and techniques throughout the system development life cycle."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The system development life cycle includes research and development, design, manufacturing, acquisition, delivery, integration, operations and maintenance, and disposal. Organizations use a combination of hardware and software techniques for tamper resistance and detection. Organizations use obfuscation and self-checking to make reverse engineering and modifications more difficult, time-consuming, and expensive for adversaries. The customization of systems and system components can make substitutions easier to detect and therefore limit damage."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sr-9.1_obj",
+     "label": "SR-09(01)",
+     "prose": {
+      "en": "anti-tamper technologies, tools, and techniques are employed throughout the system development life cycle."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SR-09(01)-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management policy and procedures"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "system and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing tamper resistance and detection"
+      },
+      {
+       "en": "tamper protection program documentation"
+      },
+      {
+       "en": "tamper protection tools and techniques documentation"
+      },
+      {
+       "en": "tamper resistance and detection tools (technologies) and techniques documentation"
+      },
+      {
+       "en": "system development life cycle documentation"
+      },
+      {
+       "en": "procedures addressing supply chain protection"
+      },
+      {
+       "en": "system development life cycle procedures"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "inter-organizational agreements and procedures"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SR-09(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and services acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      },
+      {
+       "en": "organizational personnel with SDLC responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SR-09(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for employing anti-tamper technologies"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing anti-tamper technologies"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-3"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-18.1",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-18.1",
+    "mode": "renamed",
+    "label": "SA-18(01)",
+    "title": "Multiple Phases of System Development Life Cycle"
+   }
+  ]
+ }
+}

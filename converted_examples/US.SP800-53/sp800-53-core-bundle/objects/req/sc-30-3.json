@@ -1,0 +1,160 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-30.3",
+ "version": "5.2.0",
+ "label": "SC-30(3)",
+ "lifecycle": "active",
+ "title": "Change Processing and Storage Locations",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Change the location of {param:sc-30.03_odp.01} {param:sc-30.03_odp.02}]."
+   },
+   "parameters": [
+    {
+     "name": "sc-30.03_odp.01",
+     "type": "string",
+     "label": "processing and/or storage"
+    },
+    {
+     "name": "sc-30.03_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "{param:sc-30.03_odp.03} "
+      },
+      {
+       "value": "random time intervals"
+      }
+     ]
+    },
+    {
+     "name": "sc-30.03_odp.03",
+     "type": "string",
+     "label": "time frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Adversaries target critical mission and business functions and the systems that support those mission and business functions while also trying to minimize the exposure of their existence and tradecraft. The static, homogeneous, and deterministic nature of organizational systems targeted by adversaries make such systems more susceptible to attacks with less adversary cost and effort to be successful. Changing processing and storage locations (also referred to as moving target defense) addresses the advanced persistent threat using techniques such as virtualization, distributed processing, and replication. This enables organizations to relocate the system components (i.e., processing, storage) that support critical mission and business functions. Changing the locations of processing activities and/or storage sites introduces a degree of uncertainty into the targeting activities of adversaries. The targeting uncertainty increases the work factor of adversaries and makes compromises or breaches of the organizational systems more difficult and time-consuming. It also increases the chances that adversaries may inadvertently disclose certain aspects of their tradecraft while attempting to locate critical organizational resources."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-30.3_obj",
+     "label": "SC-30(03)",
+     "prose": {
+      "en": "the location of {param:sc-30.03_odp.01} is changed {param:sc-30.03_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-30(03)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "configuration management policy and procedures"
+      },
+      {
+       "en": "procedures addressing concealment and misdirection techniques for the system"
+      },
+      {
+       "en": "list of processing/storage locations to be changed at organizational time intervals"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "configuration management records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-30(03)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with the responsibility to change processing and/or storage locations"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-30(03)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing changing processing and/or storage locations"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-30.03_odp.01": {
+     "guidelines": [
+      {
+       "en": "processing and/or storage locations to be changed are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-30.3_prm_1"
+     ]
+    },
+    "sc-30.03_odp.02": {
+     "alt-identifiers": [
+      "sc-30.3_prm_2"
+     ]
+    },
+    "sc-30.03_odp.03": {
+     "guidelines": [
+      {
+       "en": "time frequency at which to change the location of processing and/or storage is defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-30.3_prm_3"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-30"
+  }
+ ]
+}

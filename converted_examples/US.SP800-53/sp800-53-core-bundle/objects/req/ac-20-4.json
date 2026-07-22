@@ -1,0 +1,126 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-20.4",
+ "version": "5.2.0",
+ "label": "AC-20(4)",
+ "lifecycle": "active",
+ "title": "Network Accessible Storage Devices — Prohibited Use",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Prohibit the use of {param:ac-20.04_odp} in external systems."
+   },
+   "parameters": [
+    {
+     "name": "ac-20.04_odp",
+     "type": "string",
+     "label": "network-accessible storage devices"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Network-accessible storage devices in external systems include online storage devices in public, hybrid, or community cloud-based systems."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-20.4_obj",
+     "label": "AC-20(04)",
+     "prose": {
+      "en": "the use of {param:ac-20.04_odp} is prohibited in external systems."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-20(04)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing use of network-accessible storage devices in external systems"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system connection or processing agreements"
+      },
+      {
+       "en": "list of network-accessible storage devices prohibited from use in external systems"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-20(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for prohibiting the use of network-accessible storage devices in external systems"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-20(04)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms prohibiting the use of network-accessible storage devices in external systems"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-20.04_odp": {
+     "guidelines": [
+      {
+       "en": "network-accessible storage devices prohibited from use in external systems are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-20.4_prm_1"
+     ],
+     "alt-label": "network accessible storage devices"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-20"
+  }
+ ]
+}

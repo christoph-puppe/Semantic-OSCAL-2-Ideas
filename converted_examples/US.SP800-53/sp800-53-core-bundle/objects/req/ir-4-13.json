@@ -1,0 +1,134 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-4.13",
+ "version": "5.2.0",
+ "label": "IR-4(13)",
+ "lifecycle": "active",
+ "title": "Behavior Analysis",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Analyze anomalous or suspected adversarial behavior in or related to {param:ir-04.13_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ir-04.13_odp",
+     "type": "string",
+     "label": "environments or resources"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "If the organization maintains a deception environment, an analysis of behaviors in that environment, including resources targeted by the adversary and timing of the incident or event, can provide insight into adversarial tactics, techniques, and procedures. External to a deception environment, the analysis of anomalous adversarial behavior (e.g., changes in system performance or usage patterns) or suspected behavior (e.g., changes in searches for the location of specific resources) can give the organization such insight."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-4.13_obj",
+     "label": "IR-04(13)",
+     "prose": {
+      "en": "anomalous or suspected adversarial behavior in or related to {param:ir-04.13_odp} are analyzed."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-04(13)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing system monitoring tools and techniques"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "system monitoring logs or records"
+      },
+      {
+       "en": "system monitoring tools and techniques documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "security plan"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "network diagram"
+      },
+      {
+       "en": "system protocols documentation"
+      },
+      {
+       "en": "list of acceptable thresholds for false positives and false negatives"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-04(13)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IR-04(13)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for detecting anomalous behavior"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ir-04.13_odp": {
+     "guidelines": [
+      {
+       "en": "environments or resources which may contain or may be related to anomalous or suspected adversarial behavior are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-4.13_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  }
+ ]
+}

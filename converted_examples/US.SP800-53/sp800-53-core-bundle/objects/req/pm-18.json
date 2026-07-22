@@ -1,0 +1,351 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-18",
+ "version": "5.2.0",
+ "label": "PM-18",
+ "lifecycle": "active",
+ "title": "Privacy Program Plan",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop and disseminate an organization-wide privacy program plan that provides an overview of the agency’s privacy program, and:"
+   }
+  },
+  {
+   "id": "smt.a.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Includes a description of the structure of the privacy program and the resources dedicated to the privacy program;"
+   }
+  },
+  {
+   "id": "smt.a.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provides an overview of the requirements for the privacy program and a description of the privacy program management controls and common controls in place or planned for meeting those requirements;"
+   }
+  },
+  {
+   "id": "smt.a.3",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Includes the role of the senior agency official for privacy and the identification and assignment of roles of other privacy officials and staff and their responsibilities;"
+   }
+  },
+  {
+   "id": "smt.a.4",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Describes management commitment, compliance, and the strategic goals and objectives of the privacy program;"
+   }
+  },
+  {
+   "id": "smt.a.5",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Reflects coordination among organizational entities responsible for the different aspects of privacy; and"
+   }
+  },
+  {
+   "id": "smt.a.6",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Is approved by a senior official with responsibility and accountability for the privacy risk being incurred to organizational operations (including mission, functions, image, and reputation), organizational assets, individuals, other organizations, and the Nation; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Update the plan {param:pm-18_odp} and to address changes in federal privacy laws and policy and organizational changes and problems identified during plan implementation or privacy control assessments."
+   },
+   "parameters": [
+    {
+     "name": "pm-18_odp",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "A privacy program plan is a formal document that provides an overview of an organization’s privacy program, including a description of the structure of the privacy program, the resources dedicated to the privacy program, the role of the senior agency official for privacy and other privacy officials and staff, the strategic goals and objectives of the privacy program, and the program management controls and common controls in place or planned for meeting applicable privacy requirements and managing privacy risks. Privacy program plans can be represented in single documents or compilations of documents.\n\nThe senior agency official for privacy is responsible for designating which privacy controls the organization will treat as program management, common, system-specific, and hybrid controls. Privacy program plans provide sufficient information about the privacy program management and common controls (including the specification of parameters and assignment and selection operations explicitly or by reference) to enable control implementations that are unambiguously compliant with the intent of the plans and a determination of the risk incurred if the plans are implemented as intended.\n\nProgram management controls are generally implemented at the organization level and are essential for managing the organization’s privacy program. Program management controls are distinct from common, system-specific, and hybrid controls because program management controls are independent of any particular information system. Together, the privacy plans for individual systems and the organization-wide privacy program plan provide complete coverage for the privacy controls employed within the organization.\n\nCommon controls are documented in an appendix to the organization’s privacy program plan unless the controls are included in a separate privacy plan for a system. The organization-wide privacy program plan indicates which separate privacy plans contain descriptions of privacy controls."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-18_obj",
+     "label": "PM-18",
+     "children": [
+      {
+       "id": "pm-18_obj.a",
+       "label": "PM-18a.",
+       "children": [
+        {
+         "id": "pm-18_obj.a-1",
+         "label": "PM-18a.[01]",
+         "prose": {
+          "en": "an organization-wide privacy program plan that provides an overview of the agency’s privacy program is developed;"
+         }
+        },
+        {
+         "id": "pm-18_obj.a.1",
+         "label": "PM-18a.01",
+         "children": [
+          {
+           "id": "pm-18_obj.a.1-1",
+           "label": "PM-18a.01[01]",
+           "prose": {
+            "en": "the privacy program plan includes a description of the structure of the privacy program;"
+           }
+          },
+          {
+           "id": "pm-18_obj.a.1-2",
+           "label": "PM-18a.01[02]",
+           "prose": {
+            "en": "the privacy program plan includes a description of the resources dedicated to the privacy program;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pm-18_obj.a.2",
+         "label": "PM-18a.02",
+         "children": [
+          {
+           "id": "pm-18_obj.a.2-1",
+           "label": "PM-18a.02[01]",
+           "prose": {
+            "en": "the privacy program plan provides an overview of the requirements for the privacy program;"
+           }
+          },
+          {
+           "id": "pm-18_obj.a.2-2",
+           "label": "PM-18a.02[02]",
+           "prose": {
+            "en": "the privacy program plan provides a description of the privacy program management controls in place or planned for meeting the requirements of the privacy program;"
+           }
+          },
+          {
+           "id": "pm-18_obj.a.2-3",
+           "label": "PM-18a.02[03]",
+           "prose": {
+            "en": "the privacy program plan provides a description of common controls in place or planned for meeting the requirements of the privacy program;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pm-18_obj.a.3",
+         "label": "PM-18a.03",
+         "children": [
+          {
+           "id": "pm-18_obj.a.3-1",
+           "label": "PM-18a.03[01]",
+           "prose": {
+            "en": "the privacy program plan includes the role of the senior agency official for privacy;"
+           }
+          },
+          {
+           "id": "pm-18_obj.a.3-2",
+           "label": "PM-18a.03[02]",
+           "prose": {
+            "en": "the privacy program plan includes the identification and assignment of the roles of other privacy officials and staff and their responsibilities;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pm-18_obj.a.4",
+         "label": "PM-18a.04",
+         "children": [
+          {
+           "id": "pm-18_obj.a.4-1",
+           "label": "PM-18a.04[01]",
+           "prose": {
+            "en": "the privacy program plan describes management commitment;"
+           }
+          },
+          {
+           "id": "pm-18_obj.a.4-2",
+           "label": "PM-18a.04[02]",
+           "prose": {
+            "en": "the privacy program plan describes compliance;"
+           }
+          },
+          {
+           "id": "pm-18_obj.a.4-3",
+           "label": "PM-18a.04[03]",
+           "prose": {
+            "en": "the privacy program plan describes the strategic goals and objectives of the privacy program;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pm-18_obj.a.5",
+         "label": "PM-18a.05",
+         "prose": {
+          "en": "the privacy program plan reflects coordination among organizational entities responsible for the different aspects of privacy;"
+         }
+        },
+        {
+         "id": "pm-18_obj.a.6",
+         "label": "PM-18a.06",
+         "prose": {
+          "en": "the privacy program plan is approved by a senior official with responsibility and accountability for the privacy risk being incurred by organizational operations (including, mission, functions, image, and reputation), organizational assets, individuals, other organizations, and the Nation;"
+         }
+        },
+        {
+         "id": "pm-18_obj.a-2",
+         "label": "PM-18a.[02]",
+         "prose": {
+          "en": "the privacy program plan is disseminated;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-18_obj.b",
+       "label": "PM-18b.",
+       "children": [
+        {
+         "id": "pm-18_obj.b-1",
+         "label": "PM-18b.[01]",
+         "prose": {
+          "en": "the privacy program plan is updated {param:pm-18_odp};"
+         }
+        },
+        {
+         "id": "pm-18_obj.b-2",
+         "label": "PM-18b.[02]",
+         "prose": {
+          "en": "the privacy program plan is updated to address changes in federal privacy laws and policies;"
+         }
+        },
+        {
+         "id": "pm-18_obj.b-3",
+         "label": "PM-18b.[03]",
+         "prose": {
+          "en": "the privacy program plan is updated to address organizational changes;"
+         }
+        },
+        {
+         "id": "pm-18_obj.b-4",
+         "label": "PM-18b.[04]",
+         "prose": {
+          "en": "the privacy program plan is updated to address problems identified during plan implementation or privacy control assessments."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-18-Examine",
+     "objects": [
+      {
+       "en": "Privacy program plan"
+      },
+      {
+       "en": "procedures addressing program plan development and implementation"
+      },
+      {
+       "en": "procedures addressing program plan reviews, updates, and approvals"
+      },
+      {
+       "en": "procedures addressing coordination of the program plan with relevant entities"
+      },
+      {
+       "en": "records of program plan reviews, updates, and approvals"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-18-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with privacy program planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel with privacy responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pm-18_odp": {
+     "guidelines": [
+      {
+       "en": "the frequency of updates to the privacy program plan is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pm-18_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.govinfo.gov/content/pkg/STATUTE-88/pdf/STATUTE-88-Pg1896.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-19"
+  }
+ ]
+}

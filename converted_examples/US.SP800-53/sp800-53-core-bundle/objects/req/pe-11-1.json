@@ -1,0 +1,134 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-11.1",
+ "version": "5.2.0",
+ "label": "PE-11(1)",
+ "lifecycle": "active",
+ "title": "Alternate Power Supply — Minimal Operational Capability",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide an alternate power supply for the system that is activated {param:pe-11.01_odp} and that can maintain minimally required operational capability in the event of an extended loss of the primary power source."
+   },
+   "parameters": [
+    {
+     "name": "pe-11.01_odp",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "manually"
+      },
+      {
+       "value": "automatically"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Provision of an alternate power supply with minimal operating capability can be satisfied by accessing a secondary commercial power supply or other external power supply."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-11.1_obj",
+     "label": "PE-11(01)",
+     "children": [
+      {
+       "id": "pe-11.1_obj-1",
+       "label": "PE-11(01)[01]",
+       "prose": {
+        "en": "an alternate power supply provided for the system is activated {param:pe-11.01_odp};"
+       }
+      },
+      {
+       "id": "pe-11.1_obj-2",
+       "label": "PE-11(01)[02]",
+       "prose": {
+        "en": "the alternate power supply provided for the system can maintain minimally required operational capability in the event of an extended loss of the primary power source."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-11(01)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing emergency power"
+      },
+      {
+       "en": "alternate power supply"
+      },
+      {
+       "en": "alternate power supply documentation"
+      },
+      {
+       "en": "alternate power supply test records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-11(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with the responsibility for emergency power and/or planning"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-11(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing an alternate power supply"
+      },
+      {
+       "en": "the alternate power supply"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-11.01_odp": {
+     "alt-identifiers": [
+      "pe-11.1_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-11"
+  }
+ ]
+}

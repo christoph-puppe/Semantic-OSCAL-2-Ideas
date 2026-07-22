@@ -1,0 +1,137 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-45.2",
+ "version": "5.2.0",
+ "label": "SC-45(2)",
+ "lifecycle": "active",
+ "title": "Secondary Authoritative Time Source",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Identify a secondary authoritative time source that is in a different geographic region than the primary authoritative time source; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Synchronize the internal system clocks to the secondary authoritative time source if the primary authoritative time source is unavailable."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "It may be necessary to employ geolocation information to determine that the secondary authoritative time source is in a different geographic region."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-45.2_obj",
+     "label": "SC-45(02)",
+     "children": [
+      {
+       "id": "sc-45.2_obj.a",
+       "label": "SC-45(02)(a)",
+       "prose": {
+        "en": "a secondary authoritative time source is identified that is in a different geographic region than the primary authoritative time source;"
+       }
+      },
+      {
+       "id": "sc-45.2_obj.b",
+       "label": "SC-45(02)(b)",
+       "prose": {
+        "en": "the internal system clocks are synchronized to the secondary authoritative time source if the primary authoritative time source is unavailable."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-45(02)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing time synchronization"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-45(02)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-45(02)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing system time synchronization with secondary authoritative time sources"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-45"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-8.2",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/AU-8.2",
+    "mode": "renamed",
+    "label": "AU-08(02)",
+    "title": "Secondary Authoritative Time Source"
+   }
+  ]
+ }
+}

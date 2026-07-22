@@ -1,0 +1,173 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-11",
+ "version": "5.2.0",
+ "label": "SI-11",
+ "lifecycle": "active",
+ "title": "Error Handling",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Generate error messages that provide information necessary for corrective actions without revealing information that could be exploited; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Reveal error messages only to {param:si-11_odp}."
+   },
+   "parameters": [
+    {
+     "name": "si-11_odp",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations consider the structure and content of error messages. The extent to which systems can handle error conditions is guided and informed by organizational policy and operational requirements. Exploitable information includes stack traces and implementation details; erroneous logon attempts with passwords mistakenly entered as the username; mission or business information that can be derived from, if not stated explicitly by, the information recorded; and personally identifiable information, such as account numbers, social security numbers, and credit card numbers. Error messages may also provide a covert channel for transmitting information."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-11_obj",
+     "label": "SI-11",
+     "children": [
+      {
+       "id": "si-11_obj.a",
+       "label": "SI-11a.",
+       "prose": {
+        "en": "error messages that provide the information necessary for corrective actions are generated without revealing information that could be exploited;"
+       }
+      },
+      {
+       "id": "si-11_obj.b",
+       "label": "SI-11b.",
+       "prose": {
+        "en": "error messages are revealed only to {param:si-11_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-11-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing system error handling"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "documentation providing the structure and content of error messages"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-11-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for information input validation"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-11-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for error handling"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing error handling"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing the management of error messages"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-11_odp": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to whom error messages are to be revealed is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-11_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-31"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-15"
+  }
+ ]
+}

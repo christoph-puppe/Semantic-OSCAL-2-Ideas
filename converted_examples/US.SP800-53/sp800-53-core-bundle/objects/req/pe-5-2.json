@@ -1,0 +1,119 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-5.2",
+ "version": "5.2.0",
+ "label": "PE-5(2)",
+ "lifecycle": "active",
+ "title": "Link to Individual Identity",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Link individual identity to receipt of output from output devices."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Methods for linking individual identity to the receipt of output from output devices include installing security functionality on facsimile machines, copiers, and printers. Such functionality allows organizations to implement authentication on output devices prior to the release of output to individuals."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-5.2_obj",
+     "label": "PE-05(02)",
+     "prose": {
+      "en": "individual identity is linked to the receipt of output from output devices."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-05(02)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing physical access control"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of output devices and associated outputs requiring physical access controls"
+      },
+      {
+       "en": "physical access control logs or records for areas containing output devices and related outputs"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-05(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with physical access control responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-05(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for access control to output devices"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing access control to output devices"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-5"
+  }
+ ]
+}

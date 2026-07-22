@@ -1,0 +1,621 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-24",
+ "version": "5.2.0",
+ "label": "SA-24",
+ "lifecycle": "active",
+ "title": "Design For Cyber Resiliency",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Design organizational systems, system components, or system services to achieve cyber resiliency by:"
+   }
+  },
+  {
+   "id": "smt.a.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Defining the following cyber resiliency goals: {param:sa-24_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "sa-24_odp.01",
+     "type": "string",
+     "label": "cyber resiliency goals"
+    }
+   ]
+  },
+  {
+   "id": "smt.a.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Defining the following cyber resiliency objectives: {param:sa-24_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "sa-24_odp.02",
+     "type": "string",
+     "label": "cyber resiliency objectives"
+    }
+   ]
+  },
+  {
+   "id": "smt.a.3",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Defining the following cyber resiliency techniques: {param:sa-24_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "sa-24_odp.03",
+     "type": "string",
+     "label": "cyber resiliency techniques"
+    }
+   ]
+  },
+  {
+   "id": "smt.a.4",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Defining the following cyber resiliency implementation approaches: {param:sa-24_odp.04}."
+   },
+   "parameters": [
+    {
+     "name": "sa-24_odp.04",
+     "type": "string",
+     "label": "cyber resiliency implementation approaches"
+    }
+   ]
+  },
+  {
+   "id": "smt.a.5",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Defining the following cyber resiliency design principles: {param:sa-24_odp.05}."
+   },
+   "parameters": [
+    {
+     "name": "sa-24_odp.05",
+     "type": "string",
+     "label": "cyber resiliency design principles"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Implement the selected cyber resiliency goals, objectives, techniques, implementation approaches, and design principles as part of an organizational risk management process or systems security engineering process."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Cyber resiliency is critical to ensuring the survivability of mission critical systems and high value assets. Cyber resiliency focuses on limiting the damage from adversity or the conditions that can cause a loss of assets. Damage can affect: (1) organizations (e.g., loss of reputation, increased existential risk); (2) missions or business functions (e.g., decreased capability to complete current missions and to accomplish future missions); (3) security (e.g., decreased capability to achieve security objectives or to prevent, detect, and respond to cyber incidents); (4) systems (e.g., unauthorized use of system resources or decreased capability to meet system requirements); or (5) specific system elements (e.g., physical destruction; corruption, modification, or fabrication of information).\n\nCyber resiliency goals are intended to help organizations maintain a state of informed preparedness for adversity, continue essential mission or business functions despite adversity, restore mission or business functions during and after adversity, and modify mission or business functions and their supporting capabilities in response to predicted changes in technical, operational, or threat environments.\n\nNIST SP 800-160, Volume 2 provides additional information on the Cyber Resiliency Engineering Framework to include detailed descriptions of cyber resiliency goals, objectives, techniques, implementation approaches, and design principles. NIST SP 800-160, Vol 1 provides additional information on achieving cyber resiliency as an emergent property of an engineered system."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-24_obj",
+     "label": "SA-24",
+     "prose": {
+      "en": "Determine if:"
+     },
+     "children": [
+      {
+       "id": "sa-24_obj.a",
+       "label": "SA-24a.",
+       "children": [
+        {
+         "id": "sa-24_obj.a.1",
+         "label": "SA-24a.01",
+         "prose": {
+          "en": "organizational systems, system components, or system services achieve cyber resiliency through {param:sa-24_odp.01};"
+         }
+        },
+        {
+         "id": "sa-24_obj.a.2",
+         "label": "SA-24a.02",
+         "prose": {
+          "en": "organizational systems, system components, or system services achieve cyber resiliency through {param:sa-24_odp.02};"
+         }
+        },
+        {
+         "id": "sa-24_obj.a.3",
+         "label": "SA-24a.03",
+         "prose": {
+          "en": "organizational systems, system components, or system services achieve cyber resiliency through {param:sa-24_odp.03};"
+         }
+        },
+        {
+         "id": "sa-24_obj.a.4",
+         "label": "SA-24a.04",
+         "prose": {
+          "en": "organizational systems, system components, or system services achieve cyber resiliency through {param:sa-24_odp.04};"
+         }
+        },
+        {
+         "id": "sa-24_obj.a-5",
+         "label": "SA-24a.05",
+         "prose": {
+          "en": "organizational systems, system components, or system services achieve cyber resiliency through {param:sa-24_odp.05};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-24_obj.b",
+       "label": "SA-24b.",
+       "children": [
+        {
+         "id": "sa-24_obj.b-1",
+         "label": "SA-24b.[01]",
+         "prose": {
+          "en": "selected cyber resiliency goals are implemented as part of an organizational risk management process of systems security engineering process;"
+         }
+        },
+        {
+         "id": "sa-24_obj.b-2",
+         "label": "SA-24b.[02]",
+         "prose": {
+          "en": "selected cyber resiliency objectives are implemented as part of an organizational risk management process of systems security engineering process;"
+         }
+        },
+        {
+         "id": "sa-24_obj.b-3",
+         "label": "SA-24b.[03]",
+         "prose": {
+          "en": "selected cyber resiliency techniques are implemented as part of an organizational risk management process of systems security engineering process;"
+         }
+        },
+        {
+         "id": "sa-24_obj.b-4",
+         "label": "SA-24b.[04]",
+         "prose": {
+          "en": "selected cyber resiliency implementation approaches are implemented as part of an organizational risk management process of systems security engineering process;"
+         }
+        },
+        {
+         "id": "sa-24_obj.b-5",
+         "label": "SA-24b.[05]",
+         "prose": {
+          "en": "selected cyber resiliency design principles are implemented as part of an organizational risk management process of systems security engineering process."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-24-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy;"
+      },
+      {
+       "en": "system and services acquisition procedures;"
+      },
+      {
+       "en": "assessment and authorization procedures;"
+      },
+      {
+       "en": "procedures addressing cyber resiliency goals, objectives, techniques, implementation approaches, and design principles used in the specification, design, development, implementation, and modification of the system;"
+      },
+      {
+       "en": "system design documentation;"
+      },
+      {
+       "en": "security and privacy requirements and specifications for the system;"
+      },
+      {
+       "en": "system security plan;"
+      },
+      {
+       "en": "privacy plan;"
+      },
+      {
+       "en": "privacy impact assessment;"
+      },
+      {
+       "en": "privacy risk assessment documentation."
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-24-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with acquisition/contracting responsibilities;"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities;"
+      },
+      {
+       "en": "organizational personnel with system specification, design, development, implementation, and modification responsibilities;"
+      },
+      {
+       "en": "system developers."
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-24-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for applying cyber resiliency principles in system specification, design, development, implementation, and modification;"
+      },
+      {
+       "en": "mechanisms supporting the application of cyber resiliency principles in system specification, design, development, implementation, and modification."
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-24_odp.01": {
+     "guidelines": [
+      {
+       "en": "cyber resiliency goals are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-24_prm_1"
+     ]
+    },
+    "sa-24_odp.02": {
+     "guidelines": [
+      {
+       "en": "cyber resiliency objectives are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-24_prm_2"
+     ]
+    },
+    "sa-24_odp.03": {
+     "guidelines": [
+      {
+       "en": "cyber resiliency techniques are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-24_prm_3"
+     ]
+    },
+    "sa-24_odp.04": {
+     "guidelines": [
+      {
+       "en": "cyber resiliency implementation approaches are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-24_prm_4"
+     ]
+    },
+    "sa-24_odp.05": {
+     "guidelines": [
+      {
+       "en": "cyber resiliency design principles are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-24_prm_5"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-30r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-30"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-31"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-29"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-30"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-34"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-35"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-36"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-37"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-39"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-44"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-47"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-48"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-49"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-50"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-51"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-14"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-15"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-19"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-20"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-21"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-22"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-23"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-11"
+  }
+ ]
+}

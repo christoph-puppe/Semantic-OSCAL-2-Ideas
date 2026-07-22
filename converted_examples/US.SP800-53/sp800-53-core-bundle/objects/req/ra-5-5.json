@@ -1,0 +1,164 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/RA-5.5",
+ "version": "5.2.0",
+ "label": "RA-5(5)",
+ "lifecycle": "active",
+ "title": "Privileged Access",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Implement privileged access authorization to {param:ra-05.05_odp.01} for {param:ra-05.05_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ra-05.05_odp.01",
+     "type": "string",
+     "label": "system components"
+    },
+    {
+     "name": "ra-05.05_odp.02",
+     "type": "string",
+     "label": "vulnerability scanning activities"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "In certain situations, the nature of the vulnerability scanning may be more intrusive, or the system component that is the subject of the scanning may contain classified or controlled unclassified information, such as personally identifiable information. Privileged access authorization to selected system components facilitates more thorough vulnerability scanning and protects the sensitive nature of such scanning."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ra-5.5_obj",
+     "label": "RA-05(05)",
+     "prose": {
+      "en": "privileged access authorization is implemented to {param:ra-05.05_odp.01} for {param:ra-05.05_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "RA-05(05)-Examine",
+     "objects": [
+      {
+       "en": "Risk assessment policy"
+      },
+      {
+       "en": "procedures addressing vulnerability scanning"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of system components for vulnerability scanning"
+      },
+      {
+       "en": "personnel access authorization list"
+      },
+      {
+       "en": "authorization credentials"
+      },
+      {
+       "en": "access authorization records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "RA-05(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with vulnerability scanning responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel responsible for access control to the system"
+      },
+      {
+       "en": "organizational personnel responsible for configuration management of the system"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "RA-05(05)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for vulnerability scanning"
+      },
+      {
+       "en": "organizational processes for access control"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing access control"
+      },
+      {
+       "en": "mechanisms/tools supporting and/or implementing vulnerability scanning"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ra-05.05_odp.01": {
+     "guidelines": [
+      {
+       "en": "system components to which privileged access is authorized for selected vulnerability scanning activities are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ra-5.5_prm_1"
+     ]
+    },
+    "ra-05.05_odp.02": {
+     "guidelines": [
+      {
+       "en": "vulnerability scanning activities selected for privileged access authorization to system components are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ra-5.5_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  }
+ ]
+}

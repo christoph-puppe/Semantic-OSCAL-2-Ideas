@@ -1,0 +1,151 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-10",
+ "version": "5.2.0",
+ "label": "IA-10",
+ "lifecycle": "active",
+ "title": "Adaptive Authentication",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require individuals accessing the system to employ {param:ia-10_odp.01} under specific {param:ia-10_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ia-10_odp.01",
+     "type": "string",
+     "label": "supplemental authentication techniques or mechanisms"
+    },
+    {
+     "name": "ia-10_odp.02",
+     "type": "string",
+     "label": "circumstances or situations"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Adversaries may compromise individual authentication mechanisms employed by organizations and subsequently attempt to impersonate legitimate users. To address this threat, organizations may employ specific techniques or mechanisms and establish protocols to assess suspicious behavior. Suspicious behavior may include accessing information that individuals do not typically access as part of their duties, roles, or responsibilities; accessing greater quantities of information than individuals would routinely access; or attempting to access information from suspicious network addresses. When pre-established conditions or triggers occur, organizations can require individuals to provide additional authentication information. Another potential use for adaptive authentication is to increase the strength of mechanism based on the number or types of records being accessed. Adaptive authentication does not replace and is not used to avoid the use of multi-factor authentication mechanisms but can augment implementations of multi-factor authentication."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-10_obj",
+     "label": "IA-10",
+     "prose": {
+      "en": "individuals accessing the system are required to employ {param:ia-10_odp.01} under specific {param:ia-10_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-10-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "procedures addressing adaptive/supplemental identification and authentication techniques or mechanisms"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "supplemental identification and authentication techniques or mechanisms"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-10-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system operations responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with identification and authentication responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-10-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing identification and authentication capabilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ia-10_odp.01": {
+     "guidelines": [
+      {
+       "en": "supplemental authentication techniques or mechanisms to be employed when accessing the system under specific circumstances or situations are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-10_prm_1"
+     ]
+    },
+    "ia-10_odp.02": {
+     "guidelines": [
+      {
+       "en": "circumstances or situations that require individuals accessing the system to employ supplemental authentication techniques or mechanisms are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-10_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-63-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-8"
+  }
+ ]
+}

@@ -1,0 +1,193 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-2.7",
+ "version": "5.2.0",
+ "label": "AC-2(7)",
+ "lifecycle": "active",
+ "title": "Privileged User Accounts",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish and administer privileged user accounts in accordance with {param:ac-02.07_odp};"
+   },
+   "parameters": [
+    {
+     "name": "ac-02.07_odp",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "a role-based access scheme"
+      },
+      {
+       "value": "an attribute-based access scheme"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Monitor privileged role or attribute assignments;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Monitor changes to roles or attributes; and"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Revoke access when privileged role or attribute assignments are no longer appropriate."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Privileged roles are organization-defined roles assigned to individuals that allow those individuals to perform certain security-relevant functions that ordinary users are not authorized to perform. Privileged roles include key management, account management, database administration, system and network administration, and web administration. A role-based access scheme organizes permitted system access and privileges into roles. In contrast, an attribute-based access scheme specifies allowed system access and privileges based on attributes."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-2.7_obj",
+     "label": "AC-02(07)",
+     "children": [
+      {
+       "id": "ac-2.7_obj.a",
+       "label": "AC-02(07)(a)",
+       "prose": {
+        "en": "privileged user accounts are established and administered in accordance with {param:ac-02.07_odp};"
+       }
+      },
+      {
+       "id": "ac-2.7_obj.b",
+       "label": "AC-02(07)(b)",
+       "prose": {
+        "en": "privileged role or attribute assignments are monitored;"
+       }
+      },
+      {
+       "id": "ac-2.7_obj.c",
+       "label": "AC-02(07)(c)",
+       "prose": {
+        "en": "changes to roles or attributes are monitored;"
+       }
+      },
+      {
+       "id": "ac-2.7_obj.d",
+       "label": "AC-02(07)(d)",
+       "prose": {
+        "en": "access is revoked when privileged role or attribute assignments are no longer appropriate."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-02(07)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing account management"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system-generated list of privileged user accounts and associated roles"
+      },
+      {
+       "en": "records of actions taken when privileged role assignments are no longer appropriate"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "audit tracking and monitoring reports"
+      },
+      {
+       "en": "system monitoring records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-02(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with account management responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-02(07)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing account management functions"
+      },
+      {
+       "en": "mechanisms monitoring privileged role assignments"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-02.07_odp": {
+     "alt-identifiers": [
+      "ac-2.7_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  }
+ ]
+}

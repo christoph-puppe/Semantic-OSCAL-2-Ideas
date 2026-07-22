@@ -1,0 +1,246 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-3.4",
+ "version": "5.2.0",
+ "label": "AC-3(4)",
+ "lifecycle": "active",
+ "title": "Discretionary Access Control",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Enforce {param:ac-3.4_prm_1} over the set of covered subjects and objects specified in the policy, and where the policy specifies that a subject that has been granted access to information can do one or more of the following:"
+   },
+   "parameters": [
+    {
+     "name": "ac-3.4_prm_1",
+     "type": "string",
+     "label": "organization-defined discretionary access control policy"
+    },
+    {
+     "name": "ac-03.04_odp.01",
+     "type": "string",
+     "label": "discretionary access control policy"
+    },
+    {
+     "name": "ac-03.04_odp.02",
+     "type": "string",
+     "label": "discretionary access control policy"
+    }
+   ]
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Pass the information to any other subjects or objects;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Grant its privileges to other subjects;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Change security attributes on subjects, objects, the system, or the system’s components;"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Choose the security attributes to be associated with newly created or revised objects; or"
+   }
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Change the rules governing access control."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "When discretionary access control policies are implemented, subjects are not constrained with regard to what actions they can take with information for which they have already been granted access. Thus, subjects that have been granted access to information are not prevented from passing the information to other subjects or objects (i.e., subjects have the discretion to pass). Discretionary access control can operate in conjunction with mandatory access control as described in AC-3(3) and AC-3(15) . A subject that is constrained in its operation by mandatory access control policies can still operate under the less rigorous constraints of discretionary access control. Therefore, while AC-3(3) imposes constraints that prevent a subject from passing information to another subject operating at a different impact or classification level, AC-3(4) permits the subject to pass the information to any subject at the same impact or classification level. The policy is bounded by the system. Once the information is passed outside of system control, additional means may be required to ensure that the constraints remain in effect. While traditional definitions of discretionary access control require identity-based access control, that limitation is not required for this particular use of discretionary access control."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-3.4_obj",
+     "label": "AC-03(04)",
+     "children": [
+      {
+       "id": "ac-3.4_obj-1",
+       "label": "AC-03(04)[01]",
+       "prose": {
+        "en": "{param:ac-03.04_odp.01} is enforced over the set of covered subjects specified in the policy;"
+       }
+      },
+      {
+       "id": "ac-3.4_obj-2",
+       "label": "AC-03(04)[02]",
+       "prose": {
+        "en": "{param:ac-03.04_odp.02} is enforced over the set of covered objects specified in the policy;"
+       }
+      },
+      {
+       "id": "ac-3.4_obj.a",
+       "label": "AC-03(04)(a)",
+       "prose": {
+        "en": "{param:ac-03.04_odp.01} and {param:ac-03.04_odp.02} are enforced where the policy specifies that a subject that has been granted access to information can pass the information to any other subjects or objects;"
+       }
+      },
+      {
+       "id": "ac-3.4_obj.b",
+       "label": "AC-03(04)(b)",
+       "prose": {
+        "en": "{param:ac-03.04_odp.01} and {param:ac-03.04_odp.02} are enforced where the policy specifies that a subject that has been granted access to information can grant its privileges to other subjects;"
+       }
+      },
+      {
+       "id": "ac-3.4_obj.c",
+       "label": "AC-03(04)(c)",
+       "prose": {
+        "en": "{param:ac-03.04_odp.01} and {param:ac-03.04_odp.02} are enforced where the policy specifies that a subject that has been granted access to information can change security attributes on subjects, objects, the system, or the system’s components;"
+       }
+      },
+      {
+       "id": "ac-3.4_obj.d",
+       "label": "AC-03(04)(d)",
+       "prose": {
+        "en": "{param:ac-03.04_odp.01} and {param:ac-03.04_odp.02} are enforced where the policy specifies that a subject that has been granted access to information can choose the security attributes to be associated with newly created or revised objects;"
+       }
+      },
+      {
+       "id": "ac-3.4_obj.e",
+       "label": "AC-03(04)(e)",
+       "prose": {
+        "en": "{param:ac-03.04_odp.01} and {param:ac-03.04_odp.02} are enforced where the policy specifies that a subject that has been granted access to information can change the rules governing access control."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-03(04)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "discretionary access control policies"
+      },
+      {
+       "en": "procedures addressing access enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of subjects and objects (i.e., users and resources) requiring enforcement of discretionary access control policies"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-03(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with access enforcement responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-03(04)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing discretionary access control policy"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-3.4_prm_1": {
+     "aggregates": [
+      "ac-03.04_odp.01",
+      "ac-03.04_odp.02"
+     ]
+    },
+    "ac-03.04_odp.01": {
+     "guidelines": [
+      {
+       "en": "discretionary access control policy enforced over the set of covered subjects is defined;"
+      }
+     ]
+    },
+    "ac-03.04_odp.02": {
+     "guidelines": [
+      {
+       "en": "discretionary access control policy enforced over the set of covered objects is defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  }
+ ]
+}

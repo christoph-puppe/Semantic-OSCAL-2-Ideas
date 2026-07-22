@@ -1,0 +1,118 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-19.4",
+ "version": "5.2.0",
+ "label": "SI-19(4)",
+ "lifecycle": "active",
+ "title": "Removal, Masking, Encryption, Hashing, or Replacement of Direct Identifiers",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Remove, mask, encrypt, hash, or replace direct identifiers in a dataset."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "There are many possible processes for removing direct identifiers from a dataset. Columns in a dataset that contain a direct identifier can be removed. In masking, the direct identifier is transformed into a repeating character, such as XXXXXX or 999999. Identifiers can be encrypted or hashed so that the linked records remain linked. In the case of encryption or hashing, algorithms are employed that require the use of a key, including the Advanced Encryption Standard or a Hash-based Message Authentication Code. Implementations may use the same key for all identifiers or use a different key for each identifier. Using a different key for each identifier provides a higher degree of security and privacy. Identifiers can alternatively be replaced with a keyword, including transforming \"George Washington\" to \"PATIENT\" or replacing it with a surrogate value, such as transforming \"George Washington\" to \"Abraham Polk.\" "
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-19.4_obj",
+     "label": "SI-19(04)",
+     "prose": {
+      "en": "direct identifiers in a dataset are removed, masked, encrypted, hashed, or replaced."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-19(04)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "de-identification procedures"
+      },
+      {
+       "en": "system configuration"
+      },
+      {
+       "en": "documentation of de-identified datasets"
+      },
+      {
+       "en": "tools for the removal, masking, encryption, hashing or replacement of direct identifiers"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-19(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for de-identifying the dataset"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-19(04)-Test",
+     "objects": [
+      {
+       "en": "Automated mechanisms supporting and/or implementing the removal, masking, encryption, hashing or replacement of direct identifiers"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-19"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  }
+ ]
+}

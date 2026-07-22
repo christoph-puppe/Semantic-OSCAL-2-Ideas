@@ -1,0 +1,132 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-5.12",
+ "version": "5.2.0",
+ "label": "IA-5(12)",
+ "lifecycle": "active",
+ "title": "Biometric Authentication Performance",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "For biometric-based authentication, employ mechanisms that satisfy the following biometric quality requirements {param:ia-05.12_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ia-05.12_odp",
+     "type": "string",
+     "label": "biometric quality requirements"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Unlike password-based authentication, which provides exact matches of user-input passwords to stored passwords, biometric authentication does not provide exact matches. Depending on the type of biometric and the type of collection mechanism, there is likely to be some divergence from the presented biometric and the stored biometric that serves as the basis for comparison. Matching performance is the rate at which a biometric algorithm correctly results in a match for a genuine user and rejects other users. Biometric performance requirements include the match rate, which reflects the accuracy of the biometric matching algorithm used by a system."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-5.12_obj",
+     "label": "IA-05(12)",
+     "prose": {
+      "en": "mechanisms that satisfy {param:ia-05.12_odp} are employed for biometric-based authentication."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-05(12)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "procedures addressing authenticator management"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "mechanisms employing biometric-based authentication for the system"
+      },
+      {
+       "en": "list of biometric quality requirements"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-05(12)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with authenticator management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-05(12)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing biometric-based authenticator management capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ia-05.12_odp": {
+     "guidelines": [
+      {
+       "en": "biometric quality requirements for biometric-based authentication are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-5.12_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-7"
+  }
+ ]
+}

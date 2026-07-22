@@ -1,0 +1,190 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-12.3",
+ "version": "5.2.0",
+ "label": "AU-12(3)",
+ "lifecycle": "active",
+ "title": "Changes by Authorized Individuals",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide and implement the capability for {param:au-12.03_odp.01} to change the logging to be performed on {param:au-12.03_odp.02} based on {param:au-12.03_odp.03} within {param:au-12.03_odp.04}."
+   },
+   "parameters": [
+    {
+     "name": "au-12.03_odp.01",
+     "type": "string",
+     "label": "individuals or roles"
+    },
+    {
+     "name": "au-12.03_odp.02",
+     "type": "string",
+     "label": "system components"
+    },
+    {
+     "name": "au-12.03_odp.03",
+     "type": "string",
+     "label": "selectable event criteria"
+    },
+    {
+     "name": "au-12.03_odp.04",
+     "type": "string",
+     "label": "time thresholds"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Permitting authorized individuals to make changes to system logging enables organizations to extend or limit logging as necessary to meet organizational requirements. Logging that is limited to conserve system resources may be extended (either temporarily or permanently) to address certain threat situations. In addition, logging may be limited to a specific set of event types to facilitate audit reduction, analysis, and reporting. Organizations can establish time thresholds in which logging actions are changed (e.g., near real-time, within minutes, or within hours)."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-12.3_obj",
+     "label": "AU-12(03)",
+     "children": [
+      {
+       "id": "au-12.3_obj-1",
+       "label": "AU-12(03)[01]",
+       "prose": {
+        "en": "the capability for {param:au-12.03_odp.01} to change the logging to be performed on {param:au-12.03_odp.02} based on {param:au-12.03_odp.03} within {param:au-12.03_odp.04} is provided;"
+       }
+      },
+      {
+       "id": "au-12.3_obj-2",
+       "label": "AU-12(03)[02]",
+       "prose": {
+        "en": "the capability for {param:au-12.03_odp.01} to change the logging to be performed on {param:au-12.03_odp.02} based on {param:au-12.03_odp.03} within {param:au-12.03_odp.04} is implemented."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-12(03)-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "procedures addressing audit record generation"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system-generated list of individuals or roles authorized to change auditing to be performed"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-12(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with audit record generation responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AU-12(03)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing audit record generation capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "au-12.03_odp.01": {
+     "guidelines": [
+      {
+       "en": "individuals or roles authorized to change the logging on system components are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-12.3_prm_1"
+     ]
+    },
+    "au-12.03_odp.02": {
+     "guidelines": [
+      {
+       "en": "system components on which logging is to be performed are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-12.3_prm_2"
+     ]
+    },
+    "au-12.03_odp.03": {
+     "guidelines": [
+      {
+       "en": "selectable event criteria with which change logging is to be performed are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-12.3_prm_3"
+     ]
+    },
+    "au-12.03_odp.04": {
+     "guidelines": [
+      {
+       "en": "time thresholds in which logging actions are to change is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-12.3_prm_4"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  }
+ ]
+}

@@ -1,0 +1,156 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-6.3",
+ "version": "5.2.0",
+ "label": "AC-6(3)",
+ "lifecycle": "active",
+ "title": "Network Access to Privileged Commands",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Authorize network access to {param:ac-06.03_odp.01} only for {param:ac-06.03_odp.02} and document the rationale for such access in the security plan for the system."
+   },
+   "parameters": [
+    {
+     "name": "ac-06.03_odp.01",
+     "type": "string",
+     "label": "privileged commands"
+    },
+    {
+     "name": "ac-06.03_odp.02",
+     "type": "string",
+     "label": "compelling operational needs"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Network access is any access across a network connection in lieu of local access (i.e., user being physically present at the device)."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-6.3_obj",
+     "label": "AC-06(03)",
+     "children": [
+      {
+       "id": "ac-6.3_obj-1",
+       "label": "AC-06(03)[01]",
+       "prose": {
+        "en": "network access to {param:ac-06.03_odp.01} is authorized only for {param:ac-06.03_odp.02};"
+       }
+      },
+      {
+       "id": "ac-6.3_obj-2",
+       "label": "AC-06(03)[02]",
+       "prose": {
+        "en": "the rationale for authorizing network access to privileged commands is documented in the security plan for the system."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-06(03)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing least privilege"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "list of operational needs for authorizing network access to privileged commands"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-06(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for defining least privileges necessary to accomplish specified tasks"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-06(03)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing least privilege functions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-06.03_odp.01": {
+     "guidelines": [
+      {
+       "en": "privileged commands to which network access is to be authorized only for compelling operational needs are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-6.3_prm_1"
+     ]
+    },
+    "ac-06.03_odp.02": {
+     "guidelines": [
+      {
+       "en": "compelling operational needs necessitating network access to privileged commands are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-6.3_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-18"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-19"
+  }
+ ]
+}

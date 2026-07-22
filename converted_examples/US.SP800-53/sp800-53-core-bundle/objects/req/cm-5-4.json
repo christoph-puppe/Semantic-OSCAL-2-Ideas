@@ -1,0 +1,183 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-5.4",
+ "version": "5.2.0",
+ "label": "CM-5(4)",
+ "lifecycle": "active",
+ "title": "Dual Authorization",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Enforce dual authorization for implementing changes to {param:cm-5.4_prm_1}."
+   },
+   "parameters": [
+    {
+     "name": "cm-5.4_prm_1",
+     "type": "string",
+     "label": "organization-defined system components and system-level information"
+    },
+    {
+     "name": "cm-05.04_odp.01",
+     "type": "string",
+     "label": "system components"
+    },
+    {
+     "name": "cm-05.04_odp.02",
+     "type": "string",
+     "label": "system-level information"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations employ dual authorization to help ensure that any changes to selected system components and information cannot occur unless two qualified individuals approve and implement such changes. The two individuals possess the skills and expertise to determine if the proposed changes are correct implementations of approved changes. The individuals are also accountable for the changes. Dual authorization may also be known as two-person control. To reduce the risk of collusion, organizations consider rotating dual authorization duties to other individuals. System-level information includes operational procedures."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-5.4_obj",
+     "label": "CM-05(04)",
+     "children": [
+      {
+       "id": "cm-5.4_obj-1",
+       "label": "CM-05(04)[01]",
+       "prose": {
+        "en": "dual authorization for implementing changes to {param:cm-05.04_odp.01} is enforced;"
+       }
+      },
+      {
+       "id": "cm-5.4_obj-2",
+       "label": "CM-05(04)[02]",
+       "prose": {
+        "en": "dual authorization for implementing changes to {param:cm-05.04_odp.02} is enforced."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-05(04)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing access restrictions for changes to the system"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system architecture and configuration documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "system information types information"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-05(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with dual authorization enforcement responsibilities for implementing system changes"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-05(04)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing access restrictions to change"
+      },
+      {
+       "en": "mechanisms implementing dual authorization enforcement"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-5.4_prm_1": {
+     "aggregates": [
+      "cm-05.04_odp.01",
+      "cm-05.04_odp.02"
+     ]
+    },
+    "cm-05.04_odp.01": {
+     "guidelines": [
+      {
+       "en": "system components requiring dual authorization for changes are defined;"
+      }
+     ]
+    },
+    "cm-05.04_odp.02": {
+     "guidelines": [
+      {
+       "en": "system-level information requiring dual authorization for changes is defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-3"
+  }
+ ]
+}

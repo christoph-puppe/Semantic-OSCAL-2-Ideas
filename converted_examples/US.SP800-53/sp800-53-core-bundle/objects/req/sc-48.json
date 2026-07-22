@@ -1,0 +1,171 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-48",
+ "version": "5.2.0",
+ "label": "SC-48",
+ "lifecycle": "active",
+ "title": "Sensor Relocation",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Relocate {param:sc-48_odp.01} to {param:sc-48_odp.02} under the following conditions or circumstances: {param:sc-48_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "sc-48_odp.01",
+     "type": "string",
+     "label": "sensors and monitoring capabilities"
+    },
+    {
+     "name": "sc-48_odp.02",
+     "type": "string",
+     "label": "locations"
+    },
+    {
+     "name": "sc-48_odp.03",
+     "type": "string",
+     "label": "conditions or circumstances"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Adversaries may take various paths and use different approaches as they move laterally through an organization (including its systems) to reach their target or as they attempt to exfiltrate information from the organization. The organization often only has a limited set of monitoring and detection capabilities, and they may be focused on the critical or likely infiltration or exfiltration paths. By using communications paths that the organization typically does not monitor, the adversary can increase its chances of achieving its desired goals. By relocating its sensors or monitoring capabilities to new locations, the organization can impede the adversary’s ability to achieve its goals. The relocation of the sensors or monitoring capabilities might be done based on threat information that the organization has acquired or randomly to confuse the adversary and make its lateral transition through the system or organization more challenging."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-48_obj",
+     "label": "SC-48",
+     "prose": {
+      "en": "{param:sc-48_odp.01} are relocated to {param:sc-48_odp.02} under {param:sc-48_odp.03}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-48-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing sensor and monitoring capability relocation"
+      },
+      {
+       "en": "list of sensors/monitoring capabilities to be relocated"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "configuration management records"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-48-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-48-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing sensor relocation"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-48_odp.01": {
+     "guidelines": [
+      {
+       "en": "sensors and monitoring capabilities to be relocated are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-48_prm_1"
+     ]
+    },
+    "sc-48_odp.02": {
+     "guidelines": [
+      {
+       "en": "locations to where sensors and monitoring capabilities are to be relocated are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-48_prm_2"
+     ]
+    },
+    "sc-48_odp.03": {
+     "guidelines": [
+      {
+       "en": "conditions or circumstances for relocating sensors and monitoring capabilities are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-48_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

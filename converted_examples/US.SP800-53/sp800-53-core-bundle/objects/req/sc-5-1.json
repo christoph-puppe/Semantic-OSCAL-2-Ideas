@@ -1,0 +1,125 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-5.1",
+ "version": "5.2.0",
+ "label": "SC-5(1)",
+ "lifecycle": "active",
+ "title": "Restrict Ability to Attack Other Systems",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Restrict the ability of individuals to launch the following denial-of-service attacks against other systems: {param:sc-05.01_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sc-05.01_odp",
+     "type": "string",
+     "label": "denial-of-service attacks"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Restricting the ability of individuals to launch denial-of-service attacks requires the mechanisms commonly used for such attacks to be unavailable. Individuals of concern include hostile insiders or external adversaries who have breached or compromised the system and are using it to launch a denial-of-service attack. Organizations can restrict the ability of individuals to connect and transmit arbitrary information on the transport medium (i.e., wired networks, wireless networks, spoofed Internet protocol packets). Organizations can also limit the ability of individuals to use excessive system resources. Protection against individuals having the ability to launch denial-of-service attacks may be implemented on specific systems or boundary devices that prohibit egress to potential target systems."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-5.1_obj",
+     "label": "SC-05(01)",
+     "prose": {
+      "en": "the ability of individuals to launch {param:sc-05.01_odp} against other systems is restricted."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-05(01)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing denial-of-service protection"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "list of denial-of-service attacks launched by individuals against systems"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-05(01)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with incident response responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-05(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms restricting the ability to launch denial-of-service attacks against other systems"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-05.01_odp": {
+     "guidelines": [
+      {
+       "en": "denial-of-service attacks for which to restrict the ability of individuals to launch are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-5.1_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-5"
+  }
+ ]
+}

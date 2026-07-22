@@ -1,0 +1,198 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-17.4",
+ "version": "5.2.0",
+ "label": "AC-17(4)",
+ "lifecycle": "active",
+ "title": "Privileged Commands and Access",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Authorize the execution of privileged commands and access to security-relevant information via remote access only in a format that provides assessable evidence and for the following needs: {param:ac-17.4_prm_1} ; and"
+   },
+   "parameters": [
+    {
+     "name": "ac-17.4_prm_1",
+     "type": "string",
+     "label": "organization-defined needs"
+    },
+    {
+     "name": "ac-17.04_odp.01",
+     "type": "string",
+     "label": "needs requiring remote access"
+    },
+    {
+     "name": "ac-17.04_odp.02",
+     "type": "string",
+     "label": "needs requiring remote access"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Document the rationale for remote access in the security plan for the system."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Remote access to systems represents a significant potential vulnerability that can be exploited by adversaries. As such, restricting the execution of privileged commands and access to security-relevant information via remote access reduces the exposure of the organization and the susceptibility to threats by adversaries to the remote access capability."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-17.4_obj",
+     "label": "AC-17(04)",
+     "children": [
+      {
+       "id": "ac-17.4_obj.a",
+       "label": "AC-17(04)(a)",
+       "children": [
+        {
+         "id": "ac-17.4_obj.a-1",
+         "label": "AC-17(04)(a)[01]",
+         "prose": {
+          "en": "the execution of privileged commands via remote access is authorized only in a format that provides assessable evidence;"
+         }
+        },
+        {
+         "id": "ac-17.4_obj.a-2",
+         "label": "AC-17(04)(a)[02]",
+         "prose": {
+          "en": "access to security-relevant information via remote access is authorized only in a format that provides assessable evidence;"
+         }
+        },
+        {
+         "id": "ac-17.4_obj.a-3",
+         "label": "AC-17(04)(a)[03]",
+         "prose": {
+          "en": "the execution of privileged commands via remote access is authorized only for the following needs: {param:ac-17.04_odp.01};"
+         }
+        },
+        {
+         "id": "ac-17.4_obj.a-4",
+         "label": "AC-17(04)(a)[04]",
+         "prose": {
+          "en": "access to security-relevant information via remote access is authorized only for the following needs: {param:ac-17.04_odp.02};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ac-17.4_obj.b",
+       "label": "AC-17(04)(b)",
+       "prose": {
+        "en": "the rationale for remote access is documented in the security plan for the system."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-17(04)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing remote access to the system"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "security plan"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-17(04)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-17(04)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing remote access management"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-17.4_prm_1": {
+     "aggregates": [
+      "ac-17.04_odp.01",
+      "ac-17.04_odp.02"
+     ]
+    },
+    "ac-17.04_odp.01": {
+     "guidelines": [
+      {
+       "en": "needs requiring execution of privileged commands via remote access are defined;"
+      }
+     ]
+    },
+    "ac-17.04_odp.02": {
+     "guidelines": [
+      {
+       "en": "needs requiring access to security-relevant information via remote access are defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  }
+ ]
+}

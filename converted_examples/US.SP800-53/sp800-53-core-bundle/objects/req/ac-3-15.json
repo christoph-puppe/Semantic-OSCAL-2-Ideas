@@ -1,0 +1,246 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-3.15",
+ "version": "5.2.0",
+ "label": "AC-3(15)",
+ "lifecycle": "active",
+ "title": "Discretionary and Mandatory Access Control",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Enforce {param:ac-3.15_prm_1} over the set of covered subjects and objects specified in the policy; and"
+   },
+   "parameters": [
+    {
+     "name": "ac-3.15_prm_1",
+     "type": "string",
+     "label": "organization-defined mandatory access control policy"
+    },
+    {
+     "name": "ac-03.15_odp.01",
+     "type": "string",
+     "label": "mandatory access control policy"
+    },
+    {
+     "name": "ac-03.15_odp.02",
+     "type": "string",
+     "label": "mandatory access control policy"
+    },
+    {
+     "name": "ac-03.15_odp.03",
+     "type": "string",
+     "label": "discretionary access control policy"
+    },
+    {
+     "name": "ac-03.15_odp.04",
+     "type": "string",
+     "label": "discretionary access control policy"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Enforce {param:ac-3.15_prm_2} over the set of covered subjects and objects specified in the policy."
+   },
+   "parameters": [
+    {
+     "name": "ac-3.15_prm_2",
+     "type": "string",
+     "label": "organization-defined discretionary access control policy"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Simultaneously implementing a mandatory access control policy and a discretionary access control policy can provide additional protection against the unauthorized execution of code by users or processes acting on behalf of users. This helps prevent a single compromised user or process from compromising the entire system."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-3.15_obj",
+     "label": "AC-03(15)",
+     "children": [
+      {
+       "id": "ac-3.15_obj.a",
+       "label": "AC-03(15)(a)",
+       "children": [
+        {
+         "id": "ac-3.15_obj.a-1",
+         "label": "AC-03(15)(a)[01]",
+         "prose": {
+          "en": "{param:ac-03.15_odp.01} is enforced over the set of covered subjects specified in the policy;"
+         }
+        },
+        {
+         "id": "ac-3.15_obj.a-2",
+         "label": "AC-03(15)(a)[02]",
+         "prose": {
+          "en": "{param:ac-03.15_odp.02} is enforced over the set of covered objects specified in the policy;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ac-3.15_obj.b",
+       "label": "AC-03(15)(b)",
+       "children": [
+        {
+         "id": "ac-3.15_obj.b-1",
+         "label": "AC-03(15)(b)[01]",
+         "prose": {
+          "en": "{param:ac-03.15_odp.03} is enforced over the set of covered subjects specified in the policy;"
+         }
+        },
+        {
+         "id": "ac-3.15_obj.b-2",
+         "label": "AC-03(15)(b)[02]",
+         "prose": {
+          "en": "{param:ac-03.15_odp.04} is enforced over the set of covered objects specified in the policy."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-03(15)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing access enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of subjects and objects (i.e., users and resources) requiring enforcement of mandatory access control policies"
+      },
+      {
+       "en": "list of subjects and objects (i.e., users and resources) requiring enforcement of discretionary access control policies"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-03(15)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with access enforcement responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-03(15)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing mandatory and discretionary access control policy"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-3.15_prm_1": {
+     "aggregates": [
+      "ac-03.15_odp.01",
+      "ac-03.15_odp.02"
+     ]
+    },
+    "ac-3.15_prm_2": {
+     "aggregates": [
+      "ac-03.15_odp.03",
+      "ac-03.15_odp.04"
+     ]
+    },
+    "ac-03.15_odp.01": {
+     "guidelines": [
+      {
+       "en": "a mandatory access control policy enforced over the set of covered subjects specified in the policy is defined;"
+      }
+     ]
+    },
+    "ac-03.15_odp.02": {
+     "guidelines": [
+      {
+       "en": "a mandatory access control policy enforced over the set of covered objects specified in the policy is defined;"
+      }
+     ]
+    },
+    "ac-03.15_odp.03": {
+     "guidelines": [
+      {
+       "en": "a discretionary access control policy enforced over the set of covered subjects specified in the policy is defined;"
+      }
+     ]
+    },
+    "ac-03.15_odp.04": {
+     "guidelines": [
+      {
+       "en": "a discretionary access control policy enforced over the set of covered objects specified in the policy is defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  }
+ ]
+}

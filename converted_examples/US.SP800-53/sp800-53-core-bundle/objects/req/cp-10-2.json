@@ -1,0 +1,107 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-10.2",
+ "version": "5.2.0",
+ "label": "CP-10(2)",
+ "lifecycle": "active",
+ "title": "Transaction Recovery",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Implement transaction recovery for systems that are transaction-based."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Transaction-based systems include database management systems and transaction processing systems. Mechanisms supporting transaction recovery include transaction rollback and transaction journaling."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-10.2_obj",
+     "label": "CP-10(02)",
+     "prose": {
+      "en": "transaction recovery is implemented for systems that are transaction-based."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-10(02)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing system recovery and reconstitution"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "contingency plan test documentation"
+      },
+      {
+       "en": "contingency plan test results"
+      },
+      {
+       "en": "system transaction recovery records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-10(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibility for transaction recovery"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-10(02)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing transaction recovery capability"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-10"
+  }
+ ]
+}

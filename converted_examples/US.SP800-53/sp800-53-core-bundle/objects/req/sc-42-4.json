@@ -1,0 +1,176 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-42.4",
+ "version": "5.2.0",
+ "label": "SC-42(4)",
+ "lifecycle": "active",
+ "title": "Notice of Collection",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ the following measures to facilitate an individual’s awareness that personally identifiable information is being collected by {param:sc-42.04_odp.02}: {param:sc-42.04_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "sc-42.04_odp.01",
+     "type": "string",
+     "label": "measures"
+    },
+    {
+     "name": "sc-42.04_odp.02",
+     "type": "string",
+     "label": "sensors"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Awareness that organizational sensors are collecting data enables individuals to more effectively engage in managing their privacy. Measures can include conventional written notices and sensor configurations that make individuals directly or indirectly aware through other devices that the sensor is collecting information. The usability and efficacy of the notice are important considerations."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-42.4_obj",
+     "label": "SC-42(04)",
+     "prose": {
+      "en": "{param:sc-42.04_odp.01} are employed to facilitate an individual’s awareness that personally identifiable information is being collected by {param:sc-42.04_odp.02} "
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-42(04)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "access control policy and procedures"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "sensor capability and data collection policy and procedures"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "privacy impact assessments"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "list of measures to be employed to ensure that individuals are aware that personally identifiable information is being collected by sensors"
+      },
+      {
+       "en": "examples of notifications provided to individuals that personally identifiable information is being collected by sensors"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-42(04)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for sensor capabilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-42(04)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing measures to facilitate an individual’s awareness that personally identifiable information is being collected by sensors"
+      },
+      {
+       "en": "sensor information collection capabilities for the system"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-42.04_odp.01": {
+     "guidelines": [
+      {
+       "en": "measures to facilitate an individual’s awareness that personally identifiable information is being collected are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-42.4_prm_2"
+     ]
+    },
+    "sc-42.04_odp.02": {
+     "guidelines": [
+      {
+       "en": "sensors that collect personally identifiable information are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-42.4_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-42"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-5"
+  }
+ ]
+}

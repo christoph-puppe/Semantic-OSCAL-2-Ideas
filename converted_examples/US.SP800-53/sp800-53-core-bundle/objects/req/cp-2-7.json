@@ -1,0 +1,99 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-2.7",
+ "version": "5.2.0",
+ "label": "CP-2(7)",
+ "lifecycle": "active",
+ "title": "Coordinate with External Service Providers",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Coordinate the contingency plan with the contingency plans of external service providers to ensure that contingency requirements can be satisfied."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "When the capability of an organization to carry out its mission and business functions is dependent on external service providers, developing a comprehensive and timely contingency plan may become more challenging. When mission and business functions are dependent on external service providers, organizations coordinate contingency planning activities with the external entities to ensure that the individual plans reflect the overall contingency needs of the organization."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-2.7_obj",
+     "label": "CP-02(07)",
+     "prose": {
+      "en": "the contingency plan is coordinated with the contingency plans of external service providers to ensure that contingency requirements can be satisfied."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-02(07)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing contingency operations for the system"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "contingency plans of external"
+      },
+      {
+       "en": "service providers"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "contingency plan requirements"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-02(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency planning and plan implementation responsibilities"
+      },
+      {
+       "en": "external service providers"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-9"
+  }
+ ]
+}

@@ -1,0 +1,135 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CA-7.6",
+ "version": "5.2.0",
+ "label": "CA-7(6)",
+ "lifecycle": "active",
+ "title": "Automation Support for Monitoring",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Ensure the accuracy, currency, and availability of monitoring results for the system using {param:ca-07.06_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ca-07.06_odp",
+     "type": "string",
+     "label": "automated mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Using automated tools for monitoring helps to maintain the accuracy, currency, and availability of monitoring information which in turns helps to increase the level of ongoing awareness of the system security and privacy posture in support of organizational risk management decisions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ca-7.6_obj",
+     "label": "CA-07(06)",
+     "prose": {
+      "en": "{param:ca-07.06_odp} are used to ensure the accuracy, currency, and availability of monitoring results for the system."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CA-07(06)-Examine",
+     "objects": [
+      {
+       "en": "Assessment, authorization, and monitoring policy"
+      },
+      {
+       "en": "organizational continuous monitoring strategy"
+      },
+      {
+       "en": "system-level continuous monitoring strategy"
+      },
+      {
+       "en": "procedures addressing continuous monitoring of system controls"
+      },
+      {
+       "en": "assessment report"
+      },
+      {
+       "en": "plan of action and milestones"
+      },
+      {
+       "en": "system monitoring records"
+      },
+      {
+       "en": "impact analyses"
+      },
+      {
+       "en": "status reports"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CA-07(06)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with continuous monitoring responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CA-07(06)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting automated monitoring"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ca-07.06_odp": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to ensure the accuracy, currency, and availability of monitoring results for the system are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ca-7.6_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  }
+ ]
+}

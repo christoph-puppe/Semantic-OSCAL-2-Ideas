@@ -1,0 +1,148 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-2.13",
+ "version": "5.2.0",
+ "label": "AC-2(13)",
+ "lifecycle": "active",
+ "title": "Disable Accounts for High-risk Individuals",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Disable accounts of individuals within {param:ac-02.13_odp.01} of discovery of {param:ac-02.13_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ac-02.13_odp.01",
+     "type": "string",
+     "label": "time period"
+    },
+    {
+     "name": "ac-02.13_odp.02",
+     "type": "string",
+     "label": "significant risks"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Users who pose a significant security and/or privacy risk include individuals for whom reliable evidence indicates either the intention to use authorized access to systems to cause harm or through whom adversaries will cause harm. Such harm includes adverse impacts to organizational operations, organizational assets, individuals, other organizations, or the Nation. Close coordination among system administrators, legal staff, human resource managers, and authorizing officials is essential when disabling system accounts for high-risk individuals."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-2.13_obj",
+     "label": "AC-02(13)",
+     "prose": {
+      "en": "accounts of individuals are disabled within {param:ac-02.13_odp.01} of discovery of {param:ac-02.13_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-02(13)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing account management"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system-generated list of disabled accounts"
+      },
+      {
+       "en": "list of user activities posing significant organizational risk"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-02(13)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with account management responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-02(13)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing account management functions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-02.13_odp.01": {
+     "guidelines": [
+      {
+       "en": "time period within which to disable accounts of individuals who are discovered to pose significant risk is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2.13_prm_1"
+     ]
+    },
+    "ac-02.13_odp.02": {
+     "guidelines": [
+      {
+       "en": "significant risks leading to disabling accounts are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2.13_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AT-2.5",
+ "version": "5.2.0",
+ "label": "AT-2(5)",
+ "lifecycle": "active",
+ "title": "Advanced Persistent Threat",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide literacy training on the advanced persistent threat."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "An effective way to detect advanced persistent threats (APT) and to preclude successful attacks is to provide specific literacy training for individuals. Threat literacy training includes educating individuals on the various ways that APTs can infiltrate the organization (e.g., through websites, emails, advertisement pop-ups, articles, and social engineering). Effective training includes techniques for recognizing suspicious emails, use of removable systems in non-secure settings, and the potential targeting of individuals at home."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "at-2.5_obj",
+     "label": "AT-02(05)",
+     "prose": {
+      "en": "literacy training on the advanced persistent threat is provided."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AT-02(05)-Examine",
+     "objects": [
+      {
+       "en": "System security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "literacy training and awareness policy"
+      },
+      {
+       "en": "procedures addressing literacy training and awareness implementation"
+      },
+      {
+       "en": "literacy training and awareness curriculum"
+      },
+      {
+       "en": "literacy training and awareness materials"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AT-02(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel who receive literacy training and awareness"
+      },
+      {
+       "en": "organizational personnel with responsibilities for basic literacy training and awareness"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-2"
+  }
+ ]
+}

@@ -1,0 +1,271 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PT-5",
+ "version": "5.2.0",
+ "label": "PT-5",
+ "lifecycle": "active",
+ "title": "Privacy Notice",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide notice to individuals about the processing of personally identifiable information that:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Is available to individuals upon first interacting with an organization, and subsequently at {param:pt-05_odp.01};"
+   },
+   "parameters": [
+    {
+     "name": "pt-05_odp.01",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Is clear and easy-to-understand, expressing information about personally identifiable information processing in plain language;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identifies the authority that authorizes the processing of personally identifiable information;"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identifies the purposes for which personally identifiable information is to be processed; and"
+   }
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Includes {param:pt-05_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "pt-05_odp.02",
+     "type": "string",
+     "label": "information"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Privacy notices help inform individuals about how their personally identifiable information is being processed by the system or organization. Organizations use privacy notices to inform individuals about how, under what authority, and for what purpose their personally identifiable information is processed, as well as other information such as choices individuals might have with respect to that processing and other parties with whom information is shared. Laws, executive orders, directives, regulations, or policies may require that privacy notices include specific elements or be provided in specific formats. Federal agency personnel consult with the senior agency official for privacy and legal counsel regarding when and where to provide privacy notices, as well as elements to include in privacy notices and required formats. In circumstances where laws or government-wide policies do not require privacy notices, organizational policies and determinations may require privacy notices and may serve as a source of the elements to include in privacy notices.\n\nPrivacy risk assessments identify the privacy risks associated with the processing of personally identifiable information and may help organizations determine appropriate elements to include in a privacy notice to manage such risks. To help individuals understand how their information is being processed, organizations write materials in plain language and avoid technical jargon."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pt-5_obj",
+     "label": "PT-05",
+     "children": [
+      {
+       "id": "pt-5_obj.a",
+       "label": "PT-05a.",
+       "children": [
+        {
+         "id": "pt-5_obj.a-1",
+         "label": "PT-05a.[01]",
+         "prose": {
+          "en": "a notice to individuals about the processing of personally identifiable information is provided such that the notice is available to individuals upon first interacting with an organization;"
+         }
+        },
+        {
+         "id": "pt-5_obj.a-2",
+         "label": "PT-05a.[02]",
+         "prose": {
+          "en": "a notice to individuals about the processing of personally identifiable information is provided such that the notice is subsequently available to individuals {param:pt-05_odp.01};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pt-5_obj.b",
+       "label": "PT-05b.",
+       "prose": {
+        "en": "a notice to individuals about the processing of personally identifiable information is provided that is clear, easy-to-understand, and expresses information about personally identifiable information processing in plain language;"
+       }
+      },
+      {
+       "id": "pt-5_obj.c",
+       "label": "PT-05c.",
+       "prose": {
+        "en": "a notice to individuals about the processing of personally identifiable information that identifies the authority that authorizes the processing of personally identifiable information is provided;"
+       }
+      },
+      {
+       "id": "pt-5_obj.d",
+       "label": "PT-05d.",
+       "prose": {
+        "en": "a notice to individuals about the processing of personally identifiable information that identifies the purpose for which personally identifiable information is to be processed is provided;"
+       }
+      },
+      {
+       "id": "pt-5_obj.e",
+       "label": "PT-05e.",
+       "prose": {
+        "en": "a notice to individuals about the processing of personally identifiable information which includes {param:pt-05_odp.02} is provided."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PT-05-Examine",
+     "objects": [
+      {
+       "en": "Personally identifiable information processing and transparency policy and procedures"
+      },
+      {
+       "en": "privacy notice"
+      },
+      {
+       "en": "Privacy Act statements"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PT-05-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personally identifiable information processing and transparency responsibilities"
+      },
+      {
+       "en": "organizational personnel with user interface or user experience responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PT-05-Test",
+     "objects": [
+      {
+       "en": "Organizational processes and implementation support or mechanisms for providing notice to individuals regarding the processing of their personally identifiable information"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pt-05_odp.01": {
+     "guidelines": [
+      {
+       "en": "the frequency at which a notice is provided to individuals after initial interaction with an organization is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pt-5_prm_1"
+     ]
+    },
+    "pt-05_odp.02": {
+     "guidelines": [
+      {
+       "en": "information to be included with the notice about the processing of personally identifiable information is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pt-5_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.govinfo.gov/content/pkg/STATUTE-88/pdf/STATUTE-88-Pg1896.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A108/omb_circular_a-108.pdf"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-20"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-22"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-42"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-18"
+  }
+ ]
+}

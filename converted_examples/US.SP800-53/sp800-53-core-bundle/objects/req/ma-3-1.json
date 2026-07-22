@@ -1,0 +1,102 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-3.1",
+ "version": "5.2.0",
+ "label": "MA-3(1)",
+ "lifecycle": "active",
+ "title": "Inspect Tools",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Inspect the maintenance tools used by maintenance personnel for improper or unauthorized modifications."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Maintenance tools can be directly brought into a facility by maintenance personnel or downloaded from a vendor’s website. If, upon inspection of the maintenance tools, organizations determine that the tools have been modified in an improper manner or the tools contain malicious code, the incident is handled consistent with organizational policies and procedures for incident handling."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-3.1_obj",
+     "label": "MA-03(01)",
+     "prose": {
+      "en": "maintenance tools used by maintenance personnel are inspected for improper or unauthorized modifications."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-03(01)-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing system maintenance tools"
+      },
+      {
+       "en": "system maintenance tools and associated documentation"
+      },
+      {
+       "en": "maintenance tool inspection records"
+      },
+      {
+       "en": "maintenance records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-03(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MA-03(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for inspecting maintenance tools"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the inspection of maintenance tools"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  }
+ ]
+}

@@ -1,0 +1,184 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PT-2.1",
+ "version": "5.2.0",
+ "label": "PT-2(1)",
+ "lifecycle": "active",
+ "title": "Data Tagging",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Attach data tags containing {param:pt-02.01_odp.01} to {param:pt-02.01_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "pt-02.01_odp.01",
+     "type": "string",
+     "label": "authorized processing"
+    },
+    {
+     "name": "pt-02.01_odp.02",
+     "type": "string",
+     "label": "elements of personally identifiable information"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Data tags support the tracking and enforcement of authorized processing by conveying the types of processing that are authorized along with the relevant elements of personally identifiable information throughout the system. Data tags may also support the use of automated tools."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pt-2.1_obj",
+     "label": "PT-02(01)",
+     "prose": {
+      "en": "data tags containing {param:pt-02.01_odp.01} are attached to {param:pt-02.01_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PT-02(01)-Examine",
+     "objects": [
+      {
+       "en": "Personally identifiable information processing and transparency policy and procedures including procedures addressing data tagging"
+      },
+      {
+       "en": "data tag definitions"
+      },
+      {
+       "en": "documented requirements for use and monitoring of data tagging"
+      },
+      {
+       "en": "data extracts with corresponding data tags"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PT-02(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personally identifiable information processing and transparency responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PT-02(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for authorizing the processing of personally identifiable information"
+      },
+      {
+       "en": "organizational processes for data tagging"
+      },
+      {
+       "en": "mechanisms for applying and monitoring data tagging"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the restriction of personally identifiable information processing"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pt-02.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "the authorized processing of personally identifiable information is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pt-2.1_prm_1"
+     ]
+    },
+    "pt-02.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "elements of personally identifiable information to be tagged are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pt-2.1_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-22"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-43"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-15"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-19"
+  }
+ ]
+}

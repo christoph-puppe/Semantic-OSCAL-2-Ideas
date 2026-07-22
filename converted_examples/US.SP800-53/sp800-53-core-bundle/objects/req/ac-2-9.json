@@ -1,0 +1,123 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-2.9",
+ "version": "5.2.0",
+ "label": "AC-2(9)",
+ "lifecycle": "active",
+ "title": "Restrictions on Use of Shared and Group Accounts",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Only permit the use of shared and group accounts that meet {param:ac-02.09_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ac-02.09_odp",
+     "type": "string",
+     "label": "conditions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Before permitting the use of shared or group accounts, organizations consider the increased risk due to the lack of accountability with such accounts."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-2.9_obj",
+     "label": "AC-02(09)",
+     "prose": {
+      "en": "the use of shared and group accounts is only permitted if {param:ac-02.09_odp} are met."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-02(09)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing account management"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system-generated list of shared/group accounts and associated roles"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-02(09)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with account management responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-02(09)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing management of shared/group accounts"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-02.09_odp": {
+     "guidelines": [
+      {
+       "en": "conditions for establishing shared and group accounts are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2.9_prm_1"
+     ],
+     "alt-label": "conditions for establishing shared and group accounts"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  }
+ ]
+}

@@ -1,0 +1,186 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-13",
+ "version": "5.2.0",
+ "label": "IA-13",
+ "lifecycle": "active",
+ "title": "Identity Providers and Authorization Servers",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Employ identity providers and authorization servers to manage user, device, and non-person entity (NPE) identities, attributes, and access rights supporting authentication and authorization decisions in accordance with {param:ia-13_odp.01} using {param:ia-13_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ia-13_odp.01",
+     "type": "string",
+     "label": "policy"
+    },
+    {
+     "name": "ia-13_odp.02",
+     "type": "string",
+     "label": "mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Identity providers, both internal and external to the organization, manage the user, device, and NPE authenticators and issue statements, often called identity assertions, attesting to identities of other systems or systems components. Authorization servers create and issue access tokens to identified and authenticated users and devices that can be used to gain access to system or information resources. For example, single sign-on (SSO) provides identity provider and authorization server functions. Authenticator management (to include credential management) is covered by IA-05."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-13_obj",
+     "label": "IA-13",
+     "children": [
+      {
+       "id": "ia-13_obj-1",
+       "label": "IA-13[01]",
+       "prose": {
+        "en": "identity providers are employed to manage user, device, and non-person entity (NPE) identities, attributes and access rights supporting authentication decisions in accordance with {param:ia-13_odp.02} using {param:ia-13_odp.02};"
+       }
+      },
+      {
+       "id": "ia-13_obj-2",
+       "label": "IA-13[02]",
+       "prose": {
+        "en": "identity providers are employed to manage user, device, and non-person entity (NPE) identities, attributes and access rights supporting authorization decisions in accordance with {param:ia-13_odp.02} using {param:ia-13_odp.02};"
+       }
+      },
+      {
+       "id": "ia-13_obj-3",
+       "label": "IA-13[03]",
+       "prose": {
+        "en": "authorization servers are employed to manage user, device, and non-person entity (NPE) identities, attributes and access rights supporting authentication decisions in accordance with {param:ia-13_odp.02} using {param:ia-13_odp.02};"
+       }
+      },
+      {
+       "id": "ia-13_obj-4",
+       "label": "IA-13[04]",
+       "prose": {
+        "en": "authorization servers are employed to manage user, device, and non-person entity (NPE) identities, attributes and access rights supporting authorization decisions in accordance with {param:ia-13_odp.02} using {param:ia-13_odp.02};"
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-13-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy;"
+      },
+      {
+       "en": "procedures addressing user and device identification and authentication;"
+      },
+      {
+       "en": "system security plan;"
+      },
+      {
+       "en": "system design documentation;"
+      },
+      {
+       "en": "system configuration settings and associated documentation;"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-13-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system operations responsibilities;"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities;"
+      },
+      {
+       "en": "system/network administrators;"
+      },
+      {
+       "en": "organizational personnel with account management responsibilities;"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-13-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing identification and authentication capabilities and access rights"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ia-13_odp.01": {
+     "guidelines": [
+      {
+       "en": "identification and authentication policy is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-13_prm_1"
+     ],
+     "alt-label": "identification and authentication policy"
+    },
+    "ia-13_odp.02": {
+     "guidelines": [
+      {
+       "en": "mechanisms supporting authentication and authorization decisions are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-13_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-12"
+  }
+ ]
+}

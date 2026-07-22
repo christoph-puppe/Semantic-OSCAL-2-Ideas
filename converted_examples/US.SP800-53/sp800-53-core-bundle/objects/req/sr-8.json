@@ -1,0 +1,202 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SR-8",
+ "version": "5.2.0",
+ "label": "SR-8",
+ "lifecycle": "active",
+ "title": "Notification Agreements",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish agreements and procedures with entities involved in the supply chain for the system, system component, or system service for the {param:sr-08_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "sr-08_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "notification of supply chain compromises"
+      },
+      {
+       "value": "{param:sr-08_odp.02} "
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "sr-08_odp.02",
+     "type": "string",
+     "label": "results of assessments or audits"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The establishment of agreements and procedures facilitates communications among supply chain entities. Early notification of compromises and potential compromises in the supply chain that can potentially adversely affect or have adversely affected organizational systems or system components is essential for organizations to effectively respond to such incidents. The results of assessments or audits may include open-source information that contributed to a decision or result and could be used to help the supply chain entity resolve a concern or improve its processes."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sr-8_obj",
+     "label": "SR-08",
+     "prose": {
+      "en": "agreements and procedures are established with entities involved in the supply chain for the system, system components, or system service for {param:sr-08_odp.01}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SR-08-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management policy and procedures"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "system and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing supply chain protection"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "inter-organizational agreements and procedures"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SR-08-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SR-08-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for establishing inter-organizational agreements and procedures with supply chain entities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sr-08_odp.01": {
+     "alt-identifiers": [
+      "sr-8_prm_1"
+     ]
+    },
+    "sr-08_odp.02": {
+     "guidelines": [
+      {
+       "en": "information for which agreements and procedures are to be established are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "sr-8_prm_2"
+     ],
+     "alt-label": "information"
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.congress.gov/bill/115th-congress/senate-bill/3085"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.federalregister.gov/d/2020-18939"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/presidential-actions/executive-order-securing-information-communications-technology-services-supply-chain"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.iso.org/standard/59648.html"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-30r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-161"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.7622"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-8"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-12.12",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-12.12",
+    "mode": "renamed",
+    "label": "SA-12(12)",
+    "title": "Inter-organizational Agreements"
+   }
+  ]
+ }
+}

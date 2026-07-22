@@ -1,0 +1,137 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-9.7",
+ "version": "5.2.0",
+ "label": "CP-9(7)",
+ "lifecycle": "active",
+ "title": "Dual Authorization for Deletion or Destruction",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Enforce dual authorization for the deletion or destruction of {param:cp-09.07_odp}."
+   },
+   "parameters": [
+    {
+     "name": "cp-09.07_odp",
+     "type": "string",
+     "label": "backup information"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Dual authorization ensures that deletion or destruction of backup information cannot occur unless two qualified individuals carry out the task. Individuals deleting or destroying backup information possess the skills or expertise to determine if the proposed deletion or destruction of information reflects organizational policies and procedures. Dual authorization may also be known as two-person control. To reduce the risk of collusion, organizations consider rotating dual authorization duties to other individuals."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-9.7_obj",
+     "label": "CP-09(07)",
+     "prose": {
+      "en": "dual authorization for the deletion or destruction of {param:cp-09.07_odp} is enforced."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-09(07)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing system backup"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system generated list of dual authorization credentials or rules"
+      },
+      {
+       "en": "logs or records of deletion or destruction of backup information"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-09(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system backup responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-09(07)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing dual authorization"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the deletion/destruction of backup information"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cp-09.07_odp": {
+     "guidelines": [
+      {
+       "en": "backup information for which to enforce dual authorization in order to delete or destroy is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cp-9.7_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-2"
+  }
+ ]
+}

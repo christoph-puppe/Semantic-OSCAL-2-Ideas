@@ -1,0 +1,123 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-13.2",
+ "version": "5.2.0",
+ "label": "IA-13(2)",
+ "lifecycle": "active",
+ "title": "Verification of Identity Assertions and Access Tokens",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "The source and integrity of identity assertions and access tokens are verified before granting access to system and information resources."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "This includes verification of digital signatures protecting identity assertions and access tokens, as well as included metadata. Metadata includes information about the access request such as information unique to user, system or information resource being accessed, or the transaction itself such as time. Protected system and information resources could include connected networks, applications, and APIs."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-13.2_obj",
+     "label": "IA-13(02)",
+     "children": [
+      {
+       "id": "ia-13.2_obj-1",
+       "label": "IA-13(02)[01]",
+       "prose": {
+        "en": "the source of identity assertions is verified before granting access to system and information resources;"
+       }
+      },
+      {
+       "id": "ia-13.2_obj-2",
+       "label": "IA-13(02)[02]",
+       "prose": {
+        "en": "the source of access tokens is verified before granting access to system and information resources;"
+       }
+      },
+      {
+       "id": "ia-13.2_obj-3",
+       "label": "IA-13(02)[03]",
+       "prose": {
+        "en": "the integrity of identity assertions is verified before granting access to system and information resources;"
+       }
+      },
+      {
+       "id": "ia-13.2_obj-4",
+       "label": "IA-13(02)[04]",
+       "prose": {
+        "en": "the integrity of access tokens is verified before granting access to system and information resources"
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-13(02)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy;"
+      },
+      {
+       "en": "system security plan; system design documentation;"
+      },
+      {
+       "en": "system configuration settings and associated documentation;"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-13(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system operations responsibilities;"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities;"
+      },
+      {
+       "en": "system/ network administrators;"
+      },
+      {
+       "en": "organizational personnel with account management responsibilities;"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-13(02)-Test",
+     "objects": [
+      {
+       "en": "Identity provider mechanisms supporting and/or implementing identification and authentication capabilities and access rights"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-13"
+  }
+ ]
+}

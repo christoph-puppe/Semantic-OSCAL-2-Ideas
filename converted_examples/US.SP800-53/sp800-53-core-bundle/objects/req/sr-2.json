@@ -1,0 +1,394 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SR-2",
+ "version": "5.2.0",
+ "label": "SR-2",
+ "lifecycle": "active",
+ "title": "Supply Chain Risk Management Plan",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop a plan for managing supply chain risks associated with the research and development, design, manufacturing, acquisition, delivery, integration, operations and maintenance, and disposal of the following systems, system components or system services: {param:sr-02_odp.01};"
+   },
+   "parameters": [
+    {
+     "name": "sr-02_odp.01",
+     "type": "string",
+     "label": "systems, system components, or system services"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review and update the supply chain risk management plan {param:sr-02_odp.02} or as required, to address threat, organizational or environmental changes; and"
+   },
+   "parameters": [
+    {
+     "name": "sr-02_odp.02",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Protect the supply chain risk management plan from unauthorized disclosure and modification."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The dependence on products, systems, and services from external providers, as well as the nature of the relationships with those providers, present an increasing level of risk to an organization. Threat actions that may increase security or privacy risks include unauthorized production, the insertion or use of counterfeits, tampering, theft, insertion of malicious software and hardware, and poor manufacturing and development practices in the supply chain. Supply chain risks can be endemic or systemic within a system element or component, a system, an organization, a sector, or the Nation. Managing supply chain risk is a complex, multifaceted undertaking that requires a coordinated effort across an organization to build trust relationships and communicate with internal and external stakeholders. Supply chain risk management (SCRM) activities include identifying and assessing risks, determining appropriate risk response actions, developing SCRM plans to document response actions, and monitoring performance against plans. The SCRM plan (at the system-level) is implementation specific, providing policy implementation, requirements, constraints and implications. It can either be stand-alone, or incorporated into system security and privacy plans. The SCRM plan addresses managing, implementation, and monitoring of SCRM controls and the development/sustainment of systems across the SDLC to support mission and business functions.\n\nBecause supply chains can differ significantly across and within organizations, SCRM plans are tailored to the individual program, organizational, and operational contexts. Tailored SCRM plans provide the basis for determining whether a technology, service, system component, or system is fit for purpose, and as such, the controls need to be tailored accordingly. Tailored SCRM plans help organizations focus their resources on the most critical mission and business functions based on mission and business requirements and their risk environment. Supply chain risk management plans include an expression of the supply chain risk tolerance for the organization, acceptable supply chain risk mitigation strategies or controls, a process for consistently evaluating and monitoring supply chain risk, approaches for implementing and communicating the plan, a description of and justification for supply chain risk mitigation measures taken, and associated roles and responsibilities. Finally, supply chain risk management plans address requirements for developing trustworthy, secure, privacy-protective, and resilient system components and systems, including the application of the security design principles implemented as part of life cycle-based systems security engineering processes (see SA-8)."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sr-2_obj",
+     "label": "SR-02",
+     "children": [
+      {
+       "id": "sr-2_obj.a",
+       "label": "SR-02a.",
+       "children": [
+        {
+         "id": "sr-2_obj.a-1",
+         "label": "SR-02a.[01]",
+         "prose": {
+          "en": "a plan for managing supply chain risks is developed;"
+         }
+        },
+        {
+         "id": "sr-2_obj.a-2",
+         "label": "SR-02a.[02]",
+         "prose": {
+          "en": "the supply chain risk management plan addresses risks associated with the research and development of {param:sr-02_odp.01};"
+         }
+        },
+        {
+         "id": "sr-2_obj.a-3",
+         "label": "SR-02a.[03]",
+         "prose": {
+          "en": "the supply chain risk management plan addresses risks associated with the design of {param:sr-02_odp.01};"
+         }
+        },
+        {
+         "id": "sr-2_obj.a-4",
+         "label": "SR-02a.[04]",
+         "prose": {
+          "en": "the supply chain risk management plan addresses risks associated with the manufacturing of {param:sr-02_odp.01};"
+         }
+        },
+        {
+         "id": "sr-2_obj.a-5",
+         "label": "SR-02a.[05]",
+         "prose": {
+          "en": "the supply chain risk management plan addresses risks associated with the acquisition of {param:sr-02_odp.01};"
+         }
+        },
+        {
+         "id": "sr-2_obj.a-6",
+         "label": "SR-02a.[06]",
+         "prose": {
+          "en": "the supply chain risk management plan addresses risks associated with the delivery of {param:sr-02_odp.01};"
+         }
+        },
+        {
+         "id": "sr-2_obj.a-7",
+         "label": "SR-02a.[07]",
+         "prose": {
+          "en": "the supply chain risk management plan addresses risks associated with the integration of {param:sr-02_odp.01};"
+         }
+        },
+        {
+         "id": "sr-2_obj.a-8",
+         "label": "SR-02a.[08]",
+         "prose": {
+          "en": "the supply chain risk management plan addresses risks associated with the operation and maintenance of {param:sr-02_odp.01};"
+         }
+        },
+        {
+         "id": "sr-2_obj.a-9",
+         "label": "SR-02a.[09]",
+         "prose": {
+          "en": "the supply chain risk management plan addresses risks associated with the disposal of {param:sr-02_odp.01};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sr-2_obj.b",
+       "label": "SR-02b.",
+       "prose": {
+        "en": "the supply chain risk management plan is reviewed and updated {param:sr-02_odp.02} or as required to address threat, organizational, or environmental changes;"
+       }
+      },
+      {
+       "id": "sr-2_obj.c",
+       "label": "SR-02c.",
+       "children": [
+        {
+         "id": "sr-2_obj.c-1",
+         "label": "SR-02c.[01]",
+         "prose": {
+          "en": "the supply chain risk management plan is protected from unauthorized disclosure;"
+         }
+        },
+        {
+         "id": "sr-2_obj.c-2",
+         "label": "SR-02c.[02]",
+         "prose": {
+          "en": "the supply chain risk management plan is protected from unauthorized modification."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SR-02-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management policy"
+      },
+      {
+       "en": "supply chain risk management procedures"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "system and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "procedures addressing supply chain protection"
+      },
+      {
+       "en": "procedures for protecting the supply chain risk management plan from unauthorized disclosure and modification"
+      },
+      {
+       "en": "system development life cycle procedures"
+      },
+      {
+       "en": "procedures addressing the integration of information security and privacy requirements into the acquisition process"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "list of supply chain threats"
+      },
+      {
+       "en": "list of safeguards to be taken against supply chain threats"
+      },
+      {
+       "en": "system life cycle documentation"
+      },
+      {
+       "en": "inter-organizational agreements and procedures"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy program plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SR-02-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SR-02-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for defining and documenting the system development life cycle (SDLC)"
+      },
+      {
+       "en": "organizational processes for identifying SDLC roles and responsibilities"
+      },
+      {
+       "en": "organizational processes for integrating supply chain risk management into the SDLC"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the SDLC"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sr-02_odp.01": {
+     "guidelines": [
+      {
+       "en": "systems, system components, or system services for which a supply chain risk management plan is developed are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sr-2_prm_1"
+     ]
+    },
+    "sr-02_odp.02": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to review and update the supply chain risk management plan is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sr-2_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.congress.gov/bill/115th-congress/senate-bill/3085"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.federalregister.gov/d/2020-18939"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/presidential-actions/executive-order-securing-information-communications-technology-services-supply-chain"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.cnss.gov/CNSS/issuances/Directives.cfm"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-30r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-39"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-161"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-181r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.7622"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.8272"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-30"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

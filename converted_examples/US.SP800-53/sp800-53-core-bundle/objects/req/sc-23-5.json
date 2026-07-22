@@ -1,0 +1,128 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-23.5",
+ "version": "5.2.0",
+ "label": "SC-23(5)",
+ "lifecycle": "active",
+ "title": "Allowed Certificate Authorities",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Only allow the use of {param:sc-23.05_odp} for verification of the establishment of protected sessions."
+   },
+   "parameters": [
+    {
+     "name": "sc-23.05_odp",
+     "type": "string",
+     "label": "certificated authorities"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Reliance on certificate authorities for the establishment of secure sessions includes the use of Transport Layer Security (TLS) certificates. These certificates, after verification by their respective certificate authorities, facilitate the establishment of protected sessions between web clients and web servers."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-23.5_obj",
+     "label": "SC-23(05)",
+     "prose": {
+      "en": "only the use of {param:sc-23.05_odp} for verification of the establishment of protected sessions is allowed."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-23(05)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing session authenticity"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of certificate authorities allowed for verification of the establishment of protected sessions"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-23(05)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-23(05)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the management of certificate authorities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-23.05_odp": {
+     "guidelines": [
+      {
+       "en": "certificate authorities to be allowed for verification of the establishment of protected sessions are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-23.5_prm_1"
+     ],
+     "alt-label": "certificate authorities"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-23"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  }
+ ]
+}

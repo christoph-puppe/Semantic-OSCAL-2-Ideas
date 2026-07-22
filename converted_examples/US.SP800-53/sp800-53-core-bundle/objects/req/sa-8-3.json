@@ -1,0 +1,173 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-8.3",
+ "version": "5.2.0",
+ "label": "SA-8(3)",
+ "lifecycle": "active",
+ "title": "Modularity and Layering",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement the security design principles of modularity and layering in {param:sa-8.3_prm_1}."
+   },
+   "parameters": [
+    {
+     "name": "sa-8.3_prm_1",
+     "type": "string",
+     "label": "organization-defined systems or system components"
+    },
+    {
+     "name": "sa-08.03_odp.01",
+     "type": "string",
+     "label": "systems or system components"
+    },
+    {
+     "name": "sa-08.03_odp.02",
+     "type": "string",
+     "label": "systems or system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The principles of modularity and layering are fundamental across system engineering disciplines. Modularity and layering derived from functional decomposition are effective in managing system complexity by making it possible to comprehend the structure of the system. Modular decomposition, or refinement in system design, is challenging and resists general statements of principle. Modularity serves to isolate functions and related data structures into well-defined logical units. Layering allows the relationships of these units to be better understood so that dependencies are clear and undesired complexity can be avoided. The security design principle of modularity extends functional modularity to include considerations based on trust, trustworthiness, privilege, and security policy. Security-informed modular decomposition includes the allocation of policies to systems in a network, separation of system applications into processes with distinct address spaces, allocation of system policies to layers, and separation of processes into subjects with distinct privileges based on hardware-supported privilege domains."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-8.3_obj",
+     "label": "SA-08(03)",
+     "children": [
+      {
+       "id": "sa-8.3_obj-1",
+       "label": "SA-08(03)[01]",
+       "prose": {
+        "en": "{param:sa-08.03_odp.01} implement the security design principle of modularity;"
+       }
+      },
+      {
+       "id": "sa-8.3_obj-2",
+       "label": "SA-08(03)[02]",
+       "prose": {
+        "en": "{param:sa-08.03_odp.02} implement the security design principle of layering."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-08(03)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing the security design principles of modularity and layering used in the specification, design, development, implementation, and modification of the system"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "security and privacy requirements and specifications for the system"
+      },
+      {
+       "en": "system security and privacy architecture"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-08(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with the responsibility for determining system security and privacy requirements"
+      },
+      {
+       "en": "organizational personnel with system specification, design, development, implementation, and modification responsibilities"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-08(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for applying the security design principles of modularity and layering in system specification, design, development, implementation, and modification"
+      },
+      {
+       "en": "mechanisms supporting the application of the security design principles of modularity and layering in system specification, design, development, implementation, and modification"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing an isolation boundary"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-8.3_prm_1": {
+     "aggregates": [
+      "sa-08.03_odp.01",
+      "sa-08.03_odp.02"
+     ]
+    },
+    "sa-08.03_odp.01": {
+     "guidelines": [
+      {
+       "en": "systems or system components that implement the security design principle of modularity are defined;"
+      }
+     ]
+    },
+    "sa-08.03_odp.02": {
+     "guidelines": [
+      {
+       "en": "systems or system components that implement the security design principle of layering are defined;"
+      }
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-3"
+  }
+ ]
+}

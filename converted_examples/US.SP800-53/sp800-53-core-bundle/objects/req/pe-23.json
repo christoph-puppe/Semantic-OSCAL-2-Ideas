@@ -1,0 +1,157 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-23",
+ "version": "5.2.0",
+ "label": "PE-23",
+ "lifecycle": "active",
+ "title": "Facility Location",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Plan the location or site of the facility where the system resides considering physical and environmental hazards; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "For existing facilities, consider the physical and environmental hazards in the organizational risk management strategy."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Physical and environmental hazards include floods, fires, tornadoes, earthquakes, hurricanes, terrorism, vandalism, an electromagnetic pulse, electrical interference, and other forms of incoming electromagnetic radiation. The location of system components within the facility is addressed in PE-18."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-23_obj",
+     "label": "PE-23",
+     "children": [
+      {
+       "id": "pe-23_obj.a",
+       "label": "PE-23a.",
+       "prose": {
+        "en": "the location or site of the facility where the system resides is planned considering physical and environmental hazards;"
+       }
+      },
+      {
+       "id": "pe-23_obj.b",
+       "label": "PE-23b.",
+       "prose": {
+        "en": "for existing facilities, physical and environmental hazards are considered in the organizational risk management strategy."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-23-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "physical site planning documents"
+      },
+      {
+       "en": "organizational assessment of risk"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "risk mitigation strategy documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-23-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with site selection responsibilities for the facility housing the system"
+      },
+      {
+       "en": "organizational personnel with risk mitigation responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-23-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for site planning"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-18"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-19"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-18.1",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/PE-18.1",
+    "mode": "renamed",
+    "label": "PE-18(01)",
+    "title": "Facility Site"
+   }
+  ]
+ }
+}

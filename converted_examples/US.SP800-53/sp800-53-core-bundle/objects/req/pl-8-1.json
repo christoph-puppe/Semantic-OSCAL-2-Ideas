@@ -1,0 +1,218 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PL-8.1",
+ "version": "5.2.0",
+ "label": "PL-8(1)",
+ "lifecycle": "active",
+ "title": "Defense in Depth",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Design the security and privacy architectures for the system using a defense-in-depth approach that:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Allocates {param:pl-08.01_odp.01} to {param:pl-08.01_odp.02} ; and"
+   },
+   "parameters": [
+    {
+     "name": "pl-08.01_odp.01",
+     "type": "string",
+     "label": "controls"
+    },
+    {
+     "name": "pl-08.01_odp.02",
+     "type": "string",
+     "label": "locations and architectural layers"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Ensures that the allocated controls operate in a coordinated and mutually reinforcing manner."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations strategically allocate security and privacy controls in the security and privacy architectures so that adversaries must overcome multiple controls to achieve their objective. Requiring adversaries to defeat multiple controls makes it more difficult to attack information resources by increasing the work factor of the adversary; it also increases the likelihood of detection. The coordination of allocated controls is essential to ensure that an attack that involves one control does not create adverse, unintended consequences by interfering with other controls. Unintended consequences can include system lockout and cascading alarms. The placement of controls in systems and organizations is an important activity that requires thoughtful analysis. The value of organizational assets is an important consideration in providing additional layering. Defense-in-depth architectural approaches include modularity and layering (see SA-8(3) ), separation of system and user functionality (see SC-2 ), and security function isolation (see SC-3)."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pl-8.1_obj",
+     "label": "PL-08(01)",
+     "children": [
+      {
+       "id": "pl-8.1_obj.a",
+       "label": "PL-08(01)(a)",
+       "children": [
+        {
+         "id": "pl-8.1_obj.a-1",
+         "label": "PL-08(01)(a)[01]",
+         "prose": {
+          "en": "the security architecture for the system is designed using a defense-in-depth approach that allocates {param:pl-08.01_odp.01} to {param:pl-08.01_odp.02};"
+         }
+        },
+        {
+         "id": "pl-8.1_obj.a-2",
+         "label": "PL-08(01)(a)[02]",
+         "prose": {
+          "en": "the privacy architecture for the system is designed using a defense-in-depth approach that allocates {param:pl-08.01_odp.01} to {param:pl-08.01_odp.02};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pl-8.1_obj.b",
+       "label": "PL-08(01)(b)",
+       "children": [
+        {
+         "id": "pl-8.1_obj.b-1",
+         "label": "PL-08(01)(b)[01]",
+         "prose": {
+          "en": "the security architecture for the system is designed using a defense-in-depth approach that ensures the allocated controls operate in a coordinated and mutually reinforcing manner;"
+         }
+        },
+        {
+         "id": "pl-8.1_obj.b-2",
+         "label": "PL-08(01)(b)[02]",
+         "prose": {
+          "en": "the privacy architecture for the system is designed using a defense-in-depth approach that ensures the allocated controls operate in a coordinated and mutually reinforcing manner."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PL-08-Examine",
+     "objects": [
+      {
+       "en": "Security and privacy planning policy"
+      },
+      {
+       "en": "procedures addressing information security and privacy architecture development"
+      },
+      {
+       "en": "enterprise architecture documentation"
+      },
+      {
+       "en": "information security and privacy architecture documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "security and privacy CONOPS for the system"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PL-08-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with security and privacy planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy architecture development responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PL-08-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for designing the information security and privacy architecture"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the design of the information security and privacy architecture"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pl-08.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "controls to be allocated are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pl-8.1_prm_1"
+     ]
+    },
+    "pl-08.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "locations and architectural layers are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pl-8.1_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-29"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-36"
+  }
+ ]
+}

@@ -1,0 +1,166 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SR-11.3",
+ "version": "5.2.0",
+ "label": "SR-11(3)",
+ "lifecycle": "active",
+ "title": "Anti-counterfeit Scanning",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Scan for counterfeit system components {param:sr-11.03_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sr-11.03_odp",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The type of component determines the type of scanning to be conducted (e.g., web application scanning if the component is a web application)."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sr-11.3_obj",
+     "label": "SR-11(03)",
+     "prose": {
+      "en": "scanning for counterfeit system components is conducted {param:sr-11.03_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SR-11(03)-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management policy and procedures"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "anti-counterfeit policy and procedures"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "scanning tools and associated documentation"
+      },
+      {
+       "en": "scanning results"
+      },
+      {
+       "en": "procedures addressing supply chain protection"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "inter-organizational agreements and procedures"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SR-11(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and services acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibilities for anti-counterfeit policies and procedures"
+      },
+      {
+       "en": "organizational personnel with responsibility for anti-counterfeit scanning"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SR-11(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for scanning for counterfeit system components"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing anti-counterfeit scanning"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sr-11.03_odp": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to scan for counterfeit system components is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sr-11.3_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-19.4",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-19.4",
+    "mode": "renamed",
+    "label": "SA-19(04)",
+    "title": "Anti-counterfeit Scanning"
+   }
+  ]
+ }
+}

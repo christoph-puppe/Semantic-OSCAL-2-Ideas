@@ -1,0 +1,201 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-5.2",
+ "version": "5.2.0",
+ "label": "IA-5(2)",
+ "lifecycle": "active",
+ "title": "Public Key-based Authentication",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "For public key-based authentication:"
+   }
+  },
+  {
+   "id": "smt.a.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Enforce authorized access to the corresponding private key; and"
+   }
+  },
+  {
+   "id": "smt.a.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Map the authenticated identity to the account of the individual or group; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "When public key infrastructure (PKI) is used:"
+   }
+  },
+  {
+   "id": "smt.b.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Validate certificates by constructing and verifying a certification path to an accepted trust anchor, including checking certificate status information; and"
+   }
+  },
+  {
+   "id": "smt.b.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement a local cache of revocation data to support path discovery and validation."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Public key cryptography is a valid authentication mechanism for individuals, machines, and devices. For PKI solutions, status information for certification paths includes certificate revocation lists or certificate status protocol responses. For PIV cards, certificate validation involves the construction and verification of a certification path to the Common Policy Root trust anchor, which includes certificate policy processing. Implementing a local cache of revocation data to support path discovery and validation also supports system availability in situations where organizations are unable to access revocation information via the network."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-5.2_obj",
+     "label": "IA-05(02)",
+     "children": [
+      {
+       "id": "ia-5.2_obj.a",
+       "label": "IA-05(02)(a)",
+       "children": [
+        {
+         "id": "ia-5.2_obj.a.1",
+         "label": "IA-05(02)(a)(01)",
+         "prose": {
+          "en": "authorized access to the corresponding private key is enforced for public key-based authentication;"
+         }
+        },
+        {
+         "id": "ia-5.2_obj.a.2",
+         "label": "IA-05(02)(a)(02)",
+         "prose": {
+          "en": "the authenticated identity is mapped to the account of the individual or group for public key-based authentication;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ia-5.2_obj.b",
+       "label": "IA-05(02)(b)",
+       "children": [
+        {
+         "id": "ia-5.2_obj.b.1",
+         "label": "IA-05(02)(b)(01)",
+         "prose": {
+          "en": "when public key infrastructure (PKI) is used, certificates are validated by constructing and verifying a certification path to an accepted trust anchor, including checking certificate status information;"
+         }
+        },
+        {
+         "id": "ia-5.2_obj.b.2",
+         "label": "IA-05(02)(b)(02)",
+         "prose": {
+          "en": "when public key infrastructure (PKI) is used, a local cache of revocation data is implemented to support path discovery and validation."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-05(02)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "procedures addressing authenticator management"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "PKI certification validation records"
+      },
+      {
+       "en": "PKI certification revocation lists"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-05(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with PKI-based, authenticator management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-05(02)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing PKI-based, authenticator management capability"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-17"
+  }
+ ]
+}

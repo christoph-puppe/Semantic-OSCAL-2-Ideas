@@ -1,0 +1,159 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-7.25",
+ "version": "5.2.0",
+ "label": "SC-7(25)",
+ "lifecycle": "active",
+ "title": "Unclassified National Security System Connections",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Prohibit the direct connection of {param:sc-07.25_odp.01} to an external network without the use of {param:sc-07.25_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "sc-07.25_odp.01",
+     "type": "string",
+     "label": "unclassified national security system"
+    },
+    {
+     "name": "sc-07.25_odp.02",
+     "type": "string",
+     "label": "boundary protection device"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "A direct connection is a dedicated physical or virtual connection between two or more systems. Organizations typically do not have complete control over external networks, including the Internet. Boundary protection devices (e.g., firewalls, gateways, and routers) mediate communications and information flows between unclassified national security systems and external networks."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-7.25_obj",
+     "label": "SC-07(25)",
+     "prose": {
+      "en": "the direct connection of {param:sc-07.25_odp.01} to an external network without the use of {param:sc-07.25_odp.02} is prohibited."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-07(25)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing boundary protection"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system hardware and software"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-07(25)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel with boundary protection responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-07(25)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms prohibiting the direct connection of unclassified national security systems to an external network"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-07.25_odp.01": {
+     "guidelines": [
+      {
+       "en": "the unclassified national security system prohibited from directly connecting to an external network is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-7.25_prm_1"
+     ]
+    },
+    "sc-07.25_odp.02": {
+     "guidelines": [
+      {
+       "en": "the boundary protection device required for a direct connection to an external network is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-7.25_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-3.1",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/CA-3.1",
+    "mode": "renamed",
+    "label": "CA-03(01)",
+    "title": "Unclassified National Security System Connections"
+   }
+  ]
+ }
+}

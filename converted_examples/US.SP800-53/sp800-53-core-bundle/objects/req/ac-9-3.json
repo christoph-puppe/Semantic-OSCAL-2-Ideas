@@ -1,0 +1,135 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-9.3",
+ "version": "5.2.0",
+ "label": "AC-9(3)",
+ "lifecycle": "active",
+ "title": "Notification of Account Changes",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Notify the user, upon successful logon, of changes to {param:ac-09.03_odp.01} during {param:ac-09.03_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ac-09.03_odp.01",
+     "type": "string",
+     "label": "security-related characteristics or parameters"
+    },
+    {
+     "name": "ac-09.03_odp.02",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Information about changes to security-related account characteristics within a specified time period allows users to recognize if changes were made without their knowledge."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-9.3_obj",
+     "label": "AC-09(03)",
+     "prose": {
+      "en": "the user is notified, upon successful logon, of changes to {param:ac-09.03_odp.01} during {param:ac-09.03_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-09(03)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing previous logon notification"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-09(03)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-09(03)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing access control policy for previous logon notification"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-09.03_odp.01": {
+     "guidelines": [
+      {
+       "en": "changes to security-related characteristics or parameters of the user’s account that require notification are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-9.3_prm_1"
+     ],
+     "alt-label": "security-related characteristics or parameters of the user’s account"
+    },
+    "ac-09.03_odp.02": {
+     "guidelines": [
+      {
+       "en": "the time period for which the system notifies the user of changes to security-related characteristics or parameters of the user’s account is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-9.3_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-9"
+  }
+ ]
+}

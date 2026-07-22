@@ -1,0 +1,142 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-3.1",
+ "version": "5.2.0",
+ "label": "PE-3(1)",
+ "lifecycle": "active",
+ "title": "System Access",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Enforce physical access authorizations to the system in addition to the physical access controls for the facility at {param:pe-03.01_odp}."
+   },
+   "parameters": [
+    {
+     "name": "pe-03.01_odp",
+     "type": "string",
+     "label": "physical spaces"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Control of physical access to the system provides additional physical security for those areas within facilities where there is a concentration of system components."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-3.1_obj",
+     "label": "PE-03(01)",
+     "children": [
+      {
+       "id": "pe-3.1_obj-1",
+       "label": "PE-03(01)[01]",
+       "prose": {
+        "en": "physical access authorizations to the system are enforced;"
+       }
+      },
+      {
+       "id": "pe-3.1_obj.2",
+       "label": "PE-03(01)[02]",
+       "prose": {
+        "en": "physical access controls are enforced for the facility at {param:pe-03.01_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-03(01)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing physical access control"
+      },
+      {
+       "en": "physical access control logs or records"
+      },
+      {
+       "en": "physical access control devices"
+      },
+      {
+       "en": "access authorizations"
+      },
+      {
+       "en": "access credentials"
+      },
+      {
+       "en": "system entry and exit points"
+      },
+      {
+       "en": "list of areas within the facility containing concentrations of system components or system components requiring additional physical protection"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-03(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with physical access authorization responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-03(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for physical access control to the information system/components"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing physical access control for facility areas containing system components"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-03.01_odp": {
+     "guidelines": [
+      {
+       "en": "physical spaces containing one or more components of the system are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-3.1_prm_1"
+     ],
+     "alt-label": "physical spaces containing one or more components of the system"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-3"
+  }
+ ]
+}

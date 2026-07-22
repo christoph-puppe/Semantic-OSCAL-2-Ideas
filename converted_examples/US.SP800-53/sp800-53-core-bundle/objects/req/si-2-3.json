@@ -1,0 +1,154 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-2.3",
+ "version": "5.2.0",
+ "label": "SI-2(3)",
+ "lifecycle": "active",
+ "title": "Time to Remediate Flaws and Benchmarks for Corrective Actions",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Measure the time between flaw identification and flaw remediation; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish the following benchmarks for taking corrective actions: {param:si-02.03_odp}."
+   },
+   "parameters": [
+    {
+     "name": "si-02.03_odp",
+     "type": "string",
+     "label": "benchmarks"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations determine the time it takes on average to correct system flaws after such flaws have been identified and subsequently establish organizational benchmarks (i.e., time frames) for taking corrective actions. Benchmarks can be established by the type of flaw or the severity of the potential vulnerability if the flaw can be exploited."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-2.3_obj",
+     "label": "SI-02(03)",
+     "children": [
+      {
+       "id": "si-2.3_obj.a",
+       "label": "SI-02(03)(a)",
+       "prose": {
+        "en": "the time between flaw identification and flaw remediation is measured;"
+       }
+      },
+      {
+       "id": "si-2.3_obj.b",
+       "label": "SI-02(03)(b)",
+       "prose": {
+        "en": "{param:si-02.03_odp} for taking corrective actions have been established."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-02(03)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing flaw remediation"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of benchmarks for taking corrective action on identified flaws"
+      },
+      {
+       "en": "records that provide timestamps of flaw identification and subsequent flaw remediation activities"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-02(03)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for flaw remediation"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-02(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for identifying, reporting, and correcting system flaws"
+      },
+      {
+       "en": "mechanisms used to measure the time between flaw identification and flaw remediation"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-02.03_odp": {
+     "guidelines": [
+      {
+       "en": "the benchmarks for taking corrective actions are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-2.3_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-2"
+  }
+ ]
+}

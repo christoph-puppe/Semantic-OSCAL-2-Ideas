@@ -1,0 +1,173 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/RA-5.4",
+ "version": "5.2.0",
+ "label": "RA-5(4)",
+ "lifecycle": "active",
+ "title": "Discoverable Information",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Determine information about the system that is discoverable and take {param:ra-05.04_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ra-05.04_odp",
+     "type": "string",
+     "label": "corrective actions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Discoverable information includes information that adversaries could obtain without compromising or breaching the system, such as by collecting information that the system is exposing or by conducting extensive web searches. Corrective actions include notifying appropriate organizational personnel, removing designated information, or changing the system to make the designated information less relevant or attractive to adversaries. This enhancement excludes intentionally discoverable information that may be part of a decoy capability (e.g., honeypots, honeynets, or deception nets) deployed by the organization."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ra-5.4_obj",
+     "label": "RA-05(04)",
+     "children": [
+      {
+       "id": "ra-5.4_obj-1",
+       "label": "RA-05(04)[01]",
+       "prose": {
+        "en": "information about the system is discoverable;"
+       }
+      },
+      {
+       "id": "ra-5.4_obj-2",
+       "label": "RA-05(04)[02]",
+       "prose": {
+        "en": "{param:ra-05.04_odp} are taken when information about the system is confirmed as discoverable."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "RA-05(04)-Examine",
+     "objects": [
+      {
+       "en": "Procedures addressing vulnerability scanning"
+      },
+      {
+       "en": "assessment report"
+      },
+      {
+       "en": "penetration test results"
+      },
+      {
+       "en": "vulnerability scanning results"
+      },
+      {
+       "en": "risk assessment report"
+      },
+      {
+       "en": "records of corrective actions taken"
+      },
+      {
+       "en": "incident response records"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "RA-05(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with vulnerability scanning and/or penetration testing responsibilities"
+      },
+      {
+       "en": "organizational personnel with vulnerability scan analysis responsibilities"
+      },
+      {
+       "en": "organizational personnel responsible for risk response"
+      },
+      {
+       "en": "organizational personnel responsible for incident management and response"
+      },
+      {
+       "en": "organizational personnel with security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "RA-05(04)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for vulnerability scanning"
+      },
+      {
+       "en": "organizational processes for risk response"
+      },
+      {
+       "en": "organizational processes for incident management and response"
+      },
+      {
+       "en": "mechanisms/tools supporting and/or implementing vulnerability scanning"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing risk response"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing incident management and response"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ra-05.04_odp": {
+     "guidelines": [
+      {
+       "en": "corrective actions to be taken if information about the system is discoverable are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ra-5.4_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-26"
+  }
+ ]
+}

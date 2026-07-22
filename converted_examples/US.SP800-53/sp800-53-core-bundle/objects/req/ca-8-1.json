@@ -1,0 +1,99 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CA-8.1",
+ "version": "5.2.0",
+ "label": "CA-8(1)",
+ "lifecycle": "active",
+ "title": "Independent Penetration Testing Agent or Team",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ an independent penetration testing agent or team to perform penetration testing on the system or system components."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Independent penetration testing agents or teams are individuals or groups who conduct impartial penetration testing of organizational systems. Impartiality implies that penetration testing agents or teams are free from perceived or actual conflicts of interest with respect to the development, operation, or management of the systems that are the targets of the penetration testing. CA-2(1) provides additional information on independent assessments that can be applied to penetration testing."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ca-8.1_obj",
+     "label": "CA-08(01)",
+     "prose": {
+      "en": "an independent penetration testing agent or team is employed to perform penetration testing on the system or system components."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CA-08(01)-Examine",
+     "objects": [
+      {
+       "en": "Assessment, authorization, and monitoring policy"
+      },
+      {
+       "en": "procedures addressing penetration testing"
+      },
+      {
+       "en": "assessment plan"
+      },
+      {
+       "en": "penetration test report"
+      },
+      {
+       "en": "assessment report"
+      },
+      {
+       "en": "security assessment evidence"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CA-08(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with assessment responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-2"
+  }
+ ]
+}

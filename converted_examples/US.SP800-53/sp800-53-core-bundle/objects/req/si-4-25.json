@@ -1,0 +1,144 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-4.25",
+ "version": "5.2.0",
+ "label": "SI-4(25)",
+ "lifecycle": "active",
+ "title": "Optimize Network Traffic Analysis",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide visibility into network traffic at external and key internal system interfaces to optimize the effectiveness of monitoring devices."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Encrypted traffic, asymmetric routing architectures, capacity and latency limitations, and transitioning from older to newer technologies (e.g., IPv4 to IPv6 network protocol transition) may result in blind spots for organizations when analyzing network traffic. Collecting, decrypting, pre-processing, and distributing only relevant traffic to monitoring devices can streamline the efficiency and use of devices and optimize traffic analysis."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-4.25_obj",
+     "label": "SI-04(25)",
+     "children": [
+      {
+       "id": "si-4.25_obj-1",
+       "label": "SI-04(25)[01]",
+       "prose": {
+        "en": "visibility into network traffic at external system interfaces is provided to optimize the effectiveness of monitoring devices;"
+       }
+      },
+      {
+       "id": "si-4.25_obj-2",
+       "label": "SI-04(25)[02]",
+       "prose": {
+        "en": "visibility into network traffic at key internal system interfaces is provided to optimize the effectiveness of monitoring devices."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-04(25)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing system monitoring"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system monitoring tools and techniques documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system monitoring logs or records"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "network traffic reports"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-04(25)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for monitoring system hosts"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-04(25)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for system monitoring"
+      },
+      {
+       "en": "organizational processes for the discovery, collection, distribution, and use of indicators of compromise"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing a system monitoring capability"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the discovery, collection, distribution, and use of indicators of compromise"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

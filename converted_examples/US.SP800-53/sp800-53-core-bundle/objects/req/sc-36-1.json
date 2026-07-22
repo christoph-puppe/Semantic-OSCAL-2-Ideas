@@ -1,0 +1,175 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-36.1",
+ "version": "5.2.0",
+ "label": "SC-36(1)",
+ "lifecycle": "active",
+ "title": "Polling Techniques",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ polling techniques to identify potential faults, errors, or compromises to the following processing and storage components: {param:sc-36.01_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "sc-36.01_odp.01",
+     "type": "string",
+     "label": "distributed processing and storage components"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Take the following actions in response to identified faults, errors, or compromises: {param:sc-36.01_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "sc-36.01_odp.02",
+     "type": "string",
+     "label": "actions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Distributed processing and/or storage may be used to reduce opportunities for adversaries to compromise the confidentiality, integrity, or availability of organizational information and systems. However, the distribution of processing and storage components does not prevent adversaries from compromising one or more of the components. Polling compares the processing results and/or storage content from the distributed components and subsequently votes on the outcomes. Polling identifies potential faults, compromises, or errors in the distributed processing and storage components."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-36.1_obj",
+     "label": "SC-36(01)",
+     "children": [
+      {
+       "id": "sc-36.1_obj.a",
+       "label": "SC-36(01)(a)",
+       "prose": {
+        "en": "polling techniques are employed to identify potential faults, errors, or compromises to {param:sc-36.01_odp.01};"
+       }
+      },
+      {
+       "id": "sc-36.1_obj.b",
+       "label": "SC-36(01)(b)",
+       "prose": {
+        "en": "{param:sc-36.01_odp.02} are taken in response to identified faults, errors, or compromise."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-36(01)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "list of distributed processing and storage components subject to polling"
+      },
+      {
+       "en": "system polling techniques and associated documentation or records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-36(01)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "system developers/integrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-36(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing polling techniques"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-36.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "distributed processing and storage components for which polling techniques are to be employed to identify potential faults, errors, or compromises are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-36.1_prm_1"
+     ]
+    },
+    "sc-36.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "actions to be taken in response to identified faults, errors, or compromise are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-36.1_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-36"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

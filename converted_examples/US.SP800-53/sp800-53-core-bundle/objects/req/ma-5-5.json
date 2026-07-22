@@ -1,0 +1,101 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-5.5",
+ "version": "5.2.0",
+ "label": "MA-5(5)",
+ "lifecycle": "active",
+ "title": "Non-system Maintenance",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Ensure that non-escorted personnel performing maintenance activities not directly associated with the system but in the physical proximity of the system, have required access authorizations."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Personnel who perform maintenance activities in other capacities not directly related to the system include physical plant personnel and custodial personnel."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-5.5_obj",
+     "label": "MA-05(05)",
+     "prose": {
+      "en": "non-escorted personnel performing maintenance activities not directly associated with the system but in the physical proximity of the system have required access authorizations."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-05(05)-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing maintenance personnel"
+      },
+      {
+       "en": "system media protection policy"
+      },
+      {
+       "en": "access control policy and procedures"
+      },
+      {
+       "en": "physical and environmental protection policy and procedures"
+      },
+      {
+       "en": "maintenance records"
+      },
+      {
+       "en": "access control records"
+      },
+      {
+       "en": "access authorizations"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-05(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities"
+      },
+      {
+       "en": "organizational personnel with personnel security responsibilities"
+      },
+      {
+       "en": "organizational personnel with physical access control responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-5"
+  }
+ ]
+}

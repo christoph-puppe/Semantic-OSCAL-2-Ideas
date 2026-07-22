@@ -1,0 +1,246 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-7.24",
+ "version": "5.2.0",
+ "label": "SC-7(24)",
+ "lifecycle": "active",
+ "title": "Personally Identifiable Information",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "For systems that process personally identifiable information:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Apply the following processing rules to data elements of personally identifiable information: {param:sc-07.24_odp};"
+   },
+   "parameters": [
+    {
+     "name": "sc-07.24_odp",
+     "type": "string",
+     "label": "processing rules"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Monitor for permitted processing at the external interfaces to the system and at key internal boundaries within the system;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Document each processing exception; and"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Review and remove exceptions that are no longer supported."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Managing the processing of personally identifiable information is an important aspect of protecting an individual’s privacy. Applying, monitoring for, and documenting exceptions to processing rules ensure that personally identifiable information is processed only in accordance with established privacy requirements."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-7.24_obj",
+     "label": "SC-07(24)",
+     "children": [
+      {
+       "id": "sc-7.24_obj.a",
+       "label": "SC-07(24)(a)",
+       "prose": {
+        "en": "{param:sc-07.24_odp} are applied to data elements of personally identifiable information on systems that process personally identifiable information;"
+       }
+      },
+      {
+       "id": "sc-7.24_obj.b",
+       "label": "SC-07(24)(b)",
+       "children": [
+        {
+         "id": "sc-7.24_obj.b-1",
+         "label": "SC-07(24)(b)[01]",
+         "prose": {
+          "en": "permitted processing is monitored at the external interfaces to the systems that process personally identifiable information;"
+         }
+        },
+        {
+         "id": "sc-7.24_obj.b-2",
+         "label": "SC-07(24)(b)[02]",
+         "prose": {
+          "en": "permitted processing is monitored at key internal boundaries within the systems that process personally identifiable information;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sc-7.24_obj.c",
+       "label": "SC-07(24)(c)",
+       "prose": {
+        "en": "each processing exception is documented for systems that process personally identifiable information;"
+       }
+      },
+      {
+       "id": "sc-7.24_obj.d",
+       "label": "SC-07(24)(d)",
+       "children": [
+        {
+         "id": "sc-7.24_obj.d-1",
+         "label": "SC-07(24)(d)[01]",
+         "prose": {
+          "en": "exceptions for systems that process personally identifiable information are reviewed;"
+         }
+        },
+        {
+         "id": "sc-7.24_obj.d-2",
+         "label": "SC-07(24)(d)[02]",
+         "prose": {
+          "en": "exceptions for systems that process personally identifiable information that are no longer supported are removed."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-07(24)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing boundary protection"
+      },
+      {
+       "en": "personally identifiable information processing policies"
+      },
+      {
+       "en": "list of key internal boundaries of the system"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "enterprise security and privacy architecture documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "personally identifiable information inventory documentation"
+      },
+      {
+       "en": "data mapping documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-07(24)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel with boundary protection responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-07(24)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing boundary protection capabilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-07.24_odp": {
+     "guidelines": [
+      {
+       "en": "processing rules for systems that process personally identifiable information are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-7.24_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-15"
+  }
+ ]
+}

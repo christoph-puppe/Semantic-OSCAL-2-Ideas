@@ -1,0 +1,207 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-4.13",
+ "version": "5.2.0",
+ "label": "SI-4(13)",
+ "lifecycle": "active",
+ "title": "Analyze Traffic and Event Patterns",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Analyze communications traffic and event patterns for the system;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Develop profiles representing common traffic and event patterns; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Use the traffic and event profiles in tuning system-monitoring devices."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Identifying and understanding common communications traffic and event patterns help organizations provide useful information to system monitoring devices to more effectively identify suspicious or anomalous traffic and events when they occur. Such information can help reduce the number of false positives and false negatives during system monitoring."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-4.13_obj",
+     "label": "SI-04(13)",
+     "children": [
+      {
+       "id": "si-4.13_obj.a",
+       "label": "SI-04(13)(a)",
+       "children": [
+        {
+         "id": "si-4.13_obj.a-1",
+         "label": "SI-04(13)(a)[01]",
+         "prose": {
+          "en": "communications traffic for the system is analyzed;"
+         }
+        },
+        {
+         "id": "si-4.13_obj.a-2",
+         "label": "SI-04(13)(a)[02]",
+         "prose": {
+          "en": "event patterns for the system are analyzed;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "si-4.13_obj.b",
+       "label": "SI-04(13)(b)",
+       "children": [
+        {
+         "id": "si-4.13_obj.b-1",
+         "label": "SI-04(13)(b)[01]",
+         "prose": {
+          "en": "profiles representing common traffic are developed;"
+         }
+        },
+        {
+         "id": "si-4.13_obj.b-2",
+         "label": "SI-04(13)(b)[02]",
+         "prose": {
+          "en": "profiles representing event patterns are developed;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "si-4.13_obj.c",
+       "label": "SI-04(13)(c)",
+       "children": [
+        {
+         "id": "si-4.13_obj.c-1",
+         "label": "SI-04(13)(c)[01]",
+         "prose": {
+          "en": "traffic profiles are used in tuning system-monitoring devices;"
+         }
+        },
+        {
+         "id": "si-4.13_obj.c-2",
+         "label": "SI-04(13)(c)[02]",
+         "prose": {
+          "en": "event profiles are used in tuning system-monitoring devices."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-04(13)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing system monitoring tools and techniques"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system monitoring tools and techniques documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of profiles representing common traffic patterns and/or events"
+      },
+      {
+       "en": "system protocols documentation"
+      },
+      {
+       "en": "list of acceptable thresholds for false positives and false negatives"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-04(13)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for monitoring the system"
+      },
+      {
+       "en": "organizational personnel responsible for the intrusion detection system"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-04(13)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for intrusion detection and system monitoring"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing intrusion detection and system monitoring capabilities"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the analysis of communications traffic and event patterns"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

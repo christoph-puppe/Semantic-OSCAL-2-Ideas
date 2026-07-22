@@ -1,0 +1,164 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-3.4",
+ "version": "5.2.0",
+ "label": "CM-3(4)",
+ "lifecycle": "active",
+ "title": "Security and Privacy Representatives",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require {param:cm-3.4_prm_1} to be members of the {param:cm-03.04_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "cm-03.04_odp.03",
+     "type": "string",
+     "label": "configuration change control element"
+    },
+    {
+     "name": "cm-3.4_prm_1",
+     "type": "string",
+     "label": "organization-defined security and privacy representatives"
+    },
+    {
+     "name": "cm-03.04_odp.01",
+     "type": "string",
+     "label": "security representatives"
+    },
+    {
+     "name": "cm-03.04_odp.02",
+     "type": "string",
+     "label": "privacy representatives"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Information security and privacy representatives include system security officers, senior agency information security officers, senior agency officials for privacy, or system privacy officers. Representation by personnel with information security and privacy expertise is important because changes to system configurations can have unintended side effects, some of which may be security- or privacy-relevant. Detecting such changes early in the process can help avoid unintended, negative consequences that could ultimately affect the security and privacy posture of systems. The configuration change control element referred to in the second organization-defined parameter reflects the change control elements defined by organizations in CM-3g."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-3.4_obj",
+     "label": "CM-03(04)",
+     "children": [
+      {
+       "id": "cm-3.4_obj-1",
+       "label": "CM-03(04)[01]",
+       "prose": {
+        "en": "{param:cm-03.04_odp.01} are required to be members of the {param:cm-03.04_odp.03};"
+       }
+      },
+      {
+       "id": "cm-3.4_obj-2",
+       "label": "CM-03(04)[02]",
+       "prose": {
+        "en": "{param:cm-03.04_odp.02} are required to be members of the {param:cm-03.04_odp.03}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-03(04)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing system configuration change control"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-03(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with configuration change control responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "members of change control board or similar"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-03(04)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for configuration change control"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-3.4_prm_1": {
+     "aggregates": [
+      "cm-03.04_odp.01",
+      "cm-03.04_odp.02"
+     ]
+    },
+    "cm-03.04_odp.01": {
+     "guidelines": [
+      {
+       "en": "security representatives required to be members of the change control element are defined;"
+      }
+     ]
+    },
+    "cm-03.04_odp.02": {
+     "guidelines": [
+      {
+       "en": "privacy representatives required to be members of the change control element are defined;"
+      }
+     ]
+    },
+    "cm-03.04_odp.03": {
+     "guidelines": [
+      {
+       "en": "the configuration change control element of which the security and privacy representatives are to be members is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-3.4_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-3"
+  }
+ ]
+}

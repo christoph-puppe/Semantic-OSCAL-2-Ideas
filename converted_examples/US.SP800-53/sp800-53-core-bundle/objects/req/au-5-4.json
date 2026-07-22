@@ -1,0 +1,146 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-5.4",
+ "version": "5.2.0",
+ "label": "AU-5(4)",
+ "lifecycle": "active",
+ "title": "Shutdown on Failure",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Invoke a {param:au-05.04_odp.01} in the event of {param:au-05.04_odp.02} , unless an alternate audit logging capability exists."
+   },
+   "parameters": [
+    {
+     "name": "au-05.04_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "full system shutdown"
+      },
+      {
+       "value": "partial system shutdown"
+      },
+      {
+       "value": "degraded operational mode with limited mission or business functionality available"
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "au-05.04_odp.02",
+     "type": "string",
+     "label": "audit logging failures"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations determine the types of audit logging failures that can trigger automatic system shutdowns or degraded operations. Because of the importance of ensuring mission and business continuity, organizations may determine that the nature of the audit logging failure is not so severe that it warrants a complete shutdown of the system supporting the core organizational mission and business functions. In those instances, partial system shutdowns or operating in a degraded mode with reduced capability may be viable alternatives."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-5.4_obj",
+     "label": "AU-05(04)",
+     "prose": {
+      "en": "{param:au-05.04_odp.01} is/are invoked in the event of {param:au-05.04_odp.02} , unless an alternate audit logging capability exists."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-05(04)-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "procedures addressing response to audit processing failures"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-05(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with audit and accountability responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AU-05(04)-Test",
+     "objects": [
+      {
+       "en": "System capability invoking system shutdown or degraded operational mode in the event of an audit processing failure"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "au-05.04_odp.01": {
+     "alt-identifiers": [
+      "au-5.4_prm_1"
+     ]
+    },
+    "au-05.04_odp.02": {
+     "guidelines": [
+      {
+       "en": "audit logging failures that trigger a change in operational mode are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-5.4_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-5"
+  }
+ ]
+}

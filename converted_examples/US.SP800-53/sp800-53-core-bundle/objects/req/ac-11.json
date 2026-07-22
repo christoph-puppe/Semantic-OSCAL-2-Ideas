@@ -1,0 +1,175 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-11",
+ "version": "5.2.0",
+ "label": "AC-11",
+ "lifecycle": "active",
+ "title": "Device Lock",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Prevent further access to the system by {param:ac-11_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "ac-11_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "initiating a device lock after {param:ac-11_odp.02} of inactivity"
+      },
+      {
+       "value": "requiring the user to initiate a device lock before leaving the system unattended"
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "ac-11_odp.02",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Retain the device lock until the user reestablishes access using established identification and authentication procedures."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Device locks are temporary actions taken to prevent logical access to organizational systems when users stop work and move away from the immediate vicinity of those systems but do not want to log out because of the temporary nature of their absences. Device locks can be implemented at the operating system level or at the application level. A proximity lock may be used to initiate the device lock (e.g., via a Bluetooth-enabled device or dongle). User-initiated device locking is behavior or policy-based and, as such, requires users to take physical action to initiate the device lock. Device locks are not an acceptable substitute for logging out of systems, such as when organizations require users to log out at the end of workdays."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-11_obj",
+     "label": "AC-11",
+     "children": [
+      {
+       "id": "ac-11_obj.a",
+       "label": "AC-11a.",
+       "prose": {
+        "en": "further access to the system is prevented by {param:ac-11_odp.01};"
+       }
+      },
+      {
+       "id": "ac-11_obj.b",
+       "label": "AC-11b.",
+       "prose": {
+        "en": "device lock is retained until the user re-establishes access using established identification and authentication procedures."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-11-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing session lock"
+      },
+      {
+       "en": "procedures addressing identification and authentication"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "security plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-11-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-11-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing access control policy for session lock"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-11_odp.01": {
+     "alt-identifiers": [
+      "ac-11_prm_1"
+     ]
+    },
+    "ac-11_odp.02": {
+     "guidelines": [
+      {
+       "en": "time period of inactivity after which a device lock is initiated is defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-11_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-4"
+  }
+ ]
+}

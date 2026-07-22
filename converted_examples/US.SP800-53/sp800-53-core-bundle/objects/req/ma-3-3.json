@@ -1,0 +1,202 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-3.3",
+ "version": "5.2.0",
+ "label": "MA-3(3)",
+ "lifecycle": "active",
+ "title": "Prevent Unauthorized Removal",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Prevent the removal of maintenance equipment containing organizational information by:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Verifying that there is no organizational information contained on the equipment;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Sanitizing or destroying the equipment;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Retaining the equipment within the facility; or"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Obtaining an exemption from {param:ma-03.03_odp} explicitly authorizing removal of the equipment from the facility."
+   },
+   "parameters": [
+    {
+     "name": "ma-03.03_odp",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizational information includes all information owned by organizations and any information provided to organizations for which the organizations serve as information stewards."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-3.3_obj",
+     "label": "MA-03(03)",
+     "children": [
+      {
+       "id": "ma-3.3_obj.a",
+       "label": "MA-03(03)(a)",
+       "prose": {
+        "en": "the removal of maintenance equipment containing organizational information is prevented by verifying that there is no organizational information contained on the equipment; or"
+       }
+      },
+      {
+       "id": "ma-3.3_obj.b",
+       "label": "MA-03(03)(b)",
+       "prose": {
+        "en": "the removal of maintenance equipment containing organizational information is prevented by sanitizing or destroying the equipment; or"
+       }
+      },
+      {
+       "id": "ma-3.3_obj.c",
+       "label": "MA-03(03)(c)",
+       "prose": {
+        "en": "the removal of maintenance equipment containing organizational information is prevented by retaining the equipment within the facility; or"
+       }
+      },
+      {
+       "id": "ma-3.3_obj.d",
+       "label": "MA-03(03)(d)",
+       "prose": {
+        "en": "the removal of maintenance equipment containing organizational information is prevented by obtaining an exemption from {param:ma-03.03_odp} explicitly authorizing removal of the equipment from the facility."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-03(03)-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing system maintenance tools"
+      },
+      {
+       "en": "system maintenance tools and associated documentation"
+      },
+      {
+       "en": "maintenance records"
+      },
+      {
+       "en": "equipment sanitization records"
+      },
+      {
+       "en": "media sanitization records"
+      },
+      {
+       "en": "exemptions for equipment removal"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-03(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel responsible for media sanitization"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MA-03(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational process for preventing unauthorized removal of information"
+      },
+      {
+       "en": "mechanisms supporting media sanitization or destruction of equipment"
+      },
+      {
+       "en": "mechanisms supporting verification of media sanitization"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ma-03.03_odp": {
+     "guidelines": [
+      {
+       "en": "personnel or roles who can authorize removal of equipment from the facility is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ma-3.3_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-6"
+  }
+ ]
+}

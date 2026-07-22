@@ -1,0 +1,161 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-4.11",
+ "version": "5.2.0",
+ "label": "SI-4(11)",
+ "lifecycle": "active",
+ "title": "Analyze Communications Traffic Anomalies",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Analyze outbound communications traffic at the external interfaces to the system and selected {param:si-04.11_odp} to discover anomalies."
+   },
+   "parameters": [
+    {
+     "name": "si-04.11_odp",
+     "type": "string",
+     "label": "interior points"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organization-defined interior points include subnetworks and subsystems. Anomalies within organizational systems include large file transfers, long-time persistent connections, attempts to access information from unexpected locations, the use of unusual protocols and ports, the use of unmonitored network protocols (e.g., IPv6 usage during IPv4 transition), and attempted communications with suspected malicious external addresses."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-4.11_obj",
+     "label": "SI-04(11)",
+     "children": [
+      {
+       "id": "si-4.11_obj-1",
+       "label": "SI-04(11)[01]",
+       "prose": {
+        "en": "outbound communications traffic at the external interfaces to the system is analyzed to discover anomalies;"
+       }
+      },
+      {
+       "id": "si-4.11_obj-2",
+       "label": "SI-04(11)[02]",
+       "prose": {
+        "en": "outbound communications traffic at {param:si-04.11_odp} is analyzed to discover anomalies."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-04(11)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing system monitoring tools and techniques"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "network diagram"
+      },
+      {
+       "en": "system monitoring tools and techniques documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system monitoring logs or records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-04(11)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for monitoring the system"
+      },
+      {
+       "en": "organizational personnel responsible for the intrusion detection system"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-04(11)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for intrusion detection and system monitoring"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing intrusion detection and system monitoring capabilities"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the analysis of communications traffic"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-04.11_odp": {
+     "guidelines": [
+      {
+       "en": "interior points within the system where communications traffic is to be analyzed are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-4.11_prm_1"
+     ],
+     "alt-label": "interior points within the system"
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

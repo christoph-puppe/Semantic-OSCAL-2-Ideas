@@ -1,0 +1,170 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CA-7.4",
+ "version": "5.2.0",
+ "label": "CA-7(4)",
+ "lifecycle": "active",
+ "title": "Risk Monitoring",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Ensure risk monitoring is an integral part of the continuous monitoring strategy that includes the following:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Effectiveness monitoring;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Compliance monitoring; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Change monitoring."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Risk monitoring is informed by the established organizational risk tolerance. Effectiveness monitoring determines the ongoing effectiveness of the implemented risk response measures. Compliance monitoring verifies that required risk response measures are implemented. It also verifies that security and privacy requirements are satisfied. Change monitoring identifies changes to organizational systems and environments of operation that may affect security and privacy risk."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ca-7.4_obj",
+     "label": "CA-07(04)",
+     "prose": {
+      "en": "risk monitoring is an integral part of the continuous monitoring strategy;"
+     },
+     "children": [
+      {
+       "id": "ca-7.4_obj.a",
+       "label": "CA-07(04)(a)",
+       "prose": {
+        "en": "effectiveness monitoring is included in risk monitoring;"
+       }
+      },
+      {
+       "id": "ca-7.4_obj.b",
+       "label": "CA-07(04)(b)",
+       "prose": {
+        "en": "compliance monitoring is included in risk monitoring;"
+       }
+      },
+      {
+       "id": "ca-7.4_obj.c",
+       "label": "CA-07(04)(c)",
+       "prose": {
+        "en": "change monitoring is included in risk monitoring."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CA-07(04)-Examine",
+     "objects": [
+      {
+       "en": "Assessment, authorization, and monitoring policy"
+      },
+      {
+       "en": "organizational continuous monitoring strategy"
+      },
+      {
+       "en": "system-level continuous monitoring strategy"
+      },
+      {
+       "en": "procedures addressing continuous monitoring of system controls"
+      },
+      {
+       "en": "assessment report"
+      },
+      {
+       "en": "plan of action and milestones"
+      },
+      {
+       "en": "system monitoring records"
+      },
+      {
+       "en": "impact analyses"
+      },
+      {
+       "en": "status reports"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CA-07(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with continuous monitoring responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CA-07(04)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting risk monitoring"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  }
+ ]
+}

@@ -1,0 +1,552 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-8",
+ "version": "5.2.0",
+ "label": "IR-8",
+ "lifecycle": "active",
+ "title": "Incident Response Plan",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop an incident response plan that:"
+   },
+   "parameters": [
+    {
+     "name": "ir-08_odp.05",
+     "type": "string",
+     "label": "organizational elements"
+    },
+    {
+     "name": "ir-08_odp.06",
+     "type": "string",
+     "label": "incident response personnel"
+    },
+    {
+     "name": "ir-08_odp.07",
+     "type": "string",
+     "label": "organizational elements"
+    }
+   ]
+  },
+  {
+   "id": "smt.a.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provides the organization with a roadmap for implementing its incident response capability;"
+   }
+  },
+  {
+   "id": "smt.a.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Describes the structure and organization of the incident response capability;"
+   }
+  },
+  {
+   "id": "smt.a.3",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provides a high-level approach for how the incident response capability fits into the overall organization;"
+   }
+  },
+  {
+   "id": "smt.a.4",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Meets the unique requirements of the organization, which relate to mission, size, structure, and functions;"
+   }
+  },
+  {
+   "id": "smt.a.5",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Defines reportable incidents;"
+   }
+  },
+  {
+   "id": "smt.a.6",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provides metrics for measuring the incident response capability within the organization;"
+   }
+  },
+  {
+   "id": "smt.a.7",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Defines the resources and management support needed to effectively maintain and mature an incident response capability;"
+   }
+  },
+  {
+   "id": "smt.a.8",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Addresses the sharing of incident information;"
+   }
+  },
+  {
+   "id": "smt.a.9",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Is reviewed and approved by {param:ir-08_odp.01} {param:ir-08_odp.02} ; and"
+   },
+   "parameters": [
+    {
+     "name": "ir-08_odp.01",
+     "type": "string",
+     "label": "personnel or roles"
+    },
+    {
+     "name": "ir-08_odp.02",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.a.10",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Explicitly designates responsibility for incident response to {param:ir-08_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "ir-08_odp.03",
+     "type": "string",
+     "label": "entities, personnel, or roles"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Distribute copies of the incident response plan to {param:ir-08_odp.04};"
+   },
+   "parameters": [
+    {
+     "name": "ir-08_odp.04",
+     "type": "string",
+     "label": "incident response personnel"
+    }
+   ]
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Update the incident response plan to address system and organizational changes or problems encountered during plan implementation, execution, or testing;"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Communicate incident response plan changes to {param:ir-8_prm_5} ; and"
+   },
+   "parameters": [
+    {
+     "name": "ir-8_prm_5",
+     "type": "string",
+     "label": "organization-defined incident response personnel (identified by name and/or by role) and organizational elements"
+    }
+   ]
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Protect the incident response plan from unauthorized disclosure and modification."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "It is important that organizations develop and implement a coordinated approach to incident response. Organizational mission and business functions determine the structure of incident response capabilities. As part of the incident response capabilities, organizations consider the coordination and sharing of information with external organizations, including external service providers and other organizations involved in the supply chain. For incidents involving personally identifiable information (i.e., breaches), include a process to determine whether notice to oversight organizations or affected individuals is appropriate and provide that notice accordingly."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-8_obj",
+     "label": "IR-08",
+     "children": [
+      {
+       "id": "ir-8_obj.a",
+       "label": "IR-08a.",
+       "children": [
+        {
+         "id": "ir-8_obj.a.1",
+         "label": "IR-08a.01",
+         "prose": {
+          "en": "an incident response plan is developed that provides the organization with a roadmap for implementing its incident response capability;"
+         }
+        },
+        {
+         "id": "ir-8_obj.a.2",
+         "label": "IR-08a.02",
+         "prose": {
+          "en": "an incident response plan is developed that describes the structure and organization of the incident response capability;"
+         }
+        },
+        {
+         "id": "ir-8_obj.a.3",
+         "label": "IR-08a.03",
+         "prose": {
+          "en": "an incident response plan is developed that provides a high-level approach for how the incident response capability fits into the overall organization;"
+         }
+        },
+        {
+         "id": "ir-8_obj.a.4",
+         "label": "IR-08a.04",
+         "prose": {
+          "en": "an incident response plan is developed that meets the unique requirements of the organization with regard to mission, size, structure, and functions;"
+         }
+        },
+        {
+         "id": "ir-8_obj.a.5",
+         "label": "IR-08a.05",
+         "prose": {
+          "en": "an incident response plan is developed that defines reportable incidents;"
+         }
+        },
+        {
+         "id": "ir-8_obj.a.6",
+         "label": "IR-08a.06",
+         "prose": {
+          "en": "an incident response plan is developed that provides metrics for measuring the incident response capability within the organization;"
+         }
+        },
+        {
+         "id": "ir-8_obj.a.7",
+         "label": "IR-08a.07",
+         "prose": {
+          "en": "an incident response plan is developed that defines the resources and management support needed to effectively maintain and mature an incident response capability;"
+         }
+        },
+        {
+         "id": "ir-8_obj.a.8",
+         "label": "IR-08a.08",
+         "prose": {
+          "en": "an incident response plan is developed that addresses the sharing of incident information;"
+         }
+        },
+        {
+         "id": "ir-8_obj.a.9",
+         "label": "IR-08a.09",
+         "prose": {
+          "en": "an incident response plan is developed that is reviewed and approved by {param:ir-08_odp.01} {param:ir-08_odp.02};"
+         }
+        },
+        {
+         "id": "ir-8_obj.a.10",
+         "label": "IR-08a.10",
+         "prose": {
+          "en": "an incident response plan is developed that explicitly designates responsibility for incident response to {param:ir-08_odp.03}."
+         }
+        }
+       ]
+      },
+      {
+       "id": "ir-8_obj.b",
+       "label": "IR-08b.",
+       "children": [
+        {
+         "id": "ir-8_obj.b-1",
+         "label": "IR-08b.[01]",
+         "prose": {
+          "en": "copies of the incident response plan are distributed to {param:ir-08_odp.04};"
+         }
+        },
+        {
+         "id": "ir-8_obj.b-2",
+         "label": "IR-08b.[02]",
+         "prose": {
+          "en": "copies of the incident response plan are distributed to {param:ir-08_odp.05};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ir-8_obj.c",
+       "label": "IR-08c.",
+       "prose": {
+        "en": "the incident response plan is updated to address system and organizational changes or problems encountered during plan implementation, execution, or testing;"
+       }
+      },
+      {
+       "id": "ir-8_obj.d",
+       "label": "IR-08d.",
+       "children": [
+        {
+         "id": "ir-8_obj.d-1",
+         "label": "IR-08d.[01]",
+         "prose": {
+          "en": "incident response plan changes are communicated to {param:ir-08_odp.06};"
+         }
+        },
+        {
+         "id": "ir-8_obj.d-2",
+         "label": "IR-08d.[02]",
+         "prose": {
+          "en": "incident response plan changes are communicated to {param:ir-08_odp.07};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ir-8_obj.e",
+       "label": "IR-08e.",
+       "children": [
+        {
+         "id": "ir-8_obj.e-1",
+         "label": "IR-08e.[01]",
+         "prose": {
+          "en": "the incident response plan is protected from unauthorized disclosure;"
+         }
+        },
+        {
+         "id": "ir-8_obj.e-2",
+         "label": "IR-08e.[02]",
+         "prose": {
+          "en": "the incident response plan is protected from unauthorized modification."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-08-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing incident response planning"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "records of incident response plan reviews and approvals"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-08-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident response planning responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IR-08-Test",
+     "objects": [
+      {
+       "en": "Organizational incident response plan and related organizational processes"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ir-8_prm_5": {
+     "aggregates": [
+      "ir-08_odp.06",
+      "ir-08_odp.05",
+      "ir-08_odp.07"
+     ]
+    },
+    "ir-08_odp.01": {
+     "guidelines": [
+      {
+       "en": "personnel or roles that review and approve the incident response plan is/are identified;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-8_prm_1"
+     ]
+    },
+    "ir-08_odp.02": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to review and approve the incident response plan is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-8_prm_2"
+     ]
+    },
+    "ir-08_odp.03": {
+     "guidelines": [
+      {
+       "en": "entities, personnel, or roles with designated responsibility for incident response are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-8_prm_3"
+     ]
+    },
+    "ir-08_odp.04": {
+     "guidelines": [
+      {
+       "en": "incident response personnel (identified by name and/or by role) to whom copies of the incident response plan are to be distributed is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-8_prm_4"
+     ],
+     "alt-label": "incident response personnel (identified by name and/or by role) and organizational elements"
+    },
+    "ir-08_odp.05": {
+     "guidelines": [
+      {
+       "en": "organizational elements to which copies of the incident response plan are to be distributed are defined;"
+      }
+     ]
+    },
+    "ir-08_odp.06": {
+     "guidelines": [
+      {
+       "en": "incident response personnel (identified by name and/or by role) to whom changes to the incident response plan is/are communicated are defined;"
+      }
+     ]
+    },
+    "ir-08_odp.07": {
+     "guidelines": [
+      {
+       "en": "organizational elements to which changes to the incident response plan are communicated are defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-61r2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://obamawhitehouse.archives.gov/sites/default/files/omb/memoranda/2017/m-17-12_0.pdf"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-15"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-8"
+  }
+ ]
+}

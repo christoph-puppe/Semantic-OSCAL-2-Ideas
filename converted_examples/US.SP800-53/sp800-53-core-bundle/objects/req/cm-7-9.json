@@ -1,0 +1,192 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-7.9",
+ "version": "5.2.0",
+ "label": "CM-7(9)",
+ "lifecycle": "active",
+ "title": "Prohibiting The Use of Unauthorized Hardware",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Identify {param:cm-07.09_odp.01};"
+   },
+   "parameters": [
+    {
+     "name": "cm-07.09_odp.01",
+     "type": "string",
+     "label": "hardware components"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Prohibit the use or connection of unauthorized hardware components;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Review and update the list of authorized hardware components {param:cm-07.09_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "cm-07.09_odp.02",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Hardware components provide the foundation for organizational systems and the platform for the execution of authorized software programs. Managing the inventory of hardware components and controlling which hardware components are permitted to be installed or connected to organizational systems is essential in order to provide adequate security."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-7.9_obj",
+     "label": "CM-07(09)",
+     "children": [
+      {
+       "id": "cm-7.9_obj.a",
+       "label": "CM-07(09)(a)",
+       "prose": {
+        "en": "{param:cm-07.09_odp.01} are identified;"
+       }
+      },
+      {
+       "id": "cm-7.9_obj.b",
+       "label": "CM-07(09)(b)",
+       "prose": {
+        "en": "the use or connection of unauthorized hardware components is prohibited;"
+       }
+      },
+      {
+       "id": "cm-7.9_obj.c",
+       "label": "CM-07(09)(c)",
+       "prose": {
+        "en": "the list of authorized hardware components is reviewed and updated {param:cm-07.09_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-07(09)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "network connection policy and procedures"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-07(09)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system hardware management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-07(09)-Test",
+     "objects": [
+      {
+       "en": "Organizational process for approving execution of binary or machine-executable code"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the prohibition of binary or machine-executable code"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-07.09_odp.01": {
+     "guidelines": [
+      {
+       "en": "hardware components authorized for system use are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-7.9_prm_1"
+     ],
+     "alt-label": "hardware components authorized for system use"
+    },
+    "cm-07.09_odp.02": {
+     "guidelines": [
+      {
+       "en": "frequency at which to review and update the list of authorized hardware components is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-7.9_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-7"
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-8.8",
+ "version": "5.2.0",
+ "label": "CM-8(8)",
+ "lifecycle": "active",
+ "title": "Automated Location Tracking",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Support the tracking of system components by geographic location using {param:cm-08.08_odp}."
+   },
+   "parameters": [
+    {
+     "name": "cm-08.08_odp",
+     "type": "string",
+     "label": "automated mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The use of automated mechanisms to track the location of system components can increase the accuracy of component inventories. Such capability may help organizations rapidly identify the location and responsible individuals of system components that have been compromised, breached, or are otherwise in need of mitigation actions. The use of tracking mechanisms can be coordinated with senior agency officials for privacy if there are implications that affect individual privacy."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-8.8_obj",
+     "label": "CM-08(08)",
+     "prose": {
+      "en": "{param:cm-08.08_odp} are used to support the tracking of system components by geographic location."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-08(08)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing system component inventory"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-08(08)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with component inventory management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-08(08)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing the system component inventory"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing system component inventory"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing tracking of components by geographic locations"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-08.08_odp": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms for tracking components are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-8.8_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  }
+ ]
+}

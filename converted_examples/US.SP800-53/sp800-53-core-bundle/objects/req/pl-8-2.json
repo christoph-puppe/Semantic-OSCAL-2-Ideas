@@ -1,0 +1,154 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PL-8.2",
+ "version": "5.2.0",
+ "label": "PL-8(2)",
+ "lifecycle": "active",
+ "title": "Supplier Diversity",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require that {param:pl-08.02_odp.01} allocated to {param:pl-08.02_odp.02} are obtained from different suppliers."
+   },
+   "parameters": [
+    {
+     "name": "pl-08.02_odp.01",
+     "type": "string",
+     "label": "controls"
+    },
+    {
+     "name": "pl-08.02_odp.02",
+     "type": "string",
+     "label": "locations and architectural layers"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Information technology products have different strengths and weaknesses. Providing a broad spectrum of products complements the individual offerings. For example, vendors offering malicious code protection typically update their products at different times, often developing solutions for known viruses, Trojans, or worms based on their priorities and development schedules. By deploying different products at different locations, there is an increased likelihood that at least one of the products will detect the malicious code. With respect to privacy, vendors may offer products that track personally identifiable information in systems. Products may use different tracking methods. Using multiple products may result in more assurance that personally identifiable information is inventoried."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pl-8.2_obj",
+     "label": "PL-08(02)",
+     "prose": {
+      "en": "{param:pl-08.02_odp.01} that are allocated to {param:pl-08.02_odp.02} are required to be obtained from different suppliers."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PL-08(02)-Examine",
+     "objects": [
+      {
+       "en": "Security and privacy planning policy"
+      },
+      {
+       "en": "procedures addressing information security and privacy architecture development"
+      },
+      {
+       "en": "enterprise architecture documentation"
+      },
+      {
+       "en": "information security and privacy architecture documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "security and privacy CONOPS for the system"
+      },
+      {
+       "en": "IT acquisitions policy"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PL-08(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with security and privacy planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy architecture development responsibilities"
+      },
+      {
+       "en": "organizational personnel with acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PL-08(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for obtaining information security and privacy safeguards from different suppliers"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pl-08.02_odp.01": {
+     "guidelines": [
+      {
+       "en": "controls to be allocated are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pl-8.2_prm_1"
+     ]
+    },
+    "pl-08.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "locations and architectural layers are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pl-8.2_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-29"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-3"
+  }
+ ]
+}

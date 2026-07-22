@@ -1,0 +1,153 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PT-7",
+ "version": "5.2.0",
+ "label": "PT-7",
+ "lifecycle": "active",
+ "title": "Specific Categories of Personally Identifiable Information",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Apply {param:pt-07_odp} for specific categories of personally identifiable information."
+   },
+   "parameters": [
+    {
+     "name": "pt-07_odp",
+     "type": "string",
+     "label": "processing conditions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations apply any conditions or protections that may be necessary for specific categories of personally identifiable information. These conditions may be required by laws, executive orders, directives, regulations, policies, standards, or guidelines. The requirements may also come from the results of privacy risk assessments that factor in contextual changes that may result in an organizational determination that a particular category of personally identifiable information is particularly sensitive or raises particular privacy risks. Organizations consult with the senior agency official for privacy and legal counsel regarding any protections that may be necessary."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pt-7_obj",
+     "label": "PT-07",
+     "prose": {
+      "en": "{param:pt-07_odp} are applied for specific categories of personally identifiable information."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PT-07-Examine",
+     "objects": [
+      {
+       "en": "Personally identifiable information processing and transparency policy and procedures"
+      },
+      {
+       "en": "privacy notice"
+      },
+      {
+       "en": "Privacy Act system of records"
+      },
+      {
+       "en": "computer matching agreements and notices"
+      },
+      {
+       "en": "contracts"
+      },
+      {
+       "en": "privacy information sharing agreements"
+      },
+      {
+       "en": "memoranda of understanding"
+      },
+      {
+       "en": "governing requirements"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PT-07-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personally identifiable information processing and transparency responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PT-07-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for supporting and/or implementing personally identifiable information processing"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pt-07_odp": {
+     "guidelines": [
+      {
+       "en": "processing conditions to be applied for specific categories of personally identifiable information are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pt-7_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.govinfo.gov/content/pkg/STATUTE-88/pdf/STATUTE-88-Pg1896.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A108/omb_circular_a-108.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.archives.gov/cui"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  }
+ ]
+}

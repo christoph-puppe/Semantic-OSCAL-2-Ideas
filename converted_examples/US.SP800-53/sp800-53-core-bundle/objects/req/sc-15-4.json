@@ -1,0 +1,125 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-15.4",
+ "version": "5.2.0",
+ "label": "SC-15(4)",
+ "lifecycle": "active",
+ "title": "Explicitly Indicate Current Participants",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide an explicit indication of current participants in {param:sc-15.04_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sc-15.04_odp",
+     "type": "string",
+     "label": "online meetings and teleconferences"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Explicitly indicating current participants prevents unauthorized individuals from participating in collaborative computing sessions without the explicit knowledge of other participants."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-15.4_obj",
+     "label": "SC-15(04)",
+     "prose": {
+      "en": "an explicit indication of current participants in {param:sc-15.04_odp} is provided."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-15(04)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing collaborative computing"
+      },
+      {
+       "en": "access control policy and procedures"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "list of types of meetings and teleconferences requiring explicit indication of current participants"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-15(04)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibilities for managing collaborative computing devices"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-15(04)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the capability to indicate participants on collaborative computing devices"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-15.04_odp": {
+     "guidelines": [
+      {
+       "en": "online meetings and teleconferences for which an explicit indication of current participants is to be provided are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-15.4_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-15"
+  }
+ ]
+}

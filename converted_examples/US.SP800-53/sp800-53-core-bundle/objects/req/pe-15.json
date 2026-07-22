@@ -1,0 +1,132 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-15",
+ "version": "5.2.0",
+ "label": "PE-15",
+ "lifecycle": "active",
+ "title": "Water Damage Protection",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Protect the system from damage resulting from water leakage by providing master shutoff or isolation valves that are accessible, working properly, and known to key personnel."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The provision of water damage protection primarily applies to organizational facilities that contain concentrations of system resources, including data centers, server rooms, and mainframe computer rooms. Isolation valves can be employed in addition to or in lieu of master shutoff valves to shut off water supplies in specific areas of concern without affecting entire organizations."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-15_obj",
+     "label": "PE-15",
+     "children": [
+      {
+       "id": "pe-15_obj-1",
+       "label": "PE-15[01]",
+       "prose": {
+        "en": "the system is protected from damage resulting from water leakage by providing master shutoff or isolation valves;"
+       }
+      },
+      {
+       "id": "pe-15_obj-2",
+       "label": "PE-15[02]",
+       "prose": {
+        "en": "the master shutoff or isolation valves are accessible;"
+       }
+      },
+      {
+       "id": "pe-15_obj-3",
+       "label": "PE-15[03]",
+       "prose": {
+        "en": "the master shutoff or isolation valves are working properly;"
+       }
+      },
+      {
+       "id": "pe-15_obj-4",
+       "label": "PE-15[04]",
+       "prose": {
+        "en": "the master shutoff or isolation valves are known to key personnel."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-15-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing water damage protection"
+      },
+      {
+       "en": "facility housing the system"
+      },
+      {
+       "en": "master shutoff valves"
+      },
+      {
+       "en": "list of key personnel with knowledge of location and activation procedures for master shutoff valves for the plumbing system"
+      },
+      {
+       "en": "master shutoff valve documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-15-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for system environmental controls"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-15-Test",
+     "objects": [
+      {
+       "en": "Master water-shutoff valves"
+      },
+      {
+       "en": "organizational process for activating master water shutoff"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-10"
+  }
+ ]
+}

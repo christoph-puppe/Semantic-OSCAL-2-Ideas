@@ -1,0 +1,165 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-41",
+ "version": "5.2.0",
+ "label": "SC-41",
+ "lifecycle": "active",
+ "title": "Port and I/O Device Access",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "{param:sc-41_odp.02} disable or remove {param:sc-41_odp.01} on the following systems or system components: {param:sc-41_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "sc-41_odp.01",
+     "type": "string",
+     "label": "connection ports or input/output devices"
+    },
+    {
+     "name": "sc-41_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "physically"
+      },
+      {
+       "value": "logically"
+      }
+     ]
+    },
+    {
+     "name": "sc-41_odp.03",
+     "type": "string",
+     "label": "systems or system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Connection ports include Universal Serial Bus (USB), Thunderbolt, and Firewire (IEEE 1394). Input/output (I/O) devices include compact disc and digital versatile disc drives. Disabling or removing such connection ports and I/O devices helps prevent the exfiltration of information from systems and the introduction of malicious code from those ports or devices. Physically disabling or removing ports and/or devices is the stronger action."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-41_obj",
+     "label": "SC-41",
+     "prose": {
+      "en": "{param:sc-41_odp.01} are {param:sc-41_odp.02} disabled or removed on {param:sc-41_odp.03}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-41-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "access control policy and procedures"
+      },
+      {
+       "en": "procedures addressing port and input/output device access"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "systems or system components"
+      },
+      {
+       "en": "list of connection ports or input/output devices to be physically disabled or removed on systems or system components"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-41-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-41-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the disabling of connection ports or input/output devices"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-41_odp.01": {
+     "guidelines": [
+      {
+       "en": "connection ports or input/output devices to be disabled or removed are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-41_prm_2"
+     ]
+    },
+    "sc-41_odp.02": {
+     "alt-identifiers": [
+      "sc-41_prm_1"
+     ]
+    },
+    "sc-41_odp.03": {
+     "guidelines": [
+      {
+       "en": "systems or system components with connection ports or input/output devices to be disabled or removed are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-41_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-20"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-7"
+  }
+ ]
+}

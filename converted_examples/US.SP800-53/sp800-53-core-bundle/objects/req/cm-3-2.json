@@ -1,0 +1,145 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-3.2",
+ "version": "5.2.0",
+ "label": "CM-3(2)",
+ "lifecycle": "active",
+ "title": "Testing, Validation, and Documentation of Changes",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Test, validate, and document changes to the system before finalizing the implementation of the changes."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Changes to systems include modifications to hardware, software, or firmware components and configuration settings defined in CM-6 . Organizations ensure that testing does not interfere with system operations that support organizational mission and business functions. Individuals or groups conducting tests understand security and privacy policies and procedures, system security and privacy policies and procedures, and the health, safety, and environmental risks associated with specific facilities or processes. Operational systems may need to be taken offline, or replicated to the extent feasible, before testing can be conducted. If systems must be taken offline for testing, the tests are scheduled to occur during planned system outages whenever possible. If the testing cannot be conducted on operational systems, organizations employ compensating controls."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-3.2_obj",
+     "label": "CM-03(02)",
+     "children": [
+      {
+       "id": "cm-3.2_obj-1",
+       "label": "CM-03(02)[01]",
+       "prose": {
+        "en": "changes to the system are tested before finalizing the implementation of the changes;"
+       }
+      },
+      {
+       "id": "cm-3.2_obj-2",
+       "label": "CM-03(02)[02]",
+       "prose": {
+        "en": "changes to the system are validated before finalizing the implementation of the changes;"
+       }
+      },
+      {
+       "id": "cm-3.2_obj-3",
+       "label": "CM-03(02)[03]",
+       "prose": {
+        "en": "changes to the system are documented before finalizing the implementation of the changes."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-03(02)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "procedures addressing system configuration change control"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system architecture and configuration documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "test records"
+      },
+      {
+       "en": "validation records"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-03(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with configuration change control responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "members of change control board or similar"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-03(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for configuration change control"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing, testing, validating, and documenting system changes"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-3"
+  }
+ ]
+}

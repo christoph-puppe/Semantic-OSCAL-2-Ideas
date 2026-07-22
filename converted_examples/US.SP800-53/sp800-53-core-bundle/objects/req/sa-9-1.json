@@ -1,0 +1,181 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-9.1",
+ "version": "5.2.0",
+ "label": "SA-9(1)",
+ "lifecycle": "active",
+ "title": "Risk Assessments and Organizational Approvals",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Conduct an organizational assessment of risk prior to the acquisition or outsourcing of information security services; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Verify that the acquisition or outsourcing of dedicated information security services is approved by {param:sa-09.01_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sa-09.01_odp",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Information security services include the operation of security devices, such as firewalls or key management services as well as incident monitoring, analysis, and response. Risks assessed can include system, mission or business, security, privacy, or supply chain risks."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-9.1_obj",
+     "label": "SA-09(01)",
+     "children": [
+      {
+       "id": "sa-9.1_obj.a",
+       "label": "SA-09(01)(a)",
+       "prose": {
+        "en": "an organizational assessment of risk is conducted prior to the acquisition or outsourcing of information security services;"
+       }
+      },
+      {
+       "id": "sa-9.1_obj.b",
+       "label": "SA-09(01)(b)",
+       "prose": {
+        "en": "{param:sa-09.01_odp} approve the acquisition or outsourcing of dedicated information security services."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-09(01)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "supply chain risk management policy and procedures"
+      },
+      {
+       "en": "procedures addressing external system services"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "risk assessment reports"
+      },
+      {
+       "en": "approval records for the acquisition or outsourcing of dedicated security services"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-09(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with system security responsibilities"
+      },
+      {
+       "en": "external providers of system services"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-09(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for conducting a risk assessment prior to acquiring or outsourcing dedicated security services"
+      },
+      {
+       "en": "organizational processes for approving the outsourcing of dedicated security services"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing risk assessment"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing approval processes"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-09.01_odp": {
+     "guidelines": [
+      {
+       "en": "personnel or roles that approve the acquisition or outsourcing of dedicated information security services is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-9.1_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-8"
+  }
+ ]
+}

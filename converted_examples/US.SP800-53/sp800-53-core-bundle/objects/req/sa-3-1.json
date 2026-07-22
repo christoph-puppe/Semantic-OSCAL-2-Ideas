@@ -1,0 +1,133 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-3.1",
+ "version": "5.2.0",
+ "label": "SA-3(1)",
+ "lifecycle": "active",
+ "title": "Manage Preproduction Environment",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Protect system preproduction environments commensurate with risk throughout the system development life cycle for the system, system component, or system service."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The preproduction environment includes development, test, and integration environments. The program protection planning processes established by the Department of Defense are examples of managing the preproduction environment for defense contractors. Criticality analysis and the application of controls on developers also contribute to a more secure system development environment."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-3.1_obj",
+     "label": "SA-03(01)",
+     "prose": {
+      "en": "system pre-production environments are protected commensurate with risk throughout the system development life cycle for the system, system component, or system service."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-03(01)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing the integration of security and supply chain risk management into the system development life cycle process"
+      },
+      {
+       "en": "system development life cycle documentation"
+      },
+      {
+       "en": "procedures addressing program protection planning"
+      },
+      {
+       "en": "criticality analysis results"
+      },
+      {
+       "en": "security and supply chain risk management strategy/program documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-03(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with security and system life cycle development responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-03(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for defining and documenting the system development life cycle"
+      },
+      {
+       "en": "organizational processes for identifying system development life cycle roles and responsibilities"
+      },
+      {
+       "en": "organizational process for integrating security risk management into the system development life cycle"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the system development life cycle"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-4"
+  }
+ ]
+}

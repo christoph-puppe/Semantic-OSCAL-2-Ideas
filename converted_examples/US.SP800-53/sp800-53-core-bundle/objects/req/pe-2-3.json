@@ -1,0 +1,160 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-2.3",
+ "version": "5.2.0",
+ "label": "PE-2(3)",
+ "lifecycle": "active",
+ "title": "Restrict Unescorted Access",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Restrict unescorted access to the facility where the system resides to personnel with {param:pe-02.03_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "pe-02.03_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "security clearances for all information contained within the system"
+      },
+      {
+       "value": "formal access authorizations for all information contained within the system"
+      },
+      {
+       "value": "need for access to all information contained within the system"
+      },
+      {
+       "value": "{param:pe-02.03_odp.02} "
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "pe-02.03_odp.02",
+     "type": "string",
+     "label": "physical access authorizations"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Individuals without required security clearances, access approvals, or need to know are escorted by individuals with appropriate physical access authorizations to ensure that information is not exposed or otherwise compromised."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-2.3_obj",
+     "label": "PE-02(03)",
+     "prose": {
+      "en": "unescorted access to the facility where the system resides is restricted to personnel with {param:pe-02.03_odp.01}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-02(03)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing physical access authorizations"
+      },
+      {
+       "en": "authorized personnel access list"
+      },
+      {
+       "en": "security clearances"
+      },
+      {
+       "en": "access authorizations"
+      },
+      {
+       "en": "access credentials"
+      },
+      {
+       "en": "physical access control logs or records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-02(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with physical access authorization responsibilities"
+      },
+      {
+       "en": "organizational personnel with physical access to the system facility"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-02(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for physical access authorizations"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing physical access authorizations"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-02.03_odp.01": {
+     "alt-identifiers": [
+      "pe-2.3_prm_1"
+     ]
+    },
+    "pe-02.03_odp.02": {
+     "guidelines": [
+      {
+       "en": "physical access authorizations for unescorted access to the facility where the system resides are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-2.3_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-6"
+  }
+ ]
+}

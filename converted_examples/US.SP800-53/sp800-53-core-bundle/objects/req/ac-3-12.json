@@ -1,0 +1,163 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-3.12",
+ "version": "5.2.0",
+ "label": "AC-3(12)",
+ "lifecycle": "active",
+ "title": "Assert and Enforce Application Access",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Require applications to assert, as part of the installation process, the access needed to the following system applications and functions: {param:ac-03.12_odp};"
+   },
+   "parameters": [
+    {
+     "name": "ac-03.12_odp",
+     "type": "string",
+     "label": "system applications and functions"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide an enforcement mechanism to prevent unauthorized access; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Approve access changes after initial installation of the application."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Asserting and enforcing application access is intended to address applications that need to access existing system applications and functions, including user contacts, global positioning systems, cameras, keyboards, microphones, networks, phones, or other files."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-3.12_obj",
+     "label": "AC-03(12)",
+     "children": [
+      {
+       "id": "ac-3.12_obj.a",
+       "label": "AC-03(12)(a)",
+       "prose": {
+        "en": "as part of the installation process, applications are required to assert the access needed to the following system applications and functions: {param:ac-03.12_odp};"
+       }
+      },
+      {
+       "id": "ac-3.12_obj.b",
+       "label": "AC-03(12)(b)",
+       "prose": {
+        "en": "an enforcement mechanism to prevent unauthorized access is provided; "
+       }
+      },
+      {
+       "id": "ac-3.12_obj.c",
+       "label": "AC-03(12)(c)",
+       "prose": {
+        "en": "access changes after initial installation of the application are approved."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-03(12)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing access enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-03(12)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with access enforcement responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-03(12)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing access enforcement functions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-03.12_odp": {
+     "guidelines": [
+      {
+       "en": "system applications and functions requiring access assertion are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-3.12_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-7"
+  }
+ ]
+}

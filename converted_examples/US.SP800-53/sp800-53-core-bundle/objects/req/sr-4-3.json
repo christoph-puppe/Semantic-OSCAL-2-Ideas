@@ -1,0 +1,214 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SR-4.3",
+ "version": "5.2.0",
+ "label": "SR-4(3)",
+ "lifecycle": "active",
+ "title": "Validate as Genuine and Not Altered",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ the following controls to validate that the system or system component received is genuine and has not been altered: {param:sr-4.3_prm_1}."
+   },
+   "parameters": [
+    {
+     "name": "sr-4.3_prm_1",
+     "type": "string",
+     "label": "organization-defined controls"
+    },
+    {
+     "name": "sr-04.03_odp.01",
+     "type": "string",
+     "label": "controls"
+    },
+    {
+     "name": "sr-04.03_odp.02",
+     "type": "string",
+     "label": "controls"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "For many systems and system components, especially hardware, there are technical means to determine if the items are genuine or have been altered, including optical and nanotechnology tagging, physically unclonable functions, side-channel analysis, cryptographic hash verifications or digital signatures, and visible anti-tamper labels or stickers. Controls can also include monitoring for out of specification performance, which can be an indicator of tampering or counterfeits. Organizations may leverage supplier and contractor processes for validating that a system or component is genuine and has not been altered and for replacing a suspect system or component. Some indications of tampering may be visible and addressable before accepting delivery, such as inconsistent packaging, broken seals, and incorrect labels. When a system or system component is suspected of being altered or counterfeit, the supplier, contractor, or original equipment manufacturer may be able to replace the item or provide a forensic capability to determine the origin of the counterfeit or altered item. Organizations can provide training to personnel on how to identify suspicious system or component deliveries."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sr-4.3_obj",
+     "label": "SR-04(03)",
+     "children": [
+      {
+       "id": "sr-4.3_obj-1",
+       "label": "SR-04(03)[01]",
+       "prose": {
+        "en": "{param:sr-04.03_odp.01} are employed to validate that the system or system component received is genuine;"
+       }
+      },
+      {
+       "id": "sr-4.3_obj-2",
+       "label": "SR-04(03)[02]",
+       "prose": {
+        "en": "{param:sr-04.03_odp.02} are employed to validate that the system or system component received has not been altered."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SR-04(03)-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management policy and procedures"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "system and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing supply chain protection"
+      },
+      {
+       "en": "procedures addressing the security design principle of trusted components used in the specification, design, development, implementation, and modification of the system"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "procedures addressing the integration of information security requirements into the acquisition process"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "evidentiary documentation (including applicable configurations) indicating that the system or system component is genuine and has not been altered"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SR-04(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and services acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SR-04(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for defining and employing validation safeguards"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the definition and employment of validation safeguards"
+      },
+      {
+       "en": "mechanisms supporting the application of the security design principle of trusted components in system specification, design, development, implementation, and modification"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sr-4.3_prm_1": {
+     "aggregates": [
+      "sr-04.03_odp.01",
+      "sr-04.03_odp.02"
+     ]
+    },
+    "sr-04.03_odp.01": {
+     "guidelines": [
+      {
+       "en": "controls to validate that the system or system component received is genuine are defined;"
+      }
+     ]
+    },
+    "sr-04.03_odp.02": {
+     "guidelines": [
+      {
+       "en": "controls to validate that the system or system component received has not been altered are defined;"
+      }
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-11"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-12.10",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-12.10",
+    "mode": "renamed",
+    "label": "SA-12(10)",
+    "title": "Validate as Genuine and Not Altered"
+   }
+  ]
+ }
+}

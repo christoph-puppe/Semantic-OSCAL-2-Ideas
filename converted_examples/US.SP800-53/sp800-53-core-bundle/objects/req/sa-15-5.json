@@ -1,0 +1,159 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-15.5",
+ "version": "5.2.0",
+ "label": "SA-15(5)",
+ "lifecycle": "active",
+ "title": "Attack Surface Reduction",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to reduce attack surfaces to {param:sa-15.05_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sa-15.05_odp",
+     "type": "string",
+     "label": "thresholds"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Attack surface reduction is closely aligned with threat and vulnerability analyses and system architecture and design. Attack surface reduction is a means of reducing risk to organizations by giving attackers less opportunity to exploit weaknesses or deficiencies (i.e., potential vulnerabilities) within systems, system components, and system services. Attack surface reduction includes implementing the concept of layered defenses, applying the principles of least privilege and least functionality, applying secure software development practices, deprecating unsafe functions, reducing entry points available to unauthorized users, reducing the amount of code that executes, and eliminating application programming interfaces (APIs) that are vulnerable to attacks."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-15.5_obj",
+     "label": "SA-15(05)",
+     "prose": {
+      "en": "the developer of the system, system component, or system service is required to reduce attack surfaces to {param:sa-15.05_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-15(05)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing development process, standards, and tools"
+      },
+      {
+       "en": "procedures addressing attack surface reduction"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system or system service"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "network diagram"
+      },
+      {
+       "en": "system configuration settings and associated documentation establishing/enforcing organization-defined thresholds for reducing attack surfaces"
+      },
+      {
+       "en": "list of restricted ports, protocols, functions, and services"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-15(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel responsible for attack surface reduction thresholds"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-15(05)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for defining attack surface reduction thresholds"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-15.05_odp": {
+     "guidelines": [
+      {
+       "en": "thresholds to which attack surfaces are to be reduced are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-15.5_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-15"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-11"
+  }
+ ]
+}

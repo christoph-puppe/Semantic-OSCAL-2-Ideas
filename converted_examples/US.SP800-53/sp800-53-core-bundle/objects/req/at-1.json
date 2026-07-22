@@ -1,0 +1,491 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AT-1",
+ "version": "5.2.0",
+ "label": "AT-1",
+ "lifecycle": "active",
+ "title": "Policy and Procedures",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop, document, and disseminate to {param:at-1_prm_1}:"
+   },
+   "parameters": [
+    {
+     "name": "at-1_prm_1",
+     "type": "string",
+     "label": "organization-defined personnel or roles"
+    },
+    {
+     "name": "at-01_odp.01",
+     "type": "string",
+     "label": "personnel or roles"
+    },
+    {
+     "name": "at-01_odp.02",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  },
+  {
+   "id": "smt.a.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "{param:at-01_odp.03} awareness and training policy that:"
+   },
+   "parameters": [
+    {
+     "name": "at-01_odp.03",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "organization-level"
+      },
+      {
+       "value": "mission/business process-level"
+      },
+      {
+       "value": "system-level"
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  },
+  {
+   "id": "smt.a.1.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and"
+   }
+  },
+  {
+   "id": "smt.a.1.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and"
+   }
+  },
+  {
+   "id": "smt.a.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Procedures to facilitate the implementation of the awareness and training policy and the associated awareness and training controls;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Designate an {param:at-01_odp.04} to manage the development, documentation, and dissemination of the awareness and training policy and procedures; and"
+   },
+   "parameters": [
+    {
+     "name": "at-01_odp.04",
+     "type": "string",
+     "label": "official"
+    }
+   ]
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review and update the current awareness and training:"
+   }
+  },
+  {
+   "id": "smt.c.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Policy {param:at-01_odp.05} and following {param:at-01_odp.06} ; and"
+   },
+   "parameters": [
+    {
+     "name": "at-01_odp.05",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "at-01_odp.06",
+     "type": "string",
+     "label": "events"
+    }
+   ]
+  },
+  {
+   "id": "smt.c.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Procedures {param:at-01_odp.07} and following {param:at-01_odp.08}."
+   },
+   "parameters": [
+    {
+     "name": "at-01_odp.07",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "at-01_odp.08",
+     "type": "string",
+     "label": "events"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Awareness and training policy and procedures address the controls in the AT family that are implemented within systems and organizations. The risk management strategy is an important factor in establishing such policies and procedures. Policies and procedures contribute to security and privacy assurance. Therefore, it is important that security and privacy programs collaborate on the development of awareness and training policy and procedures. Security and privacy program policies and procedures at the organization level are preferable, in general, and may obviate the need for mission- or system-specific policies and procedures. The policy can be included as part of the general security and privacy policy or be represented by multiple policies that reflect the complex nature of organizations. Procedures can be established for security and privacy programs, for mission or business processes, and for systems, if needed. Procedures describe how the policies or controls are implemented and can be directed at the individual or role that is the object of the procedure. Procedures can be documented in system security and privacy plans or in one or more separate documents. Events that may precipitate an update to awareness and training policy and procedures include assessment or audit findings, security incidents or breaches, or changes in applicable laws, executive orders, directives, regulations, policies, standards, and guidelines. Simply restating controls does not constitute an organizational policy or procedure."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "at-1_obj",
+     "label": "AT-01",
+     "children": [
+      {
+       "id": "at-1_obj.a",
+       "label": "AT-01a.",
+       "children": [
+        {
+         "id": "at-1_obj.a-1",
+         "label": "AT-01a.[01]",
+         "prose": {
+          "en": "an awareness and training policy is developed and documented; "
+         }
+        },
+        {
+         "id": "at-1_obj.a-2",
+         "label": "AT-01a.[02]",
+         "prose": {
+          "en": "the awareness and training policy is disseminated to {param:at-01_odp.01};"
+         }
+        },
+        {
+         "id": "at-1_obj.a-3",
+         "label": "AT-01a.[03]",
+         "prose": {
+          "en": "awareness and training procedures to facilitate the implementation of the awareness and training policy and associated access controls are developed and documented;"
+         }
+        },
+        {
+         "id": "at-1_obj.a-4",
+         "label": "AT-01a.[04]",
+         "prose": {
+          "en": "the awareness and training procedures are disseminated to {param:at-01_odp.02}."
+         }
+        },
+        {
+         "id": "at-1_obj.a.1",
+         "label": "AT-01a.01",
+         "children": [
+          {
+           "id": "at-1_obj.a.1.a",
+           "label": "AT-01a.01(a)",
+           "children": [
+            {
+             "id": "at-1_obj.a.1.a-1",
+             "label": "AT-01a.01(a)[01]",
+             "prose": {
+              "en": "the {param:at-01_odp.03} awareness and training policy addresses purpose;"
+             }
+            },
+            {
+             "id": "at-1_obj.a.1.a-2",
+             "label": "AT-01a.01(a)[02]",
+             "prose": {
+              "en": "the {param:at-01_odp.03} awareness and training policy addresses scope;"
+             }
+            },
+            {
+             "id": "at-1_obj.a.1.a-3",
+             "label": "AT-01a.01(a)[03]",
+             "prose": {
+              "en": "the {param:at-01_odp.03} awareness and training policy addresses roles;"
+             }
+            },
+            {
+             "id": "at-1_obj.a.1.a-4",
+             "label": "AT-01a.01(a)[04]",
+             "prose": {
+              "en": "the {param:at-01_odp.03} awareness and training policy addresses responsibilities;"
+             }
+            },
+            {
+             "id": "at-1_obj.a.1.a-5",
+             "label": "AT-01a.01(a)[05]",
+             "prose": {
+              "en": "the {param:at-01_odp.03} awareness and training policy addresses management commitment;"
+             }
+            },
+            {
+             "id": "at-1_obj.a.1.a-6",
+             "label": "AT-01a.01(a)[06]",
+             "prose": {
+              "en": "the {param:at-01_odp.03} awareness and training policy addresses coordination among organizational entities;"
+             }
+            },
+            {
+             "id": "at-1_obj.a.1.a-7",
+             "label": "AT-01a.01(a)[07]",
+             "prose": {
+              "en": "the {param:at-01_odp.03} awareness and training policy addresses compliance; and"
+             }
+            }
+           ]
+          },
+          {
+           "id": "at-1_obj.a.1.b",
+           "label": "AT-01a.01(b)",
+           "prose": {
+            "en": "the {param:at-01_odp.03} awareness and training policy is consistent with applicable laws, Executive Orders, directives, regulations, policies, standards, and guidelines; and"
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "at-1_obj.b",
+       "label": "AT-01b.",
+       "prose": {
+        "en": "the {param:at-01_odp.04} is designated to manage the development, documentation, and dissemination of the awareness and training policy and procedures;"
+       }
+      },
+      {
+       "id": "at-1_obj.c",
+       "label": "AT-01c.",
+       "children": [
+        {
+         "id": "at-1_obj.c.1",
+         "label": "AT-01c.01",
+         "children": [
+          {
+           "id": "at-1_obj.c.1-1",
+           "label": "AT-01c.01[01]",
+           "prose": {
+            "en": "the current awareness and training policy is reviewed and updated {param:at-01_odp.05}; "
+           }
+          },
+          {
+           "id": "at-1_obj.c.1-2",
+           "label": "AT-01c.01[02]",
+           "prose": {
+            "en": "the current awareness and training policy is reviewed and updated following {param:at-01_odp.06};"
+           }
+          }
+         ]
+        },
+        {
+         "id": "at-1_obj.c.2",
+         "label": "AT-01c.02",
+         "children": [
+          {
+           "id": "at-1_obj.c.2-1",
+           "label": "AT-01c.02[01]",
+           "prose": {
+            "en": "the current awareness and training procedures are reviewed and updated {param:at-01_odp.07};"
+           }
+          },
+          {
+           "id": "at-1_obj.c.2-2",
+           "label": "AT-01c.02[02]",
+           "prose": {
+            "en": "the current awareness and training procedures are reviewed and updated following {param:at-01_odp.08}."
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AT-01-Examine",
+     "objects": [
+      {
+       "en": "System security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "awareness and training policy and procedures"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AT-01-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with awareness and training responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "at-1_prm_1": {
+     "aggregates": [
+      "at-01_odp.01",
+      "at-01_odp.02"
+     ]
+    },
+    "at-01_odp.01": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to whom the awareness and training policy is to be disseminated is/are defined;"
+      }
+     ]
+    },
+    "at-01_odp.02": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to whom the awareness and training procedures are to be disseminated is/are defined;"
+      }
+     ]
+    },
+    "at-01_odp.03": {
+     "alt-identifiers": [
+      "at-1_prm_2"
+     ]
+    },
+    "at-01_odp.04": {
+     "guidelines": [
+      {
+       "en": "an official to manage the awareness and training policy and procedures is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "at-1_prm_3"
+     ]
+    },
+    "at-01_odp.05": {
+     "guidelines": [
+      {
+       "en": "the frequency at which the current awareness and training policy is reviewed and updated is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "at-1_prm_4"
+     ]
+    },
+    "at-01_odp.06": {
+     "guidelines": [
+      {
+       "en": "events that would require the current awareness and training policy to be reviewed and updated are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "at-1_prm_5"
+     ]
+    },
+    "at-01_odp.07": {
+     "guidelines": [
+      {
+       "en": "the frequency at which the current awareness and training procedures are reviewed and updated is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "at-1_prm_6"
+     ]
+    },
+    "at-01_odp.08": {
+     "guidelines": [
+      {
+       "en": "events that would require procedures to be reviewed and updated are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "at-1_prm_7"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-12r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-30r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-39"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-50"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-100"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  }
+ ]
+}

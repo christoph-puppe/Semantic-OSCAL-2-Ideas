@@ -1,0 +1,107 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-2.1",
+ "version": "5.2.0",
+ "label": "CP-2(1)",
+ "lifecycle": "active",
+ "title": "Coordinate with Related Plans",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Coordinate contingency plan development with organizational elements responsible for related plans."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Plans that are related to contingency plans include Business Continuity Plans, Disaster Recovery Plans, Critical Infrastructure Plans, Continuity of Operations Plans, Crisis Communications Plans, Insider Threat Implementation Plans, Data Breach Response Plans, Cyber Incident Response Plans, Breach Response Plans, and Occupant Emergency Plans."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-2.1_obj",
+     "label": "CP-02(01)",
+     "prose": {
+      "en": "contingency plan development is coordinated with organizational elements responsible for related plans."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-02(01)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing contingency operations for the system"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "business contingency plans"
+      },
+      {
+       "en": "disaster recovery plans"
+      },
+      {
+       "en": "continuity of operations plans"
+      },
+      {
+       "en": "crisis communications plans"
+      },
+      {
+       "en": "critical infrastructure plans"
+      },
+      {
+       "en": "cyber incident response plan"
+      },
+      {
+       "en": "insider threat implementation plans"
+      },
+      {
+       "en": "occupant emergency plans"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-02(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "personnel with responsibility for related plans"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  }
+ ]
+}

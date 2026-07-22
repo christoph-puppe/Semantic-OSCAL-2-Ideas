@@ -1,0 +1,104 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CA-7.1",
+ "version": "5.2.0",
+ "label": "CA-7(1)",
+ "lifecycle": "active",
+ "title": "Independent Assessment",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ independent assessors or assessment teams to monitor the controls in the system on an ongoing basis."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations maximize the value of control assessments by requiring that assessments be conducted by assessors with appropriate levels of independence. The level of required independence is based on organizational continuous monitoring strategies. Assessor independence provides a degree of impartiality to the monitoring process. To achieve such impartiality, assessors do not create a mutual or conflicting interest with the organizations where the assessments are being conducted, assess their own work, act as management or employees of the organizations they are serving, or place themselves in advocacy positions for the organizations acquiring their services."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ca-7.1_obj",
+     "label": "CA-07(01)",
+     "prose": {
+      "en": "independent assessors or assessment teams are employed to monitor the controls in the system on an ongoing basis."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CA-07(01)-Examine",
+     "objects": [
+      {
+       "en": "Assessment, authorization, and monitoring policy"
+      },
+      {
+       "en": "organizational continuous monitoring strategy"
+      },
+      {
+       "en": "system-level continuous monitoring strategy"
+      },
+      {
+       "en": "procedures addressing continuous monitoring of system controls"
+      },
+      {
+       "en": "control assessment report"
+      },
+      {
+       "en": "plan of action and milestones"
+      },
+      {
+       "en": "system monitoring records"
+      },
+      {
+       "en": "impact analyses"
+      },
+      {
+       "en": "status reports"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CA-07(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with continuous monitoring responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  }
+ ]
+}

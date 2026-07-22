@@ -1,0 +1,140 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-8.5",
+ "version": "5.2.0",
+ "label": "SC-8(5)",
+ "lifecycle": "active",
+ "title": "Protected Distribution System",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement {param:sc-08.05_odp.01} to {param:sc-08.05_odp.02} during transmission."
+   },
+   "parameters": [
+    {
+     "name": "sc-08.05_odp.01",
+     "type": "string",
+     "label": "protected distribution system"
+    },
+    {
+     "name": "sc-08.05_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "prevent unauthorized disclosure of information"
+      },
+      {
+       "value": "detect changes to information"
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The purpose of a protected distribution system is to deter, detect, and/or make difficult physical access to the communication lines that carry national security information."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-8.5_obj",
+     "label": "SC-08(05)",
+     "prose": {
+      "en": "the {param:sc-08.05_odp.01} is implemented to {param:sc-08.05_odp.02} during transmission."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-08(05)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing transmission confidentiality and integrity"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-08(05)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-08(05)-Test",
+     "objects": [
+      {
+       "en": "Cryptographic mechanisms supporting and/or implementing concealment or randomization of communication patterns"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing protected distribution systems"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-08.05_odp.01": {
+     "guidelines": [
+      {
+       "en": "the protected distribution system is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-8.5_prm_1"
+     ]
+    },
+    "sc-08.05_odp.02": {
+     "alt-identifiers": [
+      "sc-8.5_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-8"
+  }
+ ]
+}

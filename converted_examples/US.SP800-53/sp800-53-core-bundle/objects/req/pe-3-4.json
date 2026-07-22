@@ -1,0 +1,113 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-3.4",
+ "version": "5.2.0",
+ "label": "PE-3(4)",
+ "lifecycle": "active",
+ "title": "Lockable Casings",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Use lockable physical casings to protect {param:pe-03.04_odp} from unauthorized physical access."
+   },
+   "parameters": [
+    {
+     "name": "pe-03.04_odp",
+     "type": "string",
+     "label": "system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The greatest risk from the use of portable devices—such as smart phones, tablets, and notebook computers—is theft. Organizations can employ lockable, physical casings to reduce or eliminate the risk of equipment theft. Such casings come in a variety of sizes, from units that protect a single notebook computer to full cabinets that can protect multiple servers, computers, and peripherals. Lockable physical casings can be used in conjunction with cable locks or lockdown plates to prevent the theft of the locked casing containing the computer equipment."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-3.4_obj",
+     "label": "PE-03(04)",
+     "prose": {
+      "en": "lockable physical casings are used to protect {param:pe-03.04_odp} from unauthorized access."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-03(04)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing physical access control"
+      },
+      {
+       "en": "list of system components requiring protection through lockable physical casings"
+      },
+      {
+       "en": "lockable physical casings"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-03(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with physical access control responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-03(04)-Test",
+     "objects": [
+      {
+       "en": "Lockable physical casings"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-03.04_odp": {
+     "guidelines": [
+      {
+       "en": "system components to be protected from unauthorized physical access are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-3.4_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-3"
+  }
+ ]
+}

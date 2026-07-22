@@ -1,0 +1,382 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-15",
+ "version": "5.2.0",
+ "label": "SA-15",
+ "lifecycle": "active",
+ "title": "Development Process, Standards, and Tools",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to follow a documented development process that:"
+   },
+   "parameters": [
+    {
+     "name": "sa-15_odp.02",
+     "type": "string",
+     "label": "security requirements"
+    },
+    {
+     "name": "sa-15_odp.03",
+     "type": "string",
+     "label": "privacy requirements"
+    }
+   ]
+  },
+  {
+   "id": "smt.a.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Explicitly addresses security and privacy requirements;"
+   }
+  },
+  {
+   "id": "smt.a.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identifies the standards and tools used in the development process;"
+   }
+  },
+  {
+   "id": "smt.a.3",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Documents the specific tool options and tool configurations used in the development process; and"
+   }
+  },
+  {
+   "id": "smt.a.4",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Documents, manages, and ensures the integrity of changes to the process and/or tools used in development; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review the development process, standards, tools, tool options, and tool configurations {param:sa-15_odp.01} to determine if the process, standards, tools, tool options and tool configurations selected and employed can satisfy the following security and privacy requirements: {param:sa-15_prm_2}."
+   },
+   "parameters": [
+    {
+     "name": "sa-15_odp.01",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "sa-15_prm_2",
+     "type": "string",
+     "label": "organization-defined security and privacy requirements"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Development tools include programming languages and computer-aided design systems. Reviews of development processes include the use of maturity models to determine the potential effectiveness of such processes. Maintaining the integrity of changes to tools and processes facilitates effective supply chain risk assessment and mitigation. Such integrity requires configuration control throughout the system development life cycle to track authorized changes and prevent unauthorized changes."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-15_obj",
+     "label": "SA-15",
+     "children": [
+      {
+       "id": "sa-15_obj.a",
+       "label": "SA-15a.",
+       "children": [
+        {
+         "id": "sa-15_obj.a.1",
+         "label": "SA-15a.01",
+         "children": [
+          {
+           "id": "sa-15_obj.a.1-1",
+           "label": "SA-15a.01[01]",
+           "prose": {
+            "en": "the developer of the system, system component, or system service is required to follow a documented development process that explicitly addresses security requirements;"
+           }
+          },
+          {
+           "id": "sa-15_obj.a.1-2",
+           "label": "SA-15a.01[02]",
+           "prose": {
+            "en": "the developer of the system, system component, or system service is required to follow a documented development process that explicitly addresses privacy requirements;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "sa-15_obj.a.2",
+         "label": "SA-15a.02",
+         "children": [
+          {
+           "id": "sa-15_obj.a.2-1",
+           "label": "SA-15a.02[01]",
+           "prose": {
+            "en": "the developer of the system, system component, or system service is required to follow a documented development process that identifies the standards used in the development process;"
+           }
+          },
+          {
+           "id": "sa-15_obj.a.2-2",
+           "label": "SA-15a.02[02]",
+           "prose": {
+            "en": "the developer of the system, system component, or system service is required to follow a documented development process that identifies the tools used in the development process;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "sa-15_obj.a.3",
+         "label": "SA-15a.03",
+         "children": [
+          {
+           "id": "sa-15_obj.a.3-1",
+           "label": "SA-15a.03[01]",
+           "prose": {
+            "en": "the developer of the system, system component, or system service is required to follow a documented development process that documents the specific tool used in the development process;"
+           }
+          },
+          {
+           "id": "sa-15_obj.a.3-2",
+           "label": "SA-15a.03[02]",
+           "prose": {
+            "en": "the developer of the system, system component, or system service is required to follow a documented development process that documents the specific tool configurations used in the development process;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "sa-15_obj.a.4",
+         "label": "SA-15a.04",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to follow a documented development process that documents, manages, and ensures the integrity of changes to the process and/or tools used in development;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-15_obj.b",
+       "label": "SA-15b.",
+       "children": [
+        {
+         "id": "sa-15_obj.b-1",
+         "label": "SA-15b.[01]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to follow a documented development process in which the development process, standards, tools, tool options, and tool configurations are reviewed {param:sa-15_odp.01} to determine that the process, standards, tools, tool options, and tool configurations selected and employed satisfy {param:sa-15_odp.02};"
+         }
+        },
+        {
+         "id": "sa-15_obj.b-2",
+         "label": "SA-15b.[02]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to follow a documented development process in which the development process, standards, tools, tool options, and tool configurations are reviewed {param:sa-15_odp.01} to determine that the process, standards, tools, tool options, and tool configurations selected and employed satisfy {param:sa-15_odp.03}."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-15-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "procedures addressing development process, standards, and tools"
+      },
+      {
+       "en": "procedures addressing the integration of security and privacy requirements during the development process"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "critical component inventory documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "system developer documentation listing tool options/configuration guides"
+      },
+      {
+       "en": "configuration management policy"
+      },
+      {
+       "en": "configuration management records"
+      },
+      {
+       "en": "documentation of development process reviews using maturity models"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "configuration control records"
+      },
+      {
+       "en": "documented reviews of the development process, standards, tools, and tool options/configurations"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-15-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-15_prm_2": {
+     "aggregates": [
+      "sa-15_odp.02",
+      "sa-15_odp.03"
+     ]
+    },
+    "sa-15_odp.01": {
+     "guidelines": [
+      {
+       "en": "frequency at which to review the development process, standards, tools, tool options, and tool configurations is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-15_prm_1"
+     ]
+    },
+    "sa-15_odp.02": {
+     "guidelines": [
+      {
+       "en": "security requirements to be satisfied by the process, standards, tools, tool options, and tool configurations are defined;"
+      }
+     ]
+    },
+    "sa-15_odp.03": {
+     "guidelines": [
+      {
+       "en": "privacy requirements to be satisfied by the process, standards, tools, tool options, and tool configurations are defined;"
+      }
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.8179"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-9"
+  }
+ ]
+}

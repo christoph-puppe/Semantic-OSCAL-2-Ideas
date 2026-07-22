@@ -1,0 +1,147 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-4.11",
+ "version": "5.2.0",
+ "label": "SA-4(11)",
+ "lifecycle": "active",
+ "title": "System of Records",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Include {param:sa-04.11_odp} in the acquisition contract for the operation of a system of records on behalf of an organization to accomplish an organizational mission or function."
+   },
+   "parameters": [
+    {
+     "name": "sa-04.11_odp",
+     "type": "string",
+     "label": "Privacy Act requirements"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "When, by contract, an organization provides for the operation of a system of records to accomplish an organizational mission or function, the organization, consistent with its authority, causes the requirements of the PRIVACT to be applied to the system of records."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-4.11_obj",
+     "label": "SA-04(11)",
+     "prose": {
+      "en": "{param:sa-04.11_odp} are defined in the acquisition contract for the operation of a system of records on behalf of an organization to accomplish an organizational mission or function."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-04(11)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "procedures addressing the integration of Privacy Act requirements into systems of records operated by external organizations"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "privacy program plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-04(11)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-04(11)-Test",
+     "objects": [
+      {
+       "en": "Contract management processes to verify Privacy Act requirements are defined for the operation of a system of records"
+      },
+      {
+       "en": "vendor processes for demonstrating incorporation of Privacy Act requirements in its operation of a system of records"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-04.11_odp": {
+     "guidelines": [
+      {
+       "en": "Privacy Act requirements for the operation of a system of records are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-4.11_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-6"
+  }
+ ]
+}

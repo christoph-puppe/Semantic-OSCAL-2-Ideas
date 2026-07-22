@@ -1,0 +1,131 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-16.3",
+ "version": "5.2.0",
+ "label": "SC-16(3)",
+ "lifecycle": "active",
+ "title": "Cryptographic Binding",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement {param:sc-16.03_odp} to bind security and privacy attributes to transmitted information."
+   },
+   "parameters": [
+    {
+     "name": "sc-16.03_odp",
+     "type": "string",
+     "label": "mechanisms or techniques"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Cryptographic mechanisms and techniques can provide strong security and privacy attribute binding to transmitted information to help ensure the integrity of such information."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-16.3_obj",
+     "label": "SC-16(03)",
+     "prose": {
+      "en": "{param:sc-16.03_odp} are implemented to bind security and privacy attributes to transmitted information."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-16(03)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing the transmission of security and privacy attributes"
+      },
+      {
+       "en": "access control policy and procedures"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-16(03)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-16(03)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing anti-spoofing mechanisms"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-16.03_odp": {
+     "guidelines": [
+      {
+       "en": "mechanisms or techniques to bind security and privacy attributes to transmitted information are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-16.3_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  }
+ ]
+}

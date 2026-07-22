@@ -1,0 +1,186 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-11",
+ "version": "5.2.0",
+ "label": "SC-11",
+ "lifecycle": "active",
+ "title": "Trusted Path",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide a {param:sc-11_odp.01} isolated trusted communications path for communications between the user and the trusted components of the system; and"
+   },
+   "parameters": [
+    {
+     "name": "sc-11_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "physically"
+      },
+      {
+       "value": "logically"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Permit users to invoke the trusted communications path for communications between the user and the following security functions of the system, including at a minimum, authentication and re-authentication: {param:sc-11_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "sc-11_odp.02",
+     "type": "string",
+     "label": "security functions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Trusted paths are mechanisms by which users can communicate (using input devices such as keyboards) directly with the security functions of systems with the requisite assurance to support security policies. Trusted path mechanisms can only be activated by users or the security functions of organizational systems. User responses that occur via trusted paths are protected from modification by and disclosure to untrusted applications. Organizations employ trusted paths for trustworthy, high-assurance connections between security functions of systems and users, including during system logons. The original implementations of trusted paths employed an out-of-band signal to initiate the path, such as using the <BREAK> key, which does not transmit characters that can be spoofed. In later implementations, a key combination that could not be hijacked was used (e.g., the <CTRL> + <ALT> + <DEL> keys). Such key combinations, however, are platform-specific and may not provide a trusted path implementation in every case. The enforcement of trusted communications paths is provided by a specific implementation that meets the reference monitor concept."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-11_obj",
+     "label": "SC-11",
+     "children": [
+      {
+       "id": "sc-11_obj.a",
+       "label": "SC-11a.",
+       "prose": {
+        "en": "a {param:sc-11_odp.01} isolated trusted communication path is provided for communications between the user and the trusted components of the system;"
+       }
+      },
+      {
+       "id": "sc-11_obj.b",
+       "label": "SC-11b.",
+       "prose": {
+        "en": "users are permitted to invoke the trusted communication path for communications between the user and the {param:sc-11_odp.02} of the system, including authentication and re-authentication, at a minimum."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-11-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing trusted communication paths"
+      },
+      {
+       "en": "security plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "assessment results from independent, testing organizations"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-11-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-11-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing trusted communication paths"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-11_odp.01": {
+     "alt-identifiers": [
+      "sc-11_prm_1"
+     ]
+    },
+    "sc-11_odp.02": {
+     "guidelines": [
+      {
+       "en": "security functions of the system are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-11_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-25"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-23"
+  }
+ ]
+}

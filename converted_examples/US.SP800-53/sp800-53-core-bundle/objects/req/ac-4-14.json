@@ -1,0 +1,170 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-4.14",
+ "version": "5.2.0",
+ "label": "AC-4(14)",
+ "lifecycle": "active",
+ "title": "Security or Privacy Policy Filter Constraints",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "When transferring information between different security domains, implement {param:ac-4.14_prm_1} requiring fully enumerated formats that restrict data structure and content."
+   },
+   "parameters": [
+    {
+     "name": "ac-4.14_prm_1",
+     "type": "string",
+     "label": "organization-defined security or privacy policy filters"
+    },
+    {
+     "name": "ac-04.14_odp.01",
+     "type": "string",
+     "label": "security policy filters"
+    },
+    {
+     "name": "ac-04.14_odp.02",
+     "type": "string",
+     "label": "privacy policy filters"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Data structure and content restrictions reduce the range of potential malicious or unsanctioned content in cross-domain transactions. Security or privacy policy filters that restrict data structures include restricting file sizes and field lengths. Data content policy filters include encoding formats for character sets, restricting character data fields to only contain alpha-numeric characters, prohibiting special characters, and validating schema structures."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-4.14_obj",
+     "label": "AC-04(14)",
+     "children": [
+      {
+       "id": "ac-4.14_obj-1",
+       "label": "AC-04(14)[01]",
+       "prose": {
+        "en": "when transferring information between different security domains, implemented {param:ac-04.14_odp.01} require fully enumerated formats that restrict data structure and content;"
+       }
+      },
+      {
+       "id": "ac-4.14_obj-2",
+       "label": "AC-04(14)[02]",
+       "prose": {
+        "en": "when transferring information between different security domains, implemented {param:ac-04.14_odp.02} require fully enumerated formats that restrict data structure and content."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-04(14)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "information flow control policies"
+      },
+      {
+       "en": "procedures addressing information flow enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of security and privacy policy filters"
+      },
+      {
+       "en": "list of data structure policy filters"
+      },
+      {
+       "en": "list of data content policy filters"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-04(14)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-04(14)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing information flow enforcement policy"
+      },
+      {
+       "en": "security and privacy policy filters"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-4.14_prm_1": {
+     "aggregates": [
+      "ac-04.14_odp.01",
+      "ac-04.14_odp.02"
+     ]
+    },
+    "ac-04.14_odp.01": {
+     "guidelines": [
+      {
+       "en": "security policy filters to be implemented that require fully enumerated formats restricting data structure and content have been defined;"
+      }
+     ]
+    },
+    "ac-04.14_odp.02": {
+     "guidelines": [
+      {
+       "en": "privacy policy filters to be implemented that require fully enumerated formats restricting data structure and content are defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  }
+ ]
+}

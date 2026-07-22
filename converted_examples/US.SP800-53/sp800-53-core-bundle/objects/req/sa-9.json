@@ -1,0 +1,303 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-9",
+ "version": "5.2.0",
+ "label": "SA-9",
+ "lifecycle": "active",
+ "title": "External System Services",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require that providers of external system services comply with organizational security and privacy requirements and employ the following controls: {param:sa-09_odp.01};"
+   },
+   "parameters": [
+    {
+     "name": "sa-09_odp.01",
+     "type": "string",
+     "label": "controls"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Define and document organizational oversight and user roles and responsibilities with regard to external system services; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ the following processes, methods, and techniques to monitor control compliance by external service providers on an ongoing basis: {param:sa-09_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "sa-09_odp.02",
+     "type": "string",
+     "label": "processes, methods, and techniques"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "External system services are provided by an external provider, and the organization has no direct control over the implementation of the required controls or the assessment of control effectiveness. Organizations establish relationships with external service providers in a variety of ways, including through business partnerships, contracts, interagency agreements, lines of business arrangements, licensing agreements, joint ventures, and supply chain exchanges. The responsibility for managing risks from the use of external system services remains with authorizing officials. For services external to organizations, a chain of trust requires that organizations establish and retain a certain level of confidence that each provider in the consumer-provider relationship provides adequate protection for the services rendered. The extent and nature of this chain of trust vary based on relationships between organizations and the external providers. Organizations document the basis for the trust relationships so that the relationships can be monitored. External system services documentation includes government, service providers, end user security roles and responsibilities, and service-level agreements. Service-level agreements define the expectations of performance for implemented controls, describe measurable outcomes, and identify remedies and response requirements for identified instances of noncompliance."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-9_obj",
+     "label": "SA-09",
+     "children": [
+      {
+       "id": "sa-9_obj.a",
+       "label": "SA-09a.",
+       "children": [
+        {
+         "id": "sa-9_obj.a-1",
+         "label": "SA-09a.[01]",
+         "prose": {
+          "en": "providers of external system services comply with organizational security requirements;"
+         }
+        },
+        {
+         "id": "sa-9_obj.a-2",
+         "label": "SA-09a.[02]",
+         "prose": {
+          "en": "providers of external system services comply with organizational privacy requirements;"
+         }
+        },
+        {
+         "id": "sa-9_obj.a-3",
+         "label": "SA-09a.[03]",
+         "prose": {
+          "en": "providers of external system services employ {param:sa-09_odp.01};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-9_obj.b",
+       "label": "SA-09b.",
+       "children": [
+        {
+         "id": "sa-9_obj.b-1",
+         "label": "SA-09b.[01]",
+         "prose": {
+          "en": "organizational oversight with regard to external system services are defined and documented;"
+         }
+        },
+        {
+         "id": "sa-9_obj.b-2",
+         "label": "SA-09b.[02]",
+         "prose": {
+          "en": "user roles and responsibilities with regard to external system services are defined and documented;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-9_obj.c",
+       "label": "SA-09c.",
+       "prose": {
+        "en": "{param:sa-09_odp.02} are employed to monitor control compliance by external service providers on an ongoing basis."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-09-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "procedures addressing methods and techniques for monitoring control compliance by external service providers of system services"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "contracts"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "interagency agreements"
+      },
+      {
+       "en": "licensing agreements"
+      },
+      {
+       "en": "list of organizational security and privacy requirements for external provider services"
+      },
+      {
+       "en": "control assessment results or reports from external providers of system services"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-09-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with acquisition responsibilities"
+      },
+      {
+       "en": "external providers of system services"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-09-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for monitoring security and privacy control compliance by external service providers on an ongoing basis"
+      },
+      {
+       "en": "mechanisms for monitoring security and privacy control compliance by external service providers on an ongoing basis"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-09_odp.01": {
+     "guidelines": [
+      {
+       "en": "controls to be employed by external system service providers are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-9_prm_1"
+     ]
+    },
+    "sa-09_odp.02": {
+     "guidelines": [
+      {
+       "en": "processes, methods, and techniques employed to monitor control compliance by external service providers are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-9_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-35"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-161"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-171r2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-20"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-5"
+  }
+ ]
+}

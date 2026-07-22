@@ -1,0 +1,202 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-19",
+ "version": "5.2.0",
+ "label": "SI-19",
+ "lifecycle": "active",
+ "title": "De-identification",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Remove the following elements of personally identifiable information from datasets: {param:si-19_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "si-19_odp.01",
+     "type": "string",
+     "label": "elements"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Evaluate {param:si-19_odp.02} for effectiveness of de-identification."
+   },
+   "parameters": [
+    {
+     "name": "si-19_odp.02",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "De-identification is the general term for the process of removing the association between a set of identifying data and the data subject. Many datasets contain information about individuals that can be used to distinguish or trace an individual’s identity, such as name, social security number, date and place of birth, mother’s maiden name, or biometric records. Datasets may also contain other information that is linked or linkable to an individual, such as medical, educational, financial, and employment information. Personally identifiable information is removed from datasets by trained individuals when such information is not (or no longer) necessary to satisfy the requirements envisioned for the data. For example, if the dataset is only used to produce aggregate statistics, the identifiers that are not needed for producing those statistics are removed. Removing identifiers improves privacy protection since information that is removed cannot be inadvertently disclosed or improperly used. Organizations may be subject to specific de-identification definitions or methods under applicable laws, regulations, or policies. Re-identification is a residual risk with de-identified data. Re-identification attacks can vary, including combining new datasets or other improvements in data analytics. Maintaining awareness of potential attacks and evaluating for the effectiveness of the de-identification over time support the management of this residual risk."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-19_obj",
+     "label": "SI-19",
+     "children": [
+      {
+       "id": "si-19_obj.a",
+       "label": "SI-19a.",
+       "prose": {
+        "en": "{param:si-19_odp.01} are removed from datasets;"
+       }
+      },
+      {
+       "id": "si-19_obj.b",
+       "label": "SI-19b.",
+       "prose": {
+        "en": "the effectiveness of de-identification is evaluated {param:si-19_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-19-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "de-identification procedures"
+      },
+      {
+       "en": "system configuration"
+      },
+      {
+       "en": "datasets with personally identifiable information removed"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-19-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for identifying unnecessary identifiers"
+      },
+      {
+       "en": "organizational personnel responsible for removing personally identifiable information from datasets"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-19-Test",
+     "objects": [
+      {
+       "en": "Automated mechanisms supporting and/or implementing the removal of personally identifiable information elements"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-19_odp.01": {
+     "guidelines": [
+      {
+       "en": "elements of personally identifiable information to be removed from datasets are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-19_prm_1"
+     ],
+     "alt-label": "elements of personally identifiable information"
+    },
+    "si-19_odp.02": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to evaluate the effectiveness of de-identification is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-19_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://csrc.nist.gov/publications/detail/sp/800-188/draft"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-22"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-23"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-24"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  }
+ ]
+}

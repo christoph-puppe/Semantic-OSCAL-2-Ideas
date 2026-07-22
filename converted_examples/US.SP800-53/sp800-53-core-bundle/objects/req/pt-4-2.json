@@ -1,0 +1,150 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PT-4.2",
+ "version": "5.2.0",
+ "label": "PT-4(2)",
+ "lifecycle": "active",
+ "title": "Just-in-time Consent",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Present {param:pt-04.02_odp.01} to individuals at {param:pt-04.02_odp.02} and in conjunction with {param:pt-04.02_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "pt-04.02_odp.01",
+     "type": "string",
+     "label": "consent mechanisms"
+    },
+    {
+     "name": "pt-04.02_odp.02",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "pt-04.02_odp.03",
+     "type": "string",
+     "label": "personally identifiable information processing"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Just-in-time consent enables individuals to participate in how their personally identifiable information is being processed at the time or in conjunction with specific types of data processing when such participation may be most useful to the individual. Individual assumptions about how personally identifiable information is being processed might not be accurate or reliable if time has passed since the individual last gave consent or the type of processing creates significant privacy risk. Organizations use discretion to determine when to use just-in-time consent and may use supporting information on demographics, focus groups, or surveys to learn more about individuals’ privacy interests and concerns."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pt-4.2_obj",
+     "label": "PT-04(02)",
+     "prose": {
+      "en": "{param:pt-04.02_odp.01} are presented to individuals {param:pt-04.02_odp.02} and in conjunction with {param:pt-04.02_odp.03}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PT-04(02)-Examine",
+     "objects": [
+      {
+       "en": "Personally identifiable information processing and transparency policy and procedures"
+      },
+      {
+       "en": "consent policies and procedures"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PT-04(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personally identifiable information processing and transparency responsibilities"
+      },
+      {
+       "en": "organizational personnel with user interface or user experience responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PT-04(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for the collection of personally identifiable information"
+      },
+      {
+       "en": "mechanisms for obtaining just-in-time consent from users for the processing of their personally identifiable information"
+      },
+      {
+       "en": "mechanisms implementing just-in-time consent"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pt-04.02_odp.01": {
+     "guidelines": [
+      {
+       "en": "consent mechanisms to be presented to individuals are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pt-4.2_prm_1"
+     ]
+    },
+    "pt-04.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to present consent mechanisms to individuals is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pt-4.2_prm_2"
+     ]
+    },
+    "pt-04.02_odp.03": {
+     "guidelines": [
+      {
+       "en": "personally identifiable information processing to be presented in conjunction with organization-defined consent mechanisms is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pt-4.2_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-2"
+  }
+ ]
+}

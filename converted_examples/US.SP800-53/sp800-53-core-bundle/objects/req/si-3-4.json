@@ -1,0 +1,121 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-3.4",
+ "version": "5.2.0",
+ "label": "SI-3(4)",
+ "lifecycle": "active",
+ "title": "Updates Only by Privileged Users",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Update malicious code protection mechanisms only when directed by a privileged user."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Protection mechanisms for malicious code are typically categorized as security-related software and, as such, are only updated by organizational personnel with appropriate access privileges."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-3.4_obj",
+     "label": "SI-03(04)",
+     "prose": {
+      "en": "malicious code protection mechanisms are updated only when directed by a privileged user."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-03(04)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing malicious code protection"
+      },
+      {
+       "en": "list of privileged users on system"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "malicious code protection mechanisms"
+      },
+      {
+       "en": "records of malicious code protection updates"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-03(04)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for malicious code protection"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-03(04)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing malicious code protection capabilities"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-5"
+  }
+ ]
+}

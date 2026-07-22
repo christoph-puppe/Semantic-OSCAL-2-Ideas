@@ -1,0 +1,203 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-18",
+ "version": "5.2.0",
+ "label": "SC-18",
+ "lifecycle": "active",
+ "title": "Mobile Code",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Define acceptable and unacceptable mobile code and mobile code technologies; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Authorize, monitor, and control the use of mobile code within the system."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Mobile code includes any program, application, or content that can be transmitted across a network (e.g., embedded in an email, document, or website) and executed on a remote system. Decisions regarding the use of mobile code within organizational systems are based on the potential for the code to cause damage to the systems if used maliciously. Mobile code technologies include Java applets, JavaScript, HTML5, WebGL, and VBScript. Usage restrictions and implementation guidelines apply to both the selection and use of mobile code installed on servers and mobile code downloaded and executed on individual workstations and devices, including notebook computers and smart phones. Mobile code policy and procedures address specific actions taken to prevent the development, acquisition, and introduction of unacceptable mobile code within organizational systems, including requiring mobile code to be digitally signed by a trusted source."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-18_obj",
+     "label": "SC-18",
+     "children": [
+      {
+       "id": "sc-18_obj.a",
+       "label": "SC-18a.",
+       "children": [
+        {
+         "id": "sc-18_obj.a-1",
+         "label": "SC-18a.[01]",
+         "prose": {
+          "en": "acceptable mobile code is defined;"
+         }
+        },
+        {
+         "id": "sc-18_obj.a-2",
+         "label": "SC-18a.[02]",
+         "prose": {
+          "en": "unacceptable mobile code is defined;"
+         }
+        },
+        {
+         "id": "sc-18_obj.a-3",
+         "label": "SC-18a.[03]",
+         "prose": {
+          "en": "acceptable mobile code technologies are defined;"
+         }
+        },
+        {
+         "id": "sc-18_obj.a-4",
+         "label": "SC-18a.[04]",
+         "prose": {
+          "en": "unacceptable mobile code technologies are defined;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sc-18_obj.b",
+       "label": "SC-18b.",
+       "children": [
+        {
+         "id": "sc-18_obj.b-1",
+         "label": "SC-18b.[01]",
+         "prose": {
+          "en": "the use of mobile code is authorized within the system;"
+         }
+        },
+        {
+         "id": "sc-18_obj.b-2",
+         "label": "SC-18b.[02]",
+         "prose": {
+          "en": "the use of mobile code is monitored within the system;"
+         }
+        },
+        {
+         "id": "sc-18_obj.b-3",
+         "label": "SC-18b.[03]",
+         "prose": {
+          "en": "the use of mobile code is controlled within the system."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-18-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing mobile code"
+      },
+      {
+       "en": "mobile code implementation policy and procedures"
+      },
+      {
+       "en": "list of acceptable mobile code and mobile code technologies"
+      },
+      {
+       "en": "list of unacceptable mobile code and mobile technologies"
+      },
+      {
+       "en": "authorization records"
+      },
+      {
+       "en": "system monitoring records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-18-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibilities for managing mobile code"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-18-Test",
+     "objects": [
+      {
+       "en": "Organizational process for authorizing, monitoring, and controlling mobile code"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the management of mobile code"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the monitoring of mobile code"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-28ver2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-3"
+  }
+ ]
+}

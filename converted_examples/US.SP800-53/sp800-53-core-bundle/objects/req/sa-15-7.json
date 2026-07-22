@@ -1,0 +1,255 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-15.7",
+ "version": "5.2.0",
+ "label": "SA-15(7)",
+ "lifecycle": "active",
+ "title": "Automated Vulnerability Analysis",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service {param:sa-15.07_odp.01} to:"
+   },
+   "parameters": [
+    {
+     "name": "sa-15.07_odp.01",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Perform an automated vulnerability analysis using {param:sa-15.07_odp.02};"
+   },
+   "parameters": [
+    {
+     "name": "sa-15.07_odp.02",
+     "type": "string",
+     "label": "tools"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Determine the exploitation potential for discovered vulnerabilities;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Determine potential risk mitigations for delivered vulnerabilities; and"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Deliver the outputs of the tools and results of the analysis to {param:sa-15.07_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "sa-15.07_odp.03",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Automated tools can be more effective at analyzing exploitable weaknesses or deficiencies in large and complex systems, prioritizing vulnerabilities by severity, and providing recommendations for risk mitigations."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-15.7_obj",
+     "label": "SA-15(07)",
+     "children": [
+      {
+       "id": "sa-15.7_obj.a",
+       "label": "SA-15(07)(a)",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to perform automated vulnerability analysis {param:sa-15.07_odp.01} using {param:sa-15.07_odp.02};"
+       }
+      },
+      {
+       "id": "sa-15.7_obj.b",
+       "label": "SA-15(07)(b)",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to determine the exploitation potential for discovered vulnerabilities {param:sa-15.07_odp.01};"
+       }
+      },
+      {
+       "id": "sa-15.7_obj.c",
+       "label": "SA-15(07)(c)",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to determine potential risk mitigations {param:sa-15.07_odp.01} for delivered vulnerabilities;"
+       }
+      },
+      {
+       "id": "sa-15.7_obj.d",
+       "label": "SA-15(07)(d)",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to deliver the outputs of the tools and results of the analysis {param:sa-15.07_odp.01} to {param:sa-15.07_odp.03}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-15(07)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing development process, standards, and tools"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "vulnerability analysis tools and associated documentation"
+      },
+      {
+       "en": "risk assessment reports"
+      },
+      {
+       "en": "vulnerability analysis results"
+      },
+      {
+       "en": "vulnerability mitigation reports"
+      },
+      {
+       "en": "risk mitigation strategy documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-15(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel performing automated vulnerability analysis on the system"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-15(07)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for vulnerability analysis of systems, system components, or system services under development"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing vulnerability analysis of systems, system components, or system services under development"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-15.07_odp.01": {
+     "guidelines": [
+      {
+       "en": "frequency at which to conduct vulnerability analysis is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-15.7_prm_1"
+     ]
+    },
+    "sa-15.07_odp.02": {
+     "guidelines": [
+      {
+       "en": "tools used to perform automated vulnerability analysis are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-15.7_prm_2"
+     ]
+    },
+    "sa-15.07_odp.03": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to whom the outputs of tools and results of the analysis are to be delivered is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-15.7_prm_3"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-15"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-11"
+  }
+ ]
+}

@@ -1,0 +1,177 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-7.4",
+ "version": "5.2.0",
+ "label": "AC-7(4)",
+ "lifecycle": "active",
+ "title": "Use of Alternate Authentication Factor",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Allow the use of {param:ac-07.04_odp.01} that are different from the primary authentication factors after the number of organization-defined consecutive invalid logon attempts have been exceeded; and"
+   },
+   "parameters": [
+    {
+     "name": "ac-07.04_odp.01",
+     "type": "string",
+     "label": "authentication factors"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Enforce a limit of {param:ac-07.04_odp.02} consecutive invalid logon attempts through use of the alternative factors by a user during a {param:ac-07.04_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "ac-07.04_odp.02",
+     "type": "string",
+     "label": "number"
+    },
+    {
+     "name": "ac-07.04_odp.03",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The use of alternate authentication factors supports the objective of availability and allows a user who has inadvertently been locked out to use additional authentication factors to bypass the lockout."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-7.4_obj",
+     "label": "AC-07(04)",
+     "children": [
+      {
+       "id": "ac-7.4_obj.a",
+       "label": "AC-07(04)(a)",
+       "prose": {
+        "en": "{param:ac-07.04_odp.01} that are different from the primary authentication factors are allowed to be used after the number of organization-defined consecutive invalid logon attempts have been exceeded;"
+       }
+      },
+      {
+       "id": "ac-7.4_obj.b",
+       "label": "AC-07(04)(b)",
+       "prose": {
+        "en": "a limit of {param:ac-07.04_odp.02} consecutive invalid logon attempts through the use of the alternative factors by the user during a {param:ac-07.04_odp.03} is enforced."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-07(04)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing unsuccessful logon attempts for primary and alternate authentication factors"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-07(04)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-07(04)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing access control policy for unsuccessful logon attempts"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-07.04_odp.01": {
+     "guidelines": [
+      {
+       "en": "authentication factors allowed to be used that are different from the primary authentication factors are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-7.4_prm_1"
+     ]
+    },
+    "ac-07.04_odp.02": {
+     "guidelines": [
+      {
+       "en": "the number of consecutive, invalid logon attempts through the use of alternative factors for which to enforce a limit by a user is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-7.4_prm_2"
+     ]
+    },
+    "ac-07.04_odp.03": {
+     "guidelines": [
+      {
+       "en": "time period during which a user can attempt logons through alternative factors is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-7.4_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-3"
+  }
+ ]
+}

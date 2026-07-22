@@ -1,0 +1,120 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-16.7",
+ "version": "5.2.0",
+ "label": "AC-16(7)",
+ "lifecycle": "active",
+ "title": "Consistent Attribute Interpretation",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide a consistent interpretation of security and privacy attributes transmitted between distributed system components."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "To enforce security and privacy policies across multiple system components in distributed systems, organizations provide a consistent interpretation of security and privacy attributes employed in access enforcement and flow enforcement decisions. Organizations can establish agreements and processes to help ensure that distributed system components implement attributes with consistent interpretations in automated access enforcement and flow enforcement actions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-16.7_obj",
+     "label": "AC-16(07)",
+     "children": [
+      {
+       "id": "ac-16.7_obj-1",
+       "label": "AC-16(07)[01]",
+       "prose": {
+        "en": "a consistent interpretation of security attributes transmitted between distributed system components is provided;"
+       }
+      },
+      {
+       "id": "ac-16.7_obj-2",
+       "label": "AC-16(07)[02]",
+       "prose": {
+        "en": "a consistent interpretation of privacy attributes transmitted between distributed system components is provided."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-16(07)-Examine",
+     "objects": [
+      {
+       "en": "Access control policies and procedures"
+      },
+      {
+       "en": "procedures addressing consistent interpretation of security and privacy attributes transmitted between distributed system components"
+      },
+      {
+       "en": "procedures addressing access enforcement"
+      },
+      {
+       "en": "procedures addressing information flow enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy access control policy"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-16(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for providing consistent interpretation of security and privacy attributes used in access enforcement and information flow enforcement actions"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-16(07)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing access enforcement and information flow enforcement functions"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-16"
+  }
+ ]
+}

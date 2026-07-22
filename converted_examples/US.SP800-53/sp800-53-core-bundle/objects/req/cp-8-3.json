@@ -1,0 +1,92 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-8.3",
+ "version": "5.2.0",
+ "label": "CP-8(3)",
+ "lifecycle": "active",
+ "title": "Separation of Primary and Alternate Providers",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Obtain alternate telecommunications services from providers that are separated from primary service providers to reduce susceptibility to the same threats."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Threats that affect telecommunications services are defined in organizational assessments of risk and include natural disasters, structural failures, cyber or physical attacks, and errors of omission or commission. Organizations can reduce common susceptibilities by minimizing shared infrastructure among telecommunications service providers and achieving sufficient geographic separation between services. Organizations may consider using a single service provider in situations where the service provider can provide alternate telecommunications services that meet the separation needs addressed in the risk assessment."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-8.3_obj",
+     "label": "CP-08(03)",
+     "prose": {
+      "en": "alternate telecommunications services from providers that are separated from primary service providers are obtained to reduce susceptibility to the same threats."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-08(03)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing primary and alternate telecommunications services"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "primary and alternate telecommunications service agreements"
+      },
+      {
+       "en": "alternate telecommunications service provider site"
+      },
+      {
+       "en": "primary telecommunications service provider site"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-08(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency plan telecommunications responsibilities"
+      },
+      {
+       "en": "organizational personnel with system recovery responsibilities"
+      },
+      {
+       "en": "primary and alternate telecommunications service providers"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-8"
+  }
+ ]
+}

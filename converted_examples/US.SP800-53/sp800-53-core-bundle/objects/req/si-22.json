@@ -1,0 +1,185 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-22",
+ "version": "5.2.0",
+ "label": "SI-22",
+ "lifecycle": "active",
+ "title": "Information Diversity",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Identify the following alternative sources of information for {param:si-22_odp.02}: {param:si-22_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "si-22_odp.01",
+     "type": "string",
+     "label": "alternative information sources"
+    },
+    {
+     "name": "si-22_odp.02",
+     "type": "string",
+     "label": "essential functions and services"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Use an alternative information source for the execution of essential functions or services on {param:si-22_odp.03} when the primary source of information is corrupted or unavailable."
+   },
+   "parameters": [
+    {
+     "name": "si-22_odp.03",
+     "type": "string",
+     "label": "systems or system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Actions taken by a system service or a function are often driven by the information it receives. Corruption, fabrication, modification, or deletion of that information could impact the ability of the service function to properly carry out its intended actions. By having multiple sources of input, the service or function can continue operation if one source is corrupted or no longer available. It is possible that the alternative sources of information may be less precise or less accurate than the primary source of information. But having such sub-optimal information sources may still provide a sufficient level of quality that the essential service or function can be carried out, even in a degraded or debilitated manner."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-22_obj",
+     "label": "SI-22",
+     "children": [
+      {
+       "id": "si-22_obj.a",
+       "label": "SI-22a.",
+       "prose": {
+        "en": "{param:si-22_odp.01} for {param:si-22_odp.02} are identified;"
+       }
+      },
+      {
+       "id": "si-22_obj.b",
+       "label": "SI-22b.",
+       "prose": {
+        "en": "an alternative information source is used for the execution of essential functions or services on {param:si-22_odp.03} when the primary source of information is corrupted or unavailable."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-22-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of information sources"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-22-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with systems security engineering responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-22-Test",
+     "objects": [
+      {
+       "en": "Automated methods and mechanisms to convert information from an analog to digital medium"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-22_odp.01": {
+     "guidelines": [
+      {
+       "en": "alternative information sources for essential functions and services are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-22_prm_2"
+     ]
+    },
+    "si-22_odp.02": {
+     "guidelines": [
+      {
+       "en": "essential functions and services that require alternative sources of information are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-22_prm_1"
+     ]
+    },
+    "si-22_odp.03": {
+     "guidelines": [
+      {
+       "en": "systems or system components that require an alternative information source for the execution of essential functions or services are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-22_prm_3"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v2"
+  }
+ ]
+}

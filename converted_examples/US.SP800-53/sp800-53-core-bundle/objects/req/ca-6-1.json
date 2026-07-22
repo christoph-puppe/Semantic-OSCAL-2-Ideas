@@ -1,0 +1,118 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CA-6.1",
+ "version": "5.2.0",
+ "label": "CA-6(1)",
+ "lifecycle": "active",
+ "title": "Joint Authorization — Intra-organization",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ a joint authorization process for the system that includes multiple authorizing officials from the same organization conducting the authorization."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Assigning multiple authorizing officials from the same organization to serve as co-authorizing officials for the system increases the level of independence in the risk-based decision-making process. It also implements the concepts of separation of duties and dual authorization as applied to the system authorization process. The intra-organization joint authorization process is most relevant for connected systems, shared systems, and systems with multiple information owners."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ca-6.1_obj",
+     "label": "CA-06(01)",
+     "children": [
+      {
+       "id": "ca-6.1_obj-1",
+       "label": "CA-06(01)[01]",
+       "prose": {
+        "en": "a joint authorization process is employed for the system;"
+       }
+      },
+      {
+       "id": "ca-6.1_obj-2",
+       "label": "CA-06(01)[02]",
+       "prose": {
+        "en": "the joint authorization process employed for the system includes multiple authorizing officials from the same organization conducting the authorization."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CA-06(01)-Examine",
+     "objects": [
+      {
+       "en": "Assessment, authorization, and monitoring policy"
+      },
+      {
+       "en": "procedures addressing authorization"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "assessment report"
+      },
+      {
+       "en": "plan of action and milestones"
+      },
+      {
+       "en": "authorization statement"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CA-06(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with authorization responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CA-06(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms that facilitate authorizations and updates"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-6"
+  }
+ ]
+}

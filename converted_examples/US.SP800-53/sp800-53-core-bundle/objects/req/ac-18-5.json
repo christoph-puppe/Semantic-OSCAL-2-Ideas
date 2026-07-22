@@ -1,0 +1,118 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-18.5",
+ "version": "5.2.0",
+ "label": "AC-18(5)",
+ "lifecycle": "active",
+ "title": "Antennas and Transmission Power Levels",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Select radio antennas and calibrate transmission power levels to reduce the probability that signals from wireless access points can be received outside of organization-controlled boundaries."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Actions that may be taken to limit unauthorized use of wireless communications outside of organization-controlled boundaries include reducing the power of wireless transmissions so that the transmissions are less likely to emit a signal that can be captured outside of the physical perimeters of the organization, employing measures such as emissions security to control wireless emanations, and using directional or beamforming antennas that reduce the likelihood that unintended receivers will be able to intercept signals. Prior to taking such mitigating actions, organizations can conduct periodic wireless surveys to understand the radio frequency profile of organizational systems as well as other systems that may be operating in the area."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-18.5_obj",
+     "label": "AC-18(05)",
+     "children": [
+      {
+       "id": "ac-18.5_obj-1",
+       "label": "AC-18(05)[01]",
+       "prose": {
+        "en": "radio antennas are selected to reduce the probability that signals from wireless access points can be received outside of organization-controlled boundaries;"
+       }
+      },
+      {
+       "id": "ac-18.5_obj-2",
+       "label": "AC-18(05)[02]",
+       "prose": {
+        "en": "transmission power levels are calibrated to reduce the probability that signals from wireless access points can be received outside of organization-controlled boundaries."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-18(05)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing wireless implementation and usage (including restrictions)"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-18(05)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-18(05)-Test",
+     "objects": [
+      {
+       "en": "Calibration of transmission power levels for wireless access"
+      },
+      {
+       "en": "radio antenna signals for wireless access"
+      },
+      {
+       "en": "wireless access reception outside of organization-controlled boundaries"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-18"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-19"
+  }
+ ]
+}

@@ -1,0 +1,167 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-3",
+ "version": "5.2.0",
+ "label": "MA-3",
+ "lifecycle": "active",
+ "title": "Maintenance Tools",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Approve, control, and monitor the use of system maintenance tools; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review previously approved system maintenance tools {param:ma-03_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ma-03_odp",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Approving, controlling, monitoring, and reviewing maintenance tools address security-related issues associated with maintenance tools that are not within system authorization boundaries and are used specifically for diagnostic and repair actions on organizational systems. Organizations have flexibility in determining roles for the approval of maintenance tools and how that approval is documented. A periodic review of maintenance tools facilitates the withdrawal of approval for outdated, unsupported, irrelevant, or no-longer-used tools. Maintenance tools can include hardware, software, and firmware items and may be pre-installed, brought in with maintenance personnel on media, cloud-based, or downloaded from a website. Such tools can be vehicles for transporting malicious code, either intentionally or unintentionally, into a facility and subsequently into systems. Maintenance tools can include hardware and software diagnostic test equipment and packet sniffers. The hardware and software components that support maintenance and are a part of the system (including the software implementing utilities such as \"ping,\" \"ls,\" \"ipconfig,\" or the hardware and software implementing the monitoring port of an Ethernet switch) are not addressed by maintenance tools."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-3_obj",
+     "label": "MA-03",
+     "children": [
+      {
+       "id": "ma-3_obj.a",
+       "label": "MA-03a.",
+       "children": [
+        {
+         "id": "ma-3_obj.a-1",
+         "label": "MA-03a.[01]",
+         "prose": {
+          "en": "the use of system maintenance tools is approved;"
+         }
+        },
+        {
+         "id": "ma-3_obj.a-2",
+         "label": "MA-03a.[02]",
+         "prose": {
+          "en": "the use of system maintenance tools is controlled;"
+         }
+        },
+        {
+         "id": "ma-3_obj.a-3",
+         "label": "MA-03a.[03]",
+         "prose": {
+          "en": "the use of system maintenance tools is monitored;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ma-3_obj.b",
+       "label": "MA-03b.",
+       "prose": {
+        "en": "previously approved system maintenance tools are reviewed {param:ma-03_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-03-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing system maintenance tools"
+      },
+      {
+       "en": "system maintenance tools and associated documentation"
+      },
+      {
+       "en": "maintenance records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-03-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MA-03-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for approving, controlling, and monitoring maintenance tools"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the approval, control, and/or monitoring of maintenance tools"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ma-03_odp": {
+     "guidelines": [
+      {
+       "en": "frequency at which to review previously approved system maintenance tools is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ma-3_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-88r1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-16"
+  }
+ ]
+}

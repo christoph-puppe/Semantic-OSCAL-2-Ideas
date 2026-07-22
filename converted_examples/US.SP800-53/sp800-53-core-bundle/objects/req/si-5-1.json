@@ -1,0 +1,140 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-5.1",
+ "version": "5.2.0",
+ "label": "SI-5(1)",
+ "lifecycle": "active",
+ "title": "Automated Alerts and Advisories",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Broadcast security alert and advisory information throughout the organization using {param:si-05.01_odp}."
+   },
+   "parameters": [
+    {
+     "name": "si-05.01_odp",
+     "type": "string",
+     "label": "automated mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The significant number of changes to organizational systems and environments of operation requires the dissemination of security-related information to a variety of organizational entities that have a direct interest in the success of organizational mission and business functions. Based on information provided by security alerts and advisories, changes may be required at one or more of the three levels related to the management of risk, including the governance level, mission and business process level, and the information system level."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-5.1_obj",
+     "label": "SI-05(01)",
+     "prose": {
+      "en": "{param:si-05.01_odp} are used to broadcast security alert and advisory information throughout the organization."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-05(01)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing security alerts, advisories, and directives"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "automated mechanisms supporting the distribution of security alert and advisory information"
+      },
+      {
+       "en": "records of security alerts and advisories"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-05(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with security alert and advisory responsibilities"
+      },
+      {
+       "en": "organizational personnel implementing, operating, maintaining, and using the system"
+      },
+      {
+       "en": "organizational personnel, organizational elements, and/or external organizations to whom alerts and advisories are to be disseminated"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-05(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for defining, receiving, generating, and disseminating security alerts and advisories"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing the dissemination of security alerts and advisories"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-05.01_odp": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to broadcast security alert and advisory information throughout the organization are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-5.1_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-5"
+  }
+ ]
+}

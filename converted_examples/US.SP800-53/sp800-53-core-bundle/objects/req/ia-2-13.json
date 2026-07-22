@@ -1,0 +1,155 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-2.13",
+ "version": "5.2.0",
+ "label": "IA-2(13)",
+ "lifecycle": "active",
+ "title": "Out-of-band Authentication",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement the following out-of-band authentication mechanisms under {param:ia-02.13_odp.02}: {param:ia-02.13_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "ia-02.13_odp.01",
+     "type": "string",
+     "label": "out-of-band authentication"
+    },
+    {
+     "name": "ia-02.13_odp.02",
+     "type": "string",
+     "label": "conditions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Out-of-band authentication refers to the use of two separate communication paths to identify and authenticate users or devices to an information system. The first path (i.e., the in-band path) is used to identify and authenticate users or devices and is generally the path through which information flows. The second path (i.e., the out-of-band path) is used to independently verify the authentication and/or requested action. For example, a user authenticates via a notebook computer to a remote server to which the user desires access and requests some action of the server via that communication path. Subsequently, the server contacts the user via the user’s cell phone to verify that the requested action originated from the user. The user may confirm the intended action to an individual on the telephone or provide an authentication code via the telephone. Out-of-band authentication can be used to mitigate actual or suspected \"man-in the-middle\" attacks. The conditions or criteria for activation include suspicious activities, new threat indicators, elevated threat levels, or the impact or classification level of information in requested transactions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-2.13_obj",
+     "label": "IA-02(13)",
+     "prose": {
+      "en": "{param:ia-02.13_odp.01} mechanisms are implemented under {param:ia-02.13_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-02(13)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "procedures addressing user identification and authentication"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system-generated list of out-of-band authentication paths"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-02(13)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system operations responsibilities"
+      },
+      {
+       "en": "organizational personnel with account management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-02(13)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing out-of-band authentication capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ia-02.13_odp.01": {
+     "guidelines": [
+      {
+       "en": "out-of-band authentication mechanisms to be implemented are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-2.13_prm_2"
+     ]
+    },
+    "ia-02.13_odp.02": {
+     "guidelines": [
+      {
+       "en": "conditions under which out-of-band authentication is to be implemented are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-2.13_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-37"
+  }
+ ]
+}

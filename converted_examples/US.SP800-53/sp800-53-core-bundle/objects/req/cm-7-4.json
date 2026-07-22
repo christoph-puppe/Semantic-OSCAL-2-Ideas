@@ -1,0 +1,240 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-7.4",
+ "version": "5.2.0",
+ "label": "CM-7(4)",
+ "lifecycle": "active",
+ "title": "Unauthorized Software — Deny-by-exception",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Identify {param:cm-07.04_odp.01};"
+   },
+   "parameters": [
+    {
+     "name": "cm-07.04_odp.01",
+     "type": "string",
+     "label": "software programs"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Employ an allow-all, deny-by-exception policy to prohibit the execution of unauthorized software programs on the system; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Review and update the list of unauthorized software programs {param:cm-07.04_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "cm-07.04_odp.02",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Unauthorized software programs can be limited to specific versions or from a specific source. The concept of prohibiting the execution of unauthorized software may also be applied to user actions, system ports and protocols, IP addresses/ranges, websites, and MAC addresses."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-7.4_obj",
+     "label": "CM-07(04)",
+     "children": [
+      {
+       "id": "cm-7.4_obj.a",
+       "label": "CM-07(04)(a)",
+       "prose": {
+        "en": "{param:cm-07.04_odp.01} are identified;"
+       }
+      },
+      {
+       "id": "cm-7.4_obj.b",
+       "label": "CM-07(04)(b)",
+       "prose": {
+        "en": "an allow-all, deny-by-exception policy is employed to prohibit the execution of unauthorized software programs on the system;"
+       }
+      },
+      {
+       "id": "cm-7.4_obj.c",
+       "label": "CM-07(04)(c)",
+       "prose": {
+        "en": "the list of unauthorized software programs is reviewed and updated {param:cm-07.04_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-07(04)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing least functionality in the system"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of software programs not authorized to execute on the system"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "common secure configuration checklists"
+      },
+      {
+       "en": "review and update records associated with list of unauthorized software programs"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-07(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for identifying software not authorized to execute on the system"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-07(04)-Test",
+     "objects": [
+      {
+       "en": "Organizational process for identifying, reviewing, and updating programs not authorized to execute on the system"
+      },
+      {
+       "en": "organizational process for implementing unauthorized software policy"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing unauthorized software policy"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-07.04_odp.01": {
+     "guidelines": [
+      {
+       "en": "software programs not authorized to execute on the system are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-7.4_prm_1"
+     ],
+     "alt-label": "software programs not authorized to execute on the system"
+    },
+    "cm-07.04_odp.02": {
+     "guidelines": [
+      {
+       "en": "frequency at which to review and update the list of unauthorized software programs is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-7.4_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-5"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-2.4",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/CM-2.4",
+    "mode": "merged-into",
+    "label": "CM-02(04)",
+    "title": "Unauthorized Software"
+   }
+  ]
+ }
+}

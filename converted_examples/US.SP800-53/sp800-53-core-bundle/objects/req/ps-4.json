@@ -1,0 +1,252 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PS-4",
+ "version": "5.2.0",
+ "label": "PS-4",
+ "lifecycle": "active",
+ "title": "Personnel Termination",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Upon termination of individual employment:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Disable system access within {param:ps-04_odp.01};"
+   },
+   "parameters": [
+    {
+     "name": "ps-04_odp.01",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Terminate or revoke any authenticators and credentials associated with the individual;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Conduct exit interviews that include a discussion of {param:ps-04_odp.02};"
+   },
+   "parameters": [
+    {
+     "name": "ps-04_odp.02",
+     "type": "string",
+     "label": "information security topics"
+    }
+   ]
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Retrieve all security-related organizational system-related property; and"
+   }
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Retain access to organizational information and systems formerly controlled by terminated individual."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "System property includes hardware authentication tokens, system administration technical manuals, keys, identification cards, and building passes. Exit interviews ensure that terminated individuals understand the security constraints imposed by being former employees and that proper accountability is achieved for system-related property. Security topics at exit interviews include reminding individuals of nondisclosure agreements and potential limitations on future employment. Exit interviews may not always be possible for some individuals, including in cases related to the unavailability of supervisors, illnesses, or job abandonment. Exit interviews are important for individuals with security clearances. The timely execution of termination actions is essential for individuals who have been terminated for cause. In certain situations, organizations consider disabling the system accounts of individuals who are being terminated prior to the individuals being notified."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ps-4_obj",
+     "label": "PS-04",
+     "children": [
+      {
+       "id": "ps-4_obj.a",
+       "label": "PS-04a.",
+       "prose": {
+        "en": "upon termination of individual employment, system access is disabled within {param:ps-04_odp.01};"
+       }
+      },
+      {
+       "id": "ps-4_obj.b",
+       "label": "PS-04b.",
+       "prose": {
+        "en": "upon termination of individual employment, any authenticators and credentials are terminated or revoked;"
+       }
+      },
+      {
+       "id": "ps-4_obj.c",
+       "label": "PS-04c.",
+       "prose": {
+        "en": "upon termination of individual employment, exit interviews that include a discussion of {param:ps-04_odp.02} are conducted;"
+       }
+      },
+      {
+       "id": "ps-4_obj.d",
+       "label": "PS-04d.",
+       "prose": {
+        "en": "upon termination of individual employment, all security-related organizational system-related property is retrieved;"
+       }
+      },
+      {
+       "id": "ps-4_obj.e",
+       "label": "PS-04e.",
+       "prose": {
+        "en": "upon termination of individual employment, access to organizational information and systems formerly controlled by the terminated individual are retained."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PS-04-Examine",
+     "objects": [
+      {
+       "en": "Personnel security policy"
+      },
+      {
+       "en": "procedures addressing personnel termination"
+      },
+      {
+       "en": "records of personnel termination actions"
+      },
+      {
+       "en": "list of system accounts"
+      },
+      {
+       "en": "records of terminated or revoked authenticators/credentials"
+      },
+      {
+       "en": "records of exit interviews"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PS-04-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personnel security responsibilities"
+      },
+      {
+       "en": "organizational personnel with account management responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PS-04-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for personnel termination"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing personnel termination notifications"
+      },
+      {
+       "en": "mechanisms for disabling system access/revoking authenticators"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ps-04_odp.01": {
+     "guidelines": [
+      {
+       "en": "a time period within which to disable system access is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ps-4_prm_1"
+     ]
+    },
+    "ps-04_odp.02": {
+     "guidelines": [
+      {
+       "en": "information security topics to be discussed when conducting exit interviews are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ps-4_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-7"
+  }
+ ]
+}

@@ -1,0 +1,212 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-40",
+ "version": "5.2.0",
+ "label": "SC-40",
+ "lifecycle": "active",
+ "title": "Wireless Link Protection",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Protect external and internal {param:sc-40_prm_1} from the following signal parameter attacks: {param:sc-40_prm_2}."
+   },
+   "parameters": [
+    {
+     "name": "sc-40_prm_1",
+     "type": "string",
+     "label": "organization-defined wireless links"
+    },
+    {
+     "name": "sc-40_prm_2",
+     "type": "string",
+     "label": "organization-defined types of signal parameter attacks or references to sources for such attacks"
+    },
+    {
+     "name": "sc-40_odp.01",
+     "type": "string",
+     "label": "wireless links"
+    },
+    {
+     "name": "sc-40_odp.02",
+     "type": "string",
+     "label": "types of signal parameter attacks or references to sources for such attacks"
+    },
+    {
+     "name": "sc-40_odp.03",
+     "type": "string",
+     "label": "wireless links"
+    },
+    {
+     "name": "sc-40_odp.04",
+     "type": "string",
+     "label": "types of signal parameter attacks or references to sources for such attacks"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Wireless link protection applies to internal and external wireless communication links that may be visible to individuals who are not authorized system users. Adversaries can exploit the signal parameters of wireless links if such links are not adequately protected. There are many ways to exploit the signal parameters of wireless links to gain intelligence, deny service, or spoof system users. Protection of wireless links reduces the impact of attacks that are unique to wireless systems. If organizations rely on commercial service providers for transmission services as commodity items rather than as fully dedicated services, it may not be possible to implement wireless link protections to the extent necessary to meet organizational security requirements."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-40_obj",
+     "label": "SC-40",
+     "children": [
+      {
+       "id": "sc-40_obj-1",
+       "label": "SC-40[01]",
+       "prose": {
+        "en": "external {param:sc-40_odp.01} are protected from {param:sc-40_odp.02}."
+       }
+      },
+      {
+       "id": "sc-40_obj-2",
+       "label": "SC-40[02]",
+       "prose": {
+        "en": "internal {param:sc-40_odp.03} are protected from {param:sc-40_odp.04}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-40-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "access control policy and procedures"
+      },
+      {
+       "en": "procedures addressing wireless link protection"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "wireless network diagrams"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "list of internal and external wireless links"
+      },
+      {
+       "en": "list of signal parameter attacks or references to sources for attacks"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-40-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel authorizing, installing, configuring, and/or maintaining internal and external wireless links"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-40-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the protection of wireless links"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-40_prm_1": {
+     "aggregates": [
+      "sc-40_odp.01",
+      "sc-40_odp.03"
+     ]
+    },
+    "sc-40_prm_2": {
+     "aggregates": [
+      "sc-40_odp.02",
+      "sc-40_odp.04"
+     ]
+    },
+    "sc-40_odp.01": {
+     "guidelines": [
+      {
+       "en": "external wireless links to be protected from particular types of signal parameter attacks are defined;"
+      }
+     ]
+    },
+    "sc-40_odp.02": {
+     "guidelines": [
+      {
+       "en": "types of signal parameter attacks or references to sources for such attacks from which to protect external wireless links are defined;"
+      }
+     ]
+    },
+    "sc-40_odp.03": {
+     "guidelines": [
+      {
+       "en": "internal wireless links to be protected from particular types of signal parameter attacks are defined;"
+      }
+     ]
+    },
+    "sc-40_odp.04": {
+     "guidelines": [
+      {
+       "en": "types of signal parameter attacks or references to sources for such attacks from which to protect internal wireless links are defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-18"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-5"
+  }
+ ]
+}

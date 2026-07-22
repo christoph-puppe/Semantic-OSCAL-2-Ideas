@@ -1,0 +1,119 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-6.7",
+ "version": "5.2.0",
+ "label": "AU-6(7)",
+ "lifecycle": "active",
+ "title": "Permitted Actions",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Specify the permitted actions for each {param:au-06.07_odp} associated with the review, analysis, and reporting of audit record information."
+   },
+   "parameters": [
+    {
+     "name": "au-06.07_odp",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "system process"
+      },
+      {
+       "value": "role"
+      },
+      {
+       "value": "user"
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations specify permitted actions for system processes, roles, and users associated with the review, analysis, and reporting of audit records through system account management activities. Specifying permitted actions on audit record information is a way to enforce the principle of least privilege. Permitted actions are enforced by the system and include read, write, execute, append, and delete."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-6.7_obj",
+     "label": "AU-06(07)",
+     "prose": {
+      "en": "the permitted actions for each {param:au-06.07_odp} associated with the review, analysis, and reporting of audit record information are specified."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-06(07)-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "procedures addressing process, role and/or user permitted actions from audit review, analysis, and reporting"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-06(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with audit review, analysis, and reporting responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AU-06(07)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting permitted actions for the review, analysis, and reporting of audit information"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "au-06.07_odp": {
+     "alt-identifiers": [
+      "au-6.7_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  }
+ ]
+}

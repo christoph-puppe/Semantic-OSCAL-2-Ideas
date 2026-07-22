@@ -1,0 +1,384 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MP-6",
+ "version": "5.2.0",
+ "label": "MP-6",
+ "lifecycle": "active",
+ "title": "Media Sanitization",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Sanitize {param:mp-6_prm_1} prior to disposal, release out of organizational control, or release for reuse using {param:mp-6_prm_2} ; and"
+   },
+   "parameters": [
+    {
+     "name": "mp-6_prm_1",
+     "type": "string",
+     "label": "organization-defined system media"
+    },
+    {
+     "name": "mp-6_prm_2",
+     "type": "string",
+     "label": "organization-defined sanitization techniques and procedures"
+    },
+    {
+     "name": "mp-06_odp.01",
+     "type": "string",
+     "label": "system media"
+    },
+    {
+     "name": "mp-06_odp.02",
+     "type": "string",
+     "label": "system media"
+    },
+    {
+     "name": "mp-06_odp.03",
+     "type": "string",
+     "label": "system media"
+    },
+    {
+     "name": "mp-06_odp.04",
+     "type": "string",
+     "label": "sanitization techniques and procedures"
+    },
+    {
+     "name": "mp-06_odp.05",
+     "type": "string",
+     "label": "sanitization techniques and procedures"
+    },
+    {
+     "name": "mp-06_odp.06",
+     "type": "string",
+     "label": "sanitization techniques and procedures"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ sanitization mechanisms with the strength and integrity commensurate with the security category or classification of the information."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Media sanitization applies to all digital and non-digital system media subject to disposal or reuse, whether or not the media is considered removable. Examples include digital media in scanners, copiers, printers, notebook computers, workstations, network components, mobile devices, and non-digital media (e.g., paper and microfilm). The sanitization process removes information from system media such that the information cannot be retrieved or reconstructed. Sanitization techniques—including clearing, purging, cryptographic erase, de-identification of personally identifiable information, and destruction—prevent the disclosure of information to unauthorized individuals when such media is reused or released for disposal. Organizations determine the appropriate sanitization methods, recognizing that destruction is sometimes necessary when other methods cannot be applied to media requiring sanitization. Organizations use discretion on the employment of approved sanitization techniques and procedures for media that contains information deemed to be in the public domain or publicly releasable or information deemed to have no adverse impact on organizations or individuals if released for reuse or disposal. Sanitization of non-digital media includes destruction, removing a classified appendix from an otherwise unclassified document, or redacting selected sections or words from a document by obscuring the redacted sections or words in a manner equivalent in effectiveness to removing them from the document. NSA standards and policies control the sanitization process for media that contains classified information. NARA policies control the sanitization process for controlled unclassified information."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "mp-6_obj",
+     "label": "MP-06",
+     "children": [
+      {
+       "id": "mp-6_obj.a",
+       "label": "MP-06a.",
+       "children": [
+        {
+         "id": "mp-6_obj.a-1",
+         "label": "MP-06a.[01]",
+         "prose": {
+          "en": "{param:mp-06_odp.01} is sanitized using {param:mp-06_odp.04} prior to disposal;"
+         }
+        },
+        {
+         "id": "mp-6_obj.a-2",
+         "label": "MP-06a.[02]",
+         "prose": {
+          "en": "{param:mp-06_odp.02} is sanitized using {param:mp-06_odp.05} prior to release from organizational control;"
+         }
+        },
+        {
+         "id": "mp-6_obj.a-3",
+         "label": "MP-06a.[03]",
+         "prose": {
+          "en": "{param:mp-06_odp.03} is sanitized using {param:mp-06_odp.06} prior to release for reuse;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "mp-6_obj.b",
+       "label": "MP-06b.",
+       "prose": {
+        "en": "sanitization mechanisms with strength and integrity commensurate with the security category or classification of the information are employed."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MP-06-Examine",
+     "objects": [
+      {
+       "en": "System media protection policy"
+      },
+      {
+       "en": "procedures addressing media sanitization and disposal"
+      },
+      {
+       "en": "applicable federal standards and policies addressing media sanitization policy"
+      },
+      {
+       "en": "media sanitization records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "records retention and disposition policy"
+      },
+      {
+       "en": "records retention and disposition procedures"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MP-06-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with media sanitization responsibilities"
+      },
+      {
+       "en": "organizational personnel with records retention and disposition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MP-06-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for media sanitization"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing media sanitization"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "mp-6_prm_1": {
+     "aggregates": [
+      "mp-06_odp.01",
+      "mp-06_odp.02",
+      "mp-06_odp.03"
+     ]
+    },
+    "mp-6_prm_2": {
+     "aggregates": [
+      "mp-06_odp.04",
+      "mp-06_odp.05",
+      "mp-06_odp.06"
+     ]
+    },
+    "mp-06_odp.01": {
+     "guidelines": [
+      {
+       "en": "system media to be sanitized prior to disposal is defined;"
+      }
+     ]
+    },
+    "mp-06_odp.02": {
+     "guidelines": [
+      {
+       "en": "system media to be sanitized prior to release from organizational control is defined;"
+      }
+     ]
+    },
+    "mp-06_odp.03": {
+     "guidelines": [
+      {
+       "en": "system media to be sanitized prior to release for reuse is defined;"
+      }
+     ]
+    },
+    "mp-06_odp.04": {
+     "guidelines": [
+      {
+       "en": "sanitization techniques and procedures to be used for sanitization prior to disposal are defined;"
+      }
+     ]
+    },
+    "mp-06_odp.05": {
+     "guidelines": [
+      {
+       "en": "sanitization techniques and procedures to be used for sanitization prior to release from organizational control are defined;"
+      }
+     ]
+    },
+    "mp-06_odp.06": {
+     "guidelines": [
+      {
+       "en": "sanitization techniques and procedures to be used for sanitization prior to release for reuse are defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.federalregister.gov/documents/2016/09/14/2016-21665/controlled-unclassified-information"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.archives.gov/cui"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.199"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-60v1r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-60v2r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-88r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-124r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.8023"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.nsa.gov/resources/everyone/media-destruction"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-22"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-18"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-19"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-11"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-6.4",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-6.5",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-6.6",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/MP-6.4",
+    "mode": "merged-into",
+    "label": "MP-06(04)",
+    "title": "Controlled Unclassified Information"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/MP-6.5",
+    "mode": "merged-into",
+    "label": "MP-06(05)",
+    "title": "Classified Information"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/MP-6.6",
+    "mode": "merged-into",
+    "label": "MP-06(06)",
+    "title": "Media Destruction"
+   }
+  ]
+ }
+}

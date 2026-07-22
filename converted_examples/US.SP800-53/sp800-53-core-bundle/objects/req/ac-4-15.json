@@ -1,0 +1,187 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-4.15",
+ "version": "5.2.0",
+ "label": "AC-4(15)",
+ "lifecycle": "active",
+ "title": "Detection of Unsanctioned Information",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "When transferring information between different security domains, examine the information for the presence of {param:ac-04.15_odp.01} and prohibit the transfer of such information in accordance with the {param:ac-4.15_prm_2}."
+   },
+   "parameters": [
+    {
+     "name": "ac-04.15_odp.01",
+     "type": "string",
+     "label": "unsanctioned information"
+    },
+    {
+     "name": "ac-4.15_prm_2",
+     "type": "string",
+     "label": "organization-defined security or privacy policy"
+    },
+    {
+     "name": "ac-04.15_odp.02",
+     "type": "string",
+     "label": "security policy"
+    },
+    {
+     "name": "ac-04.15_odp.03",
+     "type": "string",
+     "label": "privacy policy"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Unsanctioned information includes malicious code, information that is inappropriate for release from the source network, or executable code that could disrupt or harm the services or systems on the destination network."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-4.15_obj",
+     "label": "AC-04(15)",
+     "children": [
+      {
+       "id": "ac-4.15_obj-1",
+       "label": "AC-04(15)[01]",
+       "prose": {
+        "en": "when transferring information between different security domains, information is examined for the presence of {param:ac-04.15_odp.01};"
+       }
+      },
+      {
+       "id": "ac-4.15_obj-2",
+       "label": "AC-04(15)[02]",
+       "prose": {
+        "en": "when transferring information between different security domains, transfer of {param:ac-04.15_odp.01} is prohibited in accordance with the {param:ac-04.15_odp.02};"
+       }
+      },
+      {
+       "id": "ac-4.15_obj-3",
+       "label": "AC-04(15)[03]",
+       "prose": {
+        "en": "when transferring information between different security domains, transfer of {param:ac-04.15_odp.01} is prohibited in accordance with the {param:ac-04.15_odp.03}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-04(15)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "information flow control policies"
+      },
+      {
+       "en": "procedures addressing information flow enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of unsanctioned information types and associated information"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-04(15)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with privacy responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-04(15)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing information flow enforcement policy"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-4.15_prm_2": {
+     "aggregates": [
+      "ac-04.15_odp.02",
+      "ac-04.15_odp.03"
+     ]
+    },
+    "ac-04.15_odp.01": {
+     "guidelines": [
+      {
+       "en": "unsanctioned information to be detected is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-4.15_prm_1"
+     ]
+    },
+    "ac-04.15_odp.02": {
+     "guidelines": [
+      {
+       "en": "security policy that requires the transfer of unsanctioned information between different security domains to be prohibited is defined (if selected);"
+      }
+     ]
+    },
+    "ac-04.15_odp.03": {
+     "guidelines": [
+      {
+       "en": "privacy policy that requires the transfer of organization-defined unsanctioned information between different security domains to be prohibited is defined (if selected);"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-3"
+  }
+ ]
+}

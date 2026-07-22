@@ -1,0 +1,109 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AT-2.2",
+ "version": "5.2.0",
+ "label": "AT-2(2)",
+ "lifecycle": "active",
+ "title": "Insider Threat",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide literacy training on recognizing and reporting potential indicators of insider threat."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Potential indicators and possible precursors of insider threat can include behaviors such as inordinate, long-term job dissatisfaction; attempts to gain access to information not required for job performance; unexplained access to financial resources; bullying or harassment of fellow employees; workplace violence; and other serious violations of policies, procedures, directives, regulations, rules, or practices. Literacy training includes how to communicate the concerns of employees and management regarding potential indicators of insider threat through channels established by the organization and in accordance with established policies and procedures. Organizations may consider tailoring insider threat awareness topics to the role. For example, training for managers may be focused on changes in the behavior of team members, while training for employees may be focused on more general observations."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "at-2.2_obj",
+     "label": "AT-02(02)",
+     "children": [
+      {
+       "id": "at-2.2_obj-1",
+       "label": "AT-02(02)[01]",
+       "prose": {
+        "en": "literacy training on recognizing potential indicators of insider threat is provided;"
+       }
+      },
+      {
+       "id": "at-2.2_obj-2",
+       "label": "AT-02(02)[02]",
+       "prose": {
+        "en": "literacy training on reporting potential indicators of insider threat is provided."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AT-02(02)-Examine",
+     "objects": [
+      {
+       "en": "System security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "literacy training and awareness policy"
+      },
+      {
+       "en": "procedures addressing literacy training and awareness implementation"
+      },
+      {
+       "en": "literacy training and awareness curriculum"
+      },
+      {
+       "en": "literacy training and awareness materials"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AT-02(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel who receive literacy training and awareness"
+      },
+      {
+       "en": "organizational personnel with responsibilities for literacy training and awareness"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-12"
+  }
+ ]
+}

@@ -1,0 +1,213 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-8.2",
+ "version": "5.2.0",
+ "label": "CM-8(2)",
+ "lifecycle": "active",
+ "title": "Automated Maintenance",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Maintain the currency, completeness, accuracy, and availability of the inventory of system components using {param:cm-8.2_prm_1}."
+   },
+   "parameters": [
+    {
+     "name": "cm-8.2_prm_1",
+     "type": "string",
+     "label": "organization-defined automated mechanisms"
+    },
+    {
+     "name": "cm-08.02_odp.01",
+     "type": "string",
+     "label": "automated mechanisms"
+    },
+    {
+     "name": "cm-08.02_odp.02",
+     "type": "string",
+     "label": "automated mechanisms"
+    },
+    {
+     "name": "cm-08.02_odp.03",
+     "type": "string",
+     "label": "automated mechanisms"
+    },
+    {
+     "name": "cm-08.02_odp.04",
+     "type": "string",
+     "label": "automated mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations maintain system inventories to the extent feasible. For example, virtual machines can be difficult to monitor because such machines are not visible to the network when not in use. In such cases, organizations maintain as up-to-date, complete, and accurate an inventory as is deemed reasonable. Automated maintenance can be achieved by the implementation of CM-2(2) for organizations that combine system component inventory and baseline configuration activities."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-8.2_obj",
+     "label": "CM-08(02)",
+     "children": [
+      {
+       "id": "cm-8.2_obj-1",
+       "label": "CM-08(02)[01]",
+       "prose": {
+        "en": "{param:cm-08.02_odp.01} are used to maintain the currency of the system component inventory;"
+       }
+      },
+      {
+       "id": "cm-8.2_obj-2",
+       "label": "CM-08(02)[02]",
+       "prose": {
+        "en": "{param:cm-08.02_odp.02} are used to maintain the completeness of the system component inventory;"
+       }
+      },
+      {
+       "id": "cm-8.2_obj-3",
+       "label": "CM-08(02)[03]",
+       "prose": {
+        "en": "{param:cm-08.02_odp.03} are used to maintain the accuracy of the system component inventory;"
+       }
+      },
+      {
+       "id": "cm-8.2_obj-4",
+       "label": "CM-08(02)[04]",
+       "prose": {
+        "en": "{param:cm-08.02_odp.04} are used to maintain the availability of the system component inventory."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-08(02)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing system component inventory"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system maintenance records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-08(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with component inventory management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-08(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for maintaining the system component inventory"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing the system component inventory"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-8.2_prm_1": {
+     "aggregates": [
+      "cm-08.02_odp.01",
+      "cm-08.02_odp.02",
+      "cm-08.02_odp.03",
+      "cm-08.02_odp.04"
+     ]
+    },
+    "cm-08.02_odp.01": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to maintain the currency of the system component inventory are defined;"
+      }
+     ]
+    },
+    "cm-08.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to maintain the completeness of the system component inventory are defined;"
+      }
+     ]
+    },
+    "cm-08.02_odp.03": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to maintain the accuracy of the system component inventory are defined;"
+      }
+     ]
+    },
+    "cm-08.02_odp.04": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to maintain the availability of the system component inventory are defined;"
+      }
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  }
+ ]
+}

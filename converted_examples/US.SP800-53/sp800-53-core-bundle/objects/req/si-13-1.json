@@ -1,0 +1,131 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-13.1",
+ "version": "5.2.0",
+ "label": "SI-13(1)",
+ "lifecycle": "active",
+ "title": "Transferring Component Responsibilities",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Take system components out of service by transferring component responsibilities to substitute components no later than {param:si-13.01_odp} of mean time to failure."
+   },
+   "parameters": [
+    {
+     "name": "si-13.01_odp",
+     "type": "string",
+     "label": "fraction or percentage"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Transferring primary system component responsibilities to other substitute components prior to primary component failure is important to reduce the risk of degraded or debilitated mission or business functions. Making such transfers based on a percentage of mean time to failure allows organizations to be proactive based on their risk tolerance. However, the premature replacement of system components can result in the increased cost of system operations."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-13.1_obj",
+     "label": "SI-13(01)",
+     "prose": {
+      "en": "system components are taken out of service by transferring component responsibilities to substitute components no later than {param:si-13.01_odp} of mean time to failure."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-13(01)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing predictable failure prevention"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-13(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for MTTF activities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with contingency planning responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-13(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing MTTF"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing the transfer of component responsibilities to substitute components"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-13.01_odp": {
+     "guidelines": [
+      {
+       "en": "the fraction or percentage of mean time to failure within which to transfer the responsibilities of a system component to a substitute component is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-13.1_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-13"
+  }
+ ]
+}

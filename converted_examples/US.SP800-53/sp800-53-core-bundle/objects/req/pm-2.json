@@ -1,0 +1,129 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-2",
+ "version": "5.2.0",
+ "label": "PM-2",
+ "lifecycle": "active",
+ "title": "Information Security Program Leadership Role",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Appoint a senior agency information security officer with the mission and resources to coordinate, develop, implement, and maintain an organization-wide information security program."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The senior agency information security officer is an organizational official. For federal agencies (as defined by applicable laws, executive orders, regulations, directives, policies, and standards), this official is the senior agency information security officer. Organizations may also refer to this official as the senior information security officer or chief information security officer."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-2_obj",
+     "label": "PM-02",
+     "children": [
+      {
+       "id": "pm-2_obj-1",
+       "label": "PM-02[01]",
+       "prose": {
+        "en": "a senior agency information security officer is appointed;"
+       }
+      },
+      {
+       "id": "pm-2_obj-2",
+       "label": "PM-02[02]",
+       "prose": {
+        "en": "the senior agency information security officer is provided with the mission and resources to coordinate an organization-wide information security program;"
+       }
+      },
+      {
+       "id": "pm-2_obj-3",
+       "label": "PM-02[03]",
+       "prose": {
+        "en": "the senior agency information security officer is provided with the mission and resources to develop an organization-wide information security program;"
+       }
+      },
+      {
+       "id": "pm-2_obj-4",
+       "label": "PM-02[04]",
+       "prose": {
+        "en": "the senior agency information security officer is provided with the mission and resources to implement an organization-wide information security program;"
+       }
+      },
+      {
+       "id": "pm-2_obj-5",
+       "label": "PM-02[05]",
+       "prose": {
+        "en": "the senior agency information security officer is provided with the mission and resources to maintain an organization-wide information security program."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-02-Examine",
+     "objects": [
+      {
+       "en": "Information security program plan"
+      },
+      {
+       "en": "procedures addressing program plan development and implementation"
+      },
+      {
+       "en": "procedures addressing program plan reviews and updates"
+      },
+      {
+       "en": "procedures addressing coordination of the program plan with relevant entities"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-02-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security program planning and plan implementation responsibilities"
+      },
+      {
+       "en": "senior information security officer"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/memoranda/2017/M-17-25.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-37r2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-39"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-181r1"
+  }
+ ]
+}

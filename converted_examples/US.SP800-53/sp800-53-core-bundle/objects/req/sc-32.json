@@ -1,0 +1,200 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-32",
+ "version": "5.2.0",
+ "label": "SC-32",
+ "lifecycle": "active",
+ "title": "System Partitioning",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Partition the system into {param:sc-32_odp.01} residing in separate {param:sc-32_odp.02} domains or environments based on {param:sc-32_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "sc-32_odp.01",
+     "type": "string",
+     "label": "system components"
+    },
+    {
+     "name": "sc-32_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "physical"
+      },
+      {
+       "value": "logical"
+      }
+     ]
+    },
+    {
+     "name": "sc-32_odp.03",
+     "type": "string",
+     "label": "circumstances for the physical or logical separation of components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "System partitioning is part of a defense-in-depth protection strategy. Organizations determine the degree of physical separation of system components. Physical separation options include physically distinct components in separate racks in the same room, critical components in separate rooms, and geographical separation of critical components. Security categorization can guide the selection of candidates for domain partitioning. Managed interfaces restrict or prohibit network access and information flow among partitioned system components."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-32_obj",
+     "label": "SC-32",
+     "prose": {
+      "en": "the system is partitioned into {param:sc-32_odp.01} residing in separate {param:sc-32_odp.02} domains or environments based on {param:sc-32_odp.03}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-32-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing system partitioning"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "list of system physical domains (or environments)"
+      },
+      {
+       "en": "system facility diagrams"
+      },
+      {
+       "en": "system network diagrams"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-32-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "system developers/integrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-32-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the physical separation of system components"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-32_odp.01": {
+     "guidelines": [
+      {
+       "en": "system components to reside in separate physical or logical domains or environments based on circumstances for the physical or logical separation of components are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-32_prm_1"
+     ]
+    },
+    "sc-32_odp.02": {
+     "alt-identifiers": [
+      "sc-32_prm_2"
+     ]
+    },
+    "sc-32_odp.03": {
+     "guidelines": [
+      {
+       "en": "circumstances for the physical or logical separation of components are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-32_prm_3"
+     ],
+     "alt-label": "circumstances for physical or logical separation of components"
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.199"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.8179"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-36"
+  }
+ ]
+}

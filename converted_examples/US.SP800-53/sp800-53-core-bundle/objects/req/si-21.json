@@ -1,0 +1,164 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-21",
+ "version": "5.2.0",
+ "label": "SI-21",
+ "lifecycle": "active",
+ "title": "Information Refresh",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Refresh {param:si-21_odp.01} at {param:si-21_odp.02} or generate the information on demand and delete the information when no longer needed."
+   },
+   "parameters": [
+    {
+     "name": "si-21_odp.01",
+     "type": "string",
+     "label": "information"
+    },
+    {
+     "name": "si-21_odp.02",
+     "type": "string",
+     "label": "frequencies"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Retaining information for longer than it is needed makes it an increasingly valuable and enticing target for adversaries. Keeping information available for the minimum period of time needed to support organizational missions or business functions reduces the opportunity for adversaries to compromise, capture, and exfiltrate that information."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-21_obj",
+     "label": "SI-21",
+     "prose": {
+      "en": "the {param:si-21_odp.01} is refreshed {param:si-21_odp.02} or is generated on demand and deleted when no longer needed."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-21-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "procedures addressing software and information integrity"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "information refresh procedures"
+      },
+      {
+       "en": "list of information to be refreshed"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-21-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for refreshing information"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with systems security engineering responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-21-Test",
+     "objects": [
+      {
+       "en": "Mechanisms for information refresh"
+      },
+      {
+       "en": "organizational processes for information refresh"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-21_odp.01": {
+     "guidelines": [
+      {
+       "en": "the information to be refreshed is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-21_prm_1"
+     ]
+    },
+    "si-21_odp.02": {
+     "guidelines": [
+      {
+       "en": "the frequencies at which to refresh information are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-21_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-14"
+  }
+ ]
+}

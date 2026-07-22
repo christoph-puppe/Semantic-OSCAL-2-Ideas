@@ -1,0 +1,119 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AT-6",
+ "version": "5.2.0",
+ "label": "AT-6",
+ "lifecycle": "active",
+ "title": "Training Feedback",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide feedback on organizational training results to the following personnel {param:at-06_odp.01}: {param:at-06_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "at-06_odp.01",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "at-06_odp.02",
+     "type": "string",
+     "label": "personnel"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Training feedback includes awareness training results and role-based training results. Training results, especially failures of personnel in critical roles, can be indicative of a potentially serious problem. Therefore, it is important that senior managers are made aware of such situations so that they can take appropriate response actions. Training feedback supports the evaluation and update of organizational training described in AT-2b and AT-3b."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "at-6_obj",
+     "label": "AT-06",
+     "prose": {
+      "en": "feedback on organizational training results is provided {param:at-06_odp.01} to {param:at-06_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AT-06-Examine",
+     "objects": [
+      {
+       "en": "Security awareness and training policy"
+      },
+      {
+       "en": "procedures addressing security training records"
+      },
+      {
+       "en": "security awareness and training records"
+      },
+      {
+       "en": "security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AT-06-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security training record retention responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AT-06-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting the management of security training records"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "at-06_odp.01": {
+     "guidelines": [
+      {
+       "en": "frequency at which to provide feedback on organizational training results is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "at-6_prm_1"
+     ]
+    },
+    "at-06_odp.02": {
+     "guidelines": [
+      {
+       "en": "personnel to whom feedback on organizational training results will be provided is/are assigned;"
+      }
+     ],
+     "alt-identifiers": [
+      "at-6_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ }
+}

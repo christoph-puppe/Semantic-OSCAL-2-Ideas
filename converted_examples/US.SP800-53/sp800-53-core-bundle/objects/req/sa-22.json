@@ -1,0 +1,191 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-22",
+ "version": "5.2.0",
+ "label": "SA-22",
+ "lifecycle": "active",
+ "title": "Unsupported System Components",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Replace system components when support for the components is no longer available from the developer, vendor, or manufacturer; or"
+   },
+   "parameters": [
+    {
+     "name": "sa-22_odp.02",
+     "type": "string",
+     "label": "support from external providers"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide the following options for alternative sources for continued support for unsupported components {param:sa-22_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "sa-22_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "in-house support"
+      },
+      {
+       "value": "{param:sa-22_odp.02} "
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Support for system components includes software patches, firmware updates, replacement parts, and maintenance contracts. An example of unsupported components includes when vendors no longer provide critical software patches or product updates, which can result in an opportunity for adversaries to exploit weaknesses in the installed components. Exceptions to replacing unsupported system components include systems that provide critical mission or business capabilities where newer technologies are not available or where the systems are so isolated that installing replacement components is not an option.\n\nAlternative sources for support address the need to provide continued support for system components that are no longer supported by the original manufacturers, developers, or vendors when such components remain essential to organizational mission and business functions. If necessary, organizations can establish in-house support by developing customized patches for critical software components or, alternatively, obtain the services of external providers who provide ongoing support for the designated unsupported components through contractual relationships. Such contractual relationships can include open-source software value-added vendors. The increased risk of using unsupported system components can be mitigated, for example, by prohibiting the connection of such components to public or uncontrolled networks, or implementing other forms of isolation."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-22_obj",
+     "label": "SA-22",
+     "children": [
+      {
+       "id": "sa-22_obj.a",
+       "label": "SA-22a.",
+       "prose": {
+        "en": "system components are replaced when support for the components is no longer available from the developer, vendor, or manufacturer;"
+       }
+      },
+      {
+       "id": "sa-22_obj.b",
+       "label": "SA-22b.",
+       "prose": {
+        "en": "{param:sa-22_odp.01} provide options for alternative sources for continued support for unsupported components."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-22-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing the replacement or continued use of unsupported system components"
+      },
+      {
+       "en": "documented evidence of replacing unsupported system components"
+      },
+      {
+       "en": "documented approvals (including justification) for the continued use of unsupported system components"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-22-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with the responsibility for the system development life cycle"
+      },
+      {
+       "en": "organizational personnel responsible for component replacement"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-22-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for replacing unsupported system components"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the replacement of unsupported system components"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-22_odp.01": {
+     "alt-identifiers": [
+      "sa-22_prm_1"
+     ]
+    },
+    "sa-22_odp.02": {
+     "guidelines": [
+      {
+       "en": "support from external providers is defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-22_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-3"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-22.1",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-22.1",
+    "mode": "merged-into",
+    "label": "SA-22(01)",
+    "title": "Alternative Sources for Continued Support"
+   }
+  ]
+ }
+}

@@ -1,0 +1,228 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-13.4",
+ "version": "5.2.0",
+ "label": "SI-13(4)",
+ "lifecycle": "active",
+ "title": "Standby Component Installation and Notification",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "If system component failures are detected:"
+   },
+   "parameters": [
+    {
+     "name": "si-13.04_odp.03",
+     "type": "string",
+     "label": "alarm"
+    },
+    {
+     "name": "si-13.04_odp.04",
+     "type": "string",
+     "label": "action"
+    }
+   ]
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Ensure that the standby components are successfully and transparently installed within {param:si-13.04_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "si-13.04_odp.01",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "{param:si-13.04_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "si-13.04_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "activate {param:si-13.04_odp.03} "
+      },
+      {
+       "value": "automatically shut down the system"
+      },
+      {
+       "value": "{param:si-13.04_odp.04} "
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Automatic or manual transfer of components from standby to active mode can occur upon the detection of component failures."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-13.4_obj",
+     "label": "SI-13(04)",
+     "children": [
+      {
+       "id": "si-13.4_obj.a",
+       "label": "SI-13(04)(a)",
+       "prose": {
+        "en": "the standby components are successfully and transparently installed within {param:si-13.04_odp.01} if system component failures are detected;"
+       }
+      },
+      {
+       "id": "si-13.4_obj.b",
+       "label": "SI-13(04)(b)",
+       "prose": {
+        "en": "{param:si-13.04_odp.02} are performed if system component failures are detected."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-13(04)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing predictable failure prevention"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of actions to be taken once system component failure is detected"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-13(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for MTTF activities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with contingency planning responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-13(04)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing MTTF"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing the transparent installation of standby components"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing alarms or system shutdown if component failures are detected"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-13.04_odp.01": {
+     "guidelines": [
+      {
+       "en": "time period for standby components to be installed is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-13.4_prm_1"
+     ]
+    },
+    "si-13.04_odp.02": {
+     "alt-identifiers": [
+      "si-13.4_prm_2"
+     ]
+    },
+    "si-13.04_odp.03": {
+     "guidelines": [
+      {
+       "en": "alarm to be activated when system component failures are detected is defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "si-13.4_prm_3"
+     ]
+    },
+    "si-13.04_odp.04": {
+     "guidelines": [
+      {
+       "en": "action to be taken when system component failures are detected is defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "si-13.4_prm_4"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-13"
+  }
+ ]
+}

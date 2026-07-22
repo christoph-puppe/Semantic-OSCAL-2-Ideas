@@ -1,0 +1,125 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-30.4",
+ "version": "5.2.0",
+ "label": "SC-30(4)",
+ "lifecycle": "active",
+ "title": "Misleading Information",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ realistic, but misleading information in {param:sc-30.04_odp} about its security state or posture."
+   },
+   "parameters": [
+    {
+     "name": "sc-30.04_odp",
+     "type": "string",
+     "label": "system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Employing misleading information is intended to confuse potential adversaries regarding the nature and extent of controls deployed by organizations. Thus, adversaries may employ incorrect and ineffective attack techniques. One technique for misleading adversaries is for organizations to place misleading information regarding the specific controls deployed in external systems that are known to be targeted by adversaries. Another technique is the use of deception nets that mimic actual aspects of organizational systems but use, for example, out-of-date software configurations."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-30.4_obj",
+     "label": "SC-30(04)",
+     "prose": {
+      "en": "realistic but misleading information about the security state or posture of {param:sc-30.04_odp} is employed."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-30(04)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "configuration management policy and procedures"
+      },
+      {
+       "en": "procedures addressing concealment and misdirection techniques for the system"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-30(04)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with the responsibility to define and employ realistic but misleading information about the security posture of system components"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-30(04)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the employment of realistic but misleading information about the security posture of system components"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-30.04_odp": {
+     "guidelines": [
+      {
+       "en": "system components for which realistic but misleading information about their security state or posture is employed are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-30.4_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-30"
+  }
+ ]
+}

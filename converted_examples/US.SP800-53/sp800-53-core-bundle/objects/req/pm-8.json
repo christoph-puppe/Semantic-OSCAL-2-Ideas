@@ -1,0 +1,190 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-8",
+ "version": "5.2.0",
+ "label": "PM-8",
+ "lifecycle": "active",
+ "title": "Critical Infrastructure Plan",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Address information security and privacy issues in the development, documentation, and updating of a critical infrastructure and key resources protection plan."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Protection strategies are based on the prioritization of critical assets and resources. The requirement and guidance for defining critical infrastructure and key resources and for preparing an associated critical infrastructure protection plan are found in applicable laws, executive orders, directives, policies, regulations, standards, and guidelines."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-8_obj",
+     "label": "PM-08",
+     "children": [
+      {
+       "id": "pm-8_obj-1",
+       "label": "PM-08[01]",
+       "prose": {
+        "en": "information security issues are addressed in the development of a critical infrastructure and key resources protection plan;"
+       }
+      },
+      {
+       "id": "pm-8_obj-2",
+       "label": "PM-08[02]",
+       "prose": {
+        "en": "information security issues are addressed in the documentation of a critical infrastructure and key resources protection plan;"
+       }
+      },
+      {
+       "id": "pm-8_obj-3",
+       "label": "PM-08[03]",
+       "prose": {
+        "en": "information security issues are addressed in the update of a critical infrastructure and key resources protection plan;"
+       }
+      },
+      {
+       "id": "pm-8_obj-4",
+       "label": "PM-08[04]",
+       "prose": {
+        "en": "privacy issues are addressed in the development of a critical infrastructure and key resources protection plan;"
+       }
+      },
+      {
+       "id": "pm-8_obj-5",
+       "label": "PM-08[05]",
+       "prose": {
+        "en": "privacy issues are addressed in the documentation of a critical infrastructure and key resources protection plan;"
+       }
+      },
+      {
+       "id": "pm-8_obj-6",
+       "label": "PM-08[06]",
+       "prose": {
+        "en": "privacy issues are addressed in the update of a critical infrastructure and key resources protection plan."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-08-Examine",
+     "objects": [
+      {
+       "en": "Information security program plan"
+      },
+      {
+       "en": "privacy program plan"
+      },
+      {
+       "en": "critical infrastructure and key resources protection plan"
+      },
+      {
+       "en": "procedures addressing the development, documentation, and updating of the critical infrastructure and key resources protection plan"
+      },
+      {
+       "en": "HSPD 7"
+      },
+      {
+       "en": "National Infrastructure Protection Plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-08-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy program planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel responsible for developing, documenting, and updating the critical infrastructure and key resources protection plan"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PM-08-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for developing, documenting, and updating the critical infrastructure and key resources protection plan"
+      },
+      {
+       "en": "mechanisms supporting the development, documentation, and updating of the critical infrastructure and key resources protection plan"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://obamawhitehouse.archives.gov/the-press-office/2013/02/12/executive-order-improving-critical-infrastructure-cybersecurity"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.dhs.gov/homeland-security-presidential-directive-7"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.dhs.gov/xlibrary/assets/NIPP_Plan.pdf"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-18"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-18"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  }
+ ]
+}

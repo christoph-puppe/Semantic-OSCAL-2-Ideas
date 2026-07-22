@@ -1,0 +1,135 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-8.2",
+ "version": "5.2.0",
+ "label": "SC-8(2)",
+ "lifecycle": "active",
+ "title": "Pre- and Post-transmission Handling",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Maintain the {param:sc-08.02_odp} of information during preparation for transmission and during reception."
+   },
+   "parameters": [
+    {
+     "name": "sc-08.02_odp",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "confidentiality"
+      },
+      {
+       "value": "integrity"
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Information can be unintentionally or maliciously disclosed or modified during preparation for transmission or during reception, including during aggregation, at protocol transformation points, and during packing and unpacking. Such unauthorized disclosures or modifications compromise the confidentiality or integrity of the information."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-8.2_obj",
+     "label": "SC-08(02)",
+     "children": [
+      {
+       "id": "sc-8.2_obj-1",
+       "label": "SC-08(02)[01]",
+       "prose": {
+        "en": "information {param:sc-08.02_odp} is/are maintained during preparation for transmission;"
+       }
+      },
+      {
+       "id": "sc-8.2_obj-2",
+       "label": "SC-08(02)[02]",
+       "prose": {
+        "en": "information {param:sc-08.02_odp} is/are maintained during reception."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-08(02)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing transmission confidentiality and integrity"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-08(02)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-08(02)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing transmission confidentiality and/or integrity"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-08.02_odp": {
+     "alt-identifiers": [
+      "sc-8.2_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-8"
+  }
+ ]
+}

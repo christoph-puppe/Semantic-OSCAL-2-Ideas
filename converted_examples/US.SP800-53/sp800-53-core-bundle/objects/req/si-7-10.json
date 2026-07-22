@@ -1,0 +1,159 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-7.10",
+ "version": "5.2.0",
+ "label": "SI-7(10)",
+ "lifecycle": "active",
+ "title": "Protection of Boot Firmware",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement the following mechanisms to protect the integrity of boot firmware in {param:si-07.10_odp.02}: {param:si-07.10_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "si-07.10_odp.01",
+     "type": "string",
+     "label": "mechanisms"
+    },
+    {
+     "name": "si-07.10_odp.02",
+     "type": "string",
+     "label": "system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Unauthorized modifications to boot firmware may indicate a sophisticated, targeted attack. These types of targeted attacks can result in a permanent denial of service or a persistent malicious code presence. These situations can occur if the firmware is corrupted or if the malicious code is embedded within the firmware. System components can protect the integrity of boot firmware in organizational systems by verifying the integrity and authenticity of all updates to the firmware prior to applying changes to the system component and preventing unauthorized processes from modifying the boot firmware."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-7.10_obj",
+     "label": "SI-07(10)",
+     "prose": {
+      "en": "{param:si-07.10_odp.01} are implemented to protect the integrity of boot firmware in {param:si-07.10_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-07(10)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing software, firmware, and information integrity"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "integrity verification tools and associated documentation"
+      },
+      {
+       "en": "records of integrity verification scans"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-07(10)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for software, firmware, and/or information integrity"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-07(10)-Test",
+     "objects": [
+      {
+       "en": "Software, firmware, and information integrity verification tools"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing protection of the integrity of boot firmware"
+      },
+      {
+       "en": "safeguards implementing protection of the integrity of boot firmware"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-07.10_odp.01": {
+     "guidelines": [
+      {
+       "en": "mechanisms to be implemented to protect the integrity of boot firmware in system components are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-7.10_prm_2"
+     ]
+    },
+    "si-07.10_odp.02": {
+     "guidelines": [
+      {
+       "en": "system components requiring mechanisms to protect the integrity of boot firmware are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-7.10_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-6"
+  }
+ ]
+}

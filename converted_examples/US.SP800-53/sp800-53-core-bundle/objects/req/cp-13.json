@@ -1,0 +1,149 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-13",
+ "version": "5.2.0",
+ "label": "CP-13",
+ "lifecycle": "active",
+ "title": "Alternative Security Mechanisms",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Employ {param:cp-13_odp.01} for satisfying {param:cp-13_odp.02} when the primary means of implementing the security function is unavailable or compromised."
+   },
+   "parameters": [
+    {
+     "name": "cp-13_odp.01",
+     "type": "string",
+     "label": "alternative or supplemental security mechanisms"
+    },
+    {
+     "name": "cp-13_odp.02",
+     "type": "string",
+     "label": "security functions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Use of alternative security mechanisms supports system resiliency, contingency planning, and continuity of operations. To ensure mission and business continuity, organizations can implement alternative or supplemental security mechanisms. The mechanisms may be less effective than the primary mechanisms. However, having the capability to readily employ alternative or supplemental mechanisms enhances mission and business continuity that might otherwise be adversely impacted if operations had to be curtailed until the primary means of implementing the functions was restored. Given the cost and level of effort required to provide such alternative capabilities, the alternative or supplemental mechanisms are only applied to critical security capabilities provided by systems, system components, or system services. For example, an organization may issue one-time pads to senior executives, officials, and system administrators if multi-factor tokens—the standard means for achieving secure authentication— are compromised."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-13_obj",
+     "label": "CP-13",
+     "prose": {
+      "en": "{param:cp-13_odp.01} are employed for satisfying {param:cp-13_odp.02} when the primary means of implementing the security function is unavailable or compromised."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-13-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing alternate security mechanisms"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "continuity of operations plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "contingency plan test records"
+      },
+      {
+       "en": "contingency plan test results"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-13-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system operation responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-13-Test",
+     "objects": [
+      {
+       "en": "system capability implementing alternative security mechanisms"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cp-13_odp.01": {
+     "guidelines": [
+      {
+       "en": "alternative or supplemental security mechanisms are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cp-13_prm_1"
+     ]
+    },
+    "cp-13_odp.02": {
+     "guidelines": [
+      {
+       "en": "security functions are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cp-13_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-13"
+  }
+ ]
+}

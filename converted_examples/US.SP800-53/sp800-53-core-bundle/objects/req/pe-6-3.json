@@ -1,0 +1,208 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-6.3",
+ "version": "5.2.0",
+ "label": "PE-6(3)",
+ "lifecycle": "active",
+ "title": "Video Surveillance",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ video surveillance of {param:pe-06.03_odp.01};"
+   },
+   "parameters": [
+    {
+     "name": "pe-06.03_odp.01",
+     "type": "string",
+     "label": "operational areas"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review video recordings {param:pe-06.03_odp.02} ; and"
+   },
+   "parameters": [
+    {
+     "name": "pe-06.03_odp.02",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Retain video recordings for {param:pe-06.03_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "pe-06.03_odp.03",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Video surveillance focuses on recording activity in specified areas for the purposes of subsequent review, if circumstances so warrant. Video recordings are typically reviewed to detect anomalous events or incidents. Monitoring the surveillance video is not required, although organizations may choose to do so. There may be legal considerations when performing and retaining video surveillance, especially if such surveillance is in a public location."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-6.3_obj",
+     "label": "PE-06(03)",
+     "children": [
+      {
+       "id": "pe-6.3_obj.a",
+       "label": "PE-06(03)(a)",
+       "prose": {
+        "en": "video surveillance of {param:pe-06.03_odp.01} is employed;"
+       }
+      },
+      {
+       "id": "pe-6.3_obj.b",
+       "label": "PE-06(03)(b)",
+       "prose": {
+        "en": "video recordings are reviewed {param:pe-06.03_odp.02};"
+       }
+      },
+      {
+       "id": "pe-6.3_obj.c",
+       "label": "PE-06(03)(c)",
+       "prose": {
+        "en": "video recordings are retained for {param:pe-06.03_odp.03}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-06(03)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing physical access monitoring"
+      },
+      {
+       "en": "video surveillance equipment used to monitor operational areas"
+      },
+      {
+       "en": "video recordings of operational areas where video surveillance is employed"
+      },
+      {
+       "en": "video surveillance equipment logs or records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-06(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with physical access monitoring responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-06(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for monitoring physical access"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing physical access monitoring"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing video surveillance"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-06.03_odp.01": {
+     "guidelines": [
+      {
+       "en": "operational areas where video surveillance is to be employed are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-6.3_prm_1"
+     ]
+    },
+    "pe-06.03_odp.02": {
+     "guidelines": [
+      {
+       "en": "frequency at which to review video recordings is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-6.3_prm_2"
+     ]
+    },
+    "pe-06.03_odp.03": {
+     "guidelines": [
+      {
+       "en": "time period for which to retain video recordings is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-6.3_prm_3"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-6"
+  }
+ ]
+}

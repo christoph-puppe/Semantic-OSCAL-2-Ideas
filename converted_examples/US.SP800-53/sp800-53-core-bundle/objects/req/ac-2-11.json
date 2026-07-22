@@ -1,0 +1,140 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-2.11",
+ "version": "5.2.0",
+ "label": "AC-2(11)",
+ "lifecycle": "active",
+ "title": "Usage Conditions",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Enforce {param:ac-02.11_odp.01} for {param:ac-02.11_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ac-02.11_odp.01",
+     "type": "string",
+     "label": "circumstances and/or usage conditions"
+    },
+    {
+     "name": "ac-02.11_odp.02",
+     "type": "string",
+     "label": "system accounts"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Specifying and enforcing usage conditions helps to enforce the principle of least privilege, increase user accountability, and enable effective account monitoring. Account monitoring includes alerts generated if the account is used in violation of organizational parameters. Organizations can describe specific conditions or circumstances under which system accounts can be used, such as by restricting usage to certain days of the week, time of day, or specific durations of time."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-2.11_obj",
+     "label": "AC-02(11)",
+     "prose": {
+      "en": "{param:ac-02.11_odp.01} for {param:ac-02.11_odp.02} are enforced."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-02(11)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing account management"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system-generated list of system accounts and associated assignments of usage circumstances and/or usage conditions"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-02(11)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with account management responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-02(11)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing account management functions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-02.11_odp.01": {
+     "guidelines": [
+      {
+       "en": "circumstances and/or usage conditions to be enforced for system accounts are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2.11_prm_1"
+     ]
+    },
+    "ac-02.11_odp.02": {
+     "guidelines": [
+      {
+       "en": "system accounts subject to enforcement of circumstances and/or usage conditions are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2.11_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  }
+ ]
+}

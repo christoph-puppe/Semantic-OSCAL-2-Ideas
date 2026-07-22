@@ -1,0 +1,149 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-2.5",
+ "version": "5.2.0",
+ "label": "CP-2(5)",
+ "lifecycle": "active",
+ "title": "Continue Mission and Business Functions",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Plan for the continuance of {param:cp-02.05_odp} mission and business functions with minimal or no loss of operational continuity and sustains that continuity until full system restoration at primary processing and/or storage sites."
+   },
+   "parameters": [
+    {
+     "name": "cp-02.05_odp",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "all"
+      },
+      {
+       "value": "essential"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations may choose to conduct the contingency planning activities to continue mission and business functions as part of business continuity planning or business impact analyses. Primary processing and/or storage sites defined by organizations as part of contingency planning may change depending on the circumstances associated with the contingency."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-2.5_obj",
+     "label": "CP-02(05)",
+     "children": [
+      {
+       "id": "cp-2.5_obj-1",
+       "label": "CP-02(05)[01]",
+       "prose": {
+        "en": "the continuance of {param:cp-02.05_odp} mission and business functions with minimal or no loss of operational continuity is planned for;"
+       }
+      },
+      {
+       "id": "cp-2.5_obj-2",
+       "label": "CP-02(05)[02]",
+       "prose": {
+        "en": "continuity is sustained until full system restoration at primary processing and/or storage sites."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-02(05)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing contingency operations for the system"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "business impact assessment"
+      },
+      {
+       "en": "primary processing site agreements"
+      },
+      {
+       "en": "primary storage site agreements"
+      },
+      {
+       "en": "alternate processing site agreements"
+      },
+      {
+       "en": "alternate storage site agreements"
+      },
+      {
+       "en": "contingency plan test documentation"
+      },
+      {
+       "en": "contingency plan test results"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-02(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel with knowledge of requirements for mission and business functions"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-02(05)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for continuing missions and business functions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cp-02.05_odp": {
+     "alt-identifiers": [
+      "cp-2.5_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  }
+ ]
+}

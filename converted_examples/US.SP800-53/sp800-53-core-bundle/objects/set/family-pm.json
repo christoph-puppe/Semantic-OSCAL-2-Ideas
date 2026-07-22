@@ -1,0 +1,166 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/set/family/pm",
+ "version": "5.2.0",
+ "lifecycle": "active",
+ "title": "Program Management",
+ "label": "PM",
+ "members": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-1",
+   "sequence": 10
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-2",
+   "sequence": 20
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-3",
+   "sequence": 30
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-4",
+   "sequence": 40
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-5",
+   "sequence": 50
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-5.1",
+   "sequence": 60
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-6",
+   "sequence": 70
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-7",
+   "sequence": 80
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-7.1",
+   "sequence": 90
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-8",
+   "sequence": 100
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-9",
+   "sequence": 110
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-10",
+   "sequence": 120
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-11",
+   "sequence": 130
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-12",
+   "sequence": 140
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-13",
+   "sequence": 150
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-14",
+   "sequence": 160
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-15",
+   "sequence": 170
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-16",
+   "sequence": 180
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-16.1",
+   "sequence": 190
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-17",
+   "sequence": 200
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-18",
+   "sequence": 210
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-19",
+   "sequence": 220
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-20",
+   "sequence": 230
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-20.1",
+   "sequence": 240
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-21",
+   "sequence": 250
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-22",
+   "sequence": 260
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-23",
+   "sequence": 270
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-24",
+   "sequence": 280
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-25",
+   "sequence": 290
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-26",
+   "sequence": 300
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-27",
+   "sequence": 310
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-28",
+   "sequence": 320
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-29",
+   "sequence": 330
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-30",
+   "sequence": 340
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-30.1",
+   "sequence": 350
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-31",
+   "sequence": 360
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-32",
+   "sequence": 370
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "FISMA, PRIVACT , and OMB A-130 require federal agencies to develop, implement, and provide oversight for organization-wide information security and privacy programs to help ensure the confidentiality, integrity, and availability of federal information processed, stored, and transmitted by federal information systems and to protect individual privacy. The program management (PM) controls described in this section are implemented at the organization level and not directed at individual information systems. The PM controls have been designed to facilitate organizational compliance with applicable federal laws, executive orders, directives, policies, regulations, and standards. The controls are independent of FIPS 200 impact levels and, therefore, are not associated with the control baselines described in SP 800-53B.\n\nOrganizations document program management controls in the information security and privacy program plans. The organization-wide information security program plan (see PM-1 ) and privacy program plan (see PM-18 ) supplement system security and privacy plans (see PL-2 ) developed for organizational information systems. Together, the system security and privacy plans for the individual information systems and the information security and privacy program plans cover the totality of security and privacy controls employed by the organization."
+    }
+   ]
+  }
+ }
+}

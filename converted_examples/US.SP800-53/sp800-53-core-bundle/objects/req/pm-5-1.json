@@ -1,0 +1,188 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-5.1",
+ "version": "5.2.0",
+ "label": "PM-5(1)",
+ "lifecycle": "active",
+ "title": "Inventory of Personally Identifiable Information",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish, maintain, and update {param:pm-05.01_odp} an inventory of all systems, applications, and projects that process personally identifiable information."
+   },
+   "parameters": [
+    {
+     "name": "pm-05.01_odp",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "An inventory of systems, applications, and projects that process personally identifiable information supports the mapping of data actions, providing individuals with privacy notices, maintaining accurate personally identifiable information, and limiting the processing of personally identifiable information when such information is not needed for operational purposes. Organizations may use this inventory to ensure that systems only process the personally identifiable information for authorized purposes and that this processing is still relevant and necessary for the purpose specified therein."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-5.1_obj",
+     "label": "PM-05(01)",
+     "children": [
+      {
+       "id": "pm-5.1_obj-1",
+       "label": "PM-05(01)[01]",
+       "prose": {
+        "en": "an inventory of all systems, applications, and projects that process personally identifiable information is established;"
+       }
+      },
+      {
+       "id": "pm-5.1_obj-2",
+       "label": "PM-05(01)[02]",
+       "prose": {
+        "en": "an inventory of all systems, applications, and projects that process personally identifiable information is maintained;"
+       }
+      },
+      {
+       "id": "pm-5.1_obj-3",
+       "label": "PM-05(01)[03]",
+       "prose": {
+        "en": "an inventory of all systems, applications, and projects that process personally identifiable information is updated {param:pm-05.01_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-05(01)-Examine",
+     "objects": [
+      {
+       "en": "Procedures addressing system inventory development, maintenance, and updates"
+      },
+      {
+       "en": "OMB FISMA reporting guidance"
+      },
+      {
+       "en": "privacy program plan"
+      },
+      {
+       "en": "information security program plan"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "system inventory"
+      },
+      {
+       "en": "personally identifiable information inventory"
+      },
+      {
+       "en": "data mapping documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-05(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with privacy program planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel responsible for developing and maintaining the system inventory"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PM-05(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for system inventory development, maintenance, and updates"
+      },
+      {
+       "en": "mechanisms supporting the system inventory"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pm-05.01_odp": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to update the inventory of systems, applications, and projects that process personally identifiable information is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pm-5.1_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-22"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-18"
+  }
+ ]
+}

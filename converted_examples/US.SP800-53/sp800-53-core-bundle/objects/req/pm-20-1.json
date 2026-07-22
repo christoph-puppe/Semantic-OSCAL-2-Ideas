@@ -1,0 +1,199 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-20.1",
+ "version": "5.2.0",
+ "label": "PM-20(1)",
+ "lifecycle": "active",
+ "title": "Privacy Policies on Websites, Applications, and Digital Services",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop and post privacy policies on all external-facing websites, mobile applications, and other digital services, that:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Are written in plain language and organized in a way that is easy to understand and navigate;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide information needed by the public to make an informed decision about whether and how to interact with the organization; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Are updated whenever the organization makes a substantive change to the practices it describes and includes a time/date stamp to inform the public of the date of the most recent changes."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations post privacy policies on all external-facing websites, mobile applications, and other digital services. Organizations post a link to the relevant privacy policy on any known, major entry points to the website, application, or digital service. In addition, organizations provide a link to the privacy policy on any webpage that collects personally identifiable information. Organizations may be subject to applicable laws, executive orders, directives, regulations, or policies that require the provision of specific information to the public. Organizational personnel consult with the senior agency official for privacy and legal counsel regarding such requirements."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-20.1_obj",
+     "label": "PM-20(01)",
+     "children": [
+      {
+       "id": "pm-20.1_obj-1",
+       "label": "PM-20(01)[01]",
+       "prose": {
+        "en": "privacy policies are developed and posted on all external-facing websites;"
+       }
+      },
+      {
+       "id": "pm-20.1_obj-2",
+       "label": "PM-20(01)[02]",
+       "prose": {
+        "en": "privacy policies are developed and posted on all mobile applications;"
+       }
+      },
+      {
+       "id": "pm-20.1_obj-3",
+       "label": "PM-20(01)[03]",
+       "prose": {
+        "en": "privacy policies are developed and posted on all other digital services;"
+       }
+      },
+      {
+       "id": "pm-20.1_obj.a",
+       "label": "PM-20(01)(a)",
+       "children": [
+        {
+         "id": "pm-20.1_obj.a-1",
+         "label": "PM-20(01)(a)[01]",
+         "prose": {
+          "en": "the privacy policies are written in plain language;"
+         }
+        },
+        {
+         "id": "pm-20.1_obj.a-2",
+         "label": "PM-20(01)(a)[02]",
+         "prose": {
+          "en": "the privacy policies are organized in a way that is easy to understand and navigate;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-20.1_obj.b",
+       "label": "PM-20(01)(b)",
+       "children": [
+        {
+         "id": "pm-20.1_obj.b-1",
+         "label": "PM-20(01)(b)[01]",
+         "prose": {
+          "en": "the privacy policies provide the information needed by the public to make an informed decision about whether to interact with the organization;"
+         }
+        },
+        {
+         "id": "pm-20.1_obj.b-2",
+         "label": "PM-20(01)(b)[02]",
+         "prose": {
+          "en": "the privacy policies provide the information needed by the public to make an informed decision about how to interact with the organization;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-20.1_obj.c",
+       "label": "PM-20(01)(c)",
+       "children": [
+        {
+         "id": "pm-20.1_obj.c-1",
+         "label": "PM-20(01)(c)[01]",
+         "prose": {
+          "en": "the privacy policies are updated whenever the organization makes a substantive change to the practices it describes;"
+         }
+        },
+        {
+         "id": "pm-20.1_obj.c-2",
+         "label": "PM-20(01)(c)[02]",
+         "prose": {
+          "en": "the privacy policies include a time/date stamp to inform the public of the date of the most recent changes."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-20(01)-Examine",
+     "objects": [
+      {
+       "en": "Privacy program plan"
+      },
+      {
+       "en": "privacy policies on the agency website, mobile applications, and/or other digital services"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-20(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with privacy program information dissemination responsibilities"
+      },
+      {
+       "en": "organizational personnel with privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PM-20(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational procedures and practices for authorizing, conducting, managing, and reviewing personally identifiable information processing"
+      },
+      {
+       "en": "organizational procedures and practices for disseminating privacy program information"
+      },
+      {
+       "en": "mechanisms supporting the dissemination of privacy program information"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-20"
+  }
+ ]
+}

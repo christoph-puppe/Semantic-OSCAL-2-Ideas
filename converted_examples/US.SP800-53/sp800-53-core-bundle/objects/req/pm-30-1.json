@@ -1,0 +1,138 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-30.1",
+ "version": "5.2.0",
+ "label": "PM-30(1)",
+ "lifecycle": "active",
+ "title": "Suppliers of Critical or Mission-essential Items",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identify, prioritize, and assess suppliers of critical or mission-essential technologies, products, and services."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The identification and prioritization of suppliers of critical or mission-essential technologies, products, and services is paramount to the mission/business success of organizations. The assessment of suppliers is conducted using supplier reviews (see SR-6 ) and supply chain risk assessment processes (see RA-3(1) ). An analysis of supply chain risk can help an organization identify systems or components for which additional supply chain risk mitigations are required."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-30.1_obj",
+     "label": "PM-30(01)",
+     "children": [
+      {
+       "id": "pm-30.1_obj-1",
+       "label": "PM-30(01)[01]",
+       "prose": {
+        "en": "suppliers of critical or mission-essential technologies, products, and services are identified;"
+       }
+      },
+      {
+       "id": "pm-30.1_obj-2",
+       "label": "PM-30(01)[02]",
+       "prose": {
+        "en": "suppliers of critical or mission-essential technologies, products, and services are prioritized;"
+       }
+      },
+      {
+       "id": "pm-30.1_obj-3",
+       "label": "PM-30(01)[03]",
+       "prose": {
+        "en": "suppliers of critical or mission-essential technologies, products, and services are assessed."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-30(01)-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management strategy"
+      },
+      {
+       "en": "organization-wide risk management strategy"
+      },
+      {
+       "en": "enterprise risk management documents"
+      },
+      {
+       "en": "inventory records or suppliers"
+      },
+      {
+       "en": "assessment and prioritization documentation"
+      },
+      {
+       "en": "critical or mission-essential technologies, products, and service documents or records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-30(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with supply chain risk management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with enterprise risk management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PM-30(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for identifying, prioritizing, and assessing critical or mission-essential technologies, products, and services"
+      },
+      {
+       "en": "organizational processes for maintaining an inventory of suppliers"
+      },
+      {
+       "en": "organizational process for associating suppliers with critical or mission-essential technologies, products, and services"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-30"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-6"
+  }
+ ]
+}

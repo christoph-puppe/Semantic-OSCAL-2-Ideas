@@ -1,0 +1,156 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-12.1",
+ "version": "5.2.0",
+ "label": "SI-12(1)",
+ "lifecycle": "active",
+ "title": "Limit Personally Identifiable Information Elements",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Limit personally identifiable information being processed in the information life cycle to the following elements of personally identifiable information: {param:si-12.01_odp}."
+   },
+   "parameters": [
+    {
+     "name": "si-12.01_odp",
+     "type": "string",
+     "label": "elements of personally identifiable information"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Limiting the use of personally identifiable information throughout the information life cycle when the information is not needed for operational purposes helps to reduce the level of privacy risk created by a system. The information life cycle includes information creation, collection, use, processing, storage, maintenance, dissemination, disclosure, and disposition. Risk assessments as well as applicable laws, regulations, and policies can provide useful inputs to determining which elements of personally identifiable information may create risk."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-12.1_obj",
+     "label": "SI-12(01)",
+     "prose": {
+      "en": "personally identifiable information being processed in the information life cycle is limited to {param:si-12.01_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-12(01)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "personally identifiable information processing procedures"
+      },
+      {
+       "en": "records retention and disposition policy"
+      },
+      {
+       "en": "records retention and disposition procedures"
+      },
+      {
+       "en": "federal laws, Executive Orders, directives, policies, regulations, standards, and operational requirements applicable to limiting personally identifiable information elements"
+      },
+      {
+       "en": "personally identifiable information inventory"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "audit findings"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy program plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "data mapping documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-12(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information and records management, retention, and disposition responsibilities"
+      },
+      {
+       "en": "organizational personnel with security and privacy responsibilities"
+      },
+      {
+       "en": "network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-12(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for information management and retention (including limiting personally identifiable information processing)"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing limits to personally identifiable information processing"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-12.01_odp": {
+     "guidelines": [
+      {
+       "en": "elements of personally identifiable information being processed in the information life cycle are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-12.1_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-25"
+  }
+ ]
+}

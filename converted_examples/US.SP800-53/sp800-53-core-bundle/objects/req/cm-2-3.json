@@ -1,0 +1,125 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-2.3",
+ "version": "5.2.0",
+ "label": "CM-2(3)",
+ "lifecycle": "active",
+ "title": "Retention of Previous Configurations",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Retain {param:cm-02.03_odp} of previous versions of baseline configurations of the system to support rollback."
+   },
+   "parameters": [
+    {
+     "name": "cm-02.03_odp",
+     "type": "string",
+     "label": "number"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Retaining previous versions of baseline configurations to support rollback include hardware, software, firmware, configuration files, configuration records, and associated documentation."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-2.3_obj",
+     "label": "CM-02(03)",
+     "prose": {
+      "en": "{param:cm-02.03_odp} of previous baseline configuration version(s) of the system is/are retained to support rollback."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-02(03)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing the baseline configuration of the system"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system architecture and configuration documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "copies of previous baseline configuration versions"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-02(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with configuration management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-02(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing baseline configurations"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-02.03_odp": {
+     "guidelines": [
+      {
+       "en": "the number of previous baseline configuration versions to be retained is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-2.3_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-2"
+  }
+ ]
+}

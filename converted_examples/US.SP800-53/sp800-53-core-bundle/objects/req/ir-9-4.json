@@ -1,0 +1,119 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-9.4",
+ "version": "5.2.0",
+ "label": "IR-9(4)",
+ "lifecycle": "active",
+ "title": "Exposure to Unauthorized Personnel",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ the following controls for personnel exposed to information not within assigned access authorizations: {param:ir-09.04_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ir-09.04_odp",
+     "type": "string",
+     "label": "controls"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Controls include ensuring that personnel who are exposed to spilled information are made aware of the laws, executive orders, directives, regulations, policies, standards, and guidelines regarding the information and the restrictions imposed based on exposure to such information."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-9.4_obj",
+     "label": "IR-09(04)",
+     "prose": {
+      "en": "{param:ir-09.04_odp} are employed for personnel exposed to information not within assigned access authorizations."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-09(04)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing incident response"
+      },
+      {
+       "en": "procedures addressing information spillage"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "security safeguards regarding information spillage/exposure to unauthorized personnel"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-09(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident response responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IR-09(04)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for dealing with information exposed to unauthorized personnel"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing safeguards for personnel exposed to information not within assigned access authorizations"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ir-09.04_odp": {
+     "guidelines": [
+      {
+       "en": "controls employed for personnel exposed to information not within assigned access authorizations are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-9.4_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-9"
+  }
+ ]
+}

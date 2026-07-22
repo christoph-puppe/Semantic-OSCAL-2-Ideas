@@ -1,0 +1,282 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-16.6",
+ "version": "5.2.0",
+ "label": "AC-16(6)",
+ "lifecycle": "active",
+ "title": "Maintenance of Attribute Association",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require personnel to associate and maintain the association of {param:ac-16.6_prm_1} with {param:ac-16.6_prm_2} in accordance with {param:ac-16.6_prm_3}."
+   },
+   "parameters": [
+    {
+     "name": "ac-16.6_prm_1",
+     "type": "string",
+     "label": "organization-defined security and privacy attributes"
+    },
+    {
+     "name": "ac-16.6_prm_2",
+     "type": "string",
+     "label": "organization-defined subjects and objects"
+    },
+    {
+     "name": "ac-16.6_prm_3",
+     "type": "string",
+     "label": "organization-defined security and privacy policies"
+    },
+    {
+     "name": "ac-16.06_odp.01",
+     "type": "string",
+     "label": "security attributes"
+    },
+    {
+     "name": "ac-16.06_odp.02",
+     "type": "string",
+     "label": "security attributes"
+    },
+    {
+     "name": "ac-16.06_odp.03",
+     "type": "string",
+     "label": "privacy attributes"
+    },
+    {
+     "name": "ac-16.06_odp.04",
+     "type": "string",
+     "label": "privacy attributes"
+    },
+    {
+     "name": "ac-16.06_odp.05",
+     "type": "string",
+     "label": "subjects"
+    },
+    {
+     "name": "ac-16.06_odp.06",
+     "type": "string",
+     "label": "objects"
+    },
+    {
+     "name": "ac-16.06_odp.07",
+     "type": "string",
+     "label": "subjects"
+    },
+    {
+     "name": "ac-16.06_odp.08",
+     "type": "string",
+     "label": "objects"
+    },
+    {
+     "name": "ac-16.06_odp.09",
+     "type": "string",
+     "label": "security policies"
+    },
+    {
+     "name": "ac-16.06_odp.10",
+     "type": "string",
+     "label": "privacy policies"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Maintaining attribute association requires individual users (as opposed to the system) to maintain associations of defined security and privacy attributes with subjects and objects."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-16.6_obj",
+     "label": "AC-16(06)",
+     "children": [
+      {
+       "id": "ac-16.6_obj-1",
+       "label": "AC-16(06)[01]",
+       "prose": {
+        "en": "personnel are required to associate and maintain the association of {param:ac-16.06_odp.01} with {param:ac-16.06_odp.05} in accordance with {param:ac-16.06_odp.09};"
+       }
+      },
+      {
+       "id": "ac-16.6_obj-2",
+       "label": "AC-16(06)[02]",
+       "prose": {
+        "en": "personnel are required to associate and maintain the association of {param:ac-16.06_odp.02} with {param:ac-16.06_odp.06} in accordance with {param:ac-16.06_odp.09};"
+       }
+      },
+      {
+       "id": "ac-16.6_obj-3",
+       "label": "AC-16(06)[03]",
+       "prose": {
+        "en": "personnel are required to associate and maintain the association of {param:ac-16.06_odp.03} with {param:ac-16.06_odp.07} in accordance with {param:ac-16.06_odp.10};"
+       }
+      },
+      {
+       "id": "ac-16.6_obj-4",
+       "label": "AC-16(06)[04]",
+       "prose": {
+        "en": "personnel are required to associate and maintain the association of {param:ac-16.06_odp.04} with {param:ac-16.06_odp.08} in accordance with {param:ac-16.06_odp.10}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-16(06)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing association of security and privacy attributes with subjects and objects"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-16(06)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for associating and maintaining association of security and privacy attributes with subjects and objects"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-16(06)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting associations of security and privacy attributes to subjects and objects"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-16.6_prm_1": {
+     "aggregates": [
+      "ac-16.06_odp.01",
+      "ac-16.06_odp.02",
+      "ac-16.06_odp.03",
+      "ac-16.06_odp.04"
+     ]
+    },
+    "ac-16.6_prm_2": {
+     "aggregates": [
+      "ac-16.06_odp.05",
+      "ac-16.06_odp.06",
+      "ac-16.06_odp.07",
+      "ac-16.06_odp.08"
+     ]
+    },
+    "ac-16.6_prm_3": {
+     "aggregates": [
+      "ac-16.06_odp.09",
+      "ac-16.06_odp.10"
+     ]
+    },
+    "ac-16.06_odp.01": {
+     "guidelines": [
+      {
+       "en": "security attributes to be associated with subjects are defined;"
+      }
+     ]
+    },
+    "ac-16.06_odp.02": {
+     "guidelines": [
+      {
+       "en": "security attributes to be associated with objects are defined;"
+      }
+     ]
+    },
+    "ac-16.06_odp.03": {
+     "guidelines": [
+      {
+       "en": "privacy attributes to be associated with subjects are defined;"
+      }
+     ]
+    },
+    "ac-16.06_odp.04": {
+     "guidelines": [
+      {
+       "en": "privacy attributes to be associated with objects are defined;"
+      }
+     ]
+    },
+    "ac-16.06_odp.05": {
+     "guidelines": [
+      {
+       "en": "subjects to be associated with information security attributes are defined;"
+      }
+     ]
+    },
+    "ac-16.06_odp.06": {
+     "guidelines": [
+      {
+       "en": "objects to be associated with information security attributes are defined;"
+      }
+     ]
+    },
+    "ac-16.06_odp.07": {
+     "guidelines": [
+      {
+       "en": "subjects to be associated with privacy attributes are defined;"
+      }
+     ]
+    },
+    "ac-16.06_odp.08": {
+     "guidelines": [
+      {
+       "en": "objects to be associated with privacy attributes are defined;"
+      }
+     ]
+    },
+    "ac-16.06_odp.09": {
+     "guidelines": [
+      {
+       "en": "security policies that require personnel to associate and maintain the association of security and privacy attributes with subjects and objects;"
+      }
+     ]
+    },
+    "ac-16.06_odp.10": {
+     "guidelines": [
+      {
+       "en": "privacy policies that require personnel to associate and maintain the association of security and privacy attributes with subjects and objects;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-16"
+  }
+ ]
+}

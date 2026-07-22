@@ -1,0 +1,148 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-4.9",
+ "version": "5.2.0",
+ "label": "SA-4(9)",
+ "lifecycle": "active",
+ "title": "Functions, Ports, Protocols, and Services in Use",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to identify the functions, ports, protocols, and services intended for organizational use."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The identification of functions, ports, protocols, and services early in the system development life cycle (e.g., during the initial requirements definition and design stages) allows organizations to influence the design of the system, system component, or system service. This early involvement in the system development life cycle helps organizations avoid or minimize the use of functions, ports, protocols, or services that pose unnecessarily high risks and understand the trade-offs involved in blocking specific ports, protocols, or services or requiring system service providers to do so. Early identification of functions, ports, protocols, and services avoids costly retrofitting of controls after the system, component, or system service has been implemented. SA-9 describes the requirements for external system services. Organizations identify which functions, ports, protocols, and services are provided from external sources."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-4.9_obj",
+     "label": "SA-04(09)",
+     "children": [
+      {
+       "id": "sa-4.9_obj-1",
+       "label": "SA-04(09)[01]",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to identify the functions intended for organizational use;"
+       }
+      },
+      {
+       "id": "sa-4.9_obj-2",
+       "label": "SA-04(09)[02]",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to identify the ports intended for organizational use;"
+       }
+      },
+      {
+       "id": "sa-4.9_obj-3",
+       "label": "SA-04(09)[03]",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to identify the protocols intended for organizational use;"
+       }
+      },
+      {
+       "id": "sa-4.9_obj-4",
+       "label": "SA-04(09)[04]",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to identify the services intended for organizational use."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-04(09)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing the integration of security requirements, descriptions, and criteria into the acquisition process"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system documentation, including functions, ports, protocols, and services intended for organizational use"
+      },
+      {
+       "en": "acquisition contracts for systems or services"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "organizational security requirements, descriptions, and criteria for developers of systems, system components, and system services"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-04(09)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with acquisition/contracting responsibilities"
+      },
+      {
+       "en": "organizational personnel with the responsibility for determining system security requirements"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel operating, using, and/or maintaining the system"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-9"
+  }
+ ]
+}

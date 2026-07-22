@@ -1,0 +1,227 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-17.1",
+ "version": "5.2.0",
+ "label": "SA-17(1)",
+ "lifecycle": "active",
+ "title": "Formal Policy Model",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to:"
+   },
+   "parameters": [
+    {
+     "name": "sa-17.01_odp.01",
+     "type": "string",
+     "label": "organizational security policy"
+    },
+    {
+     "name": "sa-17.01_odp.02",
+     "type": "string",
+     "label": "organizational privacy policy"
+    }
+   ]
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Produce, as an integral part of the development process, a formal policy model describing the {param:sa-17.1_prm_1} to be enforced; and"
+   },
+   "parameters": [
+    {
+     "name": "sa-17.1_prm_1",
+     "type": "string",
+     "label": "organization-defined elements of organizational security and privacy policy"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Prove that the formal policy model is internally consistent and sufficient to enforce the defined elements of the organizational security and privacy policy when implemented."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Formal models describe specific behaviors or security and privacy policies using formal languages, thus enabling the correctness of those behaviors and policies to be formally proven. Not all components of systems can be modeled. Generally, formal specifications are scoped to the behaviors or policies of interest, such as nondiscretionary access control policies. Organizations choose the formal modeling language and approach based on the nature of the behaviors and policies to be described and the available tools."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-17.1_obj",
+     "label": "SA-17(01)",
+     "children": [
+      {
+       "id": "sa-17.1_obj.a",
+       "label": "SA-17(01)(a)",
+       "children": [
+        {
+         "id": "sa-17.1_obj.a-1",
+         "label": "SA-17(01)(a)[01]",
+         "prose": {
+          "en": "as an integral part of the development process, the developer of the system, system component, or system service is required to produce a formal policy model describing the {param:sa-17.01_odp.01} to be enforced;"
+         }
+        },
+        {
+         "id": "sa-17.1_obj.a-2",
+         "label": "SA-17(01)(a)[02]",
+         "prose": {
+          "en": "as an integral part of the development process, the developer of the system, system component, or system service is required to produce a formal policy model describing the {param:sa-17.01_odp.02} to be enforced;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-17.1_obj.b",
+       "label": "SA-17(01)(b)",
+       "children": [
+        {
+         "id": "sa-17.1_obj.b-1",
+         "label": "SA-17(01)(b)[01]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to prove that the formal policy model is internally consistent and sufficient to enforce the defined elements of the organizational security policy when implemented;"
+         }
+        },
+        {
+         "id": "sa-17.1_obj.b-2",
+         "label": "SA-17(01)(b)[02]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to prove that the formal policy model is internally consistent and sufficient to enforce the defined elements of the organizational privacy policy when implemented."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-17(01)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "enterprise architecture policy"
+      },
+      {
+       "en": "enterprise architecture documentation"
+      },
+      {
+       "en": "procedures addressing developer security and privacy architecture and design specifications for the system"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-17(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-17.1_prm_1": {
+     "aggregates": [
+      "sa-17.01_odp.01",
+      "sa-17.01_odp.02"
+     ]
+    },
+    "sa-17.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "organizational security policy to be enforced is defined;"
+      }
+     ]
+    },
+    "sa-17.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "organizational privacy policy to be enforced is defined;"
+      }
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-25"
+  }
+ ]
+}

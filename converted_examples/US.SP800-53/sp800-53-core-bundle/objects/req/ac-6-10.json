@@ -1,0 +1,127 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-6.10",
+ "version": "5.2.0",
+ "label": "AC-6(10)",
+ "lifecycle": "active",
+ "title": "Prohibit Non-privileged Users from Executing Privileged Functions",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Prevent non-privileged users from executing privileged functions."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Privileged functions include disabling, circumventing, or altering implemented security or privacy controls, establishing system accounts, performing system integrity checks, and administering cryptographic key management activities. Non-privileged users are individuals who do not possess appropriate authorizations. Privileged functions that require protection from non-privileged users include circumventing intrusion detection and prevention mechanisms or malicious code protection mechanisms. Preventing non-privileged users from executing privileged functions is enforced by AC-3."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-6.10_obj",
+     "label": "AC-06(10)",
+     "prose": {
+      "en": "non-privileged users are prevented from executing privileged functions."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-06(10)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing least privilege"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of privileged functions and associated user account assignments"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-06(10)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for defining least privileges necessary to accomplish specified tasks"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-06(10)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing least privilege functions for non-privileged users"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-6"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-3.3",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4.6",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SI-3.3",
+    "mode": "merged-into",
+    "label": "SI-03(03)",
+    "title": "Non-privileged Users"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SI-4.6",
+    "mode": "merged-into",
+    "label": "SI-04(06)",
+    "title": "Restrict Non-privileged Users"
+   }
+  ]
+ }
+}

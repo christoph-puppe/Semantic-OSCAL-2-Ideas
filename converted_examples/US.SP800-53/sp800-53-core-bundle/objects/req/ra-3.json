@@ -1,0 +1,492 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/RA-3",
+ "version": "5.2.0",
+ "label": "RA-3",
+ "lifecycle": "active",
+ "title": "Risk Assessment",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Conduct a risk assessment, including:"
+   },
+   "parameters": [
+    {
+     "name": "ra-03_odp.02",
+     "type": "string",
+     "label": "document"
+    }
+   ]
+  },
+  {
+   "id": "smt.a.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identifying threats to and vulnerabilities in the system;"
+   }
+  },
+  {
+   "id": "smt.a.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Determining the likelihood and magnitude of harm from unauthorized access, use, disclosure, disruption, modification, or destruction of the system, the information it processes, stores, or transmits, and any related information; and"
+   }
+  },
+  {
+   "id": "smt.a.3",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Determining the likelihood and impact of adverse effects on individuals arising from the processing of personally identifiable information;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Integrate risk assessment results and risk management decisions from the organization and mission or business process perspectives with system-level risk assessments;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Document risk assessment results in {param:ra-03_odp.01};"
+   },
+   "parameters": [
+    {
+     "name": "ra-03_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "security and privacy plans"
+      },
+      {
+       "value": "risk assessment report"
+      },
+      {
+       "value": "{param:ra-03_odp.02} "
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review risk assessment results {param:ra-03_odp.03};"
+   },
+   "parameters": [
+    {
+     "name": "ra-03_odp.03",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Disseminate risk assessment results to {param:ra-03_odp.04} ; and"
+   },
+   "parameters": [
+    {
+     "name": "ra-03_odp.04",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  },
+  {
+   "id": "smt.f",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Update the risk assessment {param:ra-03_odp.05} or when there are significant changes to the system, its environment of operation, or other conditions that may impact the security or privacy state of the system."
+   },
+   "parameters": [
+    {
+     "name": "ra-03_odp.05",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Risk assessments consider threats, vulnerabilities, likelihood, and impact to organizational operations and assets, individuals, other organizations, and the Nation. Risk assessments also consider risk from external parties, including contractors who operate systems on behalf of the organization, individuals who access organizational systems, service providers, and outsourcing entities.\n\nOrganizations can conduct risk assessments at all three levels in the risk management hierarchy (i.e., organization level, mission/business process level, or information system level) and at any stage in the system development life cycle. Risk assessments can also be conducted at various steps in the Risk Management Framework, including preparation, categorization, control selection, control implementation, control assessment, authorization, and control monitoring. Risk assessment is an ongoing activity carried out throughout the system development life cycle.\n\nRisk assessments can also address information related to the system, including system design, the intended use of the system, testing results, and supply chain-related information or artifacts. Risk assessments can play an important role in control selection processes, particularly during the application of tailoring guidance and in the earliest phases of capability determination."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ra-3_obj",
+     "label": "RA-03",
+     "children": [
+      {
+       "id": "ra-3_obj.a",
+       "label": "RA-03a.",
+       "children": [
+        {
+         "id": "ra-3_obj.a.1",
+         "label": "RA-03a.01",
+         "prose": {
+          "en": "a risk assessment is conducted to identify threats to and vulnerabilities in the system;"
+         }
+        },
+        {
+         "id": "ra-3_obj.a.2",
+         "label": "RA-03a.02",
+         "prose": {
+          "en": "a risk assessment is conducted to determine the likelihood and magnitude of harm from unauthorized access, use, disclosure, disruption, modification, or destruction of the system; the information it processes, stores, or transmits; and any related information;"
+         }
+        },
+        {
+         "id": "ra-3_obj.a.3",
+         "label": "RA-03a.03",
+         "prose": {
+          "en": "a risk assessment is conducted to determine the likelihood and impact of adverse effects on individuals arising from the processing of personally identifiable information;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ra-3_obj.b",
+       "label": "RA-03b.",
+       "prose": {
+        "en": "risk assessment results and risk management decisions from the organization and mission or business process perspectives are integrated with system-level risk assessments;"
+       }
+      },
+      {
+       "id": "ra-3_obj.c",
+       "label": "RA-03c.",
+       "prose": {
+        "en": "risk assessment results are documented in {param:ra-03_odp.01};"
+       }
+      },
+      {
+       "id": "ra-3_obj.d",
+       "label": "RA-03d.",
+       "prose": {
+        "en": "risk assessment results are reviewed {param:ra-03_odp.03};"
+       }
+      },
+      {
+       "id": "ra-3_obj.e",
+       "label": "RA-03e.",
+       "prose": {
+        "en": "risk assessment results are disseminated to {param:ra-03_odp.04};"
+       }
+      },
+      {
+       "id": "ra-3_obj.f",
+       "label": "RA-03f.",
+       "prose": {
+        "en": "the risk assessment is updated {param:ra-03_odp.05} or when there are significant changes to the system, its environment of operation, or other conditions that may impact the security or privacy state of the system."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "RA-03-Examine",
+     "objects": [
+      {
+       "en": "Risk assessment policy"
+      },
+      {
+       "en": "risk assessment procedures"
+      },
+      {
+       "en": "security and privacy planning policy and procedures"
+      },
+      {
+       "en": "procedures addressing organizational assessments of risk"
+      },
+      {
+       "en": "risk assessment"
+      },
+      {
+       "en": "risk assessment results"
+      },
+      {
+       "en": "risk assessment reviews"
+      },
+      {
+       "en": "risk assessment updates"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "RA-03-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with risk assessment responsibilities"
+      },
+      {
+       "en": "organizational personnel with security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "RA-03-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for risk assessment"
+      },
+      {
+       "en": "mechanisms supporting and/or conducting, documenting, reviewing, disseminating, and updating the risk assessment"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ra-03_odp.01": {
+     "alt-identifiers": [
+      "ra-3_prm_1"
+     ]
+    },
+    "ra-03_odp.02": {
+     "guidelines": [
+      {
+       "en": "a document in which risk assessment results are to be documented (if not documented in the security and privacy plans or risk assessment report) is defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "ra-3_prm_2"
+     ]
+    },
+    "ra-03_odp.03": {
+     "guidelines": [
+      {
+       "en": "the frequency to review risk assessment results is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ra-3_prm_3"
+     ]
+    },
+    "ra-03_odp.04": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to whom risk assessment results are to be disseminated is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ra-3_prm_4"
+     ]
+    },
+    "ra-03_odp.05": {
+     "guidelines": [
+      {
+       "en": "the frequency to update the risk assessment is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ra-3_prm_5"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-30r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-39"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-161"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.8023"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.8062"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.8272"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-18"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-28"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-38"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-4",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/RA-4",
+    "mode": "merged-into",
+    "label": "RA-04",
+    "title": "Risk Assessment Update"
+   }
+  ]
+ }
+}

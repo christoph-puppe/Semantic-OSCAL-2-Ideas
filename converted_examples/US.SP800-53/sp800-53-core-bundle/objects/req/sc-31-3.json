@@ -1,0 +1,134 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-31.3",
+ "version": "5.2.0",
+ "label": "SC-31(3)",
+ "lifecycle": "active",
+ "title": "Measure Bandwidth in Operational Environments",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Measure the bandwidth of {param:sc-31.03_odp} in the operational environment of the system."
+   },
+   "parameters": [
+    {
+     "name": "sc-31.03_odp",
+     "type": "string",
+     "label": "subset of identified covert channels"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Measuring covert channel bandwidth in specified operational environments helps organizations determine how much information can be covertly leaked before such leakage adversely affects mission or business functions. Covert channel bandwidth may be significantly different when measured in settings that are independent of the specific environments of operation, including laboratories or system development environments."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-31.3_obj",
+     "label": "SC-31(03)",
+     "prose": {
+      "en": "the bandwidth of {param:sc-31.03_odp} is measured in the operational environment of the system."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-31(03)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing covert channel analysis"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "covert channel analysis documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-31(03)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with covert channel analysis responsibilities"
+      },
+      {
+       "en": "system developers/integrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-31(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational process for conducting covert channel analysis"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing covert channel analysis"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the capability to measure the bandwidth of covert channels"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-31.03_odp": {
+     "guidelines": [
+      {
+       "en": "subset of identified covert channels whose bandwidth is to be measured in the operational environment of the system is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-31.3_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-31"
+  }
+ ]
+}

@@ -1,0 +1,210 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-8",
+ "version": "5.2.0",
+ "label": "PE-8",
+ "lifecycle": "active",
+ "title": "Visitor Access Records",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Maintain visitor access records to the facility where the system resides for {param:pe-08_odp.01};"
+   },
+   "parameters": [
+    {
+     "name": "pe-08_odp.01",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review visitor access records {param:pe-08_odp.02} ; and"
+   },
+   "parameters": [
+    {
+     "name": "pe-08_odp.02",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Report anomalies in visitor access records to {param:pe-08_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "pe-08_odp.03",
+     "type": "string",
+     "label": "personnel"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Visitor access records include the names and organizations of individuals visiting, visitor signatures, forms of identification, dates of access, entry and departure times, purpose of visits, and the names and organizations of individuals visited. Access record reviews determine if access authorizations are current and are still required to support organizational mission and business functions. Access records are not required for publicly accessible areas."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-8_obj",
+     "label": "PE-08",
+     "children": [
+      {
+       "id": "pe-8_obj.a",
+       "label": "PE-08a.",
+       "prose": {
+        "en": "visitor access records for the facility where the system resides are maintained for {param:pe-08_odp.01};"
+       }
+      },
+      {
+       "id": "pe-8_obj.b",
+       "label": "PE-08b.",
+       "prose": {
+        "en": "visitor access records are reviewed {param:pe-08_odp.02};"
+       }
+      },
+      {
+       "id": "pe-8_obj.c",
+       "label": "PE-08c.",
+       "prose": {
+        "en": "visitor access records anomalies are reported to {param:pe-08_odp.03}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-08-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing visitor access records"
+      },
+      {
+       "en": "visitor access control logs or records"
+      },
+      {
+       "en": "visitor access record or log reviews"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-08-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with visitor access record responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-08-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for maintaining and reviewing visitor access records"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the maintenance and review of visitor access records"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-08_odp.01": {
+     "guidelines": [
+      {
+       "en": "time period for which to maintain visitor access records for the facility where the system resides is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-8_prm_1"
+     ]
+    },
+    "pe-08_odp.02": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to review visitor access records is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-8_prm_2"
+     ]
+    },
+    "pe-08_odp.03": {
+     "guidelines": [
+      {
+       "en": "personnel to whom visitor access records anomalies are reported to is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-8_prm_3"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-6"
+  }
+ ]
+}

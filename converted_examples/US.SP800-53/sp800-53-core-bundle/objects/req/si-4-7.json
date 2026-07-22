@@ -1,0 +1,194 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-4.7",
+ "version": "5.2.0",
+ "label": "SI-4(7)",
+ "lifecycle": "active",
+ "title": "Automated Response to Suspicious Events",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Notify {param:si-04.07_odp.01} of detected suspicious events; and"
+   },
+   "parameters": [
+    {
+     "name": "si-04.07_odp.01",
+     "type": "string",
+     "label": "incident response personnel"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Take the following actions upon detection: {param:si-04.07_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "si-04.07_odp.02",
+     "type": "string",
+     "label": "least-disruptive actions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Least-disruptive actions include initiating requests for human responses."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-4.7_obj",
+     "label": "SI-04(07)",
+     "children": [
+      {
+       "id": "si-4.7_obj.a",
+       "label": "SI-04(07)(a)",
+       "prose": {
+        "en": "{param:si-04.07_odp.01} are notified of detected suspicious events;"
+       }
+      },
+      {
+       "id": "si-4.7_obj.b",
+       "label": "SI-04(07)(b)",
+       "prose": {
+        "en": "{param:si-04.07_odp.02} are taken upon the detection of suspicious events."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-04(07)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing system monitoring tools and techniques"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system monitoring tools and techniques documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "alerts and notifications generated based on detected suspicious events"
+      },
+      {
+       "en": "records of actions taken to terminate suspicious events"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-04(07)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for monitoring the system"
+      },
+      {
+       "en": "organizational personnel responsible for the intrusion detection system"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-04(07)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for intrusion detection and system monitoring"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing intrusion detection and system monitoring capabilities"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing notifications to incident response personnel"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing actions to terminate suspicious events"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-04.07_odp.01": {
+     "guidelines": [
+      {
+       "en": "incident response personnel (identified by name and/or by role) to be notified of detected suspicious events is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-4.7_prm_1"
+     ],
+     "alt-label": "incident response personnel (identified by name and/or by role)"
+    },
+    "si-04.07_odp.02": {
+     "guidelines": [
+      {
+       "en": "least-disruptive actions to terminate suspicious events are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-4.7_prm_2"
+     ],
+     "alt-label": "least-disruptive actions to terminate suspicious events"
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

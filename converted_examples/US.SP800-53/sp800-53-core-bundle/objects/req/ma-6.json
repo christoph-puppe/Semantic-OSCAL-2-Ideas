@@ -1,0 +1,185 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-6",
+ "version": "5.2.0",
+ "label": "MA-6",
+ "lifecycle": "active",
+ "title": "Timely Maintenance",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Obtain maintenance support and/or spare parts for {param:ma-06_odp.01} within {param:ma-06_odp.02} of failure."
+   },
+   "parameters": [
+    {
+     "name": "ma-06_odp.01",
+     "type": "string",
+     "label": "system components"
+    },
+    {
+     "name": "ma-06_odp.02",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations specify the system components that result in increased risk to organizational operations and assets, individuals, other organizations, or the Nation when the functionality provided by those components is not operational. Organizational actions to obtain maintenance support include having appropriate contracts in place."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-6_obj",
+     "label": "MA-06",
+     "prose": {
+      "en": "maintenance support and/or spare parts are obtained for {param:ma-06_odp.01} within {param:ma-06_odp.02} of failure."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-06-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing system maintenance"
+      },
+      {
+       "en": "service provider contracts"
+      },
+      {
+       "en": "service-level agreements"
+      },
+      {
+       "en": "inventory and availability of spare parts"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-06-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities"
+      },
+      {
+       "en": "organizational personnel with acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MA-06-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for ensuring timely maintenance"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ma-06_odp.01": {
+     "guidelines": [
+      {
+       "en": "system components for which maintenance support and/or spare parts are obtained are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ma-6_prm_1"
+     ]
+    },
+    "ma-06_odp.02": {
+     "guidelines": [
+      {
+       "en": "time period within which maintenance support and/or spare parts are to be obtained after a failure are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ma-6_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-15"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-4"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-12.13",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-12.13",
+    "mode": "merged-into",
+    "label": "SA-12(13)",
+    "title": "Critical Information System Components"
+   }
+  ]
+ }
+}

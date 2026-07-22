@@ -1,0 +1,170 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SR-4.4",
+ "version": "5.2.0",
+ "label": "SR-4(4)",
+ "lifecycle": "active",
+ "title": "Supply Chain Integrity — Pedigree",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ {param:sr-04.04_odp.01} and conduct {param:sr-04.04_odp.02} to ensure the integrity of the system and system components by validating the internal composition and provenance of critical or mission-essential technologies, products, and services."
+   },
+   "parameters": [
+    {
+     "name": "sr-04.04_odp.01",
+     "type": "string",
+     "label": "controls"
+    },
+    {
+     "name": "sr-04.04_odp.02",
+     "type": "string",
+     "label": "analysis method"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Authoritative information regarding the internal composition of system components and the provenance of technology, products, and services provides a strong basis for trust. The validation of the internal composition and provenance of technologies, products, and services is referred to as the pedigree. For microelectronics, this includes material composition of components. For software this includes the composition of open-source and proprietary code, including the version of the component at a given point in time. Pedigrees increase the assurance that the claims suppliers assert about the internal composition and provenance of the products, services, and technologies they provide are valid. The validation of the internal composition and provenance can be achieved by various evidentiary artifacts or records that manufacturers and suppliers produce during the research and development, design, manufacturing, acquisition, delivery, integration, operations and maintenance, and disposal of technology, products, and services. Evidentiary artifacts include, but are not limited to, software identification (SWID) tags, software component inventory, the manufacturers’ declarations of platform attributes (e.g., serial numbers, hardware component inventory), and measurements (e.g., firmware hashes) that are tightly bound to the hardware itself."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sr-4.4_obj",
+     "label": "SR-04(04)",
+     "children": [
+      {
+       "id": "sr-4.4_obj-1",
+       "label": "SR-04(04)[01]",
+       "prose": {
+        "en": "{param:sr-04.04_odp.01} are employed to ensure the integrity of the system and system components;"
+       }
+      },
+      {
+       "id": "sr-4.4_obj-2",
+       "label": "SR-04(04)[02]",
+       "prose": {
+        "en": "{param:sr-04.04_odp.02} is conducted to ensure the integrity of the system and system components."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SR-04(04)-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management policy and procedures"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "system and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing supply chain protection"
+      },
+      {
+       "en": "bill of materials for critical systems or system components"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "software identification tags"
+      },
+      {
+       "en": "manufacturer declarations of platform attributes (e.g., serial numbers, hardware component inventory) and measurements (e.g., firmware hashes) that are tightly bound to the hardware itself"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SR-04(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and services acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SR-04(04)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for identifying pedigree information"
+      },
+      {
+       "en": "organizational processes to determine and validate the integrity of the internal composition of critical systems and critical system components"
+      },
+      {
+       "en": "mechanisms to determine and validate the integrity of the internal composition of critical systems and critical system components"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sr-04.04_odp.01": {
+     "guidelines": [
+      {
+       "en": "controls employed to ensure that the integrity of the system and system component are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sr-4.4_prm_1"
+     ]
+    },
+    "sr-04.04_odp.02": {
+     "guidelines": [
+      {
+       "en": "an analysis method to be conducted to validate the internal composition and provenance of critical or mission-essential technologies, products, and services to ensure the integrity of the system and system component is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sr-4.4_prm_2"
+     ],
+     "alt-label": "analysis"
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  }
+ ]
+}

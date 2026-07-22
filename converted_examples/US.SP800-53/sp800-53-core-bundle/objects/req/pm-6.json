@@ -1,0 +1,169 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-6",
+ "version": "5.2.0",
+ "label": "PM-6",
+ "lifecycle": "active",
+ "title": "Measures of Performance",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop, monitor, and report on the results of information security and privacy measures of performance."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Measures of performance are outcome-based metrics used by an organization to measure the effectiveness or efficiency of the information security and privacy programs and the controls employed in support of the program. To facilitate security and privacy risk management, organizations consider aligning measures of performance with the organizational risk tolerance as defined in the risk management strategy."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-6_obj",
+     "label": "PM-06",
+     "children": [
+      {
+       "id": "pm-6_obj-1",
+       "label": "PM-06[01]",
+       "prose": {
+        "en": "information security measures of performance are developed;"
+       }
+      },
+      {
+       "id": "pm-6_obj-2",
+       "label": "PM-06[02]",
+       "prose": {
+        "en": "information security measures of performance are monitored;"
+       }
+      },
+      {
+       "id": "pm-6_obj-3",
+       "label": "PM-06[03]",
+       "prose": {
+        "en": "the results of information security measures of performance are reported;"
+       }
+      },
+      {
+       "id": "pm-6_obj-4",
+       "label": "PM-06[04]",
+       "prose": {
+        "en": "privacy measures of performance are developed;"
+       }
+      },
+      {
+       "id": "pm-6_obj-5",
+       "label": "PM-06[05]",
+       "prose": {
+        "en": "privacy measures of performance are monitored;"
+       }
+      },
+      {
+       "id": "pm-6_obj-6",
+       "label": "PM-06[06]",
+       "prose": {
+        "en": "the results of privacy measures of performance are reported."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-06-Examine",
+     "objects": [
+      {
+       "en": "Information security program plan"
+      },
+      {
+       "en": "privacy program plan"
+      },
+      {
+       "en": "information security measures of performance"
+      },
+      {
+       "en": "privacy measures of performance"
+      },
+      {
+       "en": "procedures addressing the development, monitoring, and reporting of information security and privacy measures of performance"
+      },
+      {
+       "en": "risk management strategy"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-06-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy program planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel responsible for developing, monitoring, and reporting information security and privacy measures of performance"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PM-06-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for developing, monitoring, and reporting information security and privacy measures of performance"
+      },
+      {
+       "en": "mechanisms supporting the development, monitoring, and reporting of information security and privacy measures of performance"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-37r2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-39"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-55r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-137"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-9"
+  }
+ ]
+}

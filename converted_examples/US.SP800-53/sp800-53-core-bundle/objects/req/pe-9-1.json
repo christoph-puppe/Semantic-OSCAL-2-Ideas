@@ -1,0 +1,110 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-9.1",
+ "version": "5.2.0",
+ "label": "PE-9(1)",
+ "lifecycle": "active",
+ "title": "Redundant Cabling",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ redundant power cabling paths that are physically separated by {param:pe-09.01_odp}."
+   },
+   "parameters": [
+    {
+     "name": "pe-09.01_odp",
+     "type": "string",
+     "label": "distance"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Physically separate and redundant power cables ensure that power continues to flow in the event that one of the cables is cut or otherwise damaged."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-9.1_obj",
+     "label": "PE-09(01)",
+     "prose": {
+      "en": "redundant power cabling paths that are physically separated by {param:pe-09.01_odp} are employed."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-09(01)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing power equipment/cabling protection"
+      },
+      {
+       "en": "facilities housing power equipment/cabling"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-09(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with the responsibility to protect power equipment/cabling"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-09(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the protection of power equipment/cabling"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-09.01_odp": {
+     "guidelines": [
+      {
+       "en": "distance by which redundant power cabling paths are to be physically separated is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-9.1_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-9"
+  }
+ ]
+}

@@ -1,0 +1,162 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-18.4",
+ "version": "5.2.0",
+ "label": "SC-18(4)",
+ "lifecycle": "active",
+ "title": "Prevent Automatic Execution",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Prevent the automatic execution of mobile code in {param:sc-18.04_odp.01} and enforce {param:sc-18.04_odp.02} prior to executing the code."
+   },
+   "parameters": [
+    {
+     "name": "sc-18.04_odp.01",
+     "type": "string",
+     "label": "software applications"
+    },
+    {
+     "name": "sc-18.04_odp.02",
+     "type": "string",
+     "label": "actions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Actions enforced before executing mobile code include prompting users prior to opening email attachments or clicking on web links. Preventing the automatic execution of mobile code includes disabling auto-execute features on system components that employ portable storage devices, such as compact discs, digital versatile discs, and universal serial bus devices."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-18.4_obj",
+     "label": "SC-18(04)",
+     "children": [
+      {
+       "id": "sc-18.4_obj-1",
+       "label": "SC-18(04)[01]",
+       "prose": {
+        "en": "the automatic execution of mobile code in {param:sc-18.04_odp.01} is prevented;"
+       }
+      },
+      {
+       "id": "sc-18.4_obj-2",
+       "label": "SC-18(04)[02]",
+       "prose": {
+        "en": "{param:sc-18.04_odp.02} are enforced prior to executing mobile code."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-18(04)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing mobile code"
+      },
+      {
+       "en": "mobile code usage restrictions"
+      },
+      {
+       "en": "mobile code implementation policy and procedures"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of software applications in which the automatic execution of mobile code must be prohibited"
+      },
+      {
+       "en": "list of actions required before execution of mobile code"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-18(04)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel with responsibilities for managing mobile code"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-18(04)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms preventing the automatic execution of unacceptable mobile code"
+      },
+      {
+       "en": "mechanisms enforcing actions to be taken prior to the execution of the mobile code"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-18.04_odp.01": {
+     "guidelines": [
+      {
+       "en": "software applications in which the automatic execution of mobile code is to be prevented are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-18.4_prm_1"
+     ]
+    },
+    "sc-18.04_odp.02": {
+     "guidelines": [
+      {
+       "en": "actions to be enforced by the system prior to executing mobile code are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-18.4_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-18"
+  }
+ ]
+}

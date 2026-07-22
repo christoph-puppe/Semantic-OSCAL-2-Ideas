@@ -1,0 +1,270 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-13.3",
+ "version": "5.2.0",
+ "label": "IA-13(3)",
+ "lifecycle": "active",
+ "title": "Token Management",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "In accordance with {param:ia-13_odp.01}, assertions and access tokens are:"
+   },
+   "parameters": [
+    {
+     "name": "ia-13_odp.01",
+     "type": "string",
+     "label": "policy"
+    }
+   ]
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "generated;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "issued;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "refreshed;"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "revoked;"
+   }
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "time-restricted; and"
+   }
+  },
+  {
+   "id": "smt.f",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "audience-restricted."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "An access token is a piece of data that represents the authorization granted to a user or NPE to access specific systems or information resources. Access tokens enable controlled access to services and resources. Properly managing the lifecycle of access tokens, including their issuance, validation, and revocation, is crucial to maintaining confidentiality of data and systems. Restricting token validity to a specific audience, e.g., an application or security domain, and restricting token validity lifetimes are important practices. Access tokens are revoked or invalidated if they are compromised, lost, or are no longer needed to mitigate the risks associated with stolen or misused tokens."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-13.3_obj",
+     "label": "IA-13(03)",
+     "children": [
+      {
+       "id": "ia-13.3_obj.a-1",
+       "label": "IA-13(03)(a)[01]",
+       "prose": {
+        "en": "assertions are generated in accordance with {param:ia-13_odp.01};"
+       }
+      },
+      {
+       "id": "ia-13.3_obj.a-2",
+       "label": "IA-13(03)(a)[02]",
+       "prose": {
+        "en": "access tokens are generated in accordance with {param:ia-13_odp.01};"
+       }
+      },
+      {
+       "id": "ia-13.3_obj.b-1",
+       "label": "IA-13(03)(b)[01]",
+       "prose": {
+        "en": "assertions are issued in accordance with {param:ia-13_odp.01};"
+       }
+      },
+      {
+       "id": "ia-13.3_obj.b-2",
+       "label": "IA-13(03)(b)[02]",
+       "prose": {
+        "en": "access tokens are issued in accordance with {param:ia-13_odp.01};"
+       }
+      },
+      {
+       "id": "ia-13.3_obj.c-1",
+       "label": "IA-13(03)(c)[01]",
+       "prose": {
+        "en": "assertions are refreshed in accordance with {param:ia-13_odp.01};"
+       }
+      },
+      {
+       "id": "ia-13.3_obj.c-2",
+       "label": "IA-13(03)(c)[02]",
+       "prose": {
+        "en": "access tokens are refreshed in accordance with {param:ia-13_odp.01};"
+       }
+      },
+      {
+       "id": "ia-13.3_obj.d-1",
+       "label": "IA-13(03)(d)[01]",
+       "prose": {
+        "en": "assertions are revoked in accordance with {param:ia-13_odp.01};"
+       }
+      },
+      {
+       "id": "ia-13.3_obj.d-2",
+       "label": "IA-13(03)(d)[02]",
+       "prose": {
+        "en": "access tokens are revoked in accordance with {param:ia-13_odp.01};"
+       }
+      },
+      {
+       "id": "ia-13.3_obj.e-1",
+       "label": "IA-13(03)(e)[01]",
+       "prose": {
+        "en": "assertions are time-restricted in accordance with {param:ia-13_odp.01};"
+       }
+      },
+      {
+       "id": "ia-13.3_obj.e-2",
+       "label": "IA-13(03)(e)[02]",
+       "prose": {
+        "en": "access tokens are time-restricted in accordance with {param:ia-13_odp.01};"
+       }
+      },
+      {
+       "id": "ia-13.3_obj.f-1",
+       "label": "IA-13(03)(f)[01]",
+       "prose": {
+        "en": "assertions are audience-restricted in accordance with {param:ia-13_odp.01};"
+       }
+      },
+      {
+       "id": "ia-13.3_obj.f-2",
+       "label": "IA-13(03)(f)[02]",
+       "prose": {
+        "en": "access tokens are audience-restricted in accordance with {param:ia-13_odp.01};"
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-13(03)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy;"
+      },
+      {
+       "en": "access control policy;"
+      },
+      {
+       "en": "procedures for assertion and token management;"
+      },
+      {
+       "en": "system design documentation;"
+      },
+      {
+       "en": "system configuration settings and associated documentation;"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-13(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system operations responsibilities;"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities;"
+      },
+      {
+       "en": "system/ network administrators;"
+      },
+      {
+       "en": "organizational personnel with account management responsibilities;"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-13(03)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms and software supporting and/or implementing token generation"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-63-3"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.196"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.198-1"
+  },
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-13"
+  }
+ ]
+}

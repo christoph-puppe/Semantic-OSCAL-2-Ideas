@@ -1,0 +1,205 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-12.3",
+ "version": "5.2.0",
+ "label": "SI-12(3)",
+ "lifecycle": "active",
+ "title": "Information Disposal",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Use the following techniques to dispose of, destroy, or erase information following the retention period: {param:si-12.3_prm_1}."
+   },
+   "parameters": [
+    {
+     "name": "si-12.3_prm_1",
+     "type": "string",
+     "label": "organization-defined techniques"
+    },
+    {
+     "name": "si-12.03_odp.01",
+     "type": "string",
+     "label": "techniques"
+    },
+    {
+     "name": "si-12.03_odp.02",
+     "type": "string",
+     "label": "techniques"
+    },
+    {
+     "name": "si-12.03_odp.03",
+     "type": "string",
+     "label": "techniques"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations can minimize both security and privacy risks by disposing of information when it is no longer needed. The disposal or destruction of information applies to originals as well as copies and archived records, including system logs that may contain personally identifiable information."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-12.3_obj",
+     "label": "SI-12(03)",
+     "children": [
+      {
+       "id": "si-12.3_obj-1",
+       "label": "SI-12(03)[01]",
+       "prose": {
+        "en": "{param:si-12.03_odp.01} are used to dispose of information following the retention period;"
+       }
+      },
+      {
+       "id": "si-12.3_obj-2",
+       "label": "SI-12(03)[02]",
+       "prose": {
+        "en": "{param:si-12.03_odp.02} are used to destroy information following the retention period;"
+       }
+      },
+      {
+       "id": "si-12.3_obj-3",
+       "label": "SI-12(03)[03]",
+       "prose": {
+        "en": "{param:si-12.03_odp.03} are used to erase information following the retention period."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-12(03)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "personally identifiable information processing procedures"
+      },
+      {
+       "en": "records retention and disposition policy"
+      },
+      {
+       "en": "records retention and disposition procedures"
+      },
+      {
+       "en": "laws, Executive Orders, directives, policies, regulations, standards, and operational requirements applicable to information disposal"
+      },
+      {
+       "en": "media protection policy"
+      },
+      {
+       "en": "media protection procedures"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "audit findings"
+      },
+      {
+       "en": "information disposal records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-12(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information and records management, retention, and disposition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-12(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for information disposition"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing information disposition"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-12.3_prm_1": {
+     "aggregates": [
+      "si-12.03_odp.01",
+      "si-12.03_odp.02",
+      "si-12.03_odp.03"
+     ]
+    },
+    "si-12.03_odp.01": {
+     "guidelines": [
+      {
+       "en": "techniques used to dispose of information following the retention period are defined;"
+      }
+     ]
+    },
+    "si-12.03_odp.02": {
+     "guidelines": [
+      {
+       "en": "techniques used to destroy information following the retention period are defined;"
+      }
+     ]
+    },
+    "si-12.03_odp.03": {
+     "guidelines": [
+      {
+       "en": "techniques used to erase information following the retention period are defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  }
+ ]
+}

@@ -1,0 +1,166 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-13.1",
+ "version": "5.2.0",
+ "label": "PE-13(1)",
+ "lifecycle": "active",
+ "title": "Detection Systems — Automatic Activation and Notification",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ fire detection systems that activate automatically and notify {param:pe-13.01_odp.01} and {param:pe-13.01_odp.02} in the event of a fire."
+   },
+   "parameters": [
+    {
+     "name": "pe-13.01_odp.01",
+     "type": "string",
+     "label": "personnel or roles"
+    },
+    {
+     "name": "pe-13.01_odp.02",
+     "type": "string",
+     "label": "emergency responders"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations can identify personnel, roles, and emergency responders if individuals on the notification list need to have access authorizations or clearances (e.g., to enter to facilities where access is restricted due to the classification or impact level of information within the facility). Notification mechanisms may require independent energy sources to ensure that the notification capability is not adversely affected by the fire."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-13.1_obj",
+     "label": "PE-13(01)",
+     "children": [
+      {
+       "id": "pe-13.1_obj-1",
+       "label": "PE-13(01)[01]",
+       "prose": {
+        "en": "fire detection systems that activate automatically are employed in the event of a fire;"
+       }
+      },
+      {
+       "id": "pe-13.1_obj-2",
+       "label": "PE-13(01)[02]",
+       "prose": {
+        "en": "fire detection systems that notify {param:pe-13.01_odp.01} automatically are employed in the event of a fire;"
+       }
+      },
+      {
+       "id": "pe-13.1_obj-3",
+       "label": "PE-13(01)[03]",
+       "prose": {
+        "en": "fire detection systems that notify {param:pe-13.01_odp.02} automatically are employed in the event of a fire."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-13(01)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing fire protection"
+      },
+      {
+       "en": "facility housing the information system"
+      },
+      {
+       "en": "alarm service-level agreements"
+      },
+      {
+       "en": "test records of fire suppression and detection devices/systems"
+      },
+      {
+       "en": "fire suppression and detection devices/systems documentation"
+      },
+      {
+       "en": "alerts/notifications of fire events"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-13(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for fire detection and suppression devices/systems"
+      },
+      {
+       "en": "organizational personnel with responsibilities for notifying appropriate personnel, roles, and emergency responders of fires"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-13(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing fire detection devices/systems"
+      },
+      {
+       "en": "activation of fire detection devices/systems (simulated)"
+      },
+      {
+       "en": "automated notifications"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-13.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to be notified in the event of a fire is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-13.1_prm_1"
+     ]
+    },
+    "pe-13.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "emergency responders to be notified in the event of a fire are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-13.1_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-13"
+  }
+ ]
+}

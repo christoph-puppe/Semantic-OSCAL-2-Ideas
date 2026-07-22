@@ -1,0 +1,195 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-10",
+ "version": "5.2.0",
+ "label": "CM-10",
+ "lifecycle": "active",
+ "title": "Software Usage Restrictions",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Use software and associated documentation in accordance with contract agreements and copyright laws;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Track the use of software and associated documentation protected by quantity licenses to control copying and distribution; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Control and document the use of peer-to-peer file sharing technology to ensure that this capability is not used for the unauthorized distribution, display, performance, or reproduction of copyrighted work."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Software license tracking can be accomplished by manual or automated methods, depending on organizational needs. Examples of contract agreements include software license agreements and non-disclosure agreements."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-10_obj",
+     "label": "CM-10",
+     "children": [
+      {
+       "id": "cm-10_obj.a",
+       "label": "CM-10a.",
+       "prose": {
+        "en": "software and associated documentation are used in accordance with contract agreements and copyright laws;"
+       }
+      },
+      {
+       "id": "cm-10_obj.b",
+       "label": "CM-10b.",
+       "prose": {
+        "en": "the use of software and associated documentation protected by quantity licenses is tracked to control copying and distribution;"
+       }
+      },
+      {
+       "id": "cm-10_obj.c",
+       "label": "CM-10c.",
+       "prose": {
+        "en": "the use of peer-to-peer file sharing technology is controlled and documented to ensure that peer-to-peer file sharing is not used for the unauthorized distribution, display, performance, or reproduction of copyrighted work."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-10-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "software usage restrictions"
+      },
+      {
+       "en": "software contract agreements and copyright laws"
+      },
+      {
+       "en": "site license documentation"
+      },
+      {
+       "en": "list of software usage restrictions"
+      },
+      {
+       "en": "software license tracking reports"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-10-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel operating, using, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel with software license management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-10-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for tracking the use of software protected by quantity licenses"
+      },
+      {
+       "en": "organizational processes for controlling/documenting the use of peer-to-peer file sharing technology"
+      },
+      {
+       "en": "mechanisms implementing software license tracking"
+      },
+      {
+       "en": "mechanisms implementing and controlling the use of peer-to-peer files sharing technology"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-30"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-6",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-6",
+    "mode": "merged-into",
+    "label": "SA-06",
+    "title": "Software Usage Restrictions"
+   }
+  ]
+ }
+}

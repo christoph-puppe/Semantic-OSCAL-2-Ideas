@@ -1,0 +1,156 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-6.3",
+ "version": "5.2.0",
+ "label": "SI-6(3)",
+ "lifecycle": "active",
+ "title": "Report Verification Results",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Report the results of security and privacy function verification to {param:si-06.03_odp}."
+   },
+   "parameters": [
+    {
+     "name": "si-06.03_odp",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizational personnel with potential interest in the results of the verification of security and privacy functions include systems security officers, senior agency information security officers, and senior agency officials for privacy."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-6.3_obj",
+     "label": "SI-06(03)",
+     "children": [
+      {
+       "id": "si-6.3_obj-1",
+       "label": "SI-06(03)[01]",
+       "prose": {
+        "en": "the results of security function verification are reported to {param:si-06.03_odp};"
+       }
+      },
+      {
+       "id": "si-6.3_obj-2",
+       "label": "SI-06(03)[02]",
+       "prose": {
+        "en": "the results of privacy function verification are reported to {param:si-06.03_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-06(03)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing security and privacy function verification"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "reports of security and privacy function verification results"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-06(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with security and privacy function verification responsibilities"
+      },
+      {
+       "en": "organizational personnel who are recipients of security and privacy function verification reports"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-06(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for reporting security and privacy function verification results"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the reporting of security and privacy function verification results"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-06.03_odp": {
+     "guidelines": [
+      {
+       "en": "personnel or roles designated to receive the results of security and privacy function verification is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-6.3_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-5"
+  }
+ ]
+}

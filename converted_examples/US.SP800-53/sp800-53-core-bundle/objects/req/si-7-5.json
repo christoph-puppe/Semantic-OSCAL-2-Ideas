@@ -1,0 +1,164 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-7.5",
+ "version": "5.2.0",
+ "label": "SI-7(5)",
+ "lifecycle": "active",
+ "title": "Automated Response to Integrity Violations",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Automatically {param:si-07.05_odp.01} when integrity violations are discovered."
+   },
+   "parameters": [
+    {
+     "name": "si-07.05_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "shut down the system"
+      },
+      {
+       "value": "restart the system"
+      },
+      {
+       "value": "implement {param:si-07.05_odp.02} "
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "si-07.05_odp.02",
+     "type": "string",
+     "label": "controls"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations may define different integrity-checking responses by type of information, specific information, or a combination of both. Types of information include firmware, software, and user data. Specific information includes boot firmware for certain types of machines. The automatic implementation of controls within organizational systems includes reversing the changes, halting the system, or triggering audit alerts when unauthorized modifications to critical security files occur."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-7.5_obj",
+     "label": "SI-07(05)",
+     "prose": {
+      "en": "{param:si-07.05_odp.01} are automatically performed when integrity violations are discovered."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-07(05)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing software, firmware, and information integrity"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "integrity verification tools and associated documentation"
+      },
+      {
+       "en": "records of integrity scans"
+      },
+      {
+       "en": "records of integrity checks and responses to integrity violations"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-07(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for software, firmware, and/or information integrity"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-07(05)-Test",
+     "objects": [
+      {
+       "en": "Software, firmware, and information integrity verification tools"
+      },
+      {
+       "en": "mechanisms providing an automated response to integrity violations"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing security safeguards to be implemented when integrity violations are discovered"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-07.05_odp.01": {
+     "alt-identifiers": [
+      "si-7.5_prm_1"
+     ]
+    },
+    "si-07.05_odp.02": {
+     "guidelines": [
+      {
+       "en": "controls to be implemented automatically when integrity violations are discovered are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "si-7.5_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  }
+ ]
+}

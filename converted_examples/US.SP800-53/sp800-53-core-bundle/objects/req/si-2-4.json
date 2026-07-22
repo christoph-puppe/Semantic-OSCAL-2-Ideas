@@ -1,0 +1,142 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-2.4",
+ "version": "5.2.0",
+ "label": "SI-2(4)",
+ "lifecycle": "active",
+ "title": "Automated Patch Management Tools",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Employ automated patch management tools to facilitate flaw remediation to the following system components: {param:si-02.04_odp}."
+   },
+   "parameters": [
+    {
+     "name": "si-02.04_odp",
+     "type": "string",
+     "label": "components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Using automated tools to support patch management helps to ensure the timeliness and completeness of system patching operations."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-2.4_obj",
+     "label": "SI-02(04)",
+     "prose": {
+      "en": "automated patch management tools are employed to facilitate flaw remediation to {param:si-02.04_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-02(04)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing flaw remediation"
+      },
+      {
+       "en": "mechanisms supporting flaw remediation and automatic software/firmware updates"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of system flaws"
+      },
+      {
+       "en": "records of recent security-relevant software and firmware updates that are automatically installed to system components"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-02(04)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for flaw remediation"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-02(04)-Test",
+     "objects": [
+      {
+       "en": "Automated patch management tools"
+      },
+      {
+       "en": "mechanisms implementing automatic software/firmware updates"
+      },
+      {
+       "en": "mechanisms facilitating flaw remediation to system components"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-02.04_odp": {
+     "guidelines": [
+      {
+       "en": "the system components requiring automated patch management tools to facilitate flaw remediation are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-2.4_prm_1"
+     ],
+     "alt-label": "system components"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-2"
+  }
+ ]
+}

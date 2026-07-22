@@ -1,0 +1,184 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-16",
+ "version": "5.2.0",
+ "label": "SC-16",
+ "lifecycle": "active",
+ "title": "Transmission of Security and Privacy Attributes",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Associate {param:sc-16_prm_1} with information exchanged between systems and between system components."
+   },
+   "parameters": [
+    {
+     "name": "sc-16_prm_1",
+     "type": "string",
+     "label": "organization-defined security and privacy attributes"
+    },
+    {
+     "name": "sc-16_odp.01",
+     "type": "string",
+     "label": "security attributes"
+    },
+    {
+     "name": "sc-16_odp.02",
+     "type": "string",
+     "label": "privacy attributes"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Security and privacy attributes can be explicitly or implicitly associated with the information contained in organizational systems or system components. Attributes are abstractions that represent the basic properties or characteristics of an entity with respect to protecting information or the management of personally identifiable information. Attributes are typically associated with internal data structures, including records, buffers, and files within the system. Security and privacy attributes are used to implement access control and information flow control policies; reflect special dissemination, management, or distribution instructions, including permitted uses of personally identifiable information; or support other aspects of the information security and privacy policies. Privacy attributes may be used independently or in conjunction with security attributes."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-16_obj",
+     "label": "SC-16",
+     "children": [
+      {
+       "id": "sc-16_obj-1",
+       "label": "SC-16[01]",
+       "prose": {
+        "en": "{param:sc-16_odp.01} are associated with information exchanged between systems;"
+       }
+      },
+      {
+       "id": "sc-16_obj-2",
+       "label": "SC-16[02]",
+       "prose": {
+        "en": "{param:sc-16_odp.01} are associated with information exchanged between system components;"
+       }
+      },
+      {
+       "id": "sc-16_obj-3",
+       "label": "SC-16[03]",
+       "prose": {
+        "en": "{param:sc-16_odp.02} are associated with information exchanged between systems;"
+       }
+      },
+      {
+       "id": "sc-16_obj-4",
+       "label": "SC-16[04]",
+       "prose": {
+        "en": "{param:sc-16_odp.02} are associated with information exchanged between system components."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-16-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing the transmission of security and privacy attributes"
+      },
+      {
+       "en": "access control policy and procedures"
+      },
+      {
+       "en": "information flow control policy"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-16-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-16-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the transmission of security and privacy attributes between systems"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-16_prm_1": {
+     "aggregates": [
+      "sc-16_odp.01",
+      "sc-16_odp.02"
+     ]
+    },
+    "sc-16_odp.01": {
+     "guidelines": [
+      {
+       "en": "security attributes to be associated with information exchanged are defined;"
+      }
+     ]
+    },
+    "sc-16_odp.02": {
+     "guidelines": [
+      {
+       "en": "privacy attributes to be associated with information exchanged are defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-16"
+  }
+ ]
+}

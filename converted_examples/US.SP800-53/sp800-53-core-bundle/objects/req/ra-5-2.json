@@ -1,0 +1,153 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/RA-5.2",
+ "version": "5.2.0",
+ "label": "RA-5(2)",
+ "lifecycle": "active",
+ "title": "Update Vulnerabilities to Be Scanned",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Update the system vulnerabilities to be scanned {param:ra-05.02_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "ra-05.02_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "{param:ra-05.02_odp.02} "
+      },
+      {
+       "value": "prior to a new scan"
+      },
+      {
+       "value": "when new vulnerabilities are identified and reported"
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "ra-05.02_odp.02",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Due to the complexity of modern software, systems, and other factors, new vulnerabilities are discovered on a regular basis. It is important that newly discovered vulnerabilities are added to the list of vulnerabilities to be scanned to ensure that the organization can take steps to mitigate those vulnerabilities in a timely manner."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ra-5.2_obj",
+     "label": "RA-05(02)",
+     "prose": {
+      "en": "the system vulnerabilities to be scanned are updated {param:ra-05.02_odp.01}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "RA-05(02)-Examine",
+     "objects": [
+      {
+       "en": "Procedures addressing vulnerability scanning"
+      },
+      {
+       "en": "assessment report"
+      },
+      {
+       "en": "vulnerability scanning tools and associated configuration documentation"
+      },
+      {
+       "en": "vulnerability scanning results"
+      },
+      {
+       "en": "patch and vulnerability management records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "RA-05(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with vulnerability scanning responsibilities"
+      },
+      {
+       "en": "organizational personnel with vulnerability scan analysis responsibilities"
+      },
+      {
+       "en": "organizational personnel with security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "RA-05(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for vulnerability scanning"
+      },
+      {
+       "en": "mechanisms/tools supporting and/or implementing vulnerability scanning"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ra-05.02_odp.01": {
+     "alt-identifiers": [
+      "ra-5.2_prm_1"
+     ]
+    },
+    "ra-05.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "the frequency for updating the system vulnerabilities to be scanned is defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "ra-5.2_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-5"
+  }
+ ]
+}

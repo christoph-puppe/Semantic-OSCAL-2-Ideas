@@ -1,0 +1,128 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-15.1",
+ "version": "5.2.0",
+ "label": "SC-15(1)",
+ "lifecycle": "active",
+ "title": "Physical or Logical Disconnect",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide {param:sc-15.01_odp} disconnect of collaborative computing devices in a manner that supports ease of use."
+   },
+   "parameters": [
+    {
+     "name": "sc-15.01_odp",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "physical"
+      },
+      {
+       "value": "logical"
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Failing to disconnect from collaborative computing devices can result in subsequent compromises of organizational information. Providing easy methods to disconnect from such devices after a collaborative computing session ensures that participants carry out the disconnect activity without having to go through complex and tedious procedures. Disconnect from collaborative computing devices can be manual or automatic."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-15.1_obj",
+     "label": "SC-15(01)",
+     "prose": {
+      "en": "the {param:sc-15.01_odp} disconnect of collaborative computing devices is/are provided in a manner that supports ease of use."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-15(01)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing collaborative computing"
+      },
+      {
+       "en": "access control policy and procedures"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-15(01)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel with responsibilities for managing collaborative computing devices"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-15(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the physical disconnect of collaborative computing devices"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-15.01_odp": {
+     "alt-identifiers": [
+      "sc-15.1_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-15"
+  }
+ ]
+}

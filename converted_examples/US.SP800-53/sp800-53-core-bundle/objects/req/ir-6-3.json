@@ -1,0 +1,120 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-6.3",
+ "version": "5.2.0",
+ "label": "IR-6(3)",
+ "lifecycle": "active",
+ "title": "Supply Chain Coordination",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide incident information to the provider of the product or service and other organizations involved in the supply chain or supply chain governance for systems or system components related to the incident."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations involved in supply chain activities include product developers, system integrators, manufacturers, packagers, assemblers, distributors, vendors, and resellers. Entities that provide supply chain governance include the Federal Acquisition Security Council (FASC). Supply chain incidents include compromises or breaches that involve information technology products, system components, development processes or personnel, distribution processes, or warehousing facilities. Organizations determine the appropriate information to share and consider the value gained from informing external organizations about supply chain incidents, including the ability to improve processes or to identify the root cause of an incident."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-6.3_obj",
+     "label": "IR-06(03)",
+     "prose": {
+      "en": "incident information is provided to the provider of the product or service and other organizations involved in the supply chain or supply chain governance for systems or system components related to the incident."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-06(03)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing supply chain coordination and supply chain risk information sharing with the Federal Acquisition Security Council"
+      },
+      {
+       "en": "acquisition policy"
+      },
+      {
+       "en": "acquisition contracts"
+      },
+      {
+       "en": "service-level agreements"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "plans of other organizations involved in supply chain activities"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-06(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident reporting responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      },
+      {
+       "en": "organization personnel with acquisition responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IR-06(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for incident reporting"
+      },
+      {
+       "en": "organizational processes for supply chain risk information sharing"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the reporting of incident information involved in the supply chain"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-8"
+  }
+ ]
+}

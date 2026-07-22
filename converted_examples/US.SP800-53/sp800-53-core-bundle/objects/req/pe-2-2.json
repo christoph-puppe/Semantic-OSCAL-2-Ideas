@@ -1,0 +1,137 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-2.2",
+ "version": "5.2.0",
+ "label": "PE-2(2)",
+ "lifecycle": "active",
+ "title": "Two Forms of Identification",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require two forms of identification from the following forms of identification for visitor access to the facility where the system resides: {param:pe-02.02_odp}."
+   },
+   "parameters": [
+    {
+     "name": "pe-02.02_odp",
+     "type": "string",
+     "label": "list of acceptable forms of identification"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Acceptable forms of identification include passports, REAL ID-compliant drivers’ licenses, and Personal Identity Verification (PIV) cards. For gaining access to facilities using automated mechanisms, organizations may use PIV cards, key cards, PINs, and biometrics."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-2.2_obj",
+     "label": "PE-02(02)",
+     "prose": {
+      "en": "two forms of identification are required from {param:pe-02.02_odp} for visitor access to the facility where the system resides."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-02(02)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing physical access authorizations"
+      },
+      {
+       "en": "list of acceptable forms of identification for visitor access to the facility where the system resides"
+      },
+      {
+       "en": "access authorization forms"
+      },
+      {
+       "en": "access credentials"
+      },
+      {
+       "en": "physical access control logs or records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-02(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with physical access authorization responsibilities"
+      },
+      {
+       "en": "organizational personnel with physical access to the system facility"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-02(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for physical access authorizations"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing physical access authorizations"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-02.02_odp": {
+     "guidelines": [
+      {
+       "en": "a list of acceptable forms of identification for visitor access to the facility where the system resides is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-2.2_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5"
+  }
+ ]
+}

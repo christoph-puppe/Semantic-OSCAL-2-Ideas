@@ -1,0 +1,202 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MP-3",
+ "version": "5.2.0",
+ "label": "MP-3",
+ "lifecycle": "active",
+ "title": "Media Marking",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Mark system media indicating the distribution limitations, handling caveats, and applicable security markings (if any) of the information; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Exempt {param:mp-03_odp.01} from marking if the media remain within {param:mp-03_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "mp-03_odp.01",
+     "type": "string",
+     "label": "types of media exempted from marking"
+    },
+    {
+     "name": "mp-03_odp.02",
+     "type": "string",
+     "label": "controlled areas"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Security marking refers to the application or use of human-readable security attributes. Digital media includes diskettes, magnetic tapes, external or removable hard disk drives (e.g., solid state, magnetic), flash drives, compact discs, and digital versatile discs. Non-digital media includes paper and microfilm. Controlled unclassified information is defined by the National Archives and Records Administration along with the appropriate safeguarding and dissemination requirements for such information and is codified in 32 CFR 2002 . Security markings are generally not required for media that contains information determined by organizations to be in the public domain or to be publicly releasable. Some organizations may require markings for public information indicating that the information is publicly releasable. System media marking reflects applicable laws, executive orders, directives, policies, regulations, standards, and guidelines."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "mp-3_obj",
+     "label": "MP-03",
+     "children": [
+      {
+       "id": "mp-3_obj.a",
+       "label": "MP-03a.",
+       "prose": {
+        "en": "system media is marked to indicate distribution limitations, handling caveats, and applicable security markings (if any) of the information;"
+       }
+      },
+      {
+       "id": "mp-3_obj.b",
+       "label": "MP-03b.",
+       "prose": {
+        "en": "{param:mp-03_odp.01} remain within {param:mp-03_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MP-03-Examine",
+     "objects": [
+      {
+       "en": "System media protection policy"
+      },
+      {
+       "en": "procedures addressing media marking"
+      },
+      {
+       "en": "physical and environmental protection policy and procedures"
+      },
+      {
+       "en": "list of system media marking security attributes"
+      },
+      {
+       "en": "designated controlled areas"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MP-03-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system media protection and marking responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MP-03-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for marking information media"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing media marking"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "mp-03_odp.01": {
+     "guidelines": [
+      {
+       "en": "types of system media exempt from marking when remaining in controlled areas are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "mp-3_prm_1"
+     ],
+     "alt-label": "types of system media"
+    },
+    "mp-03_odp.02": {
+     "guidelines": [
+      {
+       "en": "controlled areas where media is exempt from marking are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "mp-3_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://obamawhitehouse.archives.gov/the-press-office/2010/11/04/executive-order-13556-controlled-unclassified-information"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.federalregister.gov/documents/2016/09/14/2016-21665/controlled-unclassified-information"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.199"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-22"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-15",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/AC-15",
+    "mode": "merged-into",
+    "label": "AC-15",
+    "title": "Automated Marking"
+   }
+  ]
+ }
+}

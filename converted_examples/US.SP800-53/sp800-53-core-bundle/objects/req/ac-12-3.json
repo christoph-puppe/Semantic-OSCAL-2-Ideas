@@ -1,0 +1,126 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-12.3",
+ "version": "5.2.0",
+ "label": "AC-12(3)",
+ "lifecycle": "active",
+ "title": "Timeout Warning Message",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Display an explicit message to users indicating that the session will end in {param:ac-12.03_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ac-12.03_odp",
+     "type": "string",
+     "label": "time"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "To increase usability, notify users of pending session termination and prompt users to continue the session. The pending session termination time period is based on the parameters defined in the AC-12 base control."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-12.3_obj",
+     "label": "AC-12(03)",
+     "prose": {
+      "en": "an explicit message to users is displayed indicating that the session will end in {param:ac-12.03_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-12(03)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing session termination"
+      },
+      {
+       "en": "time until end of session messages"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-12(03)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-12(03)-Test",
+     "objects": [
+      {
+       "en": "System session termination mechanisms"
+      },
+      {
+       "en": "display of end of session time"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-12.03_odp": {
+     "guidelines": [
+      {
+       "en": "time until the end of session for display to users is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-12.3_prm_1"
+     ],
+     "alt-label": "time until end of session"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-12"
+  }
+ ]
+}

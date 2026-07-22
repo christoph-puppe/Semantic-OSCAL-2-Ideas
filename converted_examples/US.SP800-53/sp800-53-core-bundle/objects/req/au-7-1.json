@@ -1,0 +1,160 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-7.1",
+ "version": "5.2.0",
+ "label": "AU-7(1)",
+ "lifecycle": "active",
+ "title": "Automatic Processing",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide and implement the capability to process, sort, and search audit records for events of interest based on the following content: {param:au-07.01_odp}."
+   },
+   "parameters": [
+    {
+     "name": "au-07.01_odp",
+     "type": "string",
+     "label": "fields within audit records"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Events of interest can be identified by the content of audit records, including system resources involved, information objects accessed, identities of individuals, event types, event locations, event dates and times, Internet Protocol addresses involved, or event success or failure. Organizations may define event criteria to any degree of granularity required, such as locations selectable by a general networking location or by specific system component."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-7.1_obj",
+     "label": "AU-07(01)",
+     "children": [
+      {
+       "id": "au-7.1_obj-1",
+       "label": "AU-07(01)[01]",
+       "prose": {
+        "en": "the capability to process, sort, and search audit records for events of interest based on {param:au-07.01_odp} are provided;"
+       }
+      },
+      {
+       "id": "au-7.1_obj-2",
+       "label": "AU-07(01)[02]",
+       "prose": {
+        "en": "the capability to process, sort, and search audit records for events of interest based on {param:au-07.01_odp} are implemented."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-07(01)-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "procedures addressing audit reduction and report generation"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "audit reduction, review, analysis, and reporting tools"
+      },
+      {
+       "en": "audit record criteria (fields) establishing events of interest"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-07(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with audit reduction and report generation responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AU-07(01)-Test",
+     "objects": [
+      {
+       "en": "Audit reduction and report generation capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "au-07.01_odp": {
+     "guidelines": [
+      {
+       "en": "fields within audit records that can be processed, sorted, or searched are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-7.1_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-7"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-7.2",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/AU-7.2",
+    "mode": "merged-into",
+    "label": "AU-07(02)",
+    "title": "Automatic Sort and Search"
+   }
+  ]
+ }
+}

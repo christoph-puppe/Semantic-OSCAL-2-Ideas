@@ -1,0 +1,144 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SR-2.1",
+ "version": "5.2.0",
+ "label": "SR-2(1)",
+ "lifecycle": "active",
+ "title": "Establish SCRM Team",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish a supply chain risk management team consisting of {param:sr-02.01_odp.01} to lead and support the following SCRM activities: {param:sr-02.01_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "sr-02.01_odp.01",
+     "type": "string",
+     "label": "personnel, roles and responsibilities"
+    },
+    {
+     "name": "sr-02.01_odp.02",
+     "type": "string",
+     "label": "supply chain risk management activities"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "To implement supply chain risk management plans, organizations establish a coordinated, team-based approach to identify and assess supply chain risks and manage these risks by using programmatic and technical mitigation techniques. The team approach enables organizations to conduct an analysis of their supply chain, communicate with internal and external partners or stakeholders, and gain broad consensus regarding the appropriate resources for SCRM. The SCRM team consists of organizational personnel with diverse roles and responsibilities for leading and supporting SCRM activities, including risk executive, information technology, contracting, information security, privacy, mission or business, legal, supply chain and logistics, acquisition, business continuity, and other relevant functions. Members of the SCRM team are involved in various aspects of the SDLC and, collectively, have an awareness of and provide expertise in acquisition processes, legal practices, vulnerabilities, threats, and attack vectors, as well as an understanding of the technical aspects and dependencies of systems. The SCRM team can be an extension of the security and privacy risk management processes or be included as part of an organizational risk management team."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sr-2.1_obj",
+     "label": "SR-02(01)",
+     "prose": {
+      "en": "a supply chain risk management team consisting of {param:sr-02.01_odp.01} is established to lead and support {param:sr-02.01_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SR-02(01)-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management policy"
+      },
+      {
+       "en": "supply chain risk management procedures"
+      },
+      {
+       "en": "supply chain risk management team charter documentation"
+      },
+      {
+       "en": "supply chain risk management strategy"
+      },
+      {
+       "en": "supply chain risk management implementation plan"
+      },
+      {
+       "en": "procedures addressing supply chain protection"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SR-02(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      },
+      {
+       "en": "organizational personnel with enterprise risk management responsibilities"
+      },
+      {
+       "en": "legal counsel"
+      },
+      {
+       "en": "organizational personnel with business continuity responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sr-02.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "the personnel, roles, and responsibilities of the supply chain risk management team are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sr-2.1_prm_1"
+     ],
+     "alt-label": "personnel, roles, and responsibilities"
+    },
+    "sr-02.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "supply chain risk management activities are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sr-2.1_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-2"
+  }
+ ]
+}

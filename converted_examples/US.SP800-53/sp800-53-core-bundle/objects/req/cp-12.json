@@ -1,0 +1,175 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-12",
+ "version": "5.2.0",
+ "label": "CP-12",
+ "lifecycle": "active",
+ "title": "Safe Mode",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "When {param:cp-12_odp.02} are detected, enter a safe mode of operation with {param:cp-12_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "cp-12_odp.01",
+     "type": "string",
+     "label": "restrictions"
+    },
+    {
+     "name": "cp-12_odp.02",
+     "type": "string",
+     "label": "conditions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "For systems that support critical mission and business functions—including military operations, civilian space operations, nuclear power plant operations, and air traffic control operations (especially real-time operational environments)—organizations can identify certain conditions under which those systems revert to a predefined safe mode of operation. The safe mode of operation, which can be activated either automatically or manually, restricts the operations that systems can execute when those conditions are encountered. Restriction includes allowing only selected functions to execute that can be carried out under limited power or with reduced communications bandwidth."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-12_obj",
+     "label": "CP-12",
+     "prose": {
+      "en": "a safe mode of operation is entered with {param:cp-12_odp.01} when {param:cp-12_odp.02} are detected."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-12-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing safe mode of operation for the system"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system administration manuals"
+      },
+      {
+       "en": "system operation manuals"
+      },
+      {
+       "en": "system installation manuals"
+      },
+      {
+       "en": "contingency plan test records"
+      },
+      {
+       "en": "incident handling records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-12-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system operation responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-12-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing safe mode of operation"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cp-12_odp.01": {
+     "guidelines": [
+      {
+       "en": "restrictions for safe mode of operation are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cp-12_prm_2"
+     ],
+     "alt-label": "restrictions of safe mode of operation"
+    },
+    "cp-12_odp.02": {
+     "guidelines": [
+      {
+       "en": "conditions detected to enter a safe mode of operation are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cp-12_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-24"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-17"
+  }
+ ]
+}

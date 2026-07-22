@@ -1,0 +1,157 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-42.5",
+ "version": "5.2.0",
+ "label": "SC-42(5)",
+ "lifecycle": "active",
+ "title": "Collection Minimization",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ {param:sc-42.05_odp} that are configured to minimize the collection of information about individuals that is not needed."
+   },
+   "parameters": [
+    {
+     "name": "sc-42.05_odp",
+     "type": "string",
+     "label": "sensors"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Although policies to control for authorized use can be applied to information once it is collected, minimizing the collection of information that is not needed mitigates privacy risk at the system entry point and mitigates the risk of policy control failures. Sensor configurations include the obscuring of human features, such as blurring or pixelating flesh tones."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-42.5_obj",
+     "label": "SC-42(05)",
+     "prose": {
+      "en": "the {param:sc-42.05_odp} configured to minimize the collection of information about individuals that is not needed are employed."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-42(05)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "access control policy and procedures"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "sensor capability and data collection policy and procedures"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "privacy impact assessments"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "list of information being collected by sensors"
+      },
+      {
+       "en": "list of sensor configurations that minimize the collection of personally identifiable information (e.g., obscure human features)"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-42(05)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for sensor capabilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-42(05)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing measures to facilitate the review of information that is being collected by sensors"
+      },
+      {
+       "en": "sensor information collection capabilities for the system"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-42.05_odp": {
+     "guidelines": [
+      {
+       "en": "the sensors that are configured to minimize the collection of unneeded information about individuals are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-42.5_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-42"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  }
+ ]
+}

@@ -1,0 +1,249 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-27",
+ "version": "5.2.0",
+ "label": "PM-27",
+ "lifecycle": "active",
+ "title": "Privacy Reporting",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop {param:pm-27_odp.01} and disseminate to:"
+   },
+   "parameters": [
+    {
+     "name": "pm-27_odp.01",
+     "type": "string",
+     "label": "privacy reports"
+    }
+   ]
+  },
+  {
+   "id": "smt.a.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "{param:pm-27_odp.02} to demonstrate accountability with statutory, regulatory, and policy privacy mandates; and"
+   },
+   "parameters": [
+    {
+     "name": "pm-27_odp.02",
+     "type": "string",
+     "label": "oversight bodies"
+    }
+   ]
+  },
+  {
+   "id": "smt.a.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "{param:pm-27_odp.03} and other personnel with responsibility for monitoring privacy program compliance; and"
+   },
+   "parameters": [
+    {
+     "name": "pm-27_odp.03",
+     "type": "string",
+     "label": "officials"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review and update privacy reports {param:pm-27_odp.04}."
+   },
+   "parameters": [
+    {
+     "name": "pm-27_odp.04",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Through internal and external reporting, organizations promote accountability and transparency in organizational privacy operations. Reporting can also help organizations to determine progress in meeting privacy compliance requirements and privacy controls, compare performance across the federal government, discover vulnerabilities, identify gaps in policy and implementation, and identify models for success. For federal agencies, privacy reports include annual senior agency official for privacy reports to OMB, reports to Congress required by Implementing Regulations of the 9/11 Commission Act, and other public reports required by law, regulation, or policy, including internal policies of organizations. The senior agency official for privacy consults with legal counsel, where appropriate, to ensure that organizations meet all applicable privacy reporting requirements."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-27_obj",
+     "label": "PM-27",
+     "children": [
+      {
+       "id": "pm-27_obj.a",
+       "label": "PM-27a.",
+       "prose": {
+        "en": "{param:pm-27_odp.01} are developed;"
+       },
+       "children": [
+        {
+         "id": "pm-27_obj.a.1",
+         "label": "PM-27a.01",
+         "prose": {
+          "en": "the privacy reports are disseminated to {param:pm-27_odp.02} to demonstrate accountability with statutory, regulatory, and policy privacy mandates;"
+         }
+        },
+        {
+         "id": "pm-27_obj.a.2",
+         "label": "PM-27a.02",
+         "children": [
+          {
+           "id": "pm-27_obj.a.2-1",
+           "label": "PM-27a.02[01]",
+           "prose": {
+            "en": "the privacy reports are disseminated to {param:pm-27_odp.03};"
+           }
+          },
+          {
+           "id": "pm-27_obj.a.2-2",
+           "label": "PM-27a.02[02]",
+           "prose": {
+            "en": "the privacy reports are disseminated to other personnel responsible for monitoring privacy program compliance;"
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "pm-27_obj.b",
+       "label": "PM-27b.",
+       "prose": {
+        "en": "the privacy reports are reviewed and updated {param:pm-27_odp.04}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-27-Examine",
+     "objects": [
+      {
+       "en": "Privacy program plan"
+      },
+      {
+       "en": "internal and external privacy reports"
+      },
+      {
+       "en": "privacy program plan"
+      },
+      {
+       "en": "annual senior agency official for privacy reports to OMB"
+      },
+      {
+       "en": "reports to Congress required by law, regulation, or policy, including internal policies"
+      },
+      {
+       "en": "records documenting the dissemination of reports to oversight bodies and officials responsible for monitoring privacy program compliance"
+      },
+      {
+       "en": "records of review and updates of privacy reports."
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-27-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with privacy program responsibilities"
+      },
+      {
+       "en": "organizational personnel with privacy responsibilities"
+      },
+      {
+       "en": "legal counsel."
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pm-27_odp.01": {
+     "guidelines": [
+      {
+       "en": "privacy reports are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pm-27_prm_1"
+     ]
+    },
+    "pm-27_odp.02": {
+     "guidelines": [
+      {
+       "en": "privacy oversight bodies are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pm-27_prm_2"
+     ]
+    },
+    "pm-27_odp.03": {
+     "guidelines": [
+      {
+       "en": "officials responsible for monitoring privacy program compliance are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pm-27_prm_3"
+     ]
+    },
+    "pm-27_odp.04": {
+     "guidelines": [
+      {
+       "en": "the frequency for reviewing and updating privacy reports is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pm-27_prm_4"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.congress.gov/113/plaws/publ283/PLAW-113publ283.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A108/omb_circular_a-108.pdf"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-19"
+  }
+ ]
+}

@@ -1,0 +1,217 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-17",
+ "version": "5.2.0",
+ "label": "PE-17",
+ "lifecycle": "active",
+ "title": "Alternate Work Site",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Determine and document the {param:pe-17_odp.01} allowed for use by employees;"
+   },
+   "parameters": [
+    {
+     "name": "pe-17_odp.01",
+     "type": "string",
+     "label": "alternate work sites"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ the following controls at alternate work sites: {param:pe-17_odp.02};"
+   },
+   "parameters": [
+    {
+     "name": "pe-17_odp.02",
+     "type": "string",
+     "label": "controls"
+    }
+   ]
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Assess the effectiveness of controls at alternate work sites; and"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide a means for employees to communicate with information security and privacy personnel in case of incidents."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Alternate work sites include government facilities or the private residences of employees. While distinct from alternative processing sites, alternate work sites can provide readily available alternate locations during contingency operations. Organizations can define different sets of controls for specific alternate work sites or types of sites depending on the work-related activities conducted at the sites. Implementing and assessing the effectiveness of organization-defined controls and providing a means to communicate incidents at alternate work sites supports the contingency planning activities of organizations."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-17_obj",
+     "label": "PE-17",
+     "children": [
+      {
+       "id": "pe-17_obj.a",
+       "label": "PE-17a.",
+       "prose": {
+        "en": "{param:pe-17_odp.01} are determined and documented;"
+       }
+      },
+      {
+       "id": "pe-17_obj.b",
+       "label": "PE-17b.",
+       "prose": {
+        "en": "{param:pe-17_odp.02} are employed at alternate work sites;"
+       }
+      },
+      {
+       "id": "pe-17_obj.c",
+       "label": "PE-17c.",
+       "prose": {
+        "en": "the effectiveness of controls at alternate work sites is assessed;"
+       }
+      },
+      {
+       "id": "pe-17_obj.d",
+       "label": "PE-17d.",
+       "prose": {
+        "en": "a means for employees to communicate with information security and privacy personnel in case of incidents is provided."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-17-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing alternate work sites for organizational personnel"
+      },
+      {
+       "en": "list of security controls required for alternate work sites"
+      },
+      {
+       "en": "assessments of security controls at alternate work sites"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-17-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel approving the use of alternate work sites"
+      },
+      {
+       "en": "organizational personnel using alternate work sites"
+      },
+      {
+       "en": "organizational personnel assessing controls at alternate work sites"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-17-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for security and privacy at alternate work sites"
+      },
+      {
+       "en": "mechanisms supporting alternate work sites"
+      },
+      {
+       "en": "security and privacy controls employed at alternate work sites"
+      },
+      {
+       "en": "means of communication between personnel at alternate work sites and security and privacy personnel"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-17_odp.01": {
+     "guidelines": [
+      {
+       "en": "alternate work sites allowed for use by employees are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-17_prm_1"
+     ]
+    },
+    "pe-17_odp.02": {
+     "guidelines": [
+      {
+       "en": "controls to be employed at alternate work sites are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-17_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-46r2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-18"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-7"
+  }
+ ]
+}

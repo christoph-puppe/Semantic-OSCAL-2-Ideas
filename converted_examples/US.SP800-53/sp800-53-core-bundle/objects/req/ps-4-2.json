@@ -1,0 +1,155 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PS-4.2",
+ "version": "5.2.0",
+ "label": "PS-4(2)",
+ "lifecycle": "active",
+ "title": "Automated Actions",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Use {param:ps-04.02_odp.01} to {param:ps-04.02_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ps-04.02_odp.01",
+     "type": "string",
+     "label": "automated mechanisms"
+    },
+    {
+     "name": "ps-04.02_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "notify {param:ps-04.02_odp.03} of individual termination actions"
+      },
+      {
+       "value": "disable access to system resources"
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "ps-04.02_odp.03",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "In organizations with many employees, not all personnel who need to know about termination actions receive the appropriate notifications, or if such notifications are received, they may not occur in a timely manner. Automated mechanisms can be used to send automatic alerts or notifications to organizational personnel or roles when individuals are terminated. Such automatic alerts or notifications can be conveyed in a variety of ways, including via telephone, electronic mail, text message, or websites. Automated mechanisms can also be employed to quickly and thoroughly disable access to system resources after an employee is terminated."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ps-4.2_obj",
+     "label": "PS-04(02)",
+     "prose": {
+      "en": "{param:ps-04.02_odp.01} are used to {param:ps-04.02_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PS-04(02)-Examine",
+     "objects": [
+      {
+       "en": "Personnel security policy"
+      },
+      {
+       "en": "procedures addressing personnel termination"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "records of personnel termination actions"
+      },
+      {
+       "en": "automated notifications of employee terminations"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PS-04(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personnel security responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PS-04(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for personnel termination"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing personnel termination notifications"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ps-04.02_odp.01": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms to notify personnel or roles of individual termination actions and/or to disable access to system resources are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ps-4.2_prm_1"
+     ]
+    },
+    "ps-04.02_odp.02": {
+     "alt-identifiers": [
+      "ps-4.2_prm_2"
+     ]
+    },
+    "ps-04.02_odp.03": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to be notified upon termination of an individual is/are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "ps-4.2_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-4"
+  }
+ ]
+}

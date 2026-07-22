@@ -1,0 +1,96 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-7.1",
+ "version": "5.2.0",
+ "label": "CP-7(1)",
+ "lifecycle": "active",
+ "title": "Separation from Primary Site",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identify an alternate processing site that is sufficiently separated from the primary processing site to reduce susceptibility to the same threats."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Threats that affect alternate processing sites are defined in organizational assessments of risk and include natural disasters, structural failures, hostile attacks, and errors of omission or commission. Organizations determine what is considered a sufficient degree of separation between primary and alternate processing sites based on the types of threats that are of concern. For threats such as hostile attacks, the degree of separation between sites is less relevant."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-7.1_obj",
+     "label": "CP-07(01)",
+     "prose": {
+      "en": "an alternate processing site that is sufficiently separated from the primary processing site to reduce susceptibility to the same threats is identified."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-07(01)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing alternate processing sites"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "alternate processing site"
+      },
+      {
+       "en": "alternate processing site agreements"
+      },
+      {
+       "en": "primary processing site agreements"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-07(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency plan alternate processing site responsibilities"
+      },
+      {
+       "en": "organizational personnel with system recovery responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  }
+ ]
+}

@@ -1,0 +1,153 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-4.9",
+ "version": "5.2.0",
+ "label": "AC-4(9)",
+ "lifecycle": "active",
+ "title": "Human Reviews",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Enforce the use of human reviews for {param:ac-04.09_odp.01} under the following conditions: {param:ac-04.09_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ac-04.09_odp.01",
+     "type": "string",
+     "label": "information flows"
+    },
+    {
+     "name": "ac-04.09_odp.02",
+     "type": "string",
+     "label": "conditions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations define security or privacy policy filters for all situations where automated flow control decisions are possible. When a fully automated flow control decision is not possible, then a human review may be employed in lieu of or as a complement to automated security or privacy policy filtering. Human reviews may also be employed as deemed necessary by organizations."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-4.9_obj",
+     "label": "AC-04(09)",
+     "prose": {
+      "en": "human reviews are used for {param:ac-04.09_odp.01} under {param:ac-04.09_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-04(09)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "information flow control policies"
+      },
+      {
+       "en": "procedures addressing information flow enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "records of human reviews regarding information flows"
+      },
+      {
+       "en": "list of information flows requiring the use of human reviews"
+      },
+      {
+       "en": "list of conditions requiring human reviews for information flows"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-04(09)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with information flow enforcement responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-04(09)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms enforcing the use of human reviews"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-04.09_odp.01": {
+     "guidelines": [
+      {
+       "en": "information flows requiring the use of human reviews are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-4.9_prm_1"
+     ]
+    },
+    "ac-04.09_odp.02": {
+     "guidelines": [
+      {
+       "en": "conditions under which the use of human reviews for information flows are to be enforced are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-4.9_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  }
+ ]
+}

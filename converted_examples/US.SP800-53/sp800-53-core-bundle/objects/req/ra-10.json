@@ -1,0 +1,210 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/RA-10",
+ "version": "5.2.0",
+ "label": "RA-10",
+ "lifecycle": "active",
+ "title": "Threat Hunting",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Establish and maintain a cyber threat hunting capability to:"
+   }
+  },
+  {
+   "id": "smt.a.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Search for indicators of compromise in organizational systems; and"
+   }
+  },
+  {
+   "id": "smt.a.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Detect, track, and disrupt threats that evade existing controls; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Employ the threat hunting capability {param:ra-10_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ra-10_odp",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Threat hunting is an active means of cyber defense in contrast to traditional protection measures, such as firewalls, intrusion detection and prevention systems, quarantining malicious code in sandboxes, and Security Information and Event Management technologies and systems. Cyber threat hunting involves proactively searching organizational systems, networks, and infrastructure for advanced threats. The objective is to track and disrupt cyber adversaries as early as possible in the attack sequence and to measurably improve the speed and accuracy of organizational responses. Indications of compromise include unusual network traffic, unusual file changes, and the presence of malicious code. Threat hunting teams leverage existing threat intelligence and may create new threat intelligence, which is shared with peer organizations, Information Sharing and Analysis Organizations (ISAO), Information Sharing and Analysis Centers (ISAC), and relevant government departments and agencies."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ra-10_obj",
+     "label": "RA-10",
+     "children": [
+      {
+       "id": "ra-10_obj.a",
+       "label": "RA-10a.",
+       "children": [
+        {
+         "id": "ra-10_obj.a.1",
+         "label": "RA-10a.01",
+         "prose": {
+          "en": "a cyber threat capability is established and maintained to search for indicators of compromise in organizational systems;"
+         }
+        },
+        {
+         "id": "ra-10_obj.a.2",
+         "label": "RA-10a.02",
+         "prose": {
+          "en": "a cyber threat capability is established and maintained to detect, track, and disrupt threats that evade existing controls;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ra-10_obj.b",
+       "label": "RA-10b.",
+       "prose": {
+        "en": "the threat hunting capability is employed {param:ra-10_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "RA-10-Examine",
+     "objects": [
+      {
+       "en": "Risk assessment policy"
+      },
+      {
+       "en": "assessment reports"
+      },
+      {
+       "en": "audit records/event logs"
+      },
+      {
+       "en": "threat hunting capability"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "RA-10-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with threat hunting responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "RA-10-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for assessments and audits"
+      },
+      {
+       "en": "mechanisms/tools supporting and/or implementing threat hunting capabilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ra-10_odp": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to employ the threat hunting capability is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ra-10_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-30r1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

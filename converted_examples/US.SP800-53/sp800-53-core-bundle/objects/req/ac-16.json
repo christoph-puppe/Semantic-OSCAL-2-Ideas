@@ -1,0 +1,554 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-16",
+ "version": "5.2.0",
+ "label": "AC-16",
+ "lifecycle": "active",
+ "title": "Security and Privacy Attributes",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide the means to associate {param:ac-16_prm_1} with {param:ac-16_prm_2} for information in storage, in process, and/or in transmission;"
+   },
+   "parameters": [
+    {
+     "name": "ac-16_prm_1",
+     "type": "string",
+     "label": "organization-defined types of security and privacy attributes"
+    },
+    {
+     "name": "ac-16_prm_2",
+     "type": "string",
+     "label": "organization-defined security and privacy attribute values"
+    },
+    {
+     "name": "ac-16_odp.01",
+     "type": "string",
+     "label": "types of security attributes"
+    },
+    {
+     "name": "ac-16_odp.02",
+     "type": "string",
+     "label": "types of privacy attributes"
+    },
+    {
+     "name": "ac-16_odp.03",
+     "type": "string",
+     "label": "security attribute values"
+    },
+    {
+     "name": "ac-16_odp.04",
+     "type": "string",
+     "label": "privacy attribute values"
+    },
+    {
+     "name": "ac-16_odp.05",
+     "type": "string",
+     "label": "systems"
+    },
+    {
+     "name": "ac-16_odp.06",
+     "type": "string",
+     "label": "systems"
+    },
+    {
+     "name": "ac-16_odp.07",
+     "type": "string",
+     "label": "security attributes"
+    },
+    {
+     "name": "ac-16_odp.08",
+     "type": "string",
+     "label": "privacy attributes"
+    },
+    {
+     "name": "ac-16_odp.10",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "ac-16_odp.11",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Ensure that the attribute associations are made and retained with the information;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish the following permitted security and privacy attributes from the attributes defined in AC-16a for {param:ac-16_prm_3}: {param:ac-16_prm_4};"
+   },
+   "parameters": [
+    {
+     "name": "ac-16_prm_3",
+     "type": "string",
+     "label": "organization-defined systems"
+    },
+    {
+     "name": "ac-16_prm_4",
+     "type": "string",
+     "label": "organization-defined security and privacy attributes"
+    }
+   ]
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Determine the following permitted attribute values or ranges for each of the established attributes: {param:ac-16_odp.09};"
+   },
+   "parameters": [
+    {
+     "name": "ac-16_odp.09",
+     "type": "string",
+     "label": "attribute values or ranges"
+    }
+   ]
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Audit changes to attributes; and"
+   }
+  },
+  {
+   "id": "smt.f",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review {param:ac-16_prm_6} for applicability {param:ac-16_prm_7}."
+   },
+   "parameters": [
+    {
+     "name": "ac-16_prm_6",
+     "type": "string",
+     "label": "organization-defined security and privacy attributes"
+    },
+    {
+     "name": "ac-16_prm_7",
+     "type": "string",
+     "label": "organization-defined frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Information is represented internally within systems using abstractions known as data structures. Internal data structures can represent different types of entities, both active and passive. Active entities, also known as subjects, are typically associated with individuals, devices, or processes acting on behalf of individuals. Passive entities, also known as objects, are typically associated with data structures, such as records, buffers, tables, files, inter-process pipes, and communications ports. Security attributes, a form of metadata, are abstractions that represent the basic properties or characteristics of active and passive entities with respect to safeguarding information. Privacy attributes, which may be used independently or in conjunction with security attributes, represent the basic properties or characteristics of active or passive entities with respect to the management of personally identifiable information. Attributes can be either explicitly or implicitly associated with the information contained in organizational systems or system components.\n\nAttributes may be associated with active entities (i.e., subjects) that have the potential to send or receive information, cause information to flow among objects, or change the system state. These attributes may also be associated with passive entities (i.e., objects) that contain or receive information. The association of attributes to subjects and objects by a system is referred to as binding and is inclusive of setting the attribute value and the attribute type. Attributes, when bound to data or information, permit the enforcement of security and privacy policies for access control and information flow control, including data retention limits, permitted uses of personally identifiable information, and identification of personal information within data objects. Such enforcement occurs through organizational processes or system functions or mechanisms. The binding techniques implemented by systems affect the strength of attribute binding to information. Binding strength and the assurance associated with binding techniques play important parts in the trust that organizations have in the information flow enforcement process. The binding techniques affect the number and degree of additional reviews required by organizations. The content or assigned values of attributes can directly affect the ability of individuals to access organizational information.\n\nOrganizations can define the types of attributes needed for systems to support missions or business functions. There are many values that can be assigned to a security attribute. By specifying the permitted attribute ranges and values, organizations ensure that attribute values are meaningful and relevant. Labeling refers to the association of attributes with the subjects and objects represented by the internal data structures within systems. This facilitates system-based enforcement of information security and privacy policies. Labels include classification of information in accordance with legal and compliance requirements (e.g., top secret, secret, confidential, controlled unclassified), information impact level; high value asset information, access authorizations, nationality; data life cycle protection (i.e., encryption and data expiration), personally identifiable information processing permissions, including individual consent to personally identifiable information processing, and contractor affiliation. A related term to labeling is marking. Marking refers to the association of attributes with objects in a human-readable form and displayed on system media. Marking enables manual, procedural, or process-based enforcement of information security and privacy policies. Security and privacy labels may have the same value as media markings (e.g., top secret, secret, confidential). See MP-3 (Media Marking)."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-16_obj",
+     "label": "AC-16",
+     "children": [
+      {
+       "id": "ac-16_obj.a",
+       "label": "AC-16a.",
+       "children": [
+        {
+         "id": "ac-16_obj.a-1",
+         "label": "AC-16a.[01]",
+         "prose": {
+          "en": "the means to associate {param:ac-16_odp.01} with {param:ac-16_odp.03} for information in storage, in process, and/or in transmission are provided;"
+         }
+        },
+        {
+         "id": "ac-16_obj.a-2",
+         "label": "AC-16a.[02]",
+         "prose": {
+          "en": "the means to associate {param:ac-16_odp.02} with {param:ac-16_odp.04} for information in storage, in process, and/or in transmission are provided;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ac-16_obj.b",
+       "label": "AC-16b.",
+       "children": [
+        {
+         "id": "ac-16_obj.b-1",
+         "label": "AC-16b.[01]",
+         "prose": {
+          "en": "attribute associations are made;"
+         }
+        },
+        {
+         "id": "ac-16_obj.b-2",
+         "label": "AC-16b.[02]",
+         "prose": {
+          "en": "attribute associations are retained with the information;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ac-16_obj.c",
+       "label": "AC-16c.",
+       "children": [
+        {
+         "id": "ac-16_obj.c-1",
+         "label": "AC-16c.[01]",
+         "prose": {
+          "en": "the following permitted security attributes are established from the attributes defined in AC-16_ODP[01] for {param:ac-16_odp.05}: {param:ac-16_odp.07};"
+         }
+        },
+        {
+         "id": "ac-16_obj.c-2",
+         "label": "AC-16c.[02]",
+         "prose": {
+          "en": "the following permitted privacy attributes are established from the attributes defined in AC-16_ODP[02] for {param:ac-16_odp.06}: {param:ac-16_odp.08};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ac-16_obj.d",
+       "label": "AC-16d.",
+       "prose": {
+        "en": "the following permitted attribute values or ranges for each of the established attributes are determined: {param:ac-16_odp.09};"
+       }
+      },
+      {
+       "id": "ac-16_obj.e",
+       "label": "AC-16e.",
+       "prose": {
+        "en": "changes to attributes are audited;"
+       }
+      },
+      {
+       "id": "ac-16_obj.f",
+       "label": "AC-16f.",
+       "children": [
+        {
+         "id": "ac-16_obj.f-1",
+         "label": "AC-16f.[01]",
+         "prose": {
+          "en": "{param:ac-16_odp.07} are reviewed for applicability {param:ac-16_odp.10};"
+         }
+        },
+        {
+         "id": "ac-16_obj.f-2",
+         "label": "AC-16f.[02]",
+         "prose": {
+          "en": "{param:ac-16_odp.08} are reviewed for applicability {param:ac-16_odp.11}."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-16-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing the association of security and privacy attributes to information in storage, in process, and in transmission"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-16-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-16-Test",
+     "objects": [
+      {
+       "en": "Organizational capability supporting and maintaining the association of security and privacy attributes to information in storage, in process, and in transmission"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-16_prm_1": {
+     "aggregates": [
+      "ac-16_odp.01",
+      "ac-16_odp.02"
+     ]
+    },
+    "ac-16_prm_2": {
+     "aggregates": [
+      "ac-16_odp.03",
+      "ac-16_odp.04"
+     ]
+    },
+    "ac-16_prm_3": {
+     "aggregates": [
+      "ac-16_odp.05",
+      "ac-16_odp.06"
+     ]
+    },
+    "ac-16_prm_4": {
+     "aggregates": [
+      "ac-16_odp.07",
+      "ac-16_odp.08"
+     ]
+    },
+    "ac-16_prm_6": {
+     "aggregates": [
+      "ac-16_odp.07",
+      "ac-16_odp.08"
+     ]
+    },
+    "ac-16_prm_7": {
+     "aggregates": [
+      "ac-16_odp.10",
+      "ac-16_odp.11"
+     ]
+    },
+    "ac-16_odp.01": {
+     "guidelines": [
+      {
+       "en": "types of security attributes to be associated with information security attribute values for information in storage, in process, and/or in transmission are defined;"
+      }
+     ]
+    },
+    "ac-16_odp.02": {
+     "guidelines": [
+      {
+       "en": "types of privacy attributes to be associated with privacy attribute values for information in storage, in process, and/or in transmission are defined;"
+      }
+     ]
+    },
+    "ac-16_odp.03": {
+     "guidelines": [
+      {
+       "en": "security attribute values for types of security attributes are defined;"
+      }
+     ]
+    },
+    "ac-16_odp.04": {
+     "guidelines": [
+      {
+       "en": "privacy attribute values for types of privacy attributes are defined;"
+      }
+     ]
+    },
+    "ac-16_odp.05": {
+     "guidelines": [
+      {
+       "en": "systems for which permitted security attributes are to be established are defined;"
+      }
+     ]
+    },
+    "ac-16_odp.06": {
+     "guidelines": [
+      {
+       "en": "systems for which permitted privacy attributes are to be established are defined;"
+      }
+     ]
+    },
+    "ac-16_odp.07": {
+     "guidelines": [
+      {
+       "en": "security attributes defined as part of AC-16a that are permitted for systems are defined;"
+      }
+     ]
+    },
+    "ac-16_odp.08": {
+     "guidelines": [
+      {
+       "en": "privacy attributes defined as part of AC-16a that are permitted for systems are defined;"
+      }
+     ]
+    },
+    "ac-16_odp.09": {
+     "guidelines": [
+      {
+       "en": "attribute values or ranges for established attributes are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-16_prm_5"
+     ],
+     "alt-label": "attribute values or ranges for established attributes"
+    },
+    "ac-16_odp.10": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to review security attributes for applicability is defined;"
+      }
+     ]
+    },
+    "ac-16_odp.11": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to review privacy attributes for applicability is defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.140-3"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.186-4"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-162"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-178"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-21"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-25"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-22"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-18"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4.18",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/AC-4.18",
+    "mode": "merged-into",
+    "label": "AC-04(18)",
+    "title": "Security Attribute Binding"
+   }
+  ]
+ }
+}

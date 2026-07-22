@@ -1,0 +1,178 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-4.12",
+ "version": "5.2.0",
+ "label": "SA-4(12)",
+ "lifecycle": "active",
+ "title": "Data Ownership",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Include organizational data ownership requirements in the acquisition contract; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require all data to be removed from the contractor’s system and returned to the organization within {param:sa-04.12_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sa-04.12_odp",
+     "type": "string",
+     "label": "time frame"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Contractors who operate a system that contains data owned by an organization initiating the contract have policies and procedures in place to remove the data from their systems and/or return the data in a time frame defined by the contract."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-4.12_obj",
+     "label": "SA-04(12)",
+     "children": [
+      {
+       "id": "sa-4.12_obj.a",
+       "label": "SA-04(12)(a)",
+       "prose": {
+        "en": "organizational data ownership requirements are included in the acquisition contract;"
+       }
+      },
+      {
+       "id": "sa-4.12_obj.b",
+       "label": "SA-04(12)(b)",
+       "prose": {
+        "en": "all data to be removed from the contractor’s system and returned to the organization is required within {param:sa-04.12_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-04(12)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "procedures addressing the integration of information security and privacy requirements, descriptions, and criteria into the acquisition process"
+      },
+      {
+       "en": "procedures addressing the disposition of personally identifiable information"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "acquisition contracts for the system or system service"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "information sharing agreements"
+      },
+      {
+       "en": "memoranda of understanding"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-04(12)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with acquisition/contracting responsibilities"
+      },
+      {
+       "en": "organizational personnel with the responsibility for data management and processing requirements"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-04(12)-Test",
+     "objects": [
+      {
+       "en": "Contract management processes to verify that data is removed as required"
+      },
+      {
+       "en": "vendor processes for removing data in required timeframe"
+      },
+      {
+       "en": "mechanisms verifying the removal and return of data"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-04.12_odp": {
+     "guidelines": [
+      {
+       "en": "time frame to remove data from a contractor system and return it to the organization is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-4.12_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-4"
+  }
+ ]
+}

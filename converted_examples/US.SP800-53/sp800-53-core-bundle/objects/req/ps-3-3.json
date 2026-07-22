@@ -1,0 +1,152 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PS-3.3",
+ "version": "5.2.0",
+ "label": "PS-3(3)",
+ "lifecycle": "active",
+ "title": "Information Requiring Special Protective Measures",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Verify that individuals accessing a system processing, storing, or transmitting information requiring special protection:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Have valid access authorizations that are demonstrated by assigned official government duties; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Satisfy {param:ps-03.03_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ps-03.03_odp",
+     "type": "string",
+     "label": "additional personnel screening criteria"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizational information that requires special protection includes controlled unclassified information. Personnel security criteria include position sensitivity background screening requirements."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ps-3.3_obj",
+     "label": "PS-03(03)",
+     "children": [
+      {
+       "id": "ps-3.3_obj.a",
+       "label": "PS-03(03)(a)",
+       "prose": {
+        "en": "individuals accessing a system processing, storing, or transmitting information requiring special protection have valid access authorizations that are demonstrated by assigned official government duties;"
+       }
+      },
+      {
+       "id": "ps-3.3_obj.b",
+       "label": "PS-03(03)(b)",
+       "prose": {
+        "en": "individuals accessing a system processing, storing, or transmitting information requiring special protection satisfy {param:ps-03.03_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PS-03(03)-Examine",
+     "objects": [
+      {
+       "en": "Personnel security policy"
+      },
+      {
+       "en": "access control policy, procedures addressing personnel screening"
+      },
+      {
+       "en": "records of screened personnel"
+      },
+      {
+       "en": "screening criteria"
+      },
+      {
+       "en": "records of access authorizations"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PS-03(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personnel security responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PS-03(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for ensuring valid access authorizations for information requiring special protection"
+      },
+      {
+       "en": "organizational process for additional personnel screening for information requiring special protection"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ps-03.03_odp": {
+     "guidelines": [
+      {
+       "en": "additional personnel screening criteria to be satisfied for individuals accessing a system processing, storing, or transmitting information requiring special protection are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ps-3.3_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-3"
+  }
+ ]
+}

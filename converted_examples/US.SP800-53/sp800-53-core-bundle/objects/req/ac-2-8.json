@@ -1,0 +1,156 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-2.8",
+ "version": "5.2.0",
+ "label": "AC-2(8)",
+ "lifecycle": "active",
+ "title": "Dynamic Account Management",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Create, activate, manage, and deactivate {param:ac-02.08_odp} dynamically."
+   },
+   "parameters": [
+    {
+     "name": "ac-02.08_odp",
+     "type": "string",
+     "label": "system accounts"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Approaches for dynamically creating, activating, managing, and deactivating system accounts rely on automatically provisioning the accounts at runtime for entities that were previously unknown. Organizations plan for the dynamic management, creation, activation, and deactivation of system accounts by establishing trust relationships, business rules, and mechanisms with appropriate authorities to validate related authorizations and privileges."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-2.8_obj",
+     "label": "AC-02(08)",
+     "children": [
+      {
+       "id": "ac-2.8_obj-1",
+       "label": "AC-02(08)[01]",
+       "prose": {
+        "en": "{param:ac-02.08_odp} are created dynamically;"
+       }
+      },
+      {
+       "id": "ac-2.8_obj-2",
+       "label": "AC-02(08)[02]",
+       "prose": {
+        "en": "{param:ac-02.08_odp} are activated dynamically;"
+       }
+      },
+      {
+       "id": "ac-2.8_obj-3",
+       "label": "AC-02(08)[03]",
+       "prose": {
+        "en": "{param:ac-02.08_odp} are managed dynamically;"
+       }
+      },
+      {
+       "id": "ac-2.8_obj-4",
+       "label": "AC-02(08)[04]",
+       "prose": {
+        "en": "{param:ac-02.08_odp} are deactivated dynamically."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-02(08)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing account management"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system-generated list of system accounts"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-02(08)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with account management responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-02(08)-Test",
+     "objects": [
+      {
+       "en": "Automated mechanisms implementing account management functions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-02.08_odp": {
+     "guidelines": [
+      {
+       "en": "system accounts that are dynamically created, activated, managed, and deactivated are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2.8_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-16"
+  }
+ ]
+}

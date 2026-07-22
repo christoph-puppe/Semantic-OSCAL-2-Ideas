@@ -1,0 +1,161 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-4.19",
+ "version": "5.2.0",
+ "label": "SI-4(19)",
+ "lifecycle": "active",
+ "title": "Risk for Individuals",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Implement {param:si-04.19_odp.01} of individuals who have been identified by {param:si-04.19_odp.02} as posing an increased level of risk."
+   },
+   "parameters": [
+    {
+     "name": "si-04.19_odp.01",
+     "type": "string",
+     "label": "additional monitoring"
+    },
+    {
+     "name": "si-04.19_odp.02",
+     "type": "string",
+     "label": "sources"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Indications of increased risk from individuals can be obtained from different sources, including personnel records, intelligence agencies, law enforcement organizations, and other sources. The monitoring of individuals is coordinated with the management, legal, security, privacy, and human resource officials who conduct such monitoring. Monitoring is conducted in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-4.19_obj",
+     "label": "SI-04(19)",
+     "prose": {
+      "en": "{param:si-04.19_odp.01} is implemented on individuals who have been identified by {param:si-04.19_odp.02} as posing an increased level of risk."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-04(19)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing system monitoring"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system monitoring tools and techniques documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-04(19)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for monitoring the system"
+      },
+      {
+       "en": "legal counsel"
+      },
+      {
+       "en": "human resource officials"
+      },
+      {
+       "en": "organizational personnel with personnel security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-04(19)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for system monitoring"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing a system monitoring capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-04.19_odp.01": {
+     "guidelines": [
+      {
+       "en": "additional monitoring of individuals who have been identified as posing an increased level of risk is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-4.19_prm_1"
+     ]
+    },
+    "si-04.19_odp.02": {
+     "guidelines": [
+      {
+       "en": "sources that identify individuals who pose an increased level of risk are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-4.19_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

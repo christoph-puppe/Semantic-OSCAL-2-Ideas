@@ -1,0 +1,351 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-2",
+ "version": "5.2.0",
+ "label": "SI-2",
+ "lifecycle": "active",
+ "title": "Flaw Remediation",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identify, report, and correct system flaws;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Test software and firmware updates related to flaw remediation for effectiveness and potential side effects before installation;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Install security-relevant software and firmware updates within {param:si-02_odp} of the release of the updates; and"
+   },
+   "parameters": [
+    {
+     "name": "si-02_odp",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Incorporate flaw remediation into the organizational configuration management process."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The need to remediate system flaws applies to all types of software and firmware. Organizations identify systems affected by software flaws, including potential vulnerabilities resulting from those flaws, and report this information to designated organizational personnel with information security and privacy responsibilities. Organizations consider establishing a controlled patching environment for mission-critical systems. Security-relevant updates include patches, service packs, and malicious code signatures. Organizations also address flaws discovered during assessments, continuous monitoring, incident response activities, and system error handling. By incorporating flaw remediation into configuration management processes, required remediation actions can be tracked and verified.\n\nOrganization-defined time periods for updating security-relevant software and firmware may vary based on a variety of risk factors, including the security category of the system, the criticality of the update (i.e., severity of the vulnerability related to the discovered flaw), the organizational risk tolerance, the mission supported by the system, or the threat environment. Some types of flaw remediation may require more testing than other types. Organizations determine the type of testing needed for the specific type of flaw remediation activity under consideration and the types of changes that are to be configuration-managed. Flaw remediation testing addresses both effectiveness of addressing security issues and for potential side effects on functionality, system and system component performance and operations. When implementing remediation activities, organizations consider the order and timing of updates to validate correct execution within the system environment, and to support system and component availability needs (i.e., implementing a staggered deployment strategy). In some situations, organizations may determine that the testing of software or firmware updates is not necessary or practical, such as when implementing simple malicious code signature updates. In testing decisions, organizations consider whether security-relevant software or firmware updates are obtained from authorized sources with appropriate digital signatures.\n\nWhen implementing remediation activities, organizations consider the order and timing of updates to validate correct execution within the system environment, and to support system and component availability needs (i.e., implementing a staggered deployment strategy). Organizations verify that software and firmware updates come from authorized sources prior to downloading."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-2_obj",
+     "label": "SI-02",
+     "children": [
+      {
+       "id": "si-2_obj.a",
+       "label": "SI-02a.",
+       "children": [
+        {
+         "id": "si-2_obj.a-1",
+         "label": "SI-02a.[01]",
+         "prose": {
+          "en": "system flaws are identified;"
+         }
+        },
+        {
+         "id": "si-2_obj.a-2",
+         "label": "SI-02a.[02]",
+         "prose": {
+          "en": "system flaws are reported;"
+         }
+        },
+        {
+         "id": "si-2_obj.a-3",
+         "label": "SI-02a.[03]",
+         "prose": {
+          "en": "system flaws are corrected;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "si-2_obj.b",
+       "label": "SI-02b.",
+       "children": [
+        {
+         "id": "si-2_obj.b-1",
+         "label": "SI-02b.[01]",
+         "prose": {
+          "en": "software updates related to flaw remediation are tested for effectiveness before installation;"
+         }
+        },
+        {
+         "id": "si-2_obj.b-2",
+         "label": "SI-02b.[02]",
+         "prose": {
+          "en": "software updates related to flaw remediation are tested for potential side effects before installation;"
+         }
+        },
+        {
+         "id": "si-2_obj.b-3",
+         "label": "SI-02b.[03]",
+         "prose": {
+          "en": "firmware updates related to flaw remediation are tested for effectiveness before installation;"
+         }
+        },
+        {
+         "id": "si-2_obj.b-4",
+         "label": "SI-02b.[04]",
+         "prose": {
+          "en": "firmware updates related to flaw remediation are tested for potential side effects before installation;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "si-2_obj.c",
+       "label": "SI-02c.",
+       "children": [
+        {
+         "id": "si-2_obj.c-1",
+         "label": "SI-02c.[01]",
+         "prose": {
+          "en": "security-relevant software updates are installed within {param:si-02_odp} of the release of the updates;"
+         }
+        },
+        {
+         "id": "si-2_obj.c-2",
+         "label": "SI-02c.[02]",
+         "prose": {
+          "en": "security-relevant firmware updates are installed within {param:si-02_odp} of the release of the updates;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "si-2_obj.d",
+       "label": "SI-02d.",
+       "prose": {
+        "en": "flaw remediation is incorporated into the organizational configuration management process."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-02-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing flaw remediation"
+      },
+      {
+       "en": "procedures addressing configuration management"
+      },
+      {
+       "en": "list of flaws and vulnerabilities potentially affecting the system"
+      },
+      {
+       "en": "list of recent security flaw remediation actions performed on the system (e.g., list of installed patches, service packs, hot fixes, and other software updates to correct system flaws)"
+      },
+      {
+       "en": "test results from the installation of software and firmware updates to correct system flaws"
+      },
+      {
+       "en": "installation/change control records for security-relevant software and firmware updates"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-02-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel responsible for installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for flaw remediation"
+      },
+      {
+       "en": "organizational personnel with configuration management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-02-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for identifying, reporting, and correcting system flaws"
+      },
+      {
+       "en": "organizational process for installing software and firmware updates"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the reporting and correcting of system flaws"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing testing software and firmware updates"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-02_odp": {
+     "guidelines": [
+      {
+       "en": "time period within which to install security-relevant software updates after the release of the updates is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-2_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.140-3"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.186-4"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-39"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-40r3"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-128"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.7788"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-81-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-11"
+  }
+ ]
+}

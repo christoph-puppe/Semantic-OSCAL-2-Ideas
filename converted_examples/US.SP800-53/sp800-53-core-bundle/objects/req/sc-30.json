@@ -1,0 +1,178 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-30",
+ "version": "5.2.0",
+ "label": "SC-30",
+ "lifecycle": "active",
+ "title": "Concealment and Misdirection",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ the following concealment and misdirection techniques for {param:sc-30_odp.02} at {param:sc-30_odp.03} to confuse and mislead adversaries: {param:sc-30_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "sc-30_odp.01",
+     "type": "string",
+     "label": "concealment and misdirection techniques"
+    },
+    {
+     "name": "sc-30_odp.02",
+     "type": "string",
+     "label": "systems"
+    },
+    {
+     "name": "sc-30_odp.03",
+     "type": "string",
+     "label": "time periods"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Concealment and misdirection techniques can significantly reduce the targeting capabilities of adversaries (i.e., window of opportunity and available attack surface) to initiate and complete attacks. For example, virtualization techniques provide organizations with the ability to disguise systems, potentially reducing the likelihood of successful attacks without the cost of having multiple platforms. The increased use of concealment and misdirection techniques and methods—including randomness, uncertainty, and virtualization—may sufficiently confuse and mislead adversaries and subsequently increase the risk of discovery and/or exposing tradecraft. Concealment and misdirection techniques may provide additional time to perform core mission and business functions. The implementation of concealment and misdirection techniques may add to the complexity and management overhead required for the system."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-30_obj",
+     "label": "SC-30",
+     "prose": {
+      "en": "{param:sc-30_odp.01} are employed for {param:sc-30_odp.02} for {param:sc-30_odp.03} to confuse and mislead adversaries."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-30-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing concealment and misdirection techniques for the system"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "list of concealment and misdirection techniques to be employed for organizational systems"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-30-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with the responsibility to implement concealment and misdirection techniques for systems"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-30-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing concealment and misdirection techniques"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-30_odp.01": {
+     "guidelines": [
+      {
+       "en": "concealment and misdirection techniques to be employed to confuse and mislead adversaries potentially targeting systems are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-30_prm_3"
+     ]
+    },
+    "sc-30_odp.02": {
+     "guidelines": [
+      {
+       "en": "systems for which concealment and misdirection techniques are to be employed are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-30_prm_1"
+     ]
+    },
+    "sc-30_odp.03": {
+     "guidelines": [
+      {
+       "en": "time periods to employ concealment and misdirection techniques for systems are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-30_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-25"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-26"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-29"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-44"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-14"
+  }
+ ]
+}

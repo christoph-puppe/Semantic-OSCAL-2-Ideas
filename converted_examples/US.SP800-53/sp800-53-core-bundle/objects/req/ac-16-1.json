@@ -1,0 +1,230 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-16.1",
+ "version": "5.2.0",
+ "label": "AC-16(1)",
+ "lifecycle": "active",
+ "title": "Dynamic Attribute Association",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Dynamically associate security and privacy attributes with {param:ac-16.1_prm_1} in accordance with the following security and privacy policies as information is created and combined: {param:ac-16.1_prm_2}."
+   },
+   "parameters": [
+    {
+     "name": "ac-16.1_prm_1",
+     "type": "string",
+     "label": "organization-defined subjects and objects"
+    },
+    {
+     "name": "ac-16.1_prm_2",
+     "type": "string",
+     "label": "organization-defined security and privacy policies"
+    },
+    {
+     "name": "ac-16.01_odp.01",
+     "type": "string",
+     "label": "subjects"
+    },
+    {
+     "name": "ac-16.01_odp.02",
+     "type": "string",
+     "label": "objects"
+    },
+    {
+     "name": "ac-16.01_odp.03",
+     "type": "string",
+     "label": "subjects"
+    },
+    {
+     "name": "ac-16.01_odp.04",
+     "type": "string",
+     "label": "objects"
+    },
+    {
+     "name": "ac-16.01_odp.05",
+     "type": "string",
+     "label": "security policies"
+    },
+    {
+     "name": "ac-16.01_odp.06",
+     "type": "string",
+     "label": "privacy policies"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Dynamic association of attributes is appropriate whenever the security or privacy characteristics of information change over time. Attributes may change due to information aggregation issues (i.e., characteristics of individual data elements are different from the combined elements), changes in individual access authorizations (i.e., privileges), changes in the security category of information, or changes in security or privacy policies. Attributes may also change situationally."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-16.1_obj",
+     "label": "AC-16(01)",
+     "children": [
+      {
+       "id": "ac-16.1_obj-1",
+       "label": "AC-16(01)[01]",
+       "prose": {
+        "en": "security attributes are dynamically associated with {param:ac-16.01_odp.01} in accordance with the following security policies as information is created and combined: {param:ac-16.01_odp.05};"
+       }
+      },
+      {
+       "id": "ac-16.1_obj-2",
+       "label": "AC-16(01)[02]",
+       "prose": {
+        "en": "security attributes are dynamically associated with {param:ac-16.01_odp.02} in accordance with the following security policies as information is created and combined: {param:ac-16.01_odp.05};"
+       }
+      },
+      {
+       "id": "ac-16.1_obj-3",
+       "label": "AC-16(01)[03]",
+       "prose": {
+        "en": "privacy attributes are dynamically associated with {param:ac-16.01_odp.03} in accordance with the following privacy policies as information is created and combined: {param:ac-16.01_odp.06};"
+       }
+      },
+      {
+       "id": "ac-16.1_obj-4",
+       "label": "AC-16(01)[04]",
+       "prose": {
+        "en": "privacy attributes are dynamically associated with {param:ac-16.01_odp.04} in accordance with the following privacy policies as information is created and combined: {param:ac-16.01_odp.06}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-16(01)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing dynamic association of security and privacy attributes to information"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-16(01)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-16(01)-Test",
+     "objects": [
+      {
+       "en": "Automated mechanisms implementing dynamic association of security and privacy attributes to information"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-16.1_prm_1": {
+     "aggregates": [
+      "ac-16.01_odp.01",
+      "ac-16.01_odp.02",
+      "ac-16.01_odp.03",
+      "ac-16.01_odp.04"
+     ]
+    },
+    "ac-16.1_prm_2": {
+     "aggregates": [
+      "ac-16.01_odp.05",
+      "ac-16.01_odp.06"
+     ]
+    },
+    "ac-16.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "subjects with which security attributes are to be dynamically associated as information is created and combined are defined;"
+      }
+     ]
+    },
+    "ac-16.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "objects with which security attributes are to be dynamically associated as information is created and combined are defined;"
+      }
+     ]
+    },
+    "ac-16.01_odp.03": {
+     "guidelines": [
+      {
+       "en": "subjects with which privacy attributes are to be dynamically associated as information is created and combined are defined;"
+      }
+     ]
+    },
+    "ac-16.01_odp.04": {
+     "guidelines": [
+      {
+       "en": "objects with which privacy attributes are to be dynamically associated as information is created and combined are defined;"
+      }
+     ]
+    },
+    "ac-16.01_odp.05": {
+     "guidelines": [
+      {
+       "en": "security policies requiring dynamic association of security attributes with subjects and objects are defined;"
+      }
+     ]
+    },
+    "ac-16.01_odp.06": {
+     "guidelines": [
+      {
+       "en": "privacy policies requiring dynamic association of privacy attributes with subjects and objects are defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-16"
+  }
+ ]
+}

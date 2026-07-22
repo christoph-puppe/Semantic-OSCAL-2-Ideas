@@ -1,0 +1,197 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-3",
+ "version": "5.2.0",
+ "label": "PM-3",
+ "lifecycle": "active",
+ "title": "Information Security and Privacy Resources",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Include the resources needed to implement the information security and privacy programs in capital planning and investment requests and document all exceptions to this requirement;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Prepare documentation required for addressing information security and privacy programs in capital planning and investment requests in accordance with applicable laws, executive orders, directives, policies, regulations, standards; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Make available for expenditure, the planned information security and privacy resources."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations consider establishing champions for information security and privacy and, as part of including the necessary resources, assign specialized expertise and resources as needed. Organizations may designate and empower an Investment Review Board or similar group to manage and provide oversight for the information security and privacy aspects of the capital planning and investment control process."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-3_obj",
+     "label": "PM-03",
+     "children": [
+      {
+       "id": "pm-3_obj.a",
+       "label": "PM-03a.",
+       "children": [
+        {
+         "id": "pm-3_obj.a-1",
+         "label": "PM-03a.[01]",
+         "prose": {
+          "en": "the resources needed to implement the information security program are included in capital planning and investment requests, and all exceptions are documented;"
+         }
+        },
+        {
+         "id": "pm-3_obj.a-2",
+         "label": "PM-03a.[02]",
+         "prose": {
+          "en": "the resources needed to implement the privacy program are included in capital planning and investment requests, and all exceptions are documented;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-3_obj.b",
+       "label": "PM-03b.",
+       "children": [
+        {
+         "id": "pm-3_obj.b-1",
+         "label": "PM-03b.[01]",
+         "prose": {
+          "en": "the documentation required for addressing the information security program in capital planning and investment requests is prepared in accordance with applicable laws, executive orders, directives, policies, regulations, standards;"
+         }
+        },
+        {
+         "id": "pm-3_obj.b-2",
+         "label": "PM-03b.[02]",
+         "prose": {
+          "en": "the documentation required for addressing the privacy program in capital planning and investment requests is prepared in accordance with applicable laws, executive orders, directives, policies, regulations, standards;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-3_obj.c",
+       "label": "PM-03c.",
+       "children": [
+        {
+         "id": "pm-3_obj.c-1",
+         "label": "PM-03c.[01]",
+         "prose": {
+          "en": "information security resources are made available for expenditure as planned;"
+         }
+        },
+        {
+         "id": "pm-3_obj.c-2",
+         "label": "PM-03c.[02]",
+         "prose": {
+          "en": "privacy resources are made available for expenditure as planned."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-03-Examine",
+     "objects": [
+      {
+       "en": "Information security program plan"
+      },
+      {
+       "en": "Exhibit 300"
+      },
+      {
+       "en": "Exhibit 53"
+      },
+      {
+       "en": "business cases for capital planning and investment"
+      },
+      {
+       "en": "procedures for capital planning and investment"
+      },
+      {
+       "en": "documentation of exceptions to capital planning requirements"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-03-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security program planning responsibilities"
+      },
+      {
+       "en": "organizational personnel with privacy program planning responsibilities"
+      },
+      {
+       "en": "organizational personnel responsible for capital planning and investment"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PM-03-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for capital planning and investment"
+      },
+      {
+       "en": "organizational processes for business case, Exhibit 300, and Exhibit 53 development"
+      },
+      {
+       "en": "mechanisms supporting the capital planning and investment process"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-2"
+  }
+ ]
+}

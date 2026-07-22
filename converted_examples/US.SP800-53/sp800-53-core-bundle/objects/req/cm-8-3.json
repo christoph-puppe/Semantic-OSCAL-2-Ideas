@@ -1,0 +1,356 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-8.3",
+ "version": "5.2.0",
+ "label": "CM-8(3)",
+ "lifecycle": "active",
+ "title": "Automated Unauthorized Component Detection",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Detect the presence of unauthorized hardware, software, and firmware components within the system using {param:cm-8.3_prm_1} {param:cm-08.03_odp.04} ; and"
+   },
+   "parameters": [
+    {
+     "name": "cm-08.03_odp.04",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "cm-8.3_prm_1",
+     "type": "string",
+     "label": "organization-defined automated mechanisms"
+    },
+    {
+     "name": "cm-08.03_odp.01",
+     "type": "string",
+     "label": "automated mechanisms"
+    },
+    {
+     "name": "cm-08.03_odp.02",
+     "type": "string",
+     "label": "automated mechanisms"
+    },
+    {
+     "name": "cm-08.03_odp.03",
+     "type": "string",
+     "label": "automated mechanisms"
+    },
+    {
+     "name": "cm-08.03_odp.06",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Take the following actions when unauthorized components are detected: {param:cm-08.03_odp.05}."
+   },
+   "parameters": [
+    {
+     "name": "cm-08.03_odp.05",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "disable network access by unauthorized components"
+      },
+      {
+       "value": "isolate unauthorized components"
+      },
+      {
+       "value": "notify {param:cm-08.03_odp.06} "
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Automated unauthorized component detection is applied in addition to the monitoring for unauthorized remote connections and mobile devices. Monitoring for unauthorized system components may be accomplished on an ongoing basis or by the periodic scanning of systems for that purpose. Automated mechanisms may also be used to prevent the connection of unauthorized components (see CM-7(9) ). Automated mechanisms can be implemented in systems or in separate system components. When acquiring and implementing automated mechanisms, organizations consider whether such mechanisms depend on the ability of the system component to support an agent or supplicant in order to be detected since some types of components do not have or cannot support agents (e.g., IoT devices, sensors). Isolation can be achieved , for example, by placing unauthorized system components in separate domains or subnets or quarantining such components. This type of component isolation is commonly referred to as \"sandboxing.\" "
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-8.3_obj",
+     "label": "CM-08(03)",
+     "children": [
+      {
+       "id": "cm-8.3_obj.a",
+       "label": "CM-08(03)(a)",
+       "children": [
+        {
+         "id": "cm-8.3_obj.a-1",
+         "label": "CM-08(03)(a)[01]",
+         "prose": {
+          "en": "the presence of unauthorized hardware within the system is detected using {param:cm-08.03_odp.01} {param:cm-08.03_odp.04};"
+         }
+        },
+        {
+         "id": "cm-8.3_obj.a-2",
+         "label": "CM-08(03)(a)[02]",
+         "prose": {
+          "en": "the presence of unauthorized software within the system is detected using {param:cm-08.03_odp.02} {param:cm-08.03_odp.04};"
+         }
+        },
+        {
+         "id": "cm-8.3_obj.a-3",
+         "label": "CM-08(03)(a)[03]",
+         "prose": {
+          "en": "the presence of unauthorized firmware within the system is detected using {param:cm-08.03_odp.03} {param:cm-08.03_odp.04};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "cm-8.3_obj.b",
+       "label": "CM-08(03)(b)",
+       "children": [
+        {
+         "id": "cm-8.3_obj.b-1",
+         "label": "CM-08(03)(b)[01]",
+         "prose": {
+          "en": "{param:cm-08.03_odp.05} are taken when unauthorized hardware is detected;"
+         }
+        },
+        {
+         "id": "cm-8.3_obj.b-2",
+         "label": "CM-08(03)(b)[02]",
+         "prose": {
+          "en": "{param:cm-08.03_odp.05} are taken when unauthorized software is detected;"
+         }
+        },
+        {
+         "id": "cm-8.3_obj.b-3",
+         "label": "CM-08(03)(b)[03]",
+         "prose": {
+          "en": "{param:cm-08.03_odp.05} are taken when unauthorized firmware is detected."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-08(03)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing system component inventory"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "alerts/notifications of unauthorized components within the system"
+      },
+      {
+       "en": "system monitoring records"
+      },
+      {
+       "en": "system maintenance records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-08(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with component inventory management responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibilities for managing the automated mechanisms implementing unauthorized system component detection"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-08(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for detection of unauthorized system components"
+      },
+      {
+       "en": "organizational processes for taking action when unauthorized system components are detected"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing the detection of unauthorized system components"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing actions taken when unauthorized system components are detected"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-8.3_prm_1": {
+     "aggregates": [
+      "cm-08.03_odp.01",
+      "cm-08.03_odp.02",
+      "cm-08.03_odp.03"
+     ]
+    },
+    "cm-08.03_odp.01": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to detect the presence of unauthorized hardware within the system are defined;"
+      }
+     ]
+    },
+    "cm-08.03_odp.02": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to detect the presence of unauthorized software within the system are defined;"
+      }
+     ]
+    },
+    "cm-08.03_odp.03": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to detect the presence of unauthorized firmware within the system are defined;"
+      }
+     ]
+    },
+    "cm-08.03_odp.04": {
+     "guidelines": [
+      {
+       "en": "frequency at which automated mechanisms are used to detect the presence of unauthorized system components within the system is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-8.3_prm_2"
+     ]
+    },
+    "cm-08.03_odp.05": {
+     "alt-identifiers": [
+      "cm-8.3_prm_3"
+     ]
+    },
+    "cm-08.03_odp.06": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to be notified when unauthorized components are detected is/are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-8.3_prm_4"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-19"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-39"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-44"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-11.1",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/CM-11.1",
+    "mode": "merged-into",
+    "label": "CM-11(01)",
+    "title": "Alerts for Unauthorized Installations"
+   }
+  ]
+ }
+}

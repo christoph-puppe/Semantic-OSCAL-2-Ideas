@@ -1,0 +1,127 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-6.2",
+ "version": "5.2.0",
+ "label": "SI-6(2)",
+ "lifecycle": "active",
+ "title": "Automation Support for Distributed Testing",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement automated mechanisms to support the management of distributed security and privacy function testing."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The use of automated mechanisms to support the management of distributed function testing helps to ensure the integrity, timeliness, completeness, and efficacy of such testing."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-6.2_obj",
+     "label": "SI-06(02)",
+     "children": [
+      {
+       "id": "si-6.2_obj-1",
+       "label": "SI-06(02)[01]",
+       "prose": {
+        "en": "automated mechanisms are implemented to support the management of distributed security function testing;"
+       }
+      },
+      {
+       "id": "si-6.2_obj-2",
+       "label": "SI-06(02)[02]",
+       "prose": {
+        "en": "automated mechanisms are implemented to support the management of distributed privacy function testing."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-06(02)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing security and privacy function verification"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-06(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with security and privacy function verification responsibilities"
+      },
+      {
+       "en": "organizational personnel implementing, operating, and maintaining the system"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-06(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for security and privacy function verification"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing the management of distributed security and privacy testing"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-2"
+  }
+ ]
+}

@@ -1,0 +1,236 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PT-8",
+ "version": "5.2.0",
+ "label": "PT-8",
+ "lifecycle": "active",
+ "title": "Computer Matching Requirements",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "When a system or organization processes information for the purpose of conducting a matching program:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Obtain approval from the Data Integrity Board to conduct the matching program;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop and enter into a computer matching agreement;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Publish a matching notice in the Federal Register;"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Independently verify the information produced by the matching program before taking adverse action against an individual, if required; and"
+   }
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide individuals with notice and an opportunity to contest the findings before taking adverse action against an individual."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The PRIVACT establishes requirements for federal and non-federal agencies if they engage in a matching program. In general, a matching program is a computerized comparison of records from two or more automated PRIVACT systems of records or an automated system of records and automated records maintained by a non-federal agency (or agent thereof). A matching program either pertains to federal benefit programs or federal personnel or payroll records. A federal benefit match is performed to determine or verify eligibility for payments under federal benefit programs or to recoup payments or delinquent debts under federal benefit programs. A matching program involves not just the matching activity itself but also the investigative follow-up and ultimate action, if any."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pt-8_obj",
+     "label": "PT-08",
+     "children": [
+      {
+       "id": "pt-8_obj.a",
+       "label": "PT-08a.",
+       "prose": {
+        "en": "approval to conduct the matching program is obtained from the Data Integrity Board when a system or organization processes information for the purpose of conducting a matching program;"
+       }
+      },
+      {
+       "id": "pt-8_obj.b",
+       "label": "PT-08b.",
+       "children": [
+        {
+         "id": "pt-8_obj.b-1",
+         "label": "PT-08b.[01]",
+         "prose": {
+          "en": "a computer matching agreement is developed when a system or organization processes information for the purpose of conducting a matching program;"
+         }
+        },
+        {
+         "id": "pt-8_obj.b-2",
+         "label": "PT-08b.[02]",
+         "prose": {
+          "en": "a computer matching agreement is entered into when a system or organization processes information for the purpose of conducting a matching program;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pt-8_obj.c",
+       "label": "PT-08c.",
+       "prose": {
+        "en": "a matching notice is published in the Federal Register when a system or organization processes information for the purpose of conducting a matching program;"
+       }
+      },
+      {
+       "id": "pt-8_obj.d",
+       "label": "PT-08d.",
+       "prose": {
+        "en": "the information produced by the matching program is independently verified before taking adverse action against an individual, if required, when a system or organization processes information for the purpose of conducting a matching program;"
+       }
+      },
+      {
+       "id": "pt-8_obj.e",
+       "label": "PT-08e.",
+       "children": [
+        {
+         "id": "pt-8_obj.e-1",
+         "label": "PT-08e.[01]",
+         "prose": {
+          "en": "individuals are provided with notice when a system or organization processes information for the purpose of conducting a matching program;"
+         }
+        },
+        {
+         "id": "pt-8_obj.e-2",
+         "label": "PT-08e.[02]",
+         "prose": {
+          "en": "individuals are provided with an opportunity to contest the findings before adverse action is taken against them when a system or organization processes information for the purpose of conducting a matching program."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PT-08-Examine",
+     "objects": [
+      {
+       "en": "Personally identifiable information processing and transparency policy and procedures"
+      },
+      {
+       "en": "privacy notice"
+      },
+      {
+       "en": "Privacy Act system of records"
+      },
+      {
+       "en": "Federal Register notices"
+      },
+      {
+       "en": "Data Integrity Board determinations"
+      },
+      {
+       "en": "contracts"
+      },
+      {
+       "en": "information sharing agreements"
+      },
+      {
+       "en": "memoranda of understanding"
+      },
+      {
+       "en": "governing requirements"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PT-08-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personally identifiable information processing and transparency responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PT-08-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for supporting and/or implementing personally identifiable information processing"
+      },
+      {
+       "en": "matching program"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.govinfo.gov/content/pkg/STATUTE-88/pdf/STATUTE-88-Pg1896.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.govinfo.gov/content/pkg/STATUTE-102/pdf/STATUTE-102-Pg2507.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A108/omb_circular_a-108.pdf"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-24"
+  }
+ ]
+}

@@ -1,0 +1,101 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-3.1",
+ "version": "5.2.0",
+ "label": "CP-3(1)",
+ "lifecycle": "active",
+ "title": "Simulated Events",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Incorporate simulated events into contingency training to facilitate effective response by personnel in crisis situations."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The use of simulated events creates an environment for personnel to experience actual threat events, including cyber-attacks that disable websites, ransomware attacks that encrypt organizational data on servers, hurricanes that damage or destroy organizational facilities, or hardware or software failures."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-3.1_obj",
+     "label": "CP-03(01)",
+     "prose": {
+      "en": "simulated events are incorporated into contingency training to facilitate effective response by personnel in crisis situations."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-03(01)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing contingency training"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "contingency training curriculum"
+      },
+      {
+       "en": "contingency training material"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-03(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency planning, plan implementation, and training responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-03(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for contingency training"
+      },
+      {
+       "en": "mechanisms for simulating contingency events"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-3"
+  }
+ ]
+}

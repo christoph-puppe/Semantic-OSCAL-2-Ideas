@@ -1,0 +1,131 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-4.4",
+ "version": "5.2.0",
+ "label": "IR-4(4)",
+ "lifecycle": "active",
+ "title": "Information Correlation",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Correlate incident information and individual incident responses to achieve an organization-wide perspective on incident awareness and response."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Sometimes, a threat event, such as a hostile cyber-attack, can only be observed by bringing together information from different sources, including various reports and reporting procedures established by organizations."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-4.4_obj",
+     "label": "IR-04(04)",
+     "prose": {
+      "en": "incident information and individual incident responses are correlated to achieve an organization-wide perspective on incident awareness and response."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-04(04)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing incident handling"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "mechanisms supporting incident and event correlation"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "incident management correlation logs"
+      },
+      {
+       "en": "event management correlation logs"
+      },
+      {
+       "en": "security information and event management logs"
+      },
+      {
+       "en": "incident management correlation reports"
+      },
+      {
+       "en": "event management correlation reports"
+      },
+      {
+       "en": "security information and event management reports"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-04(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident handling responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with whom incident information and individual incident responses are to be correlated"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IR-04(04)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for correlating incident information and individual incident responses"
+      },
+      {
+       "en": "mechanisms that support and or implement the correlation of incident response information with individual incident responses"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  }
+ ]
+}

@@ -1,0 +1,144 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-4.2",
+ "version": "5.2.0",
+ "label": "CP-4(2)",
+ "lifecycle": "active",
+ "title": "Alternate Processing Site",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Test the contingency plan at the alternate processing site:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "To familiarize contingency personnel with the facility and available resources; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "To evaluate the capabilities of the alternate processing site to support contingency operations."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Conditions at the alternate processing site may be significantly different than the conditions at the primary site. Having the opportunity to visit the alternate site and experience the actual capabilities available at the site can provide valuable information on potential vulnerabilities that could affect essential organizational mission and business functions. The on-site visit can also provide an opportunity to refine the contingency plan to address the vulnerabilities discovered during testing."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-4.2_obj",
+     "label": "CP-04(02)",
+     "children": [
+      {
+       "id": "cp-4.2_obj.a",
+       "label": "CP-04(02)(a)",
+       "prose": {
+        "en": "the contingency plan is tested at the alternate processing site to familiarize contingency personnel with the facility and available resources;"
+       }
+      },
+      {
+       "id": "cp-4.2_obj.b",
+       "label": "CP-04(02)(b)",
+       "prose": {
+        "en": "the contingency plan is tested at the alternate processing site to evaluate the capabilities of the alternate processing site to support contingency operations."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-04(02)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing contingency plan testing"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "contingency plan test documentation"
+      },
+      {
+       "en": "contingency plan test results"
+      },
+      {
+       "en": "alternate processing site agreements"
+      },
+      {
+       "en": "service-level agreements"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-04(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-04(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for contingency plan testing"
+      },
+      {
+       "en": "mechanisms supporting the contingency plan and/or contingency plan testing"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-7"
+  }
+ ]
+}

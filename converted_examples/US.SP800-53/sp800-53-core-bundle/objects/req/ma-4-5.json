@@ -1,0 +1,166 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-4.5",
+ "version": "5.2.0",
+ "label": "MA-4(5)",
+ "lifecycle": "active",
+ "title": "Approvals and Notifications",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the approval of each nonlocal maintenance session by {param:ma-04.05_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "ma-04.05_odp.01",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Notify the following personnel or roles of the date and time of planned nonlocal maintenance: {param:ma-04.05_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ma-04.05_odp.02",
+     "type": "string",
+     "label": "personnel and roles"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Notification may be performed by maintenance personnel. Approval of nonlocal maintenance is accomplished by personnel with sufficient information security and system knowledge to determine the appropriateness of the proposed maintenance."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-4.5_obj",
+     "label": "MA-04(05)",
+     "children": [
+      {
+       "id": "ma-4.5_obj.a",
+       "label": "MA-04(05)(a)",
+       "prose": {
+        "en": "the approval of each nonlocal maintenance session is required by {param:ma-04.05_odp.01};"
+       }
+      },
+      {
+       "id": "ma-4.5_obj.b",
+       "label": "MA-04(05)(b)",
+       "prose": {
+        "en": "{param:ma-04.05_odp.02} is/are notified of the date and time of planned nonlocal maintenance."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-04(05)-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing nonlocal system maintenance"
+      },
+      {
+       "en": "notifications supporting nonlocal maintenance sessions"
+      },
+      {
+       "en": "maintenance records"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-04(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities"
+      },
+      {
+       "en": "organizational personnel with notification responsibilities"
+      },
+      {
+       "en": "organizational personnel with approval responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MA-04(05)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for approving and notifying personnel regarding nonlocal maintenance"
+      },
+      {
+       "en": "mechanisms supporting the notification and approval of nonlocal maintenance"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ma-04.05_odp.01": {
+     "guidelines": [
+      {
+       "en": "personnel or roles required to approve each nonlocal maintenance session is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ma-4.5_prm_1"
+     ]
+    },
+    "ma-04.05_odp.02": {
+     "guidelines": [
+      {
+       "en": "personnel and roles to be notified of the date and time of planned nonlocal maintenance is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ma-4.5_prm_2"
+     ],
+     "alt-label": "personnel or roles"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-4"
+  }
+ ]
+}

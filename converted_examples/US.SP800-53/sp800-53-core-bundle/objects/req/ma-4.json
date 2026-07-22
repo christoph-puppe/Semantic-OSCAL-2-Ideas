@@ -1,0 +1,324 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-4",
+ "version": "5.2.0",
+ "label": "MA-4",
+ "lifecycle": "active",
+ "title": "Nonlocal Maintenance",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Approve and monitor nonlocal maintenance and diagnostic activities;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Allow the use of nonlocal maintenance and diagnostic tools only as consistent with organizational policy and documented in the security plan for the system;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ strong authentication in the establishment of nonlocal maintenance and diagnostic sessions;"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Maintain records for nonlocal maintenance and diagnostic activities; and"
+   }
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Terminate session and network connections when nonlocal maintenance is completed."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Nonlocal maintenance and diagnostic activities are conducted by individuals who communicate through either an external or internal network. Local maintenance and diagnostic activities are carried out by individuals who are physically present at the system location and not communicating across a network connection. Authentication techniques used to establish nonlocal maintenance and diagnostic sessions reflect the network access requirements in IA-2 . Strong authentication requires authenticators that are resistant to replay attacks and employ multi-factor authentication. Strong authenticators include PKI where certificates are stored on a token protected by a password, passphrase, or biometric. Enforcing requirements in MA-4 is accomplished, in part, by other controls. SP 800-63B provides additional guidance on strong authentication and authenticators."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-4_obj",
+     "label": "MA-04",
+     "children": [
+      {
+       "id": "ma-4_obj.a",
+       "label": "MA-04a.",
+       "children": [
+        {
+         "id": "ma-4_obj.a-1",
+         "label": "MA-04a.[01]",
+         "prose": {
+          "en": "nonlocal maintenance and diagnostic activities are approved;"
+         }
+        },
+        {
+         "id": "ma-4_obj.a-2",
+         "label": "MA-04a.[02]",
+         "prose": {
+          "en": "nonlocal maintenance and diagnostic activities are monitored;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ma-4_obj.b",
+       "label": "MA-04b.",
+       "children": [
+        {
+         "id": "ma-4_obj.b-1",
+         "label": "MA-04b.[01]",
+         "prose": {
+          "en": "the use of nonlocal maintenance and diagnostic tools are allowed only as consistent with organizational policy;"
+         }
+        },
+        {
+         "id": "ma-4_obj.b-2",
+         "label": "MA-04b.[02]",
+         "prose": {
+          "en": "the use of nonlocal maintenance and diagnostic tools are documented in the security plan for the system;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ma-4_obj.c",
+       "label": "MA-04c.",
+       "prose": {
+        "en": "strong authentication is employed in the establishment of nonlocal maintenance and diagnostic sessions;"
+       }
+      },
+      {
+       "id": "ma-4_obj.d",
+       "label": "MA-04d.",
+       "prose": {
+        "en": "records for nonlocal maintenance and diagnostic activities are maintained;"
+       }
+      },
+      {
+       "id": "ma-4_obj.e",
+       "label": "MA-04e.",
+       "children": [
+        {
+         "id": "ma-4_obj.e-1",
+         "label": "MA-04e.[01]",
+         "prose": {
+          "en": "session connections are terminated when nonlocal maintenance is completed;"
+         }
+        },
+        {
+         "id": "ma-4_obj.e-2",
+         "label": "MA-04e.[02]",
+         "prose": {
+          "en": "network connections are terminated when nonlocal maintenance is completed."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-04-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing nonlocal system maintenance"
+      },
+      {
+       "en": "remote access policy"
+      },
+      {
+       "en": "remote access procedures"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "maintenance records"
+      },
+      {
+       "en": "records of remote access"
+      },
+      {
+       "en": "diagnostic records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-04-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MA-04-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing nonlocal maintenance"
+      },
+      {
+       "en": "mechanisms implementing, supporting, and/or managing nonlocal maintenance"
+      },
+      {
+       "en": "mechanisms for strong authentication of nonlocal maintenance diagnostic sessions"
+      },
+      {
+       "en": "mechanisms for terminating nonlocal maintenance sessions and network connections"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.140-3"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.197"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.201-2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-63-3"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-88r1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-10"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-4.2",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/MA-4.2",
+    "mode": "merged-into",
+    "label": "MA-04(02)",
+    "title": "Document Nonlocal Maintenance"
+   }
+  ]
+ }
+}

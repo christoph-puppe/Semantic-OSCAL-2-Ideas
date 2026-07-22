@@ -1,0 +1,202 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-13.2",
+ "version": "5.2.0",
+ "label": "PE-13(2)",
+ "lifecycle": "active",
+ "title": "Suppression Systems — Automatic Activation and Notification",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ fire suppression systems that activate automatically and notify {param:pe-13.02_odp.01} and {param:pe-13.02_odp.02} ; and"
+   },
+   "parameters": [
+    {
+     "name": "pe-13.02_odp.01",
+     "type": "string",
+     "label": "personnel or roles"
+    },
+    {
+     "name": "pe-13.02_odp.02",
+     "type": "string",
+     "label": "emergency responders"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ an automatic fire suppression capability when the facility is not staffed on a continuous basis."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations can identify specific personnel, roles, and emergency responders if individuals on the notification list need to have appropriate access authorizations and/or clearances (e.g., to enter to facilities where access is restricted due to the impact level or classification of information within the facility). Notification mechanisms may require independent energy sources to ensure that the notification capability is not adversely affected by the fire."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-13.2_obj",
+     "label": "PE-13(02)",
+     "children": [
+      {
+       "id": "pe-13.2_obj.a",
+       "label": "PE-13(02)(a)",
+       "children": [
+        {
+         "id": "pe-13.2_obj.a-1",
+         "label": "PE-13(02)(a)[01]",
+         "prose": {
+          "en": "fire suppression systems that activate automatically are employed;"
+         }
+        },
+        {
+         "id": "pe-13.2_obj.a-2",
+         "label": "PE-13(02)(a)[02]",
+         "prose": {
+          "en": "fire suppression systems that notify {param:pe-13.02_odp.01} automatically are employed;"
+         }
+        },
+        {
+         "id": "pe-13.2_obj.a-3",
+         "label": "PE-13(02)(a)[03]",
+         "prose": {
+          "en": "fire suppression systems that notify {param:pe-13.02_odp.02} automatically are employed;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pe-13.2_obj.b",
+       "label": "PE-13(02)(b)",
+       "prose": {
+        "en": "an automatic fire suppression capability is employed when the facility is not staffed on a continuous basis."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-13(02)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing fire protection"
+      },
+      {
+       "en": "fire suppression and detection devices/systems documentation"
+      },
+      {
+       "en": "facility housing the system"
+      },
+      {
+       "en": "alarm service-level agreements"
+      },
+      {
+       "en": "test records of fire suppression and detection devices/systems"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-13(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for fire detection and suppression devices/systems"
+      },
+      {
+       "en": "organizational personnel with responsibilities for providing automatic notifications of any activation of fire suppression devices/systems to appropriate personnel, roles, and emergency responders"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-13(02)-Test",
+     "objects": [
+      {
+       "en": "Automated mechanisms supporting and/or implementing fire suppression devices/systems"
+      },
+      {
+       "en": "activation of fire suppression devices/systems (simulated)"
+      },
+      {
+       "en": "automated notifications"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-13.02_odp.01": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to be notified in the event of a fire is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-13.2_prm_1"
+     ]
+    },
+    "pe-13.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "emergency responders to be notified in the event of a fire are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-13.2_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-13"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-13.3",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/PE-13.3",
+    "mode": "merged-into",
+    "label": "PE-13(03)",
+    "title": "Automatic Fire Suppression"
+   }
+  ]
+ }
+}

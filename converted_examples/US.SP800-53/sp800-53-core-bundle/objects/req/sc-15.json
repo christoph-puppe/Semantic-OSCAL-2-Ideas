@@ -1,0 +1,155 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-15",
+ "version": "5.2.0",
+ "label": "SC-15",
+ "lifecycle": "active",
+ "title": "Collaborative Computing Devices and Applications",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Prohibit remote activation of collaborative computing devices and applications with the following exceptions: {param:sc-15_odp} ; and"
+   },
+   "parameters": [
+    {
+     "name": "sc-15_odp",
+     "type": "string",
+     "label": "exceptions where remote activation is to be allowed"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide an explicit indication of use to users physically present at the devices."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Collaborative computing devices and applications include remote meeting devices and applications, networked white boards, cameras, and microphones. The explicit indication of use includes signals to users when collaborative computing devices and applications are activated."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-15_obj",
+     "label": "SC-15",
+     "children": [
+      {
+       "id": "sc-15_obj.a",
+       "label": "SC-15a.",
+       "prose": {
+        "en": "remote activation of collaborative computing devices and applications is prohibited except {param:sc-15_odp};"
+       }
+      },
+      {
+       "id": "sc-15_obj.b",
+       "label": "SC-15b.",
+       "prose": {
+        "en": "an explicit indication of use is provided to users physically present at the devices."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-15-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing collaborative computing"
+      },
+      {
+       "en": "access control policy and procedures"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-15-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel with responsibilities for managing collaborative computing devices"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-15-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the management of remote activation of collaborative computing devices"
+      },
+      {
+       "en": "mechanisms providing an indication of use of collaborative computing devices"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-15_odp": {
+     "guidelines": [
+      {
+       "en": "exceptions where remote activation is to be allowed are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-15_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-21"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-42"
+  }
+ ]
+}

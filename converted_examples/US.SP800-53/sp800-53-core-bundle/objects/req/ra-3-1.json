@@ -1,0 +1,203 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/RA-3.1",
+ "version": "5.2.0",
+ "label": "RA-3(1)",
+ "lifecycle": "active",
+ "title": "Supply Chain Risk Assessment",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Assess supply chain risks associated with {param:ra-03.01_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "ra-03.01_odp.01",
+     "type": "string",
+     "label": "systems, system components, and system services"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Update the supply chain risk assessment {param:ra-03.01_odp.02} , when there are significant changes to the relevant supply chain, or when changes to the system, environments of operation, or other conditions may necessitate a change in the supply chain."
+   },
+   "parameters": [
+    {
+     "name": "ra-03.01_odp.02",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Supply chain-related events include disruption, use of defective components, insertion of counterfeits, theft, malicious development practices, improper delivery practices, and insertion of malicious code. These events can have a significant impact on the confidentiality, integrity, or availability of a system and its information and, therefore, can also adversely impact organizational operations (including mission, functions, image, or reputation), organizational assets, individuals, other organizations, and the Nation. The supply chain-related events may be unintentional or malicious and can occur at any point during the system life cycle. An analysis of supply chain risk can help an organization identify systems or components for which additional supply chain risk mitigations are required."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ra-3.1_obj",
+     "label": "RA-03(01)",
+     "children": [
+      {
+       "id": "ra-3.1_obj.a",
+       "label": "RA-03(01)(a)",
+       "prose": {
+        "en": "supply chain risks associated with {param:ra-03.01_odp.01} are assessed;"
+       }
+      },
+      {
+       "id": "ra-3.1_obj.b",
+       "label": "RA-03(01)(b)",
+       "prose": {
+        "en": "the supply chain risk assessment is updated {param:ra-03.01_odp.02} , when there are significant changes to the relevant supply chain, or when changes to the system, environments of operation, or other conditions may necessitate a change in the supply chain."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "RA-03(01)-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management policy"
+      },
+      {
+       "en": "inventory of critical systems, system components, and system services"
+      },
+      {
+       "en": "risk assessment policy"
+      },
+      {
+       "en": "security planning policy and procedures"
+      },
+      {
+       "en": "procedures addressing organizational assessments of supply chain risk"
+      },
+      {
+       "en": "risk assessment"
+      },
+      {
+       "en": "risk assessment results"
+      },
+      {
+       "en": "risk assessment reviews"
+      },
+      {
+       "en": "risk assessment updates"
+      },
+      {
+       "en": "acquisition policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "RA-03(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with risk assessment responsibilities"
+      },
+      {
+       "en": "organizational personnel with security responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "RA-03(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for risk assessment"
+      },
+      {
+       "en": "mechanisms supporting and/or conducting, documenting, reviewing, disseminating, and updating the supply chain risk assessment"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ra-03.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "systems, system components, and system services to assess supply chain risks are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ra-3.1_prm_1"
+     ]
+    },
+    "ra-03.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to update the supply chain risk assessment is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ra-3.1_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-30"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-2"
+  }
+ ]
+}

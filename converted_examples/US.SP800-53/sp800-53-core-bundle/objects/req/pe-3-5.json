@@ -1,0 +1,158 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-3.5",
+ "version": "5.2.0",
+ "label": "PE-3(5)",
+ "lifecycle": "active",
+ "title": "Tamper Protection",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ {param:pe-03.05_odp.01} to {param:pe-03.05_odp.02} physical tampering or alteration of {param:pe-03.05_odp.03} within the system."
+   },
+   "parameters": [
+    {
+     "name": "pe-03.05_odp.01",
+     "type": "string",
+     "label": "anti-tamper technologies"
+    },
+    {
+     "name": "pe-03.05_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "detect"
+      },
+      {
+       "value": "prevent"
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "pe-03.05_odp.03",
+     "type": "string",
+     "label": "hardware components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations can implement tamper detection and prevention at selected hardware components or implement tamper detection at some components and tamper prevention at other components. Detection and prevention activities can employ many types of anti-tamper technologies, including tamper-detection seals and anti-tamper coatings. Anti-tamper programs help to detect hardware alterations through counterfeiting and other supply chain-related risks."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-3.5_obj",
+     "label": "PE-03(05)",
+     "prose": {
+      "en": "{param:pe-03.05_odp.01} are employed to {param:pe-03.05_odp.02} physical tampering or alteration of {param:pe-03.05_odp.03} within the system."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-03(05)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing physical access control"
+      },
+      {
+       "en": "list of security safeguards to detect/prevent physical tampering or alteration of system hardware components"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-03(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with physical access control responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-03(05)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes to detect/prevent physical tampering or alteration of system hardware components"
+      },
+      {
+       "en": "mechanisms/security safeguards supporting and/or implementing the detection/prevention of physical tampering/alternation of system hardware components"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-03.05_odp.01": {
+     "guidelines": [
+      {
+       "en": "anti-tamper technologies to be employed are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-3.5_prm_1"
+     ]
+    },
+    "pe-03.05_odp.02": {
+     "alt-identifiers": [
+      "pe-3.5_prm_2"
+     ]
+    },
+    "pe-03.05_odp.03": {
+     "guidelines": [
+      {
+       "en": "hardware components to be protected from physical tampering or alteration are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-3.5_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-11"
+  }
+ ]
+}

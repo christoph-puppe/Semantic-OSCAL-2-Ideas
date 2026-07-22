@@ -1,0 +1,237 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-3.9",
+ "version": "5.2.0",
+ "label": "AC-3(9)",
+ "lifecycle": "active",
+ "title": "Controlled Release",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Release information outside of the system only if:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "The receiving {param:ac-03.09_odp.01} provides {param:ac-03.09_odp.02} ; and"
+   },
+   "parameters": [
+    {
+     "name": "ac-03.09_odp.01",
+     "type": "string",
+     "label": "system or system component"
+    },
+    {
+     "name": "ac-03.09_odp.02",
+     "type": "string",
+     "label": "controls"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "{param:ac-03.09_odp.03} are used to validate the appropriateness of the information designated for release."
+   },
+   "parameters": [
+    {
+     "name": "ac-03.09_odp.03",
+     "type": "string",
+     "label": "controls"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations can only directly protect information when it resides within the system. Additional controls may be needed to ensure that organizational information is adequately protected once it is transmitted outside of the system. In situations where the system is unable to determine the adequacy of the protections provided by external entities, as a mitigation measure, organizations procedurally determine whether the external systems are providing adequate controls. The means used to determine the adequacy of controls provided by external systems include conducting periodic assessments (inspections/tests), establishing agreements between the organization and its counterpart organizations, or some other process. The means used by external entities to protect the information received need not be the same as those used by the organization, but the means employed are sufficient to provide consistent adjudication of the security and privacy policy to protect the information and individuals’ privacy.\n\nControlled release of information requires systems to implement technical or procedural means to validate the information prior to releasing it to external systems. For example, if the system passes information to a system controlled by another organization, technical means are employed to validate that the security and privacy attributes associated with the exported information are appropriate for the receiving system. Alternatively, if the system passes information to a printer in organization-controlled space, procedural means can be employed to ensure that only authorized individuals gain access to the printer."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-3.9_obj",
+     "label": "AC-03(09)",
+     "children": [
+      {
+       "id": "ac-3.9_obj.a",
+       "label": "AC-03(09)(a)",
+       "prose": {
+        "en": "information is released outside of the system only if the receiving {param:ac-03.09_odp.01} provides {param:ac-03.09_odp.02};"
+       }
+      },
+      {
+       "id": "ac-3.9_obj.b",
+       "label": "AC-03(09)(b)",
+       "prose": {
+        "en": "information is released outside of the system only if {param:ac-03.09_odp.03} are used to validate the appropriateness of the information designated for release."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-03(09)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing access enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of security and privacy safeguards provided by receiving system or system components"
+      },
+      {
+       "en": "list of security and privacy safeguards validating appropriateness of information designated for release"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "results of period assessments (inspections/tests) of the external system"
+      },
+      {
+       "en": "information sharing agreements"
+      },
+      {
+       "en": "memoranda of understanding"
+      },
+      {
+       "en": "acquisitions/contractual agreements"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-03(09)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with access enforcement responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibility for acquisitions/contractual agreements"
+      },
+      {
+       "en": "legal counsel"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-03(09)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing access enforcement functions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-03.09_odp.01": {
+     "guidelines": [
+      {
+       "en": "the outside system or system component to which to release information is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-3.9_prm_1"
+     ]
+    },
+    "ac-03.09_odp.02": {
+     "guidelines": [
+      {
+       "en": "controls to be provided by the outside system or system component (defined in AC-03(09)_ODP[01]) are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-3.9_prm_2"
+     ]
+    },
+    "ac-03.09_odp.03": {
+     "guidelines": [
+      {
+       "en": "controls used to validate appropriateness of information to be released are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-3.9_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-16"
+  }
+ ]
+}

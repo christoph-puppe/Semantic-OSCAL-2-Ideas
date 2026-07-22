@@ -1,0 +1,139 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MP-6.7",
+ "version": "5.2.0",
+ "label": "MP-6(7)",
+ "lifecycle": "active",
+ "title": "Dual Authorization",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Enforce dual authorization for the sanitization of {param:mp-06.07_odp}."
+   },
+   "parameters": [
+    {
+     "name": "mp-06.07_odp",
+     "type": "string",
+     "label": "system media"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations employ dual authorization to help ensure that system media sanitization cannot occur unless two technically qualified individuals conduct the designated task. Individuals who sanitize system media possess sufficient skills and expertise to determine if the proposed sanitization reflects applicable federal and organizational standards, policies, and procedures. Dual authorization also helps to ensure that sanitization occurs as intended, protecting against errors and false claims of having performed the sanitization actions. Dual authorization may also be known as two-person control. To reduce the risk of collusion, organizations consider rotating dual authorization duties to other individuals."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "mp-6.7_obj",
+     "label": "MP-06(07)",
+     "prose": {
+      "en": "dual authorization for sanitization of {param:mp-06.07_odp} is enforced."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MP-06(07)-Examine",
+     "objects": [
+      {
+       "en": "System media protection policy"
+      },
+      {
+       "en": "procedures addressing media sanitization and disposal"
+      },
+      {
+       "en": "dual authorization policy and procedures"
+      },
+      {
+       "en": "list of system media requiring dual authorization for sanitization"
+      },
+      {
+       "en": "authorization records"
+      },
+      {
+       "en": "media sanitization records"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MP-06(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system media sanitization responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MP-06(07)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes requiring dual authorization for media sanitization"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing media sanitization"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing dual authorization"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "mp-06.07_odp": {
+     "guidelines": [
+      {
+       "en": "system media to be sanitized using dual authorization is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "mp-6.7_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-2"
+  }
+ ]
+}

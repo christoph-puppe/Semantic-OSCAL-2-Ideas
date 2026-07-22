@@ -1,0 +1,202 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-10.7",
+ "version": "5.2.0",
+ "label": "SA-10(7)",
+ "lifecycle": "active",
+ "title": "Security and Privacy Representatives",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require {param:sa-10.7_prm_1} to be included in the {param:sa-10.7_prm_2}."
+   },
+   "parameters": [
+    {
+     "name": "sa-10.7_prm_1",
+     "type": "string",
+     "label": "organization-defined security and privacy representatives"
+    },
+    {
+     "name": "sa-10.7_prm_2",
+     "type": "string",
+     "label": "organization-defined configuration change management and control process"
+    },
+    {
+     "name": "sa-10.07_odp.01",
+     "type": "string",
+     "label": "security representatives"
+    },
+    {
+     "name": "sa-10.07_odp.02",
+     "type": "string",
+     "label": "privacy representatives"
+    },
+    {
+     "name": "sa-10.07_odp.03",
+     "type": "string",
+     "label": "configuration change management and control processes"
+    },
+    {
+     "name": "sa-10.07_odp.04",
+     "type": "string",
+     "label": "configuration change management and control processes"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Information security and privacy representatives can include system security officers, senior agency information security officers, senior agency officials for privacy, and system privacy officers. Representation by personnel with information security and privacy expertise is important because changes to system configurations can have unintended side effects, some of which may be security- or privacy-relevant. Detecting such changes early in the process can help avoid unintended, negative consequences that could ultimately affect the security and privacy posture of systems. The configuration change management and control process in this control enhancement refers to the change management and control process defined by organizations in SA-10b."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-10.7_obj",
+     "label": "SA-10(07)",
+     "children": [
+      {
+       "id": "sa-10.7_obj-1",
+       "label": "SA-10(07)[01]",
+       "prose": {
+        "en": "{param:sa-10.07_odp.01} are required to be included in the {param:sa-10.07_odp.03};"
+       }
+      },
+      {
+       "id": "sa-10.7_obj-2",
+       "label": "SA-10(07)[02]",
+       "prose": {
+        "en": "{param:sa-10.07_odp.02} are required to be included in the {param:sa-10.07_odp.04}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-10(07)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "configuration management policy"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "solicitation documentation requiring representatives for security and privacy"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "system developer configuration management plan"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "configuration management records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-10(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with configuration management responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-10.7_prm_1": {
+     "aggregates": [
+      "sa-10.07_odp.01",
+      "sa-10.07_odp.02"
+     ]
+    },
+    "sa-10.7_prm_2": {
+     "aggregates": [
+      "sa-10.07_odp.03",
+      "sa-10.07_odp.04"
+     ]
+    },
+    "sa-10.07_odp.01": {
+     "guidelines": [
+      {
+       "en": "security representatives to be included in the configuration change management and control process are defined;"
+      }
+     ]
+    },
+    "sa-10.07_odp.02": {
+     "guidelines": [
+      {
+       "en": "privacy representatives to be included in the configuration change management and control process are defined;"
+      }
+     ]
+    },
+    "sa-10.07_odp.03": {
+     "guidelines": [
+      {
+       "en": "configuration change management and control processes in which security representatives are required to be included are defined;"
+      }
+     ]
+    },
+    "sa-10.07_odp.04": {
+     "guidelines": [
+      {
+       "en": "configuration change management and control processes in which privacy representatives are required to be included are defined;"
+      }
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-10"
+  }
+ ]
+}

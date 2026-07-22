@@ -1,0 +1,143 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-15.3",
+ "version": "5.2.0",
+ "label": "SC-15(3)",
+ "lifecycle": "active",
+ "title": "Disabling and Removal in Secure Work Areas",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Disable or remove collaborative computing devices and applications from {param:sc-15.03_odp.01} in {param:sc-15.03_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "sc-15.03_odp.01",
+     "type": "string",
+     "label": "systems or system components"
+    },
+    {
+     "name": "sc-15.03_odp.02",
+     "type": "string",
+     "label": "secure work areas"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Failing to disable or remove collaborative computing devices and applications from systems or system components can result in compromises of information, including eavesdropping on conversations. A Sensitive Compartmented Information Facility (SCIF) is an example of a secure work area."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-15.3_obj",
+     "label": "SC-15(03)",
+     "prose": {
+      "en": "collaborative computing devices and applications are disabled or removed from {param:sc-15.03_odp.01} in {param:sc-15.03_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-15(03)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing collaborative computing"
+      },
+      {
+       "en": "access control policy and procedures"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "list of secure work areas"
+      },
+      {
+       "en": "systems or system components in secured work areas where collaborative computing devices are to be disabled or removed"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-15(03)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibilities for managing collaborative computing devices"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-15(03)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the capability to disable collaborative computing devices"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-15.03_odp.01": {
+     "guidelines": [
+      {
+       "en": "systems or system components from which collaborative computing devices are to be disabled or removed are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-15.3_prm_1"
+     ]
+    },
+    "sc-15.03_odp.02": {
+     "guidelines": [
+      {
+       "en": "secure work areas where collaborative computing devices are to be disabled or removed from systems or system components are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-15.3_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-15"
+  }
+ ]
+}

@@ -1,0 +1,152 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-5.1",
+ "version": "5.2.0",
+ "label": "AU-5(1)",
+ "lifecycle": "active",
+ "title": "Storage Capacity Warning",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide a warning to {param:au-05.01_odp.01} within {param:au-05.01_odp.02} when allocated audit log storage volume reaches {param:au-05.01_odp.03} of repository maximum audit log storage capacity."
+   },
+   "parameters": [
+    {
+     "name": "au-05.01_odp.01",
+     "type": "string",
+     "label": "personnel, roles, and/or locations"
+    },
+    {
+     "name": "au-05.01_odp.02",
+     "type": "string",
+     "label": "time period"
+    },
+    {
+     "name": "au-05.01_odp.03",
+     "type": "string",
+     "label": "percentage"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations may have multiple audit log storage repositories distributed across multiple system components with each repository having different storage volume capacities."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-5.1_obj",
+     "label": "AU-05(01)",
+     "prose": {
+      "en": "a warning is provided to {param:au-05.01_odp.01} within {param:au-05.01_odp.02} when allocated audit log storage volume reaches {param:au-05.01_odp.03} of repository maximum audit log storage capacity."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-05(01)-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "procedures addressing response to audit processing failures"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-05(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with audit and accountability responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AU-05(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing audit storage limit warnings"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "au-05.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "personnel, roles, and/or locations to be warned when allocated audit log storage volume reaches a percentage of repository maximum audit log storage capacity."
+      }
+     ],
+     "alt-identifiers": [
+      "au-5.1_prm_1"
+     ]
+    },
+    "au-05.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "time period for defined personnel, roles, and/or locations to be warned when allocated audit log storage volume reaches a percentage of repository maximum audit log storage capacity is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-5.1_prm_2"
+     ]
+    },
+    "au-05.01_odp.03": {
+     "guidelines": [
+      {
+       "en": "percentage of repository maximum audit log storage capacity is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-5.1_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-5"
+  }
+ ]
+}

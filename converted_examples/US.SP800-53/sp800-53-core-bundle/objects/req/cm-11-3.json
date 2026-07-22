@@ -1,0 +1,182 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-11.3",
+ "version": "5.2.0",
+ "label": "CM-11(3)",
+ "lifecycle": "active",
+ "title": "Automated Enforcement and Monitoring",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Enforce and monitor compliance with software installation policies using {param:cm-11.3_prm_1}."
+   },
+   "parameters": [
+    {
+     "name": "cm-11.3_prm_1",
+     "type": "string",
+     "label": "organization-defined automated mechanisms"
+    },
+    {
+     "name": "cm-11.03_odp.01",
+     "type": "string",
+     "label": "automated mechanisms"
+    },
+    {
+     "name": "cm-11.03_odp.02",
+     "type": "string",
+     "label": "automated mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations enforce and monitor compliance with software installation policies using automated mechanisms to more quickly detect and respond to unauthorized software installation which can be an indicator of an internal or external hostile attack."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-11.3_obj",
+     "label": "CM-11(03)",
+     "children": [
+      {
+       "id": "cm-11.3_obj-1",
+       "label": "CM-11(03)[01]",
+       "prose": {
+        "en": "compliance with software installation policies is enforced using {param:cm-11.03_odp.01};"
+       }
+      },
+      {
+       "id": "cm-11.3_obj-2",
+       "label": "CM-11(03)[02]",
+       "prose": {
+        "en": "compliance with software installation policies is monitored using {param:cm-11.03_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-11(03)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing user-installed software"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of rules governing user installed software"
+      },
+      {
+       "en": "system monitoring records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "continuous monitoring strategy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-11(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for governing user-installed software"
+      },
+      {
+       "en": "organizational personnel operating, using, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel monitoring compliance with user-installed software policy"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-11(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes governing user-installed software on the system"
+      },
+      {
+       "en": "automated mechanisms enforcing policies on installation of software by users"
+      },
+      {
+       "en": "automated mechanisms monitoring policy compliance"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-11.3_prm_1": {
+     "aggregates": [
+      "cm-11.03_odp.01",
+      "cm-11.03_odp.02"
+     ]
+    },
+    "cm-11.03_odp.01": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to enforce compliance are defined;"
+      }
+     ]
+    },
+    "cm-11.03_odp.02": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to monitor compliance are defined;"
+      }
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-11"
+  }
+ ]
+}

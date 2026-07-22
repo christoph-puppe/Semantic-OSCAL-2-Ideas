@@ -1,0 +1,124 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-5.2",
+ "version": "5.2.0",
+ "label": "MA-5(2)",
+ "lifecycle": "active",
+ "title": "Security Clearances for Classified Systems",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Verify that personnel performing maintenance and diagnostic activities on a system processing, storing, or transmitting classified information possess security clearances and formal access approvals for at least the highest classification level and for compartments of information on the system."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Personnel who conduct maintenance on organizational systems may be exposed to classified information during the course of their maintenance activities. To mitigate the inherent risk of such exposure, organizations use maintenance personnel that are cleared (i.e., possess security clearances) to the classification level of the information stored on the system."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-5.2_obj",
+     "label": "MA-05(02)",
+     "children": [
+      {
+       "id": "ma-5.2_obj-1",
+       "label": "MA-05(02)[01]",
+       "prose": {
+        "en": "personnel performing maintenance and diagnostic activities on a system processing, storing, or transmitting classified information possess security clearances for at least the highest classification level and for compartments of information on the system;"
+       }
+      },
+      {
+       "id": "ma-5.2_obj-2",
+       "label": "MA-05(02)[02]",
+       "prose": {
+        "en": "personnel performing maintenance and diagnostic activities on a system processing, storing, or transmitting classified information possess formal access approvals for at least the highest classification level and for compartments of information on the system."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-05(02)-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing maintenance personnel"
+      },
+      {
+       "en": "personnel records"
+      },
+      {
+       "en": "maintenance records"
+      },
+      {
+       "en": "access control records"
+      },
+      {
+       "en": "access credentials"
+      },
+      {
+       "en": "access authorizations"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-05(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities"
+      },
+      {
+       "en": "organizational personnel with personnel security responsibilities"
+      },
+      {
+       "en": "organizational personnel with physical access control responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MA-05(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing security clearances for maintenance personnel"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-3"
+  }
+ ]
+}

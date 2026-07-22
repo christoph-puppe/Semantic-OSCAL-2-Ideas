@@ -1,0 +1,191 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-9.5",
+ "version": "5.2.0",
+ "label": "SA-9(5)",
+ "lifecycle": "active",
+ "title": "Processing, Storage, and Service Location",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Restrict the location of {param:sa-09.05_odp.01} to {param:sa-09.05_odp.02} based on {param:sa-09.05_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "sa-09.05_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "information processing"
+      },
+      {
+       "value": "information or data"
+      },
+      {
+       "value": "system services"
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "sa-09.05_odp.02",
+     "type": "string",
+     "label": "locations"
+    },
+    {
+     "name": "sa-09.05_odp.03",
+     "type": "string",
+     "label": "requirements"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The location of information processing, information and data storage, or system services can have a direct impact on the ability of organizations to successfully execute their mission and business functions. The impact occurs when external providers control the location of processing, storage, or services. The criteria that external providers use for the selection of processing, storage, or service locations may be different from the criteria that organizations use. For example, organizations may desire that data or information storage locations be restricted to certain locations to help facilitate incident response activities in case of information security incidents or breaches. Incident response activities, including forensic analyses and after-the-fact investigations, may be adversely affected by the governing laws, policies, or protocols in the locations where processing and storage occur and/or the locations from which system services emanate."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-9.5_obj",
+     "label": "SA-09(05)",
+     "prose": {
+      "en": "based on {param:sa-09.05_odp.03}, {param:sa-09.05_odp.01} is/are restricted to {param:sa-09.05_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-09(05)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing external system services"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "restricted locations for information processing"
+      },
+      {
+       "en": "information/data and/or system services"
+      },
+      {
+       "en": "information processing, information/data, and/or system services to be maintained in restricted locations"
+      },
+      {
+       "en": "organizational security requirements or conditions for external providers"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-09(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "external providers of system services"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-09(05)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for defining the requirements to restrict locations of information processing, information/data, or information services"
+      },
+      {
+       "en": "organizational processes for ensuring the location is restricted in accordance with requirements or conditions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-09.05_odp.01": {
+     "alt-identifiers": [
+      "sa-9.5_prm_1"
+     ]
+    },
+    "sa-09.05_odp.02": {
+     "guidelines": [
+      {
+       "en": "locations where {param:sa-09.05_odp.01} is/are to be restricted are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-9.5_prm_2"
+     ]
+    },
+    "sa-09.05_odp.03": {
+     "guidelines": [
+      {
+       "en": "requirements or conditions for restricting the location of {param:sa-09.05_odp.01} are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-9.5_prm_3"
+     ],
+     "alt-label": "requirements or conditions"
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-4"
+  }
+ ]
+}

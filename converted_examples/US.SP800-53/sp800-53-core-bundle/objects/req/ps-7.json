@@ -1,0 +1,275 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PS-7",
+ "version": "5.2.0",
+ "label": "PS-7",
+ "lifecycle": "active",
+ "title": "External Personnel Security",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish personnel security requirements, including security roles and responsibilities for external providers;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require external providers to comply with personnel security policies and procedures established by the organization;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Document personnel security requirements;"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require external providers to notify {param:ps-07_odp.01} of any personnel transfers or terminations of external personnel who possess organizational credentials and/or badges, or who have system privileges within {param:ps-07_odp.02} ; and"
+   },
+   "parameters": [
+    {
+     "name": "ps-07_odp.01",
+     "type": "string",
+     "label": "personnel or roles"
+    },
+    {
+     "name": "ps-07_odp.02",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Monitor provider compliance with personnel security requirements."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "External provider refers to organizations other than the organization operating or acquiring the system. External providers include service bureaus, contractors, and other organizations that provide system development, information technology services, testing or assessment services, outsourced applications, and network/security management. Organizations explicitly include personnel security requirements in acquisition-related documents. External providers may have personnel working at organizational facilities with credentials, badges, or system privileges issued by organizations. Notifications of external personnel changes ensure the appropriate termination of privileges and credentials. Organizations define the transfers and terminations deemed reportable by security-related characteristics that include functions, roles, and the nature of credentials or privileges associated with transferred or terminated individuals."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ps-7_obj",
+     "label": "PS-07",
+     "children": [
+      {
+       "id": "ps-7_obj.a",
+       "label": "PS-07a.",
+       "prose": {
+        "en": "personnel security requirements are established, including security roles and responsibilities for external providers;"
+       }
+      },
+      {
+       "id": "ps-7_obj.b",
+       "label": "PS-07b.",
+       "prose": {
+        "en": "external providers are required to comply with personnel security policies and procedures established by the organization;"
+       }
+      },
+      {
+       "id": "ps-7_obj.c",
+       "label": "PS-07c.",
+       "prose": {
+        "en": "personnel security requirements are documented;"
+       }
+      },
+      {
+       "id": "ps-7_obj.d",
+       "label": "PS-07d.",
+       "prose": {
+        "en": "external providers are required to notify {param:ps-07_odp.01} of any personnel transfers or terminations of external personnel who possess organizational credentials and/or badges or who have system privileges within {param:ps-07_odp.02};"
+       }
+      },
+      {
+       "id": "ps-7_obj.e",
+       "label": "PS-07e.",
+       "prose": {
+        "en": "provider compliance with personnel security requirements is monitored."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PS-07-Examine",
+     "objects": [
+      {
+       "en": "Personnel security policy"
+      },
+      {
+       "en": "procedures addressing external personnel security"
+      },
+      {
+       "en": "list of personnel security requirements"
+      },
+      {
+       "en": "acquisition documents"
+      },
+      {
+       "en": "service-level agreements"
+      },
+      {
+       "en": "compliance monitoring process"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PS-07-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personnel security responsibilities"
+      },
+      {
+       "en": "external providers"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with account management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PS-07-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing and monitoring external personnel security"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the monitoring of provider compliance"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ps-07_odp.01": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to be notified of any personnel transfers or terminations of external personnel who possess organizational credentials and/or badges or who have system privileges is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ps-7_prm_1"
+     ]
+    },
+    "ps-07_odp.02": {
+     "guidelines": [
+      {
+       "en": "time period within which third-party providers are required to notify organization-defined personnel or roles of any personnel transfers or terminations of external personnel who possess organizational credentials and/or badges or who have system privileges is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ps-7_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-35"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-63-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-21"
+  }
+ ]
+}

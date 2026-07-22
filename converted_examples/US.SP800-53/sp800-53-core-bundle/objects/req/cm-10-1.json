@@ -1,0 +1,144 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-10.1",
+ "version": "5.2.0",
+ "label": "CM-10(1)",
+ "lifecycle": "active",
+ "title": "Open-source Software",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish the following restrictions on the use of open-source software: {param:cm-10.01_odp}."
+   },
+   "parameters": [
+    {
+     "name": "cm-10.01_odp",
+     "type": "string",
+     "label": "restrictions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Open-source software refers to software that is available in source code form. Certain software rights normally reserved for copyright holders are routinely provided under software license agreements that permit individuals to study, change, and improve the software. From a security perspective, the major advantage of open-source software is that it provides organizations with the ability to examine the source code. In some cases, there is an online community associated with the software that inspects, tests, updates, and reports on issues found in software on an ongoing basis. However, remediating vulnerabilities in open-source software may be problematic. There may also be licensing issues associated with open-source software, including the constraints on derivative use of such software. Open-source software that is available only in binary form may increase the level of risk in using such software."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-10.1_obj",
+     "label": "CM-10(01)",
+     "prose": {
+      "en": "{param:cm-10.01_odp} are established for the use of open-source software."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-10(01)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "software usage restrictions"
+      },
+      {
+       "en": "software contract agreements and copyright laws"
+      },
+      {
+       "en": "site license documentation"
+      },
+      {
+       "en": "list of software usage restrictions"
+      },
+      {
+       "en": "software license tracking reports"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-10(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel operating, using, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel with software license management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-10(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for tracking the use of software protected by quantity licenses"
+      },
+      {
+       "en": "organizational processes for controlling/documenting the use of peer-to-peer file sharing technology"
+      },
+      {
+       "en": "mechanisms implementing software license tracking"
+      },
+      {
+       "en": "mechanisms implementing and controlling the use of peer-to-peer files sharing technology"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-10.01_odp": {
+     "guidelines": [
+      {
+       "en": "restrictions on the use of open-source software are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-10.1_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  }
+ ]
+}

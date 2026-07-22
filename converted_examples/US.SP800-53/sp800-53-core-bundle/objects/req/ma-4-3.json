@@ -1,0 +1,187 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-4.3",
+ "version": "5.2.0",
+ "label": "MA-4(3)",
+ "lifecycle": "active",
+ "title": "Comparable Security and Sanitization",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require that nonlocal maintenance and diagnostic services be performed from a system that implements a security capability comparable to the capability implemented on the system being serviced; or"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Remove the component to be serviced from the system prior to nonlocal maintenance or diagnostic services; sanitize the component (for organizational information); and after the service is performed, inspect and sanitize the component (for potentially malicious software) before reconnecting the component to the system."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Comparable security capability on systems, diagnostic tools, and equipment providing maintenance services implies that the implemented controls on those systems, tools, and equipment are at least as comprehensive as the controls on the system being serviced."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-4.3_obj",
+     "label": "MA-04(03)",
+     "children": [
+      {
+       "id": "ma-4.3_obj.a",
+       "label": "MA-04(03)(a)",
+       "children": [
+        {
+         "id": "ma-4.3_obj.a-1",
+         "label": "MA-04(03)(a)[01]",
+         "prose": {
+          "en": "nonlocal maintenance services are required to be performed from a system that implements a security capability comparable to the capability implemented on the system being serviced;"
+         }
+        },
+        {
+         "id": "ma-4.3_obj.a-2",
+         "label": "MA-04(03)(a)[02]",
+         "prose": {
+          "en": "nonlocal diagnostic services are required to be performed from a system that implements a security capability comparable to the capability implemented on the system being serviced; or"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ma-4.3_obj.b",
+       "label": "MA-04(03)(b)",
+       "children": [
+        {
+         "id": "ma-4.3_obj.b-1",
+         "label": "MA-04(03)(b)[01]",
+         "prose": {
+          "en": "the component to be serviced is removed from the system prior to nonlocal maintenance or diagnostic services;"
+         }
+        },
+        {
+         "id": "ma-4.3_obj.b-2",
+         "label": "MA-04(03)(b)[02]",
+         "prose": {
+          "en": "the component to be serviced is sanitized (for organizational information);"
+         }
+        },
+        {
+         "id": "ma-4.3_obj.b-3",
+         "label": "MA-04(03)(b)[03]",
+         "prose": {
+          "en": "the component is inspected and sanitized (for potentially malicious software) after the service is performed and before reconnecting the component to the system."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-04(03)-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing nonlocal system maintenance"
+      },
+      {
+       "en": "service provider contracts and/or service-level agreements"
+      },
+      {
+       "en": "maintenance records"
+      },
+      {
+       "en": "inspection records"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "equipment sanitization records"
+      },
+      {
+       "en": "media sanitization records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-04(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities"
+      },
+      {
+       "en": "system maintenance provider"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel responsible for media sanitization"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MA-04(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for comparable security and sanitization for nonlocal maintenance"
+      },
+      {
+       "en": "organizational processes for the removal, sanitization, and inspection of components serviced via nonlocal maintenance"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing component sanitization and inspection"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  }
+ ]
+}

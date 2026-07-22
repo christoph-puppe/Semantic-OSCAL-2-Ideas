@@ -1,0 +1,133 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-8.1",
+ "version": "5.2.0",
+ "label": "IA-8(1)",
+ "lifecycle": "active",
+ "title": "Acceptance of PIV Credentials from Other Agencies",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Accept and electronically verify Personal Identity Verification-compliant credentials from other federal agencies."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Acceptance of Personal Identity Verification (PIV) credentials from other federal agencies applies to both logical and physical access control systems. PIV credentials are those credentials issued by federal agencies that conform to FIPS Publication 201 and supporting guidelines. The adequacy and reliability of PIV card issuers are addressed and authorized using SP 800-79-2."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-8.1_obj",
+     "label": "IA-08(01)",
+     "children": [
+      {
+       "id": "ia-8.1_obj-1",
+       "label": "IA-08(01)[01]",
+       "prose": {
+        "en": "Personal Identity Verification-compliant credentials from other federal agencies are accepted;"
+       }
+      },
+      {
+       "id": "ia-8.1_obj-2",
+       "label": "IA-08(01)[02]",
+       "prose": {
+        "en": "Personal Identity Verification-compliant credentials from other federal agencies are electronically verified."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-08(01)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "procedures addressing user identification and authentication"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "PIV verification records"
+      },
+      {
+       "en": "evidence of PIV credentials"
+      },
+      {
+       "en": "PIV credential authorizations"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-08(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system operations responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with account management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-08(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing identification and authentication capabilities"
+      },
+      {
+       "en": "mechanisms that accept and verify PIV credentials"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-3"
+  }
+ ]
+}

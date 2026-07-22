@@ -1,0 +1,157 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-8",
+ "version": "5.2.0",
+ "label": "CP-8",
+ "lifecycle": "active",
+ "title": "Telecommunications Services",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish alternate telecommunications services, including necessary agreements to permit the resumption of {param:cp-08_odp.01} for essential mission and business functions within {param:cp-08_odp.02} when the primary telecommunications capabilities are unavailable at either the primary or alternate processing or storage sites."
+   },
+   "parameters": [
+    {
+     "name": "cp-08_odp.01",
+     "type": "string",
+     "label": "system operations"
+    },
+    {
+     "name": "cp-08_odp.02",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Telecommunications services (for data and voice) for primary and alternate processing and storage sites are in scope for CP-8 . Alternate telecommunications services reflect the continuity requirements in contingency plans to maintain essential mission and business functions despite the loss of primary telecommunications services. Organizations may specify different time periods for primary or alternate sites. Alternate telecommunications services include additional organizational or commercial ground-based circuits or lines, network-based approaches to telecommunications, or the use of satellites. Organizations consider factors such as availability, quality of service, and access when entering into alternate telecommunications agreements."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-8_obj",
+     "label": "CP-08",
+     "prose": {
+      "en": "alternate telecommunications services, including necessary agreements to permit the resumption of {param:cp-08_odp.01} , are established for essential mission and business functions within {param:cp-08_odp.02} when the primary telecommunications capabilities are unavailable at either the primary or alternate processing or storage sites."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-08-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing alternate telecommunications services"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "primary and alternate telecommunications service agreements"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-08-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency plan telecommunications responsibilities"
+      },
+      {
+       "en": "organizational personnel with system recovery responsibilities"
+      },
+      {
+       "en": "organizational personnel with knowledge of requirements for mission and business functions"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibility for acquisitions/contractual agreements"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-08-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting telecommunications"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cp-08_odp.01": {
+     "guidelines": [
+      {
+       "en": "system operations to be resumed for essential mission and business functions are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cp-8_prm_1"
+     ]
+    },
+    "cp-08_odp.02": {
+     "guidelines": [
+      {
+       "en": "time period within which to resume essential mission and business functions when the primary telecommunications capabilities are unavailable is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cp-8_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-34r1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  }
+ ]
+}

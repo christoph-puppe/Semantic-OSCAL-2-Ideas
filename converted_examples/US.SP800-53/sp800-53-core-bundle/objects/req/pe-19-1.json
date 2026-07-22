@@ -1,0 +1,109 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-19.1",
+ "version": "5.2.0",
+ "label": "PE-19(1)",
+ "lifecycle": "active",
+ "title": "National Emissions Policies and Procedures",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Protect system components, associated data communications, and networks in accordance with national Emissions Security policies and procedures based on the security category or classification of the information."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Emissions Security (EMSEC) policies include the former TEMPEST policies."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-19.1_obj",
+     "label": "PE-19(01)",
+     "children": [
+      {
+       "id": "pe-19.1_obj-1",
+       "label": "PE-19(01)[01]",
+       "prose": {
+        "en": "system components are protected in accordance with national emissions security policies and procedures based on the security category or classification of the information;"
+       }
+      },
+      {
+       "id": "pe-19.1_obj-2",
+       "label": "PE-19(01)[02]",
+       "prose": {
+        "en": "associated data communications are protected in accordance with national emissions security policies and procedures based on the security category or classification of the information;"
+       }
+      },
+      {
+       "id": "pe-19.1_obj-3",
+       "label": "PE-19(01)[03]",
+       "prose": {
+        "en": "networks are protected in accordance with national emissions security policies and procedures based on the security category or classification of the information."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-19(01)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing information leakage that comply with national emissions and TEMPEST policies and procedures"
+      },
+      {
+       "en": "system component design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-19(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for system environmental controls"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-19(01)-Test",
+     "objects": [
+      {
+       "en": "Information system components for compliance with national emissions and TEMPEST policies and procedures"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-19"
+  }
+ ]
+}

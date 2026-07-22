@@ -1,0 +1,139 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-3.2",
+ "version": "5.2.0",
+ "label": "PE-3(2)",
+ "lifecycle": "active",
+ "title": "Facility and Systems",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Perform security checks {param:pe-03.02_odp} at the physical perimeter of the facility or system for exfiltration of information or removal of system components."
+   },
+   "parameters": [
+    {
+     "name": "pe-03.02_odp",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations determine the extent, frequency, and/or randomness of security checks to adequately mitigate risk associated with exfiltration."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-3.2_obj",
+     "label": "PE-03(02)",
+     "prose": {
+      "en": "security checks are performed {param:pe-03.02_odp} at the physical perimeter of the facility or system for exfiltration of information or removal of system components."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-03(02)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing physical access control"
+      },
+      {
+       "en": "physical access control logs or records"
+      },
+      {
+       "en": "records of security checks"
+      },
+      {
+       "en": "security audit reports"
+      },
+      {
+       "en": "security inspection reports"
+      },
+      {
+       "en": "facility layout documentation"
+      },
+      {
+       "en": "system entry and exit points"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-03(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with physical access control responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-03(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for physical access control to the facility and/or system"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing physical access control for the facility or system"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing security checks for the unauthorized exfiltration of information"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-03.02_odp": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to perform security checks at the physical perimeter of the facility or system for exfiltration of information or removal of system components is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-3.2_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  }
+ ]
+}

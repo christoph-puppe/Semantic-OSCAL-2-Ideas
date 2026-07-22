@@ -1,0 +1,186 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-10",
+ "version": "5.2.0",
+ "label": "PM-10",
+ "lifecycle": "active",
+ "title": "Authorization Process",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Manage the security and privacy state of organizational systems and the environments in which those systems operate through authorization processes;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Designate individuals to fulfill specific roles and responsibilities within the organizational risk management process; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Integrate the authorization processes into an organization-wide risk management program."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Authorization processes for organizational systems and environments of operation require the implementation of an organization-wide risk management process and associated security and privacy standards and guidelines. Specific roles for risk management processes include a risk executive (function) and designated authorizing officials for each organizational system and common control provider. The authorization processes for the organization are integrated with continuous monitoring processes to facilitate ongoing understanding and acceptance of security and privacy risks to organizational operations, organizational assets, individuals, other organizations, and the Nation."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-10_obj",
+     "label": "PM-10",
+     "children": [
+      {
+       "id": "pm-10_obj.a",
+       "label": "PM-10a.",
+       "children": [
+        {
+         "id": "pm-10_obj.a-1",
+         "label": "PM-10a.[01]",
+         "prose": {
+          "en": "the security state of organizational systems and the environments in which those systems operate are managed through authorization processes;"
+         }
+        },
+        {
+         "id": "pm-10_obj.a-2",
+         "label": "PM-10a.[02]",
+         "prose": {
+          "en": "the privacy state of organizational systems and the environments in which those systems operate are managed through authorization processes;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-10_obj.b",
+       "label": "PM-10b.",
+       "prose": {
+        "en": "individuals are designated to fulfill specific roles and responsibilities within the organizational risk management process;"
+       }
+      },
+      {
+       "id": "pm-10_obj.c",
+       "label": "PM-10c.",
+       "prose": {
+        "en": "the authorization processes are integrated into an organization-wide risk management program."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-10-Examine",
+     "objects": [
+      {
+       "en": "Information security program plan"
+      },
+      {
+       "en": "privacy program plan"
+      },
+      {
+       "en": "procedures addressing management (i.e., documentation, tracking, and reporting) of the authorization process"
+      },
+      {
+       "en": "assessment, authorization, and monitoring policy"
+      },
+      {
+       "en": "assessment, authorization, and monitoring procedures"
+      },
+      {
+       "en": "system authorization documentation"
+      },
+      {
+       "en": "lists or other documentation about authorization process roles and responsibilities"
+      },
+      {
+       "en": "risk assessment results relevant to the authorization process and the organization-wide risk management program"
+      },
+      {
+       "en": "organizational risk management strategy"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-10-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy program planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel responsible for management of the authorization process"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PM-10-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for authorization"
+      },
+      {
+       "en": "mechanisms supporting the authorization process"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-37r2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-39"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-181r1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-2"
+  }
+ ]
+}

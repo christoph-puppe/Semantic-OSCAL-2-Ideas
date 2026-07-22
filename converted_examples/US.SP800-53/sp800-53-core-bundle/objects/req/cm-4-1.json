@@ -1,0 +1,207 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-4.1",
+ "version": "5.2.0",
+ "label": "CM-4(1)",
+ "lifecycle": "active",
+ "title": "Separate Test Environments",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Analyze changes to the system in a separate test environment before implementation in an operational environment, looking for security and privacy impacts due to flaws, weaknesses, incompatibility, or intentional malice."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "A separate test environment requires an environment that is physically or logically separate and distinct from the operational environment. The separation is sufficient to ensure that activities in the test environment do not impact activities in the operational environment and that information in the operational environment is not inadvertently transmitted to the test environment. Separate environments can be achieved by physical or logical means. If physically separate test environments are not implemented, organizations determine the strength of mechanism required when implementing logical separation."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-4.1_obj",
+     "label": "CM-04(01)",
+     "children": [
+      {
+       "id": "cm-4.1_obj-1",
+       "label": "CM-04(01)[01]",
+       "prose": {
+        "en": "changes to the system are analyzed in a separate test environment before implementation in an operational environment;"
+       }
+      },
+      {
+       "id": "cm-4.1_obj-2",
+       "label": "CM-04(01)[02]",
+       "prose": {
+        "en": "changes to the system are analyzed for security impacts due to flaws;"
+       }
+      },
+      {
+       "id": "cm-4.1_obj-3",
+       "label": "CM-04(01)[03]",
+       "prose": {
+        "en": "changes to the system are analyzed for privacy impacts due to flaws;"
+       }
+      },
+      {
+       "id": "cm-4.1_obj-4",
+       "label": "CM-04(01)[04]",
+       "prose": {
+        "en": "changes to the system are analyzed for security impacts due to weaknesses;"
+       }
+      },
+      {
+       "id": "cm-4.1_obj-5",
+       "label": "CM-04(01)[05]",
+       "prose": {
+        "en": "changes to the system are analyzed for privacy impacts due to weaknesses;"
+       }
+      },
+      {
+       "id": "cm-4.1_obj-6",
+       "label": "CM-04(01)[06]",
+       "prose": {
+        "en": "changes to the system are analyzed for security impacts due to incompatibility;"
+       }
+      },
+      {
+       "id": "cm-4.1_obj-7",
+       "label": "CM-04(01)[07]",
+       "prose": {
+        "en": "changes to the system are analyzed for privacy impacts due to incompatibility;"
+       }
+      },
+      {
+       "id": "cm-4.1_obj-8",
+       "label": "CM-04(01)[08]",
+       "prose": {
+        "en": "changes to the system are analyzed for security impacts due to intentional malice;"
+       }
+      },
+      {
+       "id": "cm-4.1_obj-9",
+       "label": "CM-04(01)[09]",
+       "prose": {
+        "en": "changes to the system are analyzed for privacy impacts due to intentional malice."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-04(01)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing security impact analyses for changes to the system"
+      },
+      {
+       "en": "procedures addressing privacy impact analyses for changes to the system"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "security impact analysis documentation"
+      },
+      {
+       "en": "privacy impact analysis documentation"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "analysis tools and associated outputs system design documentation"
+      },
+      {
+       "en": "system architecture and configuration documentation"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "procedures addressing the authority to test with PII"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "documentation of separate test and operational environments"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-04(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibility for conducting security and privacy impact analyses"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "members of change control board or similar"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-04(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for security and privacy impact analyses"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing security and privacy impact analyses of changes"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  }
+ ]
+}

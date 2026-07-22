@@ -1,0 +1,173 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AT-4",
+ "version": "5.2.0",
+ "label": "AT-4",
+ "lifecycle": "active",
+ "title": "Training Records",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Document and monitor information security and privacy training activities, including security and privacy awareness training and specific role-based security and privacy training; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Retain individual training records for {param:at-04_odp}."
+   },
+   "parameters": [
+    {
+     "name": "at-04_odp",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Documentation for specialized training may be maintained by individual supervisors at the discretion of the organization. The National Archives and Records Administration provides guidance on records retention for federal agencies."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "at-4_obj",
+     "label": "AT-04",
+     "children": [
+      {
+       "id": "at-4_obj.a",
+       "label": "AT-04a.",
+       "children": [
+        {
+         "id": "at-4_obj.a-1",
+         "label": "AT-04a.[01]",
+         "prose": {
+          "en": "information security and privacy training activities, including security and privacy awareness training and specific role-based security and privacy training, are documented;"
+         }
+        },
+        {
+         "id": "at-4_obj.a-2",
+         "label": "AT-04a.[02]",
+         "prose": {
+          "en": "information security and privacy training activities, including security and privacy awareness training and specific role-based security and privacy training, are monitored;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "at-4_obj.b",
+       "label": "AT-04b.",
+       "prose": {
+        "en": "individual training records are retained for {param:at-04_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AT-04-Examine",
+     "objects": [
+      {
+       "en": "Security and privacy awareness and training policy"
+      },
+      {
+       "en": "procedures addressing security and privacy training records"
+      },
+      {
+       "en": "security and privacy awareness and training records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AT-04-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy training record retention responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AT-04-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting the management of security and privacy training records"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "at-04_odp": {
+     "guidelines": [
+      {
+       "en": "time period for retaining individual training records is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "at-4_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-14"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  }
+ ]
+}

@@ -1,0 +1,157 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-17.8",
+ "version": "5.2.0",
+ "label": "SA-17(8)",
+ "lifecycle": "active",
+ "title": "Orchestration",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Design {param:sa-17.08_odp.01} with coordinated behavior to implement the following capabilities: {param:sa-17.08_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "sa-17.08_odp.01",
+     "type": "string",
+     "label": "critical systems"
+    },
+    {
+     "name": "sa-17.08_odp.02",
+     "type": "string",
+     "label": "capabilities"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Security resources that are distributed, located at different layers or in different system elements, or are implemented to support different aspects of trustworthiness can interact in unforeseen or incorrect ways. Adverse consequences can include cascading failures, interference, or coverage gaps. Coordination of the behavior of security resources (e.g., by ensuring that one patch is installed across all resources before making a configuration change that assumes that the patch is propagated) can avert such negative interactions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-17.8_obj",
+     "label": "SA-17(08)",
+     "prose": {
+      "en": "{param:sa-17.08_odp.01} are designed with coordinated behavior to implement {param:sa-17.08_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-17(08)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "enterprise architecture policy"
+      },
+      {
+       "en": "procedures addressing developer security and privacy architecture and design"
+      },
+      {
+       "en": "enterprise architecture"
+      },
+      {
+       "en": "security architecture"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "developer documentation describing design orchestration"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-17(08)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel with information security architecture responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-17.08_odp.01": {
+     "guidelines": [
+      {
+       "en": "critical systems or system components are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-17.8_prm_1"
+     ],
+     "alt-label": "critical systems or system components"
+    },
+    "sa-17.08_odp.02": {
+     "guidelines": [
+      {
+       "en": "capabilities to be implemented by systems or components are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-17.8_prm_2"
+     ],
+     "alt-label": "capabilities, by system or component"
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-17"
+  }
+ ]
+}

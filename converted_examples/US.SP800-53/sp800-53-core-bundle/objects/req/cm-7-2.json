@@ -1,0 +1,181 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-7.2",
+ "version": "5.2.0",
+ "label": "CM-7(2)",
+ "lifecycle": "active",
+ "title": "Prevent Program Execution",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Prevent program execution in accordance with {param:cm-07.02_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "cm-07.02_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "{param:cm-07.02_odp.02} "
+      },
+      {
+       "value": "rules authorizing the terms and conditions of software program usage"
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "cm-07.02_odp.02",
+     "type": "string",
+     "label": "policies, rules of behavior, and/or access agreements regarding software program usage and restrictions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Prevention of program execution addresses organizational policies, rules of behavior, and/or access agreements that restrict software usage and the terms and conditions imposed by the developer or manufacturer, including software licensing and copyrights. Restrictions include prohibiting auto-execute features, restricting roles allowed to approve program execution, permitting or prohibiting specific software programs, or restricting the number of program instances executed at the same time."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-7.2_obj",
+     "label": "CM-07(02)",
+     "prose": {
+      "en": "program execution is prevented in accordance with {param:cm-07.02_odp.01}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-07(02)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing least functionality in the system"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "common secure configuration checklists"
+      },
+      {
+       "en": "specifications for preventing software program execution"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-07(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-07(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes preventing program execution on the system"
+      },
+      {
+       "en": "organizational processes for software program usage and restrictions"
+      },
+      {
+       "en": "mechanisms preventing program execution on the system"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing software program usage and restrictions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-07.02_odp.01": {
+     "alt-identifiers": [
+      "cm-7.2_prm_1"
+     ]
+    },
+    "cm-07.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "policies, rules of behavior, and/or access agreements regarding software program usage and restrictions are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-7.2_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-6"
+  }
+ ]
+}

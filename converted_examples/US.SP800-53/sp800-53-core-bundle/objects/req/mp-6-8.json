@@ -1,0 +1,160 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MP-6.8",
+ "version": "5.2.0",
+ "label": "MP-6(8)",
+ "lifecycle": "active",
+ "title": "Remote Purging or Wiping of Information",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide the capability to purge or wipe information from {param:mp-06.08_odp.01} {param:mp-06.08_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "mp-06.08_odp.01",
+     "type": "string",
+     "label": "systems or system components"
+    },
+    {
+     "name": "mp-06.08_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "remotely"
+      },
+      {
+       "value": "under {param:mp-06.08_odp.03} "
+      }
+     ]
+    },
+    {
+     "name": "mp-06.08_odp.03",
+     "type": "string",
+     "label": "conditions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Remote purging or wiping of information protects information on organizational systems and system components if systems or components are obtained by unauthorized individuals. Remote purge or wipe commands require strong authentication to help mitigate the risk of unauthorized individuals purging or wiping the system, component, or device. The purge or wipe function can be implemented in a variety of ways, including by overwriting data or information multiple times or by destroying the key necessary to decrypt encrypted data."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "mp-6.8_obj",
+     "label": "MP-06(08)",
+     "prose": {
+      "en": "the capability to purge or wipe information from {param:mp-06.08_odp.01} {param:mp-06.08_odp.02} is provided."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MP-06(08)-Examine",
+     "objects": [
+      {
+       "en": "System media protection policy"
+      },
+      {
+       "en": "procedures addressing media sanitization and disposal"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "authorization records"
+      },
+      {
+       "en": "media sanitization records"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MP-06(08)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system media sanitization responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MP-06(08)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for purging/wiping media"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing purge/wipe capabilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "mp-06.08_odp.01": {
+     "guidelines": [
+      {
+       "en": "systems or system components to purge or wipe information either remotely or under specific conditions are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "mp-6.8_prm_1"
+     ]
+    },
+    "mp-06.08_odp.02": {
+     "alt-identifiers": [
+      "mp-6.8_prm_2"
+     ]
+    },
+    "mp-06.08_odp.03": {
+     "guidelines": [
+      {
+       "en": "conditions under which information is to be purged or wiped are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "mp-6.8_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-6"
+  }
+ ]
+}

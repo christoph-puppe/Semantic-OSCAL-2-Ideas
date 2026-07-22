@@ -1,0 +1,141 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-7.19",
+ "version": "5.2.0",
+ "label": "SC-7(19)",
+ "lifecycle": "active",
+ "title": "Block Communication from Non-organizationally Configured Hosts",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Block inbound and outbound communications traffic between {param:sc-07.19_odp} that are independently configured by end users and external service providers."
+   },
+   "parameters": [
+    {
+     "name": "sc-07.19_odp",
+     "type": "string",
+     "label": "communication clients"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Communication clients independently configured by end users and external service providers include instant messaging clients and video conferencing software and applications. Traffic blocking does not apply to communication clients that are configured by organizations to perform authorized functions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-7.19_obj",
+     "label": "SC-07(19)",
+     "children": [
+      {
+       "id": "sc-7.19_obj-1",
+       "label": "SC-07(19)[01]",
+       "prose": {
+        "en": "inbound communications traffic is blocked between {param:sc-07.19_odp} that are independently configured by end users and external service providers;"
+       }
+      },
+      {
+       "id": "sc-7.19_obj-2",
+       "label": "SC-07(19)[02]",
+       "prose": {
+        "en": "outbound communications traffic is blocked between {param:sc-07.19_odp} that are independently configured by end users and external service providers."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-07(19)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing boundary protection"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system hardware and software"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of communication clients independently configured by end users and external service providers"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-07(19)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with boundary protection responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-07(19)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the blocking of inbound and outbound communications traffic between communication clients independently configured by end users and external service providers"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-07.19_odp": {
+     "guidelines": [
+      {
+       "en": "communication clients that are independently configured by end users and external service providers are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-7.19_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  }
+ ]
+}

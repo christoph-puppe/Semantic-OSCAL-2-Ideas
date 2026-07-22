@@ -1,0 +1,174 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-9.5",
+ "version": "5.2.0",
+ "label": "CP-9(5)",
+ "lifecycle": "active",
+ "title": "Transfer to Alternate Storage Site",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Transfer system backup information to the alternate storage site {param:cp-9.5_prm_1}."
+   },
+   "parameters": [
+    {
+     "name": "cp-9.5_prm_1",
+     "type": "string",
+     "label": "organization-defined time period and transfer rate consistent with the recovery time and recovery point objectives"
+    },
+    {
+     "name": "cp-09.05_odp.01",
+     "type": "string",
+     "label": "time period"
+    },
+    {
+     "name": "cp-09.05_odp.02",
+     "type": "string",
+     "label": "transfer rate"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "System backup information can be transferred to alternate storage sites either electronically or by the physical shipment of storage media."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-9.5_obj",
+     "label": "CP-09(05)",
+     "children": [
+      {
+       "id": "cp-9.5_obj-1",
+       "label": "CP-09(05)[01]",
+       "prose": {
+        "en": "system backup information is transferred to the alternate storage site for {param:cp-09.05_odp.01};"
+       }
+      },
+      {
+       "id": "cp-9.5_obj-2",
+       "label": "CP-09(05)[02]",
+       "prose": {
+        "en": "system backup information is transferred to the alternate storage site {param:cp-09.05_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-09(05)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing system backup"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "system backup logs or records"
+      },
+      {
+       "en": "evidence of system backup information transferred to alternate storage site"
+      },
+      {
+       "en": "alternate storage site agreements"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-09(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system backup responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-09(05)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for transferring system backups to the alternate storage site"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing system backups"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing information transfer to the alternate storage site"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cp-9.5_prm_1": {
+     "aggregates": [
+      "cp-09.05_odp.01",
+      "cp-09.05_odp.02"
+     ]
+    },
+    "cp-09.05_odp.01": {
+     "guidelines": [
+      {
+       "en": "time period consistent with recovery time and recovery point objectives is defined;"
+      }
+     ]
+    },
+    "cp-09.05_odp.02": {
+     "guidelines": [
+      {
+       "en": "transfer rate consistent with recovery time and recovery point objectives is defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-5"
+  }
+ ]
+}

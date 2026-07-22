@@ -1,0 +1,177 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-3.1",
+ "version": "5.2.0",
+ "label": "IA-3(1)",
+ "lifecycle": "active",
+ "title": "Cryptographic Bidirectional Authentication",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Authenticate {param:ia-03.01_odp.01} before establishing {param:ia-03.01_odp.02} connection using bidirectional authentication that is cryptographically based."
+   },
+   "parameters": [
+    {
+     "name": "ia-03.01_odp.01",
+     "type": "string",
+     "label": "devices and/or types of devices"
+    },
+    {
+     "name": "ia-03.01_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "local"
+      },
+      {
+       "value": "remote"
+      },
+      {
+       "value": "network"
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "A local connection is a connection with a device that communicates without the use of a network. A network connection is a connection with a device that communicates through a network. A remote connection is a connection with a device that communicates through an external network. Bidirectional authentication provides stronger protection to validate the identity of other devices for connections that are of greater risk."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-3.1_obj",
+     "label": "IA-03(01)",
+     "prose": {
+      "en": "{param:ia-03.01_odp.01} are authenticated before establishing {param:ia-03.01_odp.02} connection using bidirectional authentication that is cryptographically based."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-03(01)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "procedures addressing device identification and authentication"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "list of devices requiring unique identification and authentication"
+      },
+      {
+       "en": "device connection reports"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-03(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with operational responsibilities for device identification and authentication"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-03(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing device authentication capability"
+      },
+      {
+       "en": "cryptographically based bidirectional authentication mechanisms"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ia-03.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "devices and/or types of devices requiring use of cryptographically based, bidirectional authentication to authenticate before establishing one or more connections are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-3.1_prm_1"
+     ]
+    },
+    "ia-03.01_odp.02": {
+     "alt-identifiers": [
+      "ia-3.1_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-3.2",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/IA-3.2",
+    "mode": "merged-into",
+    "label": "IA-03(02)",
+    "title": "Cryptographic Bidirectional Network Authentication"
+   }
+  ]
+ }
+}

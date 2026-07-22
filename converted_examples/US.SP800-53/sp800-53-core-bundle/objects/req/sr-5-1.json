@@ -1,0 +1,190 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SR-5.1",
+ "version": "5.2.0",
+ "label": "SR-5(1)",
+ "lifecycle": "active",
+ "title": "Adequate Supply",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ the following controls to ensure an adequate supply of {param:sr-05.01_odp.02}: {param:sr-05.01_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "sr-05.01_odp.01",
+     "type": "string",
+     "label": "controls"
+    },
+    {
+     "name": "sr-05.01_odp.02",
+     "type": "string",
+     "label": "critical system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Adversaries can attempt to impede organizational operations by disrupting the supply of critical system components or corrupting supplier operations. Organizations may track systems and component mean time to failure to mitigate the loss of temporary or permanent system function. Controls to ensure that adequate supplies of critical system components include the use of multiple suppliers throughout the supply chain for the identified critical components, stockpiling spare components to ensure operation during mission-critical times, and the identification of functionally identical or similar components that may be used, if necessary."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sr-5.1_obj",
+     "label": "SR-05(01)",
+     "prose": {
+      "en": "{param:sr-05.01_odp.01} are employed to ensure an adequate supply of {param:sr-05.01_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SR-05(01)-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management policy and procedures"
+      },
+      {
+       "en": "supply chain risk management strategy"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "contingency planning documents"
+      },
+      {
+       "en": "inventory of critical systems and system components"
+      },
+      {
+       "en": "determination of adequate supply"
+      },
+      {
+       "en": "system and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing supply chain protection"
+      },
+      {
+       "en": "procedures addressing the integration of information security requirements into the acquisition process"
+      },
+      {
+       "en": "procedures addressing the integration of acquisition strategies, contract tools, and procurement methods into the acquisition process"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for systems or services"
+      },
+      {
+       "en": "purchase orders/requisitions for the system, system component, or system service from suppliers"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SR-05(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and services acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SR-05(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for defining and employing tailored acquisition strategies, contract tools, and procurement methods"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the definition and employment of tailored acquisition strategies, contract tools, and procurement methods"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sr-05.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "controls to ensure an adequate supply of critical system components are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sr-5.1_prm_2"
+     ]
+    },
+    "sr-05.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "critical system components of which an adequate supply is required are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sr-5.1_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-9"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-12.6",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-12.6",
+    "mode": "merged-into",
+    "label": "SA-12(06)",
+    "title": "Minimizing Procurement Time"
+   }
+  ]
+ }
+}

@@ -1,0 +1,151 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-7.21",
+ "version": "5.2.0",
+ "label": "SC-7(21)",
+ "lifecycle": "active",
+ "title": "Isolation of System Components",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Employ boundary protection mechanisms to isolate {param:sc-07.21_odp.01} supporting {param:sc-07.21_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "sc-07.21_odp.01",
+     "type": "string",
+     "label": "system components"
+    },
+    {
+     "name": "sc-07.21_odp.02",
+     "type": "string",
+     "label": "missions and/or business functions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations can isolate system components that perform different mission or business functions. Such isolation limits unauthorized information flows among system components and provides the opportunity to deploy greater levels of protection for selected system components. Isolating system components with boundary protection mechanisms provides the capability for increased protection of individual system components and to more effectively control information flows between those components. Isolating system components provides enhanced protection that limits the potential harm from hostile cyber-attacks and errors. The degree of isolation varies depending upon the mechanisms chosen. Boundary protection mechanisms include routers, gateways, and firewalls that separate system components into physically separate networks or subnetworks; cross-domain devices that separate subnetworks; virtualization techniques; and the encryption of information flows among system components using distinct encryption keys."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-7.21_obj",
+     "label": "SC-07(21)",
+     "prose": {
+      "en": "boundary protection mechanisms are employed to isolate {param:sc-07.21_odp.01} supporting {param:sc-07.21_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-07(21)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing boundary protection"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system hardware and software"
+      },
+      {
+       "en": "enterprise architecture documentation"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-07(21)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with boundary protection responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-07(21)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the capability to separate system components supporting organizational missions and/or business functions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-07.21_odp.01": {
+     "guidelines": [
+      {
+       "en": "system components to be isolated by boundary protection mechanisms are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-7.21_prm_1"
+     ]
+    },
+    "sc-07.21_odp.02": {
+     "guidelines": [
+      {
+       "en": "missions and/or business functions to be supported by system components isolated by boundary protection mechanisms are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-7.21_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-9"
+  }
+ ]
+}

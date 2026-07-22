@@ -1,0 +1,285 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-4",
+ "version": "5.2.0",
+ "label": "CP-4",
+ "lifecycle": "active",
+ "title": "Contingency Plan Testing",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Test the contingency plan for the system {param:cp-04_odp.01} using the following tests to determine the effectiveness of the plan and the readiness to execute the plan: {param:cp-4_prm_2}."
+   },
+   "parameters": [
+    {
+     "name": "cp-04_odp.01",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "cp-4_prm_2",
+     "type": "string",
+     "label": "organization-defined tests"
+    },
+    {
+     "name": "cp-04_odp.02",
+     "type": "string",
+     "label": "tests"
+    },
+    {
+     "name": "cp-04_odp.03",
+     "type": "string",
+     "label": "tests"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review the contingency plan test results; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Initiate corrective actions, if needed."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Methods for testing contingency plans to determine the effectiveness of the plans and identify potential weaknesses include checklists, walk-through and tabletop exercises, simulations (parallel or full interrupt), and comprehensive exercises. Organizations conduct testing based on the requirements in contingency plans and include a determination of the effects on organizational operations, assets, and individuals due to contingency operations. Organizations have flexibility and discretion in the breadth, depth, and timelines of corrective actions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-4_obj",
+     "label": "CP-04",
+     "children": [
+      {
+       "id": "cp-4_obj.a",
+       "label": "CP-04a.",
+       "children": [
+        {
+         "id": "cp-4_obj.a-1",
+         "label": "CP-04a.[01]",
+         "prose": {
+          "en": "the contingency plan for the system is tested {param:cp-04_odp.01};"
+         }
+        },
+        {
+         "id": "cp-4_obj.a-2",
+         "label": "CP-04a.[02]",
+         "prose": {
+          "en": "{param:cp-04_odp.02} are used to determine the effectiveness of the plan;"
+         }
+        },
+        {
+         "id": "cp-4_obj.a-3",
+         "label": "CP-04a.[03]",
+         "prose": {
+          "en": "{param:cp-04_odp.03} are used to determine the readiness to execute the plan;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "cp-4_obj.b",
+       "label": "CP-04b.",
+       "prose": {
+        "en": "the contingency plan test results are reviewed;"
+       }
+      },
+      {
+       "id": "cp-4_obj.c",
+       "label": "CP-04c.",
+       "prose": {
+        "en": "corrective actions are initiated, if needed."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-04-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing contingency plan testing"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "contingency plan test documentation"
+      },
+      {
+       "en": "contingency plan test results"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-04-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for contingency plan testing, reviewing, or responding to contingency plan tests"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-04-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for contingency plan testing"
+      },
+      {
+       "en": "mechanisms supporting the contingency plan and/or contingency plan testing"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cp-4_prm_2": {
+     "aggregates": [
+      "cp-04_odp.02",
+      "cp-04_odp.03"
+     ]
+    },
+    "cp-04_odp.01": {
+     "guidelines": [
+      {
+       "en": "frequency of testing the contingency plan for the system is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cp-4_prm_1"
+     ]
+    },
+    "cp-04_odp.02": {
+     "guidelines": [
+      {
+       "en": "tests for determining the effectiveness of the contingency plan are defined;"
+      }
+     ]
+    },
+    "cp-04_odp.03": {
+     "guidelines": [
+      {
+       "en": "tests for determining readiness to execute the contingency plan are defined;"
+      }
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.199"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-34r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-84"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-14"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-2"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-10.1",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/CP-10.1",
+    "mode": "merged-into",
+    "label": "CP-10(01)",
+    "title": "Contingency Plan Testing"
+   }
+  ]
+ }
+}

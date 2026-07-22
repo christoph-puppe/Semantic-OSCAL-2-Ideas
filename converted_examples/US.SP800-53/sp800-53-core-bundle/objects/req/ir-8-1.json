@@ -1,0 +1,169 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-8.1",
+ "version": "5.2.0",
+ "label": "IR-8(1)",
+ "lifecycle": "active",
+ "title": "Breaches",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Include the following in the Incident Response Plan for breaches involving personally identifiable information:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "A process to determine if notice to individuals or other organizations, including oversight organizations, is needed;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "An assessment process to determine the extent of the harm, embarrassment, inconvenience, or unfairness to affected individuals and any mechanisms to mitigate such harms; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identification of applicable privacy requirements."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations may be required by law, regulation, or policy to follow specific procedures relating to breaches, including notice to individuals, affected organizations, and oversight bodies; standards of harm; and mitigation or other specific requirements."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-8.1_obj",
+     "label": "IR-08(01)",
+     "children": [
+      {
+       "id": "ir-8.1_obj.a",
+       "label": "IR-08(01)(a)",
+       "prose": {
+        "en": "the incident response plan for breaches involving personally identifiable information includes a process to determine if notice to individuals or other organizations, including oversight organizations, is needed;"
+       }
+      },
+      {
+       "id": "ir-8.1_obj.b",
+       "label": "IR-08(01)(b)",
+       "prose": {
+        "en": "the incident response plan for breaches involving personally identifiable information includes an assessment process to determine the extent of the harm, embarrassment, inconvenience, or unfairness to affected individuals and any mechanisms to mitigate such harms;"
+       }
+      },
+      {
+       "id": "ir-8.1_obj.c",
+       "label": "IR-08(01)(c)",
+       "prose": {
+        "en": "the incident response plan for breaches involving personally identifiable information includes the identification of applicable privacy requirements."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-08(01)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing incident response planning"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "records of incident response plan reviews and approvals"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-08(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident response planning responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IR-08(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational incident response plan and related organizational processes"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-7"
+  }
+ ]
+}

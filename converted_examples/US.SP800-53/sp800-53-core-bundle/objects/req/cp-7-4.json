@@ -1,0 +1,113 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-7.4",
+ "version": "5.2.0",
+ "label": "CP-7(4)",
+ "lifecycle": "active",
+ "title": "Preparation for Use",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Prepare the alternate processing site so that the site can serve as the operational site supporting essential mission and business functions."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Site preparation includes establishing configuration settings for systems at the alternate processing site consistent with the requirements for such settings at the primary site and ensuring that essential supplies and logistical considerations are in place."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-7.4_obj",
+     "label": "CP-07(04)",
+     "prose": {
+      "en": "the alternate processing site is prepared so that the site can serve as the operational site supporting essential mission and business functions."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-07(04)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing alternate processing sites"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "alternate processing site"
+      },
+      {
+       "en": "alternate processing site agreements"
+      },
+      {
+       "en": "alternate processing site configurations"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-07(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency plan alternate processing site responsibilities"
+      },
+      {
+       "en": "organizational personnel with system recovery responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-07(04)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing recovery at the alternate processing site"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-4"
+  }
+ ]
+}

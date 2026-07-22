@@ -1,0 +1,136 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-21",
+ "version": "5.2.0",
+ "label": "PE-21",
+ "lifecycle": "active",
+ "title": "Electromagnetic Pulse Protection",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ {param:pe-21_odp.01} against electromagnetic pulse damage for {param:pe-21_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "pe-21_odp.01",
+     "type": "string",
+     "label": "protective measures"
+    },
+    {
+     "name": "pe-21_odp.02",
+     "type": "string",
+     "label": "system and system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "An electromagnetic pulse (EMP) is a short burst of electromagnetic energy that is spread over a range of frequencies. Such energy bursts may be natural or man-made. EMP interference may be disruptive or damaging to electronic equipment. Protective measures used to mitigate EMP risk include shielding, surge suppressors, ferro-resonant transformers, and earth grounding. EMP protection may be especially significant for systems and applications that are part of the U.S. critical infrastructure."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-21_obj",
+     "label": "PE-21",
+     "prose": {
+      "en": "{param:pe-21_odp.01} are employed against electromagnetic pulse damage for {param:pe-21_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-21-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing protective measures to mitigate EMP risk to systems and components"
+      },
+      {
+       "en": "documentation detailing protective measures to mitigate EMP risk"
+      },
+      {
+       "en": "list of locations where protective measures to mitigate EMP risk are implemented"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-21-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for physical and environmental protection"
+      },
+      {
+       "en": "system developers/integrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-21-Test",
+     "objects": [
+      {
+       "en": "Mechanisms for mitigating EMP risk"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-21_odp.01": {
+     "guidelines": [
+      {
+       "en": "protective measures to be employed against electromagnetic pulse damage are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-21_prm_1"
+     ]
+    },
+    "pe-21_odp.02": {
+     "guidelines": [
+      {
+       "en": "system and system components requiring protection against electromagnetic pulse damage are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-21_prm_2"
+     ],
+     "alt-label": "systems and system components"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-18"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-19"
+  }
+ ]
+}

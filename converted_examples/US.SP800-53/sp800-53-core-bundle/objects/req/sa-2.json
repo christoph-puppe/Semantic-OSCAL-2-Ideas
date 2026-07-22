@@ -1,0 +1,227 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-2",
+ "version": "5.2.0",
+ "label": "SA-2",
+ "lifecycle": "active",
+ "title": "Allocation of Resources",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Determine the high-level information security and privacy requirements for the system or system service in mission and business process planning;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Determine, document, and allocate the resources required to protect the system or system service as part of the organizational capital planning and investment control process; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish a discrete line item for information security and privacy in organizational programming and budgeting documentation."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Resource allocation for information security and privacy includes funding for system and services acquisition, sustainment, and supply chain-related risks throughout the system development life cycle."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-2_obj",
+     "label": "SA-02",
+     "children": [
+      {
+       "id": "sa-2_obj.a",
+       "label": "SA-02a.",
+       "children": [
+        {
+         "id": "sa-2_obj.a-1",
+         "label": "SA-02a.[01]",
+         "prose": {
+          "en": "the high-level information security requirements for the system or system service are determined in mission and business process planning;"
+         }
+        },
+        {
+         "id": "sa-2_obj.a-2",
+         "label": "SA-02a.[02]",
+         "prose": {
+          "en": "the high-level privacy requirements for the system or system service are determined in mission and business process planning;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-2_obj.b",
+       "label": "SA-02b.",
+       "children": [
+        {
+         "id": "sa-2_obj.b-1",
+         "label": "SA-02b.[01]",
+         "prose": {
+          "en": "the resources required to protect the system or system service are determined and documented as part of the organizational capital planning and investment control process;"
+         }
+        },
+        {
+         "id": "sa-2_obj.b-2",
+         "label": "SA-02b.[02]",
+         "prose": {
+          "en": "the resources required to protect the system or system service are allocated as part of the organizational capital planning and investment control process;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-2_obj.c",
+       "label": "SA-02c.",
+       "children": [
+        {
+         "id": "sa-2_obj.c-1",
+         "label": "SA-02c.[01]",
+         "prose": {
+          "en": "a discrete line item for information security is established in organizational programming and budgeting documentation;"
+         }
+        },
+        {
+         "id": "sa-2_obj.c-2",
+         "label": "SA-02c.[02]",
+         "prose": {
+          "en": "a discrete line item for privacy is established in organizational programming and budgeting documentation."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-02-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "system and services acquisition strategy and plans"
+      },
+      {
+       "en": "procedures addressing the allocation of resources to information security and privacy requirements"
+      },
+      {
+       "en": "procedures addressing capital planning and investment control"
+      },
+      {
+       "en": "organizational programming and budgeting documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "supply chain risk management policy"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-02-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with capital planning, investment control, organizational programming, and budgeting responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-02-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for determining information security and privacy requirements"
+      },
+      {
+       "en": "organizational processes for capital planning, programming, and budgeting"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing organizational capital planning, programming, and budgeting"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-37r2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-5"
+  }
+ ]
+}

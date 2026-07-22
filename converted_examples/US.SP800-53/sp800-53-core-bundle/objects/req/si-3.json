@@ -1,0 +1,498 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-3",
+ "version": "5.2.0",
+ "label": "SI-3",
+ "lifecycle": "active",
+ "title": "Malicious Code Protection",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement {param:si-03_odp.01} malicious code protection mechanisms at system entry and exit points to detect and eradicate malicious code;"
+   },
+   "parameters": [
+    {
+     "name": "si-03_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "signature-based"
+      },
+      {
+       "value": "non-signature-based"
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "si-03_odp.05",
+     "type": "string",
+     "label": "action"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Automatically update malicious code protection mechanisms as new releases are available in accordance with organizational configuration management policy and procedures;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Configure malicious code protection mechanisms to:"
+   }
+  },
+  {
+   "id": "smt.c.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Perform periodic scans of the system {param:si-03_odp.02} and real-time scans of files from external sources at {param:si-03_odp.03} as the files are downloaded, opened, or executed in accordance with organizational policy; and"
+   },
+   "parameters": [
+    {
+     "name": "si-03_odp.02",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "si-03_odp.03",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "endpoint"
+      },
+      {
+       "value": "network entry and exit points"
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  },
+  {
+   "id": "smt.c.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "{param:si-03_odp.04} ; and send alert to {param:si-03_odp.06} in response to malicious code detection; and"
+   },
+   "parameters": [
+    {
+     "name": "si-03_odp.04",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "block malicious code"
+      },
+      {
+       "value": "quarantine malicious code"
+      },
+      {
+       "value": "take {param:si-03_odp.05} "
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "si-03_odp.06",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Address the receipt of false positives during malicious code detection and eradication and the resulting potential impact on the availability of the system."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "System entry and exit points include firewalls, remote access servers, workstations, electronic mail servers, web servers, proxy servers, notebook computers, and mobile devices. Malicious code includes viruses, worms, Trojan horses, and spyware. Malicious code can also be encoded in various formats contained within compressed or hidden files or hidden in files using techniques such as steganography. Malicious code can be inserted into systems in a variety of ways, including by electronic mail, the world-wide web, and portable storage devices. Malicious code insertions occur through the exploitation of system vulnerabilities. A variety of technologies and methods exist to limit or eliminate the effects of malicious code.\n\nMalicious code protection mechanisms include both signature- and nonsignature-based technologies. Nonsignature-based detection mechanisms include artificial intelligence techniques that use heuristics to detect, analyze, and describe the characteristics or behavior of malicious code and to provide controls against such code for which signatures do not yet exist or for which existing signatures may not be effective. Malicious code for which active signatures do not yet exist or may be ineffective includes polymorphic malicious code (i.e., code that changes signatures when it replicates). Nonsignature-based mechanisms also include reputation-based technologies. In addition to the above technologies, pervasive configuration management, comprehensive software integrity controls, and anti-exploitation software may be effective in preventing the execution of unauthorized code. Malicious code may be present in commercial off-the-shelf software as well as custom-built software and could include logic bombs, backdoors, and other types of attacks that could affect organizational mission and business functions.\n\nIn situations where malicious code cannot be detected by detection methods or technologies, organizations rely on other types of controls, including secure coding practices, configuration management and control, trusted procurement processes, and monitoring practices to ensure that software does not perform functions other than the functions intended. Organizations may determine that, in response to the detection of malicious code, different actions may be warranted. For example, organizations can define actions in response to malicious code detection during periodic scans, the detection of malicious downloads, or the detection of maliciousness when attempting to open or execute files."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-3_obj",
+     "label": "SI-03",
+     "children": [
+      {
+       "id": "si-3_obj.a",
+       "label": "SI-03a.",
+       "children": [
+        {
+         "id": "si-3_obj.a-1",
+         "label": "SI-03a.[01]",
+         "prose": {
+          "en": "{param:si-03_odp.01} malicious code protection mechanisms are implemented at system entry and exit points to detect malicious code;"
+         }
+        },
+        {
+         "id": "si-3_obj.a-2",
+         "label": "SI-03a.[02]",
+         "prose": {
+          "en": "{param:si-03_odp.01} malicious code protection mechanisms are implemented at system entry and exit points to eradicate malicious code;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "si-3_obj.b",
+       "label": "SI-03b.",
+       "prose": {
+        "en": "malicious code protection mechanisms are updated automatically as new releases are available in accordance with organizational configuration management policy and procedures;"
+       }
+      },
+      {
+       "id": "si-3_obj.c",
+       "label": "SI-03c.",
+       "children": [
+        {
+         "id": "si-3_obj.c.1",
+         "label": "SI-03c.01",
+         "children": [
+          {
+           "id": "si-3_obj.c.1-1",
+           "label": "SI-03c.01[01]",
+           "prose": {
+            "en": "malicious code protection mechanisms are configured to perform periodic scans of the system {param:si-03_odp.02};"
+           }
+          },
+          {
+           "id": "si-3_obj.c.1-2",
+           "label": "SI-03c.01[02]",
+           "prose": {
+            "en": "malicious code protection mechanisms are configured to perform real-time scans of files from external sources at {param:si-03_odp.03} as the files are downloaded, opened, or executed in accordance with organizational policy;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "si-3_obj.c.2",
+         "label": "SI-03c.02",
+         "children": [
+          {
+           "id": "si-3_obj.c.2-1",
+           "label": "SI-03c.02[01]",
+           "prose": {
+            "en": "malicious code protection mechanisms are configured to {param:si-03_odp.04} in response to malicious code detection;"
+           }
+          },
+          {
+           "id": "si-3_obj.c.2-2",
+           "label": "SI-03c.02[02]",
+           "prose": {
+            "en": "malicious code protection mechanisms are configured to send alerts to {param:si-03_odp.06} in response to malicious code detection;"
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "si-3_obj.d",
+       "label": "SI-03d.",
+       "prose": {
+        "en": "the receipt of false positives during malicious code detection and eradication and the resulting potential impact on the availability of the system are addressed."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-03-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "configuration management policy and procedures"
+      },
+      {
+       "en": "procedures addressing malicious code protection"
+      },
+      {
+       "en": "malicious code protection mechanisms"
+      },
+      {
+       "en": "records of malicious code protection updates"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "scan results from malicious code protection mechanisms"
+      },
+      {
+       "en": "record of actions initiated by malicious code protection mechanisms in response to malicious code detection"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-03-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for malicious code protection"
+      },
+      {
+       "en": "organizational personnel with configuration management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-03-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for employing, updating, and configuring malicious code protection mechanisms"
+      },
+      {
+       "en": "organizational processes for addressing false positives and resulting potential impacts"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing, employing, updating, and configuring malicious code protection mechanisms"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing malicious code scanning and subsequent actions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-03_odp.01": {
+     "alt-identifiers": [
+      "si-3_prm_1"
+     ]
+    },
+    "si-03_odp.02": {
+     "guidelines": [
+      {
+       "en": "the frequency at which malicious code protection mechanisms perform scans is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-3_prm_2"
+     ]
+    },
+    "si-03_odp.03": {
+     "alt-identifiers": [
+      "si-3_prm_3"
+     ]
+    },
+    "si-03_odp.04": {
+     "alt-identifiers": [
+      "si-3_prm_4"
+     ]
+    },
+    "si-03_odp.05": {
+     "guidelines": [
+      {
+       "en": "action to be taken in response to malicious code detection are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "si-3_prm_5"
+     ]
+    },
+    "si-03_odp.06": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to be alerted when malicious code is detected is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-3_prm_6"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-83r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-125B"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-177r1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-19"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-23"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-26"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-28"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-44"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-15"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-14",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-3.2",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-3.7",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SC-14",
+    "mode": "merged-into",
+    "label": "SC-14",
+    "title": "Public Access Protections"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SI-3.2",
+    "mode": "merged-into",
+    "label": "SI-03(02)",
+    "title": "Automatic Updates"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SI-3.7",
+    "mode": "merged-into",
+    "label": "SI-03(07)",
+    "title": "Nonsignature-based Detection"
+   }
+  ]
+ }
+}

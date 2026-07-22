@@ -1,0 +1,129 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AT-2.4",
+ "version": "5.2.0",
+ "label": "AT-2(4)",
+ "lifecycle": "active",
+ "title": "Suspicious Communications and Anomalous System Behavior",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide literacy training on recognizing suspicious communications and anomalous behavior in organizational systems using {param:at-02.04_odp}."
+   },
+   "parameters": [
+    {
+     "name": "at-02.04_odp",
+     "type": "string",
+     "label": "indicators of malicious code"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "A well-trained workforce provides another organizational control that can be employed as part of a defense-in-depth strategy to protect against malicious code coming into organizations via email or the web applications. Personnel are trained to look for indications of potentially suspicious email (e.g., receiving an unexpected email, receiving an email containing strange or poor grammar, or receiving an email from an unfamiliar sender that appears to be from a known sponsor or contractor). Personnel are also trained on how to respond to suspicious email or web communications. For this process to work effectively, personnel are trained and made aware of what constitutes suspicious communications. Training personnel on how to recognize anomalous behaviors in systems can provide organizations with early warning for the presence of malicious code. Recognition of anomalous behavior by organizational personnel can supplement malicious code detection and protection tools and systems employed by organizations."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "at-2.4_obj",
+     "label": "AT-02(04)",
+     "prose": {
+      "en": "literacy training on recognizing suspicious communications and anomalous behavior in organizational systems using {param:at-02.04_odp} is provided."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AT-02(04)-Examine",
+     "objects": [
+      {
+       "en": "System security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "literacy training and awareness policy"
+      },
+      {
+       "en": "procedures addressing literacy training and awareness implementation"
+      },
+      {
+       "en": "literacy training and awareness curriculum"
+      },
+      {
+       "en": "literacy training and awareness materials"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AT-02(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel who receive literacy training and awareness"
+      },
+      {
+       "en": "organizational personnel with responsibilities for basic literacy training and awareness"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "at-02.04_odp": {
+     "guidelines": [
+      {
+       "en": "indicators of malicious code are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "at-2.4_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-2"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3.4",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/AT-3.4",
+    "mode": "renamed",
+    "label": "AT-03(04)",
+    "title": "Suspicious Communications and Anomalous System Behavior"
+   }
+  ]
+ }
+}

@@ -1,0 +1,168 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-4.32",
+ "version": "5.2.0",
+ "label": "AC-4(32)",
+ "lifecycle": "active",
+ "title": "Process Requirements for Information Transfer",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "When transferring information between different security domains, the process that transfers information between filter pipelines:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Does not filter message content;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Validates filtering metadata;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Ensures the content associated with the filtering metadata has successfully completed filtering; and"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Transfers the content to the destination filter pipeline."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The processes transferring information between filter pipelines have minimum complexity and functionality to provide assurance that the processes operate correctly."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-4.32_obj",
+     "label": "AC-04(32)",
+     "children": [
+      {
+       "id": "ac-4.32_obj.a",
+       "label": "AC-04(32)(a)",
+       "prose": {
+        "en": "when transferring information between different security domains, the process that transfers information between filter pipelines does not filter message content;"
+       }
+      },
+      {
+       "id": "ac-4.32_obj.b",
+       "label": "AC-04(32)(b)",
+       "prose": {
+        "en": "when transferring information between different security domains, the process that transfers information between filter pipelines validates filtering metadata;"
+       }
+      },
+      {
+       "id": "ac-4.32_obj.c",
+       "label": "AC-04(32)(c)",
+       "prose": {
+        "en": "when transferring information between different security domains, the process that transfers information between filter pipelines ensures that the content with the filtering metadata has successfully completed filtering;"
+       }
+      },
+      {
+       "id": "ac-4.32_obj.d",
+       "label": "AC-04(32)(d)",
+       "prose": {
+        "en": "when transferring information between different security domains, the process that transfers information between filter pipelines transfers the content to the destination filter pipeline."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-04(32)-Examine",
+     "objects": [
+      {
+       "en": "Information flow enforcement policy"
+      },
+      {
+       "en": "procedures addressing information flow enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-04(32)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information flow enforcement responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-04(32)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing information flow enforcement functions"
+      },
+      {
+       "en": "mechanisms implementing content filtering"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  }
+ ]
+}

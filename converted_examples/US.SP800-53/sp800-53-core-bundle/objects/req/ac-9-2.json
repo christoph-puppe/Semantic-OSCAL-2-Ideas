@@ -1,0 +1,139 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-9.2",
+ "version": "5.2.0",
+ "label": "AC-9(2)",
+ "lifecycle": "active",
+ "title": "Successful and Unsuccessful Logons",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Notify the user, upon successful logon, of the number of {param:ac-09.02_odp.01} during {param:ac-09.02_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ac-09.02_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "successful logons"
+      },
+      {
+       "value": "unsuccessful logon attempts"
+      },
+      {
+       "value": "both"
+      }
+     ]
+    },
+    {
+     "name": "ac-09.02_odp.02",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Information about the number of successful and unsuccessful logon attempts within a specified time period allows the user to recognize if the number and type of logon attempts are consistent with the user’s actual logon attempts."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-9.2_obj",
+     "label": "AC-09(02)",
+     "prose": {
+      "en": "the user is notified, upon successful logon, of the number of {param:ac-09.02_odp.01} during {param:ac-09.02_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-09(02)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing previous logon notification"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-09(02)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-09(02)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing access control policy for previous logon notification"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-09.02_odp.01": {
+     "alt-identifiers": [
+      "ac-9.2_prm_1"
+     ]
+    },
+    "ac-09.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "the time period for which the system notifies the user of the number of successful logons, unsuccessful logon attempts, or both is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-9.2_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-9"
+  }
+ ]
+}

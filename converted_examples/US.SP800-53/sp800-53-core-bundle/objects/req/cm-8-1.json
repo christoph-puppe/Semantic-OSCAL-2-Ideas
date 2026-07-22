@@ -1,0 +1,140 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-8.1",
+ "version": "5.2.0",
+ "label": "CM-8(1)",
+ "lifecycle": "active",
+ "title": "Updates During Installation and Removal",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Update the inventory of system components as part of component installations, removals, and system updates."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations can improve the accuracy, completeness, and consistency of system component inventories if the inventories are updated as part of component installations or removals or during general system updates. If inventories are not updated at these key times, there is a greater likelihood that the information will not be appropriately captured and documented. System updates include hardware, software, and firmware components."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-8.1_obj",
+     "label": "CM-08(01)",
+     "children": [
+      {
+       "id": "cm-8.1_obj-1",
+       "label": "CM-08(01)[01]",
+       "prose": {
+        "en": "the inventory of system components is updated as part of component installations;"
+       }
+      },
+      {
+       "id": "cm-8.1_obj-2",
+       "label": "CM-08(01)[02]",
+       "prose": {
+        "en": "the inventory of system components is updated as part of component removals;"
+       }
+      },
+      {
+       "id": "cm-8.1_obj-3",
+       "label": "CM-08(01)[03]",
+       "prose": {
+        "en": "the inventory of system components is updated as part of system updates."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-08(01)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing system component inventory"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "inventory reviews and update records"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "component installation records"
+      },
+      {
+       "en": "component removal records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-08(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with component inventory updating responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-08(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for updating the system component inventory"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing system component inventory updates"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-16"
+  }
+ ]
+}

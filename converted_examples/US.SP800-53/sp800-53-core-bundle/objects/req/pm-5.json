@@ -1,0 +1,133 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-5",
+ "version": "5.2.0",
+ "label": "PM-5",
+ "lifecycle": "active",
+ "title": "System Inventory",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop and update {param:pm-05_odp} an inventory of organizational systems."
+   },
+   "parameters": [
+    {
+     "name": "pm-05_odp",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "OMB A-130 provides guidance on developing systems inventories and associated reporting requirements. System inventory refers to an organization-wide inventory of systems, not system components as described in CM-8."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-5_obj",
+     "label": "PM-05",
+     "children": [
+      {
+       "id": "pm-5_obj-1",
+       "label": "PM-05[01]",
+       "prose": {
+        "en": "an inventory of organizational systems is developed;"
+       }
+      },
+      {
+       "id": "pm-5_obj-2",
+       "label": "PM-05[02]",
+       "prose": {
+        "en": "the inventory of organizational systems is updated {param:pm-05_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-05-Examine",
+     "objects": [
+      {
+       "en": "Information security program plan"
+      },
+      {
+       "en": "system inventory"
+      },
+      {
+       "en": "procedures addressing system inventory development and maintenance"
+      },
+      {
+       "en": "OMB FISMA reporting guidance"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-05-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security program planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel responsible for developing and maintaining the system inventory"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PM-05-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for system inventory development and maintenance"
+      },
+      {
+       "en": "mechanisms supporting the system inventory"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pm-05_odp": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to update the inventory of organizational systems is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pm-5_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.8062"
+  }
+ ]
+}

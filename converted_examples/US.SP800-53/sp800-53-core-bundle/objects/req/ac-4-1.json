@@ -1,0 +1,266 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-4.1",
+ "version": "5.2.0",
+ "label": "AC-4(1)",
+ "lifecycle": "active",
+ "title": "Object Security and Privacy Attributes",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Use {param:ac-4.1_prm_1} associated with {param:ac-4.1_prm_2} to enforce {param:ac-04.01_odp.09} as a basis for flow control decisions."
+   },
+   "parameters": [
+    {
+     "name": "ac-04.01_odp.09",
+     "type": "string",
+     "label": "information flow control policies"
+    },
+    {
+     "name": "ac-4.1_prm_1",
+     "type": "string",
+     "label": "organization-defined security and privacy attributes"
+    },
+    {
+     "name": "ac-4.1_prm_2",
+     "type": "string",
+     "label": "organization-defined information, source, and destination objects"
+    },
+    {
+     "name": "ac-04.01_odp.01",
+     "type": "string",
+     "label": "security attributes"
+    },
+    {
+     "name": "ac-04.01_odp.02",
+     "type": "string",
+     "label": "privacy attributes"
+    },
+    {
+     "name": "ac-04.01_odp.03",
+     "type": "string",
+     "label": "information objects"
+    },
+    {
+     "name": "ac-04.01_odp.04",
+     "type": "string",
+     "label": "information objects"
+    },
+    {
+     "name": "ac-04.01_odp.05",
+     "type": "string",
+     "label": "source objects"
+    },
+    {
+     "name": "ac-04.01_odp.06",
+     "type": "string",
+     "label": "source objects"
+    },
+    {
+     "name": "ac-04.01_odp.07",
+     "type": "string",
+     "label": "destination objects"
+    },
+    {
+     "name": "ac-04.01_odp.08",
+     "type": "string",
+     "label": "destination objects"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Information flow enforcement mechanisms compare security and privacy attributes associated with information (i.e., data content and structure) and source and destination objects and respond appropriately when the enforcement mechanisms encounter information flows not explicitly allowed by information flow policies. For example, an information object labeled Secret would be allowed to flow to a destination object labeled Secret, but an information object labeled Top Secret would not be allowed to flow to a destination object labeled Secret. A dataset of personally identifiable information may be tagged with restrictions against combining with other types of datasets and, thus, would not be allowed to flow to the restricted dataset. Security and privacy attributes can also include source and destination addresses employed in traffic filter firewalls. Flow enforcement using explicit security or privacy attributes can be used, for example, to control the release of certain types of information."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-4.1_obj",
+     "label": "AC-04(01)",
+     "children": [
+      {
+       "id": "ac-4.1_obj-1",
+       "label": "AC-04(01)[01]",
+       "prose": {
+        "en": "{param:ac-04.01_odp.01} associated with {param:ac-04.01_odp.03}, {param:ac-04.01_odp.05} , and {param:ac-04.01_odp.07} are used to enforce {param:ac-04.01_odp.09} as a basis for flow control decisions;"
+       }
+      },
+      {
+       "id": "ac-4.1_obj-2",
+       "label": "AC-04(01)[02]",
+       "prose": {
+        "en": "{param:ac-04.01_odp.02} associated with {param:ac-04.01_odp.04}, {param:ac-04.01_odp.06} , and {param:ac-04.01_odp.08} are used to enforce {param:ac-04.01_odp.09} as a basis for flow control decisions."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-04(01)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "information flow control policies"
+      },
+      {
+       "en": "procedures addressing information flow enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of security and privacy attributes and associated source and destination objects"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-04(01)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with privacy responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-04(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing information flow enforcement policy"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-4.1_prm_1": {
+     "aggregates": [
+      "ac-04.01_odp.01",
+      "ac-04.01_odp.02"
+     ]
+    },
+    "ac-4.1_prm_2": {
+     "aggregates": [
+      "ac-04.01_odp.03",
+      "ac-04.01_odp.04",
+      "ac-04.01_odp.05",
+      "ac-04.01_odp.06",
+      "ac-04.01_odp.07",
+      "ac-04.01_odp.08"
+     ]
+    },
+    "ac-04.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "security attributes to be associated with information, source, and destination objects are defined;"
+      }
+     ]
+    },
+    "ac-04.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "privacy attributes to be associated with information, source, and destination objects are defined;"
+      }
+     ]
+    },
+    "ac-04.01_odp.03": {
+     "guidelines": [
+      {
+       "en": "information objects to be associated with information security attributes are defined;"
+      }
+     ]
+    },
+    "ac-04.01_odp.04": {
+     "guidelines": [
+      {
+       "en": "information objects to be associated with privacy attributes are defined;"
+      }
+     ]
+    },
+    "ac-04.01_odp.05": {
+     "guidelines": [
+      {
+       "en": "source objects to be associated with information security attributes are defined;"
+      }
+     ]
+    },
+    "ac-04.01_odp.06": {
+     "guidelines": [
+      {
+       "en": "source objects to be associated with privacy attributes are defined;"
+      }
+     ]
+    },
+    "ac-04.01_odp.07": {
+     "guidelines": [
+      {
+       "en": "destination objects to be associated with information security attributes are defined;"
+      }
+     ]
+    },
+    "ac-04.01_odp.08": {
+     "guidelines": [
+      {
+       "en": "destination objects to be associated with privacy attributes are defined;"
+      }
+     ]
+    },
+    "ac-04.01_odp.09": {
+     "guidelines": [
+      {
+       "en": "information flow control policies as a basis for enforcement of flow control decisions are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-4.1_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  }
+ ]
+}

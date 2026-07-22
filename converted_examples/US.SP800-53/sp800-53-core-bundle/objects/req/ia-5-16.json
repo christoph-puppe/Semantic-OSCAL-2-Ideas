@@ -1,0 +1,176 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-5.16",
+ "version": "5.2.0",
+ "label": "IA-5(16)",
+ "lifecycle": "active",
+ "title": "In-person or Trusted External Party Authenticator Issuance",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require that the issuance of {param:ia-05.16_odp.01} be conducted {param:ia-05.16_odp.02} before {param:ia-05.16_odp.03} with authorization by {param:ia-05.16_odp.04}."
+   },
+   "parameters": [
+    {
+     "name": "ia-05.16_odp.01",
+     "type": "string",
+     "label": "types of and/or specific authenticators"
+    },
+    {
+     "name": "ia-05.16_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "in person"
+      },
+      {
+       "value": "by a trusted external party"
+      }
+     ]
+    },
+    {
+     "name": "ia-05.16_odp.03",
+     "type": "string",
+     "label": "registration authority"
+    },
+    {
+     "name": "ia-05.16_odp.04",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Issuing authenticators in person or by a trusted external party enhances and reinforces the trustworthiness of the identity proofing process."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-5.16_obj",
+     "label": "IA-05(16)",
+     "prose": {
+      "en": "the issuance of {param:ia-05.16_odp.01} is required to be conducted {param:ia-05.16_odp.02} before {param:ia-05.16_odp.03} with authorization by {param:ia-05.16_odp.04}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-05(16)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "procedures addressing identifier management"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "mechanisms providing dynamic binding of identifiers and authenticators"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-05(16)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with identification and authentication management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-05(16)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing account management capability"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing identification and authentication management capabilities for the system"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ia-05.16_odp.01": {
+     "guidelines": [
+      {
+       "en": "types of and/or specific authenticators to be issued are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-5.16_prm_1"
+     ]
+    },
+    "ia-05.16_odp.02": {
+     "alt-identifiers": [
+      "ia-5.16_prm_2"
+     ]
+    },
+    "ia-05.16_odp.03": {
+     "guidelines": [
+      {
+       "en": "the registration authority that issues authenticators is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-5.16_prm_3"
+     ]
+    },
+    "ia-05.16_odp.04": {
+     "guidelines": [
+      {
+       "en": "the personnel or roles who authorize the issuance of authenticators are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-5.16_prm_4"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-12"
+  }
+ ]
+}

@@ -1,0 +1,114 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PS-9",
+ "version": "5.2.0",
+ "label": "PS-9",
+ "lifecycle": "active",
+ "title": "Position Descriptions",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Incorporate security and privacy roles and responsibilities into organizational position descriptions."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Specification of security and privacy roles in individual organizational position descriptions facilitates clarity in understanding the security or privacy responsibilities associated with the roles and the role-based security and privacy training requirements for the roles."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ps-9_obj",
+     "label": "PS-09",
+     "children": [
+      {
+       "id": "ps-9_obj-1",
+       "label": "PS-09[01]",
+       "prose": {
+        "en": "security roles and responsibilities are incorporated into organizational position descriptions;"
+       }
+      },
+      {
+       "id": "ps-9_obj-2",
+       "label": "PS-09[02]",
+       "prose": {
+        "en": "privacy roles and responsibilities are incorporated into organizational position descriptions."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PS-09-Examine",
+     "objects": [
+      {
+       "en": "Personnel security policy"
+      },
+      {
+       "en": "personnel security procedures"
+      },
+      {
+       "en": "procedures addressing position descriptions"
+      },
+      {
+       "en": "security and privacy position descriptions"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy program plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PS-09-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personnel security responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with human capital management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PS-09-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing position descriptions"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-181r1"
+  }
+ ]
+}

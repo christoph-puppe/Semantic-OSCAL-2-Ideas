@@ -1,0 +1,397 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-25",
+ "version": "5.2.0",
+ "label": "PM-25",
+ "lifecycle": "active",
+ "title": "Minimization of Personally Identifiable Information Used in Testing, Training, and Research",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop, document, and implement policies and procedures that address the use of personally identifiable information for internal testing, training, and research;"
+   },
+   "parameters": [
+    {
+     "name": "pm-25_odp.01",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "pm-25_odp.02",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "pm-25_odp.03",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "pm-25_odp.04",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Limit or minimize the amount of personally identifiable information used for internal testing, training, and research purposes;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Authorize the use of personally identifiable information when such information is required for internal testing, training, and research; and"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review and update policies and procedures {param:pm-25_prm_1}."
+   },
+   "parameters": [
+    {
+     "name": "pm-25_prm_1",
+     "type": "string",
+     "label": "organization-defined frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The use of personally identifiable information in testing, research, and training increases the risk of unauthorized disclosure or misuse of such information. Organizations consult with the senior agency official for privacy and/or legal counsel to ensure that the use of personally identifiable information in testing, training, and research is compatible with the original purpose for which it was collected. When possible, organizations use placeholder data to avoid exposure of personally identifiable information when conducting testing, training, and research."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-25_obj",
+     "label": "PM-25",
+     "children": [
+      {
+       "id": "pm-25_obj.a",
+       "label": "PM-25a.",
+       "children": [
+        {
+         "id": "pm-25_obj.a-1",
+         "label": "PM-25a.[01]",
+         "prose": {
+          "en": "policies that address the use of personally identifiable information for internal testing are developed and documented;"
+         }
+        },
+        {
+         "id": "pm-25_obj.a-2",
+         "label": "PM-25a.[02]",
+         "prose": {
+          "en": "policies that address the use of personally identifiable information for internal training are developed and documented;"
+         }
+        },
+        {
+         "id": "pm-25_obj.a-3",
+         "label": "PM-25a.[03]",
+         "prose": {
+          "en": "policies that address the use of personally identifiable information for internal research are developed and documented;"
+         }
+        },
+        {
+         "id": "pm-25_obj.a-4",
+         "label": "PM-25a.[04]",
+         "prose": {
+          "en": "procedures that address the use of personally identifiable information for internal testing are developed and documented;"
+         }
+        },
+        {
+         "id": "pm-25_obj.a-5",
+         "label": "PM-25a.[05]",
+         "prose": {
+          "en": "procedures that address the use of personally identifiable information for internal training are developed and documented;"
+         }
+        },
+        {
+         "id": "pm-25_obj.a-6",
+         "label": "PM-25a.[06]",
+         "prose": {
+          "en": "procedures that address the use of personally identifiable information for internal research are developed and documented;"
+         }
+        },
+        {
+         "id": "pm-25_obj.a-7",
+         "label": "PM-25a.[07]",
+         "prose": {
+          "en": "policies that address the use of personally identifiable information for internal testing, are implemented;"
+         }
+        },
+        {
+         "id": "pm-25_obj.a-8",
+         "label": "PM-25a.[08]",
+         "prose": {
+          "en": "policies that address the use of personally identifiable information for training are implemented;"
+         }
+        },
+        {
+         "id": "pm-25_obj.a-9",
+         "label": "PM-25a.[09]",
+         "prose": {
+          "en": "policies that address the use of personally identifiable information for research are implemented;"
+         }
+        },
+        {
+         "id": "pm-25_obj.a-10",
+         "label": "PM-25a.[10]",
+         "prose": {
+          "en": "procedures that address the use of personally identifiable information for internal testing are implemented;"
+         }
+        },
+        {
+         "id": "pm-25_obj.a-11",
+         "label": "PM-25a.[11]",
+         "prose": {
+          "en": "procedures that address the use of personally identifiable information for training are implemented;"
+         }
+        },
+        {
+         "id": "pm-25_obj.a-12",
+         "label": "PM-25a.[12]",
+         "prose": {
+          "en": "procedures that address the use of personally identifiable information for research are implemented;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-25_obj.b",
+       "label": "PM-25b.",
+       "children": [
+        {
+         "id": "pm-25_obj.b-1",
+         "label": "PM-25b.[01]",
+         "prose": {
+          "en": "the amount of personally identifiable information used for internal testing purposes is limited or minimized;"
+         }
+        },
+        {
+         "id": "pm-25_obj.b-2",
+         "label": "PM-25b.[02]",
+         "prose": {
+          "en": "the amount of personally identifiable information used for internal training purposes is limited or minimized;"
+         }
+        },
+        {
+         "id": "pm-25_obj.b-3",
+         "label": "PM-25b.[03]",
+         "prose": {
+          "en": "the amount of personally identifiable information used for internal research purposes is limited or minimized;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-25_obj.c",
+       "label": "PM-25c.",
+       "children": [
+        {
+         "id": "pm-25_obj.c-1",
+         "label": "PM-25c.[01]",
+         "prose": {
+          "en": "the required use of personally identifiable information for internal testing is authorized;"
+         }
+        },
+        {
+         "id": "pm-25_obj.c-2",
+         "label": "PM-25c.[02]",
+         "prose": {
+          "en": "the required use of personally identifiable information for internal training is authorized;"
+         }
+        },
+        {
+         "id": "pm-25_obj.c-3",
+         "label": "PM-25c.[03]",
+         "prose": {
+          "en": "the required use of personally identifiable information for internal research is authorized;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-25_obj.d",
+       "label": "PM-25d.",
+       "children": [
+        {
+         "id": "pm-25_obj.d-1",
+         "label": "PM-25d.[01]",
+         "prose": {
+          "en": "policies are reviewed {param:pm-25_odp.01};"
+         }
+        },
+        {
+         "id": "pm-25_obj.d-2",
+         "label": "PM-25d.[02]",
+         "prose": {
+          "en": "policies are updated {param:pm-25_odp.02};"
+         }
+        },
+        {
+         "id": "pm-25_obj.d-3",
+         "label": "PM-25d.[03]",
+         "prose": {
+          "en": "procedures are reviewed {param:pm-25_odp.03};"
+         }
+        },
+        {
+         "id": "pm-25_obj.d-4",
+         "label": "PM-25d.[04]",
+         "prose": {
+          "en": "procedures are updated {param:pm-25_odp.04}."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-25-Examine",
+     "objects": [
+      {
+       "en": "Privacy program plan"
+      },
+      {
+       "en": "policies and procedures for the minimization of personally identifiable information used in testing, training, and research"
+      },
+      {
+       "en": "documentation supporting policy implementation (e.g., templates for testing, training, and research"
+      },
+      {
+       "en": "privacy threshold analysis"
+      },
+      {
+       "en": "privacy risk assessment)"
+      },
+      {
+       "en": "data sets used for testing, training, and research"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-25-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with privacy program responsibilities"
+      },
+      {
+       "en": "organizational personnel with privacy responsibilities"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "personnel with IRB responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PM-25-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for data quality and personally identifiable information management"
+      },
+      {
+       "en": "mechanisms supporting data quality management and personally identifiable information management to minimize the use of personally identifiable information"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pm-25_prm_1": {
+     "aggregates": [
+      "pm-25_odp.01",
+      "pm-25_odp.02",
+      "pm-25_odp.03",
+      "pm-25_odp.04"
+     ]
+    },
+    "pm-25_odp.01": {
+     "guidelines": [
+      {
+       "en": "the frequency for reviewing policies that address the use of personally identifiable information for internal testing, training, and research is defined;"
+      }
+     ]
+    },
+    "pm-25_odp.02": {
+     "guidelines": [
+      {
+       "en": "the frequency for updating policies that address the use of personally identifiable information for internal testing, training, and research is defined;"
+      }
+     ]
+    },
+    "pm-25_odp.03": {
+     "guidelines": [
+      {
+       "en": "the frequency for reviewing procedures that address the use of personally identifiable information for internal testing, training, and research is defined;"
+      }
+     ]
+    },
+    "pm-25_odp.04": {
+     "guidelines": [
+      {
+       "en": "the frequency for updating procedures that address the use of personally identifiable information for internal testing, training, and research is defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-23"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  }
+ ]
+}

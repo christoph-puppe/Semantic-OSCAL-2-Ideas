@@ -1,0 +1,132 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-2.6",
+ "version": "5.2.0",
+ "label": "SI-2(6)",
+ "lifecycle": "active",
+ "title": "Removal of Previous Versions of Software and Firmware",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Remove previous versions of {param:si-02.06_odp} after updated versions have been installed."
+   },
+   "parameters": [
+    {
+     "name": "si-02.06_odp",
+     "type": "string",
+     "label": "software and firmware components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Previous versions of software or firmware components that are not removed from the system after updates have been installed may be exploited by adversaries. Some products may automatically remove previous versions of software and firmware from the system."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-2.6_obj",
+     "label": "SI-02(06)",
+     "prose": {
+      "en": "previous versions of {param:si-02.06_odp} are removed after updated versions have been installed."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-02(06)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing flaw remediation"
+      },
+      {
+       "en": "mechanisms supporting flaw remediation"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "records of software and firmware component removals after updated versions are installed"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-02(06)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for flaw remediation"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-02(06)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the removal of previous versions of software/firmware"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-02.06_odp": {
+     "guidelines": [
+      {
+       "en": "software and firmware components to be removed after updated versions have been installed are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-2.6_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-2"
+  }
+ ]
+}

@@ -1,0 +1,229 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MP-8",
+ "version": "5.2.0",
+ "label": "MP-8",
+ "lifecycle": "active",
+ "title": "Media Downgrading",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish {param:mp-08_odp.01} that includes employing downgrading mechanisms with strength and integrity commensurate with the security category or classification of the information;"
+   },
+   "parameters": [
+    {
+     "name": "mp-08_odp.01",
+     "type": "string",
+     "label": "system media downgrading process"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Verify that the system media downgrading process is commensurate with the security category and/or classification level of the information to be removed and the access authorizations of the potential recipients of the downgraded information;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identify {param:mp-08_odp.02} ; and"
+   },
+   "parameters": [
+    {
+     "name": "mp-08_odp.02",
+     "type": "string",
+     "label": "system media requiring downgrading"
+    }
+   ]
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Downgrade the identified system media using the established process."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Media downgrading applies to digital and non-digital media subject to release outside of the organization, whether the media is considered removable or not. When applied to system media, the downgrading process removes information from the media, typically by security category or classification level, such that the information cannot be retrieved or reconstructed. Downgrading of media includes redacting information to enable wider release and distribution. Downgrading ensures that empty space on the media is devoid of information."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "mp-8_obj",
+     "label": "MP-08",
+     "children": [
+      {
+       "id": "mp-8_obj.a",
+       "label": "MP-08a.",
+       "children": [
+        {
+         "id": "mp-8_obj.a-1",
+         "label": "MP-08a.[01]",
+         "prose": {
+          "en": "a {param:mp-08_odp.01} is established;"
+         }
+        },
+        {
+         "id": "mp-8_obj.a-2",
+         "label": "MP-08a.[02]",
+         "prose": {
+          "en": "the {param:mp-08_odp.01} includes employing downgrading mechanisms with strength and integrity commensurate with the security category or classification of the information;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "mp-8_obj.b",
+       "label": "MP-08b.",
+       "children": [
+        {
+         "id": "mp-8_obj.b-1",
+         "label": "MP-08b.[01]",
+         "prose": {
+          "en": "there is verification that the system media downgrading process is commensurate with the security category and/or classification level of the information to be removed;"
+         }
+        },
+        {
+         "id": "mp-8_obj.b-2",
+         "label": "MP-08b.[02]",
+         "prose": {
+          "en": "there is verification that the system media downgrading process is commensurate with the access authorizations of the potential recipients of the downgraded information;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "mp-8_obj.c",
+       "label": "MP-08c.",
+       "prose": {
+        "en": "{param:mp-08_odp.02} is identified;"
+       }
+      },
+      {
+       "id": "mp-8_obj.d",
+       "label": "MP-08d.",
+       "prose": {
+        "en": "the identified system media is downgraded using the {param:mp-08_odp.01}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MP-08-Examine",
+     "objects": [
+      {
+       "en": "System media protection policy"
+      },
+      {
+       "en": "procedures addressing media downgrading"
+      },
+      {
+       "en": "system categorization documentation"
+      },
+      {
+       "en": "list of media requiring downgrading"
+      },
+      {
+       "en": "records of media downgrading"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MP-08-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system media downgrading responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MP-08-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for media downgrading"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing media downgrading"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "mp-08_odp.01": {
+     "guidelines": [
+      {
+       "en": "a system media downgrading process is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "mp-8_prm_1"
+     ]
+    },
+    "mp-08_odp.02": {
+     "guidelines": [
+      {
+       "en": "system media requiring downgrading is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "mp-8_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.federalregister.gov/documents/2016/09/14/2016-21665/controlled-unclassified-information"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.nsa.gov/resources/everyone/media-destruction"
+  }
+ ]
+}

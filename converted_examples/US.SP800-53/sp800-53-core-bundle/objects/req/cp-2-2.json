@@ -1,0 +1,130 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-2.2",
+ "version": "5.2.0",
+ "label": "CP-2(2)",
+ "lifecycle": "active",
+ "title": "Capacity Planning",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Conduct capacity planning so that necessary capacity for information processing, telecommunications, and environmental support exists during contingency operations."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Capacity planning is needed because different threats can result in a reduction of the available processing, telecommunications, and support services intended to support essential mission and business functions. Organizations anticipate degraded operations during contingency operations and factor the degradation into capacity planning. For capacity planning, environmental support refers to any environmental factor for which the organization determines that it needs to provide support in a contingency situation, even if in a degraded state. Such determinations are based on an organizational assessment of risk, system categorization (impact level), and organizational risk tolerance."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-2.2_obj",
+     "label": "CP-02(02)",
+     "children": [
+      {
+       "id": "cp-2.2_obj-1",
+       "label": "CP-02(02)[01]",
+       "prose": {
+        "en": "capacity planning is conducted so that the necessary capacity exists during contingency operations for information processing;"
+       }
+      },
+      {
+       "id": "cp-2.2_obj-2",
+       "label": "CP-02(02)[02]",
+       "prose": {
+        "en": "capacity planning is conducted so that the necessary capacity exists during contingency operations for telecommunications;"
+       }
+      },
+      {
+       "id": "cp-2.2_obj-3",
+       "label": "CP-02(02)[03]",
+       "prose": {
+        "en": "capacity planning is conducted so that the necessary capacity exists during contingency operations for environmental support."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-02(02)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing contingency operations for the system"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "capacity planning documents"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-02(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel responsible for capacity planning"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-14"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-18"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-5"
+  }
+ ]
+}

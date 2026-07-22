@@ -1,0 +1,260 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CA-6",
+ "version": "5.2.0",
+ "label": "CA-6",
+ "lifecycle": "active",
+ "title": "Authorization",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Assign a senior official as the authorizing official for the system;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Assign a senior official as the authorizing official for common controls available for inheritance by organizational systems;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Ensure that the authorizing official for the system, before commencing operations:"
+   }
+  },
+  {
+   "id": "smt.c.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Accepts the use of common controls inherited by the system; and"
+   }
+  },
+  {
+   "id": "smt.c.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Authorizes the system to operate;"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Ensure that the authorizing official for common controls authorizes the use of those controls for inheritance by organizational systems;"
+   }
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Update the authorizations {param:ca-06_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ca-06_odp",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Authorizations are official management decisions by senior officials to authorize operation of systems, authorize the use of common controls for inheritance by organizational systems, and explicitly accept the risk to organizational operations and assets, individuals, other organizations, and the Nation based on the implementation of agreed-upon controls. Authorizing officials provide budgetary oversight for organizational systems and common controls or assume responsibility for the mission and business functions supported by those systems or common controls. The authorization process is a federal responsibility, and therefore, authorizing officials must be federal employees. Authorizing officials are both responsible and accountable for security and privacy risks associated with the operation and use of organizational systems. Nonfederal organizations may have similar processes to authorize systems and senior officials that assume the authorization role and associated responsibilities.\n\nAuthorizing officials issue ongoing authorizations of systems based on evidence produced from implemented continuous monitoring programs. Robust continuous monitoring programs reduce the need for separate reauthorization processes. Through the employment of comprehensive continuous monitoring processes, the information contained in authorization packages (i.e., security and privacy plans, assessment reports, and plans of action and milestones) is updated on an ongoing basis. This provides authorizing officials, common control providers, and system owners with an up-to-date status of the security and privacy posture of their systems, controls, and operating environments. To reduce the cost of reauthorization, authorizing officials can leverage the results of continuous monitoring processes to the maximum extent possible as the basis for rendering reauthorization decisions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ca-6_obj",
+     "label": "CA-06",
+     "children": [
+      {
+       "id": "ca-6_obj.a",
+       "label": "CA-06a.",
+       "prose": {
+        "en": "a senior official is assigned as the authorizing official for the system;"
+       }
+      },
+      {
+       "id": "ca-6_obj.b",
+       "label": "CA-06b.",
+       "prose": {
+        "en": "a senior official is assigned as the authorizing official for common controls available for inheritance by organizational systems;"
+       }
+      },
+      {
+       "id": "ca-6_obj.c",
+       "label": "CA-06c.",
+       "children": [
+        {
+         "id": "ca-6_obj.c.1",
+         "label": "CA-06c.01",
+         "prose": {
+          "en": "before commencing operations, the authorizing official for the system accepts the use of common controls inherited by the system;"
+         }
+        },
+        {
+         "id": "ca-6_obj.c.2",
+         "label": "CA-06c.02",
+         "prose": {
+          "en": "before commencing operations, the authorizing official for the system authorizes the system to operate;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ca-6_obj.d",
+       "label": "CA-06d.",
+       "prose": {
+        "en": "the authorizing official for common controls authorizes the use of those controls for inheritance by organizational systems;"
+       }
+      },
+      {
+       "id": "ca-6_obj.e",
+       "label": "CA-06e.",
+       "prose": {
+        "en": "the authorizations are updated {param:ca-06_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CA-06-Examine",
+     "objects": [
+      {
+       "en": "Assessment, authorization, and monitoring policy"
+      },
+      {
+       "en": "procedures addressing authorization"
+      },
+      {
+       "en": "system security plan, privacy plan, assessment report, plan of action and milestones"
+      },
+      {
+       "en": "authorization statement"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CA-06-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with authorization responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CA-06-Test",
+     "objects": [
+      {
+       "en": "Mechanisms that facilitate authorizations and updates"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ca-06_odp": {
+     "guidelines": [
+      {
+       "en": "frequency at which to update the authorizations is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ca-6_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-37r2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-137"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  }
+ ]
+}

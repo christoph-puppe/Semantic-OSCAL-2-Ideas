@@ -1,0 +1,159 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PL-4.1",
+ "version": "5.2.0",
+ "label": "PL-4(1)",
+ "lifecycle": "active",
+ "title": "Social Media and External Site/Application Usage Restrictions",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Include in the rules of behavior, restrictions on:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Use of social media, social networking sites, and external sites/applications;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Posting organizational information on public websites; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Use of organization-provided identifiers (e.g., email addresses) and authentication secrets (e.g., passwords) for creating accounts on external sites/applications."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Social media, social networking, and external site/application usage restrictions address rules of behavior related to the use of social media, social networking, and external sites when organizational personnel are using such sites for official duties or in the conduct of official business, when organizational information is involved in social media and social networking transactions, and when personnel access social media and networking sites from organizational systems. Organizations also address specific rules that prevent unauthorized entities from obtaining non-public organizational information from social media and networking sites either directly or through inference. Non-public information includes personally identifiable information and system account information."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pl-4.1_obj",
+     "label": "PL-04(01)",
+     "children": [
+      {
+       "id": "pl-4.1_obj.a",
+       "label": "PL-04(01)(a)",
+       "prose": {
+        "en": "the rules of behavior include restrictions on the use of social media, social networking sites, and external sites/applications;"
+       }
+      },
+      {
+       "id": "pl-4.1_obj.b",
+       "label": "PL-04(01)(b)",
+       "prose": {
+        "en": "the rules of behavior include restrictions on posting organizational information on public websites;"
+       }
+      },
+      {
+       "id": "pl-4.1_obj.c",
+       "label": "PL-04(01)(c)",
+       "prose": {
+        "en": "the rules of behavior include restrictions on the use of organization-provided identifiers (e.g., email addresses) and authentication secrets (e.g., passwords) for creating accounts on external sites/applications."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PL-04(01)-Examine",
+     "objects": [
+      {
+       "en": "Security and privacy planning policy"
+      },
+      {
+       "en": "procedures addressing rules of behavior for system users"
+      },
+      {
+       "en": "rules of behavior"
+      },
+      {
+       "en": "training policy"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PL-04(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibility for establishing, reviewing, and updating rules of behavior"
+      },
+      {
+       "en": "organizational personnel with responsibility for literacy training and awareness and role-based training"
+      },
+      {
+       "en": "organizational personnel who are authorized users of the system and have signed rules of behavior"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PL-04(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for establishing rules of behavior"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the establishment of rules of behavior"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-22"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-13"
+  }
+ ]
+}
