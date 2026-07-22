@@ -235,7 +235,7 @@ Finding, Tailoring. Evidence: four identical historical state machines; CR26
 `corrective_actions`; BSI Abweichungspraxis. Its role widens in D13: it is
 the audited channel for *every* recognized weakening, not only modality.
 
-## D9 — Statements: identified collection; **normative modality order**; obligated-parties; **elapsed vs. calendar durations**; parameter algebra. *(rev. v0.5 — P8-E2, P7-G on calendars/decimal)*
+## D9 — Statements: identified collection; **normative modality order**; obligated-parties; **elapsed vs. calendar durations**; parameter algebra. *(rev. v0.5 — P8-E2, P7-G on calendars/decimal)* *(rev. v0.6 cycle — R1 #1)*
 **Decision.** As v0.4 (`statements[] {id, modality, obligated-parties[],
 parameters[], prose{lang}}`), completed where the passes proved it
 unevaluatable:
@@ -273,7 +273,18 @@ string, D3) | boolean | date | datetime | uri | code`, containers
 `choice | list | range`), with the standing escape: what the algebra cannot
 type is a `string` plus a facet — never a schema-in-parameter.
 
-## D10 — Facets: registered, federated, capability-declared, fail-closed; **private: defined harmless; undeclared registered = dangerous.** *(rev. v0.5 — P6-F4 + P7-G4 merged)*
+**`label` and `default` (rev. v0.6 cycle — R1 #1).** Every parameter
+declaration MAY carry `label` (human display handle — never an identifier,
+never compared) and `default` (an advisory value, type-valid against the
+declaration). Resolution **never substitutes a default silently**: an
+unbound parameter stays unbound — binding happens only through
+`set-parameter` (D13) — because silent substitution is the two-diverging-
+representations corpse in miniature. The measured customer: BSI parameter
+labels ("regelmäßig") and suggested `values[]` on 179 requirements, exiled
+to the L2 `param-extras` residue solely because the algebra was two
+optional fields too spare; the residue drains at the next converter run.
+
+## D10 — Facets: registered, federated, capability-declared, fail-closed; **private: defined harmless; undeclared registered = dangerous.** *(rev. v0.5 — P6-F4 + P7-G4 merged)* *(rev. v0.6 cycle — R1 #7)*
 **Decision.** As v0.4 (Portable/Computable split, `modifies-semantics` ⊆
 {assessment, tailoring, selection, rendering}, capability declarations,
 normative fail-closed), with the two open edges closed in one consistent
@@ -293,6 +304,15 @@ rule pair:
 
 `.well-known` stays discovery-only; identity and trust are manifest pins
 (D3). Annotations unchanged.
+
+**Per-clause payload keying (rev. v0.6 cycle — R1 #7).** A facet payload
+that addresses individual statements of its host Requirement MUST key those
+entries as `by-statement: { <statement-id>: <payload> }`, using ids from
+the host's `statements[]`; a key naming no statement of the host is a
+validation error (checkable by every Portable tool, no facet knowledge
+required). Converter-established across 1,015 statements' payloads in six
+facets; normative so that a second independent producer cannot legally
+invent a divergent keying and fracture per-clause alignment.
 **Rejected.** Uniform fail-closed including `private:` (kills the valve);
 uniform trust-the-publisher default (props with extra steps).
 
@@ -307,7 +327,7 @@ facets as an open sanctioned category; annotations; ISM = zero facets). One
 addition: **`mapping` is *not* here** — mappings are kernel objects (D20),
 precisely so that they cannot regress into relation-string props.
 
-## D13 — Tailoring: bounded selection; identity-addressed operations; **weakening rules per operation**; deterministic resolution. *(rev. v0.5 — P6-F2, P7-B2, P8-E3, P7-U)*
+## D13 — Tailoring: bounded selection; identity-addressed operations; **weakening rules per operation**; deterministic resolution. *(rev. v0.5 — P6-F2, P7-B2, P8-E3, P7-U)* *(rev. v0.6 cycle — R1 #2)*
 **Decision.** As v0.4 (set-ref or the three bounded predicates; closed
 op vocabulary addressed by requirement-ref + statement-id + name), completed:
 
@@ -332,6 +352,24 @@ pseudo-deviations and kill the mechanism that absorbs 5,900+ membership
 props. Weakening means softening a *selected* obligation; selection is not
 softening. (P7 itself conceded a universal weakening detector is
 infeasible; this table is the honest bounded substitute.)
+
+**Deviation duties bind at consumption, not authorship (rev. v0.6 cycle —
+R1 #2).** A Deviation records an *implementation's* departure from its
+governing resolved set. A Tailoring **published at Authority tier is
+itself normative source**: its operations are authorship variance, and the
+per-operation Deviation requirements in the table above do not apply to it
+— FedRAMP publishing four class variants is not FedRAMP deviating from
+FedRAMP. The weakening classification itself is still computed and
+reportable (a consumer may always ask "which classes ease the base?" —
+CR26's measured answer across 111 class-variant modality moves: zero),
+but no Deviation object is required, synthesized, or implied. Consumer-
+tier Tailorings keep the full table; the audited-escape channel is theirs.
+The measured customer: 29 variant-only CR26 rules + 5 KSI variants whose
+converter had to synthesize base prose just to have something to
+"deviate" from — ceremony without a wronged party. **Rejected:** a
+`variants` carrier on Requirement — authority-published variance is 1-of-3
+in the census and its mechanism (Tailoring) already exists, so it fails
+the D22 promotion bar on tests 1 and 2.
 
 **Deterministic resolution (normative algorithm, Appendix B):** operations
 are an **ordered list**, applied sequentially after selection; **two
@@ -400,7 +438,7 @@ name avoids "2.0"/"profile"/"kernel" — leading candidate **OSCAL Semantic
 Core**; on-ramps stated accurately (#58 and #2050 live; #2115/#2116 closed
 design positions); RFC-0024's five-CSP clause recorded without endorsement.
 
-## D20 — **`Mapping` as the ninth kernel type.** *(new, v0.5 — P7 mapping analysis accepted over P8's facet alternative)*
+## D20 — **`Mapping` as the ninth kernel type.** *(new, v0.5 — P7 mapping analysis accepted over P8's facet alternative)* *(rev. v0.6 cycle — R1 #5)*
 **Decision.** A shallow first-class object:
 
 ```json
@@ -410,9 +448,11 @@ design positions); RFC-0024's five-CSP clause recorded without endorsement.
   "source-ref": "https://ns.nist.gov/sp800-53/req/AC-2",
   "source-scope": ["statement:a"],
   "target-ref": "https://ns.iso.example/27002/req/5.16",
-  "relationship": "subset-of",        // IR 8477 / OLIR code system (stdlib):
+  "relationship": "subset-of",        // stdlib code system: IR 8477 / OLIR
                                        // equal | subset-of | superset-of |
                                        // intersects | supports | conflicts
+                                       // + supplements (Semantic Core
+                                       //   extension code, v0.6 cycle)
   "direction": "source-to-target",
   "confidence": "reviewed",
   "rationale": "…",
@@ -425,6 +465,15 @@ Many-to-many is many objects; statement-level scoping via `source-scope`/
 mappings from different authorities coexist as distinct objects with
 distinct provenance — consumers choose by authority, exactly as they do
 with catalogs.
+
+**`supplements` (rev. v0.6 cycle — R1 #5).** One relationship code added
+beyond the adopted IR 8477 set, clearly marked as a Semantic Core stdlib
+extension: *source attaches additional normative content to target* — the
+clause-precision attachment of the supplement pattern (D21), e.g.
+`target-scope: ["statement:s2"]` on the upstream anchor. It is not a
+crosswalk claim: `supplements` does **not** chain in the Chapter 8
+composition arithmetic (degrade as `supports`), and OLIR-facing exports
+MAY down-translate it to `supports` losslessly for that reason.
 
 **Evidence.** SCF's raison d'être is mapping 1,500+ controls to 200+
 frameworks; CIS and CSA ship mapping documents as core products; NIST
@@ -445,7 +494,7 @@ objects, but a third-party crosswalk (SCF mapping NIST↔ISO) belongs to
 neither endpoint and needs its own identity, lifecycle, and provenance;
 the type-count argument (retired in D4).
 
-## D21 — **Hierarchy and ordering, normatively.** *(new, v0.5 — P8 hierarchy gap)*
+## D21 — **Hierarchy and ordering, normatively.** *(new, v0.5 — P8 hierarchy gap)* *(rev. v0.6 cycle — R1 #5)*
 **Decision.** RequirementSets nest: `members[]` entries are
 `{ref (requirement **or set**), sequence}`; `sequence` is a defined kernel
 field (ascending integer, unique within one members list, presentation
@@ -455,6 +504,51 @@ themes, CIS Controls → Safeguards — all sets-of-sets with sequence; ISM's
 `sort-id` ×1,150 absorption is thereby *specified*, not just asserted.
 **Rejected.** Reintroducing group/part nesting on Requirements (the #2118
 attractor); order-as-annotation (props by another name).
+
+**Named pattern (rev. v0.6 cycle — R1 #5): the supplement pattern.**
+Amending a catalog you do not own is composition, never injection: the
+supplement author publishes new Requirements under their **own** prefix and
+composes them with the upstream via a **shadow set** — a Set under the
+supplement author's identity whose `members[]` interleave upstream refs and
+additions by `sequence`, with multi-authority membership safe under D2
+global identity. Clause-level attachment binds by reference (a `relations`
+edge or a statement-scoped Mapping speaking `supplements`, D20), because
+foreign statements live inside the owner's object and semantic digest. What
+profile resolution used to *produce*, the shadow Set *is*; the interleaved
+reading view is an L4 rendering per D4. The corpse is measured: eleven
+shared ids across two publications of one authority, ten silently diverged
+— forking-to-amend at inter-organizational scale. (Handbook §6.A; Appendix
+F Q23.)
+
+## D22 — **Kernel promotion rule.** *(new, v0.6 cycle — review round 1, backlog #4)*
+**Decision.** A semantic is promoted from facet space into the kernel
+**only** when all three tests hold:
+
+1. **≥ 2 of 3 independent authority encodings** in the census corpus
+   (convergence, not committee preference);
+2. **one shared computation** every generic tool must perform on it
+   (modality: monotonicity checking);
+3. **one vocabulary fits all corpora without flattening** (modality: one
+   lattice; counter-example: security-objective values "1"/"0" share no
+   scale with anyone).
+
+A candidate that passes test 1 but whose kernel *mechanism* already exists
+is absorbed by that mechanism, not by a new field — assurance levels are
+the instructive case: genuinely 3-of-3, yet level-as-a-field is the
+5,301-marker corpse; level-as-a-Set composes, while the incommensurable
+vocabularies stay in `assurance-levels@1`. Future "why isn't X kernel"
+disputes cite this rule; a promotion PR that cannot show its three passes
+is rejected without further argument — the anti-#2118 discipline applied
+to the kernel itself.
+**Customer.** Every authority pays for every kernel field forever (a tax on
+each Core validator); the census is the only party that may levy it.
+**Simplicity.** The bar is three questions with countable answers.
+**Complexity ↓.** Ends promotion-by-advocacy — the historical re-inflation
+channel by which cores grow until they require a metaschema.
+**Trade-off.** A genuinely novel semantic with only one national encoding
+waits in a facet until a second authority ships it — deliberate: the
+kernel lags evidence, never leads taste. First stated publicly in Appendix
+F Q22; normative here.
 
 ---
 
@@ -565,6 +659,19 @@ replaces; NIST IR 8477 / OLIR (relationship semantics).
 | P7/P8 adopter-list & baseline corrections | **Accept; conflict resolved by search** | Part I §2 scope statement; baseline = **1.2.2** (P8's "no 1.2.x" was a cutoff artifact — verified against NIST pages); CIS status → R15 |
 | P8 minor (ledger wording; III.2 dates) | **Accept** | "no general-purpose expression language"; dates differentiated |
 | Pass 5 (Grok) | Validating; no blockers | v0.6 gate emphasis adopted |
+
+## IV.7 v0.6-cycle decisions (2026-07-21; from the review-round-1 backlog)
+
+Backlog items decided per the standing rule (counts in, register entries
+out); rows leave `oscal-semantic-core-v0.6-spec-feedback-backlog.md`:
+
+| Backlog | Decision | Change |
+|---|---|---|
+| #4 | **Accept** | **D22** kernel promotion rule normative (≥2-of-3 encodings · one shared computation · one vocabulary without flattening; existing-mechanism absorption clause) — was implicit, first stated in App. F Q22 |
+| #5 | **Accept** | Supplement pattern named normatively in D21; `supplements` registered as stdlib relationship extension code in D20 (non-chaining; OLIR down-translation to `supports`) |
+| #7 | **Accept** | D10: `by-statement` payload keying normative; unknown statement id = validation error |
+| #1 | **Accept** | D9: optional `label` + `default` on parameter declarations; defaults advisory, never silently substituted; empties the ×179 `param-extras` L2 residue (drains at next converter run) |
+| #2 | **Accept (Tailoring liturgy blessed for authorities)** | D13: Deviation duties bind at consumption tier; Authority-tier Tailorings exempt (weakening classification still computed). **Rejected:** `variants` carrier on Requirement — fails the D22 bar (1-of-3; mechanism exists) |
 
 ---
 

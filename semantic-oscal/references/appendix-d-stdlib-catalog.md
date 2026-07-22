@@ -8,10 +8,12 @@ CR26), not composed for the page: this catalog describes facets that
 have already carried 93,259 values.
 
 **Status convention.** The schemas shipping in the bundles are marked
-stubs; the normative JSON Schemas are gate item 2. Two shape
-conventions the converters established are flagged as **candidate
-normative decisions**: (a) the `by-statement` keying pattern for
-per-clause payloads, and (b) glossary hosting on a corpus root Set.
+stubs; the normative JSON Schemas are gate item 2. Of the two shape
+conventions the converters established: (a) the `by-statement` keying
+pattern for per-clause payloads is **normative since the v0.6 cycle**
+(D10 rev, backlog #7 — a payload key naming no statement of the host
+is a validation error); (b) glossary hosting on a corpus root Set
+remains a **candidate decision** (backlog #6, decides at gate 2).
 Where a stub's `modifies-semantics` declaration leaves an open
 question, it appears here and again in the D.12 audit.
 

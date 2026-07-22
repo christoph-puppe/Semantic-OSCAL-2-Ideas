@@ -31,7 +31,7 @@ You must strictly adhere to the guidelines detailed in the handbook chapters and
 - **Companion Examples:** [set-crypto.json](examples/set-crypto.json) (Nested sets), [set-baseline.json](examples/set-baseline.json) (Baseline membership set)
 
 ### Requirement 5: Tailoring Semantic Core
-- **Description:** Define changes via selection rules and identity-addressed operations. Apply per-operation weakening rules and require a `Deviation` object where needed. Follow the deterministic tailoring resolution algorithm. To amend a catalog you do not own, use the supplement pattern (§6.A): author under your own prefix as a shadow set with interleaved sequence — modifying is Tailoring, adding is authorship.
+- **Description:** Define changes via selection rules and identity-addressed operations. Apply per-operation weakening rules and require a `Deviation` object where needed — Deviation duties bind consumer-tier Tailorings only; a Tailoring published at Authority tier is normative source and never carries one (weakening classification still computes). Follow the deterministic tailoring resolution algorithm. To amend a catalog you do not own, use the supplement pattern (§6.A): author under your own prefix as a shadow set with interleaved sequence — modifying is Tailoring, adding is authorship.
 - **Reference Document:** [Chapter 6 — Tailoring Without Tears](references/ch06-tailoring-without-tears.md); resolution logic also in Chapter 12 and Appendix B.
 - **Companion Example:** [tailoring-elevated.json](examples/tailoring-elevated.json) (Monotone tailoring operations)
 
@@ -41,7 +41,7 @@ You must strictly adhere to the guidelines detailed in the handbook chapters and
 - **Companion Examples:** [gspp-taxonomy-1.0.0.json](examples/gspp-taxonomy-1.0.0.json) (Custom facet schema), [assessment-criteria-1.0.0-stub.json](examples/assessment-criteria-1.0.0-stub.json) (Descriptor stub)
 
 ### Requirement 7: Mappings and Crosswalks
-- **Description:** Map relationships using `Mapping` objects with IR 8477/OLIR relationship semantics. Always map at the statement-level scope for high precision.
+- **Description:** Map relationships using `Mapping` objects with IR 8477/OLIR relationship semantics plus the stdlib extension code `supplements` (supplement-pattern attachment; non-chaining). Always map at the statement-level scope for high precision.
 - **Reference Document:** [Chapter 8 — Mappings and Crosswalks](references/ch08-mappings-and-crosswalks.md)
 - **Companion Example:** [mapping-konf-ism.json](examples/mapping-konf-ism.json) (Third-party statement mapping)
 

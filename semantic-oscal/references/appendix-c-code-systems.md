@@ -105,6 +105,14 @@ else degrades honestly toward `intersects`/`supports`.
 links — all `supports` per the §8.6 import rule, because flattering
 an untyped link into `equal` is how crosswalk trust dies.
 
+**`supplements`** *(v0.6 cycle, 2026-07-21)* — the one code beyond the
+adopted IR 8477 set, clearly marked as a Semantic Core stdlib
+extension: source attaches additional normative content to target,
+the clause-precision edge of the supplement pattern (§6.A). It is not
+a crosswalk claim: it does **not** chain in Chapter 8's composition
+arithmetic (degrade as `supports`), and OLIR-facing exports MAY
+down-translate it to `supports` losslessly for exactly that reason.
+
 ## C.6 Component kinds
 
 `system · service · software · hardware · policy · process` — the

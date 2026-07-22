@@ -337,6 +337,7 @@ nesting — deliberate.
 | Mapping as stdlib facet (P8) | third-party crosswalks own neither endpoint | facet-on-whose-object debates | regresses to relation-string props |
 | Universal weakening detector | promises the customer what cannot be computed | undecidable "is this weaker" arguments | requires exactly the semantics engine we refuse to build |
 | Separate System type · defaulted boundary boolean | overlapping ATOs unrepresentable · absence became a legal claim | two ontologies · silent negatives | duplication + negative-assertion hazard |
+| Authority `variants` carrier on Requirement (v0.6 cycle) | authority-variance is 1-of-3 (CR26 only) and its mechanism — Tailoring — exists | a second way to say "per-class differs" | fails the D22 promotion bar on tests 1 and 2; new kernel structure taxing every validator |
 
 ## The structurally-dead category — the north star's largest win
 
@@ -350,3 +351,89 @@ imitating (sets, tailorings, L0 versioning, manifests, typed parameters)
 now exists and is cheap. That is the measurable meaning of "no more props,
 less bespoke": most extension was never extension — it was a core deficit,
 and the deficit is closed.
+
+---
+
+# Amendments — v0.6 cycle, review round 1 (2026-07-21)
+
+Backlog items #1, #2, #4, #5, #7 decided; rows leave the backlog per its
+standing rule. Spec changelog IV.7 carries the same table; normative text
+in the specification's D9/D10/D13/D20/D21/D22.
+
+## D22 — Kernel promotion rule *(new)*
+**Decision.** Promotion from facet space into the kernel requires all
+three: **≥ 2-of-3 independent authority encodings** · **one shared
+computation** every generic tool must perform · **one vocabulary that fits
+all corpora without flattening**; and a candidate whose kernel *mechanism*
+already exists is absorbed by that mechanism, never by a new field
+(assurance levels: 3-of-3 encoded, yet level-as-a-Set — level-as-a-field
+is the 5,301-marker corpse).
+**Customer.** Every kernel field is a permanent tax on every Core
+validator; only the census may levy it. The rule was implicit until App. F
+Q22 forced it into words — and "why isn't X kernel" disputes are customer-
+facing friction (the #2118 class: rules nobody can justify).
+**Simplicity.** The bar is three countable questions; a promotion PR that
+cannot show its three passes is rejected without further argument.
+**Complexity ↓.** Ends promotion-by-advocacy, the historical re-inflation
+channel by which cores grow until they need a metaschema.
+**Trade-off.** A genuinely novel semantic with one national encoding waits
+in a facet for a second authority — the kernel lags evidence, never leads
+taste.
+
+## D9 (rev) — Parameter `label` + `default` *(backlog #1)*
+**Decision.** Optional `label` (display handle, never an identifier) and
+`default` (advisory, type-valid) on parameter declarations. Resolution
+never substitutes a default silently; binding remains `set-parameter`-only.
+**Customer.** BSI labels ("regelmäßig") + `values[]` on 179 requirements,
+exiled to L2 `param-extras` for want of two optional fields.
+**Simplicity.** Two scalars; no resolution semantics touched.
+**Complexity ↓.** Empties a whole L2 residue class (drains at the next
+converter run).
+**Trade-off.** A default that consumers *expect* to auto-apply will
+surprise them once — the silent-substitution corpse says surprise them.
+
+## D10 (rev) — `by-statement` payload keying *(backlog #7)*
+**Decision.** Facet payloads addressing individual statements MUST key
+them `by-statement: {sid: payload}`; a key naming no statement of the host
+is a validation error.
+**Customer.** 1,015 statements' payloads across six facets already ride
+this converter convention; a second producer inventing divergent keying
+would fracture per-clause alignment for every consumer.
+**Simplicity.** One shape to learn; checkable without facet knowledge.
+**Complexity ↓.** Pre-empts a per-facet addressing zoo.
+**Trade-off.** Facets with exotic addressing needs (ranges, pairs) must
+model them inside the payload — deliberate.
+
+## D13 (rev) — Deviation duties bind at consumption tier *(backlog #2)*
+**Decision.** Authority-tier Tailorings are normative source: the
+per-operation Deviation requirements do not apply to them; weakening
+classification is still computed and reportable. Consumer-tier Tailorings
+keep the full table.
+**Customer.** 29 variant-only CR26 rules + 5 KSI variants forced the
+converter to synthesize base prose to have something to "deviate" from —
+ceremony without a wronged party; the authority publishing variance *is*
+the norm being varied.
+**Simplicity.** One question decides the duty: who published the
+Tailoring?
+**Complexity ↓.** No `variants` carrier enters the kernel (rejected — see
+table above; fails D22 on tests 1 and 2); synthesized-prose flags and
+converter pseudo-Deviations disappear.
+**Trade-off.** "Which class eases the base" becomes a report a tool runs,
+not a record the authority writes — acceptable because the measured easing
+count across 111 CR26 class-variant moves is zero.
+
+## D20/D21 (rev) — Supplement pattern named; `supplements` registered *(backlog #5)*
+**Decision.** D21 names the supplement pattern normatively (own-prefix
+authorship + shadow set with interleaved sequence + attachment by
+reference); D20 registers `supplements` as a stdlib relationship extension
+code beyond IR 8477 — non-chaining, OLIR exports MAY down-translate to
+`supports`.
+**Customer.** Q23's asker ("where did profile add/alter go?") speaks for
+every 1.x profile author; multi-authority membership is proven in the
+bundles.
+**Simplicity.** The verb split is teachable in one line: modifying is
+Tailoring, adding is authorship.
+**Complexity ↓.** No injection mechanism, no merge provenance, no resolved
+artifacts with tool-run lineage.
+**Trade-off.** One code added to an adopted external vocabulary — fenced
+by the extension marking and the down-translation rule.

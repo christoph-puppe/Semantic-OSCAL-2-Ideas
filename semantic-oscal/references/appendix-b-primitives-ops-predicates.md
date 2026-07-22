@@ -129,7 +129,11 @@ easing | axis-change.
 **Semantics:** compares two modality codes on the lattice (C.1):
 same-axis moves upward are free; downward moves and axis changes
 require an attached Deviation. `unspecified` sits below everything —
-specifying is always monotone.
+specifying is always monotone. Tier scope (v0.6 cycle, D13 rev): the
+Deviation duty binds consumer-tier Tailorings; an Authority-tier
+Tailoring is normative source and owes no Deviation — the
+classification (monotone | easing | axis-change) still computes and
+reports for both.
 **Rationale:** weakening must be *possible* (real programs ease with
 justification — four FedRAMP prop-workflows existed to do it) but
 never *silent*. Measured bonus: CR26's 111 published class-variant

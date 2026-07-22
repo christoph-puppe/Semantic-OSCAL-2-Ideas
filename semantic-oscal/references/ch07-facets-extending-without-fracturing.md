@@ -102,6 +102,19 @@ everywhere. A **`private:`** facet carries `modifies-semantics: []` *by
 definition* — smuggling compliance math into the scratchpad is
 self-defeating, because conformant tools are required to look away.
 
+And one payload convention is not yours to choose (normative since the
+v0.6 cycle — D10 rev, backlog #7): **when your payload addresses
+individual statements of its host Requirement, it MUST key them
+`by-statement: { <statement-id>: <payload> }`**, using ids from the
+host's own `statements[]`. A key naming no statement of the host is a
+validation error — checkable by every Portable tool with zero
+knowledge of your facet, which is the point: 1,015 statements'
+payloads across six facets already align on this shape, and a second
+producer free to invent its own keying would fracture per-clause
+alignment for every consumer downstream. Addressing needs the pattern
+cannot express (ranges, statement pairs) belong *inside* your payload
+schema, where your contract governs them.
+
 ## 7.3 Worked: `gspp-taxonomy@1`
 
 The German taxonomy cluster, by the numbers: `sec_level` ×998,
