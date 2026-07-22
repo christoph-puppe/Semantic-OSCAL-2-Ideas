@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Semantic Core Bundle Reader</title>
+<title>JASCON Bundle Reader</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
 <style>
 :root{
@@ -196,12 +196,12 @@ svg text{font-family:'JetBrains Mono',monospace}
 
 <div id="app">
   <div id="topbar">
-    <div class="brand">◈ Semantic Core <span>Bundle Reader</span></div>
-    <div class="pill">OSCAL SEMANTIC CORE</div>
+    <div class="brand">◈ JASCON <span>Bundle Reader</span></div>
+    <div class="pill">JSON ATTESTABLE SEMANTIC COMPLIANCE OBJECT-GRAPH NOTATION</div>
     <div class="pill" id="pill-bundle">no bundle loaded</div>
     <div class="pill hidden" id="pill-verify"></div>
     <div style="flex:1"></div>
-    <div class="pill">v1.6.1 · build 2026-07-22</div>
+    <div class="pill">v1.7.0 · build 2026-07-22</div>
   </div>
 
   <div id="mid">
@@ -249,7 +249,7 @@ svg text{font-family:'JetBrains Mono',monospace}
         <h2><span class="glyph">◐</span>Overview</h2>
         <div id="ov-empty">
           <p style="max-width:66ch;color:var(--text-secondary)">
-            This is a reader for <b>OSCAL Semantic Core bundles</b> — the file format in which
+            This is a reader for <b>JASCON bundles</b> — the file format in which
             compliance frameworks (BSI Grundschutz++, FedRAMP CR26, the ACSC ISM, CIS, CyFun, C5 …)
             are represented as a <b>graph of nine shallow, globally identified objects</b> instead of
             eight nested document models. A bundle is a folder: one <span class="mono">content-manifest.json</span>
@@ -306,7 +306,7 @@ svg text{font-family:'JetBrains Mono',monospace}
 
       <!-- LEGEND -->
       <div class="glass card" id="view-legend">
-        <h2><span class="glyph">⬡</span>How to read a Semantic Core object</h2>
+        <h2><span class="glyph">⬡</span>How to read a JASCON object</h2>
         <div style="display:grid;grid-template-columns:1fr 300px;gap:20px">
           <div style="font-size:12.5px;color:var(--text-secondary);max-width:70ch">
             <p><b>Three layers, strictly separated.</b> Every object is built from the same三 layers:</p>
@@ -502,7 +502,7 @@ function sha256Fallback(bytes) {
 }
 
 /* ---------- loading ---------- */
-const READER_ID = "semantic-core-reader.html v1.6.1";
+const READER_ID = "jascon-reader.html v1.7.0";
 /* URL loading — works when this page and the bundle are served over http(s)
    (e.g. `python -m http.server` from the repo root); file:// blocks fetch by design. */
 async function loadFromUrl(input) {
@@ -521,7 +521,7 @@ async function loadFromUrl(input) {
   } catch (e) {
     l.err("could not fetch content-manifest.json from " + base.href + " — " + e.message);
     if (location.protocol === "file:")
-      l.warn("this page runs from file:// where fetch is blocked — serve the repo instead: python -m http.server, then open http://localhost:8000/one-page-apps/semantic-core-reader.html");
+      l.warn("this page runs from file:// where fetch is blocked — serve the repo instead: python -m http.server, then open http://localhost:8000/one-page-apps/jascon-reader.html");
     return false;
   }
   const paths = [...(manifest.objects || []).map(o => o.path),
@@ -1399,7 +1399,7 @@ async function exportWorkspaceBundle() {
   const objs = workspaceObjects();
   if (!objs.length) { l.warn("workspace is empty — use 'Add to graph' in a workbench first"); return; }
   const files = await buildWorkspaceBundleFiles(objs, {
-    source: "Semantic Core Bundle Reader workbench",
+    source: "JASCON Bundle Reader workbench",
     converter: READER_ID,
     created: new Date().toISOString() });
   const zip = buildZip(files.map(f => ({ name: "workspace-bundle/" + f.name, bytes: f.bytes })));
@@ -1938,7 +1938,7 @@ function buildAssessObjects() {
   const agg = counts["not-satisfied"] ? "not-satisfied" : (counts.inconclusive || counts.satisfied < reqs.length) ? "inconclusive" : "satisfied";
   const asmtId = mintId("asmt", "check-" + today());
   const asmt = { id: asmtId, version: "1", lifecycle: "draft", title: `Check ${today()} — ${cur.label}`,
-    "subject-refs": reqs, method: { kind: "manual-check", note: "authored in the Semantic Core Bundle Reader workbench" },
+    "subject-refs": reqs, method: { kind: "manual-check", note: "authored in JASCON Bundle Reader workbench" },
     "performer-ref": work.ns.replace(/\/$/, "") + "/party/" + slug(a.performer || "assessor"),
     time: new Date().toISOString(), result: agg };
   const findings = reqs.filter(id => a.results[id]?.result === "not-satisfied").map((id, i) => ({
@@ -2205,7 +2205,7 @@ $("btn-url").onclick = () => {
   if (u) loadFromUrl(u);
 };
 $("btn-paste").onclick = () => {
-  const txt = prompt("Paste one Semantic Core object (JSON):");
+  const txt = prompt("Paste one JASCON object (JSON):");
   if (!txt) return;
   try {
     const obj = JSON.parse(txt);
@@ -2275,7 +2275,7 @@ renderLattice();
 restoreWorkspaceObjects();
 renderStages();
 setView("overview");
-l.info("Semantic Core Bundle Reader v1.6.1 · build 2026-07-22 — everything runs locally, nothing leaves this page");
+l.info("JASCON Bundle Reader v1.7.0 · build 2026-07-22 — everything runs locally, nothing leaves this page");
 l.info("open a bundle folder (contains content-manifest.json + objects/) or drop it here — or serve the repo over http and deep-link: #load=<bundle-url>&view=stage:tailor");
 
 /* deep links: #load=<bundle-url>&view=<view> — shareable when served over http(s) */

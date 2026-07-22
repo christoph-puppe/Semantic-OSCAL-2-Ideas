@@ -1,4 +1,4 @@
-# The OSCAL Semantic Core Handbook
+# The JASCON Handbook
 ## Part Three — Implementation and Assurance
 # Chapter 10 — Assessment, Findings, Deviations
 

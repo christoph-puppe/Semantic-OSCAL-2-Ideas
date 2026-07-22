@@ -1,4 +1,4 @@
-# The OSCAL Semantic Core Handbook
+# The JASCON Handbook
 ## Part Five — Adoption
 # Chapter 15 — Governance, Conformance, and the Ecosystem
 

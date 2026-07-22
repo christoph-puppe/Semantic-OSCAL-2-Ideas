@@ -1,4 +1,4 @@
-# The OSCAL Semantic Core Handbook
+# The JASCON Handbook
 # Appendix A — Shapes Reference
 
 **Purpose:** the nine types, two sub-objects, and bundle artifacts,

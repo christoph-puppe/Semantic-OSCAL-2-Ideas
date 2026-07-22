@@ -1,4 +1,4 @@
-# The OSCAL Semantic Core Handbook
+# The JASCON Handbook
 ## Part Two — Authoring Content
 # Chapter 6 — Tailoring Without Tears
 
@@ -211,7 +211,7 @@ a winner.
 Now the task from §6.0, end to end. The old shape: every rule carrying a
 `varies_by_class` block — four embedded variants of force, statement
 text, timeframes, artifacts — plus `pain_timeframes` matrices crossing
-incident severity against report types. The Semantic Core shape:
+incident severity against report types. The JASCON shape:
 
 **One base set** (`…/cr26/set/all-20x`) holding the rules once, with the
 matrix *rows* modeled where Chapter 4 put them — as named parameters on

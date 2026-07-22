@@ -1,7 +1,7 @@
-# Semantic Core — Example Bundle (one file per type)
+# JASCON — Example Bundle (one file per type)
 ### Companion to Specification v0.5 and the Handbook · illustrative, 2026-07-18
 
-This bundle contains **one worked example file for every Semantic Core
+This bundle contains **one worked example file for every JASCON
 type**, wired together as a single, closed, cross-referentially
 consistent package — the same running story the Handbook tells
 (KONF.14.1, the Acme SaaS on a PaaS, finding 017).

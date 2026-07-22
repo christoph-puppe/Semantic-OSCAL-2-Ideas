@@ -1,4 +1,7 @@
-# OSCAL Semantic Core
+# JASCON
+
+**J**SON **A**ttestable **S**emantic **C**ompliance **O**bject-graph
+**N**otation — *one notation for every standard, in every language.*
 
 **Machine-readable compliance, rebuilt around meaning: nine shallow object
 types, two digests, and one house rule — every claim in the spec must survive
@@ -20,6 +23,10 @@ something you can click.
 
 > Status: **pre-1.0, evidence-gated**, maintained in personal capacity.
 > Nothing here is endorsed by NIST, BSI, ACSC, CCB, CIS, or FedRAMP.
+> Renamed from the working title *"OSCAL Semantic Core"* on 2026-07-22;
+> machine identifiers (namespace URIs, the attestation media type, schema
+> filenames) deliberately keep the `oscal-semantic-core` string for digest
+> stability — their migration is decided with the `v1.0.0` tag.
 
 ![The bundle reader on the FedRAMP CR26 corpus: the Tailor stage derives the authority tier from data (id origin + selected content + attestations), counts same-target conflicts, and gives every operation a modality-lattice verdict — live, client-side.](docs/img/reader-tailor.png)
 
@@ -206,7 +213,7 @@ measurement instrument" means.
 
 ## See it: the bundle reader
 
-[`one-page-apps/semantic-core-reader.html`](one-page-apps/semantic-core-reader.html)
+[`one-page-apps/jascon-reader.html`](one-page-apps/jascon-reader.html)
 is the whole model in one HTML file — no build, no dependencies, nothing
 leaves your browser. It reads any bundle from `converted_examples/` and makes
 the five stages of the compliance graph *functional*, not diagrammatic:
@@ -264,7 +271,7 @@ python -m http.server 8000
 then open
 
 ```
-http://localhost:8000/one-page-apps/semantic-core-reader.html#load=../converted_examples/FedRAMP-CR26/cr26-core-bundle/&view=stage:tailor
+http://localhost:8000/one-page-apps/jascon-reader.html#load=../converted_examples/FedRAMP-CR26/cr26-core-bundle/&view=stage:tailor
 ```
 
 — the `#load=<bundle-url>&view=<view>` fragment auto-loads any bundle and
@@ -274,7 +281,7 @@ reproduce.
 ## Install as a Claude skill
 
 [`semantic-oscal/`](semantic-oscal/) is an installable skill that guides an
-agent through authoring, validating, and migrating Semantic Core content. Its
+agent through authoring, validating, and migrating JASCON content. Its
 [SKILL.md](semantic-oscal/SKILL.md) turns the 15 handbook chapters into 14
 numbered requirements, each with reference chapters and companion examples;
 it carries the worked example bundle in [`examples/`](semantic-oscal/examples/)

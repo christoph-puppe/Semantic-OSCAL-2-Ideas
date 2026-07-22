@@ -1,5 +1,8 @@
 > **SUPERSEDED (2026-07-22).** This file is the v0.5→v0.6 WORKING
-> JOURNAL, kept for history. The consolidated release candidate is
+> JOURNAL, kept for history — it retains the working title "OSCAL
+> Semantic Core"; the project was renamed **JASCON** the same day
+> (naming entry in the rationale register). The consolidated release
+> candidate is
 > **`oscal-semantic-core-specification-1.0.0-rc.1.md`** (same
 > normative content, journals compacted); amendments continue in the
 > Decision Rationale Register only.

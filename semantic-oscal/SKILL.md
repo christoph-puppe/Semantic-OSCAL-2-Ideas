@@ -1,11 +1,11 @@
 ---
 name: semantic-oscal
-description: Guidelines and requirements for authoring, validating, and migrating to Semantic OSCAL (OSCAL Semantic Core).
+description: Guidelines and requirements for authoring, validating, and migrating to JASCON (JSON Attestable Semantic Compliance Object-graph Notation, formerly "Semantic OSCAL" / "OSCAL Semantic Core").
 ---
 
 # Semantic OSCAL Skill Requirements
 
-When triggered, this skill guides the agent in applying the OSCAL Semantic Core standard correctly. The chapters of the OSCAL Semantic Core Handbook serve as the normative requirements for this skill.
+When triggered, this skill guides the agent in applying the JASCON standard correctly. The chapters of the JASCON Handbook serve as the normative requirements for this skill.
 
 ## Core Directives (Chapters as Requirements)
 
@@ -30,7 +30,7 @@ You must strictly adhere to the guidelines detailed in the handbook chapters and
 - **Reference Document:** [Chapter 5 — Sets, Hierarchy, and Baselines](references/ch05-sets-hierarchy-baselines.md)
 - **Companion Examples:** [set-crypto.json](examples/set-crypto.json) (Nested sets), [set-baseline.json](examples/set-baseline.json) (Baseline membership set)
 
-### Requirement 5: Tailoring Semantic Core
+### Requirement 5: Tailoring JASCON
 - **Description:** Define changes via selection rules and identity-addressed operations. Apply per-operation weakening rules and require a `Deviation` object where needed — Deviation duties bind consumer-tier Tailorings only; a Tailoring published at Authority tier is normative source and never carries one (weakening classification still computes). Follow the deterministic tailoring resolution algorithm. To amend a catalog you do not own, use the supplement pattern (§6.A): author under your own prefix as a shadow set with interleaved sequence — modifying is Tailoring, adding is authorship.
 - **Reference Document:** [Chapter 6 — Tailoring Without Tears](references/ch06-tailoring-without-tears.md); resolution logic also in Chapter 12 and Appendix B.
 - **Companion Example:** [tailoring-elevated.json](examples/tailoring-elevated.json) (Monotone tailoring operations)
@@ -71,12 +71,12 @@ You must strictly adhere to the guidelines detailed in the handbook chapters and
 - **Reference Document:** [Chapter 13 — Consuming Content Safely](references/ch13-consuming-content-safely.md)
 
 ### Requirement 13: Migration Playbooks
-- **Description:** Translate OSCAL 1.x structures (catalogs, profiles, SSPs, etc.) or legacy formats to Semantic Core objects preserving semantic equivalence.
+- **Description:** Translate OSCAL 1.x structures (catalogs, profiles, SSPs, etc.) or legacy formats to JASCON objects preserving semantic equivalence.
 - **Reference Document:** [Chapter 14 — Migration Playbooks](references/ch14-migration-playbooks.md)
 - **Migration Scripts:**
-  - [convert_ism.py](scripts/convert_ism.py) — ISM (OSCAL 1.1.x catalog) to Semantic Core bundle converter.
-  - [convert_bsi.py](scripts/convert_bsi.py) — BSI Grundschutz++ + MS-TLS (OSCAL 1.1.3) to Semantic Core bundle converter.
-  - [convert_cr26.py](scripts/convert_cr26.py) — FedRAMP CR26 (bespoke JSON) to Semantic Core bundle converter.
+  - [convert_ism.py](scripts/convert_ism.py) — ISM (OSCAL 1.1.x catalog) to JASCON bundle converter.
+  - [convert_bsi.py](scripts/convert_bsi.py) — BSI Grundschutz++ + MS-TLS (OSCAL 1.1.3) to JASCON bundle converter.
+  - [convert_cr26.py](scripts/convert_cr26.py) — FedRAMP CR26 (bespoke JSON) to JASCON bundle converter.
 
 ### Requirement 14: Governance and Ecosystem
 - **Description:** Adhere to conformance tiers, deprecation policies, registry usage, and the anti-#2118 change proposal workflow.
@@ -94,7 +94,7 @@ You must strictly adhere to the guidelines detailed in the handbook chapters and
 
 ## Worked Examples Reference
 
-The [examples/](examples/) directory contains a complete, self-consistent bundle of illustrative Semantic Core files:
+The [examples/](examples/) directory contains a complete, self-consistent bundle of illustrative JASCON files:
 
 - **Index/Overview:** [examples/README_1.md](examples/README_1.md)
 - **Requirement:**
@@ -127,8 +127,8 @@ The [examples/](examples/) directory contains a complete, self-consistent bundle
 
 ## Migration Scripts Reference
 
-The [scripts/](scripts/) directory contains automated scripts for migrating legacy/external compliance schemas to Semantic Core:
+The [scripts/](scripts/) directory contains automated scripts for migrating legacy/external compliance schemas to JASCON:
 
-- [convert_ism.py](scripts/convert_ism.py) — Translates ISM OSCAL 1.1.x catalogs into a Semantic Core bundle and generates a computed coverage report.
-- [convert_bsi.py](scripts/convert_bsi.py) — Converts BSI Grundschutz++ + MS-TLS OSCAL 1.1.3 content into Semantic Core. Handles nested pseudo-controls, splitting them into statements and mapping grammar, security objectives, assessment criteria, and taxonomy facets.
-- [convert_cr26.py](scripts/convert_cr26.py) — Processes FedRAMP CR26 bespoke JSON into a Semantic Core bundle, converting rules and KSIs into Requirements and Mapping objects.
+- [convert_ism.py](scripts/convert_ism.py) — Translates ISM OSCAL 1.1.x catalogs into a JASCON bundle and generates a computed coverage report.
+- [convert_bsi.py](scripts/convert_bsi.py) — Converts BSI Grundschutz++ + MS-TLS OSCAL 1.1.3 content into JASCON. Handles nested pseudo-controls, splitting them into statements and mapping grammar, security objectives, assessment criteria, and taxonomy facets.
+- [convert_cr26.py](scripts/convert_cr26.py) — Processes FedRAMP CR26 bespoke JSON into a JASCON bundle, converting rules and KSIs into Requirements and Mapping objects.

@@ -1,4 +1,4 @@
-# The OSCAL Semantic Core Handbook
+# The JASCON Handbook
 ## Part Two — Authoring Content
 # Chapter 8 — Mappings and Crosswalks
 
@@ -51,7 +51,7 @@ demonstrating the anti-pattern one more time: an entire eighth
 *document model* for mappings, with the full uuid/metadata/revisions
 scaffolding and props throughout.
 
-The Semantic Core's answer is the ownership argument taken literally: a
+The JASCON's answer is the ownership argument taken literally: a
 crosswalk claim is an **object** — nine flat fields with the same
 identity, versioning, and lifecycle discipline as everything else in
 Chapter 3. Nine fields replace a document model; a spreadsheet economy

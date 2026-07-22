@@ -1,4 +1,4 @@
-# The OSCAL Semantic Core Handbook
+# The JASCON Handbook
 # Appendix B — Primitives, Operations, Predicates
 
 **Purpose:** the complete computational vocabulary — eight primitives,

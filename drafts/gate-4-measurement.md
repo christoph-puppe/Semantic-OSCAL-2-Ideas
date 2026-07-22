@@ -25,7 +25,7 @@ stdlib `re` cannot compile — an ecosystem-cost data point in itself:
 the reference schema of the incumbent format is not consumable by the
 standard library of the language most compliance tooling is written in.
 
-**Reading.** The complete Semantic Core reference validator — including
+**Reading.** The complete JASCON reference validator — including
 a dependency-free Ed25519, a composition engine, and a conditional
 engine — is **~30× smaller** than the incumbent toolchain, and the
 zero-dependency PowerShell twin runs on the stock Windows box every
