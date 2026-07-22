@@ -1,0 +1,49 @@
+{
+ "id": "https://ns.nist.gov/csf/req/RS.MI-02",
+ "version": "2.0",
+ "label": "RS.MI-02",
+ "lifecycle": "active",
+ "title": "RS.MI-02",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Incidents are eradicated"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "RS.MI-02.343",
+     "prose": {
+      "en": "Cybersecurity technologies and cybersecurity features of other technologies (e.g., operating systems, network infrastructure devices) automatically perform eradication actions"
+     }
+    },
+    {
+     "id": "RS.MI-02.344",
+     "prose": {
+      "en": "Allow incident responders to manually select and perform eradication actions"
+     }
+    },
+    {
+     "id": "RS.MI-02.345",
+     "prose": {
+      "en": "Allow a third party (e.g., managed security service provider) to perform eradication actions on behalf of the organization"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

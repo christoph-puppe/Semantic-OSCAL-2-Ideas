@@ -1,0 +1,66 @@
+{
+ "id": "https://ns.nist.gov/csf/req/GV.OC-03",
+ "version": "2.0",
+ "label": "GV.OC-03",
+ "lifecycle": "active",
+ "title": "GV.OC-03",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Legal, regulatory, and contractual requirements regarding cybersecurity - including privacy and civil liberties obligations - are understood and managed"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "GV.OC-03.004",
+     "prose": {
+      "en": "Determine a process to track and manage legal and regulatory requirements regarding protection of individuals' information (e.g., Health Insurance Portability and Accountability Act, California Consumer Privacy Act, General Data Protection Regulation)"
+     }
+    },
+    {
+     "id": "GV.OC-03.005",
+     "prose": {
+      "en": "Determine a process to track and manage contractual requirements for cybersecurity management of supplier, customer, and partner information"
+     }
+    },
+    {
+     "id": "GV.OC-03.006",
+     "prose": {
+      "en": "Align the organization's cybersecurity strategy with legal, regulatory, and contractual requirements"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.GV-03",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.GV-03",
+    "mode": "renamed",
+    "label": "ID.GV-03",
+    "title": "ID.GV-03",
+    "prose": "Legal and regulatory requirements regarding cybersecurity, including privacy and civil liberties obligations, are understood and managed"
+   }
+  ]
+ }
+}

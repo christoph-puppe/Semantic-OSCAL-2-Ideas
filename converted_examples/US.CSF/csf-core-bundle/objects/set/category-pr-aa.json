@@ -1,0 +1,58 @@
+{
+ "id": "https://ns.nist.gov/csf/set/category/pr-aa",
+ "version": "2.0",
+ "lifecycle": "active",
+ "title": "Identity Management, Authentication, and Access Control",
+ "label": "Identity Management, Authentication, and Access Control (PR.AA)",
+ "members": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.AA-01",
+   "sequence": 10
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.AA-02",
+   "sequence": 20
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.AA-03",
+   "sequence": 30
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.AA-04",
+   "sequence": 40
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.AA-05",
+   "sequence": 50
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.AA-06",
+   "sequence": 60
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Access to physical and logical assets is limited to authorized users, services, and hardware and managed commensurate with the assessed risk of unauthorized access"
+    }
+   ]
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.AC",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.AC",
+    "mode": "renamed",
+    "label": "Identity Management, Authentication and Access Control (PR.AC)",
+    "title": "Identity Management, Authentication and Access Control"
+   }
+  ]
+ }
+}

@@ -1,0 +1,55 @@
+{
+ "id": "https://ns.nist.gov/csf/req/DE.AE-02",
+ "version": "2.0",
+ "label": "DE.AE-02",
+ "lifecycle": "active",
+ "title": "DE.AE-02",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Potentially adverse events are analyzed to better understand associated activities"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "DE.AE-02.290",
+     "prose": {
+      "en": "Use security information and event management (SIEM) or other tools to continuously monitor log events for known malicious and suspicious activity"
+     }
+    },
+    {
+     "id": "DE.AE-02.291",
+     "prose": {
+      "en": "Utilize up-to-date cyber threat intelligence in log analysis tools to improve detection accuracy and characterize threat actors, their methods, and indicators of compromise"
+     }
+    },
+    {
+     "id": "DE.AE-02.292",
+     "prose": {
+      "en": "Regularly conduct manual reviews of log events for technologies that cannot be sufficiently monitored through automation"
+     }
+    },
+    {
+     "id": "DE.AE-02.293",
+     "prose": {
+      "en": "Use log analysis tools to generate reports on their findings"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

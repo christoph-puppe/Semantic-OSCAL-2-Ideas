@@ -1,0 +1,72 @@
+{
+ "id": "https://ns.nist.gov/csf/req/GV.SC-03",
+ "version": "2.0",
+ "label": "GV.SC-03",
+ "lifecycle": "active",
+ "title": "GV.SC-03",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Cybersecurity supply chain risk management is integrated into cybersecurity and enterprise risk management, risk assessment, and improvement processes"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "GV.SC-03.078",
+     "prose": {
+      "en": "Identify areas of alignment and overlap with cybersecurity and enterprise risk management"
+     }
+    },
+    {
+     "id": "GV.SC-03.079",
+     "prose": {
+      "en": "Establish integrated control sets for cybersecurity risk management and cybersecurity supply chain risk management"
+     }
+    },
+    {
+     "id": "GV.SC-03.080",
+     "prose": {
+      "en": "Integrate cybersecurity supply chain risk management into improvement processes"
+     }
+    },
+    {
+     "id": "GV.SC-03.081",
+     "prose": {
+      "en": "Escalate material cybersecurity risks in supply chains to senior management, and address them at the enterprise risk management level"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "3rd",
+    "remark": "3rd Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.SC-02",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.SC-02",
+    "mode": "merged-into",
+    "label": "ID.SC-02",
+    "title": "ID.SC-02",
+    "prose": "Suppliers and third party partners of information systems, components, and services are identified, prioritized, and assessed using a cyber supply chain risk assessment process"
+   }
+  ]
+ }
+}

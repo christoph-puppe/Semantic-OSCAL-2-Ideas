@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.nist.gov/csf/req/RC.RP-06",
+ "version": "2.0",
+ "label": "RC.RP-06",
+ "lifecycle": "active",
+ "title": "RC.RP-06",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "The end of incident recovery is declared based on criteria, and incident-related documentation is completed"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "RC.RP-06.356",
+     "prose": {
+      "en": "Prepare an after-action report that documents the incident itself, the response and recovery actions taken, and lessons learned"
+     }
+    },
+    {
+     "id": "RC.RP-06.357",
+     "prose": {
+      "en": "Declare the end of incident recovery once the criteria are met"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

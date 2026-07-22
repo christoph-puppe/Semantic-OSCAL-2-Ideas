@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.nist.gov/csf/req/ID.AM-04",
+ "version": "2.0",
+ "label": "ID.AM-04",
+ "lifecycle": "active",
+ "title": "ID.AM-04",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Inventories of services provided by suppliers are maintained"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "ID.AM-04.129",
+     "prose": {
+      "en": "Inventory all external services used by the organization, including third-party infrastructure-as-a-service (IaaS), platform-as-a-service (PaaS), and software-as-a-service (SaaS) offerings; APIs; and other externally hosted application services"
+     }
+    },
+    {
+     "id": "ID.AM-04.130",
+     "prose": {
+      "en": "Update the inventory when a new external service is going to be utilized to ensure adequate cybersecurity risk management monitoring of the organization's use of that service"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "3rd",
+    "remark": "3rd Party Risk"
+   }
+  }
+ }
+}

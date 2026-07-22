@@ -1,0 +1,49 @@
+{
+ "id": "https://ns.nist.gov/csf/req/RS.CO-02",
+ "version": "2.0",
+ "label": "RS.CO-02",
+ "lifecycle": "active",
+ "title": "RS.CO-02",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Internal and external stakeholders are notified of incidents"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "RS.CO-02.330",
+     "prose": {
+      "en": "Follow the organization's breach notification procedures after discovering a data breach incident, including notifying affected customers"
+     }
+    },
+    {
+     "id": "RS.CO-02.331",
+     "prose": {
+      "en": "Notify business partners and customers of incidents in accordance with contractual requirements"
+     }
+    },
+    {
+     "id": "RS.CO-02.332",
+     "prose": {
+      "en": "Notify law enforcement agencies and regulatory bodies of incidents based on criteria in the incident response plan and management approval"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "id": "https://ns.nist.gov/csf/req/GV.OV-03",
+ "version": "2.0",
+ "label": "GV.OV-03",
+ "lifecycle": "active",
+ "title": "GV.OV-03",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Organizational cybersecurity risk management performance is evaluated and reviewed for adjustments needed"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "GV.OV-03.063",
+     "prose": {
+      "en": "Review key performance indicators (KPIs) to ensure that organization-wide policies and procedures achieve objectives"
+     }
+    },
+    {
+     "id": "GV.OV-03.064",
+     "prose": {
+      "en": "Review key risk indicators (KRIs) to identify risks the organization faces, including likelihood and potential impact"
+     }
+    },
+    {
+     "id": "GV.OV-03.065",
+     "prose": {
+      "en": "Collect and communicate metrics on cybersecurity risk management with senior leadership"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

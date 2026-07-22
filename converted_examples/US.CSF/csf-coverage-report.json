@@ -1,0 +1,385 @@
+{
+ "totals": {
+  "leaf-values": 4726,
+  "mapped": 4726,
+  "unmapped": 0,
+  "coverage-pct": 100.0
+ },
+ "unmapped-paths": [],
+ "path-map": [
+  {
+   "path": "csf.catalog.back-matter.resources[].rlinks[].href",
+   "count": 4,
+   "level": "L1",
+   "destination": "references@1 facet on the root Set (title/url)"
+  },
+  {
+   "path": "csf.catalog.back-matter.resources[].rlinks[].media-type",
+   "count": 3,
+   "level": "L1",
+   "destination": "references@1 facet on the root Set (title/url)"
+  },
+  {
+   "path": "csf.catalog.back-matter.resources[].title",
+   "count": 4,
+   "level": "L1",
+   "destination": "references@1 facet on the root Set (title/url)"
+  },
+  {
+   "path": "csf.catalog.back-matter.resources[].uuid",
+   "count": 4,
+   "level": "L1",
+   "destination": "references@1 facet on the root Set (title/url)"
+  },
+  {
+   "path": "csf.catalog.groups[].class",
+   "count": 6,
+   "level": "L1",
+   "destination": "function Set id/title"
+  },
+  {
+   "path": "csf.catalog.groups[].controls[].class",
+   "count": 219,
+   "level": "L1",
+   "destination": "category Set / subcategory Requirement id (URI mint) + title | withdrawn: dropped, lineage inverted"
+  },
+  {
+   "path": "csf.catalog.groups[].controls[].id",
+   "count": 219,
+   "level": "L1",
+   "destination": "category Set / subcategory Requirement id (URI mint) + title | withdrawn: dropped, lineage inverted"
+  },
+  {
+   "path": "csf.catalog.groups[].controls[].links[].href",
+   "count": 135,
+   "level": "L1",
+   "destination": "incorporated_into/moved_to (UNDERSCORE spelling - source finding) -> successor replaces[] (merged-into/renamed) + nist-withdrawal annotation"
+  },
+  {
+   "path": "csf.catalog.groups[].controls[].links[].rel",
+   "count": 135,
+   "level": "L1",
+   "destination": "incorporated_into/moved_to (UNDERSCORE spelling - source finding) -> successor replaces[] (merged-into/renamed) + nist-withdrawal annotation"
+  },
+  {
+   "path": "csf.catalog.groups[].controls[].parts[].id",
+   "count": 582,
+   "level": "L1",
+   "destination": "subcategory statement -> statements[0] (modality unspecified); category statement -> narrative@1 on the Set; example parts -> examples@1 (language-tagged)"
+  },
+  {
+   "path": "csf.catalog.groups[].controls[].parts[].name",
+   "count": 582,
+   "level": "L1",
+   "destination": "subcategory statement -> statements[0] (modality unspecified); category statement -> narrative@1 on the Set; example parts -> examples@1 (language-tagged)"
+  },
+  {
+   "path": "csf.catalog.groups[].controls[].parts[].ns",
+   "count": 363,
+   "level": "L1",
+   "destination": "subcategory statement -> statements[0] (modality unspecified); category statement -> narrative@1 on the Set; example parts -> examples@1 (language-tagged)"
+  },
+  {
+   "path": "csf.catalog.groups[].controls[].parts[].prose",
+   "count": 570,
+   "level": "L1",
+   "destination": "subcategory statement -> statements[0] (modality unspecified); category statement -> narrative@1 on the Set; example parts -> examples@1 (language-tagged)"
+  },
+  {
+   "path": "csf.catalog.groups[].controls[].props[].name",
+   "count": 654,
+   "level": "L1",
+   "destination": "label->label; sort-id->Set sequence; risk-party->csf@1; status->tombstone drop + successor replaces[]"
+  },
+  {
+   "path": "csf.catalog.groups[].controls[].props[].ns",
+   "count": 125,
+   "level": "L1",
+   "destination": "label->label; sort-id->Set sequence; risk-party->csf@1; status->tombstone drop + successor replaces[]"
+  },
+  {
+   "path": "csf.catalog.groups[].controls[].props[].remarks",
+   "count": 125,
+   "level": "L2",
+   "destination": "risk-party remark -> csf@1 (carried verbatim)"
+  },
+  {
+   "path": "csf.catalog.groups[].controls[].props[].value",
+   "count": 654,
+   "level": "L1",
+   "destination": "label->label; sort-id->Set sequence; risk-party->csf@1; status->tombstone drop + successor replaces[]"
+  },
+  {
+   "path": "csf.catalog.groups[].controls[].title",
+   "count": 219,
+   "level": "L1",
+   "destination": "category Set / subcategory Requirement id (URI mint) + title | withdrawn: dropped, lineage inverted"
+  },
+  {
+   "path": "csf.catalog.groups[].id",
+   "count": 6,
+   "level": "L1",
+   "destination": "function Set id/title"
+  },
+  {
+   "path": "csf.catalog.groups[].parts[].id",
+   "count": 6,
+   "level": "L2",
+   "destination": "function overview -> narrative@1 guidance on the function Set (language-tagged)"
+  },
+  {
+   "path": "csf.catalog.groups[].parts[].name",
+   "count": 6,
+   "level": "L2",
+   "destination": "function overview -> narrative@1 guidance on the function Set (language-tagged)"
+  },
+  {
+   "path": "csf.catalog.groups[].parts[].prose",
+   "count": 6,
+   "level": "L2",
+   "destination": "function overview -> narrative@1 guidance on the function Set (language-tagged)"
+  },
+  {
+   "path": "csf.catalog.groups[].props[].name",
+   "count": 12,
+   "level": "L1",
+   "destination": "function Set label; sort-id -> member order"
+  },
+  {
+   "path": "csf.catalog.groups[].props[].value",
+   "count": 12,
+   "level": "L1",
+   "destination": "function Set label; sort-id -> member order"
+  },
+  {
+   "path": "csf.catalog.groups[].title",
+   "count": 6,
+   "level": "L1",
+   "destination": "function Set id/title"
+  },
+  {
+   "path": "csf.catalog.metadata.last-modified",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.links[].href",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.links[].rel",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.oscal-version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.parties[].addresses[].addr-lines[]",
+   "count": 8,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.parties[].addresses[].city",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.parties[].addresses[].postal-code",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.parties[].addresses[].state",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.parties[].email-addresses[]",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.parties[].name",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.parties[].short-name",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.parties[].type",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.parties[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.props[].name",
+   "count": 5,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.props[].ns",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.props[].value",
+   "count": 5,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.published",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.responsible-parties[].party-uuids[]",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.responsible-parties[].role-id",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.revisions[].last-modified",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.revisions[].links[].href",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.revisions[].links[].rel",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.revisions[].oscal-version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.revisions[].remarks",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.revisions[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.revisions[].version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.roles[].id",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.roles[].title",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.metadata.version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "csf.catalog.uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  }
+ ],
+ "source-version": "2.0",
+ "objects-emitted": {
+  "requirements": 106,
+  "sets": 29
+ },
+ "withdrawn": {
+  "count": 91,
+  "categories": [
+   "ID.BE",
+   "ID.GV",
+   "ID.RM",
+   "ID.SC",
+   "PR.AC",
+   "PR.IP",
+   "PR.MA",
+   "PR.PT",
+   "DE.DP",
+   "RS.IM",
+   "RS.RP",
+   "RC.IM"
+  ],
+  "subcategories": 79,
+  "successor-edges": 134,
+  "function-set-edges": 1,
+  "hashless-hrefs": 135,
+  "chains": [],
+  "dangling": []
+ },
+ "modality": {
+  "unspecified": 106
+ },
+ "examples": 363,
+ "risk-party": 103,
+ "lang-wraps": {
+  "example": 363,
+  "category-statement": 22,
+  "overview": 6
+ }
+}

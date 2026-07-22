@@ -1,0 +1,66 @@
+{
+ "id": "https://ns.nist.gov/csf/req/ID.RA-07",
+ "version": "2.0",
+ "label": "ID.RA-07",
+ "lifecycle": "active",
+ "title": "ID.RA-07",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Changes and exceptions are managed, assessed for risk impact, recorded, and tracked"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "ID.RA-07.169",
+     "prose": {
+      "en": "Implement and follow procedures for the formal documentation, review, testing, and approval of proposed changes and requested exceptions"
+     }
+    },
+    {
+     "id": "ID.RA-07.170",
+     "prose": {
+      "en": "Document the possible risks of making or not making each proposed change, and provide guidance on rolling back changes"
+     }
+    },
+    {
+     "id": "ID.RA-07.171",
+     "prose": {
+      "en": "Document the risks related to each requested exception and the plan for responding to those risks"
+     }
+    },
+    {
+     "id": "ID.RA-07.172",
+     "prose": {
+      "en": "Periodically review risks that were accepted based upon planned future actions or milestones"
+     }
+    }
+   ]
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.IP-03",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.IP-03",
+    "mode": "merged-into",
+    "label": "PR.IP-03",
+    "title": "PR.IP-03",
+    "prose": "Configuration change control processes are in place"
+   }
+  ]
+ }
+}

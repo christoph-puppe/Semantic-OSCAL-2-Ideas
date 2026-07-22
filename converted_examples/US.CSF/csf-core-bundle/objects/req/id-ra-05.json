@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.nist.gov/csf/req/ID.RA-05",
+ "version": "2.0",
+ "label": "ID.RA-05",
+ "lifecycle": "active",
+ "title": "ID.RA-05",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Threats, vulnerabilities, likelihoods, and impacts are used to understand inherent risk and inform risk response prioritization"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "ID.RA-05.162",
+     "prose": {
+      "en": "Develop threat models to better understand risks to the data and identify appropriate risk responses"
+     }
+    },
+    {
+     "id": "ID.RA-05.163",
+     "prose": {
+      "en": "Prioritize cybersecurity resource allocations and investments based on estimated likelihoods and impacts"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

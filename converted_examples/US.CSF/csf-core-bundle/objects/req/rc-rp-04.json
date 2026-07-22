@@ -1,0 +1,49 @@
+{
+ "id": "https://ns.nist.gov/csf/req/RC.RP-04",
+ "version": "2.0",
+ "label": "RC.RP-04",
+ "lifecycle": "active",
+ "title": "RC.RP-04",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Critical mission functions and cybersecurity risk management are considered to establish post-incident operational norms"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "RC.RP-04.351",
+     "prose": {
+      "en": "Use business impact and system categorization records (including service delivery objectives) to validate that essential services are restored in the appropriate order"
+     }
+    },
+    {
+     "id": "RC.RP-04.352",
+     "prose": {
+      "en": "Work with system owners to confirm the successful restoration of systems and the return to normal operations"
+     }
+    },
+    {
+     "id": "RC.RP-04.353",
+     "prose": {
+      "en": "Monitor the performance of restored systems to verify the adequacy of the restoration"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

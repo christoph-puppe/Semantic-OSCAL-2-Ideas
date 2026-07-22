@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.nist.gov/csf/set/category/gv-po",
+ "version": "2.0",
+ "lifecycle": "active",
+ "title": "Policy",
+ "label": "Policy (GV.PO)",
+ "members": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/GV.PO-01",
+   "sequence": 10
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/GV.PO-02",
+   "sequence": 20
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizational cybersecurity policy is established, communicated, and enforced"
+    }
+   ]
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.GV-01",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.GV-01",
+    "mode": "merged-into",
+    "label": "ID.GV-01",
+    "title": "ID.GV-01",
+    "prose": "Organizational cybersecurity policy is established and communicated"
+   }
+  ]
+ }
+}

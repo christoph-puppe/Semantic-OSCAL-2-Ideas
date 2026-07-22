@@ -1,0 +1,77 @@
+{
+ "id": "https://ns.nist.gov/csf/req/GV.OC-04",
+ "version": "2.0",
+ "label": "GV.OC-04",
+ "lifecycle": "active",
+ "title": "GV.OC-04",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Critical objectives, capabilities, and services that external stakeholders depend on or expect from the organization are understood and communicated"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "GV.OC-04.007",
+     "prose": {
+      "en": "Establish criteria for determining the criticality of capabilities and services as viewed by internal and external stakeholders"
+     }
+    },
+    {
+     "id": "GV.OC-04.008",
+     "prose": {
+      "en": "Determine (e.g., from a business impact analysis) assets and business operations that are vital to achieving mission objectives and the potential impact of a loss (or partial loss) of such operations"
+     }
+    },
+    {
+     "id": "GV.OC-04.009",
+     "prose": {
+      "en": "Establish and communicate resilience objectives (e.g., recovery time objectives) for delivering critical capabilities and services in various operating states (e.g., under attack, during recovery, normal operation)"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.BE-04",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.BE-05",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.BE-04",
+    "mode": "merged-into",
+    "label": "ID.BE-04",
+    "title": "ID.BE-04",
+    "prose": "Dependencies and critical functions for delivery of critical services are established"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.BE-05",
+    "mode": "merged-into",
+    "label": "ID.BE-05",
+    "title": "ID.BE-05",
+    "prose": "Resilience requirements to support delivery of critical services are established for all operating states (e.g. under duress/attack, during recovery, normal operations)"
+   }
+  ]
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "id": "https://ns.nist.gov/csf/req/ID.RA-04",
+ "version": "2.0",
+ "label": "ID.RA-04",
+ "lifecycle": "active",
+ "title": "ID.RA-04",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Potential impacts and likelihoods of threats exploiting vulnerabilities are identified and recorded"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "ID.RA-04.159",
+     "prose": {
+      "en": "Business leaders and cybersecurity risk management practitioners work together to estimate the likelihood and impact of risk scenarios and record them in risk registers"
+     }
+    },
+    {
+     "id": "ID.RA-04.160",
+     "prose": {
+      "en": "Enumerate the potential business impacts of unauthorized access to the organization's communications, systems, and data processed in or by those systems"
+     }
+    },
+    {
+     "id": "ID.RA-04.161",
+     "prose": {
+      "en": "Account for the potential impacts of cascading failures for systems of systems"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

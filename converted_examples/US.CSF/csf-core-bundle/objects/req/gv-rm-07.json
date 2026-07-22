@@ -1,0 +1,49 @@
+{
+ "id": "https://ns.nist.gov/csf/req/GV.RM-07",
+ "version": "2.0",
+ "label": "GV.RM-07",
+ "lifecycle": "active",
+ "title": "GV.RM-07",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Strategic opportunities (i.e., positive risks) are characterized and are included in organizational cybersecurity risk discussions"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "GV.RM-07.030",
+     "prose": {
+      "en": "Define and communicate guidance and methods for identifying opportunities and including them in risk discussions (e.g., strengths, weaknesses, opportunities, and threats (SWOT) analysis)"
+     }
+    },
+    {
+     "id": "GV.RM-07.031",
+     "prose": {
+      "en": "Identify stretch goals and document them"
+     }
+    },
+    {
+     "id": "GV.RM-07.032",
+     "prose": {
+      "en": "Calculate, document, and prioritize positive risks alongside negative risks"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

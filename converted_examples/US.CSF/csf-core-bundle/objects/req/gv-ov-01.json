@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.nist.gov/csf/req/GV.OV-01",
+ "version": "2.0",
+ "label": "GV.OV-01",
+ "lifecycle": "active",
+ "title": "GV.OV-01",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Cybersecurity risk management strategy outcomes are reviewed to inform and adjust strategy and direction"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "GV.OV-01.058",
+     "prose": {
+      "en": "Measure how well the risk management strategy and risk results have helped leaders make decisions and achieve organizational objectives"
+     }
+    },
+    {
+     "id": "GV.OV-01.059",
+     "prose": {
+      "en": "Examine whether cybersecurity risk strategies that impede operations or innovation should be adjusted"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

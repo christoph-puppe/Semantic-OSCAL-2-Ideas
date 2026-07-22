@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.nist.gov/csf/req/DE.AE-04",
+ "version": "2.0",
+ "label": "DE.AE-04",
+ "lifecycle": "active",
+ "title": "DE.AE-04",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "The estimated impact and scope of adverse events are understood"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "DE.AE-04.297",
+     "prose": {
+      "en": "Use SIEMs or other tools to estimate impact and scope, and review and refine the estimates"
+     }
+    },
+    {
+     "id": "DE.AE-04.298",
+     "prose": {
+      "en": "A person creates their own estimates of impact and scope"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

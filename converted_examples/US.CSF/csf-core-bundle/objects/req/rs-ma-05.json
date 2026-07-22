@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.nist.gov/csf/req/RS.MA-05",
+ "version": "2.0",
+ "label": "RS.MA-05",
+ "lifecycle": "active",
+ "title": "RS.MA-05",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "The criteria for initiating incident recovery are applied"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "RS.MA-05.319",
+     "prose": {
+      "en": "Apply incident recovery criteria to known and assumed characteristics of the incident to determine whether incident recovery processes should be initiated"
+     }
+    },
+    {
+     "id": "RS.MA-05.320",
+     "prose": {
+      "en": "Take the possible operational disruption of incident recovery activities into account"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

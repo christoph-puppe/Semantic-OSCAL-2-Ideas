@@ -1,0 +1,49 @@
+{
+ "id": "https://ns.nist.gov/csf/req/ID.RA-03",
+ "version": "2.0",
+ "label": "ID.RA-03",
+ "lifecycle": "active",
+ "title": "ID.RA-03",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Internal and external threats to the organization are identified and recorded"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "ID.RA-03.156",
+     "prose": {
+      "en": "Use cyber threat intelligence to maintain awareness of the types of threat actors likely to target the organization and the TTPs they are likely to use"
+     }
+    },
+    {
+     "id": "ID.RA-03.157",
+     "prose": {
+      "en": "Perform threat hunting to look for signs of threat actors within the environment"
+     }
+    },
+    {
+     "id": "ID.RA-03.158",
+     "prose": {
+      "en": "Implement processes for identifying internal threat actors"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

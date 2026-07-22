@@ -1,0 +1,74 @@
+{
+ "id": "https://ns.nist.gov/csf/set/category/gv-sc",
+ "version": "2.0",
+ "lifecycle": "active",
+ "title": "Cybersecurity Supply Chain Risk Management",
+ "label": "Cybersecurity Supply Chain Risk Management (GV.SC)",
+ "members": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/GV.SC-01",
+   "sequence": 10
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/GV.SC-02",
+   "sequence": 20
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/GV.SC-03",
+   "sequence": 30
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/GV.SC-04",
+   "sequence": 40
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/GV.SC-05",
+   "sequence": 50
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/GV.SC-06",
+   "sequence": 60
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/GV.SC-07",
+   "sequence": 70
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/GV.SC-08",
+   "sequence": 80
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/GV.SC-09",
+   "sequence": 90
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/GV.SC-10",
+   "sequence": 100
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Cyber supply chain risk management processes are identified, established, managed, monitored, and improved by organizational stakeholders"
+    }
+   ]
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.SC",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.SC",
+    "mode": "merged-into",
+    "label": "Supply Chain Risk Management (ID.SC)",
+    "title": "Supply Chain Risk Management"
+   }
+  ]
+ }
+}

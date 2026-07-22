@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.nist.gov/csf/req/GV.SC-08",
+ "version": "2.0",
+ "label": "GV.SC-08",
+ "lifecycle": "active",
+ "title": "GV.SC-08",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Relevant suppliers and other third parties are included in incident planning, response, and recovery activities"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "GV.SC-08.103",
+     "prose": {
+      "en": "Define and use rules and protocols for reporting incident response and recovery activities and the status between the organization and its suppliers"
+     }
+    },
+    {
+     "id": "GV.SC-08.104",
+     "prose": {
+      "en": "Identify and document the roles and responsibilities of the organization and its suppliers for incident response"
+     }
+    },
+    {
+     "id": "GV.SC-08.105",
+     "prose": {
+      "en": "Include critical suppliers in incident response exercises and simulations"
+     }
+    },
+    {
+     "id": "GV.SC-08.106",
+     "prose": {
+      "en": "Define and coordinate crisis communication methods and protocols between the organization and its critical suppliers"
+     }
+    },
+    {
+     "id": "GV.SC-08.107",
+     "prose": {
+      "en": "Conduct collaborative lessons learned sessions with critical suppliers"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "3rd",
+    "remark": "3rd Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.SC-05",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.SC-05",
+    "mode": "merged-into",
+    "label": "ID.SC-05",
+    "title": "ID.SC-05",
+    "prose": "Response and recovery planning and testing are conducted with suppliers and third-party providers"
+   }
+  ]
+ }
+}

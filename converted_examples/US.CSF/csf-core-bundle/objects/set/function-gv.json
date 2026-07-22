@@ -1,0 +1,58 @@
+{
+ "id": "https://ns.nist.gov/csf/set/function/gv",
+ "version": "2.0",
+ "lifecycle": "active",
+ "title": "GOVERN",
+ "label": "GOVERN (GV)",
+ "members": [
+  {
+   "ref": "https://ns.nist.gov/csf/set/category/gv-oc",
+   "sequence": 10
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/set/category/gv-rm",
+   "sequence": 20
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/set/category/gv-rr",
+   "sequence": 30
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/set/category/gv-po",
+   "sequence": 40
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/set/category/gv-ov",
+   "sequence": 50
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/set/category/gv-sc",
+   "sequence": 60
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The organization's cybersecurity risk management strategy, expectations, and policy are established, communicated, and monitored"
+    }
+   ]
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.GV",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.GV",
+    "mode": "merged-into",
+    "label": "Governance (ID.GV)",
+    "title": "Governance"
+   }
+  ]
+ }
+}

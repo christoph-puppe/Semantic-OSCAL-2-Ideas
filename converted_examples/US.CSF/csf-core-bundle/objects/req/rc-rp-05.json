@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.nist.gov/csf/req/RC.RP-05",
+ "version": "2.0",
+ "label": "RC.RP-05",
+ "lifecycle": "active",
+ "title": "RC.RP-05",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "The integrity of restored assets is verified, systems and services are restored, and normal operating status is confirmed"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "RC.RP-05.354",
+     "prose": {
+      "en": "Check restored assets for indicators of compromise and remediation of root causes of the incident before production use"
+     }
+    },
+    {
+     "id": "RC.RP-05.355",
+     "prose": {
+      "en": "Verify the correctness and adequacy of the restoration actions taken before putting a restored system online"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

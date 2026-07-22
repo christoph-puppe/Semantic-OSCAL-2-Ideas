@@ -1,0 +1,89 @@
+{
+ "id": "https://ns.nist.gov/csf/req/PR.AT-01",
+ "version": "2.0",
+ "label": "PR.AT-01",
+ "lifecycle": "active",
+ "title": "PR.AT-01",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Personnel are provided with awareness and training so that they possess the knowledge and skills to perform general tasks with cybersecurity risks in mind"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "PR.AT-01.214",
+     "prose": {
+      "en": "Provide basic cybersecurity awareness and training to employees, contractors, partners, suppliers, and all other users of the organization's non-public resources"
+     }
+    },
+    {
+     "id": "PR.AT-01.215",
+     "prose": {
+      "en": "Train personnel to recognize social engineering attempts and other common attacks, report attacks and suspicious activity, comply with acceptable use policies, and perform basic cyber hygiene tasks (e.g., patching software, choosing passwords, protecting credentials)"
+     }
+    },
+    {
+     "id": "PR.AT-01.216",
+     "prose": {
+      "en": "Explain the consequences of cybersecurity policy violations, both to individual users and the organization as a whole"
+     }
+    },
+    {
+     "id": "PR.AT-01.217",
+     "prose": {
+      "en": "Periodically assess or test users on their understanding of basic cybersecurity practices"
+     }
+    },
+    {
+     "id": "PR.AT-01.218",
+     "prose": {
+      "en": "Require annual refreshers to reinforce existing practices and introduce new practices"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.AT-03",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/RS.CO-01",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.AT-03",
+    "mode": "merged-into",
+    "label": "PR.AT-03",
+    "title": "PR.AT-03",
+    "prose": "Third-party stakeholders (e.g., suppliers, customers, partners) understand their roles and responsibilities"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/RS.CO-01",
+    "mode": "merged-into",
+    "label": "RS.CO-01",
+    "title": "RS.CO-01",
+    "prose": "Personnel know their roles and order of operations when a response is needed"
+   }
+  ]
+ }
+}

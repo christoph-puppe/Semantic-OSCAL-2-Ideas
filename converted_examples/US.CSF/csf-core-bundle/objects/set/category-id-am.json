@@ -1,0 +1,46 @@
+{
+ "id": "https://ns.nist.gov/csf/set/category/id-am",
+ "version": "2.0",
+ "lifecycle": "active",
+ "title": "Asset Management",
+ "label": "Asset Management (ID.AM)",
+ "members": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.AM-01",
+   "sequence": 10
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.AM-02",
+   "sequence": 20
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.AM-03",
+   "sequence": 30
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.AM-04",
+   "sequence": 40
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.AM-05",
+   "sequence": 50
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.AM-07",
+   "sequence": 70
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.AM-08",
+   "sequence": 80
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Assets (e.g., data, hardware, software, systems, facilities, services, people) that enable the organization to achieve business purposes are identified and managed consistent with their relative importance to organizational objectives and the organization's risk strategy"
+    }
+   ]
+  }
+ }
+}

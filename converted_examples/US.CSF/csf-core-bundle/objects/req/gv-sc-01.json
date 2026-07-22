@@ -1,0 +1,72 @@
+{
+ "id": "https://ns.nist.gov/csf/req/GV.SC-01",
+ "version": "2.0",
+ "label": "GV.SC-01",
+ "lifecycle": "active",
+ "title": "GV.SC-01",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "A cybersecurity supply chain risk management program, strategy, objectives, policies, and processes are established and agreed to by organizational stakeholders"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "GV.SC-01.066",
+     "prose": {
+      "en": "Establish a strategy that expresses the objectives of the cybersecurity supply chain risk management program"
+     }
+    },
+    {
+     "id": "GV.SC-01.067",
+     "prose": {
+      "en": "Develop the cybersecurity supply chain risk management program, including a plan (with milestones), policies, and procedures that guide implementation and improvement of the program, and share the policies and procedures with the organizational stakeholders"
+     }
+    },
+    {
+     "id": "GV.SC-01.068",
+     "prose": {
+      "en": "Develop and implement program processes based on the strategy, objectives, policies, and procedures that are agreed upon and performed by the organizational stakeholders"
+     }
+    },
+    {
+     "id": "GV.SC-01.069",
+     "prose": {
+      "en": "Establish a cross-organizational mechanism that ensures alignment between functions that contribute to cybersecurity supply chain risk management, such as cybersecurity, IT, operations, legal, human resources, and engineering"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "3rd",
+    "remark": "3rd Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.SC-01",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.SC-01",
+    "mode": "merged-into",
+    "label": "ID.SC-01",
+    "title": "ID.SC-01",
+    "prose": "Cyber supply chain risk management processes are identified, established, assessed, managed, and agreed to by organizational stakeholders"
+   }
+  ]
+ }
+}

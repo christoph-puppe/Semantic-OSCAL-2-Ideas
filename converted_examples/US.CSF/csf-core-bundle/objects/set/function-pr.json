@@ -1,0 +1,38 @@
+{
+ "id": "https://ns.nist.gov/csf/set/function/pr",
+ "version": "2.0",
+ "lifecycle": "active",
+ "title": "PROTECT",
+ "label": "PROTECT (PR)",
+ "members": [
+  {
+   "ref": "https://ns.nist.gov/csf/set/category/pr-aa",
+   "sequence": 10
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/set/category/pr-at",
+   "sequence": 20
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/set/category/pr-ds",
+   "sequence": 30
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/set/category/pr-ps",
+   "sequence": 40
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/set/category/pr-ir",
+   "sequence": 50
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Safeguards to manage the organization's cybersecurity risks are used"
+    }
+   ]
+  }
+ }
+}

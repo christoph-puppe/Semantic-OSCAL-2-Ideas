@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.nist.gov/csf/req/RC.RP-01",
+ "version": "2.0",
+ "label": "RC.RP-01",
+ "lifecycle": "active",
+ "title": "RC.RP-01",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "The recovery portion of the incident response plan is executed once initiated from the incident response process"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "RC.RP-01.346",
+     "prose": {
+      "en": "Begin recovery procedures during or after incident response processes"
+     }
+    },
+    {
+     "id": "RC.RP-01.347",
+     "prose": {
+      "en": "Make all individuals with recovery responsibilities aware of the plans for recovery and the authorizations required to implement each aspect of the plans"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

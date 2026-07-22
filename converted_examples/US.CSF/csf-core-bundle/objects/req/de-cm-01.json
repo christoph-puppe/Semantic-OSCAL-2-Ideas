@@ -1,0 +1,100 @@
+{
+ "id": "https://ns.nist.gov/csf/req/DE.CM-01",
+ "version": "2.0",
+ "label": "DE.CM-01",
+ "lifecycle": "active",
+ "title": "DE.CM-01",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Networks and network services are monitored to find potentially adverse events"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "DE.CM-01.271",
+     "prose": {
+      "en": "Monitor DNS, BGP, and other network services for adverse events"
+     }
+    },
+    {
+     "id": "DE.CM-01.272",
+     "prose": {
+      "en": "Monitor wired and wireless networks for connections from unauthorized endpoints"
+     }
+    },
+    {
+     "id": "DE.CM-01.273",
+     "prose": {
+      "en": "Monitor facilities for unauthorized or rogue wireless networks"
+     }
+    },
+    {
+     "id": "DE.CM-01.274",
+     "prose": {
+      "en": "Compare actual network flows against baselines to detect deviations"
+     }
+    },
+    {
+     "id": "DE.CM-01.275",
+     "prose": {
+      "en": "Monitor network communications to identify changes in security postures for zero trust purposes"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/DE.CM-04",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/DE.CM-05",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/DE.CM-07",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/DE.CM-04",
+    "mode": "merged-into",
+    "label": "DE.CM-04",
+    "title": "DE.CM-04",
+    "prose": "Malicious code is detected"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/DE.CM-05",
+    "mode": "merged-into",
+    "label": "DE.CM-05",
+    "title": "DE.CM-05",
+    "prose": "Unauthorized mobile code is detected"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/DE.CM-07",
+    "mode": "merged-into",
+    "label": "DE.CM-07",
+    "title": "DE.CM-07",
+    "prose": "Monitoring for unauthorized personnel, connections, devices, and software is performed"
+   }
+  ]
+ }
+}

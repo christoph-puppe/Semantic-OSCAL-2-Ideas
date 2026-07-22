@@ -1,0 +1,100 @@
+{
+ "id": "https://ns.nist.gov/csf/req/PR.DS-01",
+ "version": "2.0",
+ "label": "PR.DS-01",
+ "lifecycle": "active",
+ "title": "PR.DS-01",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "The confidentiality, integrity, and availability of data-at-rest are protected"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "PR.DS-01.223",
+     "prose": {
+      "en": "Use encryption, digital signatures, and cryptographic hashes to protect the confidentiality and integrity of stored data in files, databases, virtual machine disk images, container images, and other resources"
+     }
+    },
+    {
+     "id": "PR.DS-01.224",
+     "prose": {
+      "en": "Use full disk encryption to protect data stored on user endpoints"
+     }
+    },
+    {
+     "id": "PR.DS-01.225",
+     "prose": {
+      "en": "Confirm the integrity of software by validating signatures"
+     }
+    },
+    {
+     "id": "PR.DS-01.226",
+     "prose": {
+      "en": "Restrict the use of removable media to prevent data exfiltration"
+     }
+    },
+    {
+     "id": "PR.DS-01.227",
+     "prose": {
+      "en": "Physically secure removable media containing unencrypted sensitive information, such as within locked offices or file cabinets"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.DS-05",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.DS-06",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.PT-02",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.DS-05",
+    "mode": "merged-into",
+    "label": "PR.DS-05",
+    "title": "PR.DS-05",
+    "prose": "Protections against data leaks are implemented"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.DS-06",
+    "mode": "merged-into",
+    "label": "PR.DS-06",
+    "title": "PR.DS-06",
+    "prose": "Integrity checking mechanisms are used to verify software, firmware, and information integrity"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.PT-02",
+    "mode": "merged-into",
+    "label": "PR.PT-02",
+    "title": "PR.PT-02",
+    "prose": "Removable media is protected and its use restricted according to policy"
+   }
+  ]
+ }
+}

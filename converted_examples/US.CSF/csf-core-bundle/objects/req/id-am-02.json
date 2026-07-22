@@ -1,0 +1,49 @@
+{
+ "id": "https://ns.nist.gov/csf/req/ID.AM-02",
+ "version": "2.0",
+ "label": "ID.AM-02",
+ "lifecycle": "active",
+ "title": "ID.AM-02",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Inventories of software, services, and systems managed by the organization are maintained"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "ID.AM-02.122",
+     "prose": {
+      "en": "Maintain inventories for all types of software and services, including commercial-off-the-shelf, open-source, custom applications, API services, and cloud-based applications and services"
+     }
+    },
+    {
+     "id": "ID.AM-02.123",
+     "prose": {
+      "en": "Constantly monitor all platforms, including containers and virtual machines, for software and service inventory changes"
+     }
+    },
+    {
+     "id": "ID.AM-02.124",
+     "prose": {
+      "en": "Maintain an inventory of the organization's systems"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

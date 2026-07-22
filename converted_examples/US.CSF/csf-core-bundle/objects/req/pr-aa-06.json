@@ -1,0 +1,77 @@
+{
+ "id": "https://ns.nist.gov/csf/req/PR.AA-06",
+ "version": "2.0",
+ "label": "PR.AA-06",
+ "lifecycle": "active",
+ "title": "PR.AA-06",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Physical access to assets is managed, monitored, and enforced commensurate with risk"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "PR.AA-06.211",
+     "prose": {
+      "en": "Use security guards, security cameras, locked entrances, alarm systems, and other physical controls to monitor facilities and restrict access"
+     }
+    },
+    {
+     "id": "PR.AA-06.212",
+     "prose": {
+      "en": "Employ additional physical security controls for areas that contain high-risk assets"
+     }
+    },
+    {
+     "id": "PR.AA-06.213",
+     "prose": {
+      "en": "Escort guests, vendors, and other third parties within areas that contain business-critical assets"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.AC-02",
+   "mode": "renamed"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.PT-04",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.AC-02",
+    "mode": "renamed",
+    "label": "PR.AC-02",
+    "title": "PR.AC-02",
+    "prose": "Physical access to assets is managed and protected"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.PT-04",
+    "mode": "merged-into",
+    "label": "PR.PT-04",
+    "title": "PR.PT-04",
+    "prose": "Communications and control networks are protected"
+   }
+  ]
+ }
+}
