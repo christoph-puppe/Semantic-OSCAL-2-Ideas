@@ -10,9 +10,9 @@
  "objects": {
   "requirements(rules+ksi)": 292,
   "mappings": 373,
-  "sets": 100,
+  "sets": 91,
   "tailorings": 4,
-  "total": 769
+  "total": 760
  },
  "modality(rule-level)": {
   "must": 136,
@@ -29,8 +29,8 @@
  "counters": {
   "updated-entries": 377,
   "class-variant-rules": 29,
-  "timeframe-unitclass-crossings": 51,
-  "undeclared-subsets": 9,
+  "timeframe-variant-only": 51,
+  "track-declared-subsets": 9,
   "track-rules-rev5": 12,
   "track-rules-20x": 9,
   "flows-dropped": 1,
@@ -1078,37 +1078,37 @@
    "path": "cr26.FRR.*.info.20x.subsets.*.applicability.affects[]",
    "count": 4,
    "level": "L1",
-   "destination": "effectivity@1 on family Set (default / per-track)"
+   "destination": "framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153]"
   },
   {
    "path": "cr26.FRR.*.info.20x.subsets.*.applicability.classes[]",
    "count": 13,
    "level": "L1",
-   "destination": "effectivity@1 on family Set (default / per-track)"
+   "destination": "framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153]"
   },
   {
    "path": "cr26.FRR.*.info.20x.subsets.*.applicability.paths[]",
    "count": 4,
    "level": "L1",
-   "destination": "effectivity@1 on family Set (default / per-track)"
+   "destination": "framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153]"
   },
   {
    "path": "cr26.FRR.*.info.20x.subsets.*.applicability.types[]",
    "count": 4,
    "level": "L1",
-   "destination": "effectivity@1 on family Set (default / per-track)"
+   "destination": "framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153]"
   },
   {
    "path": "cr26.FRR.*.info.20x.subsets.*.description",
    "count": 4,
    "level": "L1",
-   "destination": "effectivity@1 on family Set (default / per-track)"
+   "destination": "framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153]"
   },
   {
    "path": "cr26.FRR.*.info.20x.subsets.*.name",
    "count": 4,
    "level": "L1",
-   "destination": "effectivity@1 on family Set (default / per-track)"
+   "destination": "framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153]"
   },
   {
    "path": "cr26.FRR.*.info.effective.current_status",
@@ -1288,37 +1288,37 @@
    "path": "cr26.FRR.*.info.rev5.subsets.*.applicability.affects[]",
    "count": 5,
    "level": "L1",
-   "destination": "effectivity@1 on family Set (default / per-track)"
+   "destination": "framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153]"
   },
   {
    "path": "cr26.FRR.*.info.rev5.subsets.*.applicability.classes[]",
    "count": 16,
    "level": "L1",
-   "destination": "effectivity@1 on family Set (default / per-track)"
+   "destination": "framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153]"
   },
   {
    "path": "cr26.FRR.*.info.rev5.subsets.*.applicability.paths[]",
    "count": 10,
    "level": "L1",
-   "destination": "effectivity@1 on family Set (default / per-track)"
+   "destination": "framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153]"
   },
   {
    "path": "cr26.FRR.*.info.rev5.subsets.*.applicability.types[]",
    "count": 5,
    "level": "L1",
-   "destination": "effectivity@1 on family Set (default / per-track)"
+   "destination": "framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153]"
   },
   {
    "path": "cr26.FRR.*.info.rev5.subsets.*.description",
    "count": 5,
    "level": "L1",
-   "destination": "effectivity@1 on family Set (default / per-track)"
+   "destination": "framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153]"
   },
   {
    "path": "cr26.FRR.*.info.rev5.subsets.*.name",
    "count": 5,
    "level": "L1",
-   "destination": "effectivity@1 on family Set (default / per-track)"
+   "destination": "framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153]"
   },
   {
    "path": "cr26.FRR.*.info.short_name",

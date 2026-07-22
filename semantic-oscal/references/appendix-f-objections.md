@@ -294,3 +294,23 @@ silent divergences — forking-to-amend at any scale. **What landed:**
 the supplement pattern was genuinely missing from the book. It is now
 §6.A, a glossary entry, and a backlog item to give the pattern a
 normative name in the specification.
+
+---
+
+**Field addendum (2026-07-20) — the first punch from the field.** Hours
+after the CR26 findings went to the FedRAMP community (discussion
+#153), the program's director replied personally: the "nine undeclared
+subsets" were a structural misunderstanding on our side — framework-
+specific subsets are declared in `info.20x.subsets` /
+`info.rev5.subsets`, exactly as the repository's own AGENTS.md
+instructs ("global by default, specific when needed"), an instruction
+our post had cited without following. Verified by re-run: zero
+undeclared; all nine carry full names, descriptions, and
+applicability. The diff shipped the same day — the converter now reads
+the framework-specific declarations, which *improved* the bundle
+(real titles and scope facets on the track Sets, class Sets enriched
+by their declared applicability) — and the withdrawn finding, the
+downgraded statistics, and the correction are on the public record in
+the thread. The house rule survived first contact with the field:
+the answer to a good objection is a diff — including when the
+objection comes from the director of the program you measured.

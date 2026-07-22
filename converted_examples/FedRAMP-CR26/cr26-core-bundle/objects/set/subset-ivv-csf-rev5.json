@@ -2,8 +2,8 @@
  "id": "https://ns.fedramp.gov/cr26/set/subset/ivv-csf-rev5",
  "version": "2026.07.14.01",
  "lifecycle": "active",
- "title": "CSF (rev5-specific)",
- "label": "CSF-rev5",
+ "title": "Rev5-Specific Provider Responsibilities",
+ "label": "CSF",
  "members": [
   {
    "ref": "https://ns.fedramp.gov/cr26/req/IVV-CSF-AIA",
@@ -21,5 +21,27 @@
    "ref": "https://ns.fedramp.gov/cr26/req/IVV-CSF-PCA",
    "sequence": 40
   }
- ]
+ ],
+ "facets": {
+  "https://ns.fedramp.gov/cr26/facet/narrative@1": {
+   "description": "These rules apply to providers for FedRAMP Rev5 Certifications."
+  },
+  "https://ns.fedramp.gov/cr26/facet/scope@1": {
+   "types": [
+    "Rev5"
+   ],
+   "paths": [
+    "Program",
+    "Agency"
+   ],
+   "classes": [
+    "B",
+    "C",
+    "D"
+   ],
+   "affects": [
+    "Providers"
+   ]
+  }
+ }
 }
