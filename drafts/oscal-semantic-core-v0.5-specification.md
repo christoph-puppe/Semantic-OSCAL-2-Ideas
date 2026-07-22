@@ -677,7 +677,11 @@ replaces; NIST IR 8477 / OLIR (relationship semantics).
    #10).
 4. Measured complexity comparison vs. an OSCAL 1.2.2 validator + resolver
    (two languages, LoC, contributor-hours) — the weekend-validator
-   acceptance test.
+   acceptance test. In scope here (folded from review round 2,
+   2026-07-21): the **bidirectional export test suite** — Semantic Core
+   objects compile to syntactically valid OSCAL 1.2.2 JSON for the
+   supported corpus and the round-trip is verified mechanically;
+   down-conversion moves from *designed-for* to *measured*.
 
 ## IV.6 Changelog v0.4 → v0.5
 

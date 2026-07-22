@@ -317,3 +317,38 @@ downgraded statistics, and the correction are on the public record in
 the thread. The house rule survived first contact with the field:
 the answer to a good objection is a diff — including when the
 objection comes from the director of the program you measured.
+
+## F.7 Second external-review round — the deep-research pass (2026-07-21)
+
+A full-repository deep-research review (on the record as
+`DEEP_RESEARCH_REVIEW.md` at the repo root, eleven dimensions) arrived
+the same day gate item 2 shipped. Adjudicated the standing way — every
+punch that lands becomes a diff, every miss gets a count:
+
+**Landed (four items).** (1) `calendar-period`'s fail-closed rule is
+correct but *lonely*: no shared calendar registry exists — the CR26
+converter minted `us-federal` ad hoc on 16 objects → backlog #13, a
+stdlib `calendar-context` code system. (2) `canonical-alias` asserts
+same-content and same-content is *checkable* (semantic digests
+compared modulo the identity fields), yet nothing required the check
+→ backlog #14, the rebrand claim becomes self-policing. (3)
+Down-conversion to OSCAL 1.2.2 was designed-for, unmeasured → folded
+into the gate-4 scope as a mechanical export test suite. (4) Template
+pins make render-tampering detectable, but nobody *accredits*
+templates → backlog #15, ch15 names an owner or an explicit non-goal.
+
+**Refuted by measurement (one claim pair).** The review's Dimension 8
+asserts a "50–70 % payload reduction" and "~60 % fewer LLM tokens."
+Neither number appears in this project's evidence, and the size claim
+was measured false the same evening: ISM source 2,545,493 B → bundle
+objects 1,808,397 B (−29 %); GS++ 5,389,844 B → 2,694,940 B (−50 %);
+CR26 567,435 B → 877,640 B (**+55 %** — bespoke JSON becomes 760
+objects each carrying identity boilerplate). What this project claims,
+measured: >70 % of legacy prop *instances* are structurally dead.
+Byte size is mixed by construction; token counts are unmeasured.
+Neither Dimension-8 figure may be quoted as a project claim — the
+erratum culture applies to flattering numbers most of all.
+
+**Already overtaken at arrival.** The review listed the executable
+schemas and backlog #6 as pending; both had shipped hours earlier
+(gate item 2). Timing artifact, not error.
