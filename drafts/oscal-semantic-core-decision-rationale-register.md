@@ -739,6 +739,39 @@ use of the hard-coded strict stdlib descriptors is the interim (stricter
 than the pinned stub, and divergent from a pin-honoring sealed tool —
 the gap #26 tracks). **Open**, tied to the rerun.
 
+## D9 (rev 2) — The `text` primitive: human-readable fields are language maps *(backlog #12; author decision 2026-07-22)*
+**Decision.** Adopt a `text` primitive — `{BCP-47: string}` — for every
+kernel human-readable field (`title` on all nine types, Mapping
+`rationale`, Finding/action and capability `description`,
+`deviation.rationale`) and, normatively, for facet-payload free text.
+Identifiers stay plain strings (`id`, `version`, codes, and `label` — a
+display handle, never a translation target). This **generalizes and
+names the existing `langMap`** (already carried by `prose` and choice
+labels); it is not new machinery. **Delivery** — the schema field-switch
++ all-converter reruns + full re-pin — rides the converter rerun (the
+digest churn folds into one re-pin, not two); a transitional
+string-or-`text` schema MAY bridge the window. Stays open until delivered.
+**Customer.** **EU standards must be available in all 27 official
+languages** — the incoming NIS2 / DORA / CRA wave is published in 27
+languages by law, and a `title` or `rationale` that cannot declare its
+language is unrenderable for that reality. The defect is already
+measured: the converters disagreed for want of a rule (BSI guidance
+tagged ×1,004 vs. CR26 `description` bare ×180; ISM shipped 300 bare
+`prose` beside 1,150 tagged), and `title` ×3,041 + Mapping `rationale`
+×373 are bare today. `prose` already committed the design to
+language-tagging; leaving the rest bare was the inconsistency, not a
+considered exception.
+**Simplicity.** One text type everywhere: human-readable → `text`,
+identifier/code → string. Nothing new to learn — `langMap` promoted.
+**Complexity ↓.** Ends the tagged-vs-bare ambiguity the converters kept
+re-litigating; "which language is this, and what still needs
+translating?" becomes a checkable question, not a guess — the same
+make-the-failure-unrepresentable discipline the rest of the kernel runs on.
+**Trade-off.** A full re-pin (nearly every object carries a `title`),
+folded into the converter rerun. Single-language authorities write
+`{"en": "…"}` for titles — the ceremony `prose` already imposes, now
+uniform.
+
 ## Round-2 backlog dispositions
 
 | Backlog | Disposition |
@@ -755,6 +788,6 @@ the gap #26 tracks). **Open**, tied to the rerun.
 | #26 | **Partial** — decision recorded; real pinned schemas + pin-honoring **stay open** on the converter rerun |
 | #27 | **Close** — decimal no-leading-zeros + scale-significance (D3 rev) + 2 vectors |
 | #28 | **Close** — count erratum applied (README/spec → 125; recompute via validate_core.py) |
-| #12 | **Open — needs author decision.** The kernel `text` primitive `{BCP-47: string}` for human-text fields is a NEW kernel primitive touching every human-text field + all converters (blast radius across the schema and 8 converters). Not decided unilaterally; recommendation: adopt it (the field inventory + payload harmonization already shipped for ISM/CR26, backlog #12 evidence), but the go-ahead and the BSI-rerun sequencing are the author's call. |
+| #12 | **DECIDED — adopt** (author decision 2026-07-22; register "D9 rev 2"). Rationale: **EU standards must be available in all 27 official languages.** `text` = `{BCP-47: string}` for all human-readable fields; identifiers stay strings. Delivery (schema field-switch + all-converter reruns + full re-pin) rides the converter rerun — stays open until delivered. |
 | #10 | **Open** — gate 3 (NIST catalog); see `drafts/gate-3-plan.md` |
 | #18 | **Open** — gate 4 (engines: bundle-composition semver + conditional-apply vectors) |
