@@ -25,9 +25,19 @@ def make_T(lang, counter=None):
 def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", (s or "").lower()).strip("-")[:60] or "x"
 
+def _canon(o):
+    """RFC 8785 member ordering: keys sorted by UTF-16 code units, not code
+    points (P9b-3). Identical to sort_keys for ASCII keys - all shipped
+    bundles - but correct for astral-plane keys where the two orders differ."""
+    if isinstance(o, dict):
+        return {k: _canon(o[k]) for k in sorted(o.keys(), key=lambda s: s.encode("utf-16-be"))}
+    if isinstance(o, list):
+        return [_canon(x) for x in o]
+    return o
+
 def semantic_digest(obj):
     o = copy.deepcopy(obj); o.pop("annotations", None)
-    c = json.dumps(o, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
+    c = json.dumps(_canon(o), separators=(",", ":"), ensure_ascii=False).encode("utf-8")
     return "sha256:" + hashlib.sha256(c).hexdigest()
 
 class Bundle:

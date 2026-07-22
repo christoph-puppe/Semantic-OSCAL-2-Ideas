@@ -211,7 +211,9 @@ Correct, and the specification says so on its cover — "well-supported
 architecture hypothesis," claims narrowed to evidence tier, with the
 v0.6 gate defining exactly what execution must prove. What exists is
 not users but *user-shaped data*: three governments' complete corpora
-at 100 % declared coverage, 93,259 values, and every design decision
+at 100 % declared coverage — 92,886 values across the three current
+census bundles (the oft-cited 93,259 was the pre-MS-TLS-drop census
+total; the eight-corpus total is 130,350) — and every design decision
 traceable to something an authority shipped. That is more empirical
 grounding than most 1.0s carry; it is still a hypothesis, and the
 gate is where hypotheses go to become claims or die.
@@ -352,3 +354,61 @@ erratum culture applies to flattering numbers most of all.
 **Already overtaken at arrival.** The review listed the executable
 schemas and backlog #6 as pending; both had shipped hours earlier
 (gate item 2). Timing artifact, not error.
+
+## F.8 Third round — the P9 twin adversarial runs (2026-07-21)
+
+The project's own P9 prompt (`drafts/oscal-semantic-core-p9-review-prompt.md`)
+ran twice, independently — run 1 fresh, run 2 with disclosed limitations
+and a concordance section. Two runs of one prompt make agreements
+replication evidence; both reports are in `drafts/`, both adjudicated
+same-day. The joint verdict, in their own words: *the executable layer
+currently proves less than the prose says it proves; none of it is
+architectural; every item has a named corpse and a countable fix.*
+
+**Fixed in the P9 cycle (same day):**
+canonicalization moved to RFC 8785 UTF-16 member ordering in validator,
+converter lib, and both legacy converters — with a regression vector;
+digests re-pinned (ASCII keys made old and new orders coincide, so only
+code changed, not shipped digests) [P9b-3, which overturned run 1's
+"attack surface 10 — no finding"]. Validator gains `unique-within`
+(duplicate statement ids; duplicate object ids — the twin-catalog corpse)
+and Set-member closure (14,508/14,508 close) [P9b-2, P9b-1 corner].
+Schema gains the four missing operation conditionals and the set-field
+whitelist as an enum; spec D13 table gains its two missing rows
+[P9b-2/P9b-5]. CR26 bundle re-pinned with the promoted declarations
+[P9b-9]. B.3's detach corpse re-named to assessment-criteria
+[P9b-8 — the D.12 audit's `[]` for grammar stands]. The erratum sweep
+landed: register arity three→four with the folding made explicit
+[P9-0/P9b-14], 5,470-vs-5,478 decomposition [P9-6/P9b-12], 216→213
+census/corpus split, 93,259→92,886, twenty-one→twenty-two, ch01's
+"days" labeled designed-for [P9-7], B.1.1's closure claim re-scoped,
+IV.5.2's orphaned parked items re-parked, and the deep-research file
+now opens with its own erratum banner [P9b-13]. Bonus find by the
+triage itself: `bsi-coverage-report.json` had been written in cp1252
+(a Windows default-encoding bug in three converters) — fixed, rerun.
+
+**Entered the backlog with counts:** #16 reference taxonomy [P9b-1 —
+the round's Blocker: B.1.1's normative text condemned the shipped
+corpus], #17 facet-payload validation + unregistered-facet fail-closed
+[run 1's Blocker P9-1: the valid-and-meaningless rebirth demonstration],
+#18 conformance expansion + the missing DSSE profile [P9-2 + P9b-7],
+#19 tailoring tier anchor [P9b-6], #20 relations coherence incl. C.8
+`supersedes` vs. the D2 split [P9b-4], #21 Set addressing [P9b-5
+remainder], #22 D22 demotion vs. closed shapes [P9b-10], #23
+nearest-Set tiebreak [P9b-11].
+
+**Adjudicated against the reviews:** run 1's P9-5 re-raises adjudicated
+backlog #13 with no new evidence — a priority statement, not a finding
+(run 2's concordance says the same). Run 2's P9b-5 sub-claim that
+`override` "appears in no spec/handbook text" is wrong — Appendix A.3
+documents it ("chaining only via explicit `override`"); the row stands
+for the D13-side gap only. Run 1's P9-3 ("model held without kernel
+changes" overstated) is accepted with one correction: the D9-rev
+label/default decision predates the validation conversions and was
+evidenced by the census corpus (BSI ×179), not forced by the validation
+targets — the README line now says exactly that.
+
+The pattern across three rounds holds: the punches that land get diffs
+the same day, the misses get counts, and each round's sharpest finding
+came from running code against the repo — which is the whole thesis,
+applied to the thesis.

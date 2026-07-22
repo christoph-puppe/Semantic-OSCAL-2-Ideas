@@ -1,3 +1,12 @@
+> **ERRATUM (2026-07-21, project adjudication — Appendix F.7/F.8).** This
+> review is on the record as received. Two of its Dimension-8 figures are
+> **refuted by measurement**: "50–70 % payload reduction" (measured: ISM
+> −29 %, GS++ −50 %, CR26 **+55 %**) and "~60 % fewer LLM tokens"
+> (unmeasured by anyone). Its "93,259 values" is the pre-drop census total
+> — the 8-corpus total in its own table is 130,350. Do not quote these
+> numbers as project claims. Full adjudication:
+> `semantic-oscal/references/appendix-f-objections.md` §F.7.
+
 # Comprehensive Deep Research & Technical Review: Semantic OSCAL (v0.5 Specification)
 
 **Date:** 2026-07-21  

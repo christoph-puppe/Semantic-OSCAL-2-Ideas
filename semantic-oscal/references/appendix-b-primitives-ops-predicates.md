@@ -37,8 +37,13 @@ FAIL [references-resolve] <object-id>
   an unresolvable reference is the publisher's defect, surfaced now
   rather than in a consumer's pipeline.
 ```
-**Exercised:** at scale — all three converter bundles close (3,066
-objects); the example bundle documents the break-it recipe.
+**Exercised:** at scale — all nine bundles close over the
+closure-required reference class: Set members resolve in-bundle 14,508/
+14,508 (5,470 objects at HEAD; the original "3,066" predates the
+validation corpora). Mapping endpoints and party URIs are LANDMARK
+references — resolvable outside the bundle by design; the normative
+reference taxonomy that states this split is backlog #16 (P9b-1). The
+example bundle documents the break-it recipe.
 
 ### 2 · `digest-verified` — package domain · *all tiers*
 
@@ -280,9 +285,13 @@ Failure names edge, type, and — for removals — the missing Deviation.
 
 **`attach-facet` / `detach-facet`** — law: attaching or detaching a
 facet whose declared `modifies-semantics` is non-empty ⇒ Deviation;
-chrome-class facets move freely. Corpse: detaching the grammar facet
-from a German requirement *changes what assessors check* — that's a
-semantic act wearing a housekeeping costume. Failure:
+chrome-class facets move freely. Corpse: detaching the
+assessment-criteria facet from a German requirement *changes what
+assessors check* — that's a semantic act wearing a housekeeping
+costume. (P9b-8 erratum: an earlier draft named the grammar facet here;
+`statement-grammar@1` declares `[]` per the D.12 audit —
+chrome-for-computation — so this law never fires on it. The corpse
+belongs to a declared `[assessment]` facet.) Failure:
 ```
 FAIL [op:detach-facet] <req>  facet <uri>@<major>
   facet declares modifies-semantics [<classes>]; detach without

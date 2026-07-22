@@ -261,13 +261,17 @@ becomes *unrepresentable* rather than undetectable. The document
 conventions of any one framework — including NIST's — would have to
 leave the core and bind only their own content. And all of it would have
 to be implementable by a competent developer in days, in any language,
-offline, because the alternative is the monoculture we just costed.
+offline, because the alternative is the monoculture we just costed —
+a *designed-for* claim until the gate-4 measurement lands, and labeled
+so here (P9 erratum).
 
 That list has a name in this book: the **north star**, four tests every
 design decision must pass — *simpler; closer to the measured needs of the
 customers; no more props; less need for custom meta-language extensions
 or bespoke JSON.* The Decision Rationale Register scores all
-twenty-one architectural decisions against exactly those four tests, and
+twenty-two architectural decisions against exactly those four tests
+(presented there as three scoring axes — the two complexity tests fold
+into one), and
 the specification documents every alternative that failed them, including
 the reviewer suggestions this project rejected and why.
 

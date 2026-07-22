@@ -325,7 +325,7 @@ j={"sources":[{"key":k,"title":t,"version":v} for k,t,v,_ in catalogs_meta],
         if t.replace(" ","-") in tag_values and " " in t},
    "unmapped-paths":[{"path":p,"count":n} for p,n in unmapped],
    "path-map":[{"path":p,"count":n,"level":l,"destination":t} for p,n,l,t in rows]}
-json.dump(j,open(RJS,"w"),ensure_ascii=False,indent=1)
+json.dump(j,open(RJS,"w",encoding="utf-8"),ensure_ascii=False,indent=1)
 
 md=[f"# BSI Grundschutz++ -> Semantic Core: Coverage Report (computed)\n"]
 md.append("Source: " + " · ".join(f"**{t}** v{v}" for _,t,v,_ in catalogs_meta)

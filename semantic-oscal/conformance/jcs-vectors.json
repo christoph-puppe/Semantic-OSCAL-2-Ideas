@@ -26,6 +26,13 @@
       "sha256": null
     },
     {
+      "name": "utf16-code-unit-key-ordering-not-codepoint",
+      "input": { "ﬁ-ligature": 1, "😀-emoji": 2 },
+      "canonical": "{\"😀-emoji\":2,\"ﬁ-ligature\":1}",
+      "sha256": null,
+      "note": "RFC 8785 §3.2.3 orders members by UTF-16 code units: U+1F600 serializes as the surrogate pair D83D DE00, whose first unit (0xD83D) sorts BEFORE U+FB01 — the reverse of code-point order. Two tools MUST derive identical digests (D3.4); this vector is the P9b-3 regression guard."
+    },
+    {
       "name": "nested-arrays-order-preserved",
       "input": { "members": [ { "ref": "b" }, { "ref": "a" } ] },
       "canonical": "{\"members\":[{\"ref\":\"b\"},{\"ref\":\"a\"}]}",

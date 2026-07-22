@@ -27,9 +27,16 @@ def w(path, obj):
 def sha_file(path):
     return "sha256:" + hashlib.sha256(open(os.path.join(OUT, path), "rb").read()).hexdigest()
 
+def _canon(o):
+    if isinstance(o, dict):
+        return {k: _canon(o[k]) for k in sorted(o.keys(), key=lambda s: s.encode("utf-16-be"))}
+    if isinstance(o, list):
+        return [_canon(x) for x in o]
+    return o
+
 def semantic_digest(obj):
     o = copy.deepcopy(obj); o.pop("annotations", None)
-    c = json.dumps(o, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode("utf-8")
+    c = json.dumps(_canon(o), separators=(",", ":"), ensure_ascii=False).encode("utf-8")
     return "sha256:" + hashlib.sha256(c).hexdigest()
 
 def slug(s):
@@ -287,7 +294,7 @@ j = {"source": SRC, "source-version": version,
      "empty-narrative-groups-skipped": empty_groups,
      "unmapped-paths": [{"path": p, "count": n} for p, n in unmapped],
      "path-map": [{"path": p, "count": n, "level": l, "destination": t} for p, n, l, t in rows]}
-json.dump(j, open(REPORT_JSON, "w"), indent=1)
+json.dump(j, open(REPORT_JSON, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
 
 md = []
 md.append(f"# ISM -> Semantic Core: Coverage Report (computed)\n")
