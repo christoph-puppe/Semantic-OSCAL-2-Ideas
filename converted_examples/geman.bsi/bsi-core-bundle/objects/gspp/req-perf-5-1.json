@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/PERF.5.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "PERF.5.1",
  "lifecycle": "active",
  "title": "Methoden und Tools",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "perf.5.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßigen"
     }
    ]
   }
@@ -53,7 +54,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "perf.5.1-prm1": {
-     "label": "regelmäßigen",
      "alt-identifier": "17e221bd-3b74-453a-ad4e-e2cb346b6af5"
     }
    }

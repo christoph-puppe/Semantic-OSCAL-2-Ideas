@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/REA.1.3",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "REA.1.3",
  "lifecycle": "active",
  "title": "Übungen zur Vorfallsbehandlung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "rea.1.3-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -78,7 +79,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "rea.1.3-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "3dc90c0b-c5bb-49e1-bb56-10397acc8be9"
     }
    }

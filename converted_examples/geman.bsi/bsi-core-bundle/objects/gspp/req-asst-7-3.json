@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/ASST.7.3",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "ASST.7.3",
  "lifecycle": "active",
  "title": "Geregeltes Löschen oder Vernichten",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "asst.7.3-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "kryptografisches löschen, überschreiben oder vernichten des Speichermediums"
     }
    ]
   },
@@ -33,11 +34,13 @@
    "parameters": [
     {
      "name": "asst.7.3.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einem anerkannten Standard"
     },
     {
      "name": "asst.7.3.1-prm2",
-     "type": "string"
+     "type": "string",
+     "label": "einer Sicherheitsstufe"
     }
    ]
   },
@@ -63,7 +66,8 @@
    "parameters": [
     {
      "name": "asst.7.3.3-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "eine vom BSI zugelassene Löschanwendung"
     }
    ]
   }
@@ -236,19 +240,15 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "asst.7.3-prm1": {
-     "label": "kryptografisches löschen, überschreiben oder vernichten des Speichermediums",
      "alt-identifier": "7dc77e01-b62b-4e7f-bb4c-d9c67551d8fa"
     },
     "asst.7.3.1-prm1": {
-     "label": "einem anerkannten Standard",
      "alt-identifier": "93178616-6931-48e6-aee7-d51742868d4f"
     },
     "asst.7.3.1-prm2": {
-     "label": "einer Sicherheitsstufe",
      "alt-identifier": "93178616-6931-48e6-aee7-d51742868d4f"
     },
     "asst.7.3.3-prm1": {
-     "label": "eine vom BSI zugelassene Löschanwendung",
      "alt-identifier": "2fe24be6-1c6b-4a72-8f40-263e1cffc815"
     }
    }

@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/GEB.9.6",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "GEB.9.6",
  "lifecycle": "active",
  "title": "Zugang zu Räumen für technische Infrastruktur",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "geb.9.6-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "für den Betrieb zuständige Personen oder Rollen"
     }
    ]
   }
@@ -78,7 +79,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "geb.9.6-prm1": {
-     "label": "für den Betrieb zuständige Personen oder Rollen",
      "alt-identifier": "7260f1aa-7b3b-42aa-a4f2-c85bd8047a4b"
     }
    }

@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/NOT.4.5",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "NOT.4.5",
  "lifecycle": "active",
  "title": "Archivierung langfristig benötigter Daten",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "not.4.5-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   },
@@ -33,7 +34,8 @@
    "parameters": [
     {
      "name": "not.4.5.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   },
@@ -49,7 +51,8 @@
    "parameters": [
     {
      "name": "not.4.5.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -184,15 +187,12 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "not.4.5-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "90012325-5827-4ad9-bee7-6877a37cecfe"
     },
     "not.4.5.1-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "5fda3188-8ad6-4981-953c-975696be1bfc"
     },
     "not.4.5.2-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "c8feda1f-4d2c-4831-9822-04be256e9e51"
     }
    }

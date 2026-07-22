@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BER.3.7",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BER.3.7",
  "lifecycle": "active",
  "title": "Autorisierung neuer Zugangskonten",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "ber.3.7-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "bestimmte Personen oder Rollen"
     }
    ]
   }
@@ -80,7 +81,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "ber.3.7-prm1": {
-     "label": "bestimmte Personen oder Rollen",
      "alt-identifier": "48b77493-1bc3-4296-9e77-0460841d6914"
     }
    }

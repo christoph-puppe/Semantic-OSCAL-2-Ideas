@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.3.6",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.3.6",
  "lifecycle": "active",
  "title": "Unbestreitbarkeit",
@@ -17,11 +17,13 @@
    "parameters": [
     {
      "name": "det.3.6-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "bestimter Ereignisse"
     },
     {
      "name": "det.3.6-prm2",
-     "type": "string"
+     "type": "string",
+     "label": "einer bestimmten Person oder Rolle"
     }
    ]
   }
@@ -87,11 +89,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.3.6-prm1": {
-     "label": "bestimter Ereignisse",
      "alt-identifier": "1d98ecfc-cf7a-4cf5-a108-169802a7b364"
     },
     "det.3.6-prm2": {
-     "label": "einer bestimmten Person oder Rolle",
      "alt-identifier": "1d98ecfc-cf7a-4cf5-a108-169802a7b364"
     }
    }

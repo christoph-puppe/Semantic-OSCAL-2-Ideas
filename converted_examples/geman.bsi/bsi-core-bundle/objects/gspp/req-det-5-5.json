@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.5.5",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.5.5",
  "lifecycle": "active",
  "title": "Red Teaming",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "det.5.5-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -84,7 +85,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.5.5-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "ea34243d-adc3-4208-ab4e-25247aa8c009"
     }
    }

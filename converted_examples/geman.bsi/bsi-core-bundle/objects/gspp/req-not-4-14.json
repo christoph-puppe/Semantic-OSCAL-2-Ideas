@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/NOT.4.14",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "NOT.4.14",
  "lifecycle": "active",
  "title": "Offline-Kopie",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "not.4.14-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -81,7 +82,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "not.4.14-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "3772a701-e5d0-4aee-a393-ad539482eb72"
     }
    }

@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/ARCH.6.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "ARCH.6.2",
  "lifecycle": "active",
  "title": "Verschlüsselung von Weiterverkehrsverbindungen",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "arch.6.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einem anerkannten Standard"
     }
    ]
   }
@@ -80,7 +81,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "arch.6.2-prm1": {
-     "label": "einem anerkannten Standard",
      "alt-identifier": "1999335e-7d66-4dc5-8960-8115234e8e23"
     }
    }

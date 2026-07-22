@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.5.8",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.5.8",
  "lifecycle": "active",
  "title": "Bedrohungsanalyse",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "det.5.8-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   },
@@ -33,11 +34,13 @@
    "parameters": [
     {
      "name": "det.5.8.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Kriterien zur Suche"
     },
     {
      "name": "det.5.8.1-prm2",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   },
@@ -176,15 +179,12 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.5.8-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "2134a13a-50a6-44b7-8df1-3ce041ef376a"
     },
     "det.5.8.1-prm1": {
-     "label": "Kriterien zur Suche",
      "alt-identifier": "42bf3e91-d270-4a79-8ae9-a22918f94ad7"
     },
     "det.5.8.1-prm2": {
-     "label": "regelmäßig",
      "alt-identifier": "42bf3e91-d270-4a79-8ae9-a22918f94ad7"
     }
    }

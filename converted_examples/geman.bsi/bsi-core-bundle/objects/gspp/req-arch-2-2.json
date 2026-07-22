@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/ARCH.2.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "ARCH.2.2",
  "lifecycle": "active",
  "title": "Einschränkung von Verbindungen zwischen Segmenten",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "arch.2.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Kriterien"
     }
    ]
   },
@@ -671,7 +672,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "arch.2.2-prm1": {
-     "label": "Kriterien",
      "alt-identifier": "6ff2de76-4a01-42cc-a794-1a6ec9313f46"
     }
    }

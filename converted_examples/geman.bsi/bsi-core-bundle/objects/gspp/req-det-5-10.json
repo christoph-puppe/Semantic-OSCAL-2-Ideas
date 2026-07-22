@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.5.10",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.5.10",
  "lifecycle": "active",
  "title": "Zeitnahes Patchmanagement",
@@ -22,7 +22,7 @@
     "https://ns.bsi.bund.de/gspp/party/institution"
    ],
    "prose": {
-    "de": "Detektion SOLLTE Bezugsquellen für Patches autorisieren."
+    "de": "Detektion SOLLTE zuverlässige Bezugsquellen für Patches autorisieren."
    }
   },
   {
@@ -37,7 +37,8 @@
    "parameters": [
     {
      "name": "det.5.10.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einen automatisierten Mechanismus"
     }
    ]
   },
@@ -53,7 +54,8 @@
    "parameters": [
     {
      "name": "det.5.10.3-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einen automatisierten Mechanismus"
     }
    ]
   },
@@ -87,7 +89,7 @@
     },
     "DET.5.10.1": {
      "action": "autorisieren",
-     "result": "Bezugsquellen für Patches"
+     "result": "zuverlässige Bezugsquellen für Patches"
     },
     "DET.5.10.2": {
      "action": "überwachen",
@@ -300,11 +302,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.5.10.2-prm1": {
-     "label": "einen automatisierten Mechanismus",
      "alt-identifier": "d652bc78-8f87-42ef-a52a-7bdd9a43212f"
     },
     "det.5.10.3-prm1": {
-     "label": "einen automatisierten Mechanismus",
      "alt-identifier": "1aec3d83-b204-4999-88f5-abf1e140a925"
     }
    }

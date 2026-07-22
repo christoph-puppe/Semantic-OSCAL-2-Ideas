@@ -1,9 +1,9 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DEV.4.5",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DEV.4.5",
  "lifecycle": "active",
- "title": "Updates externer Softwarebibliotheken",
+ "title": "Updates externer Software",
  "statements": [
   {
    "id": "smt",
@@ -12,7 +12,7 @@
     "https://ns.bsi.bund.de/gspp/party/institution"
    ],
    "prose": {
-    "de": "Entwicklung für Anwendungen SOLLTE externe Softwarebibliotheken auf Sicherheitsupdates vor dem Release testen."
+    "de": "Entwicklung für Anwendungen SOLLTE externe Softwareartefakte auf Sicherheitsupdates vor dem Release testen."
    }
   }
  ],
@@ -21,7 +21,7 @@
    "by-statement": {
     "smt": {
      "action": "testen",
-     "result": "externe Softwarebibliotheken auf Sicherheitsupdates",
+     "result": "externe Softwareartefakte auf Sicherheitsupdates",
      "result-specification": "vor dem Release",
      "target-object-categories": [
       "Anwendungen"
@@ -68,7 +68,7 @@
    "by-statement": {
     "smt": {
      "guidance": {
-      "de": "Werden veraltete Softwarebibliotheken in eine veröffentlichte Software eingebunden, so können diese Sicherheitslücken oder Fehler enthalten, die in den aktuellen Versionen bereits behoben sind. Prüfen Sie daher vor einer Freigabe der Software ob eingebundene Bibliotheken aktualisiert wurden."
+      "de": "Werden veraltete Softwareartefakte (z.B. Bibliotheken oder Container) in eine veröffentlichte Software eingebunden, so können diese Sicherheitslücken oder Fehler enthalten, die in den aktuellen Versionen bereits behoben sind. Prüfen Sie daher vor einer Freigabe der Software, ob eingebundene Software aktualisiert wurde."
      }
     }
    }

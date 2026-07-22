@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BER.3.16",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BER.3.16",
  "lifecycle": "active",
  "title": "Anmeldeversuchsgrenze an der Anwendung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "ber.3.16-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einem maximalen Schwellwert an"
     }
    ]
   }
@@ -84,7 +85,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "ber.3.16-prm1": {
-     "label": "einem maximalen Schwellwert an",
      "alt-identifier": "265ee5bc-059a-4bde-b480-9bc1611171bf"
     }
    }

@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/ASST.1.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "ASST.1.1",
  "lifecycle": "active",
  "title": "Verfahren und Regelungen",
@@ -37,7 +37,8 @@
    "parameters": [
     {
      "name": "asst.1.1.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "zuständigen Personen oder Rollen"
     }
    ]
   },
@@ -199,7 +200,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "asst.1.1.2-prm1": {
-     "label": "zuständigen Personen oder Rollen",
      "alt-identifier": "c2e8fafc-2e0d-40ad-b3ec-c572bf70a2b7"
     }
    }

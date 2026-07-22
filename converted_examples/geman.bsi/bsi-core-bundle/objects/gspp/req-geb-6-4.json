@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/GEB.6.4",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "GEB.6.4",
  "lifecycle": "active",
  "title": "Normgerechte Rechenzentren",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "geb.6.4-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einer anerkannten Norm"
     }
    ]
   }
@@ -79,7 +80,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "geb.6.4-prm1": {
-     "label": "einer anerkannten Norm",
      "alt-identifier": "280b1dd1-f839-473f-8e71-3cd871fc55b1"
     }
    }

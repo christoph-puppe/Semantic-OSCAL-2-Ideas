@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BER.3.19",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BER.3.19",
  "lifecycle": "active",
  "title": "Kein Recycling von Zugängen",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "ber.3.19-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einen bestimmten Zeitraum"
     }
    ]
   }
@@ -77,7 +78,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "ber.3.19-prm1": {
-     "label": "einen bestimmten Zeitraum",
      "alt-identifier": "8c097985-0fae-43eb-9f2e-2d36b5091dfb"
     }
    }

@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.6.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.6.1",
  "lifecycle": "active",
  "title": "Beurteilung von Ereignissen",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "det.6.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Kriterien"
     }
    ]
   },
@@ -33,11 +34,13 @@
    "parameters": [
     {
      "name": "det.6.1.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Kriterien"
     },
     {
      "name": "det.6.1.1-prm2",
-     "type": "string"
+     "type": "string",
+     "label": "einen automatisierten Mechanismus"
     }
    ]
   },
@@ -53,11 +56,13 @@
    "parameters": [
     {
      "name": "det.6.1.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "für die Vorfallsbehandlung zuständigen Personen oder Rollen"
     },
     {
      "name": "det.6.1.2-prm2",
-     "type": "string"
+     "type": "string",
+     "label": "einen automatisierten Mechanismus"
     }
    ]
   },
@@ -224,23 +229,18 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.6.1-prm1": {
-     "label": "Kriterien",
      "alt-identifier": "a8c7d445-54b4-40e2-aab5-b46e30549ec5"
     },
     "det.6.1.1-prm1": {
-     "label": "Kriterien",
      "alt-identifier": "92f55893-595b-4d3d-80eb-ef8e7b5ed1cb"
     },
     "det.6.1.1-prm2": {
-     "label": "einen automatisierten Mechanismus",
      "alt-identifier": "92f55893-595b-4d3d-80eb-ef8e7b5ed1cb"
     },
     "det.6.1.2-prm1": {
-     "label": "für die Vorfallsbehandlung zuständigen Personen oder Rollen",
      "alt-identifier": "f45e08b7-8f42-469a-aa22-63b93daba60e"
     },
     "det.6.1.2-prm2": {
-     "label": "einen automatisierten Mechanismus",
      "alt-identifier": "f45e08b7-8f42-469a-aa22-63b93daba60e"
     }
    }

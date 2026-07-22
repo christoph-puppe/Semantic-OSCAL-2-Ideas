@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/TEST.1.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "TEST.1.1",
  "lifecycle": "active",
  "title": "Verfahren und Regelungen",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "test.1.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "für den Informationsverbund, pro Geschäftsprozess oder pro IT-System"
     }
    ]
   },
@@ -43,7 +44,8 @@
    "parameters": [
     {
      "name": "test.1.1.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "zuständigen Personen oder Rollen"
     }
    ]
   },
@@ -203,11 +205,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "test.1.1-prm1": {
-     "label": "für den Informationsverbund, pro Geschäftsprozess oder pro IT-System",
      "alt-identifier": "90b547d2-dd84-4344-8432-5ecf460cbcb6"
     },
     "test.1.1.2-prm1": {
-     "label": "zuständigen Personen oder Rollen",
      "alt-identifier": "c6cf1fc0-2c5f-473d-858a-ca7c417f272a"
     }
    }

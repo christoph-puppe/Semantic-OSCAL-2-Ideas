@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/KONF.3.6",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "KONF.3.6",
  "lifecycle": "active",
  "title": "Fernlöschung oder -sperre",
@@ -27,7 +27,8 @@
    "parameters": [
     {
      "name": "konf.3.6.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einer längeren Frist"
     }
    ]
   }
@@ -133,7 +134,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "konf.3.6.1-prm1": {
-     "label": "einer längeren Frist",
      "alt-identifier": "ffc45c05-597f-4be9-9358-124b4a008e50"
     }
    }

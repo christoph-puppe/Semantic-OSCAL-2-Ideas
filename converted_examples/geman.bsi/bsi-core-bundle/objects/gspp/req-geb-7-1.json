@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/GEB.7.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "GEB.7.1",
  "lifecycle": "active",
  "title": "Schlüsselbeauftragte",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "geb.7.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "zuständigen Personen oder Rollen"
     }
    ]
   }
@@ -78,7 +79,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "geb.7.1-prm1": {
-     "label": "zuständigen Personen oder Rollen",
      "alt-identifier": "989b0846-7561-4d14-99d0-ce46a749cde0"
     }
    }

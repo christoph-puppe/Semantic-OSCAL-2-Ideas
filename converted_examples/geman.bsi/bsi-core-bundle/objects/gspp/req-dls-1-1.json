@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DLS.1.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DLS.1.1",
  "lifecycle": "active",
  "title": "Verfahren und Regelungen",
@@ -12,7 +12,7 @@
     "https://ns.bsi.bund.de/gspp/party/institution"
    ],
    "prose": {
-    "de": "Dienstleistersteuerung MUSS ein Verfahren zur Steuerung und geordneten Beendigung von Dienstleistungsverträgen verankern."
+    "de": "Dienstleistersteuerung für Dienstleistungen MUSS ein Verfahren zur Steuerung und geordneten Beendigung von Dienstleistungsverträgen verankern."
    }
   },
   {
@@ -22,7 +22,7 @@
     "https://ns.bsi.bund.de/gspp/party/institution"
    ],
    "prose": {
-    "de": "Dienstleistersteuerung MUSS die Verfahren und Regelungen dokumentieren."
+    "de": "Dienstleistersteuerung für Dienstleistungen MUSS die Verfahren und Regelungen dokumentieren."
    }
   },
   {
@@ -32,12 +32,13 @@
     "https://ns.bsi.bund.de/gspp/party/institution"
    ],
    "prose": {
-    "de": "Dienstleistersteuerung MUSS die mit den Verfahren und Regelungen verbundenen Aufgaben {param:dls.1.1.2-prm1} zuweisen."
+    "de": "Dienstleistersteuerung für Dienstleistungen MUSS die mit den Verfahren und Regelungen verbundenen Aufgaben {param:dls.1.1.2-prm1} zuweisen."
    },
    "parameters": [
     {
      "name": "dls.1.1.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "zuständigen Personen oder Rollen"
     }
    ]
   },
@@ -48,7 +49,7 @@
     "https://ns.bsi.bund.de/gspp/party/institution"
    ],
    "prose": {
-    "de": "Dienstleistersteuerung MUSS die zuständigen Personen oder Rollen über die Verfahren und Regelungen informieren."
+    "de": "Dienstleistersteuerung für Dienstleistungen MUSS die zuständigen Personen oder Rollen über die Verfahren und Regelungen informieren."
    }
   }
  ],
@@ -57,20 +58,32 @@
    "by-statement": {
     "smt": {
      "action": "verankern",
-     "result": "ein Verfahren zur Steuerung und geordneten Beendigung von Dienstleistungsverträgen"
+     "result": "ein Verfahren zur Steuerung und geordneten Beendigung von Dienstleistungsverträgen",
+     "target-object-categories": [
+      "Dienstleistungen"
+     ]
     },
     "DLS.1.1.1": {
      "action": "dokumentieren",
-     "result": "die Verfahren und Regelungen"
+     "result": "die Verfahren und Regelungen",
+     "target-object-categories": [
+      "Dienstleistungen"
+     ]
     },
     "DLS.1.1.2": {
      "action": "zuweisen",
      "result": "die mit den Verfahren und Regelungen verbundenen Aufgaben",
-     "result-specification": "{{zuständigen Personen oder Rollen}}"
+     "result-specification": "{{zuständigen Personen oder Rollen}}",
+     "target-object-categories": [
+      "Dienstleistungen"
+     ]
     },
     "DLS.1.1.3": {
      "action": "informieren",
-     "result": "die zuständigen Personen oder Rollen über die Verfahren und Regelungen"
+     "result": "die zuständigen Personen oder Rollen über die Verfahren und Regelungen",
+     "target-object-categories": [
+      "Dienstleistungen"
+     ]
     }
    }
   },
@@ -201,7 +214,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "dls.1.1.2-prm1": {
-     "label": "zuständigen Personen oder Rollen",
      "alt-identifier": "d630bd91-1daa-4467-865c-e3ce5b437fdb"
     }
    }

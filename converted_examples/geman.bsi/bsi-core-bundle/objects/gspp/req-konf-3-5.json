@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/KONF.3.5",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "KONF.3.5",
  "lifecycle": "active",
  "title": "Standortbestimmung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "konf.3.5-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "durch einen automatisierten Mechanismus"
     }
    ]
   }
@@ -82,7 +83,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "konf.3.5-prm1": {
-     "label": "durch einen automatisierten Mechanismus",
      "alt-identifier": "4a18939a-0972-4ac7-9584-18fffde38db6"
     }
    }

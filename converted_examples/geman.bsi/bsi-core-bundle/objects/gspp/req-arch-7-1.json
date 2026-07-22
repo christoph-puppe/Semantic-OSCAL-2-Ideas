@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/ARCH.7.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "ARCH.7.1",
  "lifecycle": "active",
  "title": "Dedizierte Hostsysteme für Server",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "arch.7.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "virtuellen oder physischen"
     }
    ]
   }
@@ -79,7 +80,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "arch.7.1-prm1": {
-     "label": "virtuellen oder physischen",
      "alt-identifier": "dbc89a40-82e3-48c7-9422-ce8f874ca1cf"
     }
    }

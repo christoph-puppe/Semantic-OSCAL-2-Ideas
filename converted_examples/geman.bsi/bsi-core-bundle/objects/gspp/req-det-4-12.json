@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.4.12",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.4.12",
  "lifecycle": "active",
  "title": "Monitoring der Netzverfügbarkeit",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "det.4.12-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Schwellwerten"
     }
    ]
   },
@@ -33,7 +34,8 @@
    "parameters": [
     {
      "name": "det.4.12.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Schwellwerten"
     }
    ]
   }
@@ -134,11 +136,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.4.12-prm1": {
-     "label": "Schwellwerten",
      "alt-identifier": "3757d23d-e17e-4bae-857e-c045505d579a"
     },
     "det.4.12.1-prm1": {
-     "label": "Schwellwerten",
      "alt-identifier": "c17dd877-0922-4ca8-a38b-1d2f9ae04f0d"
     }
    }

@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BER.4.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BER.4.2",
  "lifecycle": "active",
  "title": "Autorisierung von Berechtigungen",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "ber.4.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "bestimmte Personen oder Rollen"
     }
    ]
   }
@@ -77,7 +78,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "ber.4.2-prm1": {
-     "label": "bestimmte Personen oder Rollen",
      "alt-identifier": "1a2d43f4-d5ca-4967-80e0-6b8bb7c20389"
     }
    }

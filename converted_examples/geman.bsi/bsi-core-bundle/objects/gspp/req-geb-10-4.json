@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/GEB.10.4",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "GEB.10.4",
  "lifecycle": "active",
  "title": "Blitzschutzeinrichtungen",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "geb.10.4-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einem anerkannten Standard"
     }
    ]
   },
@@ -33,7 +34,8 @@
    "parameters": [
     {
      "name": "geb.10.4.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -131,11 +133,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "geb.10.4-prm1": {
-     "label": "einem anerkannten Standard",
      "alt-identifier": "3a8c199a-408d-4ac6-9355-b850d4f5188a"
     },
     "geb.10.4.1-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "a70149a9-75af-4784-8011-e1433c72dcfc"
     }
    }

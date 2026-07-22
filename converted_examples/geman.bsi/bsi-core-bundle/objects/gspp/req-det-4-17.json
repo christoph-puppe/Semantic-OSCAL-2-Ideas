@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.4.17",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.4.17",
  "lifecycle": "active",
  "title": "Anwendungsbasiertes Kapazitätsmanagement",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "det.4.17-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Schwellwerten"
     }
    ]
   }
@@ -80,7 +81,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.4.17-prm1": {
-     "label": "Schwellwerten",
      "alt-identifier": "93561982-927d-461c-a0eb-c9aec0b1159d"
     }
    }

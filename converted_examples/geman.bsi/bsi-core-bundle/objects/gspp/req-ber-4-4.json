@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BER.4.4",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BER.4.4",
  "lifecycle": "active",
  "title": "Überprüfung von Berechtigungen",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "ber.4.4-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   },
@@ -33,7 +34,8 @@
    "parameters": [
     {
      "name": "ber.4.4.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -126,11 +128,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "ber.4.4-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "4123f246-95b2-4785-9714-17a5e68462c5"
     },
     "ber.4.4.1-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "4e815b01-7a59-4e8c-bbcc-e4998f342e68"
     }
    }

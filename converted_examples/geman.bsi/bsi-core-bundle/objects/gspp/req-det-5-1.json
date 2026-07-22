@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.5.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.5.1",
  "lifecycle": "active",
  "title": "Zeitnahes Schwachstellenmanagement",
@@ -27,11 +27,13 @@
    "parameters": [
     {
      "name": "det.5.1.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "risikobasierten Kriterien"
     },
     {
      "name": "det.5.1.1-prm2",
-     "type": "string"
+     "type": "string",
+     "label": "einer Frist"
     }
    ]
   }
@@ -129,11 +131,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.5.1.1-prm1": {
-     "label": "risikobasierten Kriterien",
      "alt-identifier": "a9af82d7-44b8-412c-b8a0-becbda9b1da9"
     },
     "det.5.1.1-prm2": {
-     "label": "einer Frist",
      "alt-identifier": "a9af82d7-44b8-412c-b8a0-becbda9b1da9"
     }
    }

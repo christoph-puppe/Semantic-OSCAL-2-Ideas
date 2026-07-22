@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/KONF.9.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "KONF.9.2",
  "lifecycle": "active",
  "title": "Begrenzung der Rechenleistung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "konf.9.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Schwellwerten"
     }
    ]
   }
@@ -82,7 +83,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "konf.9.2-prm1": {
-     "label": "Schwellwerten",
      "alt-identifier": "3b0eb166-07b9-4b51-a1f5-75513b28015c"
     }
    }

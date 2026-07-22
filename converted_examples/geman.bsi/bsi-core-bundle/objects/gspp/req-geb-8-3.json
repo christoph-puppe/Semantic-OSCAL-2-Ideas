@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/GEB.8.3",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "GEB.8.3",
  "lifecycle": "active",
  "title": "Schutz der Datenträger vor Brandschäden",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "geb.8.3-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einem anerkannten Standard"
     }
    ]
   }
@@ -81,7 +82,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "geb.8.3-prm1": {
-     "label": "einem anerkannten Standard",
      "alt-identifier": "7fa6a340-5f12-41a3-b9df-a44dfcc6e0be"
     }
    }

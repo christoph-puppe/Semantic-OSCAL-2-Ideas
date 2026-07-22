@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.3.4",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.3.4",
  "lifecycle": "active",
  "title": "Speicherkapazität",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "det.3.4-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "bei Erreichen eines bestimmten Schwellwertes oder regelmäßig"
     }
    ]
   }
@@ -77,7 +78,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.3.4-prm1": {
-     "label": "bei Erreichen eines bestimmten Schwellwertes oder regelmäßig",
      "alt-identifier": "558dc6ab-ba8e-47bb-ba24-ddf09be49ec0"
     }
    }

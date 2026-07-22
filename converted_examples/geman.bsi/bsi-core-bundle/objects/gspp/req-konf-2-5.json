@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/KONF.2.5",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "KONF.2.5",
  "lifecycle": "active",
  "title": "Überprüfung der Konfiguration",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "konf.2.5-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   },
@@ -33,7 +34,8 @@
    "parameters": [
     {
      "name": "konf.2.5.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einen automatisierten Mechanismus"
     }
    ]
   }
@@ -133,11 +135,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "konf.2.5-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "a37d5c17-d296-4810-ac13-4a15e7b40e97"
     },
     "konf.2.5.1-prm1": {
-     "label": "einen automatisierten Mechanismus",
      "alt-identifier": "fceb6b0b-2cf9-4644-9f48-c6b307b2d0ad"
     }
    }

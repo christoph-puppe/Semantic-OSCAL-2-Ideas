@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/ASST.2.3",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "ASST.2.3",
  "lifecycle": "active",
  "title": "Inventar der Anwendungen",
@@ -27,7 +27,8 @@
    "parameters": [
     {
      "name": "asst.2.3.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "eine zuständige Person oder Rolle"
     }
    ]
   },
@@ -53,7 +54,8 @@
    "parameters": [
     {
      "name": "asst.2.3.2.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig oder bei Änderungen"
     }
    ]
   }
@@ -224,11 +226,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "asst.2.3.1-prm1": {
-     "label": "eine zuständige Person oder Rolle",
      "alt-identifier": "3d12c2e5-94bd-48d2-bf9c-a5797e4f0378"
     },
     "asst.2.3.2.1-prm1": {
-     "label": "regelmäßig oder bei Änderungen",
      "alt-identifier": "be8d7b56-9709-4d1b-aeaa-cb5fa1b0cca1"
     }
    }

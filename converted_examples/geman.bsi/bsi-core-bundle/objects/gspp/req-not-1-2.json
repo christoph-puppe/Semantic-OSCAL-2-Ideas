@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/NOT.1.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "NOT.1.2",
  "lifecycle": "active",
  "title": "Regelmäßige Überprüfung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "not.1.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -75,7 +76,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "not.1.2-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "e7154319-da30-43a0-8b6c-754a1c6c54e3"
     }
    }

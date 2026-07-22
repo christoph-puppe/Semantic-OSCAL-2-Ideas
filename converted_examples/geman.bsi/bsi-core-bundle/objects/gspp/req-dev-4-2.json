@@ -1,9 +1,9 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DEV.4.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DEV.4.2",
  "lifecycle": "active",
- "title": "Bibliotheksquellen",
+ "title": "Einbindung externer Software",
  "statements": [
   {
    "id": "smt",
@@ -12,7 +12,7 @@
     "https://ns.bsi.bund.de/gspp/party/institution"
    ],
    "prose": {
-    "de": "Entwicklung für Anwendungen SOLLTE die Einbindung externer Softwarebibliotheken und -Schnittstellen aus unzuverlässigen oder unbekannten Quellen untersagen."
+    "de": "Entwicklung für Anwendungen SOLLTE die Einbindung externer Softwareartefakte und -Schnittstellen aus unzuverlässigen oder unbekannten Quellen untersagen."
    }
   }
  ],
@@ -21,7 +21,7 @@
    "by-statement": {
     "smt": {
      "action": "untersagen",
-     "result": "die Einbindung externer Softwarebibliotheken und -Schnittstellen aus unzuverlässigen oder unbekannten Quellen",
+     "result": "die Einbindung externer Softwareartefakte und -Schnittstellen aus unzuverlässigen oder unbekannten Quellen",
      "target-object-categories": [
       "Anwendungen"
      ]
@@ -69,7 +69,7 @@
    "by-statement": {
     "smt": {
      "guidance": {
-      "de": "Eine Quelle ist unzuverlässig, wenn zukünftig mit Verstößen gegen die Schutzziele Vertraulichkeit, Verfügbarkeit oder Integrität durch sie zu rechnen ist (d.h. eine Prognose der Vertrauenswürdigkeit). Dies ist insbesondere der Fall, wenn erhebliche Verstöße gegen die Schutzziele durch sie begangen worden sind oder Anzeichen dafür vorliegen, dass bei einer Verwendung mit solchen Verstößen zu rechnen ist."
+      "de": "Externe Softwareartefakte sind in diesem Kontext nicht von der Institution entwickelte, in die eigene Anwendung eingebundene oder zur Laufzeit nachgeladene Bestandteile wie Bibliotheken, Frameworks, Container-Images, Plug-ins, Packages, Binärdateien, Skripte, Modelle, Templates oder Build-Abhängigkeiten (sog. Third-Party Components, Dependencies) verwendet. Externe Softwareschnittstellen sind fremde technische Übergabe- und Kommunikationspunkte, über die eine Anwendung Funktionen oder Daten anderer Systeme nutzt, etwa APIs, Webhooks, SDK-Schnittstellen, Datenfeeds, Authentifizierungsdienste oder Remote Services; geläufige englische Begriffe sind Third-Party APIs, External Interfaces, Webhooks, SDKs und Remote Services.  Eine Quelle ist unzuverlässig, wenn zukünftig mit Verstößen gegen die Schutzziele Vertraulichkeit, Verfügbarkeit oder Integrität durch sie zu rechnen ist (d.h. eine Prognose der Vertrauenswürdigkeit). Dies ist insbesondere der Fall, wenn erhebliche Verstöße gegen die Schutzziele durch sie begangen worden sind oder Anzeichen dafür vorliegen, dass bei einer Verwendung mit solchen Verstößen zu rechnen ist. Unbekannte Quellen meint hier Quellen, deren Herkunft, Integrität, Pflegezustand, Verantwortlichkeit, Vertrauenswürdigkeit oder Sicherheitsniveau nicht belastbar nachvollziehbar ist, etwa anonyme Paket-Repositories, private Download-Links, unklare Git-Repositories, veraltete Mirror-Server, nicht verifizierte Container-Registries oder Schnittstellen ohne erkennbare Betreiber-, Sicherheits- und Änderungsinformationen."
      }
     }
    }
@@ -85,6 +85,14 @@
   {
    "type": "related",
    "ref": "https://ns.bsi.bund.de/gspp/req/BES.3.3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/DET.5.10.1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/TEST.3.1.2"
   }
  ]
 }

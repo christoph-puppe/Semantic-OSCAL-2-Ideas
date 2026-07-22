@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.4.14",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.4.14",
  "lifecycle": "active",
  "title": "Verfügbarkeit der Anwendung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "det.4.14-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Schwellwerten"
     }
    ]
   }
@@ -81,7 +82,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.4.14-prm1": {
-     "label": "Schwellwerten",
      "alt-identifier": "170aaef0-d7a1-49be-a219-7ef13c8be738"
     }
    }

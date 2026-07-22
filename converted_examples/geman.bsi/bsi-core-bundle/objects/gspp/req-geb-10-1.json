@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/GEB.10.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "GEB.10.1",
  "lifecycle": "active",
  "title": "Klimatisierung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "geb.10.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Schwellwerten"
     }
    ]
   },
@@ -33,7 +34,8 @@
    "parameters": [
     {
      "name": "geb.10.1.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   },
@@ -49,7 +51,8 @@
    "parameters": [
     {
      "name": "geb.10.1.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Schwellwerten"
     }
    ]
   },
@@ -221,15 +224,12 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "geb.10.1-prm1": {
-     "label": "Schwellwerten",
      "alt-identifier": "dfdda615-4afc-4889-b7a0-95c91240add7"
     },
     "geb.10.1.1-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "0abf44e0-ee1c-46fc-a106-fa58b1f5f245"
     },
     "geb.10.1.2-prm1": {
-     "label": "Schwellwerten",
      "alt-identifier": "338031dd-f3c6-4245-b411-7c46852edfcb"
     }
    }

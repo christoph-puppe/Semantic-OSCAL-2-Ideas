@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BER.2.3",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BER.2.3",
  "lifecycle": "active",
  "title": "Stammdatenprüfung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "ber.2.3-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -77,7 +78,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "ber.2.3-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "ee2514d4-b2ce-4e97-85e7-a82cdb937e82"
     }
    }

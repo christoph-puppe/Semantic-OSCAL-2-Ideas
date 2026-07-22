@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/ASST.5.3",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "ASST.5.3",
  "lifecycle": "active",
  "title": "Autorisierung von Wartungen",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "asst.5.3-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "eine zuständige Person oder Rolle"
     }
    ]
   }
@@ -81,7 +82,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "asst.5.3-prm1": {
-     "label": "eine zuständige Person oder Rolle",
      "alt-identifier": "59a96eb8-75ad-420d-aab5-4d448f5c12ae"
     }
    }

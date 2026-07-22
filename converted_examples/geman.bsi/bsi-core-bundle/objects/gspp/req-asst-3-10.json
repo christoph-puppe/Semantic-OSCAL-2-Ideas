@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/ASST.3.10",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "ASST.3.10",
  "lifecycle": "active",
  "title": "Autorisierung von Datenlokationen",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "asst.3.10-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "eine zuständige Person oder Rolle"
     }
    ]
   }
@@ -82,7 +83,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "asst.3.10-prm1": {
-     "label": "eine zuständige Person oder Rolle",
      "alt-identifier": "52eee4a3-f5cf-444d-ad0c-9c83c693481b"
     }
    }

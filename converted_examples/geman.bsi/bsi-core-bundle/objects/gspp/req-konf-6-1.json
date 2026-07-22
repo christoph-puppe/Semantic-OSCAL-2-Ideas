@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/KONF.6.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "KONF.6.1",
  "lifecycle": "active",
  "title": "Minimal erforderliche Berechtigungen für Anwendungen",
@@ -37,7 +37,8 @@
    "parameters": [
     {
      "name": "konf.6.1.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "bestimmten Anwendungen"
     }
    ]
   },
@@ -223,7 +224,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "konf.6.1.2-prm1": {
-     "label": "bestimmten Anwendungen",
      "alt-identifier": "d380c6d8-1ab0-4e4b-bcca-2e620b40d934"
     }
    }

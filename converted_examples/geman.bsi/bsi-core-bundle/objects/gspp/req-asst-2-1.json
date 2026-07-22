@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/ASST.2.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "ASST.2.1",
  "lifecycle": "active",
  "title": "Inventar der Informationen",
@@ -27,7 +27,8 @@
    "parameters": [
     {
      "name": "asst.2.1.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einer zuständigen Person oder Rolle"
     }
    ]
   }
@@ -127,7 +128,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "asst.2.1.1-prm1": {
-     "label": "einer zuständigen Person oder Rolle",
      "alt-identifier": "eae7145a-228e-47ca-9a09-7a4a3b74ac55"
     }
    }

@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BER.6.7",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BER.6.7",
  "lifecycle": "active",
  "title": "Kein Transport privater Schlüssel",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "ber.6.7-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "eine zuständige Person oder Rolle"
     }
    ]
   }
@@ -78,7 +79,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "ber.6.7-prm1": {
-     "label": "eine zuständige Person oder Rolle",
      "alt-identifier": "c28426cd-d01c-427d-bade-141936177c55"
     }
    }

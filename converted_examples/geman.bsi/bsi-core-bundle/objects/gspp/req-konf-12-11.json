@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/KONF.12.11",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "KONF.12.11",
  "lifecycle": "active",
  "title": "Anonyme oder Pseudonyme Kommunikation",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "konf.12.11-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "eines Pseudonyms oder gar keiner Anzeigekennung"
     }
    ]
   }
@@ -82,7 +83,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "konf.12.11-prm1": {
-     "label": "eines Pseudonyms oder gar keiner Anzeigekennung",
      "alt-identifier": "a06eca6b-f142-4808-b04d-c19adf178db4"
     }
    }

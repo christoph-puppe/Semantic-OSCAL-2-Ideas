@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/TEST.1.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "TEST.1.2",
  "lifecycle": "active",
  "title": "Regelmäßige Überprüfung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "test.1.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -75,7 +76,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "test.1.2-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "d7d1a4e4-2fbc-404c-a245-a82174f694d4"
     }
    }

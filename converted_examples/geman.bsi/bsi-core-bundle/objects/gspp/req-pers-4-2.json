@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/PERS.4.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "PERS.4.2",
  "lifecycle": "active",
  "title": "Rollenspezifische Schulungen und Sensibilisierungen",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "pers.4.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   },
@@ -125,7 +126,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "pers.4.2-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "f5c0d014-bafa-4672-ad7d-fdb1fb16f3c4"
     }
    }

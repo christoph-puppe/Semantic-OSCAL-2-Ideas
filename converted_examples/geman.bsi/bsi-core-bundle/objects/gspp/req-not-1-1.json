@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/NOT.1.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "NOT.1.1",
  "lifecycle": "active",
  "title": "Verfahren und Regelungen",
@@ -37,7 +37,8 @@
    "parameters": [
     {
      "name": "not.1.1.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "zuständigen Personen oder Rollen"
     }
    ]
   },
@@ -63,11 +64,14 @@
    "parameters": [
     {
      "name": "not.1.1.4-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "BSI-Standard 200-4",
+     "default": "BSI-Standard 200-4"
     },
     {
      "name": "not.1.1.4-prm2",
-     "type": "string"
+     "type": "string",
+     "label": "einem anerkannten BCM-Standard"
     }
    ]
   }
@@ -248,18 +252,12 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "not.1.1.2-prm1": {
-     "label": "zuständigen Personen oder Rollen",
      "alt-identifier": "1077ed85-d0a3-462b-b8fd-107a050b0538"
     },
     "not.1.1.4-prm1": {
-     "label": "BSI-Standard 200-4",
-     "values": [
-      "BSI-Standard 200-4"
-     ],
      "alt-identifier": "9cfedbf2-6dc8-4ca5-8d93-26610884e3b7"
     },
     "not.1.1.4-prm2": {
-     "label": "einem anerkannten BCM-Standard",
      "alt-identifier": "9cfedbf2-6dc8-4ca5-8d93-26610884e3b7"
     }
    }

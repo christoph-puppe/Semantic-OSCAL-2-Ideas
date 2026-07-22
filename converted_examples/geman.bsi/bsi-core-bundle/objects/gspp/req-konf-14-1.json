@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/KONF.14.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "KONF.14.1",
  "lifecycle": "active",
  "title": "Verschlüsselung beim Transport",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "konf.14.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einem anerkannten Standard"
     }
    ]
   },
@@ -180,7 +181,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "konf.14.1-prm1": {
-     "label": "einem anerkannten Standard",
      "alt-identifier": "99806244-514d-43e2-be34-4ac7ab0517ad"
     }
    }

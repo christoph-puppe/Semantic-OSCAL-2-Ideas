@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BES.1.5",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BES.1.5",
  "lifecycle": "active",
  "title": "Autorisierung des Bereitstellungsmodells",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "bes.1.5-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "eine zuständige Person oder Rolle"
     }
    ]
   }
@@ -82,7 +83,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "bes.1.5-prm1": {
-     "label": "eine zuständige Person oder Rolle",
      "alt-identifier": "6d50b322-84b8-4c9b-bd2a-0b48d6b61847"
     }
    }

@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BES.7.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BES.7.1",
  "lifecycle": "active",
  "title": "Eingangskontrolle",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "bes.7.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Kriterien zur Akzeptanz"
     }
    ]
   },
@@ -179,7 +180,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "bes.7.1-prm1": {
-     "label": "Kriterien zur Akzeptanz",
      "alt-identifier": "abea6f59-f58b-47c3-b908-7ae68410fde3"
     }
    }

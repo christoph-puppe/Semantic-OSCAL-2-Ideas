@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.4.19",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.4.19",
  "lifecycle": "active",
  "title": "Unautorisierte Sendeanlagen",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "det.4.19-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einen automatisierten Mechanismus"
     }
    ]
   }
@@ -83,7 +84,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.4.19-prm1": {
-     "label": "einen automatisierten Mechanismus",
      "alt-identifier": "d85d0d64-bc5c-4a11-91d8-7c567abd5b21"
     }
    }

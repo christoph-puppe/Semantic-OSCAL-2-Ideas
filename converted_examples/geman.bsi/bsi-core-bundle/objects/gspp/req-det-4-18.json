@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.4.18",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.4.18",
  "lifecycle": "active",
  "title": "Öffentliche Blocklisten",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "det.4.18-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -78,7 +79,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.4.18-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "e180774d-4880-4ef4-bc08-5c06e034dbc9"
     }
    }

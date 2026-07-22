@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BER.6.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BER.6.2",
  "lifecycle": "active",
  "title": "Schlüssellänge",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "ber.6.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einem anerkannten Standard"
     }
    ]
   }
@@ -78,7 +79,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "ber.6.2-prm1": {
-     "label": "einem anerkannten Standard",
      "alt-identifier": "39301f7d-20ca-49c0-97e5-a8b048877e68"
     }
    }

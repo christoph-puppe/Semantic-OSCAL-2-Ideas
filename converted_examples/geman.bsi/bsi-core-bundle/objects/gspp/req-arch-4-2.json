@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/ARCH.4.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "ARCH.4.2",
  "lifecycle": "active",
  "title": "Autorisiertes Routing",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "arch.4.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "eine zuständige Person oder Rolle"
     }
    ]
   }
@@ -79,7 +80,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "arch.4.2-prm1": {
-     "label": "eine zuständige Person oder Rolle",
      "alt-identifier": "77aebab8-462b-4849-aaa2-9c939af5e1dc"
     }
    }

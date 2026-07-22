@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/GEB.7.3",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "GEB.7.3",
  "lifecycle": "active",
  "title": "Schlüsselaudit",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "geb.7.3-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -78,7 +79,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "geb.7.3-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "97d89e25-dbe3-4da7-bcfb-07537a05d6bf"
     }
    }

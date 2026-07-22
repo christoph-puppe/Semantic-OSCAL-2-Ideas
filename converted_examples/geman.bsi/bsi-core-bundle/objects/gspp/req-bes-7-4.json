@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BES.7.4",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BES.7.4",
  "lifecycle": "active",
  "title": "Vollständigkeit der Unterlagen",
@@ -67,7 +67,8 @@
    "parameters": [
     {
      "name": "bes.7.4.4.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einem anerkannten Standard"
     }
    ]
   },
@@ -153,7 +154,8 @@
    "parameters": [
     {
      "name": "bes.7.4.12-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einem anerkannten Standard"
     }
    ]
   }
@@ -712,11 +714,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "bes.7.4.4.1-prm1": {
-     "label": "einem anerkannten Standard",
      "alt-identifier": "f89b0154-ccb8-401f-b352-9135e685a4e7"
     },
     "bes.7.4.12-prm1": {
-     "label": "einem anerkannten Standard",
      "alt-identifier": "7a3321a5-9f54-4ada-955d-647aeb0e51b5"
     }
    }

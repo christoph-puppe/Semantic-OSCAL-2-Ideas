@@ -1,16 +1,26 @@
 #!/usr/bin/env python3
-"""BSI Grundschutz++ + MS-TLS (OSCAL 1.1.3) -> Semantic Core bundle.
+"""BSI Grundschutz++ (OSCAL 1.1.3) -> Semantic Core bundle.
 Gate item 1, authority 2. Nested pseudo-controls -> statements; part-level
 grammar/objective/taxonomy props -> facet payloads keyed by statement id;
 {{ insert: param }} -> {param:} tokens; the {{...}} prop-value defects are
-REPORTED, never laundered. Pattern-based coverage: UNMAPPED target = 0."""
-import json, hashlib, os, re, copy, collections, shutil
+REPORTED, never laundered. Pattern-based coverage: UNMAPPED target = 0.
 
-OUT = "/home/claude/bsi-core-bundle"
-RMD = "/home/claude/bsi-coverage-report.md"
-RJS = "/home/claude/bsi-coverage-report.json"
-SOURCES = [("gspp", "/home/claude/gspp.json", "https://ns.bsi.bund.de/gspp"),
-           ("mstls", "/home/claude/tls.json", "https://ns.bsi.bund.de/mstls")]
+Single-catalog mode since 2026-07-21: MS-TLS dropped from the corpus by
+decision (its defects were reported to BSI; the twin-catalog finding - 11
+shared ids, 10 silently diverged, census 2026-07-03 - stays on the record
+in census and handbook). Parameters carry first-class label/default since
+the D9 rev (backlog #1): the param-extras residue drains to alt-ids only."""
+import json, hashlib, os, re, copy, collections
+from oscal_conv_lib import Bundle
+
+ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
+OUT = os.path.join(ROOT, "converted_examples", "geman.bsi", "bsi-core-bundle")
+RMD = os.path.join(ROOT, "converted_examples", "geman.bsi", "bsi-coverage-report.md")
+RJS = os.path.join(ROOT, "converted_examples", "geman.bsi", "bsi-coverage-report.json")
+SOURCES = [("gspp", os.path.join(ROOT, "sources", "Grundschutz++-catalog.json"),
+            "https://ns.bsi.bund.de/gspp")]
+CENSUS = {"version": "2026-07-03", "controls": 998, "defects-gspp": 213,
+          "statements": 1015}   # census r2 baseline for the delta report
 F_GRAM = "https://ns.oscal.org/stdlib/facet/statement-grammar@1"
 F_SECO = "https://ns.oscal.org/stdlib/facet/security-objectives@1"
 F_ACRIT = "https://ns.oscal.org/stdlib/facet/assessment-criteria@1"
@@ -54,8 +64,8 @@ RULES = [
  (C+r"\.title$", "L1", "Requirement title (top) / kept in taxonomy by-statement (nested)"),
  (C+r"\.links\[\]\.(rel|href)$", "L1", "relations[] {type=rel, ref} (#control -> req URI; #uuid -> back-matter URL)"),
  (C+r"\.params\[\]\.id$", "L1", "statement parameter name (type string)"),
- (C+r"\.params\[\]\.(label|values\[\])$", "L2", "compat oscal-1x: param-extras (default/display value - candidate D9 addition)"),
- (C+r"\.params\[\]\.props\[\]\.(name|value)$", "L2", "compat oscal-1x: param-extras (param alt-identifier)"),
+ (C+r"\.params\[\]\.(label|values\[\])$", "L1", "parameter label / default - first-class since the D9 rev (backlog #1); residue drained"),
+ (C+r"\.params\[\]\.props\[\]\.(name|value)$", "L2", "compat oscal-1x: param-extras (param alt-identifier only)"),
  (C+r"\.props\[\]\.ns$", "L1", "absorbed: CSV-link namespaces replaced by pinned facet schemas"),
  (C+r"\.props\[\]\.(name|value)$", "L1", "dispatch by prop name (see per-prop table)"),
  (C+r"\.parts\[\]\.(id|name)$", "L1", "statement/guidance part identity -> statement id / narrative key"),
@@ -92,7 +102,8 @@ INSERT_RE = re.compile(r"\{\{\s*insert:\s*param,\s*([^}\s]+)\s*\}\}")
 
 stats = collections.defaultdict(collections.Counter)
 defects=[]; unknown_modal=collections.Counter(); modality_count=collections.Counter()
-objects={}; overlap_rows=[]; unresolved_links=0; params_unref=0
+objects={}; unresolved_links=0
+params_unref=0; params_total=0; multi_value_params=[]
 tag_values=collections.Counter(); sec_values=collections.Counter()
 
 def convert_prose(pr): return INSERT_RE.sub(lambda m:"{param:"+m.group(1)+"}", pr or "")
@@ -121,19 +132,26 @@ def collect_stmt(prefix_ns, c, sid, is_child, req):
     st={"id":sid,"modality":mod,
         "obligated-parties":[f"{prefix_ns}/party/institution"],
         "prose":{"de":prose}}
-    # params: attach to the statement whose prose references them
+    # params: label/default first-class (D9 rev, backlog #1); attach to the
+    # statement of the control that declares them; unreferenced tokens counted
+    global params_unref, params_total, multi_value_params
     for pm in c.get("params",[]) or []:
         pid=pm["id"]
-        if "{param:"+pid+"}" in prose:
-            st.setdefault("parameters",[]).append({"name":pid,"type":"string"})
-        extras={k:v for k,v in (("label",pm.get("label")),) if v}
-        if pm.get("values"): extras["values"]=pm["values"]
+        prm={"name":pid,"type":"string"}
+        if pm.get("label"): prm["label"]=pm["label"]
+        vals=pm.get("values") or []
+        if vals:
+            prm["default"]=vals[0]
+            if len(vals)>1: multi_value_params.append((c["id"],pid,len(vals)))
+        st.setdefault("parameters",[]).append(prm)
+        params_total+=1
+        if "{param:"+pid+"}" not in prose:
+            params_unref+=1
+        extras={}
         for xp in pm.get("props",[]) or []:
             if xp["name"]=="alt-identifier": extras["alt-identifier"]=xp["value"]
         if extras:
             req.setdefault("_compat_params",{})[pid]=extras
-        if "{param:"+pid+"}" not in prose:
-            globals()["params_unref"]; # counted below
     # facets by-statement
     def by(fname): return req["facets"].setdefault(fname,{}).setdefault("by-statement",{}).setdefault(sid,{})
     g=by(F_GRAM)
@@ -194,8 +212,8 @@ def mint_requirement(prefix_ns, c, version, bm_map):
     if rels: req["relations"]=rels
     return rid,req
 
-# rebuild output
-if os.path.exists(OUT): shutil.rmtree(OUT)
+# rebuild output (lib Bundle: Windows-safe in-place writes)
+bundle=Bundle(OUT)
 paths=collections.Counter(); catalogs_meta=[]; baseline=collections.defaultdict(list)
 seq={"n":0}
 def nseq(): seq["n"]+=10; return seq["n"]
@@ -259,57 +277,25 @@ for (key,lvl),refs in sorted(baseline.items()):
         "lifecycle":"active","title":f"Baseline sec_level: {lvl}",
         "members":[{"ref":r,"sequence":(i+1)*10} for i,r in enumerate(refs)]}
 
-# twin-catalog overlap analysis (id strings shared across the two publications)
-shared=sorted(all_ids["gspp"] & all_ids["mstls"])
-def prose_of(fn,cid):
-    cat=json.load(open(fn))["catalog"]; found={}
-    def s(n):
-        for g in n.get("groups",[]) or []: s(g)
-        for c in n.get("controls",[]) or []:
-            if c["id"] in shared:
-                smt=[p for p in c.get("parts",[]) if p.get("name")=="statement"]
-                found[c["id"]]=(smt[0].get("prose","") if smt else "")
-            s(c)
-    s(cat); return found
-pg=prose_of("/home/claude/gspp.json",None); pt=prose_of("/home/claude/tls.json",None)
-for cid in shared:
-    overlap_rows.append({"id":cid,"identical-prose":pg.get(cid,"")==pt.get(cid,"")})
-
-# facet schema stubs (enums generated from observed values)
-def stub(path,fid,ver,mods,props):
-    w(path,{"id":fid,"version":ver,"modifies-semantics":mods,
-        "note":"ILLUSTRATIVE STUB - normative schemas ship with the v0.6 schema deliverable",
-        "schema":{"$schema":"https://json-schema.org/draft/2020-12/schema",
-                  "type":"object","properties":props}})
-stub("schemas/gspp-taxonomy-1.0.0-stub.json","https://ns.bsi.bund.de/facet/gspp-taxonomy","1.0.0",["selection"],
+# facet schema stubs (enums generated from observed values); declaration
+# promotions per D10 rev 2 (backlog #8): security-objectives -> [selection]
+bundle.stub("gspp-taxonomy-1.0.0-stub.json","https://ns.bsi.bund.de/facet/gspp-taxonomy",["selection"],
      {"by-statement":{"type":"object"},"observed-sec-levels":{"enum":sorted(sec_values)}})
-stub("schemas/statement-grammar-1.0.0-stub.json","https://ns.oscal.org/stdlib/facet/statement-grammar","1.0.0",[],
+bundle.stub("statement-grammar-1.0.0-stub.json","https://ns.oscal.org/stdlib/facet/statement-grammar",[],
      {"by-statement":{"type":"object"}})
-stub("schemas/security-objectives-1.0.0-stub.json","https://ns.oscal.org/stdlib/facet/security-objectives","1.0.0",[],
+bundle.stub("security-objectives-1.0.0-stub.json","https://ns.oscal.org/stdlib/facet/security-objectives",["selection"],
      {"by-statement":{"type":"object"}})
-stub("schemas/assessment-criteria-1.0.0-stub.json","https://ns.oscal.org/stdlib/facet/assessment-criteria","1.0.0",["assessment"],
+bundle.stub("assessment-criteria-1.0.0-stub.json","https://ns.oscal.org/stdlib/facet/assessment-criteria",["assessment"],
      {"by-statement":{"type":"object"}})
-stub("schemas/gspp-narrative-1.0.0-stub.json","https://ns.bsi.bund.de/facet/gspp-narrative","1.0.0",[],
+bundle.stub("gspp-narrative-1.0.0-stub.json","https://ns.bsi.bund.de/facet/gspp-narrative",[],
      {"by-statement":{"type":"object"}})
-stub("schemas/oscal-1x-compat-1.0.0-stub.json","https://ns.oscal.org/compat/oscal-1x","1.0.0",[],
+bundle.stub("oscal-1x-compat-1.0.0-stub.json","https://ns.oscal.org/compat/oscal-1x",[],
      {"param-extras":{"type":"object"}})
 
-manifest={"manifest-version":"1",
- "provenance":{"sources":[{"key":k,"title":t,"version":v,"oscal-version":o}
+for rel,o in objects.items(): bundle.add(rel,o)
+manifest=bundle.write({"sources":[{"key":k,"title":t,"version":v,"oscal-version":o}
                for k,t,v,o in catalogs_meta],
-               "converter":"convert_bsi.py v0.1",
-               "note":"disjoint subtrees per publication; shared-id analysis in coverage report"},
- "objects":[{"id":o["id"],"version":o["version"],
-             "package-digest":None,"semantic-digest":semantic_digest(o),"path":rel}
-            for rel,o in sorted(objects.items())],
- "facet-schemas":[]}
-for rel,o in objects.items(): w(rel,o)
-for e in manifest["objects"]: e["package-digest"]=sha_file(e["path"])
-for s in sorted(os.listdir(os.path.join(OUT,"schemas"))):
-    d=json.load(open(os.path.join(OUT,"schemas",s)))
-    manifest["facet-schemas"].append({"id":d["id"],"exact-version":d["version"],
-        "digest":sha_file(f"schemas/{s}"),"path":f"schemas/{s}"})
-w("content-manifest.json",manifest)
+               "converter":"convert_bsi.py v0.2 (single-catalog: MS-TLS dropped by decision 2026-07-21)"})
 
 # ---------- coverage ----------
 rows=[]; unmapped=[]
@@ -328,7 +314,12 @@ j={"sources":[{"key":k,"title":t,"version":v} for k,t,v,_ in catalogs_meta],
    "modality":dict(modality_count),"unknown-modal-verbs":dict(unknown_modal),
    "defective-prop-values":len(defects),
    "defects":defects,
-   "shared-ids":overlap_rows,
+   "census-delta":{"census-version":CENSUS["version"],"this-version":catalogs_meta[0][2],
+                   "controls":{"census":CENSUS["controls"],"now":len(all_ids["gspp"])},
+                   "defects":{"census-gspp":CENSUS["defects-gspp"],"now":len(defects)}},
+   "parameters":{"total":params_total,"unreferenced-in-prose":params_unref,
+                 "multi-value":multi_value_params},
+   "mstls":"dropped by decision 2026-07-21 (reported to BSI; twin-catalog finding stays in census/handbook)",
    "baselines":{f"{k}:{l}":len(v) for (k,l),v in sorted(baseline.items())},
    "tag-value-inconsistencies":{t:c for t,c in tag_values.items()
         if t.replace(" ","-") in tag_values and " " in t},
@@ -336,8 +327,11 @@ j={"sources":[{"key":k,"title":t,"version":v} for k,t,v,_ in catalogs_meta],
    "path-map":[{"path":p,"count":n,"level":l,"destination":t} for p,n,l,t in rows]}
 json.dump(j,open(RJS,"w"),ensure_ascii=False,indent=1)
 
-md=[f"# BSI (GS++ + MS-TLS) -> Semantic Core: Coverage Report (computed)\n"]
-md.append("Sources: " + " · ".join(f"**{t}** v{v}" for _,t,v,_ in catalogs_meta) + "\n")
+md=[f"# BSI Grundschutz++ -> Semantic Core: Coverage Report (computed)\n"]
+md.append("Source: " + " · ".join(f"**{t}** v{v}" for _,t,v,_ in catalogs_meta)
+          + " — single-catalog mode: **MS-TLS dropped by decision 2026-07-21** "
+          "(its defects were reported to BSI; the twin-catalog finding — 11 shared ids, "
+          "10 silently diverged, census 2026-07-03 — stays on the record in census and handbook).\n")
 md.append("## Totals\n")
 md.append(f"- Source leaf values inventoried: **{total:,}**")
 md.append(f"- Mapped: **{mapped:,}** -> **UNMAPPED: {total-mapped}** -> coverage **{j['totals']['coverage-pct']} %**")
@@ -350,9 +344,14 @@ md.append(f"- **Modality** from `modal_verb` (code map incl. DARF NUR -> may-onl
           + (f"; unknown verbs: {dict(unknown_modal)}" if unknown_modal else "; no unknown verbs") + ".")
 md.append("- **Nested controls -> statements** of the parent; statement id = child control id "
           "(stable, citable); child-level props keyed `by-statement` in the facets.")
-md.append("- **{{ insert: param, x }}** in prose -> `{param:x}` tokens; params typed `string`; "
-          "param label/default/alt-id -> **Level 2** compat `param-extras` "
-          "(candidate D9 addition: scalar default/display value).")
+md.append(f"- **{{{{ insert: param, x }}}}** in prose -> `{{param:x}}` tokens; params typed `string` "
+          f"with **first-class `label` + `default`** (D9 rev, backlog #1) - x{params_total} parameters, "
+          f"the param-extras residue drains to alt-identifier uuids only. Params never referenced by a "
+          f"`{{param:}}` token in their statement's prose: x{params_unref} (counted - source QA signal); "
+          f"multi-value params x{len(multi_value_params)} (first value becomes default, all values kept in source).")
+md.append("- **Payload free text language-tagged** per corpus language (`{de: ...}` on statement prose, "
+          "guidance, Set descriptions) - this corpus was born tagged; harmonization rule (backlog #12) "
+          "verified, not applied.")
 md.append("- **Grammar** (action_word/result/result_specification/target_object_categories) -> "
           "`statement-grammar@1` by-statement; **documentation** -> `assessment-criteria@1` "
           "required-documentation; **C/I/A/Auth + threats** -> `security-objectives@1` "
@@ -370,11 +369,10 @@ md.append(f"- **Defective source values: {len(defects)}** - `{{{{...}}}}` pseudo
           "dropped silently - handbook 14.5). Full list in the JSON report; first three:")
 for d in defects[:3]:
     md.append(f"    - `{d['control']}` / `{d['prop']}`: \"{d['value'][:70]}...\"")
-md.append(f"- **Twin-catalog shared id strings: {len(shared)}** - minted under disjoint subtrees "
-          f"(/gspp/, /mstls/). Prose-identical: "
-          f"{sum(1 for r in overlap_rows if r['identical-prose'])}/{len(shared)} "
-          "(candidates for future single-object-two-sets dedup; the rest have diverged - "
-          "the measured composition hazard, now safely representable).")
+md.append(f"- **Census delta (source moved)**: catalog v{catalogs_meta[0][2][:10]} vs. census v{CENSUS['version']} - "
+          f"controls {len(all_ids['gspp'])} (census {CENSUS['controls']}), defective `{{{{...}}}}` values "
+          f"{len(defects)} (census GS++-only {CENSUS['defects-gspp']}). Deltas are the authors editing the "
+          f"catalog between snapshots; every claim in this report re-verifies against the version named above.")
 inc = j["tag-value-inconsistencies"]
 if inc: md.append(f"- **Tag spelling drift** (space vs hyphen variants coexist): {inc} - "
                   "reported, not normalized.")
@@ -396,8 +394,9 @@ print(f"requirements: {reqs} (statements: {nstmt})  sets: {sets}  objects: {len(
 print(f"leaf values: {total:,}  mapped: {mapped:,}  UNMAPPED: {total-mapped}")
 print("modality:",dict(modality_count)," unknown:",dict(unknown_modal))
 compat_n=sum(1 for o in objects.values() if "facets" in o and F_COMPAT in o.get("facets",{}))
-print(f"L2 param-extras residue: {compat_n} requirements")
-print(f"defects: {len(defects)}  shared-ids: {len(shared)} "
-      f"(identical prose: {sum(1 for r in overlap_rows if r['identical-prose'])})")
+print(f"params: {params_total} (label/default first-class; unreferenced-in-prose: {params_unref})  "
+      f"L2 param-extras residue (alt-ids only): {compat_n} requirements")
+print(f"defects: {len(defects)} (census gspp {CENSUS['defects-gspp']})  "
+      f"controls: {len(all_ids['gspp'])} (census {CENSUS['controls']})")
 if unmapped:
     print("UNMAPPED:"); [print("  ",p,"x",n) for p,n in unmapped[:30]]

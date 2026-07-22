@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BER.1.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BER.1.2",
  "lifecycle": "active",
  "title": "Regelmäßige Überprüfung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "ber.1.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -75,7 +76,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "ber.1.2-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "7ff251bd-78a1-40af-ba57-56f970c0664b"
     }
    }

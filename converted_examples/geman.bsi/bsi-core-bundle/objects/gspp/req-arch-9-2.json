@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/ARCH.9.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "ARCH.9.2",
  "lifecycle": "active",
  "title": "Lastverteilung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "arch.9.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "netzbasierte oder serverbasierte"
     }
    ]
   }
@@ -81,7 +82,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "arch.9.2-prm1": {
-     "label": "netzbasierte oder serverbasierte",
      "alt-identifier": "50e54872-271e-41b4-b54a-50e9ebab82bd"
     }
    }

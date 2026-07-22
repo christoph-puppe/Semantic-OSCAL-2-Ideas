@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/GEB.4.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "GEB.4.2",
  "lifecycle": "active",
  "title": "Gesonderte Autorisierung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "geb.4.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "eine zuständige Person oder Rolle"
     }
    ]
   }
@@ -81,7 +82,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "geb.4.2-prm1": {
-     "label": "eine zuständige Person oder Rolle",
      "alt-identifier": "94d3b9c2-9040-4bb6-9153-54d5c488a085"
     }
    }

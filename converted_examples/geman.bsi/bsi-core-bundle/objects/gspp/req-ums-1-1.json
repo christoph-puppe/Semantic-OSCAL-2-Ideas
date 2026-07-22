@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/UMS.1.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "UMS.1.1",
  "lifecycle": "active",
  "title": "Ermittlung des Umsetzungsstatus",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "ums.1.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -53,7 +54,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "ums.1.1-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "e2c90fc0-e6e5-4a89-8099-39360b6e8eb9"
     }
    }

@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/ARCH.9.3",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "ARCH.9.3",
  "lifecycle": "active",
  "title": "Automatische Skalierung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "arch.9.3-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Schwellwerten"
     }
    ]
   }
@@ -82,7 +83,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "arch.9.3-prm1": {
-     "label": "Schwellwerten",
      "alt-identifier": "bbfa749a-99a4-4ff3-9cce-5ceeb3162596"
     }
    }

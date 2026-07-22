@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.3.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.3.1",
  "lifecycle": "active",
  "title": "Protokollierung sicherheitsrelevanter Ereignisse",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "det.3.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "eine bestimmte Frist"
     }
    ]
   },
@@ -83,7 +84,8 @@
    "parameters": [
     {
      "name": "det.3.1.6-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "bestimmte systemspezifische Ereignisse"
     }
    ]
   },
@@ -139,7 +141,8 @@
    "parameters": [
     {
      "name": "det.3.1.11-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "bestimmte anwendungsspezifische Ereignisse"
     }
    ]
   },
@@ -638,15 +641,12 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.3.1-prm1": {
-     "label": "eine bestimmte Frist",
      "alt-identifier": "dc58d353-86e1-4070-9f86-b7f0e0f93305"
     },
     "det.3.1.6-prm1": {
-     "label": "bestimmte systemspezifische Ereignisse",
      "alt-identifier": "42287f3d-c1ce-4109-bda1-87d1fd892993"
     },
     "det.3.1.11-prm1": {
-     "label": "bestimmte anwendungsspezifische Ereignisse",
      "alt-identifier": "80fa36d5-71d4-4a2e-9795-54cedffa44ae"
     }
    }

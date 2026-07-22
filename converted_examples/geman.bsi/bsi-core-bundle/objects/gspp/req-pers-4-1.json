@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/PERS.4.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "PERS.4.1",
  "lifecycle": "active",
  "title": "Qualifikationsbedarf",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "pers.4.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -81,7 +82,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "pers.4.1-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "9c551357-437f-4662-a8b5-0fac98831755"
     }
    }

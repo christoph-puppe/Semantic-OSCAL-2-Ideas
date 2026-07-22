@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BES.5.5",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BES.5.5",
  "lifecycle": "active",
  "title": "Nutzungsregelungen",
@@ -37,7 +37,8 @@
    "parameters": [
     {
      "name": "bes.5.5.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Kriterien"
     }
    ]
   }
@@ -173,7 +174,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "bes.5.5.2-prm1": {
-     "label": "Kriterien",
      "alt-identifier": "adb32e38-f59a-42fa-b1a0-67abd118c585"
     }
    }

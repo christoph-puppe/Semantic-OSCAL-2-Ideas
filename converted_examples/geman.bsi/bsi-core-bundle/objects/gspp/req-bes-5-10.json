@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BES.5.10",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BES.5.10",
  "lifecycle": "active",
  "title": "Behandlung von Vorfällen",
@@ -57,7 +57,8 @@
    "parameters": [
     {
      "name": "bes.5.10.3.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einem anerkannten Standard"
     }
    ]
   },
@@ -361,7 +362,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "bes.5.10.3.1-prm1": {
-     "label": "einem anerkannten Standard",
      "alt-identifier": "ebc08e41-e728-4447-93fa-233fbad7f2fa"
     }
    }

@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.2.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.2.2",
  "lifecycle": "active",
  "title": "Security Operations Center",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "det.2.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "dediziertem Personal"
     }
    ]
   }
@@ -78,7 +79,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.2.2-prm1": {
-     "label": "dediziertem Personal",
      "alt-identifier": "1af88c3b-a13c-4d74-a099-f230c9f71f55"
     }
    }

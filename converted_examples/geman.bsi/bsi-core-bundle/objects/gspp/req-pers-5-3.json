@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/PERS.5.3",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "PERS.5.3",
  "lifecycle": "active",
  "title": "Vertrauens-Check sicherheitskritischer Rollen",
@@ -17,11 +17,13 @@
    "parameters": [
     {
      "name": "pers.5.3-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "definierte sicherheitskritische Rollen"
     },
     {
      "name": "pers.5.3-prm2",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -82,11 +84,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "pers.5.3-prm1": {
-     "label": "definierte sicherheitskritische Rollen",
      "alt-identifier": "76a4233a-f1b4-4e5c-9c53-8c6b7d10ec88"
     },
     "pers.5.3-prm2": {
-     "label": "regelmäßig",
      "alt-identifier": "76a4233a-f1b4-4e5c-9c53-8c6b7d10ec88"
     }
    }

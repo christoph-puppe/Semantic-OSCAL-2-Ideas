@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/NOT.2.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "NOT.2.1",
  "lifecycle": "active",
  "title": "Verfahren und Regelungen zur BAO",
@@ -27,7 +27,8 @@
    "parameters": [
     {
      "name": "not.2.1.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "zuständigen Personen oder Rollen"
     }
    ]
   },
@@ -63,7 +64,8 @@
    "parameters": [
     {
      "name": "not.2.1.4-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -242,11 +244,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "not.2.1.1-prm1": {
-     "label": "zuständigen Personen oder Rollen",
      "alt-identifier": "d7b3f904-e7a2-4c80-a739-b41b28e86d7d"
     },
     "not.2.1.4-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "c733baed-3cf9-4752-8121-354766e49ab0"
     }
    }

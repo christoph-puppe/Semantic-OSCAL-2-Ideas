@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/GEB.10.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "GEB.10.2",
  "lifecycle": "active",
  "title": "Brandschutz",
@@ -57,7 +57,8 @@
    "parameters": [
     {
      "name": "geb.10.2.4-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "eine bestimmte Frist"
     }
    ]
   },
@@ -93,7 +94,8 @@
    "parameters": [
     {
      "name": "geb.10.2.7-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -393,11 +395,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "geb.10.2.4-prm1": {
-     "label": "eine bestimmte Frist",
      "alt-identifier": "4411c989-a51f-4aa9-8d79-e0b3fd492fb9"
     },
     "geb.10.2.7-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "3b904a6b-c440-4360-ab4a-37b76fc639a7"
     }
    }

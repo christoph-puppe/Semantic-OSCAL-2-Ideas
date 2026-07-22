@@ -1,9 +1,9 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DEV.4.4",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DEV.4.4",
  "lifecycle": "active",
- "title": "Integrität externer Softwarebibliotheken",
+ "title": "Integrität externer Software",
  "statements": [
   {
    "id": "smt",
@@ -12,7 +12,7 @@
     "https://ns.bsi.bund.de/gspp/party/institution"
    ],
    "prose": {
-    "de": "Entwicklung für Anwendungen SOLLTE die Integrität externer Softwarebibliotheken vor dem Release testen."
+    "de": "Entwicklung für Anwendungen SOLLTE die Integrität externer Softwareartefakte und -Schnittstellen vor dem Release testen."
    }
   }
  ],
@@ -21,7 +21,7 @@
    "by-statement": {
     "smt": {
      "action": "testen",
-     "result": "die Integrität externer Softwarebibliotheken",
+     "result": "die Integrität externer Softwareartefakte und -Schnittstellen",
      "result-specification": "vor dem Release",
      "target-object-categories": [
       "Anwendungen"

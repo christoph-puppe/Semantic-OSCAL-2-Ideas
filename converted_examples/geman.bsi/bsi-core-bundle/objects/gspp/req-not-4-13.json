@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/NOT.4.13",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "NOT.4.13",
  "lifecycle": "active",
  "title": "Datensouveränität",
@@ -17,11 +17,13 @@
    "parameters": [
     {
      "name": "not.4.13-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einem anerkannten Standard"
     },
     {
      "name": "not.4.13-prm2",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -84,11 +86,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "not.4.13-prm1": {
-     "label": "einem anerkannten Standard",
      "alt-identifier": "13789041-edcf-4270-a8d1-49bdd0d54ab4"
     },
     "not.4.13-prm2": {
-     "label": "regelmäßig",
      "alt-identifier": "13789041-edcf-4270-a8d1-49bdd0d54ab4"
     }
    }
