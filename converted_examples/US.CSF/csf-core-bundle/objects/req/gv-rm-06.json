@@ -1,0 +1,72 @@
+{
+ "id": "https://ns.nist.gov/csf/req/GV.RM-06",
+ "version": "2.0",
+ "label": "GV.RM-06",
+ "lifecycle": "active",
+ "title": "GV.RM-06",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "A standardized method for calculating, documenting, categorizing, and prioritizing cybersecurity risks is established and communicated"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "GV.RM-06.026",
+     "prose": {
+      "en": "Establish criteria for using a quantitative approach to cybersecurity risk analysis, and specify probability and exposure formulas"
+     }
+    },
+    {
+     "id": "GV.RM-06.027",
+     "prose": {
+      "en": "Create and use templates (e.g., a risk register) to document cybersecurity risk information (e.g., risk description, exposure, treatment, and ownership)"
+     }
+    },
+    {
+     "id": "GV.RM-06.028",
+     "prose": {
+      "en": "Establish criteria for risk prioritization at the appropriate levels within the enterprise"
+     }
+    },
+    {
+     "id": "GV.RM-06.029",
+     "prose": {
+      "en": "Use a consistent list of risk categories to support integrating, aggregating, and comparing cybersecurity risks"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.RM-01",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.RM-01",
+    "mode": "merged-into",
+    "label": "ID.RM-01",
+    "title": "ID.RM-01",
+    "prose": "Risk management processes are established, managed, and agreed to by organizational stakeholders"
+   }
+  ]
+ }
+}

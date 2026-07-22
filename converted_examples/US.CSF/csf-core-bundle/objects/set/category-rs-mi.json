@@ -1,0 +1,26 @@
+{
+ "id": "https://ns.nist.gov/csf/set/category/rs-mi",
+ "version": "2.0",
+ "lifecycle": "active",
+ "title": "Incident Mitigation",
+ "label": "Incident Mitigation (RS.MI)",
+ "members": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/RS.MI-01",
+   "sequence": 10
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/RS.MI-02",
+   "sequence": 20
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Activities are performed to prevent expansion of an event and mitigate its effects"
+    }
+   ]
+  }
+ }
+}

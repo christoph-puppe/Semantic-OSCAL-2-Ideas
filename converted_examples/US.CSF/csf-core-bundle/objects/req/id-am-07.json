@@ -1,0 +1,55 @@
+{
+ "id": "https://ns.nist.gov/csf/req/ID.AM-07",
+ "version": "2.0",
+ "label": "ID.AM-07",
+ "lifecycle": "active",
+ "title": "ID.AM-07",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Inventories of data and corresponding metadata for designated data types are maintained"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "ID.AM-07.134",
+     "prose": {
+      "en": "Maintain a list of the designated data types of interest (e.g., personally identifiable information, protected health information, financial account numbers, organization intellectual property, operational technology data)"
+     }
+    },
+    {
+     "id": "ID.AM-07.135",
+     "prose": {
+      "en": "Continuously discover and analyze ad hoc data to identify new instances of designated data types"
+     }
+    },
+    {
+     "id": "ID.AM-07.136",
+     "prose": {
+      "en": "Assign data classifications to designated data types through tags or labels"
+     }
+    },
+    {
+     "id": "ID.AM-07.137",
+     "prose": {
+      "en": "Track the provenance, data owner, and geolocation of each instance of designated data types"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

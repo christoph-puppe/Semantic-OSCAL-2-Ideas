@@ -1,0 +1,55 @@
+{
+ "id": "https://ns.nist.gov/csf/req/RS.AN-03",
+ "version": "2.0",
+ "label": "RS.AN-03",
+ "lifecycle": "active",
+ "title": "RS.AN-03",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Analysis is performed to establish what has taken place during an incident and the root cause of the incident"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "RS.AN-03.321",
+     "prose": {
+      "en": "Determine the sequence of events that occurred during the incident and which assets and resources were involved in each event"
+     }
+    },
+    {
+     "id": "RS.AN-03.322",
+     "prose": {
+      "en": "Attempt to determine what vulnerabilities, threats, and threat actors were directly or indirectly involved in the incident"
+     }
+    },
+    {
+     "id": "RS.AN-03.323",
+     "prose": {
+      "en": "Analyze the incident to find the underlying, systemic root causes"
+     }
+    },
+    {
+     "id": "RS.AN-03.324",
+     "prose": {
+      "en": "Check any cyber deception technology for additional information on attacker behavior"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

@@ -1,0 +1,37 @@
+{
+ "id": "https://ns.nist.gov/csf/req/RC.RP-03",
+ "version": "2.0",
+ "label": "RC.RP-03",
+ "lifecycle": "active",
+ "title": "RC.RP-03",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "The integrity of backups and other restoration assets is verified before using them for restoration"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "RC.RP-03.350",
+     "prose": {
+      "en": "Check restoration assets for indicators of compromise, file corruption, and other integrity issues before use"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

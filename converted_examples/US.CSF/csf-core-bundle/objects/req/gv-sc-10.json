@@ -1,0 +1,90 @@
+{
+ "id": "https://ns.nist.gov/csf/req/GV.SC-10",
+ "version": "2.0",
+ "label": "GV.SC-10",
+ "lifecycle": "active",
+ "title": "GV.SC-10",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Cybersecurity supply chain risk management plans include provisions for activities that occur after the conclusion of a partnership or service agreement"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "GV.SC-10.113",
+     "prose": {
+      "en": "Establish processes for terminating critical relationships under both normal and adverse circumstances"
+     }
+    },
+    {
+     "id": "GV.SC-10.114",
+     "prose": {
+      "en": "Define and implement plans for component end-of-life maintenance support and obsolescence"
+     }
+    },
+    {
+     "id": "GV.SC-10.115",
+     "prose": {
+      "en": "Verify that supplier access to organization resources is deactivated promptly when it is no longer needed"
+     }
+    },
+    {
+     "id": "GV.SC-10.116",
+     "prose": {
+      "en": "Verify that assets containing the organization's data are returned or properly disposed of in a timely, controlled, and safe manner"
+     }
+    },
+    {
+     "id": "GV.SC-10.117",
+     "prose": {
+      "en": "Develop and execute a plan for terminating or transitioning supplier relationships that takes supply chain security risk and resiliency into account"
+     }
+    },
+    {
+     "id": "GV.SC-10.118",
+     "prose": {
+      "en": "Mitigate risks to data and systems created by supplier termination"
+     }
+    },
+    {
+     "id": "GV.SC-10.119",
+     "prose": {
+      "en": "Manage data leakage risks associated with supplier termination"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "3rd",
+    "remark": "3rd Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.SC-01",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.SC-01",
+    "mode": "merged-into",
+    "label": "ID.SC-01",
+    "title": "ID.SC-01",
+    "prose": "Cyber supply chain risk management processes are identified, established, assessed, managed, and agreed to by organizational stakeholders"
+   }
+  ]
+ }
+}

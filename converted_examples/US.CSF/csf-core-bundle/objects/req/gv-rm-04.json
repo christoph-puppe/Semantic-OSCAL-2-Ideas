@@ -1,0 +1,77 @@
+{
+ "id": "https://ns.nist.gov/csf/req/GV.RM-04",
+ "version": "2.0",
+ "label": "GV.RM-04",
+ "lifecycle": "active",
+ "title": "GV.RM-04",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Strategic direction that describes appropriate risk response options is established and communicated"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "GV.RM-04.021",
+     "prose": {
+      "en": "Specify criteria for accepting and avoiding cybersecurity risk for various classifications of data"
+     }
+    },
+    {
+     "id": "GV.RM-04.022",
+     "prose": {
+      "en": "Determine whether to purchase cybersecurity insurance"
+     }
+    },
+    {
+     "id": "GV.RM-04.023",
+     "prose": {
+      "en": "Document conditions under which shared responsibility models are acceptable (e.g., outsourcing certain cybersecurity functions, having a third party perform financial transactions on behalf of the organization, using public cloud-based services)"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.GV-04",
+   "mode": "renamed"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.RM-02",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.GV-04",
+    "mode": "renamed",
+    "label": "ID.GV-04",
+    "title": "ID.GV-04",
+    "prose": "Governance and risk management processes address cybersecurity risks"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.RM-02",
+    "mode": "merged-into",
+    "label": "ID.RM-02",
+    "title": "ID.RM-02",
+    "prose": "Organizational risk tolerance is determined and clearly expressed"
+   }
+  ]
+ }
+}

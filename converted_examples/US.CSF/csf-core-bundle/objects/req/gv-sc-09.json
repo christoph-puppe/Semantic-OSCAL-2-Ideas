@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.nist.gov/csf/req/GV.SC-09",
+ "version": "2.0",
+ "label": "GV.SC-09",
+ "lifecycle": "active",
+ "title": "GV.SC-09",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Supply chain security practices are integrated into cybersecurity and enterprise risk management programs, and their performance is monitored throughout the technology product and service life cycle"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "GV.SC-09.108",
+     "prose": {
+      "en": "Policies and procedures require provenance records for all acquired technology products and services"
+     }
+    },
+    {
+     "id": "GV.SC-09.109",
+     "prose": {
+      "en": "Periodically provide risk reporting to leaders about how acquired components are proven to be untampered and authentic"
+     }
+    },
+    {
+     "id": "GV.SC-09.110",
+     "prose": {
+      "en": "Communicate regularly among cybersecurity risk managers and operations personnel about the need to acquire software patches, updates, and upgrades only from authenticated and trustworthy software providers"
+     }
+    },
+    {
+     "id": "GV.SC-09.111",
+     "prose": {
+      "en": "Review policies to ensure that they require approved supplier personnel to perform maintenance on supplier products"
+     }
+    },
+    {
+     "id": "GV.SC-09.112",
+     "prose": {
+      "en": "Policies and procedure require checking upgrades to critical hardware for unauthorized changes"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "3rd",
+    "remark": "3rd Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.SC-01",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.SC-01",
+    "mode": "merged-into",
+    "label": "ID.SC-01",
+    "title": "ID.SC-01",
+    "prose": "Cyber supply chain risk management processes are identified, established, assessed, managed, and agreed to by organizational stakeholders"
+   }
+  ]
+ }
+}

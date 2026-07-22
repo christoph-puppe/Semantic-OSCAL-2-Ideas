@@ -1,0 +1,49 @@
+{
+ "id": "https://ns.nist.gov/csf/req/ID.RA-02",
+ "version": "2.0",
+ "label": "ID.RA-02",
+ "lifecycle": "active",
+ "title": "ID.RA-02",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Cyber threat intelligence is received from information sharing forums and sources"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "ID.RA-02.153",
+     "prose": {
+      "en": "Configure cybersecurity tools and technologies with detection or response capabilities to securely ingest cyber threat intelligence feeds"
+     }
+    },
+    {
+     "id": "ID.RA-02.154",
+     "prose": {
+      "en": "Receive and review advisories from reputable third parties on current threat actors and their tactics, techniques, and procedures (TTPs)"
+     }
+    },
+    {
+     "id": "ID.RA-02.155",
+     "prose": {
+      "en": "Monitor sources of cyber threat intelligence for information on the types of vulnerabilities that emerging technologies may have"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

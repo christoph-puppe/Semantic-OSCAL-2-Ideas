@@ -1,0 +1,55 @@
+{
+ "id": "https://ns.nist.gov/csf/req/GV.RR-01",
+ "version": "2.0",
+ "label": "GV.RR-01",
+ "lifecycle": "active",
+ "title": "GV.RR-01",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Organizational leadership is responsible and accountable for cybersecurity risk and fosters a culture that is risk-aware, ethical, and continually improving"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "GV.RR-01.033",
+     "prose": {
+      "en": "Leaders (e.g., directors) agree on their roles and responsibilities in developing, implementing, and assessing the organization's cybersecurity strategy"
+     }
+    },
+    {
+     "id": "GV.RR-01.034",
+     "prose": {
+      "en": "Share leaders' expectations regarding a secure and ethical culture, especially when current events present the opportunity to highlight positive or negative examples of cybersecurity risk management"
+     }
+    },
+    {
+     "id": "GV.RR-01.035",
+     "prose": {
+      "en": "Leaders direct the CISO to maintain a comprehensive cybersecurity risk strategy and review and update it at least annually and after major events"
+     }
+    },
+    {
+     "id": "GV.RR-01.036",
+     "prose": {
+      "en": "Conduct reviews to ensure adequate authority and coordination among those responsible for managing cybersecurity risk"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

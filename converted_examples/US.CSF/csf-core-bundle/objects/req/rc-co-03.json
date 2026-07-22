@@ -1,0 +1,55 @@
+{
+ "id": "https://ns.nist.gov/csf/req/RC.CO-03",
+ "version": "2.0",
+ "label": "RC.CO-03",
+ "lifecycle": "active",
+ "title": "RC.CO-03",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Recovery activities and progress in restoring operational capabilities are communicated to designated internal and external stakeholders"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "RC.CO-03.358",
+     "prose": {
+      "en": "Securely share recovery information, including restoration progress, consistent with response plans and information sharing agreements"
+     }
+    },
+    {
+     "id": "RC.CO-03.359",
+     "prose": {
+      "en": "Regularly update senior leadership on recovery status and restoration progress for major incidents"
+     }
+    },
+    {
+     "id": "RC.CO-03.360",
+     "prose": {
+      "en": "Follow the rules and protocols defined in contracts for incident information sharing between the organization and its suppliers"
+     }
+    },
+    {
+     "id": "RC.CO-03.361",
+     "prose": {
+      "en": "Coordinate crisis communication between the organization and its critical suppliers"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

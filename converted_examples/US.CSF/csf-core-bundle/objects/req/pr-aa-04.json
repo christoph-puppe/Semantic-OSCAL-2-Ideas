@@ -1,0 +1,49 @@
+{
+ "id": "https://ns.nist.gov/csf/req/PR.AA-04",
+ "version": "2.0",
+ "label": "PR.AA-04",
+ "lifecycle": "active",
+ "title": "PR.AA-04",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Identity assertions are protected, conveyed, and verified"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "PR.AA-04.204",
+     "prose": {
+      "en": "Protect identity assertions that are used to convey authentication and user information through single sign-on systems"
+     }
+    },
+    {
+     "id": "PR.AA-04.205",
+     "prose": {
+      "en": "Protect identity assertions that are used to convey authentication and user information between federated systems"
+     }
+    },
+    {
+     "id": "PR.AA-04.206",
+     "prose": {
+      "en": "Implement standards-based approaches for identity assertions in all contexts, and follow all guidance for the generation (e.g., data models, metadata), protection (e.g., digital signing, encryption), and verification (e.g., signature validation) of identity assertions"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

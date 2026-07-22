@@ -1,0 +1,55 @@
+{
+ "id": "https://ns.nist.gov/csf/req/PR.PS-05",
+ "version": "2.0",
+ "label": "PR.PS-05",
+ "lifecycle": "active",
+ "title": "PR.PS-05",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Installation and execution of unauthorized software are prevented"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "PR.PS-05.253",
+     "prose": {
+      "en": "When risk warrants it, restrict software execution to permitted products only or deny the execution of prohibited and unauthorized software"
+     }
+    },
+    {
+     "id": "PR.PS-05.254",
+     "prose": {
+      "en": "Verify the source of new software and the software's integrity before installing it"
+     }
+    },
+    {
+     "id": "PR.PS-05.255",
+     "prose": {
+      "en": "Configure platforms to use only approved DNS services that block access to known malicious domains"
+     }
+    },
+    {
+     "id": "PR.PS-05.256",
+     "prose": {
+      "en": "Configure platforms to allow the installation of organization-approved software only"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

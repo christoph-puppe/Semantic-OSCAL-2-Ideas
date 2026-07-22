@@ -1,0 +1,49 @@
+{
+ "id": "https://ns.nist.gov/csf/req/GV.RM-03",
+ "version": "2.0",
+ "label": "GV.RM-03",
+ "lifecycle": "active",
+ "title": "GV.RM-03",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Cybersecurity risk management activities and outcomes are included in enterprise risk management processes"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "GV.RM-03.018",
+     "prose": {
+      "en": "Aggregate and manage cybersecurity risks alongside other enterprise risks (e.g., compliance, financial, operational, regulatory, reputational, safety)"
+     }
+    },
+    {
+     "id": "GV.RM-03.019",
+     "prose": {
+      "en": "Include cybersecurity risk managers in enterprise risk management planning"
+     }
+    },
+    {
+     "id": "GV.RM-03.020",
+     "prose": {
+      "en": "Establish criteria for escalating cybersecurity risks within enterprise risk management"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

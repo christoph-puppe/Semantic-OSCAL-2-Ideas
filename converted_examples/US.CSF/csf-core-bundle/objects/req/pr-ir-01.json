@@ -1,0 +1,105 @@
+{
+ "id": "https://ns.nist.gov/csf/req/PR.IR-01",
+ "version": "2.0",
+ "label": "PR.IR-01",
+ "lifecycle": "active",
+ "title": "PR.IR-01",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Networks and environments are protected from unauthorized logical access and usage"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "PR.IR-01.260",
+     "prose": {
+      "en": "Logically segment organization networks and cloud-based platforms according to trust boundaries and platform types (e.g., IT, IoT, OT, mobile, guests), and permit required communications only between segments"
+     }
+    },
+    {
+     "id": "PR.IR-01.261",
+     "prose": {
+      "en": "Logically segment organization networks from external networks, and permit only necessary communications to enter the organization's networks from the external networks"
+     }
+    },
+    {
+     "id": "PR.IR-01.262",
+     "prose": {
+      "en": "Implement zero trust architectures to restrict network access to each resource to the minimum necessary"
+     }
+    },
+    {
+     "id": "PR.IR-01.263",
+     "prose": {
+      "en": "Check the cyber health of endpoints before allowing them to access and use production resources"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.AC-03",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.AC-05",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.DS-07",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.PT-04",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.AC-03",
+    "mode": "merged-into",
+    "label": "PR.AC-03",
+    "title": "PR.AC-03",
+    "prose": "Remote access is managed"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.AC-05",
+    "mode": "merged-into",
+    "label": "PR.AC-05",
+    "title": "PR.AC-05",
+    "prose": "Network integrity is protected (e.g., network segregation, network segmentation)"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.DS-07",
+    "mode": "merged-into",
+    "label": "PR.DS-07",
+    "title": "PR.DS-07",
+    "prose": "The development and testing environment(s) are separate from the production environment"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.PT-04",
+    "mode": "merged-into",
+    "label": "PR.PT-04",
+    "title": "PR.PT-04",
+    "prose": "Communications and control networks are protected"
+   }
+  ]
+ }
+}

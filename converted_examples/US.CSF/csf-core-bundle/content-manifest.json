@@ -1,0 +1,985 @@
+{
+ "manifest-version": "1",
+ "provenance": {
+  "source": "Electronic Version of NIST Cybersecurity Framework 2.0",
+  "source-version": "2.0",
+  "source-doc-version": "1.2.0",
+  "source-oscal-version": "v1.2.2",
+  "published": "2026-05-13T12:30:00-00:00",
+  "converter": "convert_csf.py v0.1",
+  "namespace-note": "https://ns.nist.gov/csf minted by converter (no version in the URI; lineage is D2's job) pending a NIST-published URI"
+ },
+ "objects": [
+  {
+   "id": "https://ns.nist.gov/csf/req/DE.AE-02",
+   "version": "2.0",
+   "package-digest": "sha256:87c6efd43fd27c4394eba04e7e3a2cbf9361e163dbbe95a21d665c10624d1c70",
+   "semantic-digest": "sha256:31cd763329a8816d4307964298ba46372659590b899a03b1cb5fd4f41aeb51e3",
+   "path": "objects/req/de-ae-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/DE.AE-03",
+   "version": "2.0",
+   "package-digest": "sha256:cc331f807900a1e96c90f16386dd75312ea81f1ed4fb79f3e204d120c811ac5f",
+   "semantic-digest": "sha256:5c660810e9f9f25e0cf763bdac7d874e5781b29627c5d8549887386826fe9679",
+   "path": "objects/req/de-ae-03.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/DE.AE-04",
+   "version": "2.0",
+   "package-digest": "sha256:698b25290e630e3fb0d7b8e7d35ed007b3447d640eeb623a0b583e1435551e89",
+   "semantic-digest": "sha256:6a6416607ad4d3c4e39cc99e2a3a929f426dd1ee931abb15a5692a5883902547",
+   "path": "objects/req/de-ae-04.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/DE.AE-06",
+   "version": "2.0",
+   "package-digest": "sha256:d074c2c023e75cff7dceec4dd23c11ed0f4bb342a19d63608d40fd82e8905228",
+   "semantic-digest": "sha256:acc80c41e7de561ab826ea415aa47a8af02d731e73b7d0fe35ee9fff87258aa9",
+   "path": "objects/req/de-ae-06.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/DE.AE-07",
+   "version": "2.0",
+   "package-digest": "sha256:089a4e673821e2112855354ed8bf9a09a28a4aa503ffeff6dbad2a2cf078ae34",
+   "semantic-digest": "sha256:fa14efbd143587296d7434b4fe1884d412e9c8704d764d20746bb26ac2dd3803",
+   "path": "objects/req/de-ae-07.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/DE.AE-08",
+   "version": "2.0",
+   "package-digest": "sha256:8714bc236816a830a6d0406c2a826ff00a74c7d87abaf1ec7ff126dec2aa88a3",
+   "semantic-digest": "sha256:2a1567603ca9f8ac0a8c7c28998a5ac6304f5f1dee0df49de3605661b8c1dbd1",
+   "path": "objects/req/de-ae-08.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/DE.CM-01",
+   "version": "2.0",
+   "package-digest": "sha256:79a29f1809daf0bec0102daef108241d42e73c0fe51a83d53fc96c7ce28adc6b",
+   "semantic-digest": "sha256:61d7532b16c692beecd67521e9d73750c6174a3e1d38f46b8a5a333482dfe57d",
+   "path": "objects/req/de-cm-01.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/DE.CM-02",
+   "version": "2.0",
+   "package-digest": "sha256:eda799ffc477d2e61fcc520b7c1aca0da38653305b0724c94253b4f5a6941170",
+   "semantic-digest": "sha256:d5f9d0c218b722399a30fd7bf7c3711851056bcca81c6c7e1d42fe75f6b0f954",
+   "path": "objects/req/de-cm-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/DE.CM-03",
+   "version": "2.0",
+   "package-digest": "sha256:464017cb805fd65e374d0fc1b840a60c2ed6dc6b03331aabef8a5b5da2e4a08f",
+   "semantic-digest": "sha256:a3c1687e28f25a7ebc51dec382bbe0447e31f1364182c856a57b6bc23ea45c1d",
+   "path": "objects/req/de-cm-03.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/DE.CM-06",
+   "version": "2.0",
+   "package-digest": "sha256:36a86bca58193036a9cd92d1d41f6e2e1dbf7ac90b0c335d733f0e8d96c20f43",
+   "semantic-digest": "sha256:68a9ef3f3d5e5e0149bb6b267132e9ae2c983aebd8c38cfd04a2be7a777af42d",
+   "path": "objects/req/de-cm-06.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/DE.CM-09",
+   "version": "2.0",
+   "package-digest": "sha256:532ba5a5258eb66e05df00a171fcfcd042e033797970c76b6e95275e80f7d74e",
+   "semantic-digest": "sha256:7f4932122cc7f6d653ae99fc2efcf1e0977958b6d48c30ca7d22aa6380aeffd8",
+   "path": "objects/req/de-cm-09.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.OC-01",
+   "version": "2.0",
+   "package-digest": "sha256:f80a3f261cf08b3891090d300f675c2e31df9fa1e3301c185f9b33469f0e1351",
+   "semantic-digest": "sha256:3d56752b2f12d5dfee90476cdd0b8f91823d0b875fe0d9b9a65d2f4511453c10",
+   "path": "objects/req/gv-oc-01.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.OC-02",
+   "version": "2.0",
+   "package-digest": "sha256:5d01fb4a49818bc2accaf2a71badbca92bdfa32028483e66095033140b3873e4",
+   "semantic-digest": "sha256:f3d13803eec78583eb54e9d20e35263232324042abb503a621bda3ffb5ae345d",
+   "path": "objects/req/gv-oc-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.OC-03",
+   "version": "2.0",
+   "package-digest": "sha256:cb87cae134f89e5b734b774d73890e634df8d80f95c1b6bea1b5b51cd7aea0bb",
+   "semantic-digest": "sha256:b4f09a69982112bafbc4a076607c6643a0761c20904d1b16f485191197bc2157",
+   "path": "objects/req/gv-oc-03.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.OC-04",
+   "version": "2.0",
+   "package-digest": "sha256:b93360faaa4c4fe5caabfa475841dbf71613adb791451387176340db07e895cb",
+   "semantic-digest": "sha256:7fa437ccf2bde1c2da48d695bdfd3f6cb0819c92d28c5d5c0b7ffde11fa0e73b",
+   "path": "objects/req/gv-oc-04.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.OC-05",
+   "version": "2.0",
+   "package-digest": "sha256:010681183165c037a726a308ed3aa5909262d1049535a26bce86dc5ab2303e3d",
+   "semantic-digest": "sha256:c07ae20c79991ed11bc8a2866ea92b16d78f7e225f20bd1ca9e36bfbd1777b37",
+   "path": "objects/req/gv-oc-05.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.OV-01",
+   "version": "2.0",
+   "package-digest": "sha256:71ad4f6127faf4d906167af9f1b76710ebd3a57f7c03c2ef74b8b38fd37df89b",
+   "semantic-digest": "sha256:9fdcd83824c618f4c07df947cb5eda27cda5481bd2bdc06d36832a64dd4afb71",
+   "path": "objects/req/gv-ov-01.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.OV-02",
+   "version": "2.0",
+   "package-digest": "sha256:52b15d7d3df519d2478fe6312c779f87daa9c1357ba96097be01ad261c28d5e6",
+   "semantic-digest": "sha256:3d0e552015e999be946cdb1e9d22efaf105df4eddd32121a92a2a00f89ff5bbe",
+   "path": "objects/req/gv-ov-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.OV-03",
+   "version": "2.0",
+   "package-digest": "sha256:37ab1c1f936b1d6ddc1094020503c2add7782f45985115059c40399461a111be",
+   "semantic-digest": "sha256:c81708c3bf459ed850d6a69878cd70a8873e5e314f29d98980d85890b2d71ca4",
+   "path": "objects/req/gv-ov-03.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.PO-01",
+   "version": "2.0",
+   "package-digest": "sha256:8473ed2b161eceb7c339bc808c08c901b6d66de6c5194e7631044dc2a49b4282",
+   "semantic-digest": "sha256:a3ccf966b6637954539a875760ca444f5ffaa1fb065621260d083d095abd367c",
+   "path": "objects/req/gv-po-01.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.PO-02",
+   "version": "2.0",
+   "package-digest": "sha256:dc0e0d672e5b266ead8bb87d9a71ca29bb0425c9df4274c3ee0ba80b5aebc540",
+   "semantic-digest": "sha256:de0389eb8b36c753922f00a81915aecf7d4d2ed3c3175f71eab6147c91fcf696",
+   "path": "objects/req/gv-po-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.RM-01",
+   "version": "2.0",
+   "package-digest": "sha256:a7008b90a63dad13555fa94cd3f5877cecfd2bed023a84243502e27c68815daf",
+   "semantic-digest": "sha256:5525d3875f280932b9dccb5e2affabd58e62ee7745f15a11d4bdb67000a49e27",
+   "path": "objects/req/gv-rm-01.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.RM-02",
+   "version": "2.0",
+   "package-digest": "sha256:80bb3dc8b465c18d68d8cc3b60520e9f1fc4b602f9a337c1c1de0f00f52f0e89",
+   "semantic-digest": "sha256:c7f72acc66f1fa65108266fce6fc835f290542be9eb3bef7efce14bcd86dba39",
+   "path": "objects/req/gv-rm-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.RM-03",
+   "version": "2.0",
+   "package-digest": "sha256:9aa07af88163a8fd8d984941598b92d0c9b0fbe3aeb96cf64c79ef9d8a071f8c",
+   "semantic-digest": "sha256:dab2026c521fb4062b0cb3cb7bca9ed5fdc6a3d7e9df23fe1330b9205b1ccbe6",
+   "path": "objects/req/gv-rm-03.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.RM-04",
+   "version": "2.0",
+   "package-digest": "sha256:c7662130fb0f2c426733dc805c7b833a6dd31e0acc34a0154464bd0b8f789719",
+   "semantic-digest": "sha256:8e7a2dd0cc5d5e4c1f4e22b849927ece75805571baf05baf493c87e6b281e4b4",
+   "path": "objects/req/gv-rm-04.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.RM-05",
+   "version": "2.0",
+   "package-digest": "sha256:87dd8f0870143db54b5d0042607f0fd615493c99ac1a280016d6175ca831b151",
+   "semantic-digest": "sha256:9915029607fea92a50e4f055015185fd23fe618c0eadbb485b3290408752afa5",
+   "path": "objects/req/gv-rm-05.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.RM-06",
+   "version": "2.0",
+   "package-digest": "sha256:31ac12398d24b1f9971e75566d4e5fff63c2c9669018431bc7e8e2d4ef7b2c76",
+   "semantic-digest": "sha256:c1e74de6d6790175e32748714151333da2f46a5545dd441c4edbc804e118b1bd",
+   "path": "objects/req/gv-rm-06.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.RM-07",
+   "version": "2.0",
+   "package-digest": "sha256:7d11dfd2f6dc39872397f1dfd123152fb1213b192c6f0f7b2ede6d675724bccb",
+   "semantic-digest": "sha256:94be15f609a586abc9aec5c2828d6f3ddbdd17ee8f43d4c21002171e3b1b93f8",
+   "path": "objects/req/gv-rm-07.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.RR-01",
+   "version": "2.0",
+   "package-digest": "sha256:5cfee18d8b56fd5eecc43d6041c9ff8f249018b5420ae5e34091c57f649adc6e",
+   "semantic-digest": "sha256:f5ab2137fd1588faeafc177725045bf88fc889932807aea9d2ec038f5f97f7e5",
+   "path": "objects/req/gv-rr-01.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.RR-02",
+   "version": "2.0",
+   "package-digest": "sha256:9dcacf7a74508190edec25d16e6f143c12b7f2c7bcfff057a77c45e438d25feb",
+   "semantic-digest": "sha256:b8282c218b6c2fd1543f36209586b0cea14d291847b0b9148d80ca20b148ef0c",
+   "path": "objects/req/gv-rr-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.RR-03",
+   "version": "2.0",
+   "package-digest": "sha256:f625ce1ee804cc55c91869f991ffeb16be3df5c31a744cabe771cdaa5296be1c",
+   "semantic-digest": "sha256:fb9141ce30e61cd995044e0cdb34fb13ab6e0cc413645aa2e61c1cf34d62353c",
+   "path": "objects/req/gv-rr-03.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.RR-04",
+   "version": "2.0",
+   "package-digest": "sha256:88d35e4c4602780da07fe025d3ada2a643f1acacde702f0eccd21ccda3afb063",
+   "semantic-digest": "sha256:0e5c74c18934327e7e5155084d61806bd51d4a8830ea7724b97805080dfd6e4d",
+   "path": "objects/req/gv-rr-04.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.SC-01",
+   "version": "2.0",
+   "package-digest": "sha256:7e3380a5f0b214e60ef9df2e695073fbf323c57ed772a8a263e405cbfb3b319b",
+   "semantic-digest": "sha256:122fed527d87ea943478444bde1d97b0fec6d994308fc342f7302c34ebbbcbb0",
+   "path": "objects/req/gv-sc-01.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.SC-02",
+   "version": "2.0",
+   "package-digest": "sha256:0eb09d4301f6843542013e4ffd29aa665fe90a914e7712d95a867ff9b8f8c1d3",
+   "semantic-digest": "sha256:782412d758b87bb7cf2cf4b02bb526b33ed7d78bf9639b13537544a498d25583",
+   "path": "objects/req/gv-sc-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.SC-03",
+   "version": "2.0",
+   "package-digest": "sha256:8ee55693af68ae76ee44c80a4ba95bc1ef634b454a4fdf19720c20298a2ec41c",
+   "semantic-digest": "sha256:6fd700827725cb45c883df511b3431aed153d8ef3bceef710eb7f6bf45d8cde0",
+   "path": "objects/req/gv-sc-03.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.SC-04",
+   "version": "2.0",
+   "package-digest": "sha256:38c42bb5572212bfe6540bffee59561e678c172de1b4751f9a118acf0568102f",
+   "semantic-digest": "sha256:a1224809e55aca37e36c8573518cf99a32971ed2d43fc9e44ee39cfddb9ee21c",
+   "path": "objects/req/gv-sc-04.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.SC-05",
+   "version": "2.0",
+   "package-digest": "sha256:c71858cfdf74ed414198153c7cd46b5108a8d5563270cc5f2f247b8b7f043b03",
+   "semantic-digest": "sha256:d321c14771961d7daf06b81533f7b90978c398534e1f7967c53d60b834d1bbfa",
+   "path": "objects/req/gv-sc-05.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.SC-06",
+   "version": "2.0",
+   "package-digest": "sha256:ef2e160f4056865c89f6db269a3769ee074a60e732dac58274c2dcefde845baa",
+   "semantic-digest": "sha256:617358eaabf1fc0a0d4e49ca73656c9790a956133dab7a291a68f245864bf68c",
+   "path": "objects/req/gv-sc-06.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.SC-07",
+   "version": "2.0",
+   "package-digest": "sha256:2f78431eed863ab529e053bcebb333bf6bf6040378bc3be2b3712c383a2d31ca",
+   "semantic-digest": "sha256:b6995a58b918f5086921dadfde5dff7a67465ed686ce425ef8355c3d179ea9dc",
+   "path": "objects/req/gv-sc-07.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.SC-08",
+   "version": "2.0",
+   "package-digest": "sha256:77c1bd453808607d9cdb386ca2eed6a601d66ee2dcca9ce9da463de0519d86e0",
+   "semantic-digest": "sha256:d6ec27f4a240ae344c7655be02bd4fc2639ad8bce2a3fbe89f8beff0b716e812",
+   "path": "objects/req/gv-sc-08.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.SC-09",
+   "version": "2.0",
+   "package-digest": "sha256:4dd1f144480a777c96147cd2997a14b27a30ad974b1badc809253e8cea3bc6cd",
+   "semantic-digest": "sha256:8de7e3096cdb182f05caec0de72005c5b604f497837a940d99b8131f1d4915cd",
+   "path": "objects/req/gv-sc-09.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/GV.SC-10",
+   "version": "2.0",
+   "package-digest": "sha256:1249c745ba47e7c4e19a5458e2fec38508683cc6ca0e3b5a1ae3d7fd427d092e",
+   "semantic-digest": "sha256:92a07def48f96ac930b5a7d1e9eabd56426e63b54eacaaaee246886a7f7d4c32",
+   "path": "objects/req/gv-sc-10.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.AM-01",
+   "version": "2.0",
+   "package-digest": "sha256:8950219cd1d6d8597f25521a79f36da448cbfc5c372bddf46f869846097dc0c4",
+   "semantic-digest": "sha256:c7955309479cbce76209f06359ded0babfaa98a5094147a64ce2eecb9e85a1e0",
+   "path": "objects/req/id-am-01.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.AM-02",
+   "version": "2.0",
+   "package-digest": "sha256:6292fbe12820fb6f31083389130ca161ed05e7be8a11ad649b63a7702da6827d",
+   "semantic-digest": "sha256:cd9e0502c302e43cfd948be21e66c4bf33d56601a277f7daf9990075e60bfd14",
+   "path": "objects/req/id-am-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.AM-03",
+   "version": "2.0",
+   "package-digest": "sha256:371e648886bdd71d9df02cdf16f2ff89012e824b2b8c16ba53c9badceeba721c",
+   "semantic-digest": "sha256:f119778ec12d593056f02939a00dafe8c036a46d53cbb77901105ef64bd87613",
+   "path": "objects/req/id-am-03.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.AM-04",
+   "version": "2.0",
+   "package-digest": "sha256:51e538eda05e72a42f8549bb7b61af59392a0d56b5d3fb8d0b366d2bdf3b465f",
+   "semantic-digest": "sha256:6e05b8827922b55220de21d7ddaae2bfe370ad8e3d456ea097dd074ba6bfaf95",
+   "path": "objects/req/id-am-04.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.AM-05",
+   "version": "2.0",
+   "package-digest": "sha256:4725c39e5dbf88b2eeb6ab7bf05aadb768c56d2ea38b841f06b3d515ba2cc5cb",
+   "semantic-digest": "sha256:d0eaaa22c299ac689158482862c09e9459484356dc39a32941d601415a9fb28c",
+   "path": "objects/req/id-am-05.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.AM-07",
+   "version": "2.0",
+   "package-digest": "sha256:01286863af535a920b3d491309ba71d0922229a5a11679143f89df3181794b95",
+   "semantic-digest": "sha256:e2ac0cbb8718a099a63fb94a670c643537ff9a4ef82d04ab2301be3433ea39b0",
+   "path": "objects/req/id-am-07.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.AM-08",
+   "version": "2.0",
+   "package-digest": "sha256:cd97f837ed3a5b32df6a5ebc758671cc5af635be63fb91536730dca324c1936a",
+   "semantic-digest": "sha256:96d704256aa8d168a8a2b0984671f155ec3661da27d62c4e1e119ec125e9cb25",
+   "path": "objects/req/id-am-08.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.IM-01",
+   "version": "2.0",
+   "package-digest": "sha256:83d846c4c4ec9f1a1c768790d8f48ca4249195654de7c015765189b5189a2a34",
+   "semantic-digest": "sha256:deea10796a2e70dbfb5306daf794b556bbe0e23bc8705223a6e140bcb7000732",
+   "path": "objects/req/id-im-01.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.IM-02",
+   "version": "2.0",
+   "package-digest": "sha256:09301299ccb72a8ecdb41a6acd26aff3326a9953414f6913d20ffd5a68352a00",
+   "semantic-digest": "sha256:060aec6fc4adae69ba877729670b67dbc7102592ce0022e1baf7d939967c4c5d",
+   "path": "objects/req/id-im-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.IM-03",
+   "version": "2.0",
+   "package-digest": "sha256:5e6c124754af3513dc1dba8e8feb79c0a6143fc92f2bc8a715176653854a7172",
+   "semantic-digest": "sha256:61e1495b4fcedfbbfd9ff6237b7faa90f40774c3c82f2af708591dd8405b7250",
+   "path": "objects/req/id-im-03.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.IM-04",
+   "version": "2.0",
+   "package-digest": "sha256:8f6f2b7e98cd9d862db0dcd573b9352c8cacbdf80d2433005bf1389878a6597b",
+   "semantic-digest": "sha256:a10b4465bb890bb0117ce059f39de46817d1132ebcac7ea5f4b653f04e1079d4",
+   "path": "objects/req/id-im-04.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.RA-01",
+   "version": "2.0",
+   "package-digest": "sha256:e49c2a1397fd121b6f79cf666912f224de019ef93f29b2e824c9dd47c107d7ce",
+   "semantic-digest": "sha256:f0842552b7f99db5f864195d8a6b448e44602c83a9c31bbdf35277001bc89e53",
+   "path": "objects/req/id-ra-01.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.RA-02",
+   "version": "2.0",
+   "package-digest": "sha256:cfc647b39a1572a8150e55694e175563db1265fa06f9b5eab29a489106cc2ced",
+   "semantic-digest": "sha256:452f21d8f0e47f46dd4d11786a80815ccf31a752c8b43a0e701e4e466b6305eb",
+   "path": "objects/req/id-ra-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.RA-03",
+   "version": "2.0",
+   "package-digest": "sha256:216d7418cc47053245269c8aededaf9326753ec8560ed90aa13ddc2f8b3d0506",
+   "semantic-digest": "sha256:2f1d786bbc141374b5a9e74c36d6eefc9a34f7d40e6d24f22d61f18a3ffe8f13",
+   "path": "objects/req/id-ra-03.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.RA-04",
+   "version": "2.0",
+   "package-digest": "sha256:3f77a7f7b59d12317e2edb4dcd6fecae45621174ddb7647b550b10af89eae6b3",
+   "semantic-digest": "sha256:7c5c0f10f21271d69bd4d04ac6e9da0b3596663622e5110207cd81d5bf375f9b",
+   "path": "objects/req/id-ra-04.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.RA-05",
+   "version": "2.0",
+   "package-digest": "sha256:fdf19437520a2a007c5f8218ef0cd85afa3d58ca8a084327eb31f7a121dae018",
+   "semantic-digest": "sha256:22bdb1a4446541790750cb0c45e1a74bfebfd9643a7dfd4d19486d7898d7a87a",
+   "path": "objects/req/id-ra-05.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.RA-06",
+   "version": "2.0",
+   "package-digest": "sha256:1375c1b3629c376c3df4006894ff273859a63c9d348b1f2d749cc48705fd0b3b",
+   "semantic-digest": "sha256:c1793b670fb74b0e14de244aaa963c8a1d26bd02fe4f583692aa57775aadfde6",
+   "path": "objects/req/id-ra-06.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.RA-07",
+   "version": "2.0",
+   "package-digest": "sha256:c5c92b40ee6994e65ada341e8d436e3b168c3c83a5ae7f1d6c95f152c8d2f0c7",
+   "semantic-digest": "sha256:5c64807642bf48e09db84af983973ad4d5b69579b2e5285319ba66b54411da5f",
+   "path": "objects/req/id-ra-07.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.RA-08",
+   "version": "2.0",
+   "package-digest": "sha256:1692316604e94a9b25fbde318a64308988d21498c59286af12901a156c01bccf",
+   "semantic-digest": "sha256:92a6c0dc747c0836794a90fb016f19cb8ddd593710769a3e33d943deca110079",
+   "path": "objects/req/id-ra-08.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.RA-09",
+   "version": "2.0",
+   "package-digest": "sha256:f7f130e00906bb8fa323a35efa5f18ee35b9f1b7bf504074cedbec7724fb365c",
+   "semantic-digest": "sha256:67bee4a0619b40cacc9a873fd811ee638c9d64711638a6b1211520e1e34afbcf",
+   "path": "objects/req/id-ra-09.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/ID.RA-10",
+   "version": "2.0",
+   "package-digest": "sha256:90a9d8577ae504f20b49203615f71b5ef397f80b3834a6e3e3534a5aef523d57",
+   "semantic-digest": "sha256:4426c5ba74a550529bc6b58bc612374defe2cf9233226341fc35663769e405fe",
+   "path": "objects/req/id-ra-10.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.AA-01",
+   "version": "2.0",
+   "package-digest": "sha256:0fee20844ed94c2c1fafe5d36bbfc2b075174d7456e4efa41ca1937f1ee242d1",
+   "semantic-digest": "sha256:a50e80dd236b7fbaabd281855addc9e5a0ec39b58f53588cdea19abe57390a10",
+   "path": "objects/req/pr-aa-01.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.AA-02",
+   "version": "2.0",
+   "package-digest": "sha256:3928e0a898cc1965168086196dcff242de953783e8b85c2706860c0ba779cea5",
+   "semantic-digest": "sha256:2c80a4f017859866377d7c60708f83e02c44d945ef9dd3d78444f8baad9a97fe",
+   "path": "objects/req/pr-aa-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.AA-03",
+   "version": "2.0",
+   "package-digest": "sha256:e5857dd6e89a02ed7d3cada8516974d90cef20f49b5ef69c807850567f59a06d",
+   "semantic-digest": "sha256:f7f3abb965a816cca5804f6c9ea1b11d177db3460b6cf3687918909bddf75437",
+   "path": "objects/req/pr-aa-03.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.AA-04",
+   "version": "2.0",
+   "package-digest": "sha256:9e927f5906d678b7cdd67c3bd780d7f800892b92308d2aa2e17d9785d3eba531",
+   "semantic-digest": "sha256:8bbb80f278ac7de4d8aa18bbc331d7b3a45fe2eb9c314c9d7cf599a477d69a76",
+   "path": "objects/req/pr-aa-04.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.AA-05",
+   "version": "2.0",
+   "package-digest": "sha256:f96c3dd3d960d7c8c69f7db7fada11bde36353556bf20827c2a83d27c16fad08",
+   "semantic-digest": "sha256:a406f9a81f6e5c9091c08bb455166b2cf00a1783b186193eb90058aa2e290baf",
+   "path": "objects/req/pr-aa-05.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.AA-06",
+   "version": "2.0",
+   "package-digest": "sha256:27759e4b51863ae4ab596cf225bbf7990bb0b3d11823aad2a01ecf3e5c5540c7",
+   "semantic-digest": "sha256:e42a6b3259bc0a04933ce9bcac6f49d809f587f5cdab0ce31b0ce3c534868c64",
+   "path": "objects/req/pr-aa-06.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.AT-01",
+   "version": "2.0",
+   "package-digest": "sha256:affccd66c1d6dd27b9886206f7a7087de7e5b4d0092a980c11834ff9b7d14bdc",
+   "semantic-digest": "sha256:d8047db48c9a2cce09fc1fe73f2fcaf9dcf96386dfda2d597912c6cfe1587763",
+   "path": "objects/req/pr-at-01.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.AT-02",
+   "version": "2.0",
+   "package-digest": "sha256:e6e68b6ec42f51d9650da1179b8ad35489bdd397eb299f874dee6301c3495e4f",
+   "semantic-digest": "sha256:d96d547ca643f9304575be21d64fc6f6cb3aa6d145944daea90b9f862f6088be",
+   "path": "objects/req/pr-at-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.DS-01",
+   "version": "2.0",
+   "package-digest": "sha256:6ac7e430295ae811b58e2b38e6d0425d5d8aa2f5fe08ecbc29e328e1ac8fe3ff",
+   "semantic-digest": "sha256:6d0b62d46d683c0832f2e888c78df7a9f04ee201089d211efdb95160b12e4d57",
+   "path": "objects/req/pr-ds-01.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.DS-02",
+   "version": "2.0",
+   "package-digest": "sha256:baf9a068d1ecf65a4da8a16a286152132dee6112c8ba7354360975e609a086e4",
+   "semantic-digest": "sha256:a083dcbea8058a712aac83f39a27261bb2e9bf95cdae102e691c0bff23fc861e",
+   "path": "objects/req/pr-ds-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.DS-10",
+   "version": "2.0",
+   "package-digest": "sha256:49d5fe0f60ec7c92e5edadf184c49e303b8736953b7e523de26b80ff4fb225e2",
+   "semantic-digest": "sha256:06cfa3bdda249583307931528f3fe706d8ef07ff9f1750e74212bd7e44c33dff",
+   "path": "objects/req/pr-ds-10.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.DS-11",
+   "version": "2.0",
+   "package-digest": "sha256:250419befcce8f2b906b5147fb87109071336c4cf093fb9e96d1c306f2d40bcf",
+   "semantic-digest": "sha256:40fde8f25bd3c2b0d555122a2bb0fe2a7d719e26d63f79fc1d95551e1004e468",
+   "path": "objects/req/pr-ds-11.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.IR-01",
+   "version": "2.0",
+   "package-digest": "sha256:50df218ef4e0fe25b3948dfaf54850d3355acad767c3d87bf89b0ea0172ed40c",
+   "semantic-digest": "sha256:722227edd903db091ef6470ebaddbc9a22fc2f049c560027974fd9a59030a6d1",
+   "path": "objects/req/pr-ir-01.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.IR-02",
+   "version": "2.0",
+   "package-digest": "sha256:7033c334aad64b4a33981e19cd3902ce7b8a0ad6aeb185c8cd120479494ab146",
+   "semantic-digest": "sha256:c5f95ae42ec7802725e574c850cd0565a6a652c11d8d10f5e5da196fe98c2108",
+   "path": "objects/req/pr-ir-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.IR-03",
+   "version": "2.0",
+   "package-digest": "sha256:7c88ae78e555293bb79a3dde0a01fa9b9a61555922c802d4e47a4ae38fb8a6df",
+   "semantic-digest": "sha256:be5372cda6eb5a0246690c4a1612726cb5023325fd04ca9e0abfcdf7617ff000",
+   "path": "objects/req/pr-ir-03.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.IR-04",
+   "version": "2.0",
+   "package-digest": "sha256:ba3775868a12dd9bfba594e59a1f6048025749c1ca97982c16ed58d07f625c25",
+   "semantic-digest": "sha256:15d72f8c2f1c732b63ac35ad1b84d7e9cbed90c47ef0d98611a24b32816dc19b",
+   "path": "objects/req/pr-ir-04.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.PS-01",
+   "version": "2.0",
+   "package-digest": "sha256:30a765fe0d3489195555c905ea0ff6197841b0ea29403fe9a54e88bcb7ba1980",
+   "semantic-digest": "sha256:5833e261592b8e72370386db355a0d56bf928488a2b0962b8a700e0be7e8498e",
+   "path": "objects/req/pr-ps-01.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.PS-02",
+   "version": "2.0",
+   "package-digest": "sha256:efe1338fc38366d878e8b13c8b97f980537b2f0c4d4019fbc5c7c6c731458419",
+   "semantic-digest": "sha256:e716cac1a13a4022f2c3b354b8e8eead2f527a545d34a5f45fa991ff956a0d3e",
+   "path": "objects/req/pr-ps-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.PS-03",
+   "version": "2.0",
+   "package-digest": "sha256:e028decd05d7be7b942004fafac606d3294b9095b88af93eaef21779bd2158a6",
+   "semantic-digest": "sha256:6b869cb3beb06b626323cc0b9db8694b038c2a97d107424326e15606c8dd55ef",
+   "path": "objects/req/pr-ps-03.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.PS-04",
+   "version": "2.0",
+   "package-digest": "sha256:b06f27693fafc73e3c6fbad831f64478d8c0bf2f8bbb10f5468a916604ce44fa",
+   "semantic-digest": "sha256:0bcccd8edbb2bd9cd16afe33561dbdc4a8845974c9f843865064b7f97246ae55",
+   "path": "objects/req/pr-ps-04.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.PS-05",
+   "version": "2.0",
+   "package-digest": "sha256:7fb59433cec0b306a5c5af85b7b98b01f7892177c0f65f7fa0e671f6d53d0eed",
+   "semantic-digest": "sha256:44a5989b9445454ca496270faa1d330719e1ac4795e9c45ee0dbdbebbd26d1e1",
+   "path": "objects/req/pr-ps-05.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/PR.PS-06",
+   "version": "2.0",
+   "package-digest": "sha256:7e56c22c77cd03d3d69ba1394c11bfcf7004718ffd37a32f1a6016a25fc5115f",
+   "semantic-digest": "sha256:a4bec5b0a216d56478b25c720f2fdf753be04b002aa6140f48c0e26d3608325a",
+   "path": "objects/req/pr-ps-06.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RC.CO-03",
+   "version": "2.0",
+   "package-digest": "sha256:aa20330611255bc57f9683ce22a5c90832f5806899d611bc20578a00b0c4739a",
+   "semantic-digest": "sha256:31f7c8e457f910475453ff44f31a9968722b6d935362f89ea847ed61e9289df3",
+   "path": "objects/req/rc-co-03.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RC.CO-04",
+   "version": "2.0",
+   "package-digest": "sha256:bbe5a90b5ab3d560d265a005b18df65538241439147a94af84a29e496cdb6484",
+   "semantic-digest": "sha256:96f65cb5daa4cc2151d595c765a964fbc3a67b50aec0fe3550eb5726a534d668",
+   "path": "objects/req/rc-co-04.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RC.RP-01",
+   "version": "2.0",
+   "package-digest": "sha256:62ba2abcc7a821a7db5d8891a6e44cabff310df9dbf265c67a70d4973d52f295",
+   "semantic-digest": "sha256:79dd444c20de9343805c27c6ded72be7ec6c02fa0e2f7e5e2046aa689aa153f9",
+   "path": "objects/req/rc-rp-01.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RC.RP-02",
+   "version": "2.0",
+   "package-digest": "sha256:d1d9eaeb84e8a2f9c72a1c88bab887ee033bbb35fb7ea83d0f0a1477436c58e0",
+   "semantic-digest": "sha256:0059ad39ac7acefa46752158bb9cc58820f94de3e7a8e6b4e1828b8b7bea56ed",
+   "path": "objects/req/rc-rp-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RC.RP-03",
+   "version": "2.0",
+   "package-digest": "sha256:56066937b7ad3bbb47d936d725ca50aec38d180cdd01436523a1e977fdcd8aec",
+   "semantic-digest": "sha256:186c6afb8e3969b87c2b9d82a734b74a7eb4246e7f11ab2197293ef5dcee3a8d",
+   "path": "objects/req/rc-rp-03.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RC.RP-04",
+   "version": "2.0",
+   "package-digest": "sha256:69d6e80e031e7c1258831354b34143f2a2952a36e236e3f511cf30906e95e591",
+   "semantic-digest": "sha256:3bb65e7fd5c84c4be13643b4e950f1bad4bc26422886dcf7ec509d35f6d6f85b",
+   "path": "objects/req/rc-rp-04.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RC.RP-05",
+   "version": "2.0",
+   "package-digest": "sha256:add01ce093e1d9fc0c419f8b1277e66685c061fd14ced83cb90db7f0493afab5",
+   "semantic-digest": "sha256:893e435141325343e768f8e290bded3b12400cb51d70f4360019294b793668a6",
+   "path": "objects/req/rc-rp-05.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RC.RP-06",
+   "version": "2.0",
+   "package-digest": "sha256:233a51bfb42ff6e64287d0f37ea999fa687d635a2af20655fc3352e2a24f3f80",
+   "semantic-digest": "sha256:121581b90bd3b5651ac0bc4840adc52eb1ed24a9037caf2a99d585d2f09e6137",
+   "path": "objects/req/rc-rp-06.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RS.AN-03",
+   "version": "2.0",
+   "package-digest": "sha256:86d24f9600ea01d8831b92976c4b8d01089a8672458e5e90f4cf1165d6424468",
+   "semantic-digest": "sha256:f57a251ca7f4e422ba9deae89cbe68ba9c10f2bd8fc731ee7d0319d3726c70f4",
+   "path": "objects/req/rs-an-03.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RS.AN-06",
+   "version": "2.0",
+   "package-digest": "sha256:cc6905d4efea0e6c37e67f6704aa14886af877764fe5801fa60b559f34227ba9",
+   "semantic-digest": "sha256:d43d67900891d451aa25a49a72be72af595cd08f9c342831e8057156214b8c7a",
+   "path": "objects/req/rs-an-06.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RS.AN-07",
+   "version": "2.0",
+   "package-digest": "sha256:48b52e9a4c599271d9cdbd4b36a742804f29be01675b9c91f9278e946038dbdd",
+   "semantic-digest": "sha256:37348eab6b07e6635c230a87c65c8d55e2e5e38fa076d6723c73c0d6a1ed4f0b",
+   "path": "objects/req/rs-an-07.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RS.AN-08",
+   "version": "2.0",
+   "package-digest": "sha256:6e03d275a57fbaab9751ad45a2444006bf81348198fe1f9a2e7f58bd35a7c941",
+   "semantic-digest": "sha256:b0cbdb0328ac1f9101635de49328141211446c375a8865ba0c5ff8b21936472a",
+   "path": "objects/req/rs-an-08.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RS.CO-02",
+   "version": "2.0",
+   "package-digest": "sha256:5b4a75d725c76a0befce67cc00cc8ae527916cbe30aa2d660f4ca2aef7cfd560",
+   "semantic-digest": "sha256:2488ff4ff9cccd7ffe70c9fe5c72c6d2b83edd9f4bf3b4708376bbcb857c2dd8",
+   "path": "objects/req/rs-co-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RS.CO-03",
+   "version": "2.0",
+   "package-digest": "sha256:b9047082aee7af9b27c839197ffebcf5cd8e12143a0b3cf59bd125a8d61249ee",
+   "semantic-digest": "sha256:086f66d563ce6263a19b17d75f09d7456ef28a064e24ed4e26ed5176f1d47934",
+   "path": "objects/req/rs-co-03.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RS.MA-01",
+   "version": "2.0",
+   "package-digest": "sha256:d92c07da23ec502559b0d99f032078cd0e90a29fa8a162a4a328e820024f3317",
+   "semantic-digest": "sha256:b88adb29434002e937fa4bcad507ac25469aac41059d389b0cfc1e80522a4d41",
+   "path": "objects/req/rs-ma-01.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RS.MA-02",
+   "version": "2.0",
+   "package-digest": "sha256:b567afaf7368731b91ec946fdd2527fd4d96233eb343ae02cb22d6ce2db5c315",
+   "semantic-digest": "sha256:761723891247b19fbf421a30fc8d64ac83a2c59e2600df56475917422c8d65de",
+   "path": "objects/req/rs-ma-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RS.MA-03",
+   "version": "2.0",
+   "package-digest": "sha256:31739204c78126412141c9125b17b53e27ddda5009b6fffbc3832f1e91f77fcb",
+   "semantic-digest": "sha256:4ccf4b4343fea1dea057b0e7d32f39dc621f379471a3f6805ab321b85d35e3b4",
+   "path": "objects/req/rs-ma-03.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RS.MA-04",
+   "version": "2.0",
+   "package-digest": "sha256:b260cf5bba1e1853ecad30fb79859f2adb6373fa68881f141e52e84c59693bf0",
+   "semantic-digest": "sha256:2db91906188a017350e3155a1551572054410ff63c2fe00ef0c9db5454d8ab80",
+   "path": "objects/req/rs-ma-04.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RS.MA-05",
+   "version": "2.0",
+   "package-digest": "sha256:a3b474acc80a3959cb72109ee0293e6e18ef1c31da0768add29da17ca81b2caf",
+   "semantic-digest": "sha256:3e250e169fa8d694918e14320d92aadeac57abdd3967e6f386f6dbfafb10d4c4",
+   "path": "objects/req/rs-ma-05.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RS.MI-01",
+   "version": "2.0",
+   "package-digest": "sha256:74fdf82b6dcdcc14c6e0e7f3dc04b97b299e0702890f49709951511dd4f261d2",
+   "semantic-digest": "sha256:5e096ab2c74eeeedd845a30c53cc8989a96fd04d9fbd10e5fd376f0c42df1778",
+   "path": "objects/req/rs-mi-01.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/req/RS.MI-02",
+   "version": "2.0",
+   "package-digest": "sha256:da26f2763cd2309b31454ee4b070f4cd10fae0efed6faa248050ea334f124a82",
+   "semantic-digest": "sha256:bde52a199bedd63f12aed0f326c2b7ffd390c77aa15bc4fa9b814e379e1cb217",
+   "path": "objects/req/rs-mi-02.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/de-ae",
+   "version": "2.0",
+   "package-digest": "sha256:a976dfe2f2bed69e3d7cb14827b46d8c4c97274e75d6e1b5446fc3689d8b5359",
+   "semantic-digest": "sha256:2ad667cd156113e95002e9bbf1c906c7738def33c971e57f7b30244177083598",
+   "path": "objects/set/category-de-ae.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/de-cm",
+   "version": "2.0",
+   "package-digest": "sha256:03d98adbc28bf29a8c5e39658938cdde4a8b570326c5608f3e45b426b5897e64",
+   "semantic-digest": "sha256:17cb1aee6a2bc1ce4fb59fdf5ea3f066f783b65a49185c8bd25cd618f07287d6",
+   "path": "objects/set/category-de-cm.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/gv-oc",
+   "version": "2.0",
+   "package-digest": "sha256:d4024893b40c3bcc42ab674bdf9ddb2102d891c24233dd4552de45f868abda4d",
+   "semantic-digest": "sha256:ad4d0a797a2f32f63a1a20ace725245259147dcc44f6bb2a719d5cb9ea5e9bf9",
+   "path": "objects/set/category-gv-oc.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/gv-ov",
+   "version": "2.0",
+   "package-digest": "sha256:63aa4815835552431c48b211581996c29a3b331642d8ef3df6290bfbf7728edb",
+   "semantic-digest": "sha256:b057d101528817907b5ecff485c3a550ac21cb3f5de1a1b26c11b00f34f9982c",
+   "path": "objects/set/category-gv-ov.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/gv-po",
+   "version": "2.0",
+   "package-digest": "sha256:e4593f71e1bac9567b3a8b865bf5bfd8f1c3a4e1dd64b17a80a2422b01891712",
+   "semantic-digest": "sha256:8a7095b5c1f0cbdb7c98e218a10b6b34d86e90961f18e36fa812dfc8eedc6c4b",
+   "path": "objects/set/category-gv-po.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/gv-rm",
+   "version": "2.0",
+   "package-digest": "sha256:caf20f8f493f7bd3e5aebd223429cef041198fcc4fcb4686abf9f27c541b191a",
+   "semantic-digest": "sha256:1217c7f83708101d434e5c76ab57662cd910b96d9fa977dcd98b095dae0437ca",
+   "path": "objects/set/category-gv-rm.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/gv-rr",
+   "version": "2.0",
+   "package-digest": "sha256:d7e03108369db26c8a25a7a295b583b1aa24da6bce029af865625715a6bfb0a3",
+   "semantic-digest": "sha256:e4b4c1274d7bcb47fecc2b5edc1bcf7d72d9f2814fe7f118208325d1f446b653",
+   "path": "objects/set/category-gv-rr.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/gv-sc",
+   "version": "2.0",
+   "package-digest": "sha256:ad1df9795960c3ae276baecdc1c821ca0cffa09cb260048a9d16b5a3fb26d9dc",
+   "semantic-digest": "sha256:4351df1c5294fb762e1a40742b3a237bfe5f0ac27cdcdf42e8050ee95ac4b434",
+   "path": "objects/set/category-gv-sc.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/id-am",
+   "version": "2.0",
+   "package-digest": "sha256:85699c237b47c89fdb0b7394f0d65d63b9f64d7d1578f983d1e829af9407003e",
+   "semantic-digest": "sha256:9370020ed6abd22e4365e9dbcf4c9a68abb694726c6d53f7c822caa5703d9b38",
+   "path": "objects/set/category-id-am.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/id-im",
+   "version": "2.0",
+   "package-digest": "sha256:4ed14cd551c48234a8cd03011bcf6285f9e0fc167268078eca55314ec3645d89",
+   "semantic-digest": "sha256:acd06a3b6cd224781fdb1fa1723818d8246d3fd244c3766862c279af99a8ff7d",
+   "path": "objects/set/category-id-im.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/id-ra",
+   "version": "2.0",
+   "package-digest": "sha256:bc0d5eb0d416819237ae3f11a6e653fbd5f6a21b174fa088e542b408ab0d186b",
+   "semantic-digest": "sha256:55eeefebc70ae280e8afb927f50a9651bf73bf53a06ae29bb97055a320bc958b",
+   "path": "objects/set/category-id-ra.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/pr-aa",
+   "version": "2.0",
+   "package-digest": "sha256:2550c8239ae605c1df5cbf49ddab6157b8c312adb769c8921fa652bc6910a3f2",
+   "semantic-digest": "sha256:8ffed63868539526447dd3393a571509d82ad8890332c7ba5dedd7f6808bb24e",
+   "path": "objects/set/category-pr-aa.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/pr-at",
+   "version": "2.0",
+   "package-digest": "sha256:abc57372e6f078347b4887f35de5baa3a1fc5098f888118865ee662b614cc5ac",
+   "semantic-digest": "sha256:1d2ead61e61c35561fdbfc062fe46186f6e9ae61939bb052f6b2af9dcb0f5027",
+   "path": "objects/set/category-pr-at.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/pr-ds",
+   "version": "2.0",
+   "package-digest": "sha256:8df9deea3fa1f52a1007cb2cd37bd5d6c305a3fe8106a79f16a73441001d5efa",
+   "semantic-digest": "sha256:68f012e3326a273cdf31e3f7c78e4d9156846aab3d09fe0aa93ab0d8e1c3dbd6",
+   "path": "objects/set/category-pr-ds.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/pr-ir",
+   "version": "2.0",
+   "package-digest": "sha256:05fc3f93abde0cd1cd2453b1745217ed04f94102407c3778147034b8f303a789",
+   "semantic-digest": "sha256:5abd3be606f13598c1c4b4db3a7aa3d65bb6bd7aca3a011ce92ef933d175397c",
+   "path": "objects/set/category-pr-ir.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/pr-ps",
+   "version": "2.0",
+   "package-digest": "sha256:012b86e9cdf549430205119d2e973696e70e4353464503001228544dd9919725",
+   "semantic-digest": "sha256:8f3690a017242110d1ee169002bd1e3560b883f134637f8c0057e0106e1bf4a9",
+   "path": "objects/set/category-pr-ps.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/rc-co",
+   "version": "2.0",
+   "package-digest": "sha256:8460e3e3e0b33a033431ec5f559112f0d533f0d6d208e24ad815c2a943f0daa0",
+   "semantic-digest": "sha256:5ab9403f1b78d1de730eb1f8705a3ed053cf5d277fd606ccd636e5854f535ad0",
+   "path": "objects/set/category-rc-co.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/rc-rp",
+   "version": "2.0",
+   "package-digest": "sha256:1fc224ebde69d9ca98db3e680bbf9726d7157e9fc00009cd2f78c20b4841d985",
+   "semantic-digest": "sha256:e365e655a157f338c11b869cd0c7ee7e78369b1fdc145047cbc7bd1a5064db06",
+   "path": "objects/set/category-rc-rp.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/rs-an",
+   "version": "2.0",
+   "package-digest": "sha256:522900b6de29c38115693917b9adc74f21687a6fe0fb33e0025124acb687beab",
+   "semantic-digest": "sha256:a450b23ac53b998cd40ea7fd87c1e3b40e1009f4153ccf8c71c03c36f31ac43c",
+   "path": "objects/set/category-rs-an.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/rs-co",
+   "version": "2.0",
+   "package-digest": "sha256:1dfe7cfb2a53932c2375951b5fbc45edc149a09dd7c4d5690715257a5072e52a",
+   "semantic-digest": "sha256:c72d34c5fb50b40d23e409a50be93800937e5272d0e2f5473f9c5b6abb20d946",
+   "path": "objects/set/category-rs-co.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/rs-ma",
+   "version": "2.0",
+   "package-digest": "sha256:53f38eef16819968972064d31dcb81b8cb8289d5d5aae00eecb94f8803a942cb",
+   "semantic-digest": "sha256:62db0aed4429b6c0c435cf9b7976e59ac2f3549eda613b8b10fd8b04bd2d05fd",
+   "path": "objects/set/category-rs-ma.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/category/rs-mi",
+   "version": "2.0",
+   "package-digest": "sha256:f02917d40fced05423337bbee7ff0d5b048bb49b4e682be036fb641fadc0a48a",
+   "semantic-digest": "sha256:c539e1dcfe14f7b5324d7444ce410ddd1b464e66d81a01e922eb0c04e613ef4a",
+   "path": "objects/set/category-rs-mi.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/function/de",
+   "version": "2.0",
+   "package-digest": "sha256:e157e2561f35fdace8d109d2ad1f40d9e4fbb309acdf5738cb6ea51411429bd7",
+   "semantic-digest": "sha256:554ca8a3453cf0ad5f066deddef544c98443e844d55de90bdf2f4a0704f46482",
+   "path": "objects/set/function-de.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/function/gv",
+   "version": "2.0",
+   "package-digest": "sha256:03e2cf2ba68be355f47d1afe3bae3d07f76ca73b799965fe68783b112f60a1df",
+   "semantic-digest": "sha256:35780666197b4845685a097b42a238595ebbf1619b7fcb7e3dc86bcc50b28d02",
+   "path": "objects/set/function-gv.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/function/id",
+   "version": "2.0",
+   "package-digest": "sha256:8c1cd38f730208173330cfc486b6d192e09eb8d7a4a44301980f0db28cc5b168",
+   "semantic-digest": "sha256:8bf2000147bdf8b89a2aefcf9b0c26295a6ef0590d91bf15d75ac0e067a9de34",
+   "path": "objects/set/function-id.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/function/pr",
+   "version": "2.0",
+   "package-digest": "sha256:388b548a10bdc8dc5799a18f6eef12601f624e04b573733f25bf3a3d4bcf906f",
+   "semantic-digest": "sha256:b162a6df0991468ea419dff0fb0245fa6bb2734c2590dacfc0bf350fcf60f470",
+   "path": "objects/set/function-pr.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/function/rc",
+   "version": "2.0",
+   "package-digest": "sha256:8d86c288707c1b00259d754ce90ee84a26580773c4cef9a33a9d8eaab5397bcd",
+   "semantic-digest": "sha256:2d953f8fff755064c137faf9f8aba0e5ceab8bdadc1d44503da48e84a1670172",
+   "path": "objects/set/function-rc.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/function/rs",
+   "version": "2.0",
+   "package-digest": "sha256:c114280f350b7789294709abffff54f953e150d8bc0c420724952e1fa46ab6c6",
+   "semantic-digest": "sha256:5f5cf058d4203d3462e6347cd8e02708395359249c369acfe3310c91715dd071",
+   "path": "objects/set/function-rs.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/set/root",
+   "version": "2.0",
+   "package-digest": "sha256:b8e30690edb9fe6e72eb3fa95a907058960c17f9f6217a69c776a70070221ea0",
+   "semantic-digest": "sha256:b1fa1a5721375198ed11eab17a5e54b3a741ad8e5f02a1335019a94cb2aba34a",
+   "path": "objects/set/root.json"
+  }
+ ],
+ "facet-schemas": [
+  {
+   "id": "https://ns.nist.gov/csf/facet/examples",
+   "exact-version": "1.0.0",
+   "digest": "sha256:12a9359d53a4bc8e34da69392271477b454993cf348fbef33687dba18f1b92cd",
+   "path": "schemas/csf-examples-stub.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/facet/narrative",
+   "exact-version": "1.0.0",
+   "digest": "sha256:94615a891e20148f5e5e1ab8ac0c04af99ebade77bb693a11a0525d4ff79c0f6",
+   "path": "schemas/csf-narrative-stub.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/facet/references",
+   "exact-version": "1.0.0",
+   "digest": "sha256:89e8147a26d0a92e778fc6fefae20ba371725ebd4eb9fb3bd588bc20d5e5b221",
+   "path": "schemas/csf-references-stub.json"
+  },
+  {
+   "id": "https://ns.nist.gov/csf/facet/csf",
+   "exact-version": "1.0.0",
+   "digest": "sha256:804b05d0c3d0951df059c7b3fc3bc24f97b07c7a0a95db22a4a948f3fd7e6b7c",
+   "path": "schemas/csf-stub.json"
+  }
+ ]
+}

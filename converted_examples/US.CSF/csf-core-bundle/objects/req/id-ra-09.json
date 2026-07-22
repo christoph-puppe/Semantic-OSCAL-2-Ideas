@@ -1,0 +1,54 @@
+{
+ "id": "https://ns.nist.gov/csf/req/ID.RA-09",
+ "version": "2.0",
+ "label": "ID.RA-09",
+ "lifecycle": "active",
+ "title": "ID.RA-09",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "The authenticity and integrity of hardware and software are assessed prior to acquisition and use"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "ID.RA-09.175",
+     "prose": {
+      "en": "Assess the authenticity and cybersecurity of critical technology products and services prior to acquisition and use"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "3rd",
+    "remark": "3rd Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.DS-08",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.DS-08",
+    "mode": "merged-into",
+    "label": "PR.DS-08",
+    "title": "PR.DS-08",
+    "prose": "Integrity checking mechanisms are used to verify hardware integrity"
+   }
+  ]
+ }
+}

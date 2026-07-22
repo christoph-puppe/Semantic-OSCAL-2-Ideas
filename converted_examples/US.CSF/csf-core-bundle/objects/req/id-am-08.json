@@ -1,0 +1,156 @@
+{
+ "id": "https://ns.nist.gov/csf/req/ID.AM-08",
+ "version": "2.0",
+ "label": "ID.AM-08",
+ "lifecycle": "active",
+ "title": "ID.AM-08",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Systems, hardware, software, services, and data are managed throughout their life cycles"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "ID.AM-08.138",
+     "prose": {
+      "en": "Integrate cybersecurity considerations throughout the life cycles of systems, hardware, software, and services"
+     }
+    },
+    {
+     "id": "ID.AM-08.139",
+     "prose": {
+      "en": "Integrate cybersecurity considerations into product life cycles"
+     }
+    },
+    {
+     "id": "ID.AM-08.140",
+     "prose": {
+      "en": "Identify unofficial uses of technology to meet mission objectives (i.e., shadow IT)"
+     }
+    },
+    {
+     "id": "ID.AM-08.141",
+     "prose": {
+      "en": "Periodically identify redundant systems, hardware, software, and services that unnecessarily increase the organization's attack surface"
+     }
+    },
+    {
+     "id": "ID.AM-08.142",
+     "prose": {
+      "en": "Properly configure and secure systems, hardware, software, and services prior to their deployment in production"
+     }
+    },
+    {
+     "id": "ID.AM-08.143",
+     "prose": {
+      "en": "Update inventories when systems, hardware, software, and services are moved or transferred within the organization"
+     }
+    },
+    {
+     "id": "ID.AM-08.144",
+     "prose": {
+      "en": "Securely destroy stored data based on the organization's data retention policy using the prescribed destruction method, and keep and manage a record of the destructions"
+     }
+    },
+    {
+     "id": "ID.AM-08.145",
+     "prose": {
+      "en": "Securely sanitize data storage when hardware is being retired, decommissioned, reassigned, or sent for repairs or replacement"
+     }
+    },
+    {
+     "id": "ID.AM-08.146",
+     "prose": {
+      "en": "Offer methods for destroying paper, storage media, and other physical forms of data storage"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.DS-03",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.IP-02",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.IP-06",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.MA",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.MA-01",
+   "mode": "renamed"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.MA-02",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.DS-03",
+    "mode": "merged-into",
+    "label": "PR.DS-03",
+    "title": "PR.DS-03",
+    "prose": "Assets are formally managed throughout removal, transfers, and disposition"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.IP-02",
+    "mode": "merged-into",
+    "label": "PR.IP-02",
+    "title": "PR.IP-02",
+    "prose": "A System Development Life Cycle to manage systems is implemented"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.IP-06",
+    "mode": "merged-into",
+    "label": "PR.IP-06",
+    "title": "PR.IP-06",
+    "prose": "Data is destroyed according to policy"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.MA",
+    "mode": "merged-into",
+    "label": "Maintenance (PR.MA)",
+    "title": "Maintenance"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.MA-01",
+    "mode": "renamed",
+    "label": "PR.MA-01",
+    "title": "PR.MA-01",
+    "prose": "Maintenance and repair of organizational assets are performed and logged, with approved and controlled tools"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.MA-02",
+    "mode": "renamed",
+    "label": "PR.MA-02",
+    "title": "PR.MA-02",
+    "prose": "Remote maintenance of organizational assets is approved, logged, and performed in a manner that prevents unauthorized access"
+   }
+  ]
+ }
+}

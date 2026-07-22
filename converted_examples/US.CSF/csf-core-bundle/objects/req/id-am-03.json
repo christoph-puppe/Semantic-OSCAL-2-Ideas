@@ -1,0 +1,72 @@
+{
+ "id": "https://ns.nist.gov/csf/req/ID.AM-03",
+ "version": "2.0",
+ "label": "ID.AM-03",
+ "lifecycle": "active",
+ "title": "ID.AM-03",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Representations of the organization's authorized network communication and internal and external network data flows are maintained"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "ID.AM-03.125",
+     "prose": {
+      "en": "Maintain baselines of communication and data flows within the organization's wired and wireless networks"
+     }
+    },
+    {
+     "id": "ID.AM-03.126",
+     "prose": {
+      "en": "Maintain baselines of communication and data flows between the organization and third parties"
+     }
+    },
+    {
+     "id": "ID.AM-03.127",
+     "prose": {
+      "en": "Maintain baselines of communication and data flows for the organization's infrastructure-as-a-service (IaaS) usage"
+     }
+    },
+    {
+     "id": "ID.AM-03.128",
+     "prose": {
+      "en": "Maintain documentation of expected network ports, protocols, and services that are typically used among authorized systems"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/DE.AE-01",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/DE.AE-01",
+    "mode": "merged-into",
+    "label": "DE.AE-01",
+    "title": "DE.AE-01",
+    "prose": "A baseline of network operations and expected data flows for users and systems is established and managed"
+   }
+  ]
+ }
+}

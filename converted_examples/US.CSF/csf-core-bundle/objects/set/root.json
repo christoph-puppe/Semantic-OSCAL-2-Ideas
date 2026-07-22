@@ -1,0 +1,54 @@
+{
+ "id": "https://ns.nist.gov/csf/set/root",
+ "version": "2.0",
+ "lifecycle": "active",
+ "title": "Electronic Version of NIST Cybersecurity Framework 2.0",
+ "members": [
+  {
+   "ref": "https://ns.nist.gov/csf/set/function/gv",
+   "sequence": 10
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/set/function/id",
+   "sequence": 20
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/set/function/pr",
+   "sequence": 30
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/set/function/de",
+   "sequence": 40
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/set/function/rs",
+   "sequence": 50
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/set/function/rc",
+   "sequence": 60
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/references@1": {
+   "resources": [
+    {
+     "title": "The NIST Cybersecurity Framework 2.0 (PDF)",
+     "url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.ipd.pdf"
+    },
+    {
+     "title": "The NIST Cybersecurity Framework 2.0 (DOI link)",
+     "url": "https://doi.org/10.6028/NIST.CSWP.29.ipd"
+    },
+    {
+     "title": "The NIST Cybersecurity Framework",
+     "url": "https://www.nist.gov/cyberframework"
+    },
+    {
+     "title": "NIST CSF v2.0 content in OSCAL 1.1.3",
+     "url": "https://github.com/usnistgov/oscal-content/releases/tag/v1.4.0"
+    }
+   ]
+  }
+ }
+}

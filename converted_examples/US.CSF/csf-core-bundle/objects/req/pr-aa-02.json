@@ -1,0 +1,60 @@
+{
+ "id": "https://ns.nist.gov/csf/req/PR.AA-02",
+ "version": "2.0",
+ "label": "PR.AA-02",
+ "lifecycle": "active",
+ "title": "PR.AA-02",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Identities are proofed and bound to credentials based on the context of interactions"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "PR.AA-02.198",
+     "prose": {
+      "en": "Verify a person's claimed identity at enrollment time using government-issued identity credentials (e.g., passport, visa, driver's license)"
+     }
+    },
+    {
+     "id": "PR.AA-02.199",
+     "prose": {
+      "en": "Issue a different credential for each person (i.e., no credential sharing)"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.AC-06",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.AC-06",
+    "mode": "renamed",
+    "label": "PR.AC-06",
+    "title": "PR.AC-06",
+    "prose": "Identities are proofed and bound to credentials and asserted in interactions"
+   }
+  ]
+ }
+}

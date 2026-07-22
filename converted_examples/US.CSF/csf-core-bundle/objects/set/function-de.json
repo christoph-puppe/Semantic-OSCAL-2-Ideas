@@ -1,0 +1,26 @@
+{
+ "id": "https://ns.nist.gov/csf/set/function/de",
+ "version": "2.0",
+ "lifecycle": "active",
+ "title": "DETECT",
+ "label": "DETECT (DE)",
+ "members": [
+  {
+   "ref": "https://ns.nist.gov/csf/set/category/de-ae",
+   "sequence": 10
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/set/category/de-cm",
+   "sequence": 20
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Possible cybersecurity attacks and compromises are found and analyzed"
+    }
+   ]
+  }
+ }
+}

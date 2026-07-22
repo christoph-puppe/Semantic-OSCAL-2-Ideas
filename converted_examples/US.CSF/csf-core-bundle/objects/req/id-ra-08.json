@@ -1,0 +1,60 @@
+{
+ "id": "https://ns.nist.gov/csf/req/ID.RA-08",
+ "version": "2.0",
+ "label": "ID.RA-08",
+ "lifecycle": "active",
+ "title": "ID.RA-08",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Processes for receiving, analyzing, and responding to vulnerability disclosures are established"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "ID.RA-08.173",
+     "prose": {
+      "en": "Conduct vulnerability information sharing between the organization and its suppliers following the rules and protocols defined in contracts"
+     }
+    },
+    {
+     "id": "ID.RA-08.174",
+     "prose": {
+      "en": "Assign responsibilities and verify the execution of procedures for processing, analyzing the impact of, and responding to cybersecurity threat, vulnerability, or incident disclosures by suppliers, customers, partners, and government cybersecurity organizations"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/RS.AN-05",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/RS.AN-05",
+    "mode": "renamed",
+    "label": "RS.AN-05",
+    "title": "RS.AN-05",
+    "prose": "Processes are established to receive, analyze and respond to vulnerabilities disclosed to the organization from internal and external sources (e.g. internal testing, security bulletins, or security researchers)"
+   }
+  ]
+ }
+}

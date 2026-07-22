@@ -1,0 +1,34 @@
+{
+ "id": "https://ns.nist.gov/csf/set/function/rs",
+ "version": "2.0",
+ "lifecycle": "active",
+ "title": "RESPOND",
+ "label": "RESPOND (RS)",
+ "members": [
+  {
+   "ref": "https://ns.nist.gov/csf/set/category/rs-ma",
+   "sequence": 10
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/set/category/rs-an",
+   "sequence": 20
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/set/category/rs-co",
+   "sequence": 30
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/set/category/rs-mi",
+   "sequence": 40
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Actions regarding a detected cybersecurity incident are taken"
+    }
+   ]
+  }
+ }
+}

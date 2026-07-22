@@ -71,8 +71,11 @@ membership is the entire semantic content.
 
 56 paths, 4,726 leaves. 6 functions (groups) · 219 controls = 34
 categories (top) + 185 subcategories (nested, `class=subcategory`) ·
-**91 withdrawn** (the 1.1→2.0 restructuring) · every control has one
-`statement` part (outcome prose, declarative — no modality words) ·
+**91 withdrawn = 12 categories + 79 subcategories** (the 1.1→2.0
+restructuring cut at both levels; measured by the converter — ID.GV
+even moved to a whole *function*, `#GV`) · every control has one
+`statement` part (outcome prose, declarative — no modality words;
+**tombstones keep their 1.1 prose**, carried in the annotation) ·
 `example` parts ×363 (implementation examples, ns csf, ids
 `GV.OC-05.010`) · props: `sort-id` (numeric dotted
 `00001.00001.00005`), `label`, `risk-party` (ns csf) ×125 with
@@ -145,7 +148,7 @@ the URI — lineage is D2's job). Version `2.0`.
 |---|---|---|
 | functions (6 groups) + `overview` parts | L1 / L2 | function Sets; overview → narrative facet on the Set |
 | categories (34) | L1 | **category Sets** (the C5 rule: membership decides granularity); category statement prose → narrative facet on the Set |
-| subcategories (185 − 91 withdrawn = 94 live) | L1 | Requirements, one statement, modality `unspecified` (outcome prose — sixth-corpus confirmation of the declarative pattern), obligated-party default `…/csf/party/organization` |
+| subcategories (185 − 79 withdrawn = 106 live; 12 of 34 categories also withdrawn) | L1 | Requirements, one statement, modality `unspecified` (outcome prose — sixth-corpus confirmation of the declarative pattern), obligated-party default `…/csf/party/organization` |
 | `example` parts ×363 | L2 | facet `…/facet/examples@1` `{examples: [{id, prose}]}` |
 | props `risk-party` (+remarks) | L2 | facet `…/facet/csf@1` |
 | props `sort-id`/`label` | L1 | member sequence / `label` |

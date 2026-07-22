@@ -1,0 +1,94 @@
+{
+ "id": "https://ns.nist.gov/csf/req/PR.AA-05",
+ "version": "2.0",
+ "label": "PR.AA-05",
+ "lifecycle": "active",
+ "title": "PR.AA-05",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Access permissions, entitlements, and authorizations are defined in a policy, managed, enforced, and reviewed, and incorporate the principles of least privilege and separation of duties"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "PR.AA-05.207",
+     "prose": {
+      "en": "Review logical and physical access privileges periodically and whenever someone changes roles or leaves the organization, and promptly rescind privileges that are no longer needed"
+     }
+    },
+    {
+     "id": "PR.AA-05.208",
+     "prose": {
+      "en": "Take attributes of the requester and the requested resource into account for authorization decisions (e.g., geolocation, day/time, requester endpoint's cyber health)"
+     }
+    },
+    {
+     "id": "PR.AA-05.209",
+     "prose": {
+      "en": "Restrict access and privileges to the minimum necessary (e.g., zero trust architecture)"
+     }
+    },
+    {
+     "id": "PR.AA-05.210",
+     "prose": {
+      "en": "Periodically review the privileges associated with critical business functions to confirm proper separation of duties"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.AC-01",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.AC-03",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.AC-04",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.AC-01",
+    "mode": "merged-into",
+    "label": "PR.AC-01",
+    "title": "PR.AC-01",
+    "prose": "Identities and credentials are issued, managed, verified, revoked, and audited for authorized devices, users and processes"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.AC-03",
+    "mode": "merged-into",
+    "label": "PR.AC-03",
+    "title": "PR.AC-03",
+    "prose": "Remote access is managed"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.AC-04",
+    "mode": "renamed",
+    "label": "PR.AC-04",
+    "title": "PR.AC-04",
+    "prose": "Access permissions and authorizations are managed, incorporating the principles of least privilege and separation of duties"
+   }
+  ]
+ }
+}

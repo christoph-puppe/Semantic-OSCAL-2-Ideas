@@ -1,0 +1,49 @@
+{
+ "id": "https://ns.nist.gov/csf/req/ID.IM-01",
+ "version": "2.0",
+ "label": "ID.IM-01",
+ "lifecycle": "active",
+ "title": "ID.IM-01",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Improvements are identified from evaluations"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "ID.IM-01.177",
+     "prose": {
+      "en": "Perform self-assessments of critical services that take current threats and TTPs into consideration"
+     }
+    },
+    {
+     "id": "ID.IM-01.178",
+     "prose": {
+      "en": "Invest in third-party assessments or independent audits of the effectiveness of the organization's cybersecurity program to identify areas that need improvement"
+     }
+    },
+    {
+     "id": "ID.IM-01.179",
+     "prose": {
+      "en": "Constantly evaluate compliance with selected cybersecurity requirements through automated means"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

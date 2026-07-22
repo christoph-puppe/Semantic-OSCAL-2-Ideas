@@ -1,0 +1,55 @@
+{
+ "id": "https://ns.nist.gov/csf/req/DE.CM-02",
+ "version": "2.0",
+ "label": "DE.CM-02",
+ "lifecycle": "active",
+ "title": "DE.CM-02",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "The physical environment is monitored to find potentially adverse events"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "DE.CM-02.276",
+     "prose": {
+      "en": "Monitor logs from physical access control systems (e.g., badge readers) to find unusual access patterns (e.g., deviations from the norm) and failed access attempts"
+     }
+    },
+    {
+     "id": "DE.CM-02.277",
+     "prose": {
+      "en": "Review and monitor physical access records (e.g., from visitor registration, sign-in sheets)"
+     }
+    },
+    {
+     "id": "DE.CM-02.278",
+     "prose": {
+      "en": "Monitor physical access controls (e.g., locks, latches, hinge pins, alarms) for signs of tampering"
+     }
+    },
+    {
+     "id": "DE.CM-02.279",
+     "prose": {
+      "en": "Monitor the physical environment using alarm systems, cameras, and security guards"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

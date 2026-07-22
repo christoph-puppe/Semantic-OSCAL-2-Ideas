@@ -1,0 +1,72 @@
+{
+ "id": "https://ns.nist.gov/csf/req/GV.RR-04",
+ "version": "2.0",
+ "label": "GV.RR-04",
+ "lifecycle": "active",
+ "title": "GV.RR-04",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Cybersecurity is included in human resources practices"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "GV.RR-04.045",
+     "prose": {
+      "en": "Integrate cybersecurity risk management considerations into human resources processes (e.g., personnel screening, onboarding, change notification, offboarding)"
+     }
+    },
+    {
+     "id": "GV.RR-04.046",
+     "prose": {
+      "en": "Consider cybersecurity knowledge to be a positive factor in hiring, training, and retention decisions"
+     }
+    },
+    {
+     "id": "GV.RR-04.047",
+     "prose": {
+      "en": "Conduct background checks prior to onboarding new personnel for sensitive roles, and periodically repeat background checks for personnel with such roles"
+     }
+    },
+    {
+     "id": "GV.RR-04.048",
+     "prose": {
+      "en": "Define and enforce obligations for personnel to be aware of, adhere to, and uphold security policies as they relate to their roles"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.IP-11",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.IP-11",
+    "mode": "renamed",
+    "label": "PR.IP-11",
+    "title": "PR.IP-11",
+    "prose": "Cybersecurity is included in human resources practices (e.g., deprovisioning, personnel screening)"
+   }
+  ]
+ }
+}

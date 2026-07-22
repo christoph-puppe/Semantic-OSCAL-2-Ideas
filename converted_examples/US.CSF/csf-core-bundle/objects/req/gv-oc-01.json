@@ -1,0 +1,65 @@
+{
+ "id": "https://ns.nist.gov/csf/req/GV.OC-01",
+ "version": "2.0",
+ "label": "GV.OC-01",
+ "lifecycle": "active",
+ "title": "GV.OC-01",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "The organizational mission is understood and informs cybersecurity risk management"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "GV.OC-01.001",
+     "prose": {
+      "en": "Share the organization's mission (e.g., through vision and mission statements, marketing, and service strategies) to provide a basis for identifying risks that may impede that mission"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.BE-02",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.BE-03",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.BE-02",
+    "mode": "merged-into",
+    "label": "ID.BE-02",
+    "title": "ID.BE-02",
+    "prose": "The organization’s place in critical infrastructure and its industry sector is identified and communicated"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.BE-03",
+    "mode": "merged-into",
+    "label": "ID.BE-03",
+    "title": "ID.BE-03",
+    "prose": "Priorities for organizational mission, objectives, and activities are established and communicated"
+   }
+  ]
+ }
+}

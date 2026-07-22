@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.nist.gov/csf/req/RS.AN-08",
+ "version": "2.0",
+ "label": "RS.AN-08",
+ "lifecycle": "active",
+ "title": "RS.AN-08",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "An incident's magnitude is estimated and validated"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "RS.AN-08.328",
+     "prose": {
+      "en": "Review other potential targets of the incident to search for indicators of compromise and evidence of persistence"
+     }
+    },
+    {
+     "id": "RS.AN-08.329",
+     "prose": {
+      "en": "Automatically run tools on targets to look for indicators of compromise and evidence of persistence"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

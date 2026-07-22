@@ -1,0 +1,66 @@
+{
+ "id": "https://ns.nist.gov/csf/req/PR.PS-06",
+ "version": "2.0",
+ "label": "PR.PS-06",
+ "lifecycle": "active",
+ "title": "PR.PS-06",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Secure software development practices are integrated, and their performance is monitored throughout the software development life cycle"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "PR.PS-06.257",
+     "prose": {
+      "en": "Protect all components of organization-developed software from tampering and unauthorized access"
+     }
+    },
+    {
+     "id": "PR.PS-06.258",
+     "prose": {
+      "en": "Secure all software produced by the organization, with minimal vulnerabilities in their releases"
+     }
+    },
+    {
+     "id": "PR.PS-06.259",
+     "prose": {
+      "en": "Maintain the software used in production environments, and securely dispose of software once it is no longer needed"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.IP-02",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.IP-02",
+    "mode": "merged-into",
+    "label": "PR.IP-02",
+    "title": "PR.IP-02",
+    "prose": "A System Development Life Cycle to manage systems is implemented"
+   }
+  ]
+ }
+}

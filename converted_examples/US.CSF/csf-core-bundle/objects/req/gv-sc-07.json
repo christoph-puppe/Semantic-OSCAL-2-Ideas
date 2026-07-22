@@ -1,0 +1,89 @@
+{
+ "id": "https://ns.nist.gov/csf/req/GV.SC-07",
+ "version": "2.0",
+ "label": "GV.SC-07",
+ "lifecycle": "active",
+ "title": "GV.SC-07",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "The risks posed by a supplier, their products and services, and other third parties are understood, recorded, prioritized, assessed, responded to, and monitored over the course of the relationship"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "GV.SC-07.098",
+     "prose": {
+      "en": "Adjust assessment formats and frequencies based on the third party's reputation and the criticality of the products or services they provide"
+     }
+    },
+    {
+     "id": "GV.SC-07.099",
+     "prose": {
+      "en": "Evaluate third parties' evidence of compliance with contractual cybersecurity requirements, such as self-attestations, warranties, certifications, and other artifacts"
+     }
+    },
+    {
+     "id": "GV.SC-07.100",
+     "prose": {
+      "en": "Monitor critical suppliers to ensure that they are fulfilling their security obligations throughout the supplier relationship lifecycle using a variety of methods and techniques, such as inspections, audits, tests, or other forms of evaluation"
+     }
+    },
+    {
+     "id": "GV.SC-07.101",
+     "prose": {
+      "en": "Monitor critical suppliers, services, and products for changes to their risk profiles, and reevaluate supplier criticality and risk impact accordingly"
+     }
+    },
+    {
+     "id": "GV.SC-07.102",
+     "prose": {
+      "en": "Plan for unexpected supplier and supply chain-related interruptions to ensure business continuity"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "3rd",
+    "remark": "3rd Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.SC-02",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.SC-04",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.SC-02",
+    "mode": "merged-into",
+    "label": "ID.SC-02",
+    "title": "ID.SC-02",
+    "prose": "Suppliers and third party partners of information systems, components, and services are identified, prioritized, and assessed using a cyber supply chain risk assessment process"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.SC-04",
+    "mode": "merged-into",
+    "label": "ID.SC-04",
+    "title": "ID.SC-04",
+    "prose": "Suppliers and third-party partners are routinely assessed using audits, test results, or other forms of evaluations to confirm they are meeting their contractual obligations."
+   }
+  ]
+ }
+}

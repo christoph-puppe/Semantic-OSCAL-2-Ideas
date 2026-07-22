@@ -1,0 +1,132 @@
+{
+ "id": "https://ns.nist.gov/csf/req/ID.IM-03",
+ "version": "2.0",
+ "label": "ID.IM-03",
+ "lifecycle": "active",
+ "title": "ID.IM-03",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Improvements are identified from execution of operational processes, procedures, and activities"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "ID.IM-03.186",
+     "prose": {
+      "en": "Conduct collaborative lessons learned sessions with suppliers"
+     }
+    },
+    {
+     "id": "ID.IM-03.187",
+     "prose": {
+      "en": "Annually review cybersecurity policies, processes, and procedures to take lessons learned into account"
+     }
+    },
+    {
+     "id": "ID.IM-03.188",
+     "prose": {
+      "en": "Use metrics to assess operational cybersecurity performance over time"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.IP-07",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/PR.IP-08",
+   "mode": "renamed"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/DE.DP-05",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/RS.IM-01",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/RS.IM-02",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/RC.IM-01",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/RC.IM-02",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.IP-07",
+    "mode": "merged-into",
+    "label": "PR.IP-07",
+    "title": "PR.IP-07",
+    "prose": "Protection processes are improved"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/PR.IP-08",
+    "mode": "renamed",
+    "label": "PR.IP-08",
+    "title": "PR.IP-08",
+    "prose": "Effectiveness of protection technologies is shared"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/DE.DP-05",
+    "mode": "merged-into",
+    "label": "DE.DP-05",
+    "title": "DE.DP-05",
+    "prose": "Detection processes are continuously improved"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/RS.IM-01",
+    "mode": "merged-into",
+    "label": "RS.IM-01",
+    "title": "RS.IM-01",
+    "prose": "Response plans incorporate lessons learned"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/RS.IM-02",
+    "mode": "merged-into",
+    "label": "RS.IM-02",
+    "title": "RS.IM-02",
+    "prose": "Response strategies are updated"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/RC.IM-01",
+    "mode": "merged-into",
+    "label": "RC.IM-01",
+    "title": "RC.IM-01",
+    "prose": "Recovery plans incorporate lessons learned"
+   },
+   {
+    "ref": "https://ns.nist.gov/csf/req/RC.IM-02",
+    "mode": "merged-into",
+    "label": "RC.IM-02",
+    "title": "RC.IM-02",
+    "prose": "Recovery strategies are updated"
+   }
+  ]
+ }
+}

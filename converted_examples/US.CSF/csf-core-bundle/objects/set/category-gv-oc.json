@@ -1,0 +1,54 @@
+{
+ "id": "https://ns.nist.gov/csf/set/category/gv-oc",
+ "version": "2.0",
+ "lifecycle": "active",
+ "title": "Organizational Context",
+ "label": "Organizational Context (GV.OC)",
+ "members": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/GV.OC-01",
+   "sequence": 10
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/GV.OC-02",
+   "sequence": 20
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/GV.OC-03",
+   "sequence": 30
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/GV.OC-04",
+   "sequence": 40
+  },
+  {
+   "ref": "https://ns.nist.gov/csf/req/GV.OC-05",
+   "sequence": 50
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The circumstances - mission, stakeholder expectations, dependencies, and legal, regulatory, and contractual requirements - surrounding the organization's cybersecurity risk management decisions are understood"
+    }
+   ]
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.BE",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.BE",
+    "mode": "merged-into",
+    "label": "Business Environment (ID.BE)",
+    "title": "Business Environment"
+   }
+  ]
+ }
+}

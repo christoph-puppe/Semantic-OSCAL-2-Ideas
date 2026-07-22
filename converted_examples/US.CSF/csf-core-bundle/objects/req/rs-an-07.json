@@ -1,0 +1,37 @@
+{
+ "id": "https://ns.nist.gov/csf/req/RS.AN-07",
+ "version": "2.0",
+ "label": "RS.AN-07",
+ "lifecycle": "active",
+ "title": "RS.AN-07",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Incident data and metadata are collected, and their integrity and provenance are preserved"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "RS.AN-07.327",
+     "prose": {
+      "en": "Collect, preserve, and safeguard the integrity of all pertinent incident data and metadata (e.g., data source, date/time of collection) based on evidence preservation and chain-of-custody procedures"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

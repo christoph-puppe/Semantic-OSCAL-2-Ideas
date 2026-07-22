@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.nist.gov/csf/req/RC.RP-02",
+ "version": "2.0",
+ "label": "RC.RP-02",
+ "lifecycle": "active",
+ "title": "RC.RP-02",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Recovery actions are selected, scoped, prioritized, and performed"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "RC.RP-02.348",
+     "prose": {
+      "en": "Select recovery actions based on the criteria defined in the incident response plan and available resources"
+     }
+    },
+    {
+     "id": "RC.RP-02.349",
+     "prose": {
+      "en": "Change planned recovery actions based on a reassessment of organizational needs and resources"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ }
+}

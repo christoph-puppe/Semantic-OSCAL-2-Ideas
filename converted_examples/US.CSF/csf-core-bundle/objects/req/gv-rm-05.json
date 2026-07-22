@@ -1,0 +1,60 @@
+{
+ "id": "https://ns.nist.gov/csf/req/GV.RM-05",
+ "version": "2.0",
+ "label": "GV.RM-05",
+ "lifecycle": "active",
+ "title": "GV.RM-05",
+ "statements": [
+  {
+   "id": "statement",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.nist.gov/csf/party/organization"
+   ],
+   "prose": {
+    "en": "Lines of communication across the organization are established for cybersecurity risks, including risks from suppliers and other third parties"
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/csf/facet/examples@1": {
+   "examples": [
+    {
+     "id": "GV.RM-05.024",
+     "prose": {
+      "en": "Determine how to update senior executives, directors, and management on the organization's cybersecurity posture at agreed-upon intervals"
+     }
+    },
+    {
+     "id": "GV.RM-05.025",
+     "prose": {
+      "en": "Identify how all departments across the organization - such as management, operations, internal auditors, legal, acquisition, physical security, and HR - will communicate with each other about cybersecurity risks"
+     }
+    }
+   ]
+  },
+  "https://ns.nist.gov/csf/facet/csf@1": {
+   "risk-party": {
+    "value": "1st",
+    "remark": "1st Party Risk"
+   }
+  }
+ },
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/csf/req/ID.SC-01",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/csf/req/ID.SC-01",
+    "mode": "merged-into",
+    "label": "ID.SC-01",
+    "title": "ID.SC-01",
+    "prose": "Cyber supply chain risk management processes are identified, established, assessed, managed, and agreed to by organizational stakeholders"
+   }
+  ]
+ }
+}
