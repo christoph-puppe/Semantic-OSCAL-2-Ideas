@@ -1,0 +1,141 @@
+# Semantic OSCAL — Ideas
+
+A design study for **OSCAL Semantic Core**: compliance data as a graph of nine
+shallow, globally identified objects instead of eight nested document models.
+This repository holds the handbook, the draft specification, three fully
+converted national corpora, and a ready-to-install Claude skill that applies
+the standard.
+
+Status: **pre-1.0, evidence-gated.** The specification is at v0.5 with a v0.6
+feedback backlog open. Nothing here is endorsed by NIST, BSI, ACSC, or FedRAMP.
+
+---
+
+## Why
+
+OSCAL 1.x is *rigid where frameworks legitimately differ* and *contractless
+where meaning actually lives* — and every measured pathology flows from one
+side of that paradox:
+
+- **Nobody used it.** FedRAMP's RFC-0024 (Jan 2026) records that of 100+ Rev5
+  authorizations processed in 2025, **zero** submissions used OSCAL — the
+  program the standard was co-designed with, in the year machine-readability
+  became its central theme.
+- **Valid and meaningless are compatible states.** The German Grundschutz++
+  catalogs carry **12,059 namespace-qualified props** whose "schema" is a set
+  of CSV files behind mutable links. Inside them sit **216 pseudo-placeholders**
+  (`{{einem anerkannten Standard}}`) that imitate parameter syntax where it has
+  no meaning — several contradicting the adjacent prose. Every OSCAL validator
+  on earth certifies these documents as flawless.
+- **The same model keeps getting rediscovered.** FedRAMP built CR26 on a green
+  field in 2026 with no props mechanism, and its typed fields correspond almost
+  one-to-one to the German prop names: `modal_verb` ↔ `force`,
+  `target_object_categories` ↔ `affects`. Two teams, no coordination, one
+  target model — convergent evidence about what the domain demands.
+- **Membership gets hand-maintained twice.** 59 % of all ISM props are a
+  5,301-entry applicability matrix duplicating information ACSC *also* ships as
+  eight profile documents, because consuming the profile mechanism costs more
+  than inlining.
+
+Full argument with sources: [Chapter 1 — Why This Exists](semantic-oscal/references/ch01-why-this-exists.md).
+
+## What it is
+
+Nine kernel objects — Requirement, RequirementSet, Tailoring, Mapping,
+Component, Implementation, Assessment, Finding, Attestation — plus two
+sub-objects (Deviation, Authorization). Documents become renderings of the
+graph rather than the unit of exchange.
+
+Three layers, strictly separated:
+
+| Layer | Holds | Contract |
+|---|---|---|
+| **Kernel** | What all three corpora were measured to need: binding force, clauses, typed parameters and deadlines, membership, aliases, history | Normative, fixed |
+| **Facets** | Framework-specific vocabulary | Registered, schema-pinned, machine-checked; fail-closed on unknown semantics |
+| **Annotations** | Rendering hints and chrome | Invisible to compliance |
+
+Design rules that follow: failures are made *unrepresentable* rather than
+forbidden (bound `{param:}` tokens, identity-addressed tailoring); integrity
+uses two digests — package (bytes sent) and semantic (meaning approved) — so
+signatures survive repackaging; and tools that don't understand something must
+carry it or stop with a reason, never guess.
+
+Every design decision is scored against four tests — *simpler · closer to
+measured customer needs · no more props · less need for bespoke JSON* — in the
+[Decision Rationale Register](drafts/oscal-semantic-core-decision-rationale-register.md).
+
+Start here: [Chapter 2 — The Core in One Hour](semantic-oscal/references/ch02-the-core-in-one-hour.md),
+or the [one-file explainer](semantic-core-explainer-concept-files-workflow.md)
+if you prefer diagrams.
+
+## How to use this repo
+
+### As a Claude skill
+
+[`semantic-oscal/`](semantic-oscal/) is an installable skill that guides an
+agent through authoring, validating, and migrating Semantic Core content. Its
+[SKILL.md](semantic-oscal/SKILL.md) turns the 15 handbook chapters into 14
+numbered requirements, each with reference chapters and companion examples.
+
+Install by copying the directory into your skills folder, or unpack
+`SKILL_semantic-oscal.zip`:
+
+```
+~/.claude/skills/semantic-oscal/     # user-level
+.claude/skills/semantic-oscal/       # project-level
+```
+
+It carries 18 worked examples plus an index in [`examples/`](semantic-oscal/examples/) — a
+self-consistent bundle from a zero-facet minimum requirement through
+attestations with semantic digests — and three converters in
+[`scripts/`](semantic-oscal/scripts/).
+
+### As a specification
+
+- [`drafts/oscal-semantic-core-v0.5-specification.md`](drafts/oscal-semantic-core-v0.5-specification.md) — the normative draft
+- [`drafts/oscal-semantic-core-decision-rationale-register.md`](drafts/oscal-semantic-core-decision-rationale-register.md) — 21 decisions, each scored against the north star, with rejected alternatives
+- [`drafts/oscal-semantic-core-v0.6-spec-feedback-backlog.md`](drafts/oscal-semantic-core-v0.6-spec-feedback-backlog.md) — 11 open items, evidence + disposition + source each
+
+### As evidence
+
+[`converted_examples/`](converted_examples/) holds three national frameworks
+run through the converters, each with a computed coverage report — a bundle of
+objects, pinned facet schemas, and a manifest carrying both digests per object:
+
+| Corpus | Source | Emitted | Coverage |
+|---|---|---|---|
+| [AU.ISM](converted_examples/AU.ISM/ism-coverage-report.md) | ACSC ISM, OSCAL 1.1.2 catalog, 1,150 controls | 1,150 Requirements · 322 Sets | 36,161 / 36,161 leaf values |
+| [geman.bsi](converted_examples/geman.bsi/bsi-coverage-report.md) | Grundschutz++ + MS-TLS, OSCAL 1.1.3 | 658 Requirements carrying 1,015 statements · 167 Sets | 49,804 / 49,804 |
+| [FedRAMP-CR26](converted_examples/FedRAMP-CR26/cr26-coverage-report.md) | CR26 bespoke JSON, v2026.07.14.01 | 292 Requirements · 373 Mappings · 100 Sets · 4 Tailorings | 7,294 / 7,294 |
+
+The reports declare every conversion rule with counts, and report source
+defects rather than repairing them — the BSI run surfaces all 216
+pseudo-placeholders for the authors' queue.
+
+### Orientation
+
+[`oscal-models-overview-1x-vs-semantic-core.md`](oscal-models-overview-1x-vs-semantic-core.md)
+maps the eight OSCAL 1.x document models onto the nine objects, with reusable
+Mermaid sources.
+
+## House rules
+
+Three rules govern the handbook, and you should hold it to them:
+
+1. **Evidence tiers, always labeled** — every claim is *measured*,
+   *designed-for*, or *hypothesized*. Corrections ship with the same
+   prominence as the original claim.
+2. **Concepts enter through the corpus** — no mechanism is introduced
+   abstractly. If a concept can't be motivated by something an authority
+   actually shipped, it isn't in the spec.
+3. **Every "don't" names its corpse** — prohibitions cite the measured failure
+   they prevent, with the number attached. A rule that can't name what it
+   prevents is a rule to delete.
+
+## Contributing
+
+Objections are the point — [Appendix F](semantic-oscal/references/appendix-f-objections.md)
+is an adversarial FAQ, and review findings land in the v0.6 backlog with their
+diffs on the record. Items enter the backlog with counts and leave via a
+decision recorded in the register; an item that can neither be evidenced nor
+closed after two gate cycles gets deleted.
