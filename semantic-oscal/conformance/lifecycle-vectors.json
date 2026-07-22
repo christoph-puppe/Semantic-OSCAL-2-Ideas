@@ -1,0 +1,41 @@
+{
+  "description": "State machines and identity events (backlog #18 coverage). Deviation (C.3b): investigating -> pending -> approved | withdrawn; terminal states are terminal - re-litigation is a NEW Deviation. Finding (C.3): open -> in-remediation -> closed; closed is terminal (dispositions are Deviations, not extra states); direct open -> closed is legal (finding resolved without remediation phase). Identity (D2): canonical-alias = same content, substitution allowed; replaces = lineage, substitution NEVER automatic. Relationship composition (C.5 floor): equal chains; supplements never chains; everything else degrades to the honest floor (supports).",
+  "deviation-transitions": [
+    { "from": "investigating", "to": "pending", "valid": true },
+    { "from": "pending", "to": "approved", "valid": true },
+    { "from": "pending", "to": "withdrawn", "valid": true },
+    { "from": "investigating", "to": "withdrawn", "valid": true },
+    { "from": "approved", "to": "pending", "valid": false, "reason": "terminal is terminal - re-litigation is a new Deviation with its own record" },
+    { "from": "withdrawn", "to": "approved", "valid": false },
+    { "from": "pending", "to": "investigating", "valid": false, "reason": "no backwards moves" },
+    { "from": "approved", "to": "withdrawn", "valid": false }
+  ],
+  "finding-transitions": [
+    { "from": "open", "to": "in-remediation", "valid": true },
+    { "from": "in-remediation", "to": "closed", "valid": true },
+    { "from": "open", "to": "closed", "valid": true },
+    { "from": "closed", "to": "open", "valid": false, "reason": "closed is terminal; a recurrence is a new Finding" },
+    { "from": "in-remediation", "to": "open", "valid": false },
+    { "from": "closed", "to": "in-remediation", "valid": false }
+  ],
+  "identity-events": [
+    { "record": "canonical-alias", "substitution": "allowed", "reason": "identity equivalence, authority-asserted rebrand of the SAME content" },
+    { "record": "replaces:revised", "substitution": "never-automatic", "reason": "a revision is a different object with history - auto-substituting silently corrupts implementations, findings, attestations, mappings, tailorings (P7-B4)" },
+    { "record": "replaces:split-from", "substitution": "never-automatic" },
+    { "record": "replaces:merged-into", "substitution": "never-automatic" },
+    { "record": "replaces:renamed", "substitution": "never-automatic" }
+  ],
+  "relationship-composition": [
+    { "a": "equal", "b": "equal", "composed": "equal", "reason": "only equal chains at full strength (C.5)" },
+    { "a": "equal", "b": "supports", "composed": "supports" },
+    { "a": "subset-of", "b": "subset-of", "composed": "supports", "reason": "the conformance FLOOR: everything but equal-chains degrades honestly toward supports; a richer table is Chapter 8's, and a tool may implement it, but MUST NOT claim stronger than the floor without it" },
+    { "a": "intersects", "b": "equal", "composed": "supports" },
+    { "a": "supplements", "b": "equal", "composed": null, "reason": "supplements is an attachment claim, not a crosswalk claim - it never chains (C.5); OLIR exports may down-translate the EDGE to supports, but no composed claim exists" },
+    { "a": "equal", "b": "supplements", "composed": null },
+    { "a": "conflicts", "b": "equal", "composed": "supports", "reason": "floor only - conflict propagation needs Chapter 8's table, never the floor rule" }
+  ],
+  "shape-disjointness": [
+    { "name": "each-type-matches-exactly-one",
+      "note": "the nine canonical minimal objects below must each match exactly ONE kernel shape; the tenth (garbage) must match ZERO - shape-disjointness is a conformance property because objects carry no type discriminator" }
+  ]
+}

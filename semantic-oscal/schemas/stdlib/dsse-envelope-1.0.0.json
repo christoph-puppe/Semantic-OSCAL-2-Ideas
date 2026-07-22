@@ -1,0 +1,26 @@
+{
+  "id": "https://ns.oscal.org/stdlib/facet/dsse-envelope",
+  "version": "1.0.0",
+  "modifies-semantics": [],
+  "note": "NORMATIVE (backlog #18 — re-parked from gate 2, now shipped; D7's 'the stdlib DSSE profile remains normative' finally names an artifact). The Semantic Core DSSE profile: an Attestation's `envelope-ref` resolves to a DSSE envelope of this shape, living BESIDE the content manifest — nothing signed contains its own signature (D3). payloadType is fixed; the payload is the base64 of the Attestation object's canonical form (RFC 8785 member ordering, annotations excluded — the same canonicalization as the semantic digest). Signature verification input is DSSE PAE(payloadType, payload) per the DSSE v1 specification. Verification tier: Portable and above (`attestation-binds`, B.1.7); Core carries the envelope passively. This descriptor is transport, not semantics: modifies-semantics [].",
+  "schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object", "additionalProperties": false,
+    "required": ["payload", "payloadType", "signatures"],
+    "properties": {
+      "payload": { "type": "string", "contentEncoding": "base64" },
+      "payloadType": { "const": "application/vnd.oscal-semantic-core.attestation+json" },
+      "signatures": {
+        "type": "array", "minItems": 1,
+        "items": {
+          "type": "object", "additionalProperties": false,
+          "required": ["sig"],
+          "properties": {
+            "keyid": { "type": "string" },
+            "sig": { "type": "string", "contentEncoding": "base64" }
+          }
+        }
+      }
+    }
+  }
+}

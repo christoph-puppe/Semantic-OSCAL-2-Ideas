@@ -1,0 +1,77 @@
+{
+  "description": "Reference taxonomy (B.1.1 as amended; backlog #16 - run 2's Blocker P9b-1). CLOSURE-REQUIRED references must land in-bundle: Set members[].ref, Tailoring selects/excludes/operation targets (+ statement-id existence), Implementation component-ref/requirement-ref (+ basis-ref against the component's authorizations, D5), Finding assessment-ref/requirement-ref, Mapping source/target-scope statement ids WHEN the endpoint is in-bundle. LANDMARK references resolve outside the bundle by design: Mapping endpoints, party/authority URIs, evidence refs, external schema/reference URLs, attestation subjects (self-verifying via digest). Each vector is a mini-bundle; expected-errors 0 = closes.",
+  "vectors": [
+    { "name": "set-member-closes",
+      "objects": [
+        { "id": "https://ex.org/req/1", "version": "1", "lifecycle": "active", "statements": [ { "id": "s1", "modality": "must", "obligated-parties": ["https://ex.org/p/o"], "prose": { "en": "X." } } ] },
+        { "id": "https://ex.org/set/1", "version": "1", "lifecycle": "active", "members": [ { "ref": "https://ex.org/req/1", "sequence": 10 } ] } ],
+      "expected-errors": 0 },
+    { "name": "set-member-dangles",
+      "objects": [
+        { "id": "https://ex.org/set/1", "version": "1", "lifecycle": "active", "members": [ { "ref": "https://ex.org/req/GONE", "sequence": 10 } ] } ],
+      "expected-errors": 1,
+      "reason": "the 1.x dangling-reference failure must not wear a green checkmark (P9b-1 probe C)" },
+    { "name": "mapping-endpoints-are-landmark",
+      "objects": [
+        { "id": "https://ex.org/map/1", "version": "1", "lifecycle": "active",
+          "source-ref": "https://other.org/req/A", "target-ref": "https://third.org/req/B",
+          "relationship": "supports", "direction": "source-to-target", "confidence": "draft",
+          "provenance": { "author-ref": "https://ex.org/p/me", "date": "2026-07-21" } } ],
+      "expected-errors": 0,
+      "reason": "a crosswalk owns neither endpoint - external endpoints are the normal case, not an error" },
+    { "name": "mapping-scope-binds-when-endpoint-present",
+      "objects": [
+        { "id": "https://ex.org/req/1", "version": "1", "lifecycle": "active", "statements": [ { "id": "s1", "modality": "must", "obligated-parties": ["https://ex.org/p/o"], "prose": { "en": "X." } } ] },
+        { "id": "https://ex.org/map/1", "version": "1", "lifecycle": "active",
+          "source-ref": "https://ex.org/req/1", "source-scope": ["statement:ghost_999"],
+          "target-ref": "https://other.org/req/B",
+          "relationship": "supports", "direction": "source-to-target", "confidence": "draft",
+          "provenance": { "author-ref": "https://ex.org/p/me", "date": "2026-07-21" } } ],
+      "expected-errors": 1,
+      "reason": "run 1's P9-4 probe: statement:ghost_999 names no statement of the in-bundle endpoint" },
+    { "name": "tailoring-op-target-closes-and-statement-exists",
+      "objects": [
+        { "id": "https://ex.org/req/1", "version": "1", "lifecycle": "active", "statements": [ { "id": "s1", "modality": "should", "obligated-parties": ["https://ex.org/p/o"], "prose": { "en": "X." } } ] },
+        { "id": "https://ex.org/set/1", "version": "1", "lifecycle": "active", "members": [ { "ref": "https://ex.org/req/1", "sequence": 10 } ] },
+        { "id": "https://ex.org/t/1", "version": "1", "lifecycle": "active",
+          "selects": [ { "set-ref": "https://ex.org/set/1" } ],
+          "operations": [ { "op": "set-modality", "requirement-ref": "https://ex.org/req/1", "statement-id": "s1", "modality": "must" } ] } ],
+      "expected-errors": 0 },
+    { "name": "tailoring-op-ghost-statement",
+      "objects": [
+        { "id": "https://ex.org/req/1", "version": "1", "lifecycle": "active", "statements": [ { "id": "s1", "modality": "should", "obligated-parties": ["https://ex.org/p/o"], "prose": { "en": "X." } } ] },
+        { "id": "https://ex.org/t/1", "version": "1", "lifecycle": "active",
+          "selects": [ { "set-ref": "https://ex.org/set/GONE" } ],
+          "operations": [ { "op": "set-modality", "requirement-ref": "https://ex.org/req/1", "statement-id": "s9", "modality": "must" } ] } ],
+      "expected-errors": 2,
+      "reason": "dangling selects set-ref + statement-id naming no statement" },
+    { "name": "implementation-closes-with-valid-basis",
+      "objects": [
+        { "id": "https://ex.org/req/1", "version": "1", "lifecycle": "active", "statements": [ { "id": "s1", "modality": "must", "obligated-parties": ["https://ex.org/p/o"], "prose": { "en": "X." } } ] },
+        { "id": "https://ex.org/comp/paas", "version": "1", "lifecycle": "active", "kind": "service",
+          "authorizations": [ { "id": "ato-1", "authority-ref": "https://ex.org/p/auth" } ] },
+        { "id": "https://ex.org/impl/1", "version": "1", "lifecycle": "active",
+          "component-ref": "https://ex.org/comp/paas", "requirement-ref": "https://ex.org/req/1",
+          "responsibility": "inherited",
+          "satisfied-by": [ { "inherited-from": { "component-ref": "https://ex.org/comp/paas", "basis-ref": "ato-1" } } ],
+          "status": "implemented" } ],
+      "expected-errors": 0 },
+    { "name": "implementation-broken-basis-ref",
+      "objects": [
+        { "id": "https://ex.org/req/1", "version": "1", "lifecycle": "active", "statements": [ { "id": "s1", "modality": "must", "obligated-parties": ["https://ex.org/p/o"], "prose": { "en": "X." } } ] },
+        { "id": "https://ex.org/comp/paas", "version": "1", "lifecycle": "active", "kind": "service" },
+        { "id": "https://ex.org/impl/1", "version": "1", "lifecycle": "active",
+          "component-ref": "https://ex.org/comp/paas", "requirement-ref": "https://ex.org/req/1",
+          "responsibility": "inherited",
+          "satisfied-by": [ { "inherited-from": { "component-ref": "https://ex.org/comp/paas", "basis-ref": "ato-MISSING" } } ],
+          "status": "implemented" } ],
+      "expected-errors": 1,
+      "reason": "every inheritance names the authorization it leans on - chains verify link by link (D5)" },
+    { "name": "party-uris-are-landmark",
+      "objects": [
+        { "id": "https://ex.org/req/1", "version": "1", "lifecycle": "active",
+          "statements": [ { "id": "s1", "modality": "must", "obligated-parties": ["https://ns.fedramp.gov/cr26/party/provider"], "prose": { "en": "X." } } ] } ],
+      "expected-errors": 0,
+      "reason": "parties have no kernel type (D22-checked: no corpus publishes party objects - 0-of-3); their URIs are identity landmarks" }
+  ]
+}

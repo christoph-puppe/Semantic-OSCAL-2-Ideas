@@ -42,8 +42,9 @@ closure-required reference class: Set members resolve in-bundle 14,508/
 14,508 (5,470 objects at HEAD; the original "3,066" predates the
 validation corpora). Mapping endpoints and party URIs are LANDMARK
 references — resolvable outside the bundle by design; the normative
-reference taxonomy that states this split is backlog #16 (P9b-1). The
-example bundle documents the break-it recipe.
+reference taxonomy is normative since 2026-07-21 (register
+"P9-applied"; conformance family `reference-vectors.json`, 9 cases).
+The example bundle documents the break-it recipe.
 
 ### 2 · `digest-verified` — package domain · *all tiers*
 
