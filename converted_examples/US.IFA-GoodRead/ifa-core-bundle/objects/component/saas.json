@@ -1,0 +1,25 @@
+{
+ "id": "https://ifa.gov/goodread/component/saas",
+ "version": "1.0.0",
+ "label": "Leveraging SaaS System",
+ "lifecycle": "active",
+ "title": "Leveraging SaaS System Security Plan",
+ "kind": "system",
+ "members": [
+  {
+   "component-ref": "https://ifa.gov/goodread/component/csp-iaas",
+   "context": "leveraged system"
+  },
+  {
+   "component-ref": "https://ifa.gov/goodread/component/access-control-appliance",
+   "context": "internal appliance"
+  }
+ ],
+ "facets": {
+  "https://ifa.gov/goodread/facet/system@1": {
+   "description": {
+    "en": "An example of three customers leveraging an authorized SaaS, which is running on an authorized IaaS.\n\n```\n\nCust-A    Cust-B    Cust-C\n  |         |         |\n  +---------+---------+\n            |\n  +-------------------+\n  |  Leveraging SaaS  |\n  |    this file      |\n  +-------------------+\n            |\n            |\n  +-------------------+\n  |  Leveraged IaaS   |\n  +-------------------+\n            \n```\n\nIn this example, the IaaS SSP (the leveraged SSP) specifies what IaaS provides and the customer's responsibilities for certain controls.\n\nThe SaaS must address these responsibilities for the control to be fully satisfied.\n\nThe SaaS provider may either implement these directly or pass the responsibility on to their customers. Both may be necessary.\n\nFor any given control, the Leveraged IaaS SSP must describe:\n\n1. HOW the IaaS is directly satisfying the control\n1. WHAT responsibilities are left for the Leveraging SaaS (or their customers) to implement.\n\n\nFor any given control, the Leveraging SaaS SSP must describe:\n\n1. WHAT is being inherited from the underlying IaaS\n1. HOW the SaaS is directly satisfying the control.\n1. WHAT responsibilities are left for the SaaS' customers to implement. (The SaaS customers are Cust-A, B and C)\n"
+   }
+  }
+ }
+}

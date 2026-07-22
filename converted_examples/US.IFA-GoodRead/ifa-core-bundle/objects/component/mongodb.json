@@ -1,0 +1,64 @@
+{
+ "id": "https://ifa.gov/goodread/component/mongodb",
+ "version": "20231012",
+ "label": "MongoDB",
+ "lifecycle": "active",
+ "title": "MongoDB",
+ "kind": "service",
+ "capabilities": [
+  {
+   "id": "cap-sc-8",
+   "requirement-ref": "https://ns.nist.gov/sp800-53/req/SC-8",
+   "description": "MongoDB's implementation of SC-8 control. The details of the implementation are provided at the statement level."
+  },
+  {
+   "id": "cap-sc-8-1",
+   "requirement-ref": "https://ns.nist.gov/sp800-53/req/SC-8.1",
+   "description": "MongoDB implements cryptographic mechanisms (TLS 1.x) to provide cryptographic protection for data in transit."
+  },
+  {
+   "id": "cap-sa-4-9",
+   "requirement-ref": "https://ns.nist.gov/sp800-53/req/SA-4.9",
+   "description": "Must ensure that MongoDB only listens for network connections on authorized interfaces by configuring the MongoDB configuration file to limit the services exposure to only the network interfaces on which MongoDB instances should listen for incoming connections."
+  }
+ ],
+ "facets": {
+  "https://ifa.gov/goodread/facet/protocols@1": {
+   "protocols": [
+    {
+     "name": "mongodb",
+     "title": "Primary daemon process for the MongoDB system.",
+     "port-ranges": [
+      {
+       "start": 27017,
+       "end": 27017,
+       "transport": "TCP"
+      }
+     ]
+    },
+    {
+     "name": "mongodb-shardsrv",
+     "title": "MongoDB protocol for sharding with shardsrv option.",
+     "port-ranges": [
+      {
+       "start": 27018,
+       "end": 27018,
+       "transport": "TCP"
+      }
+     ]
+    },
+    {
+     "name": "mongodb-configsvr",
+     "title": "MongoDB protocol for configsrv operation.",
+     "port-ranges": [
+      {
+       "start": 27019,
+       "end": 27019,
+       "transport": "TCP"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

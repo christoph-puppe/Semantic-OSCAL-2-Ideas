@@ -1,0 +1,15 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/facet/rmf",
+ "version": "1.0.0",
+ "modifies-semantics": [],
+ "note": "ILLUSTRATIVE STUB - normative schemas ship with the v0.6 schema deliverable",
+ "schema": {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+   "contributes-to-assurance": {
+    "type": "boolean"
+   }
+  }
+ }
+}

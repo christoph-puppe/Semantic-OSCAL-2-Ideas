@@ -1,0 +1,24 @@
+{
+ "id": "https://ifa.gov/goodread/impl/system1234-ac-6.1",
+ "version": "1.1.1",
+ "lifecycle": "active",
+ "component-ref": "https://ifa.gov/goodread/component/system1234",
+ "requirement-ref": "https://ns.nist.gov/sp800-53/req/AC-6.1",
+ "responsibility": "provider",
+ "satisfied-by": [
+  {
+   "capability-ref": "cap-ac-6.1"
+  }
+ ],
+ "parameter-bindings": {
+  "ac-06.01_odp.01": "individuals and roles with authorized access to security functions and security-relevant information are defined and not available to all users of the system;",
+  "ac-06.01_odp.02": "security functions (deployed in hardware) for authorized access are defined;",
+  "ac-06.01_odp.03": "security functions (deployed in soware) for authorized access are defined;",
+  "ac-06.01_odp.04": "security functions (deployed in firmware) for authorized access are defined;",
+  "ac-06.01_odp.05": "security-relevant information for authorized access is defined;"
+ },
+ "status": "implemented",
+ "evidence-refs": [
+  "https://ifa.gov/goodread/doc/ssp-cef90dc9-2745-4c59-90b6-f82f6a96dad7"
+ ]
+}

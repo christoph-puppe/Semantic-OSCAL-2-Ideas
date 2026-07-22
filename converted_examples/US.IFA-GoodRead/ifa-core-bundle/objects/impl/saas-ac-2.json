@@ -1,0 +1,29 @@
+{
+ "id": "https://ifa.gov/goodread/impl/saas-ac-2",
+ "version": "1.0.0",
+ "lifecycle": "active",
+ "component-ref": "https://ifa.gov/goodread/component/saas",
+ "requirement-ref": "https://ns.nist.gov/sp800-53/req/AC-2",
+ "statement-refs": [
+  "smt.a"
+ ],
+ "responsibility": "shared",
+ "satisfied-by": [
+  {
+   "inherited-from": {
+    "component-ref": "https://ifa.gov/goodread/component/csp-iaas",
+    "basis-ref": "auth-csp-iaas-2018"
+   }
+  },
+  {
+   "capability-ref": "cap-consumer-ac-2a"
+  }
+ ],
+ "parameter-bindings": {
+  "ac-2_prm_1": "privileged and non-privileged"
+ },
+ "status": "implemented",
+ "evidence-refs": [
+  "https://ifa.gov/goodread/doc/ssp-0e6c0e99-0dac-458d-b82f-bf85d6ccc521"
+ ]
+}

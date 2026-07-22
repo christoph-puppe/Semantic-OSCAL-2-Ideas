@@ -791,3 +791,111 @@ uniform.
 | #12 | **DECIDED — adopt** (author decision 2026-07-22; register "D9 rev 2"). Rationale: **EU standards must be available in all 27 official languages.** `text` = `{BCP-47: string}` for all human-readable fields; identifiers stay strings. Delivery (schema field-switch + all-converter reruns + full re-pin) rides the converter rerun — stays open until delivered. |
 | #10 | **Open** — gate 3 (NIST catalog); see `drafts/gate-3-plan.md` |
 | #18 | **Open** — gate 4 (engines: bundle-composition semver + conditional-apply vectors) |
+
+# Amendments — gate 3 (2026-07-22)
+
+Gate 3 delivered (spec IV.9; census `drafts/gate-3-census.md`; plan
+`drafts/gate-3-plan.md`). Three corpora converted census-first
+(US.SP800-53 · US.CSF · US.IFA-GoodRead), backlog #10 drained, #9
+confirmed. **The customer test passed: zero kernel-schema changes.**
+Two reference-validator defects were exposed by the corpus and fixed;
+conformance grew 125 → **129 vectors** (parameter 14 → 17, tier 8 → 9).
+
+## D10 (rev 3) — #10 CLOSED: ODP addressing = the declaring statement
+**Decision.** An external overlay citing an ODP addresses it as
+**(requirement, parameter-name) resolved via the DECLARING statement**
+— the statement whose `parameters[]` carries the declaration (D10
+by-statement keying). No separate statement map is needed.
+**Evidence (measured, the whole point).** Rev 5.2.0 conversion: no ODP
+is inserted in ≥ 2 statements (histogram 0×399 / 1×1,201); the formal
+ODP ids (`AC-01_ODP[01]`) round-trip mechanically to param names
+(1,327/1,327). The CR26 CTL overlay's 16 assignments over 14 controls
+all resolved to unique declaring statements — emitted as
+`set-parameter` operations on the `rev5-odp-overlay` Tailoring with the
+tailored Requirements carried in-bundle (closure; the
+authorization-package pattern). Params without a statement insertion
+site (399: 326 bind only in 53A objectives, 73 nowhere) declare on the
+first statement — the declaration site stays deterministic.
+**Alternative rejected.** A statement-scoped Mapping per ODP — heavier,
+and the measurement shows the ambiguity it would disambiguate does not
+exist in the wild. Revisit only if a catalog ships duplicate ODP names
+across statements (that catalog earns a finding first).
+
+## D13 (rev 4) — Tier derivation resolves through Sets: no wrapper laundering
+**Decision.** The tier anchor's content origin resolves **through**
+selected Sets to their member ids (transitively) and through the
+operations' `requirement-ref` targets — never stopping at a wrapper
+Set's own id.
+**Evidence.** The CR26 `rev5-odp-overlay` (FedRAMP-minted Set around
+NIST controls) derived authority-claimed under the shortcut — a
+self-minted wrapper laundered consumer into authority. The corpus
+falsified the reference implementation; spec:396 revised, validator
+fixed, vector `wrapper-set-does-not-launder-origin` locks it. The same
+resolution symmetrically recognizes an authority's own content behind a
+foreign-minted wrapper (vector `mixed-origin-content-blocks-the-claim`
+revised: its old data wrapped same-origin content in a foreign Set —
+the intent said "content", the data said "wrapper"; data now matches
+intent).
+
+## D9 (rev 3) — Multi-select values: a list is legal exactly on `many`
+**Decision.** A choice parameter with `cardinality: many` accepts a
+**list** value; every element must be a declared choice. A list on
+`one` is a type error (invalid, not Deviation-escapable); a foreign
+element in the list is out-of-set (Deviation duty at consumer tier).
+**Evidence.** `param_check` had no legal form for multi-select values —
+exposed when the FedRAMP CTL binds NIST many-cardinality ODPs.
+FedRAMP flattens multi-selections into prose strings ("privileged
+accounts; non-privileged accounts", "local, network and remote"); every
+split part matches a declared NIST choice exactly, so the converter
+normalizes the serialization (×3, counted, REPORTED upstream). 3
+vectors.
+
+## D2-applied — Withdrawal lineage inverts onto the successor's `replaces[]`
+**Decision.** Withdrawn tombstone controls (labels + status + lineage
+links, no normative content) are **dropped**; their lineage inverts
+onto the successor's kernel `replaces[]` — `incorporated-into` → mode
+`merged-into`, `moved-to` → mode `renamed` — with statement-precision
+targets and the tombstone's label/title (CSF: its 1.1 outcome prose)
+carried in the successor's `annotations["nist-withdrawal"]`. A
+successor may be a **Set** (sa-12 → the SR family; ID.GV → the GV
+function): the shared base makes Set-level `replaces` legal.
+**Evidence.** Rev 5: 182 tombstones, 199 + 1 successor edges; CSF: 91
+(12 categories + 79 subcategories), 134 + 1 edges; chains 0, dangling
+0. Zero corpus mapping endpoints hit withdrawn ids (measured), so no
+resolver regression. **Rejected:** emitting tombstones as Requirements
+— the kernel demands ≥ 1 statement with an obligated party, which a
+tombstone cannot honestly supply; fabricating either fails the
+statements-are-real rule.
+
+## #9-applied — Lifecycle seeds CONFIRMED against the IFA corpus
+**Decision.** The shipped enums stand unchanged. Finding
+`open · in-remediation · closed`; assessment
+`satisfied · not-satisfied · inconclusive`; deviation types/states as
+shipped.
+**Evidence (counted).** Every IFA source state mapped with zero
+additions: AR target `not-satisfied` → assessment result; POA&M risk
+`open`+planned remediation → `in-remediation` with `actions[]`
+(due = task window end); risk `deviation-approved` → approved
+`risk-adjustment` Deviation (rationale = the mitigating factor,
+approver = the SCA division URI); risk `investigating` → the deviation
+state enum already carries it. The five lifecycle types validate at
+document scale with both digests — the standing Test-2 gap is closed.
+
+## Gate-3 source findings (all REPORTED upstream)
+NIST rel-code spelling split (`incorporated_into` CSF vs
+`incorporated-into` Rev 5) · fragment-marker-less href (CSF DE.DP-04)
+· 3 cross-control param insertions (ia-13.3, sc-42.2, si-10.1 insert a
+foreign control's ODP; declaration duplicated onto the inserting
+statement per the 216 per-statement rule) · 71 ODPs bound nowhere ·
+`_stmt.` vs `_smt.` statement-id spellings (SSP examples vs catalog) ·
+FedRAMP multi-select flattening (normalized ×3) · PUA codepoint in IFA
+prose (`soware`) · placeholder uuids ×4 in the leveraged pair
+(provided-uuid dereference degenerate; inheritance wired via the
+authorization anchor).
+
+## Gate-3 backlog dispositions
+
+| Backlog | Disposition |
+|---|---|
+| #10 | **Close, DRAINED** — D10 rev 3: (requirement, ODP) resolves via the declaring statement; 16 CTL assignments → `rev5-odp-overlay` Tailoring; 14 controls carried in-bundle; guidance stays parked (D20 supplements territory, not ODP addressing) |
+| #9 | **Confirmation delivered** — #9-applied: zero enum additions; five lifecycle types at document scale, both digests |

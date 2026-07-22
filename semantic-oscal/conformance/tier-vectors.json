@@ -1,83 +1,548 @@
 {
-  "description": "Tier anchor derivation (backlog #19, layered — D13 rev 2). The tier is DERIVED from data, never stipulated: (1) authority-CLAIMED iff the Tailoring's id URI origin equals the single origin of ALL selected Sets' ids (predicate selects or mixed origins block the claim); (2) authority-PROVEN iff additionally an in-bundle Attestation whose signer shares the selected content's origin lists the Tailoring among its subjects with a verifying semantic digest — proof can also rescue a cross-origin id; (3) otherwise consumer. Deviation duties (B.1.6, D13 table) bind at consumer tier only; claimed and proven are reported distinctly so a consumer can always see whether authority is claimed or cryptographically shown.",
-  "vectors": [
-    { "name": "same-origin-claim-easing-legal",
-      "expected-tier": "authority-claimed", "expected": "valid",
-      "objects": [
-        { "id": "https://ns.auth.gov/fw/req/1", "version": "1", "lifecycle": "active", "statements": [ { "id": "s1", "modality": "must", "obligated-parties": ["https://ns.auth.gov/fw/p/o"], "prose": { "en": "X." } } ] },
-        { "id": "https://ns.auth.gov/fw/set/base", "version": "1", "lifecycle": "active", "members": [ { "ref": "https://ns.auth.gov/fw/req/1", "sequence": 10 } ] },
-        { "id": "https://ns.auth.gov/fw/tailoring/class-b", "version": "1", "lifecycle": "active",
-          "selects": [ { "set-ref": "https://ns.auth.gov/fw/set/base" } ],
-          "operations": [ { "op": "set-modality", "requirement-ref": "https://ns.auth.gov/fw/req/1", "statement-id": "s1", "modality": "should" } ] } ] },
-    { "name": "cross-origin-easing-without-deviation-fails",
-      "expected-tier": "consumer", "expected": "invalid",
-      "objects": [
-        { "id": "https://ns.auth.gov/fw/req/1", "version": "1", "lifecycle": "active", "statements": [ { "id": "s1", "modality": "must", "obligated-parties": ["https://ns.auth.gov/fw/p/o"], "prose": { "en": "X." } } ] },
-        { "id": "https://ns.auth.gov/fw/set/base", "version": "1", "lifecycle": "active", "members": [ { "ref": "https://ns.auth.gov/fw/req/1", "sequence": 10 } ] },
-        { "id": "https://my.company.example/tailoring/relaxed", "version": "1", "lifecycle": "active",
-          "selects": [ { "set-ref": "https://ns.auth.gov/fw/set/base" } ],
-          "operations": [ { "op": "set-modality", "requirement-ref": "https://ns.auth.gov/fw/req/1", "statement-id": "s1", "modality": "should" } ] } ] },
-    { "name": "cross-origin-easing-with-deviation-legal",
-      "expected-tier": "consumer", "expected": "valid",
-      "objects": [
-        { "id": "https://ns.auth.gov/fw/req/1", "version": "1", "lifecycle": "active", "statements": [ { "id": "s1", "modality": "must", "obligated-parties": ["https://ns.auth.gov/fw/p/o"], "prose": { "en": "X." } } ] },
-        { "id": "https://ns.auth.gov/fw/set/base", "version": "1", "lifecycle": "active", "members": [ { "ref": "https://ns.auth.gov/fw/req/1", "sequence": 10 } ] },
-        { "id": "https://my.company.example/tailoring/relaxed", "version": "1", "lifecycle": "active",
-          "selects": [ { "set-ref": "https://ns.auth.gov/fw/set/base" } ],
-          "operations": [ { "op": "set-modality", "requirement-ref": "https://ns.auth.gov/fw/req/1", "statement-id": "s1", "modality": "should",
-            "deviation": { "type": "risk-adjustment", "state": "approved", "rationale": "compensating control", "approver-ref": "https://my.company.example/p/ciso", "opened": "2026-07-21" } } ] } ] },
-    { "name": "attestation-proves-cross-origin-authority",
-      "expected-tier": "authority-proven", "expected": "valid",
-      "objects": [
-        { "id": "https://ns.auth.gov/fw/req/1", "version": "1", "lifecycle": "active", "statements": [ { "id": "s1", "modality": "must", "obligated-parties": ["https://ns.auth.gov/fw/p/o"], "prose": { "en": "X." } } ] },
-        { "id": "https://ns.auth.gov/fw/set/base", "version": "1", "lifecycle": "active", "members": [ { "ref": "https://ns.auth.gov/fw/req/1", "sequence": 10 } ] },
-        { "id": "https://contractor.example/tailoring/official-class-b", "version": "1", "lifecycle": "active",
-          "selects": [ { "set-ref": "https://ns.auth.gov/fw/set/base" } ],
-          "operations": [ { "op": "set-modality", "requirement-ref": "https://ns.auth.gov/fw/req/1", "statement-id": "s1", "modality": "should" } ] },
-        { "id": "https://ns.auth.gov/fw/att/blessing", "version": "1", "lifecycle": "active",
-          "subject-semantic-digests": [ { "id": "https://contractor.example/tailoring/official-class-b", "semantic-digest": "COMPUTE" } ],
-          "content-manifest-digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
-          "signer": "https://ns.auth.gov/fw/p/program-office", "timestamp": "2026-07-21" } ],
-      "note": "the authority signing a Tailoring it did not mint = proof beats prefix; the signer origin matches the SELECTED content, and the subject digest verifies" },
-    { "name": "attestation-over-wrong-subject-does-not-prove",
-      "expected-tier": "consumer", "expected": "invalid",
-      "objects": [
-        { "id": "https://ns.auth.gov/fw/req/1", "version": "1", "lifecycle": "active", "statements": [ { "id": "s1", "modality": "must", "obligated-parties": ["https://ns.auth.gov/fw/p/o"], "prose": { "en": "X." } } ] },
-        { "id": "https://ns.auth.gov/fw/set/base", "version": "1", "lifecycle": "active", "members": [ { "ref": "https://ns.auth.gov/fw/req/1", "sequence": 10 } ] },
-        { "id": "https://contractor.example/tailoring/relaxed", "version": "1", "lifecycle": "active",
-          "selects": [ { "set-ref": "https://ns.auth.gov/fw/set/base" } ],
-          "operations": [ { "op": "set-modality", "requirement-ref": "https://ns.auth.gov/fw/req/1", "statement-id": "s1", "modality": "should" } ] },
-        { "id": "https://ns.auth.gov/fw/att/other", "version": "1", "lifecycle": "active",
-          "subject-semantic-digests": [ { "id": "https://ns.auth.gov/fw/req/1", "semantic-digest": "COMPUTE" } ],
-          "content-manifest-digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
-          "signer": "https://ns.auth.gov/fw/p/program-office", "timestamp": "2026-07-21" } ],
-      "note": "an authority attestation exists in the bundle, but it does not cover this Tailoring — no proof, no claim (cross-origin id), consumer duties apply" },
-    { "name": "mixed-origin-selects-block-the-claim",
-      "expected-tier": "consumer", "expected": "valid",
-      "objects": [
-        { "id": "https://ns.auth.gov/fw/req/1", "version": "1", "lifecycle": "active", "statements": [ { "id": "s1", "modality": "should", "obligated-parties": ["https://ns.auth.gov/fw/p/o"], "prose": { "en": "X." } } ] },
-        { "id": "https://ns.auth.gov/fw/set/base", "version": "1", "lifecycle": "active", "members": [ { "ref": "https://ns.auth.gov/fw/req/1", "sequence": 10 } ] },
-        { "id": "https://ns.other.org/cat/set/extra", "version": "1", "lifecycle": "active", "members": [ { "ref": "https://ns.auth.gov/fw/req/1", "sequence": 10 } ] },
-        { "id": "https://ns.auth.gov/fw/tailoring/combo", "version": "1", "lifecycle": "active",
-          "selects": [ { "set-ref": "https://ns.auth.gov/fw/set/base" }, { "set-ref": "https://ns.other.org/cat/set/extra" } ],
-          "operations": [ { "op": "set-modality", "requirement-ref": "https://ns.auth.gov/fw/req/1", "statement-id": "s1", "modality": "must" } ] } ],
-      "note": "tailoring across two authorities' content is consumer work by definition — even under the first authority's own prefix; the tightening op stays legal" },
-    { "name": "predicate-select-blocks-the-claim",
-      "expected-tier": "consumer", "expected": "valid",
-      "objects": [
-        { "id": "https://ns.auth.gov/fw/req/1", "version": "1", "lifecycle": "active", "statements": [ { "id": "s1", "modality": "should", "obligated-parties": ["https://ns.auth.gov/fw/p/o"], "prose": { "en": "X." } } ] },
-        { "id": "https://ns.auth.gov/fw/tailoring/query", "version": "1", "lifecycle": "active",
-          "selects": [ { "predicate": { "facet-equals": ["x", "y"] } } ],
-          "operations": [ { "op": "set-modality", "requirement-ref": "https://ns.auth.gov/fw/req/1", "statement-id": "s1", "modality": "must" } ] } ],
-      "note": "a predicate names no owner — nothing to claim against" },
-    { "name": "consumer-monotone-needs-nothing",
-      "expected-tier": "consumer", "expected": "valid",
-      "objects": [
-        { "id": "https://ns.auth.gov/fw/req/1", "version": "1", "lifecycle": "active", "statements": [ { "id": "s1", "modality": "should", "obligated-parties": ["https://ns.auth.gov/fw/p/o"], "prose": { "en": "X." } } ] },
-        { "id": "https://ns.auth.gov/fw/set/base", "version": "1", "lifecycle": "active", "members": [ { "ref": "https://ns.auth.gov/fw/req/1", "sequence": 10 } ] },
-        { "id": "https://my.company.example/tailoring/hardened", "version": "1", "lifecycle": "active",
-          "selects": [ { "set-ref": "https://ns.auth.gov/fw/set/base" } ],
-          "operations": [ { "op": "set-modality", "requirement-ref": "https://ns.auth.gov/fw/req/1", "statement-id": "s1", "modality": "must" } ] } ],
-      "note": "upward along the lattice is free at every tier — the everyday hardening of every elevated baseline" }
-  ]
+ "description": "Tier anchor derivation (backlog #19, layered — D13 rev 2). The tier is DERIVED from data, never stipulated: (1) authority-CLAIMED iff the Tailoring's id URI origin equals the single origin of ALL selected Sets' ids (predicate selects or mixed origins block the claim); (2) authority-PROVEN iff additionally an in-bundle Attestation whose signer shares the selected content's origin lists the Tailoring among its subjects with a verifying semantic digest — proof can also rescue a cross-origin id; (3) otherwise consumer. Deviation duties (B.1.6, D13 table) bind at consumer tier only; claimed and proven are reported distinctly so a consumer can always see whether authority is claimed or cryptographically shown.",
+ "vectors": [
+  {
+   "name": "same-origin-claim-easing-legal",
+   "expected-tier": "authority-claimed",
+   "expected": "valid",
+   "objects": [
+    {
+     "id": "https://ns.auth.gov/fw/req/1",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "must",
+       "obligated-parties": [
+        "https://ns.auth.gov/fw/p/o"
+       ],
+       "prose": {
+        "en": "X."
+       }
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/set/base",
+     "version": "1",
+     "lifecycle": "active",
+     "members": [
+      {
+       "ref": "https://ns.auth.gov/fw/req/1",
+       "sequence": 10
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/tailoring/class-b",
+     "version": "1",
+     "lifecycle": "active",
+     "selects": [
+      {
+       "set-ref": "https://ns.auth.gov/fw/set/base"
+      }
+     ],
+     "operations": [
+      {
+       "op": "set-modality",
+       "requirement-ref": "https://ns.auth.gov/fw/req/1",
+       "statement-id": "s1",
+       "modality": "should"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "cross-origin-easing-without-deviation-fails",
+   "expected-tier": "consumer",
+   "expected": "invalid",
+   "objects": [
+    {
+     "id": "https://ns.auth.gov/fw/req/1",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "must",
+       "obligated-parties": [
+        "https://ns.auth.gov/fw/p/o"
+       ],
+       "prose": {
+        "en": "X."
+       }
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/set/base",
+     "version": "1",
+     "lifecycle": "active",
+     "members": [
+      {
+       "ref": "https://ns.auth.gov/fw/req/1",
+       "sequence": 10
+      }
+     ]
+    },
+    {
+     "id": "https://my.company.example/tailoring/relaxed",
+     "version": "1",
+     "lifecycle": "active",
+     "selects": [
+      {
+       "set-ref": "https://ns.auth.gov/fw/set/base"
+      }
+     ],
+     "operations": [
+      {
+       "op": "set-modality",
+       "requirement-ref": "https://ns.auth.gov/fw/req/1",
+       "statement-id": "s1",
+       "modality": "should"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "cross-origin-easing-with-deviation-legal",
+   "expected-tier": "consumer",
+   "expected": "valid",
+   "objects": [
+    {
+     "id": "https://ns.auth.gov/fw/req/1",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "must",
+       "obligated-parties": [
+        "https://ns.auth.gov/fw/p/o"
+       ],
+       "prose": {
+        "en": "X."
+       }
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/set/base",
+     "version": "1",
+     "lifecycle": "active",
+     "members": [
+      {
+       "ref": "https://ns.auth.gov/fw/req/1",
+       "sequence": 10
+      }
+     ]
+    },
+    {
+     "id": "https://my.company.example/tailoring/relaxed",
+     "version": "1",
+     "lifecycle": "active",
+     "selects": [
+      {
+       "set-ref": "https://ns.auth.gov/fw/set/base"
+      }
+     ],
+     "operations": [
+      {
+       "op": "set-modality",
+       "requirement-ref": "https://ns.auth.gov/fw/req/1",
+       "statement-id": "s1",
+       "modality": "should",
+       "deviation": {
+        "type": "risk-adjustment",
+        "state": "approved",
+        "rationale": "compensating control",
+        "approver-ref": "https://my.company.example/p/ciso",
+        "opened": "2026-07-21"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "attestation-proves-cross-origin-authority",
+   "expected-tier": "authority-proven",
+   "expected": "valid",
+   "objects": [
+    {
+     "id": "https://ns.auth.gov/fw/req/1",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "must",
+       "obligated-parties": [
+        "https://ns.auth.gov/fw/p/o"
+       ],
+       "prose": {
+        "en": "X."
+       }
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/set/base",
+     "version": "1",
+     "lifecycle": "active",
+     "members": [
+      {
+       "ref": "https://ns.auth.gov/fw/req/1",
+       "sequence": 10
+      }
+     ]
+    },
+    {
+     "id": "https://contractor.example/tailoring/official-class-b",
+     "version": "1",
+     "lifecycle": "active",
+     "selects": [
+      {
+       "set-ref": "https://ns.auth.gov/fw/set/base"
+      }
+     ],
+     "operations": [
+      {
+       "op": "set-modality",
+       "requirement-ref": "https://ns.auth.gov/fw/req/1",
+       "statement-id": "s1",
+       "modality": "should"
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/att/blessing",
+     "version": "1",
+     "lifecycle": "active",
+     "subject-semantic-digests": [
+      {
+       "id": "https://contractor.example/tailoring/official-class-b",
+       "semantic-digest": "COMPUTE"
+      }
+     ],
+     "content-manifest-digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+     "signer": "https://ns.auth.gov/fw/p/program-office",
+     "timestamp": "2026-07-21"
+    }
+   ],
+   "note": "the authority signing a Tailoring it did not mint = proof beats prefix; the signer origin matches the SELECTED content, and the subject digest verifies"
+  },
+  {
+   "name": "attestation-over-wrong-subject-does-not-prove",
+   "expected-tier": "consumer",
+   "expected": "invalid",
+   "objects": [
+    {
+     "id": "https://ns.auth.gov/fw/req/1",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "must",
+       "obligated-parties": [
+        "https://ns.auth.gov/fw/p/o"
+       ],
+       "prose": {
+        "en": "X."
+       }
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/set/base",
+     "version": "1",
+     "lifecycle": "active",
+     "members": [
+      {
+       "ref": "https://ns.auth.gov/fw/req/1",
+       "sequence": 10
+      }
+     ]
+    },
+    {
+     "id": "https://contractor.example/tailoring/relaxed",
+     "version": "1",
+     "lifecycle": "active",
+     "selects": [
+      {
+       "set-ref": "https://ns.auth.gov/fw/set/base"
+      }
+     ],
+     "operations": [
+      {
+       "op": "set-modality",
+       "requirement-ref": "https://ns.auth.gov/fw/req/1",
+       "statement-id": "s1",
+       "modality": "should"
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/att/other",
+     "version": "1",
+     "lifecycle": "active",
+     "subject-semantic-digests": [
+      {
+       "id": "https://ns.auth.gov/fw/req/1",
+       "semantic-digest": "COMPUTE"
+      }
+     ],
+     "content-manifest-digest": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+     "signer": "https://ns.auth.gov/fw/p/program-office",
+     "timestamp": "2026-07-21"
+    }
+   ],
+   "note": "an authority attestation exists in the bundle, but it does not cover this Tailoring — no proof, no claim (cross-origin id), consumer duties apply"
+  },
+  {
+   "name": "mixed-origin-content-blocks-the-claim",
+   "expected-tier": "consumer",
+   "expected": "valid",
+   "objects": [
+    {
+     "id": "https://ns.auth.gov/fw/req/1",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "should",
+       "obligated-parties": [
+        "https://ns.auth.gov/fw/p/o"
+       ],
+       "prose": {
+        "en": "X."
+       }
+      }
+     ]
+    },
+    {
+     "id": "https://ns.other.org/cat/req/9",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "should",
+       "obligated-parties": [
+        "https://ns.other.org/cat/p/o"
+       ],
+       "prose": {
+        "en": "Y."
+       }
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/set/base",
+     "version": "1",
+     "lifecycle": "active",
+     "members": [
+      {
+       "ref": "https://ns.auth.gov/fw/req/1",
+       "sequence": 10
+      }
+     ]
+    },
+    {
+     "id": "https://ns.other.org/cat/set/extra",
+     "version": "1",
+     "lifecycle": "active",
+     "members": [
+      {
+       "ref": "https://ns.other.org/cat/req/9",
+       "sequence": 10
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/tailoring/combo",
+     "version": "1",
+     "lifecycle": "active",
+     "selects": [
+      {
+       "set-ref": "https://ns.auth.gov/fw/set/base"
+      },
+      {
+       "set-ref": "https://ns.other.org/cat/set/extra"
+      }
+     ],
+     "operations": [
+      {
+       "op": "set-modality",
+       "requirement-ref": "https://ns.auth.gov/fw/req/1",
+       "statement-id": "s1",
+       "modality": "must"
+      }
+     ]
+    }
+   ],
+   "note": "tailoring across two authorities' CONTENT is consumer work by definition - even under the first authority's own prefix; the tightening op stays legal. Revised at gate 3 (D13 rev 4): origin resolves through Set MEMBERS, so the foreign set now carries genuinely foreign content (the old data wrapped same-origin content in a foreign Set, which the revised rule correctly treats as the first authority's own)."
+  },
+  {
+   "name": "predicate-select-blocks-the-claim",
+   "expected-tier": "consumer",
+   "expected": "valid",
+   "objects": [
+    {
+     "id": "https://ns.auth.gov/fw/req/1",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "should",
+       "obligated-parties": [
+        "https://ns.auth.gov/fw/p/o"
+       ],
+       "prose": {
+        "en": "X."
+       }
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/tailoring/query",
+     "version": "1",
+     "lifecycle": "active",
+     "selects": [
+      {
+       "predicate": {
+        "facet-equals": [
+         "x",
+         "y"
+        ]
+       }
+      }
+     ],
+     "operations": [
+      {
+       "op": "set-modality",
+       "requirement-ref": "https://ns.auth.gov/fw/req/1",
+       "statement-id": "s1",
+       "modality": "must"
+      }
+     ]
+    }
+   ],
+   "note": "a predicate names no owner — nothing to claim against"
+  },
+  {
+   "name": "consumer-monotone-needs-nothing",
+   "expected-tier": "consumer",
+   "expected": "valid",
+   "objects": [
+    {
+     "id": "https://ns.auth.gov/fw/req/1",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "should",
+       "obligated-parties": [
+        "https://ns.auth.gov/fw/p/o"
+       ],
+       "prose": {
+        "en": "X."
+       }
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/set/base",
+     "version": "1",
+     "lifecycle": "active",
+     "members": [
+      {
+       "ref": "https://ns.auth.gov/fw/req/1",
+       "sequence": 10
+      }
+     ]
+    },
+    {
+     "id": "https://my.company.example/tailoring/hardened",
+     "version": "1",
+     "lifecycle": "active",
+     "selects": [
+      {
+       "set-ref": "https://ns.auth.gov/fw/set/base"
+      }
+     ],
+     "operations": [
+      {
+       "op": "set-modality",
+       "requirement-ref": "https://ns.auth.gov/fw/req/1",
+       "statement-id": "s1",
+       "modality": "must"
+      }
+     ]
+    }
+   ],
+   "note": "upward along the lattice is free at every tier — the everyday hardening of every elevated baseline"
+  },
+  {
+   "name": "wrapper-set-does-not-launder-origin",
+   "note": "gate-3 finding (CR26 rev5-odp-overlay): a tailoring authority minting its OWN Set around FOREIGN requirements must derive consumer, not authority-claimed - content origin resolves through Set members and op targets, not the wrapper's id.",
+   "expected-tier": "consumer",
+   "expected": "valid",
+   "objects": [
+    {
+     "id": "https://ns.content.gov/fw/req/1",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "should",
+       "obligated-parties": [
+        "https://ns.content.gov/fw/p/o"
+       ],
+       "prose": {
+        "en": "X."
+       }
+      }
+     ]
+    },
+    {
+     "id": "https://ns.wrapper.example/set/rewrap",
+     "version": "1",
+     "lifecycle": "active",
+     "members": [
+      {
+       "ref": "https://ns.content.gov/fw/req/1",
+       "sequence": 10
+      }
+     ]
+    },
+    {
+     "id": "https://ns.wrapper.example/tailoring/overlay",
+     "version": "1",
+     "lifecycle": "active",
+     "selects": [
+      {
+       "set-ref": "https://ns.wrapper.example/set/rewrap"
+      }
+     ],
+     "operations": [
+      {
+       "op": "set-modality",
+       "requirement-ref": "https://ns.content.gov/fw/req/1",
+       "statement-id": "s1",
+       "modality": "must"
+      }
+     ]
+    }
+   ]
+  }
+ ]
 }
