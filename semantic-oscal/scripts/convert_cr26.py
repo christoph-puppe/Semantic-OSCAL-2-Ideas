@@ -67,6 +67,7 @@ RULES=[
  (r"^cr26\.FRR\.\*\.info\.(name|short_name|status)$","L1","family Set: title/label/lifecycle"),
  (r"^cr26\.FRR\.\*\.info\.web_name$","L1","family Set annotations.web_name (chrome)"),
  (r"^cr26\.FRR\.\*\.info\.(purpose|tag)$","L1","family Set: narrative description / scope tag"),
+ (r"^cr26\.FRR\.\*\.info\.(20x|rev5)\.subsets\.","L1","framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153]"),
  (r"^cr26\.FRR\.\*\.info\.(effective|20x|rev5)\.","L1","effectivity@1 on family Set (default / per-track)"),
  (r"^cr26\.FRR\.\*\.info\.flows\[\]","declared-drop","process-flow diagrams: linked resources, not requirement data (D17)"),
  (r"^cr26\.FRR\.\*\.info\.subsets\.\*\.(name|description)$","L1","subset Set: title / narrative description"),
@@ -112,6 +113,16 @@ def tf_param(num,typ):
     if t=="calendar-period": p["calendar-ref"]=f"{NS}/calendar/us-federal"
     return p,t
 
+TERMIDX={}
+for _tid,_t in d["FRD"]["data"]["all"].items():
+    for _n in [_t["term"]]+list(_t.get("alts",[]) or []):
+        TERMIDX.setdefault(_n.lower().strip(),_tid)
+def term_ref(name):
+    tid=TERMIDX.get(name.lower().strip())
+    if tid: return f"{NS}/term/{tid}"
+    counters["unresolved-terms"]+=1
+    return f"{NS}/term/{slug(name)}"
+
 class_tailorings={c:{"id":f"{NS}/tailoring/class-{c}","version":VER,"lifecycle":"active",
     "label":f"Class {c.upper()}","title":f"Class {c.upper()} certification variant",
     "selects":[{"set-ref":f"{NS}/set/class/{c}"}],"operations":[]} for c in "abcd"}
@@ -137,7 +148,7 @@ def convert_rule(fam,subk,rid,r):
     if "timeframe_num" in r:
         p,base_tf=tf_param(r["timeframe_num"],r["timeframe_type"]); st["parameters"]=[p]
     req["statements"].append(st)
-    rels=[{"type":"uses-term","ref":f"{NS}/term/{t}"} for t in r.get("terms",[])]
+    rels=[{"type":"uses-term","ref":term_ref(t)} for t in r.get("terms",[])]
     for rl in r.get("related",[]) or []:
         if re.match(r"^[A-Z]{2,4}-[A-Z]{2,4}-[A-Z0-9]{2,4}$",rl):
             rels.append({"type":"related","ref":f"{NS}/req/{rl}"})
@@ -186,7 +197,9 @@ def convert_rule(fam,subk,rid,r):
                 T.append(op); ops_emitted["set-modality"]+=1
             if "timeframe_num" in v:
                 _,vt=tf_param(v["timeframe_num"],v["timeframe_type"])
-                if base_tf==vt:
+                if base_tf is None:
+                    counters["timeframe-variant-only"]+=1
+                elif base_tf==vt:
                     T.append({"op":"set-parameter","requirement-ref":uri,"statement-id":"s1",
                               "parameter":"timeframe",
                               "value":{"type":vt,"num":v["timeframe_num"],"unit":v["timeframe_type"]}})
@@ -206,7 +219,7 @@ def convert_ksi(catid,cat,iid,ind):
          "title":ind.get("name",iid),
          "statements":[{"id":"s1","modality":"unspecified",
              "obligated-parties":[f"{NS}/party/provider"],"prose":{"en":prose}}]}
-    rels=[{"type":"uses-term","ref":f"{NS}/term/{t}"} for t in ind.get("terms",[])]
+    rels=[{"type":"uses-term","ref":term_ref(t)} for t in ind.get("terms",[])]
     if rels: req["relations"]=rels
     if ind.get("varies_by_class"):
         req["facets"]={F_COMPAT:{"class-variants":ind["varies_by_class"]}}
@@ -230,30 +243,54 @@ class_members=collections.defaultdict(list); type_members=collections.defaultdic
 fam_entries=[]
 for fk,f in d["FRR"].items():
     fi=f["info"]; sub_entries=[]
-    declared=fi.get("subsets",{})
-    all_sks=list(dict.fromkeys(list(declared)+[sk for tv in f["data"].values() for sk in tv]))
+    common=fi.get("subsets",{})
+    # FedRAMP layering (global by default, specific when needed): framework-
+    # specific subsets are declared in info.20x.subsets / info.rev5.subsets.
+    # Corrected after review in FedRAMP community discussion #153.
+    track_decl={trk:((fi.get(trk) or {}).get("subsets") or {}) for trk in ("20x","rev5")}
+    all_sks=list(dict.fromkeys(list(common)
+        +[sk for td in track_decl.values() for sk in td]
+        +[sk for tv in f["data"].values() for sk in tv]))
     for sk in all_sks:
-        sinfo=declared.get(sk,{})
-        if sk not in declared: counters["undeclared-subsets"]+=1
-        suri=f"{NS}/set/subset/{slug(fk)}-{slug(sk)}"
+        sinfo=common.get(sk)
+        t_infos={trk:td[sk] for trk,td in track_decl.items() if sk in td}
+        if t_infos and sinfo is None:
+            counters["track-declared-subsets"]+=len(t_infos)
         members=[]
         for rid,r in f["data"].get("all",{}).get(sk,{}).items():
             members.append({"ref":convert_rule(fk,sk,rid,r),"sequence":nseq()})
-        track_uris=[]
+        track_set_uris=[]
         for trk in ("20x","rev5"):
             tr_rules=f["data"].get(trk,{}).get(sk,{})
             if not tr_rules: continue
+            tinfo=t_infos.get(trk,{})
             turi=f"{NS}/set/subset/{slug(fk)}-{slug(sk)}-{trk}"
             tmem=[{"ref":convert_rule(fk,sk,rid,r),"sequence":(i+1)*10}
                   for i,(rid,r) in enumerate(tr_rules.items())]
-            objects[f"objects/set/subset-{slug(fk)}-{slug(sk)}-{trk}.json"]={
-                "id":turi,"version":VER,"lifecycle":"active",
-                "title":f"{sinfo.get('name',sk)} ({trk}-specific)","label":f"{sk}-{trk}",
+            tset={"id":turi,"version":VER,"lifecycle":"active",
+                "title":tinfo.get("name", f"{(sinfo or {}).get('name',sk)} ({trk}-specific)"),
+                "label":sk if tinfo else f"{sk}-{trk}",
                 "members":tmem}
-            members.append({"ref":turi,"sequence":nseq()})
+            tap=tinfo.get("applicability",{})
+            if tinfo.get("description"):
+                tset.setdefault("facets",{}).setdefault(F_NARR,{})["description"]=tinfo["description"]
+            if tap: tset.setdefault("facets",{})[F_SCOPE]=dict(tap)
+            objects[f"objects/set/subset-{slug(fk)}-{slug(sk)}-{trk}.json"]=tset
+            track_set_uris.append(turi)
             type_members[slug(trk)].append(turi)
+            for c in tap.get("classes",[]) or []: class_members[c.lower()].append(turi)
             counters[f"track-rules-{trk}"]+=len(tmem)
+        if sinfo is None and track_set_uris and not members:
+            # purely framework-specific subset: the track Sets stand alone,
+            # attached directly to the family - no synthetic parent Set
+            for turi in track_set_uris:
+                sub_entries.append({"ref":turi,"sequence":nseq()})
+            continue
+        for turi in track_set_uris:
+            members.append({"ref":turi,"sequence":nseq()})
         if not members: counters["empty-subsets"]+=1; continue
+        suri=f"{NS}/set/subset/{slug(fk)}-{slug(sk)}"
+        sinfo=sinfo or {}
         sobj={"id":suri,"version":VER,"lifecycle":"active",
               "title":sinfo.get("name",sk),"label":sk,"members":members}
         ap=sinfo.get("applicability",{})
@@ -388,7 +425,7 @@ md=[f"# CR26 -> Semantic Core: Coverage Report (computed)\n",
  f"and composed **class Sets (a-d)** and **type Sets (20x/Rev5)** - sets-of-sets (D21).",
  f"- **timeframe_num/type -> statement parameter** 'timeframe' (elapsed vs calendar split; calendar-ref minted; "
  f"tightening: lower). Class variants: set-parameter when unit-class matches; "
- f"**unit-class crossings x{counters.get('timeframe-unitclass-crossings',0)}** stay in the L2 class-variants payload "
+ f"**true unit-class crossings x{counters.get('timeframe-unitclass-crossings',0)}** (base-absent variant timeframes x{counters.get('timeframe-variant-only',0)} counted separately) stay in the L2 class-variants payload "
  f"- spec-feedback: candidate D9 duration-union question.",
  f"- **varies_by_class** preserved in full as L2 `class-variants` payloads on {counters.get('class-variant-rules',0)} rules "
  f"(+{counters.get('ksi-class-variant',0)} KSIs); computable deltas additionally emitted as ops. "
@@ -398,6 +435,7 @@ md=[f"# CR26 -> Semantic Core: Coverage Report (computed)\n",
  f"- **FRD -> terminology@1** hosted on the corpus root Set (glossary-info carries the FRD block metadata): 75 terms, {counters.get('term-alts',0)} aliases, links and chrome flags in-payload.",
  f"- **notification/following_information -> reporting-obligation@1**; artifacts.all -> assessment-criteria@1; "
  f"note/notes/danger/examples/corrective_actions -> narrative@1.",
+ f"- **rule/KSI term names resolved to FRD ids** via the term+alias index (unresolved x{counters.get('unresolved-terms',0)} kept as slugs, counted).",
  f"- **updated[] -> L0** (entries counted: {counters.get('updated-entries',0)}; values not object-carried).",
  f"- **CTL Rev5 overlay ({counters.get('ctl-overlays',0)} entries) parked L2** on /set/ctl-overlay: external-catalog "
  f"ODP assignments need the NIST catalog's statement map - resolves at gate item 3.",
@@ -405,8 +443,10 @@ md=[f"# CR26 -> Semantic Core: Coverage Report (computed)\n",
  "## Findings (computed)\n",
  f"- **Census, layered:** rules = **246** = 225 track-independent (data.all) + 12 rev5-only + 9 20x-only. "
  f"Rule-level force totals {dict(mod_hist)}; the census's 328 merged rule-level and class-variant forces.",
- f"- **Undeclared subsets x{counters.get('undeclared-subsets',0)}** (CSX/CSF appear in data but not in info.subsets) "
- f"- a source finding for the FedRAMP data team; converter synthesizes their Sets, flagged.",
+ f"- **Framework-specific subsets x{counters.get('track-declared-subsets',0)}** (CSX/CSF) read from info.20x.subsets / "
+ f"info.rev5.subsets per FedRAMP's layering (global by default, specific when needed). CORRECTION: an earlier "
+ f"version of this report misreported these as undeclared - a checker bug on our side, fixed after review in "
+ f"FedRAMP community discussion #153.",
  f"- **Zero easings across {sum(ops_emitted.values())} class-variant modality ops**: every published class delta tightens "
  f"or specifies - the Deviation channel stayed empty by measurement, not by assumption.",
  f"- Rules without base statements exist (x{synth_prose}) - CR26 itself models some obligations *only* as class "

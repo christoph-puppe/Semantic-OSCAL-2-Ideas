@@ -6,17 +6,18 @@ Source: **FedRAMP Consolidated Rules for 2026** v2026.07.14.01 (bespoke JSON; no
 
 - Source leaf values inventoried (id-normalized paths): **7,294**
 - Mapped: **7,294** -> **UNMAPPED: 0** -> coverage **100.0 %**
-- Emitted: **292 Requirements** (FRR rules + KSIs), **373 Mapping objects**, **100 Sets** (families, subsets, classes, types, KSI categories, terms, root), **4 class Tailorings**, manifest with both digests, 7 pinned stubs.
+- Emitted: **292 Requirements** (FRR rules + KSIs), **373 Mapping objects**, **91 Sets** (families, subsets, classes, types, KSI categories, terms, root), **4 class Tailorings**, manifest with both digests, 7 pinned stubs.
 
 ## Conversion rules (declared, counted)
 
 - **force -> modality** (rule level): must x136, should x45, unspecified x29, may x20, must-not x11, should-not x5. Class-variant forces become **Tailoring ops**: {'set-modality': 111}; easings auto-carry a converter Deviation (approver: FedRAMP, rationale: published class variant) x0.
 - **affects[] -> obligated-parties[]** (parties minted as codes); subset applicability -> scope@1 on subset Sets and composed **class Sets (a-d)** and **type Sets (20x/Rev5)** - sets-of-sets (D21).
-- **timeframe_num/type -> statement parameter** 'timeframe' (elapsed vs calendar split; calendar-ref minted; tightening: lower). Class variants: set-parameter when unit-class matches; **unit-class crossings x51** stay in the L2 class-variants payload - spec-feedback: candidate D9 duration-union question.
+- **timeframe_num/type -> statement parameter** 'timeframe' (elapsed vs calendar split; calendar-ref minted; tightening: lower). Class variants: set-parameter when unit-class matches; **true unit-class crossings x0** (base-absent variant timeframes x51 counted separately) stay in the L2 class-variants payload - spec-feedback: candidate D9 duration-union question.
 - **varies_by_class** preserved in full as L2 `class-variants` payloads on 29 rules (+5 KSIs); computable deltas additionally emitted as ops. Variant-only rules (no base statement): synthesized base prose x29 (flagged).
 - **KSI control lists -> 373 Mapping objects** (relationship `supports`, confidence `draft`, rationale per handbook 8.6 untyped-import rule; targets minted under https://ns.nist.gov/sp800-53/req/).
 - **FRD -> terminology@1** hosted on the corpus root Set (glossary-info carries the FRD block metadata): 75 terms, 188 aliases, links and chrome flags in-payload.
 - **notification/following_information -> reporting-obligation@1**; artifacts.all -> assessment-criteria@1; note/notes/danger/examples/corrective_actions -> narrative@1.
+- **rule/KSI term names resolved to FRD ids** via the term+alias index (unresolved x0 kept as slugs, counted).
 - **updated[] -> L0** (entries counted: 377; values not object-carried).
 - **CTL Rev5 overlay (79 entries) parked L2** on /set/ctl-overlay: external-catalog ODP assignments need the NIST catalog's statement map - resolves at gate item 3.
 - **flows dropped-declared** x1 (D17); dangling related refs x0.
@@ -24,7 +25,7 @@ Source: **FedRAMP Consolidated Rules for 2026** v2026.07.14.01 (bespoke JSON; no
 ## Findings (computed)
 
 - **Census, layered:** rules = **246** = 225 track-independent (data.all) + 12 rev5-only + 9 20x-only. Rule-level force totals {'must': 136, 'may': 20, 'should': 45, 'must-not': 11, 'should-not': 5, 'unspecified': 29}; the census's 328 merged rule-level and class-variant forces.
-- **Undeclared subsets x9** (CSX/CSF appear in data but not in info.subsets) - a source finding for the FedRAMP data team; converter synthesizes their Sets, flagged.
+- **Framework-specific subsets x9** (CSX/CSF) read from info.20x.subsets / info.rev5.subsets per FedRAMP's layering (global by default, specific when needed). CORRECTION: an earlier version of this report misreported these as undeclared - a checker bug on our side, fixed after review in FedRAMP community discussion #153.
 - **Zero easings across 111 class-variant modality ops**: every published class delta tightens or specifies - the Deviation channel stayed empty by measurement, not by assumption.
 - Rules without base statements exist (x29) - CR26 itself models some obligations *only* as class variants; the Set+Tailoring decomposition makes that explicit.
 - **Deviation ceremony question (spec feedback):** authority-published prose variants would require replace-prose(substantive)+Deviation under D13; converter parks prose variance in L2 instead - open design question for v0.6.
@@ -204,12 +205,12 @@ Source: **FedRAMP Consolidated Rules for 2026** v2026.07.14.01 (bespoke JSON; no
 | `cr26.FRR.*.info.20x.effective.date.obtain` | 10 | L1 | effectivity@1 on family Set (default / per-track) |
 | `cr26.FRR.*.info.20x.effective.date.optional_adoption` | 10 | L1 | effectivity@1 on family Set (default / per-track) |
 | `cr26.FRR.*.info.20x.effective.is` | 10 | L1 | effectivity@1 on family Set (default / per-track) |
-| `cr26.FRR.*.info.20x.subsets.*.applicability.affects[]` | 4 | L1 | effectivity@1 on family Set (default / per-track) |
-| `cr26.FRR.*.info.20x.subsets.*.applicability.classes[]` | 13 | L1 | effectivity@1 on family Set (default / per-track) |
-| `cr26.FRR.*.info.20x.subsets.*.applicability.paths[]` | 4 | L1 | effectivity@1 on family Set (default / per-track) |
-| `cr26.FRR.*.info.20x.subsets.*.applicability.types[]` | 4 | L1 | effectivity@1 on family Set (default / per-track) |
-| `cr26.FRR.*.info.20x.subsets.*.description` | 4 | L1 | effectivity@1 on family Set (default / per-track) |
-| `cr26.FRR.*.info.20x.subsets.*.name` | 4 | L1 | effectivity@1 on family Set (default / per-track) |
+| `cr26.FRR.*.info.20x.subsets.*.applicability.affects[]` | 4 | L1 | framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153] |
+| `cr26.FRR.*.info.20x.subsets.*.applicability.classes[]` | 13 | L1 | framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153] |
+| `cr26.FRR.*.info.20x.subsets.*.applicability.paths[]` | 4 | L1 | framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153] |
+| `cr26.FRR.*.info.20x.subsets.*.applicability.types[]` | 4 | L1 | framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153] |
+| `cr26.FRR.*.info.20x.subsets.*.description` | 4 | L1 | framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153] |
+| `cr26.FRR.*.info.20x.subsets.*.name` | 4 | L1 | framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153] |
 | `cr26.FRR.*.info.effective.current_status` | 7 | L1 | effectivity@1 on family Set (default / per-track) |
 | `cr26.FRR.*.info.effective.date.grace.default` | 7 | L1 | effectivity@1 on family Set (default / per-track) |
 | `cr26.FRR.*.info.effective.date.grace.until_next_assessment` | 7 | L1 | effectivity@1 on family Set (default / per-track) |
@@ -239,12 +240,12 @@ Source: **FedRAMP Consolidated Rules for 2026** v2026.07.14.01 (bespoke JSON; no
 | `cr26.FRR.*.info.rev5.effective.date.obtain` | 10 | L1 | effectivity@1 on family Set (default / per-track) |
 | `cr26.FRR.*.info.rev5.effective.date.optional_adoption` | 10 | L1 | effectivity@1 on family Set (default / per-track) |
 | `cr26.FRR.*.info.rev5.effective.is` | 10 | L1 | effectivity@1 on family Set (default / per-track) |
-| `cr26.FRR.*.info.rev5.subsets.*.applicability.affects[]` | 5 | L1 | effectivity@1 on family Set (default / per-track) |
-| `cr26.FRR.*.info.rev5.subsets.*.applicability.classes[]` | 16 | L1 | effectivity@1 on family Set (default / per-track) |
-| `cr26.FRR.*.info.rev5.subsets.*.applicability.paths[]` | 10 | L1 | effectivity@1 on family Set (default / per-track) |
-| `cr26.FRR.*.info.rev5.subsets.*.applicability.types[]` | 5 | L1 | effectivity@1 on family Set (default / per-track) |
-| `cr26.FRR.*.info.rev5.subsets.*.description` | 5 | L1 | effectivity@1 on family Set (default / per-track) |
-| `cr26.FRR.*.info.rev5.subsets.*.name` | 5 | L1 | effectivity@1 on family Set (default / per-track) |
+| `cr26.FRR.*.info.rev5.subsets.*.applicability.affects[]` | 5 | L1 | framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153] |
+| `cr26.FRR.*.info.rev5.subsets.*.applicability.classes[]` | 16 | L1 | framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153] |
+| `cr26.FRR.*.info.rev5.subsets.*.applicability.paths[]` | 10 | L1 | framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153] |
+| `cr26.FRR.*.info.rev5.subsets.*.applicability.types[]` | 5 | L1 | framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153] |
+| `cr26.FRR.*.info.rev5.subsets.*.description` | 5 | L1 | framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153] |
+| `cr26.FRR.*.info.rev5.subsets.*.name` | 5 | L1 | framework-specific subset declarations -> track subset Sets (title/description/scope) [corrected per FedRAMP #153] |
 | `cr26.FRR.*.info.short_name` | 17 | L1 | family Set: title/label/lifecycle |
 | `cr26.FRR.*.info.status` | 17 | L1 | family Set: title/label/lifecycle |
 | `cr26.FRR.*.info.subsets.*.applicability.affects[]` | 45 | L1 | scope@1 on subset Set (types/paths/classes/affects) + class & type Set composition |
