@@ -406,7 +406,12 @@ blocks the claim, because tailoring across authorities' content is
 consumer work by definition; (2) **authority-proven** iff additionally
 (or instead — proof beats prefix) an in-bundle Attestation whose signer
 shares the selected content's origin lists the Tailoring among its
-subjects with a verifying semantic digest; (3) otherwise **consumer**.
+subjects with a verifying semantic digest — and, **in verification mode
+(gate 4, #24: trusted keys supplied), iff that Attestation's DSSE
+envelope verifies**; an unsigned attestation proves nothing to a
+verifying consumer, and a validator without keys reports the digest
+match as UNVERIFIED rather than granting proof; (3) otherwise
+**consumer**.
 Duties bind at consumer tier only; conformant tools report claimed and
 proven distinctly, because a prefix is an honest-publisher signal while
 a signature is evidence — the same layering as the two digest domains.
@@ -838,6 +843,46 @@ item, two reference-validator defects found and fixed by the corpus:
 
 Conformance **125 → 129 vectors**. Corpus at HEAD: **11 bundles, 6,675
 manifest-listed objects** (recompute via `validate_core.py`).
+
+## IV.10 Gate 4 DELIVERED (2026-07-22) — engines + the two economic claims measured
+
+Same-day with gate 3 (plan `drafts/gate-4-plan.md`; measurement
+`drafts/gate-4-measurement.md`; register "Amendments — gate 4").
+Backlog **#18 and #24 closed**; conformance **129 → 149 vectors** in 12
+families (+ dsse 5 · composition 7 · conditional 8).
+
+- **DSSE verification engine (#24, D7-applied).** Ed25519 (RFC 8032)
+  dependency-free in both implementations; envelope payload = the
+  Attestation's canonical form, signature input = PAE per DSSE v1;
+  trusted keys are INPUT, never bundle content. Verification mode makes
+  `authority-proven` require a verifying envelope — the unsigned-
+  attestation forgery (P9c-1) is closed; structural mode reports
+  `UNVERIFIED` distinctly.
+- **Composition engine (D3.5-applied).** `--compose A B`: highest
+  pinned minor wins with BOTH payload sets re-validated; major clashes,
+  divergent twins, and cross-version collisions are reported errors,
+  never silent picks.
+- **`conditional-apply` engine (B.1.8-applied).** One B.2 predicate
+  trigger (the one-hop budget and the no-nesting rule enforced
+  structurally), one instantiated primitive, the normative FAIL format
+  vector-locked; unbound trigger params error instead of silently-false.
+- **Bidirectional export suite (IV.5.4).** 10/10 catalog bundles →
+  OSCAL 1.2.2 validated against the OFFICIAL NIST release schema;
+  generic re-import; round-trip **5,647/5,647 objects semantic-digest-
+  equal (100 %)**. Down-conversion is now *measured*. D16 asymmetries
+  measured on the way: groups cannot mix subgroups+controls; params
+  require label|select; NIST's own JSON schema needs `\p{}` regexes
+  beyond Python's stdlib.
+- **The weekend validator (IV.5.4).** `validate_core.ps1` — PowerShell
+  5.1, zero installs, the stock auditor's Windows box: **149/149
+  vectors** with full parity to the Python reference. Sizes (one
+  counter, non-blank non-comment): Python reference **938** lines +
+  jsonschema; PowerShell **1,110** lines + *nothing*; vs
+  **30,905 lines / 162 files** for compliance-trestle 4.2.0 (the OSCAL
+  1.x validator+resolver toolchain, tests excluded) — ~30× with the
+  crypto engines included. Authorship recorded honestly in R8: same
+  author + AI, independence limited to language/runtime; the
+  clean-room third-party build is the standing invitation.
 
 ---
 

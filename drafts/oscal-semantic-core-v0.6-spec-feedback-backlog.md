@@ -9,9 +9,7 @@ decision recorded in the register.
 | # | Item | Evidence | Proposed disposition | Source |
 |---|---|---|---|---|
 | 12 | **`text` primitive — DECIDED, adopt** *(author 2026-07-22; register "D9 rev 2").* `text` = `{BCP-47: string}` for all human-readable fields (`title` ×3,041, Mapping `rationale` ×373, action/capability descriptions, deviation rationale, facet free text); identifiers stay strings (`id`/`version`/codes/`label`). Generalizes the existing `langMap`. Payload harmonization **shipped for ISM + CR26** (2026-07-21). | **Rationale: EU standards must be available in all 27 official languages** (NIS2/DORA/CRA); the tagged-vs-bare inconsistency is already measured (converters disagreed) | Delivery — schema field-switch + all-converter reruns + full re-pin — **rides the converter rerun** (a transitional string-or-`text` schema MAY bridge); stays open until delivered | Review round 1, finding 3 |
-| 18 | **Conformance coverage — gate-4 remainder.** Delivered: facet fail-closed (7), reference-taxonomy (11 incl. #14 alias), lifecycle (36), tailoring (15 incl. #25 op-law), DSSE profile (`dsse-envelope@1`). **129 vectors at HEAD** (see #28; +4 at gate 3). **Remaining:** bundle-composition semver vectors (D3.5) and B.1.8 `conditional-apply` instantiation — both need the engines gate 4 builds. | P9-2 + P9b-7; delivery counted | Author the two remaining families with the gate-4 engines | P9 runs 1+2 |
 | 20 | **Relations: constrain extension types to URI shape** *(round-2 partial).* Done: D13 row aligned with B.3 (`remove-relation(required) ⇒ Deviation`); C.8 `supersedes` deleted (register "C.8 rev"). Remaining: the schema types relation `type` as any non-empty string, so a typo'd base code silently becomes a carried extension (P9b-4). **Blocked on the converter rerun** migrating the corpus's bare-word `sharpens` ×28 to a namespaced URI. | P9b-4; `sharpens` ×28 measured | After the rerun: constrain extension relation `type` to a URI shape (base codes ∪ URI) in the schema; add a vector | P9 run 2 |
-| 24 | **Tier: signature-verify the `authority-proven` layer** *(round-2 partial).* Done: the reference validator now reports each Tailoring's tier distinctly per spec:399 (register "D13 rev 3"). Remaining: `derive_tier` digest-matches an attestation without verifying its signature, so both authority tiers stay forgeable by a party minting under the content origin. | Demonstrated: `probe_tier.py` flips claimed→proven with a forged unsigned attestation | Verify the DSSE signature in the proven-tier check (gate-4 engine); add prefix-spoof + unsigned-attestation negative vectors | P9c run (2026-07-22), Major P9c-1 |
 | 26 | **Facet enforcement: ship real pinned schemas + pin-honoring** *(round-2 partial).* Decision recorded (register "D26"): stdlib strict, non-stdlib against the pin. Remaining: bundles pin permissive illustrative stubs (`additionalProperties` defaults `true`), so framework/compat payloads are under-validated and the reference validator diverges from a pin-honoring sealed tool. | Demonstrated: `cr26/scope` stub accepts a smuggled key; stubs are ILLUSTRATIVE | **Converter rerun** ships pinned schemas with `additionalProperties:false`; fix pin-vs-descriptor precedence | P9c run (2026-07-22), Major P9c-3 |
 
 **Closed 2026-07-21** (review round 1 decisions; register "Amendments —
@@ -74,12 +72,27 @@ nearest-Set = fewest membership hops, ties ⇒ Portable-tier error
 erratum applied (README + spec → 125; recompute via
 validate_core.py). Conformance grew 115 → **125 vectors**.
 **Partials (stay open above, narrowed):** #20 (schema URI-shape for
-`sharpens` awaits the converter rerun), #24 (signature verification of
-the proven tier awaits the gate-4 DSSE engine), #26 (real pinned
+`sharpens` awaits the converter rerun), #26 (real pinned
 schemas + pin-honoring await the converter rerun). **Still open (delivery pending):**
 #12 (`text` primitive — DECIDED 2026-07-22; delivery rides the
-converter rerun), #18 (gate 4). Numbering stays stable — closed numbers
+converter rerun). Numbering stays stable — closed numbers
 are not reused.
+
+**Closed 2026-07-22 (gate 4;** register "Amendments — gate 4" + spec
+IV.10): **#18** → both named vector families delivered WITH their
+engines — D3.5 composition (`--compose`, highest-minor resolve +
+re-validation, 7 vectors) and B.1.8 `conditional-apply` (one-predicate
+trigger, one instantiated primitive, normative FAIL format, 8 vectors);
+DSSE profile verification live · **#24** → signature verification live
+(Ed25519, dependency-free, both implementations): in verification mode
+(`--trusted-keys`) an unsigned attestation cannot prove — the P9c-1
+forgery closed; 5 dsse vectors. Also delivered against IV.5.4: the
+**bidirectional export suite** (10/10 catalog bundles → schema-valid
+OSCAL 1.2.2, round-trip **5,647/5,647 objects digest-equal**) and the
+**weekend-validator measurement** (`validate_core.ps1`, PowerShell 5.1,
+zero installs, 149/149 vectors; ~30× below compliance-trestle's LoC —
+see `drafts/gate-4-measurement.md`). Conformance 129 → **149 vectors**
+across 12 families.
 
 **Closed 2026-07-22 (gate 3;** register "Amendments — gate 3" + spec
 IV.9): **#10** → **DRAINED** (D10 rev 3: an external ODP citation
