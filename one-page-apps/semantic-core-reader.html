@@ -201,7 +201,7 @@ svg text{font-family:'JetBrains Mono',monospace}
     <div class="pill" id="pill-bundle">no bundle loaded</div>
     <div class="pill hidden" id="pill-verify"></div>
     <div style="flex:1"></div>
-    <div class="pill">v1.5.0 · build 2026-07-21</div>
+    <div class="pill">v1.6.0 · build 2026-07-22</div>
   </div>
 
   <div id="mid">
@@ -291,6 +291,7 @@ svg text{font-family:'JetBrains Mono',monospace}
           <input type="text" id="search" placeholder="search id · label · title…" style="max-width:300px">
         </div>
         <div class="filterrow" id="typefilters"></div>
+        <div class="filterrow" id="dimfilters" style="row-gap:6px"></div>
         <div id="browser">
           <div id="objlist" class="hint">Load a bundle to browse its objects.</div>
           <div id="detail" class="glass"><div class="hint">Select an object on the left — or paste one via the rail — and it is rendered here for humans: kernel fields plain, <span style="color:var(--accent)">facets tinted violet</span> (registered extensions with declared semantics), <span style="border:1px dashed var(--border-2);border-radius:4px;padding:0 4px">annotations dashed</span> (chrome — never part of the signed meaning).</div></div>
@@ -501,7 +502,7 @@ function sha256Fallback(bytes) {
 }
 
 /* ---------- loading ---------- */
-const READER_ID = "semantic-core-reader.html v1.5.0";
+const READER_ID = "semantic-core-reader.html v1.6.0";
 /* URL loading — works when this page and the bundle are served over http(s)
    (e.g. `python -m http.server` from the repo root); file:// blocks fetch by design. */
 async function loadFromUrl(input) {
@@ -563,6 +564,7 @@ async function loadFileList(fileList) {
 function indexBundle() {
   state.objects.clear(); state.order = []; state.manifest = null;
   state.manifestByPath.clear(); state.verify = null; state.selected = null;
+  state.browserDims = {};
   let manifestPath = null;
   for (const p of state.files.keys()) if (p.endsWith("content-manifest.json")) { manifestPath = p; break; }
   const prefix = manifestPath ? manifestPath.slice(0, -"content-manifest.json".length) : "";
@@ -599,7 +601,8 @@ function indexBundle() {
   l.ok(`indexed ${parsed} objects (${failed} parse failures, ${unknown} non-kernel files skipped)`);
   const counts = typeCounts();
   l.info("types: " + Object.entries(counts).map(([k, v]) => `${k} ${v}`).join(" · "));
-  $("pill-bundle").textContent = (state.manifest?.provenance?.source || "bundle") + " · " + parsed + " objects";
+  const prov = state.manifest?.provenance || {};
+  $("pill-bundle").textContent = (prov.source || prov.sources?.[0]?.title || "bundle") + " · " + parsed + " objects";
   $("pill-bundle").classList.add("on");
   $("btn-verify").disabled = !state.manifest || !state.objects.size;
   renderAll();
@@ -673,13 +676,31 @@ function renderFilters() {
     state.filterTypes.has(t) ? state.filterTypes.delete(t) : state.filterTypes.add(t);
     renderBrowser();
   });
+  /* facet/kernel dimension filters — same auto-populated index as the control selector */
+  const bd = state.browserDims = state.browserDims || {};
+  const idx = state.objects.size ? dimIndex() : null;
+  const active = Object.values(bd).some(Boolean);
+  $("dimfilters").innerHTML = idx && idx.usable.length ? idx.usable.map(([k, vals]) => {
+    const opts = [...vals.entries()].sort((a, b) => b[1] - a[1]).map(([v, n]) =>
+      `<option value="${esc(v)}" ${bd[k] === v ? "selected" : ""}>${esc(dimOptLabel(v))} (${n})</option>`).join("");
+    return `<span><label style="margin-right:4px">${esc(k)}</label><select data-bdim="${esc(k)}" style="max-width:170px"><option value="">any</option>${opts}</select></span>`;
+  }).join(" ") + (active ? ` <button id="bdim-clear">✕ clear facet filters</button> <span class="hint">facet filters match Requirements</span>` : "") : "";
+  document.querySelectorAll("[data-bdim]").forEach(x => x.onchange = () => { state.browserDims[x.dataset.bdim] = x.value; renderBrowser(); });
+  const bc = $("bdim-clear"); if (bc) bc.onclick = () => { state.browserDims = {}; renderBrowser(); };
 }
 function visibleIds() {
   const q = state.search.toLowerCase();
+  const dimsActive = Object.entries(state.browserDims || {}).filter(([, v]) => v);
+  const idx = dimsActive.length ? dimIndex() : null;
   return state.order.filter(id => {
     const r = state.objects.get(id);
     if (!r) return false;
     if (state.filterTypes.size && !state.filterTypes.has(r.type)) return false;
+    if (idx) {
+      const mine = idx.reqDims.get(id);
+      if (!mine) return false;   // a facet filter can only be satisfied by a Requirement
+      for (const [k, v] of dimsActive) if (!mine.get(k)?.has(v)) return false;
+    }
     if (!q) return true;
     return id.toLowerCase().includes(q) ||
       (r.obj.label || "").toLowerCase().includes(q) ||
@@ -1584,9 +1605,13 @@ function wireTailorWb(el) {
 let _dimCache = null, _dimGen = -1;
 state.graphGen = 0;
 function facetShort(fid) { return fid.split("/").pop().replace(/@[0-9]+$/, ""); }
+function dimOptLabel(v) {   // URIs show as their last segment; long values ellipsized (full value still matched)
+  const s = /^https?:\/\//.test(v) ? v.split("/").filter(Boolean).pop() : v;
+  return s.length > 44 ? s.slice(0, 42) + "…" : s;
+}
 function collectDims(obj) {   // -> [ [dimKey, value], ... ]
   const out = [];
-  const scalar = v => (typeof v === "string" || typeof v === "number" || typeof v === "boolean") && String(v).length <= 48;
+  const scalar = v => (typeof v === "string" || typeof v === "number" || typeof v === "boolean") && String(v).length <= 80;
   out.push(["lifecycle", obj.lifecycle]);
   for (const s of obj.statements || []) {
     out.push(["modality", s.modality]);
@@ -1595,11 +1620,12 @@ function collectDims(obj) {   // -> [ [dimKey, value], ... ]
   const walkPayload = (short, payload, depth) => {
     if (!payload || typeof payload !== "object" || depth > 2) return;
     for (const [k, v] of Object.entries(payload)) {
+      if (/^[a-z]{2}(-[A-Z]{2})?$/.test(k)) continue;   // langMap leaf = language-tagged prose (T(v) rule), never a vocabulary
       if (k === "by-statement" && v && typeof v === "object") {
         for (const sub of Object.values(v)) walkPayload(short, sub, depth + 1);
       } else if (scalar(v)) out.push([short + "." + k, String(v)]);
       else if (Array.isArray(v)) { for (const el of v) if (scalar(el)) out.push([short + "." + k, String(el)]); }
-      else if (v && typeof v === "object" && depth < 2) walkPayload(short, v, depth + 1);
+      else if (v && typeof v === "object" && depth < 2) walkPayload(short + "." + k, v, depth + 1);
     }
   };
   for (const [fid, payload] of Object.entries(obj.facets || {})) walkPayload(facetShort(fid), payload, 0);
@@ -1620,14 +1646,29 @@ function dimIndex() {
     reqDims.set(r.obj.id, mine);
   }
   const KERNEL = ["modality", "lifecycle", "party"];
+  /* a dimension is filterable when it is a VOCABULARY, not free text: its values repeat
+     (occurrences ≥ 1.5× distinct) over a bounded space (≤100 distinct), or the space is
+     tiny. Measured corpses behind both bounds: plain free text peaks at ratio 1.13
+     (grammar.result 999/906); free text that repeats across variants reaches 1.66 but at
+     248+ distinct (grammar.result-specification), while the largest true vocabulary is 63
+     (required-documentation); the weakest true vocabulary is ratio 1.9 (CR26
+     required-artifacts). The old ≤40 cap silently dropped tags(55),
+     required-documentation(63), threat-refs(43), target-object-categories(41) on geman.bsi. */
+  const dropped = [];
   const usable = [...dims.entries()]
-    .filter(([k, vals]) => vals.size >= 1 && vals.size <= 40 &&
-      [...vals.values()].reduce((a, b) => a + b, 0) >= 2)
+    .filter(([k, vals]) => {
+      const total = [...vals.values()].reduce((a, b) => a + b, 0);
+      const ok = vals.size >= 1 && total >= 2 &&
+                 (vals.size <= 12 || (total / vals.size >= 1.5 && vals.size <= 100));
+      if (!ok && total >= 2) dropped.push(`${k} (${vals.size} distinct / ${total} uses — free text)`);
+      return ok;
+    })
     .sort((a, b) => {
       const ka = KERNEL.indexOf(a[0]), kb = KERNEL.indexOf(b[0]);
       if ((ka >= 0) !== (kb >= 0)) return ka >= 0 ? -1 : 1;
       return [...b[1].values()].reduce((x, y) => x + y, 0) - [...a[1].values()].reduce((x, y) => x + y, 0);
-    }).slice(0, 12);
+    });
+  if (dropped.length) l.debug(`filter index: not offered as filters (free text, values do not repeat): ${dropped.join(" · ")}`);
   const sets = [...state.objects.values()].filter(r => r.type === "requirementSet")
     .map(r => ({ id: r.obj.id, title: r.obj.title || r.obj.label || r.obj.id }))
     .sort((a, b) => a.title.localeCompare(b.title)).slice(0, 200);
@@ -1663,7 +1704,7 @@ function controlSelectorHtml(ci) {
   const sel = new Set(d.selIds || []);
   const dimSelects = idx.usable.map(([k, vals]) => {
     const opts = [...vals.entries()].sort((a, b) => b[1] - a[1]).map(([v, n]) =>
-      `<option value="${esc(v)}" ${f.dims[k] === v ? "selected" : ""}>${esc(v)} (${n})</option>`).join("");
+      `<option value="${esc(v)}" ${f.dims[k] === v ? "selected" : ""}>${esc(dimOptLabel(v))} (${n})</option>`).join("");
     return `<span><label style="margin-right:4px">${esc(k)}</label><select data-dim="${esc(k)}" style="max-width:170px"><option value="">any</option>${opts}</select></span>`;
   }).join(" ");
   const rows = matching.slice(0, 200).map(id => {
@@ -2221,7 +2262,7 @@ renderLattice();
 restoreWorkspaceObjects();
 renderStages();
 setView("overview");
-l.info("Semantic Core Bundle Reader v1.5.0 · build 2026-07-21 — everything runs locally, nothing leaves this page");
+l.info("Semantic Core Bundle Reader v1.6.0 · build 2026-07-22 — everything runs locally, nothing leaves this page");
 l.info("open a bundle folder (contains content-manifest.json + objects/) or drop it here — or serve the repo over http and deep-link: #load=<bundle-url>&view=stage:tailor");
 
 /* deep links: #load=<bundle-url>&view=<view> — shareable when served over http(s) */

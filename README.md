@@ -160,7 +160,10 @@ the five stages of the compliance graph *functional*, not diagrammatic:
 
 - **Read** — objects rendered for humans: kernel fields plain, facets tinted
   (registered semantics), annotations dashed (chrome); modality lattice,
-  typed parameters, language-tagged prose.
+  typed parameters, language-tagged prose. The object browser filters by
+  **every vocabulary dimension the loaded corpus carries** — kernel and
+  facets alike, auto-populated; free text is excluded by measurement (values
+  that never repeat), and the log names what was excluded and why.
 - **Verify** — one click recomputes both SHA-256 digests of every object
   against the manifest, entirely client-side; attestations get the bi-modal
   verdict (Full Match / Semantic Match / Tamper).
@@ -177,6 +180,15 @@ the five stages of the compliance graph *functional*, not diagrammatic:
 - **Export a real bundle** — the workspace leaves as a ZIP with a
   content-manifest carrying both digests per object: re-loadable here,
   verifiable by `validate_core.py`. Authored objects persist across reloads.
+
+![Object browser on the Grundschutz++ corpus: fifteen auto-populated filter dimensions — modality, threats, target-object categories, tags, required documentation, C-I-A-Auth objectives, effort, class, security level — every vocabulary the corpus actually carries](docs/img/reader-browser-facets.png)
+
+*Above: the object browser on the Grundschutz++ corpus — fifteen filter
+dimensions auto-populated from the data (threats, target-object categories,
+tags, required documentation, protection goals, …). Every GS++ source prop
+lives in a kernel field or a registered facet, so every one of them is
+reachable here; the console below logs which fields were* not *offered as
+filters and why (free text whose values never repeat).*
 
 ### Try it in 60 seconds
 
