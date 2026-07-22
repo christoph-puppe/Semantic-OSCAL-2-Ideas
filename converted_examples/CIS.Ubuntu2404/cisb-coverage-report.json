@@ -1,0 +1,623 @@
+{
+ "totals": {
+  "leaf-values": 20698,
+  "mapped": 20698,
+  "unmapped": 0,
+  "coverage-pct": 100.0
+ },
+ "unmapped-paths": [],
+ "path-map": [
+  {
+   "path": "cisb.catalog.back-matter.resources[].description",
+   "count": 5,
+   "level": "L1",
+   "destination": "resolution table: profiles -> baseline Sets; safeguard resources -> Mapping targets; documents -> reference URLs (descriptions recorded in the table)"
+  },
+  {
+   "path": "cisb.catalog.back-matter.resources[].props[].class",
+   "count": 154,
+   "level": "L1",
+   "destination": "resource kind dispatch: xccdf profile marking | CIS_Controls version + safeguard number | document markings"
+  },
+  {
+   "path": "cisb.catalog.back-matter.resources[].props[].name",
+   "count": 216,
+   "level": "L1",
+   "destination": "resource kind dispatch: xccdf profile marking | CIS_Controls version + safeguard number | document markings"
+  },
+  {
+   "path": "cisb.catalog.back-matter.resources[].props[].value",
+   "count": 216,
+   "level": "L1",
+   "destination": "resource kind dispatch: xccdf profile marking | CIS_Controls version + safeguard number | document markings"
+  },
+  {
+   "path": "cisb.catalog.back-matter.resources[].rlinks[].href",
+   "count": 186,
+   "level": "L1",
+   "destination": "resolution table: profiles -> baseline Sets; safeguard resources -> Mapping targets; documents -> reference URLs (descriptions recorded in the table)"
+  },
+  {
+   "path": "cisb.catalog.back-matter.resources[].title",
+   "count": 67,
+   "level": "L1",
+   "destination": "resolution table: profiles -> baseline Sets; safeguard resources -> Mapping targets; documents -> reference URLs (descriptions recorded in the table)"
+  },
+  {
+   "path": "cisb.catalog.back-matter.resources[].uuid",
+   "count": 116,
+   "level": "L1",
+   "destination": "resolution table: profiles -> baseline Sets; safeguard resources -> Mapping targets; documents -> reference URLs (descriptions recorded in the table)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].controls[].id",
+   "count": 142,
+   "level": "L1",
+   "destination": "Requirement id (URI mint) + title; statement prose minted from title (source statement empty - declared + counted)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].controls[].links[].href",
+   "count": 540,
+   "level": "L1",
+   "destination": "reference links resolved via back-matter: profile resources -> baseline Set membership (Level 1/2 Server/Workstation); document resources -> relations reference"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].controls[].links[].rel",
+   "count": 540,
+   "level": "L1",
+   "destination": "reference links resolved via back-matter: profile resources -> baseline Set membership (Level 1/2 Server/Workstation); document resources -> relations reference"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].controls[].parts[].class",
+   "count": 833,
+   "level": "L1",
+   "destination": "part dispatch (statement/desc/rationale, assessment-method, guidance kinds)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].controls[].parts[].id",
+   "count": 975,
+   "level": "L1",
+   "destination": "part dispatch (statement/desc/rationale, assessment-method, guidance kinds)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].controls[].parts[].links[].href",
+   "count": 286,
+   "level": "L1",
+   "destination": "CIS_Controls part links -> Mapping objects (v8 -> sibling CIS Controls bundle; v7 -> v7 namespace)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].controls[].parts[].links[].rel",
+   "count": 286,
+   "level": "L1",
+   "destination": "CIS_Controls part links -> Mapping objects (v8 -> sibling CIS Controls bundle; v7 -> v7 namespace)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].controls[].parts[].name",
+   "count": 975,
+   "level": "L1",
+   "destination": "part dispatch (statement/desc/rationale, assessment-method, guidance kinds)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].controls[].parts[].props[].class",
+   "count": 177,
+   "level": "L1",
+   "destination": "part labels (Description/Rationale/Audit/Remediation/CIS Controls/References) -> facet keys; method TEST -> assessment-criteria; References markings -> external-references@1 payload (citation labels, kept bare)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].controls[].parts[].props[].name",
+   "count": 1152,
+   "level": "L1",
+   "destination": "part labels (Description/Rationale/Audit/Remediation/CIS Controls/References) -> facet keys; method TEST -> assessment-criteria; References markings -> external-references@1 payload (citation labels, kept bare)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].controls[].parts[].props[].value",
+   "count": 1152,
+   "level": "L1",
+   "destination": "part labels (Description/Rationale/Audit/Remediation/CIS Controls/References) -> facet keys; method TEST -> assessment-criteria; References markings -> external-references@1 payload (citation labels, kept bare)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].controls[].parts[].prose",
+   "count": 568,
+   "level": "L1",
+   "destination": "Description/Rationale -> narrative@1; Audit script -> assessment-criteria@1.audit; Remediation -> assessment-criteria@1.remediation (language-tagged)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].controls[].props[].class",
+   "count": 142,
+   "level": "L1",
+   "destination": "dispatch: label -> Requirement.label; marking xccdf_id -> aliases (scheme xccdf); marking automated|manual -> assessment-criteria@1 method (class attr on markings absorbed with the value)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].controls[].props[].name",
+   "count": 426,
+   "level": "L1",
+   "destination": "dispatch: label -> Requirement.label; marking xccdf_id -> aliases (scheme xccdf); marking automated|manual -> assessment-criteria@1 method (class attr on markings absorbed with the value)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].controls[].props[].value",
+   "count": 426,
+   "level": "L1",
+   "destination": "dispatch: label -> Requirement.label; marking xccdf_id -> aliases (scheme xccdf); marking automated|manual -> assessment-criteria@1 method (class attr on markings absorbed with the value)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].controls[].title",
+   "count": 142,
+   "level": "L1",
+   "destination": "Requirement id (URI mint) + title; statement prose minted from title (source statement empty - declared + counted)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].controls[].id",
+   "count": 122,
+   "level": "L1",
+   "destination": "Requirement id (URI mint) + title; statement prose minted from title (source statement empty - declared + counted)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].controls[].links[].href",
+   "count": 397,
+   "level": "L1",
+   "destination": "reference links resolved via back-matter: profile resources -> baseline Set membership (Level 1/2 Server/Workstation); document resources -> relations reference"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].controls[].links[].rel",
+   "count": 397,
+   "level": "L1",
+   "destination": "reference links resolved via back-matter: profile resources -> baseline Set membership (Level 1/2 Server/Workstation); document resources -> relations reference"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].controls[].parts[].class",
+   "count": 724,
+   "level": "L1",
+   "destination": "part dispatch (statement/desc/rationale, assessment-method, guidance kinds)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].controls[].parts[].id",
+   "count": 846,
+   "level": "L1",
+   "destination": "part dispatch (statement/desc/rationale, assessment-method, guidance kinds)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].controls[].parts[].links[].href",
+   "count": 280,
+   "level": "L1",
+   "destination": "CIS_Controls part links -> Mapping objects (v8 -> sibling CIS Controls bundle; v7 -> v7 namespace)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].controls[].parts[].links[].rel",
+   "count": 280,
+   "level": "L1",
+   "destination": "CIS_Controls part links -> Mapping objects (v8 -> sibling CIS Controls bundle; v7 -> v7 namespace)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].controls[].parts[].name",
+   "count": 846,
+   "level": "L1",
+   "destination": "part dispatch (statement/desc/rationale, assessment-method, guidance kinds)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].controls[].parts[].props[].class",
+   "count": 120,
+   "level": "L1",
+   "destination": "part labels (Description/Rationale/Audit/Remediation/CIS Controls/References) -> facet keys; method TEST -> assessment-criteria; References markings -> external-references@1 payload (citation labels, kept bare)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].controls[].parts[].props[].name",
+   "count": 966,
+   "level": "L1",
+   "destination": "part labels (Description/Rationale/Audit/Remediation/CIS Controls/References) -> facet keys; method TEST -> assessment-criteria; References markings -> external-references@1 payload (citation labels, kept bare)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].controls[].parts[].props[].value",
+   "count": 966,
+   "level": "L1",
+   "destination": "part labels (Description/Rationale/Audit/Remediation/CIS Controls/References) -> facet keys; method TEST -> assessment-criteria; References markings -> external-references@1 payload (citation labels, kept bare)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].controls[].parts[].prose",
+   "count": 488,
+   "level": "L1",
+   "destination": "Description/Rationale -> narrative@1; Audit script -> assessment-criteria@1.audit; Remediation -> assessment-criteria@1.remediation (language-tagged)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].controls[].props[].class",
+   "count": 122,
+   "level": "L1",
+   "destination": "dispatch: label -> Requirement.label; marking xccdf_id -> aliases (scheme xccdf); marking automated|manual -> assessment-criteria@1 method (class attr on markings absorbed with the value)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].controls[].props[].name",
+   "count": 366,
+   "level": "L1",
+   "destination": "dispatch: label -> Requirement.label; marking xccdf_id -> aliases (scheme xccdf); marking automated|manual -> assessment-criteria@1 method (class attr on markings absorbed with the value)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].controls[].props[].value",
+   "count": 366,
+   "level": "L1",
+   "destination": "dispatch: label -> Requirement.label; marking xccdf_id -> aliases (scheme xccdf); marking automated|manual -> assessment-criteria@1 method (class attr on markings absorbed with the value)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].controls[].title",
+   "count": 122,
+   "level": "L1",
+   "destination": "Requirement id (URI mint) + title; statement prose minted from title (source statement empty - declared + counted)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].controls[].id",
+   "count": 48,
+   "level": "L1",
+   "destination": "Requirement id (URI mint) + title; statement prose minted from title (source statement empty - declared + counted)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].controls[].links[].href",
+   "count": 180,
+   "level": "L1",
+   "destination": "reference links resolved via back-matter: profile resources -> baseline Set membership (Level 1/2 Server/Workstation); document resources -> relations reference"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].controls[].links[].rel",
+   "count": 180,
+   "level": "L1",
+   "destination": "reference links resolved via back-matter: profile resources -> baseline Set membership (Level 1/2 Server/Workstation); document resources -> relations reference"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].controls[].parts[].class",
+   "count": 288,
+   "level": "L1",
+   "destination": "part dispatch (statement/desc/rationale, assessment-method, guidance kinds)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].controls[].parts[].id",
+   "count": 336,
+   "level": "L1",
+   "destination": "part dispatch (statement/desc/rationale, assessment-method, guidance kinds)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].controls[].parts[].links[].href",
+   "count": 102,
+   "level": "L1",
+   "destination": "CIS_Controls part links -> Mapping objects (v8 -> sibling CIS Controls bundle; v7 -> v7 namespace)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].controls[].parts[].links[].rel",
+   "count": 102,
+   "level": "L1",
+   "destination": "CIS_Controls part links -> Mapping objects (v8 -> sibling CIS Controls bundle; v7 -> v7 namespace)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].controls[].parts[].name",
+   "count": 336,
+   "level": "L1",
+   "destination": "part dispatch (statement/desc/rationale, assessment-method, guidance kinds)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].controls[].parts[].props[].class",
+   "count": 71,
+   "level": "L1",
+   "destination": "part labels (Description/Rationale/Audit/Remediation/CIS Controls/References) -> facet keys; method TEST -> assessment-criteria; References markings -> external-references@1 payload (citation labels, kept bare)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].controls[].parts[].props[].name",
+   "count": 407,
+   "level": "L1",
+   "destination": "part labels (Description/Rationale/Audit/Remediation/CIS Controls/References) -> facet keys; method TEST -> assessment-criteria; References markings -> external-references@1 payload (citation labels, kept bare)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].controls[].parts[].props[].value",
+   "count": 407,
+   "level": "L1",
+   "destination": "part labels (Description/Rationale/Audit/Remediation/CIS Controls/References) -> facet keys; method TEST -> assessment-criteria; References markings -> external-references@1 payload (citation labels, kept bare)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].controls[].parts[].prose",
+   "count": 192,
+   "level": "L1",
+   "destination": "Description/Rationale -> narrative@1; Audit script -> assessment-criteria@1.audit; Remediation -> assessment-criteria@1.remediation (language-tagged)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].controls[].props[].class",
+   "count": 48,
+   "level": "L1",
+   "destination": "dispatch: label -> Requirement.label; marking xccdf_id -> aliases (scheme xccdf); marking automated|manual -> assessment-criteria@1 method (class attr on markings absorbed with the value)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].controls[].props[].name",
+   "count": 144,
+   "level": "L1",
+   "destination": "dispatch: label -> Requirement.label; marking xccdf_id -> aliases (scheme xccdf); marking automated|manual -> assessment-criteria@1 method (class attr on markings absorbed with the value)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].controls[].props[].value",
+   "count": 144,
+   "level": "L1",
+   "destination": "dispatch: label -> Requirement.label; marking xccdf_id -> aliases (scheme xccdf); marking automated|manual -> assessment-criteria@1 method (class attr on markings absorbed with the value)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].controls[].title",
+   "count": 48,
+   "level": "L1",
+   "destination": "Requirement id (URI mint) + title; statement prose minted from title (source statement empty - declared + counted)"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].id",
+   "count": 12,
+   "level": "L1",
+   "destination": "section Set id/title"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].parts[].id",
+   "count": 12,
+   "level": "L2",
+   "destination": "compat facet oscal-1x@1: section overview narrative on the Set (language-tagged {en})"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].parts[].name",
+   "count": 12,
+   "level": "L2",
+   "destination": "compat facet oscal-1x@1: section overview narrative on the Set (language-tagged {en})"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].parts[].prose",
+   "count": 12,
+   "level": "L2",
+   "destination": "compat facet oscal-1x@1: section overview narrative on the Set (language-tagged {en})"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].props[].name",
+   "count": 12,
+   "level": "L1",
+   "destination": "group label -> Set label"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].props[].value",
+   "count": 12,
+   "level": "L1",
+   "destination": "group label -> Set label"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].groups[].title",
+   "count": 12,
+   "level": "L1",
+   "destination": "section Set id/title"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].id",
+   "count": 27,
+   "level": "L1",
+   "destination": "section Set id/title"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].parts[].id",
+   "count": 27,
+   "level": "L2",
+   "destination": "compat facet oscal-1x@1: section overview narrative on the Set (language-tagged {en})"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].parts[].name",
+   "count": 27,
+   "level": "L2",
+   "destination": "compat facet oscal-1x@1: section overview narrative on the Set (language-tagged {en})"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].parts[].prose",
+   "count": 27,
+   "level": "L2",
+   "destination": "compat facet oscal-1x@1: section overview narrative on the Set (language-tagged {en})"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].props[].name",
+   "count": 27,
+   "level": "L1",
+   "destination": "group label -> Set label"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].props[].value",
+   "count": 27,
+   "level": "L1",
+   "destination": "group label -> Set label"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].groups[].title",
+   "count": 27,
+   "level": "L1",
+   "destination": "section Set id/title"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].id",
+   "count": 27,
+   "level": "L1",
+   "destination": "section Set id/title"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].parts[].id",
+   "count": 27,
+   "level": "L2",
+   "destination": "compat facet oscal-1x@1: section overview narrative on the Set (language-tagged {en})"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].parts[].name",
+   "count": 27,
+   "level": "L2",
+   "destination": "compat facet oscal-1x@1: section overview narrative on the Set (language-tagged {en})"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].parts[].prose",
+   "count": 27,
+   "level": "L2",
+   "destination": "compat facet oscal-1x@1: section overview narrative on the Set (language-tagged {en})"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].props[].name",
+   "count": 27,
+   "level": "L1",
+   "destination": "group label -> Set label"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].props[].value",
+   "count": 27,
+   "level": "L1",
+   "destination": "group label -> Set label"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].groups[].title",
+   "count": 27,
+   "level": "L1",
+   "destination": "section Set id/title"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].id",
+   "count": 7,
+   "level": "L1",
+   "destination": "section Set id/title"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].parts[].id",
+   "count": 7,
+   "level": "L2",
+   "destination": "compat facet oscal-1x@1: section overview narrative on the Set (language-tagged {en})"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].parts[].name",
+   "count": 7,
+   "level": "L2",
+   "destination": "compat facet oscal-1x@1: section overview narrative on the Set (language-tagged {en})"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].parts[].prose",
+   "count": 7,
+   "level": "L2",
+   "destination": "compat facet oscal-1x@1: section overview narrative on the Set (language-tagged {en})"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].props[].name",
+   "count": 7,
+   "level": "L1",
+   "destination": "group label -> Set label"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].props[].value",
+   "count": 7,
+   "level": "L1",
+   "destination": "group label -> Set label"
+  },
+  {
+   "path": "cisb.catalog.groups[].groups[].title",
+   "count": 7,
+   "level": "L1",
+   "destination": "section Set id/title"
+  },
+  {
+   "path": "cisb.catalog.groups[].id",
+   "count": 1,
+   "level": "L1",
+   "destination": "section Set id/title"
+  },
+  {
+   "path": "cisb.catalog.groups[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "section Set id/title"
+  },
+  {
+   "path": "cisb.catalog.metadata.document-ids[].identifier",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisb.catalog.metadata.document-ids[].scheme",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisb.catalog.metadata.last-modified",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisb.catalog.metadata.links[].href",
+   "count": 6,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisb.catalog.metadata.oscal-version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisb.catalog.metadata.props[].name",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisb.catalog.metadata.props[].ns",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisb.catalog.metadata.props[].value",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisb.catalog.metadata.remarks",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisb.catalog.metadata.title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisb.catalog.metadata.version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisb.catalog.uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  }
+ ],
+ "source": "CIS Ubuntu Linux 24.04 LTS Benchmark",
+ "source-version": "1.0.0",
+ "objects-emitted": {
+  "requirements": 312,
+  "mappings": 635,
+  "sets": 79
+ },
+ "profiles": {
+  "Level 1 \\- Server": 251,
+  "Level 2 \\- Server": 312,
+  "Level 1 \\- Workstation": 245,
+  "Level 2 \\- Workstation": 309
+ },
+ "mappings": {
+  "v7": 312,
+  "v8": 323
+ },
+ "methods": {
+  "automated": 291,
+  "manual": 21
+ },
+ "minted-prose": 312,
+ "unresolved-links": 0,
+ "lang-wraps": {
+  "prose": 73,
+  "description": 312,
+  "rationale": 312,
+  "audit": 312,
+  "remediation": 312
+ }
+}

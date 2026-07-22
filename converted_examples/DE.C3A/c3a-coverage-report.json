@@ -1,0 +1,293 @@
+{
+ "totals": {
+  "leaf-values": 1093,
+  "mapped": 1093,
+  "unmapped": 0,
+  "coverage-pct": 100.0
+ },
+ "unmapped-paths": [],
+ "path-map": [
+  {
+   "path": "c3a.catalog.groups[].controls[].class",
+   "count": 30,
+   "level": "L1",
+   "destination": "Requirement id (URI mint) + title; class -> category Set"
+  },
+  {
+   "path": "c3a.catalog.groups[].controls[].id",
+   "count": 30,
+   "level": "L1",
+   "destination": "Requirement id (URI mint) + title; class -> category Set"
+  },
+  {
+   "path": "c3a.catalog.groups[].controls[].params[].id",
+   "count": 30,
+   "level": "L1",
+   "destination": "parameter {name, type string, label, default} - D9-rev first-class label/default (no param-extras residue)"
+  },
+  {
+   "path": "c3a.catalog.groups[].controls[].params[].label",
+   "count": 30,
+   "level": "L1",
+   "destination": "parameter {name, type string, label, default} - D9-rev first-class label/default (no param-extras residue)"
+  },
+  {
+   "path": "c3a.catalog.groups[].controls[].params[].props[].name",
+   "count": 30,
+   "level": "L2",
+   "destination": "compat param-extras: parameter alt-identifier uuid (no kernel home on parameters; declared waiting room)"
+  },
+  {
+   "path": "c3a.catalog.groups[].controls[].params[].props[].ns",
+   "count": 30,
+   "level": "L2",
+   "destination": "compat param-extras: parameter alt-identifier uuid (no kernel home on parameters; declared waiting room)"
+  },
+  {
+   "path": "c3a.catalog.groups[].controls[].params[].props[].value",
+   "count": 30,
+   "level": "L2",
+   "destination": "compat param-extras: parameter alt-identifier uuid (no kernel home on parameters; declared waiting room)"
+  },
+  {
+   "path": "c3a.catalog.groups[].controls[].params[].values[]",
+   "count": 30,
+   "level": "L1",
+   "destination": "parameter {name, type string, label, default} - D9-rev first-class label/default (no param-extras residue)"
+  },
+  {
+   "path": "c3a.catalog.groups[].controls[].parts[].id",
+   "count": 45,
+   "level": "L1",
+   "destination": "statement -> statements[0]; guidance -> narrative@1"
+  },
+  {
+   "path": "c3a.catalog.groups[].controls[].parts[].name",
+   "count": 45,
+   "level": "L1",
+   "destination": "statement -> statements[0]; guidance -> narrative@1"
+  },
+  {
+   "path": "c3a.catalog.groups[].controls[].parts[].props[].name",
+   "count": 98,
+   "level": "L1",
+   "destination": "grammar props (modal_verb -> statements[0].modality via code map; action_word/result -> statement-grammar@1 by-statement)"
+  },
+  {
+   "path": "c3a.catalog.groups[].controls[].parts[].props[].ns",
+   "count": 98,
+   "level": "L1",
+   "destination": "grammar props (modal_verb -> statements[0].modality via code map; action_word/result -> statement-grammar@1 by-statement)"
+  },
+  {
+   "path": "c3a.catalog.groups[].controls[].parts[].props[].value",
+   "count": 98,
+   "level": "L1",
+   "destination": "grammar props (modal_verb -> statements[0].modality via code map; action_word/result -> statement-grammar@1 by-statement)"
+  },
+  {
+   "path": "c3a.catalog.groups[].controls[].parts[].prose",
+   "count": 45,
+   "level": "L1",
+   "destination": "statements[0].prose.de | narrative guidance (language-tagged)"
+  },
+  {
+   "path": "c3a.catalog.groups[].controls[].props[].name",
+   "count": 120,
+   "level": "L1",
+   "destination": "dispatch: alt-identifier -> aliases (scheme bsi-uuid); sec_level -> baseline Set; effort_level/tags -> taxonomy@1; CSV-link namespaces absorbed (pinned stubs replace them)"
+  },
+  {
+   "path": "c3a.catalog.groups[].controls[].props[].ns",
+   "count": 120,
+   "level": "L1",
+   "destination": "dispatch: alt-identifier -> aliases (scheme bsi-uuid); sec_level -> baseline Set; effort_level/tags -> taxonomy@1; CSV-link namespaces absorbed (pinned stubs replace them)"
+  },
+  {
+   "path": "c3a.catalog.groups[].controls[].props[].value",
+   "count": 120,
+   "level": "L1",
+   "destination": "dispatch: alt-identifier -> aliases (scheme bsi-uuid); sec_level -> baseline Set; effort_level/tags -> taxonomy@1; CSV-link namespaces absorbed (pinned stubs replace them)"
+  },
+  {
+   "path": "c3a.catalog.groups[].controls[].title",
+   "count": 30,
+   "level": "L1",
+   "destination": "Requirement id (URI mint) + title; class -> category Set"
+  },
+  {
+   "path": "c3a.catalog.groups[].id",
+   "count": 6,
+   "level": "L1",
+   "destination": "domain Set id/title"
+  },
+  {
+   "path": "c3a.catalog.groups[].title",
+   "count": 6,
+   "level": "L1",
+   "destination": "domain Set id/title"
+  },
+  {
+   "path": "c3a.catalog.metadata.last-modified",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.oscal-version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.parties[].addresses[].addr-lines[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.parties[].addresses[].city",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.parties[].addresses[].country",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.parties[].addresses[].postal-code",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.parties[].links[].href",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.parties[].links[].rel",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.parties[].name",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.parties[].short-name",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.parties[].type",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.parties[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.props[].name",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.props[].value",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.published",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.responsible-parties[].party-uuids[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.responsible-parties[].role-id",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.roles[].id",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.roles[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.metadata.version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  },
+  {
+   "path": "c3a.catalog.uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (roles/parties -> publisher identity)"
+  }
+ ],
+ "source": "BSI C3A Criteria enabling Cloud Computing Autonomy",
+ "source-version": "1.0",
+ "objects-emitted": {
+  "requirements": 30,
+  "sets": 9,
+  "parameters": 30
+ },
+ "modality": {
+  "must": 30
+ },
+ "sec-level-baselines": {
+  "normal-SdT": 30
+ },
+ "fused-class-variants": [
+  "SOV-1-01",
+  "SOV-1-02",
+  "SOV-1-03",
+  "SOV-2-02",
+  "SOV-2-03",
+  "SOV-3-01",
+  "SOV-4-01",
+  "SOV-4-02",
+  "SOV-4-04",
+  "SOV-5-05"
+ ],
+ "multi-modal-statements": [],
+ "multi-value-params": [],
+ "lang-wraps": {
+  "guidance": 15
+ }
+}

@@ -2,9 +2,9 @@
 
 A design study for **OSCAL Semantic Core**: compliance data as a graph of nine
 shallow, globally identified objects instead of eight nested document models.
-This repository holds the handbook, the draft specification, three fully
-converted national corpora, and a ready-to-install Claude skill that applies
-the standard.
+This repository holds the handbook, the draft specification, eight converted
+corpora (the three-authority census base plus five validation frameworks),
+and a ready-to-install Claude skill that applies the standard.
 
 Status: **pre-1.0, evidence-gated.** The specification is at v0.5 with a v0.6
 feedback backlog open. Nothing here is endorsed by NIST, BSI, ACSC, or FedRAMP.
@@ -98,15 +98,30 @@ attestations with semantic digests — and three converters in
 
 ### As evidence
 
-[`converted_examples/`](converted_examples/) holds three national frameworks
-run through the converters, each with a computed coverage report — a bundle of
-objects, pinned facet schemas, and a manifest carrying both digests per object:
+[`converted_examples/`](converted_examples/) holds the three census corpora
+(the evidence base the architecture was derived from) plus five further
+frameworks converted as validation targets — each with a computed coverage
+report: a bundle of objects, pinned facet schemas, and a manifest carrying
+both digests per object.
+
+The census corpora (gate 1):
 
 | Corpus | Source | Emitted | Coverage |
 |---|---|---|---|
 | [AU.ISM](converted_examples/AU.ISM/ism-coverage-report.md) | ACSC ISM, OSCAL 1.1.2 catalog, 1,150 controls | 1,150 Requirements · 322 Sets | 36,161 / 36,161 leaf values |
 | [geman.bsi](converted_examples/geman.bsi/bsi-coverage-report.md) | Grundschutz++ + MS-TLS, OSCAL 1.1.3 | 658 Requirements carrying 1,015 statements · 167 Sets | 49,804 / 49,804 |
-| [FedRAMP-CR26](converted_examples/FedRAMP-CR26/cr26-coverage-report.md) | CR26 bespoke JSON, v2026.07.14.01 | 292 Requirements · 373 Mappings · 100 Sets · 4 Tailorings | 7,294 / 7,294 |
+| [FedRAMP-CR26](converted_examples/FedRAMP-CR26/cr26-coverage-report.md) | CR26 bespoke JSON, v2026.07.14.01 | 292 Requirements · 373 Mappings · 91 Sets · 4 Tailorings | 7,294 / 7,294 |
+
+Validation corpora (converted 2026-07-21; the model held without kernel
+changes):
+
+| Corpus | Source | Emitted | Coverage |
+|---|---|---|---|
+| [BE.CyFun](converted_examples/BE.CyFun/cyfun-coverage-report.md) | CCB CyberFundamentals 2025, BASIC + ESSENTIAL resolved catalogs (one corpus) | 218 Requirements · 124 Sets (3 cumulative baselines) | 4,312 / 4,312 |
+| [CIS.Controls](converted_examples/CIS.Controls/cisc-coverage-report.md) | CIS Controls v8.1, OSCAL 1.1.3 | 171 Requirements · 34 Sets (IG1–3 baselines, asset/function categories) | 5,493 / 5,493 |
+| [CIS.Ubuntu2404](converted_examples/CIS.Ubuntu2404/cisb-coverage-report.md) | CIS Ubuntu 24.04 LTS Benchmark v1.0.0 | 312 Requirements · 635 Mappings (v7+v8) · 79 Sets (4 recovered profile baselines) | 20,698 / 20,698 |
+| [DE.C5](converted_examples/DE.C5/c5-coverage-report.md) | BSI C5:2026, OSCAL 1.2.2 | 623 Requirements · 190 Sets (basic baseline + additional criteria) | 5,868 / 5,868 |
+| [DE.C3A](converted_examples/DE.C3A/c3a-coverage-report.md) | BSI C3A v1.0, OSCAL 1.2.2 (GS++ grammar family) | 30 Requirements · 30 typed parameters (first `label`/`default` use) · 9 Sets | 1,093 / 1,093 |
 
 The reports declare every conversion rule with counts, and report source
 defects rather than repairing them — the BSI run surfaces all 216

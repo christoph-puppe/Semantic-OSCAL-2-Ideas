@@ -1,0 +1,248 @@
+{
+ "totals": {
+  "leaf-values": 4312,
+  "mapped": 4312,
+  "unmapped": 0,
+  "coverage-pct": 100.0
+ },
+ "unmapped-paths": [],
+ "path-map": [
+  {
+   "path": "cyfun.*.catalog.groups[].groups[].groups[].controls[].id",
+   "count": 252,
+   "level": "L1",
+   "destination": "Requirement id (URI mint) + label"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].groups[].groups[].controls[].parts[].id",
+   "count": 252,
+   "level": "L1",
+   "destination": "statements[0] (id suffix, prose.en + modality word-rule over shall-language)"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].groups[].groups[].controls[].parts[].name",
+   "count": 252,
+   "level": "L1",
+   "destination": "statements[0] (id suffix, prose.en + modality word-rule over shall-language)"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].groups[].groups[].controls[].parts[].prose",
+   "count": 252,
+   "level": "L1",
+   "destination": "statements[0] (id suffix, prose.en + modality word-rule over shall-language)"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].groups[].groups[].controls[].props[].name",
+   "count": 822,
+   "level": "L1",
+   "destination": "dispatch: label -> Requirement.label; sort-id absorbed -> sequence; assurance-level -> cumulative baseline Sets; key-measures/governance-measures -> marker Sets; ns absorbed"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].groups[].groups[].controls[].props[].ns",
+   "count": 318,
+   "level": "L1",
+   "destination": "dispatch: label -> Requirement.label; sort-id absorbed -> sequence; assurance-level -> cumulative baseline Sets; key-measures/governance-measures -> marker Sets; ns absorbed"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].groups[].groups[].controls[].props[].value",
+   "count": 822,
+   "level": "L1",
+   "destination": "dispatch: label -> Requirement.label; sort-id absorbed -> sequence; assurance-level -> cumulative baseline Sets; key-measures/governance-measures -> marker Sets; ns absorbed"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].groups[].groups[].controls[].title",
+   "count": 252,
+   "level": "L1",
+   "destination": "Requirement title"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].groups[].groups[].id",
+   "count": 118,
+   "level": "L1",
+   "destination": "Set id"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].groups[].groups[].props[].name",
+   "count": 236,
+   "level": "L1",
+   "destination": "group props: label -> Set label; sort-id absorbed by document order -> members[].sequence"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].groups[].groups[].props[].value",
+   "count": 236,
+   "level": "L1",
+   "destination": "group props: label -> Set label; sort-id absorbed by document order -> members[].sequence"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].groups[].groups[].title",
+   "count": 118,
+   "level": "L1",
+   "destination": "Set title"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].groups[].id",
+   "count": 39,
+   "level": "L1",
+   "destination": "Set id"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].groups[].parts[].name",
+   "count": 39,
+   "level": "L2",
+   "destination": "compat facet oscal-1x@1: function/category overview narrative on the Set (language-tagged {en})"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].groups[].parts[].prose",
+   "count": 39,
+   "level": "L2",
+   "destination": "compat facet oscal-1x@1: function/category overview narrative on the Set (language-tagged {en})"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].groups[].props[].name",
+   "count": 78,
+   "level": "L1",
+   "destination": "group props: label -> Set label; sort-id absorbed by document order -> members[].sequence"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].groups[].props[].value",
+   "count": 78,
+   "level": "L1",
+   "destination": "group props: label -> Set label; sort-id absorbed by document order -> members[].sequence"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].groups[].title",
+   "count": 39,
+   "level": "L1",
+   "destination": "Set title"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].id",
+   "count": 12,
+   "level": "L1",
+   "destination": "Set id"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].props[].name",
+   "count": 12,
+   "level": "L1",
+   "destination": "group props: label -> Set label; sort-id absorbed by document order -> members[].sequence"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].props[].value",
+   "count": 12,
+   "level": "L1",
+   "destination": "group props: label -> Set label; sort-id absorbed by document order -> members[].sequence"
+  },
+  {
+   "path": "cyfun.*.catalog.groups[].title",
+   "count": 12,
+   "level": "L1",
+   "destination": "Set title"
+  },
+  {
+   "path": "cyfun.*.catalog.metadata.document-ids[].identifier",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (incl. resolution-tool note; document-ids -> aliases on the root Set)"
+  },
+  {
+   "path": "cyfun.*.catalog.metadata.document-ids[].scheme",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (incl. resolution-tool note; document-ids -> aliases on the root Set)"
+  },
+  {
+   "path": "cyfun.*.catalog.metadata.last-modified",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (incl. resolution-tool note; document-ids -> aliases on the root Set)"
+  },
+  {
+   "path": "cyfun.*.catalog.metadata.links[].href",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (incl. resolution-tool note; document-ids -> aliases on the root Set)"
+  },
+  {
+   "path": "cyfun.*.catalog.metadata.links[].rel",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (incl. resolution-tool note; document-ids -> aliases on the root Set)"
+  },
+  {
+   "path": "cyfun.*.catalog.metadata.oscal-version",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (incl. resolution-tool note; document-ids -> aliases on the root Set)"
+  },
+  {
+   "path": "cyfun.*.catalog.metadata.props[].name",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (incl. resolution-tool note; document-ids -> aliases on the root Set)"
+  },
+  {
+   "path": "cyfun.*.catalog.metadata.props[].value",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (incl. resolution-tool note; document-ids -> aliases on the root Set)"
+  },
+  {
+   "path": "cyfun.*.catalog.metadata.title",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (incl. resolution-tool note; document-ids -> aliases on the root Set)"
+  },
+  {
+   "path": "cyfun.*.catalog.metadata.version",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (incl. resolution-tool note; document-ids -> aliases on the root Set)"
+  },
+  {
+   "path": "cyfun.*.catalog.uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (incl. resolution-tool note; document-ids -> aliases on the root Set)"
+  }
+ ],
+ "source": "CyFun 2025 BASIC+ESSENTIAL",
+ "source-version": "2025-12-12",
+ "objects-emitted": {
+  "requirements": 218,
+  "sets": 124
+ },
+ "modality-word-rule": {
+  "must": 208,
+  "should": 7,
+  "must-not": 1,
+  "unspecified": 2
+ },
+ "levels": {
+  "important": 103,
+  "essential": 82,
+  "basic": 34
+ },
+ "markers": {
+  "governance-measures": 21,
+  "key-measures": 29
+ },
+ "twin-check": {
+  "shared": 34,
+  "drift": [],
+  "basic-only": []
+ },
+ "dup-assurance-level-props": [
+  [
+   "ID.AM-5.1",
+   [
+    "basic",
+    "important"
+   ]
+  ]
+ ],
+ "basic-membership-vs-level-mismatch": [],
+ "lang-wraps": {
+  "prose": 22
+ }
+}
