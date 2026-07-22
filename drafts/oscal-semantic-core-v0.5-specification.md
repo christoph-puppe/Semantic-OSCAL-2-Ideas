@@ -672,6 +672,7 @@ out); rows leave `oscal-semantic-core-v0.6-spec-feedback-backlog.md`:
 | #7 | **Accept** | D10: `by-statement` payload keying normative; unknown statement id = validation error |
 | #1 | **Accept** | D9: optional `label` + `default` on parameter declarations; defaults advisory, never silently substituted; empties the ×179 `param-extras` L2 residue (drains at next converter run) |
 | #2 | **Accept (Tailoring liturgy blessed for authorities)** | D13: Deviation duties bind at consumption tier; Authority-tier Tailorings exempt (weakening classification still computed). **Rejected:** `variants` carrier on Requirement — fails the D22 bar (1-of-3; mechanism exists) |
+| #3 | **Close, no change** | Duration union rejected for lack of evidence: 0 true unit-class crossings measured (the 51 first-pass flags were base-absent variants, resolved under #2); elapsed/calendar unit-class boundary stays strict. Re-enters only with a counted crossing |
 
 ---
 

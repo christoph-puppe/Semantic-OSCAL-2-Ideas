@@ -380,6 +380,20 @@ channel by which cores grow until they need a metaschema.
 in a facet for a second authority — the kernel lags evidence, never leads
 taste.
 
+## D9 (closure note) — No duration union; unit-class boundary stays strict *(backlog #3)*
+**Decision.** Closed without change. The elapsed-duration vs.
+calendar-period split keeps its strict unit-class boundary; no union type
+enters the algebra.
+**Customer.** Zero measured crossings — the 51 first-pass flags were
+base-absent authority variants, a ceremony question resolved under the
+D13 rev (backlog #2), not a typing question.
+**Simplicity.** A union type would exist to serve zero counted cases.
+**Complexity ↓.** The fail-closed calendar rule stays the only rule;
+nothing new to implement.
+**Trade-off.** If a future corpus ships a genuine crossing, the item
+re-enters the backlog with its count — the standing rule works in both
+directions.
+
 ## D9 (rev) — Parameter `label` + `default` *(backlog #1)*
 **Decision.** Optional `label` (display handle, never an identifier) and
 `default` (advisory, type-valid) on parameter declarations. Resolution
