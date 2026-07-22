@@ -1,0 +1,424 @@
+{
+ "description": "conditional-apply vectors (gate 4, B.1.8 / backlog #18): trigger = exactly one B.2 predicate (<=1 reference hop, no nesting); enforcement = one instantiated primitive; verdict where the trigger holds, no-op elsewhere; unbound trigger params are their own error, never silently false. FAIL format is normative (B.1.8).",
+ "vectors": [
+  {
+   "name": "trigger-holds-enforcement-passes",
+   "instance": {
+    "instance-id": "class-a-deadline",
+    "rationale": "class-a rules bind tighter deadlines (the CR26 pattern)",
+    "trigger": {
+     "param-equals": {
+      "name": "class",
+      "value": "a"
+     }
+    },
+    "enforcement": {
+     "primitive": "param-bounds",
+     "parameter": "timeframe",
+     "type": "integer",
+     "max": 30
+    }
+   },
+   "objects": [
+    {
+     "id": "https://x.example/req/1",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "must",
+       "obligated-parties": [
+        "https://x.example/p/o"
+       ],
+       "prose": {
+        "en": "Do X within {param:timeframe} for class {param:class}."
+       },
+       "parameters": [
+        {
+         "name": "class",
+         "type": "code",
+         "default": "a"
+        },
+        {
+         "name": "timeframe",
+         "type": "integer",
+         "default": 14
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "expected-fails": 0
+  },
+  {
+   "name": "trigger-holds-enforcement-fails-normative-format",
+   "instance": {
+    "instance-id": "class-a-deadline",
+    "rationale": "class-a rules bind tighter deadlines (the CR26 pattern)",
+    "trigger": {
+     "param-equals": {
+      "name": "class",
+      "value": "a"
+     }
+    },
+    "enforcement": {
+     "primitive": "param-bounds",
+     "parameter": "timeframe",
+     "type": "integer",
+     "max": 30
+    }
+   },
+   "objects": [
+    {
+     "id": "https://x.example/req/1",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "must",
+       "obligated-parties": [
+        "https://x.example/p/o"
+       ],
+       "prose": {
+        "en": "Do X within {param:timeframe} for class {param:class}."
+       },
+       "parameters": [
+        {
+         "name": "class",
+         "type": "code",
+         "default": "a"
+        },
+        {
+         "name": "timeframe",
+         "type": "integer",
+         "default": 90
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "expected-fails": 1,
+   "expected-frags": [
+    "FAIL [conditional-apply:class-a-deadline] on https://x.example/req/1",
+    "enforcement [param-bounds] failed",
+    "rationale: class-a rules bind tighter deadlines"
+   ]
+  },
+  {
+   "name": "trigger-not-held-is-a-no-op",
+   "instance": {
+    "instance-id": "class-a-deadline",
+    "rationale": "class-a rules bind tighter deadlines (the CR26 pattern)",
+    "trigger": {
+     "param-equals": {
+      "name": "class",
+      "value": "a"
+     }
+    },
+    "enforcement": {
+     "primitive": "param-bounds",
+     "parameter": "timeframe",
+     "type": "integer",
+     "max": 30
+    }
+   },
+   "objects": [
+    {
+     "id": "https://x.example/req/1",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "must",
+       "obligated-parties": [
+        "https://x.example/p/o"
+       ],
+       "prose": {
+        "en": "Do X within {param:timeframe} for class {param:class}."
+       },
+       "parameters": [
+        {
+         "name": "class",
+         "type": "code",
+         "default": "b"
+        },
+        {
+         "name": "timeframe",
+         "type": "integer",
+         "default": 900
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "expected-fails": 0
+  },
+  {
+   "name": "unbound-trigger-param-is-its-own-error",
+   "instance": {
+    "instance-id": "class-a-deadline",
+    "rationale": "class-a rules bind tighter deadlines (the CR26 pattern)",
+    "trigger": {
+     "param-equals": {
+      "name": "class",
+      "value": "a"
+     }
+    },
+    "enforcement": {
+     "primitive": "param-bounds",
+     "parameter": "timeframe",
+     "type": "integer",
+     "max": 30
+    }
+   },
+   "objects": [
+    {
+     "id": "https://x.example/req/1",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "must",
+       "obligated-parties": [
+        "https://x.example/p/o"
+       ],
+       "prose": {
+        "en": "Do X within {param:timeframe} for class {param:class}."
+       },
+       "parameters": [
+        {
+         "name": "class",
+         "type": "code"
+        },
+        {
+         "name": "timeframe",
+         "type": "integer",
+         "default": 14
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "expected-fails": 1,
+   "expected-frags": [
+    "UNBOUND",
+    "never silently false"
+   ]
+  },
+  {
+   "name": "field-equals-with-one-hop",
+   "instance": {
+    "instance-id": "active-only",
+    "rationale": "one hop follows a single reference (B.2)",
+    "trigger": {
+     "field-equals": {
+      "path": "assessment-ref->lifecycle",
+      "value": "active"
+     }
+    },
+    "enforcement": {
+     "primitive": "code-from",
+     "path": "state",
+     "codes": [
+      "open",
+      "in-remediation",
+      "closed"
+     ]
+    }
+   },
+   "objects": [
+    {
+     "id": "https://x.example/assessment/a1",
+     "version": "1",
+     "lifecycle": "active",
+     "subject-refs": [
+      "https://x.example/req/1"
+     ],
+     "method": {
+      "note": "m"
+     },
+     "performer-ref": "https://x.example/p/assessor",
+     "time": "2026-07-22",
+     "result": "satisfied"
+    },
+    {
+     "id": "https://x.example/finding/f1",
+     "version": "1",
+     "lifecycle": "active",
+     "assessment-ref": "https://x.example/assessment/a1",
+     "requirement-ref": "https://x.example/req/1",
+     "state": "open"
+    }
+   ],
+   "expected-fails": 0
+  },
+  {
+   "name": "two-hop-path-exceeds-the-budget",
+   "instance": {
+    "instance-id": "too-deep",
+    "rationale": "r",
+    "trigger": {
+     "field-equals": {
+      "path": "assessment-ref->performer-ref->lifecycle",
+      "value": "active"
+     }
+    },
+    "enforcement": {
+     "primitive": "code-from",
+     "path": "state",
+     "codes": [
+      "open"
+     ]
+    }
+   },
+   "objects": [
+    {
+     "id": "https://x.example/finding/f1",
+     "version": "1",
+     "lifecycle": "active",
+     "assessment-ref": "https://x.example/assessment/a1",
+     "requirement-ref": "https://x.example/req/1",
+     "state": "open"
+    }
+   ],
+   "expected-fails": 1,
+   "expected-frags": [
+    "one-hop budget"
+   ]
+  },
+  {
+   "name": "nested-trigger-is-rejected",
+   "instance": {
+    "instance-id": "no-booleans",
+    "rationale": "the predicates you get are the predicates there are",
+    "trigger": {
+     "and": [
+      {
+       "present": {
+        "path": "facets"
+       }
+      },
+      {
+       "present": {
+        "path": "relations"
+       }
+      }
+     ],
+     "present": {
+      "path": "facets"
+     }
+    },
+    "enforcement": {
+     "primitive": "code-from",
+     "path": "lifecycle",
+     "codes": [
+      "active"
+     ]
+    }
+   },
+   "objects": [
+    {
+     "id": "https://x.example/req/1",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "must",
+       "obligated-parties": [
+        "https://x.example/p/o"
+       ],
+       "prose": {
+        "en": "Do X within {param:timeframe} for class {param:class}."
+       },
+       "parameters": [
+        {
+         "name": "class",
+         "type": "code",
+         "default": "a"
+        },
+        {
+         "name": "timeframe",
+         "type": "integer",
+         "default": 14
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "expected-fails": 1,
+   "expected-frags": [
+    "no nesting, no boolean composition"
+   ]
+  },
+  {
+   "name": "present-selects-facet-carriers",
+   "instance": {
+    "instance-id": "facet-carriers-stay-active",
+    "rationale": "boring is the point",
+    "trigger": {
+     "present": {
+      "path": "facets"
+     }
+    },
+    "enforcement": {
+     "primitive": "code-from",
+     "path": "lifecycle",
+     "codes": [
+      "active"
+     ]
+    }
+   },
+   "objects": [
+    {
+     "id": "https://x.example/req/1",
+     "version": "1",
+     "lifecycle": "deprecated",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "must",
+       "obligated-parties": [
+        "https://x.example/p/o"
+       ],
+       "prose": {
+        "en": "Do X within {param:timeframe} for class {param:class}."
+       },
+       "parameters": [
+        {
+         "name": "class",
+         "type": "code",
+         "default": "a"
+        },
+        {
+         "name": "timeframe",
+         "type": "integer",
+         "default": 14
+        }
+       ]
+      }
+     ],
+     "facets": {
+      "https://x.example/facet/f@1": {
+       "a": "x"
+      }
+     }
+    }
+   ],
+   "expected-fails": 1,
+   "expected-frags": [
+    "enforcement [code-from] failed",
+    "not in the declared code list"
+   ]
+  }
+ ]
+}

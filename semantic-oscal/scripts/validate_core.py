@@ -16,7 +16,7 @@ Runs, in order:
 
 Exit 0 = all green. Usage: uv run --with jsonschema validate_core.py [bundle-dir ...]
 """
-import json, hashlib, os, re, sys, copy, collections
+import json, hashlib, os, re, sys, copy, collections, base64
 import jsonschema
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -126,11 +126,14 @@ def uri_origin(u):
     p = str(u).split("/")
     return "/".join(p[:3]) if str(u).startswith("http") and len(p) >= 3 else str(u)
 
-def derive_tier(tobj, objs, sdig_fn):
+def derive_tier(tobj, objs, sdig_fn, envelopes=None, trusted=None, notes=None):
     # Content origin resolves THROUGH selected Sets to their members (and
     # through op targets): a self-minted wrapper Set around foreign content
     # must not launder consumer into authority-claimed (gate-3 finding: the
     # CR26 rev5-odp-overlay wraps NIST controls in a FedRAMP Set).
+    # Gate 4 (#24): with `trusted` supplied the validator runs in
+    # VERIFICATION MODE — authority-proven additionally requires a verifying
+    # DSSE envelope; an unsigned attestation can no longer prove.
     origins = set()
     def set_member_origins(sid, depth=0):
         tgt = objs.get(sid)
@@ -159,16 +162,26 @@ def derive_tier(tobj, objs, sdig_fn):
             for subj in o.get("subject-semantic-digests", []):
                 if isinstance(subj, dict) and subj.get("id") == tobj["id"] \
                    and subj.get("semantic-digest") == sdig_fn(tobj):
+                    if trusted is not None:      # verification mode (#24)
+                        env = (envelopes or {}).get(o.get("envelope-ref"))
+                        if o.get("envelope-ref") and env is not None:
+                            st, why = verify_envelope(env, o, trusted)
+                        else:
+                            st, why = "error", "unsigned attestation (no envelope) cannot prove in verification mode"
+                        if st != "verified":
+                            if notes is not None:
+                                notes.append(f"{o.get('id')}: {why}")
+                            continue
                     return "authority-proven"
     return "authority-claimed" if claimed else "consumer"
 
-def tailoring_duty_errors(objs, pinned_decl=None, sdig_fn=None):
-    """Op-law enforcement with the derived tier (D13 + #19)."""
+def tailoring_duty_errors(objs, pinned_decl=None, sdig_fn=None, envelopes=None, trusted=None):
+    """Op-law enforcement with the derived tier (D13 + #19; #24 verification mode)."""
     errs = []
     pd = pinned_decl or {}
     for oid, (t, tobj) in objs.items():
         if t != "tailoring": continue
-        tier = derive_tier(tobj, objs, sdig_fn or sdig)
+        tier = derive_tier(tobj, objs, sdig_fn or sdig, envelopes=envelopes, trusted=trusted)
         for op in tobj.get("operations", []):
             has_dev = "deviation" in op or "deviation-ref" in op
             duty = None
@@ -258,6 +271,261 @@ def content_digest(obj):
     for k in ("id", "version", "label", "canonical-alias", "replaces"):
         x.pop(k, None)
     return sdig(x)
+
+# ---------------- DSSE verification engine (gate 4, backlog #24) ----------------
+# dsse-envelope@1 fixes the payload (the Attestation's canonical form,
+# annotations excluded) and PAE per DSSE v1 but deliberately pins no
+# algorithm; the reference engine pins Ed25519 (RFC 8032), dependency-free.
+# Key distribution is authority-local (the R6 pattern): trusted keys arrive
+# as INPUT (--trusted-keys file / vector fixtures), never from the bundle.
+DSSE_PAYLOAD_TYPE = "application/vnd.oscal-semantic-core.attestation+json"
+_ED_P = 2**255 - 19
+_ED_L = 2**252 + 27742317777372353535851937790883648493
+_ED_D = (-121665 * pow(121666, _ED_P - 2, _ED_P)) % _ED_P
+
+def _ed_add(P, Q):
+    (x1, y1, z1, t1), (x2, y2, z2, t2) = P, Q
+    a = (y1 - x1) * (y2 - x2) % _ED_P
+    b = (y1 + x1) * (y2 + x2) % _ED_P
+    c = 2 * t1 * t2 * _ED_D % _ED_P
+    d = 2 * z1 * z2 % _ED_P
+    e, f, g, h = b - a, d - c, d + c, b + a
+    return (e * f % _ED_P, g * h % _ED_P, f * g % _ED_P, e * h % _ED_P)
+
+def _ed_mul(s, P):
+    Q = (0, 1, 1, 0)
+    while s:
+        if s & 1: Q = _ed_add(Q, P)
+        P = _ed_add(P, P); s >>= 1
+    return Q
+
+def _ed_compress(P):
+    x, y, z, _ = P
+    zi = pow(z, _ED_P - 2, _ED_P)
+    x, y = x * zi % _ED_P, y * zi % _ED_P
+    return (y | ((x & 1) << 255)).to_bytes(32, "little")
+
+def _ed_decompress(b):
+    y = int.from_bytes(b, "little")
+    sign = y >> 255; y &= (1 << 255) - 1
+    if y >= _ED_P: return None
+    xx = (y * y - 1) * pow(_ED_D * y * y + 1, _ED_P - 2, _ED_P) % _ED_P
+    x = pow(xx, (_ED_P + 3) // 8, _ED_P)
+    if (x * x - xx) % _ED_P:
+        x = x * pow(2, (_ED_P - 1) // 4, _ED_P) % _ED_P
+        if (x * x - xx) % _ED_P: return None
+    if x % 2 != sign: x = _ED_P - x
+    return (x, y, 1, x * y % _ED_P)
+
+_ED_B = _ed_decompress((4 * pow(5, _ED_P - 2, _ED_P) % _ED_P).to_bytes(32, "little"))
+
+def _ed_expand(seed):
+    h = hashlib.sha512(seed).digest()
+    a = int.from_bytes(h[:32], "little")
+    a &= (1 << 254) - 8; a |= (1 << 254)
+    return a, h[32:]
+
+def ed25519_public(seed):
+    a, _ = _ed_expand(seed)
+    return _ed_compress(_ed_mul(a, _ED_B))
+
+def ed25519_sign(seed, msg):
+    a, prefix = _ed_expand(seed)
+    A = _ed_compress(_ed_mul(a, _ED_B))
+    r = int.from_bytes(hashlib.sha512(prefix + msg).digest(), "little") % _ED_L
+    R = _ed_compress(_ed_mul(r, _ED_B))
+    k = int.from_bytes(hashlib.sha512(R + A + msg).digest(), "little") % _ED_L
+    return R + ((r + k * a) % _ED_L).to_bytes(32, "little")
+
+def ed25519_verify(pub, msg, sig):
+    if len(sig) != 64 or len(pub) != 32: return False
+    A = _ed_decompress(pub)
+    if A is None: return False
+    Rb, s = sig[:32], int.from_bytes(sig[32:], "little")
+    if s >= _ED_L: return False
+    R = _ed_decompress(Rb)
+    if R is None: return False
+    k = int.from_bytes(hashlib.sha512(Rb + pub + msg).digest(), "little") % _ED_L
+    return _ed_compress(_ed_mul(s, _ED_B)) == _ed_compress(_ed_add(R, _ed_mul(k, A)))
+
+def _pae(ptype, payload):
+    return (b"DSSEv1 " + str(len(ptype)).encode() + b" " + ptype +
+            b" " + str(len(payload)).encode() + b" " + payload)
+
+def verify_envelope(env, att, trusted):
+    """-> (status, detail): verified | unverified (no key for signer) |
+    error (binds / signature). Payload MUST equal the Attestation's
+    canonical form; signature input is PAE(payloadType, payload)."""
+    if not isinstance(env, dict):
+        return ("error", "envelope unreadable")
+    if env.get("payloadType") != DSSE_PAYLOAD_TYPE:
+        return ("error", "wrong payloadType")
+    try:
+        payload = base64.b64decode(env.get("payload", ""), validate=True)
+    except Exception:
+        return ("error", "payload is not valid base64")
+    if payload != canonical(att).encode("utf-8"):
+        return ("error", "payload != the Attestation's canonical form (attestation-binds)")
+    key = (trusted or {}).get(att.get("signer"))
+    if key is None:
+        return ("unverified", "no trusted key supplied for the signer")
+    pae = _pae(env["payloadType"].encode(), payload)
+    for sg in env.get("signatures", []) or []:
+        try:
+            if ed25519_verify(bytes.fromhex(key), pae, base64.b64decode(sg.get("sig", ""), validate=True)):
+                return ("verified", "")
+        except Exception:
+            continue
+    return ("error", "no signature verifies under the trusted key (Ed25519)")
+
+# ---------------- bundle-composition engine (gate 4, D3.5 / backlog #18) ----------------
+# "Composing two bundles pinning different minors of one major line resolves
+# deterministically to the highest pinned minor with both payload sets
+# re-validated — incompatibility is a reported error, never a silent pick."
+def _semver(v):
+    m = re.fullmatch(r"(\d+)\.(\d+)\.(\d+)", str(v))
+    return tuple(int(x) for x in m.groups()) if m else None
+
+def compose(a_objs, a_pins, b_objs, b_pins):
+    """objs: [(oid, obj)]; pins: {facet-base-id: {"version", "schema"}}.
+    Returns (resolutions, errors)."""
+    errors, resolutions = [], {}
+    for fid in sorted(set(a_pins) | set(b_pins)):
+        pa, pb = a_pins.get(fid), b_pins.get(fid)
+        if pa and pb:
+            sa, sb = _semver(pa["version"]), _semver(pb["version"])
+            if sa is None or sb is None:
+                errors.append(f"{fid}: non-semver pin ({pa['version']} / {pb['version']}) — the registry policy is semver (D3.5)")
+                continue
+            if sa[0] != sb[0]:
+                errors.append(f"{fid}: major lines {pa['version']} vs {pb['version']} are incompatible (D3.5; reported, never a silent pick)")
+                continue
+            win = pa if sa >= sb else pb
+            resolutions[fid] = win["version"]
+            v = REGISTRY(win.get("schema") or {"type": "object"})
+            for side, objs in (("A", a_objs), ("B", b_objs)):
+                for oid, o in objs:
+                    for key, payload in (o.get("facets") or {}).items():
+                        if key.rsplit("@", 1)[0] == fid:
+                            err = next(iter(v.iter_errors(payload)), None)
+                            if err:
+                                errors.append(f"{fid}: {side} {oid}: payload fails re-validation under the resolved {win['version']}: {err.message[:90]}")
+        else:
+            resolutions[fid] = (pa or pb)["version"]
+    a_ids = {oid: o for oid, o in a_objs}
+    for oid, o in b_objs:
+        if oid in a_ids:
+            oa = a_ids[oid]
+            if oa.get("version") != o.get("version"):
+                errors.append(f"{oid}: composed at two versions ({oa.get('version')} vs {o.get('version')}) — cross-version resolution needs the lineage machinery, REPORTED")
+            elif sdig(oa) != sdig(o):
+                errors.append(f"{oid}: same id + version but DIFFERENT semantic digests — divergent twins (reported, never silently picked)")
+    return resolutions, errors
+
+def _load_compose_side(bdir):
+    m = json.load(open(os.path.join(bdir, "content-manifest.json"), encoding="utf-8"))
+    objs = []
+    for e in m.get("objects", []):
+        o = json.load(open(os.path.join(bdir, e["path"]), encoding="utf-8"))
+        objs.append((o["id"], o))
+    pins = {}
+    for fe in m.get("facet-schemas", []):
+        sd = json.load(open(os.path.join(bdir, fe["path"]), encoding="utf-8"))
+        pins[sd["id"]] = {"version": fe.get("exact-version", sd.get("version")), "schema": sd.get("schema")}
+    return objs, pins
+
+# ---------------- conditional-apply engine (gate 4, B.1.8 / backlog #18) ----------------
+# The one bounded conditional: trigger = exactly one B.2 predicate (≤1
+# reference hop, no nesting on either side); enforcement = one instantiated
+# primitive. Facets instantiate; they never define new computation.
+def _path_get(obj, path, objs):
+    """Dotted kernel-field path; ONE '->' segment may dereference a
+    URI-valued field to another in-bundle object (the ≤1-hop budget)."""
+    hops = path.split("->")
+    if len(hops) > 2:
+        return ("error", f"path '{path}' exceeds the one-hop budget (B.2)")
+    cur = obj
+    for i, seg in enumerate(hops):
+        if i == 1:                       # follow the reference
+            tgt = objs.get(cur) if isinstance(cur, str) else None
+            if tgt is None:
+                return ("error", f"reference hop '{hops[0]}' does not resolve in-bundle")
+            cur = tgt[1]
+        for part in seg.strip().split("."):
+            if not part: continue
+            if isinstance(cur, dict) and part in cur:
+                cur = cur[part]
+            else:
+                return ("absent", None)
+    return ("ok", cur)
+
+def eval_predicate(pred, obj, objs):
+    """-> (verdict, detail): holds | holds-not | error."""
+    kinds = [k for k in ("field-equals", "param-equals", "present") if k in pred]
+    if len(kinds) != 1 or any(k in pred for k in ("and", "or", "not")):
+        return ("error", "trigger must be exactly ONE predicate — no nesting, no boolean composition (B.2)")
+    k = kinds[0]
+    a = pred[k]
+    if k == "field-equals":
+        st, v = _path_get(obj, a["path"], objs)
+        if st == "error": return ("error", v)
+        if st == "absent": return ("holds-not", f"path '{a['path']}' absent")
+        return ("holds" if v == a["value"] else "holds-not",
+                f"path '{a['path']}' = {json.dumps(v)[:40]}, expected {json.dumps(a['value'])[:40]}")
+    if k == "param-equals":
+        for s in obj.get("statements", []) or []:
+            for p in s.get("parameters", []) or []:
+                if p.get("name") == a["name"]:
+                    if "default" not in p:
+                        return ("error", f"parameter '{a['name']}' declared but UNBOUND — its own error via prose-params-resolve, never silently false (B.2)")
+                    return ("holds" if p["default"] == a["value"] else "holds-not",
+                            f"param '{a['name']}' = {json.dumps(p.get('default'))[:40]}")
+        return ("holds-not", f"no parameter '{a['name']}' declared")
+    st, v = _path_get(obj, a["path"], objs)
+    if st == "error": return ("error", v)
+    return ("holds" if st == "ok" else "holds-not", f"path '{a['path']}' {'present' if st == 'ok' else 'absent'}")
+
+def conditional_apply(inst, objs):
+    """B.1.8: enforcement verdict where the trigger holds; no-op elsewhere.
+    Returns error strings in the normative FAIL format."""
+    errs = []
+    enf = inst.get("enforcement", {})
+    prim = enf.get("primitive")
+    for oid, (t, o) in sorted(objs.items()):
+        verdict, why = eval_predicate(inst.get("trigger", {}), o, objs)
+        if verdict == "error":
+            errs.append(f"FAIL [conditional-apply:{inst.get('instance-id')}] on {oid}\n"
+                        f"  trigger: malformed/unevaluable: {why}\n"
+                        f"  rationale: {inst.get('rationale', '(none declared)')}")
+            continue
+        if verdict != "holds":
+            continue
+        detail = None
+        if prim == "param-bounds":
+            decl = {"type": enf.get("type", "integer")}
+            for kk in ("min", "max", "unit", "num", "tightening", "calendar-ref", "choices", "cardinality"):
+                if kk in enf: decl[kk] = enf[kk]
+            found = False
+            for s in o.get("statements", []) or []:
+                for p in s.get("parameters", []) or []:
+                    if p.get("name") == enf.get("parameter") and "default" in p:
+                        found = True
+                        v = param_check(decl, p["default"])
+                        if v != "valid":
+                            detail = f"parameter '{enf.get('parameter')}' value {json.dumps(p['default'])[:40]} outside the enforced bounds ({v})"
+            if not found and enf.get("required", True):
+                detail = f"parameter '{enf.get('parameter')}' not bound on any statement"
+        elif prim == "code-from":
+            st, v = _path_get(o, enf.get("path", ""), objs)
+            if st != "ok" or v not in enf.get("codes", []):
+                detail = f"path '{enf.get('path')}' = {json.dumps(v)[:40] if st == 'ok' else 'absent'} not in the declared code list"
+        else:
+            detail = f"unknown enforcement primitive '{prim}' (the predicates you get are the predicates there are)"
+        if detail:
+            errs.append(f"FAIL [conditional-apply:{inst.get('instance-id')}] on {oid}\n"
+                        f"  trigger: {why} held; enforcement [{prim}] failed: {detail}\n"
+                        f"  rationale: {inst.get('rationale', '(none declared)')}")
+    return errs
 
 def optional_empty_violations(obj, path="$"):
     out = []
@@ -460,6 +728,70 @@ def run_tiers():
         if okv: ok("tier")
         else: fail("tier", f"{case['name']}: expected {case['expected-tier']}/{case['expected']}, got {tier}/{got} ({errs[:1]})")
 
+def run_composition():
+    v = json.load(open(os.path.join(CONF, "composition-vectors.json"), encoding="utf-8"))
+    for case in v["vectors"]:
+        a, b = case["a"], case["b"]
+        res, errs = compose([(o["id"], o) for o in a.get("objects", [])], a.get("pins", {}),
+                            [(o["id"], o) for o in b.get("objects", [])], b.get("pins", {}))
+        okc = True
+        exp = case.get("expected-errors", [])
+        if len(errs) != len(exp):
+            okc = False
+        else:
+            for frag in exp:
+                if not any(frag in e for e in errs): okc = False
+        for fid, ver in (case.get("expected-resolutions") or {}).items():
+            if res.get(fid) != ver: okc = False
+        if okc: ok("composition")
+        else: fail("composition", f"{case['name']}: expected {exp}/{case.get('expected-resolutions')}, "
+                                  f"got {[e[:80] for e in errs]}/{res}")
+
+def run_conditional():
+    v = json.load(open(os.path.join(CONF, "conditional-vectors.json"), encoding="utf-8"))
+    for case in v["vectors"]:
+        objs = {}
+        for o in case["objects"]:
+            t = inferType_single(o)
+            if t: objs[o["id"]] = (t, o)
+        errs = conditional_apply(case["instance"], objs)
+        okc = len(errs) == case.get("expected-fails", 0)
+        for frag in case.get("expected-frags", []):
+            if not any(frag in e for e in errs): okc = False
+        if okc: ok("conditional")
+        else: fail("conditional", f"{case['name']}: expected {case.get('expected-fails')} fails "
+                                  f"{case.get('expected-frags')}, got {len(errs)}: {[e[:90] for e in errs]}")
+
+def run_dsse():
+    v = json.load(open(os.path.join(CONF, "dsse-vectors.json"), encoding="utf-8"))
+    for case in v["vectors"]:
+        objs = {}
+        for o in case["objects"]:
+            t = inferType_single(o)
+            if t: objs[o["id"]] = (t, o)
+        att = next(o for (t, o) in objs.values() if t == "attestation")
+        envs = case.get("envelopes", {})
+        trusted = case.get("trusted-keys", {})
+        env = envs.get(att.get("envelope-ref"))
+        if att.get("envelope-ref") and env is not None:
+            st, why = verify_envelope(env, att, trusted)
+        else:
+            st, why = "absent", ""
+        tobj = next((o for (t, o) in objs.values() if t == "tailoring"), None)
+        tier = derive_tier(tobj, objs, sdig, envelopes=envs, trusted=trusted) if tobj else None
+        okc = True
+        exp_env, exp_tier = case.get("expected-envelope"), case.get("expected-tier")
+        if exp_env is not None:
+            if ":" in exp_env:
+                w, frag = exp_env.split(":", 1)
+                okc = st == w and frag in why
+            else:
+                okc = st == exp_env
+        if okc and exp_tier is not None:
+            okc = tier == exp_tier
+        if okc: ok("dsse")
+        else: fail("dsse", f"{case['name']}: expected {exp_env}/{exp_tier}, got {st}({why[:70]})/{tier}")
+
 def run_lifecycle():
     v = json.load(open(os.path.join(CONF, "lifecycle-vectors.json"), encoding="utf-8"))
     for case in v["deviation-transitions"]:
@@ -605,22 +937,53 @@ def validate_bundle(bdir):
             pinned[sd["id"]] = REGISTRY(sd.get("schema", {"type": "object"}))
         except Exception as e:
             fail(section, f"{fe['path']}: pinned facet schema unreadable: {e}")
-    # reference taxonomy (#16) + facet payloads (#17) + tier duties (#19)
+    # DSSE envelopes (#24): envelope-ref resolves to a file BESIDE the
+    # manifest (nothing signed contains its own signature, D3); with
+    # --trusted-keys the run is in verification mode.
+    envelopes = {}
+    for oid, (t2, o2) in bundle_objs.items():
+        if t2 != "attestation" or not o2.get("envelope-ref"): continue
+        ep = os.path.join(bdir, o2["envelope-ref"])
+        if os.path.exists(ep):
+            try:
+                envelopes[o2["envelope-ref"]] = json.load(open(ep, encoding="utf-8"))
+            except Exception as e:
+                fail(section, f"{o2['envelope-ref']}: envelope unreadable: {e}")
+        else:
+            fail(section, f"{oid}: envelope-ref '{o2['envelope-ref']}' does not resolve beside the manifest")
+    for oid, (t2, o2) in sorted(bundle_objs.items()):
+        if t2 != "attestation": continue
+        if o2.get("envelope-ref"):
+            env = envelopes.get(o2["envelope-ref"])
+            if env is not None:
+                st, why = verify_envelope(env, o2, TRUSTED)
+                tag = {"verified": "signature VERIFIED (Ed25519)",
+                       "unverified": f"signature UNVERIFIED - {why}"}.get(st, f"FAIL - {why}")
+                if st == "error": fail(section, f"{oid}: dsse: {why}")
+                print(f"    dsse: {oid} = {tag}")
+        else:
+            print(f"    dsse: {oid} = no envelope (unsigned attestation)")
+    # reference taxonomy (#16) + facet payloads (#17) + tier duties (#19/#24)
     for e in closure_errors(bundle_objs):
         fail(section, e)
-    for e in tailoring_duty_errors(bundle_objs):
+    for e in tailoring_duty_errors(bundle_objs, envelopes=envelopes, trusted=TRUSTED):
         fail(section, e)
     for e in facet_errors([(oid, o) for oid, (t, o) in bundle_objs.items()], pinned):
         fail(section, e)
     # #24: report the derived Tailoring tier DISTINCTLY (spec:399) — a prefix
-    # claim is an honest-publisher signal, not proof; signature verification of
-    # the proven tier is gate-4 (DSSE engine).
+    # claim is an honest-publisher signal, not proof; in verification mode
+    # (--trusted-keys) proven additionally requires a verifying envelope.
     for tid, (tt, tobj2) in sorted(bundle_objs.items()):
         if tt == "tailoring":
-            tr = derive_tier(tobj2, bundle_objs, sdig)
+            tnotes = []
+            tr = derive_tier(tobj2, bundle_objs, sdig, envelopes=envelopes, trusted=TRUSTED, notes=tnotes)
             note = {"authority-claimed": " [prefix claim - UNPROVEN]",
-                    "authority-proven": " [attestation digest-matched; signature check is gate-4]"}.get(tr, "")
+                    "authority-proven": (" [attestation digest-matched + signature VERIFIED]"
+                                         if TRUSTED is not None else
+                                         " [attestation digest-matched; UNVERIFIED - run with --trusted-keys]")}.get(tr, "")
             print(f"    tier: {tid} = {tr}{note}")
+            for n in tnotes:
+                print(f"          {n}")
     on_disk = set()
     for base, _, files in os.walk(bdir):
         for fn in files:
@@ -643,13 +1006,34 @@ def validate_examples():
     return typec
 
 # ---------------- run ----------------
+# --trusted-keys FILE puts the run in verification mode (#24): a JSON map
+# of signer URI -> Ed25519 public key (hex). Without it, structural mode.
+# --compose DIR_A DIR_B runs the D3.5 composition engine over two bundles.
+TRUSTED = None
+_argv = sys.argv[1:]
+if "--trusted-keys" in _argv:
+    _i = _argv.index("--trusted-keys")
+    TRUSTED = json.load(open(_argv[_i + 1], encoding="utf-8"))
+    _argv = _argv[:_i] + _argv[_i + 2:]
+if "--compose" in _argv:
+    _i = _argv.index("--compose")
+    da, db = _argv[_i + 1], _argv[_i + 2]
+    (ao, ap), (bo, bp) = _load_compose_side(da), _load_compose_side(db)
+    res, errs = compose(ao, ap, bo, bp)
+    print(f"== compose {da} + {db} ==")
+    for fid, ver in sorted(res.items()):
+        print(f"  resolved: {fid} @ {ver}")
+    for e in errs:
+        print(f"  ERROR: {e}")
+    sys.exit(1 if errs else 0)
+
 print("== conformance corpus ==")
-run_jcs(); run_modality(); run_parameters(); run_tailoring(); run_attestation(); run_facets(); run_references(); run_lifecycle(); run_tiers()
-for k in ("jcs", "modality", "parameter", "tailoring", "attestation", "facet", "reference", "lifecycle", "tier"):
+run_jcs(); run_modality(); run_parameters(); run_tailoring(); run_attestation(); run_facets(); run_references(); run_lifecycle(); run_tiers(); run_dsse(); run_composition(); run_conditional()
+for k in ("jcs", "modality", "parameter", "tailoring", "attestation", "facet", "reference", "lifecycle", "tier", "dsse", "composition", "conditional"):
     print(f"  {k}: {counts[k]} pass, {counts[k + ':FAIL']} fail")
 
 print("== bundles ==")
-targets = sys.argv[1:]
+targets = _argv
 if not targets:
     ce = os.path.join(ROOT, "converted_examples")
     targets = []
