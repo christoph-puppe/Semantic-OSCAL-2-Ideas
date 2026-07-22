@@ -63,7 +63,7 @@ type-specific fields —
 | `integer` | `min?`, `max?` | ODP bounds. |
 | `decimal` | canonical **string** value, `min?`, `max?` | JCS float hazard (D3). |
 | `elapsed-duration` | `num` ●, `unit` ● ∈ seconds·minutes·hours | CR26 clocks that run through weekends. |
-| `calendar-period` | `num` ●, `unit` ● ∈ days·bizdays·weeks·months·years, `calendar-ref` ● | CR26 bizdays; fail-closed without the calendar. True unit-class crossings measured: **0** (51 first-pass flags were base-absent variants → D13 ceremony question). |
+| `calendar-period` | `num` ●, `unit` ● ∈ days·bizdays·weeks·months·years, `calendar-ref` ● | CR26 bizdays; fail-closed without the calendar. True unit-class crossings measured: **0** (51 first-pass flags were base-absent variants, resolved by the D13 rev — authority-tier ceremony; duration-union question closed no-change, backlog #3). |
 | `uri`, `date` | — | declared; not yet corpus-exercised. |
 
 Any parameter may declare `tightening` ∈ lower · higher · none —

@@ -8,7 +8,6 @@ decision recorded in the register.
 
 | # | Item | Evidence | Proposed disposition | Source |
 |---|---|---|---|---|
-| 3 | **D9: duration-union question — DEMOTED.** Initially flagged as 51 unit-class crossings; refined counting found 0 true crossings (all base-absent → item 2). | 0 measured crossings | Close unless new corpus evidence arrives; keep the unit-class boundary strict | CR26 converter (self-correction) |
 | 6 | **Terminology hosting shape.** Converter hosts the glossary on the corpus root Set (`glossary-info` block); alternative: a dedicated carrier object. | 75 terms / 188 aliases / 264 refs, all resolving | Decide root-hosting vs. carrier at schema time (gate 2); either way, document | CR26 converter |
 | 8 | **Declaration audit promotions.** Shipped stubs declare `[]` conservatively; corpora argue for: security-objectives → `[selection]`?, effectivity → `[selection]`?, reporting-obligation → `[assessment]`? (`cr26/scope@1` is the exemplar that already earns `[selection]`.) | App. D.12 table | Decide per facet with the normative schemas (gate 2) | App. D audit |
 | 9 | **Seed code-set confirmation.** Finding states and assessment results are deliberately small seed sets. | Lifecycle corpus pending | Confirm/extend with gate-3 evidence; resist state-zoo growth | App. C.3/C.10 |
@@ -23,8 +22,11 @@ rev (Deviation duties bind at consumption tier; authority Tailorings
 exempt; `variants` carrier rejected via the D22 bar) · **#4** → **D22**
 (kernel promotion rule normative) · **#5** → D20/D21 rev (supplement
 pattern named; `supplements` stdlib relationship extension code) ·
-**#7** → D10 rev (`by-statement` keying normative). Numbering stays
-stable — closed numbers are not reused.
+**#7** → D10 rev (`by-statement` keying normative) · **#3** → closed
+no-change (D9 closure note: 0 true unit-class crossings measured — the
+51 first-pass flags were base-absent variants, resolved under #2's D13
+rev; the elapsed/calendar unit-class boundary stays strict). Numbering
+stays stable — closed numbers are not reused.
 
 **Standing rule for this file:** items enter with counts, leave with
 register entries. An item that can neither be evidenced nor closed
