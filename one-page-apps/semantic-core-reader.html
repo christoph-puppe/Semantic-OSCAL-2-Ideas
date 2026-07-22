@@ -151,6 +151,29 @@ table.flat tr:hover td{background:var(--bg-elev-1)}
 .diffrow{display:grid;grid-template-columns:1fr 24px 1fr;gap:6px;align-items:center}
 .kanban{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .kanban .col{border:1px solid var(--border-1);border-radius:10px;padding:10px;background:var(--bg-elev-1)}
+/* workbench */
+.wb{border:1px solid var(--border-2);border-radius:12px;padding:14px 16px;margin-bottom:16px;background:oklch(0.7 0.18 300 / 0.05)}
+.wb .nano{color:var(--accent)}
+.wbrow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}
+.wbrow label{font-size:11px;color:var(--text-tertiary)}
+.wbrow input[type=text],.wbrow select{width:auto;min-width:120px}
+select{font:inherit;color:var(--text-primary);background:var(--bg-elev-2);border:1px solid var(--border-2);border-radius:9px;padding:7px 10px;outline:none}
+select:focus{border-color:var(--accent)}
+select option{background:oklch(0.18 0.02 280)}
+.picker{position:relative;flex:1;min-width:220px}
+.sugg{position:absolute;top:100%;left:0;right:0;z-index:30;background:oklch(0.18 0.02 280);border:1px solid var(--border-2);border-radius:9px;max-height:240px;overflow-y:auto;box-shadow:0 10px 30px oklch(0 0 0/.5)}
+.sugg div{padding:6px 10px;cursor:pointer;font-size:12px}
+.sugg div:hover{background:var(--accent-soft)}
+.sugg .s{font-family:'JetBrains Mono',monospace;font-size:9.5px;color:var(--text-quiet)}
+.seg{display:inline-flex;border:1px solid var(--border-2);border-radius:9px;overflow:hidden}
+.seg button{border:none;border-radius:0;padding:5px 11px;font-size:11.5px;background:transparent}
+.seg button.on-sat{background:oklch(0.75 0.18 145/.25);color:var(--green)}
+.seg button.on-not{background:oklch(0.65 0.2 25/.25);color:var(--red)}
+.seg button.on-inc{background:oklch(0.80 0.15 80/.25);color:var(--amber)}
+.wbchip{display:inline-flex;align-items:center;gap:7px;padding:3px 9px;border-radius:999px;border:1px solid var(--border-2);font-size:11.5px;margin:2px 4px 2px 0}
+.wbchip .x{cursor:pointer;color:var(--text-quiet)}
+.wbchip .x:hover{color:var(--red)}
+.devbox{border:1px dashed var(--amber);border-radius:9px;padding:10px;margin:8px 0;background:oklch(0.8 0.15 80/.06)}
 /* progress + log */
 .progress-track{height:2px;background:var(--border-1);overflow:hidden;border-radius:1px;margin-top:8px}
 .progress-fill{height:100%;background:var(--accent);width:0%;transition:width .2s ease}
@@ -178,7 +201,7 @@ svg text{font-family:'JetBrains Mono',monospace}
     <div class="pill" id="pill-bundle">no bundle loaded</div>
     <div class="pill hidden" id="pill-verify"></div>
     <div style="flex:1"></div>
-    <div class="pill">v1.1.0 · build 2026-07-21</div>
+    <div class="pill">v1.2.0 · build 2026-07-21</div>
   </div>
 
   <div id="mid">
@@ -325,6 +348,7 @@ svg text{font-family:'JetBrains Mono',monospace}
 "use strict";
 const $ = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const slug = s => String(s || "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 60) || "x";
 
 /* ---------- log ---------- */
 const l = (() => {
@@ -979,7 +1003,8 @@ function renderStageAuthor() {
 /* S2 · Tailor: run the Appendix-B resolution */
 function renderStageTailor() {
   const ts = [...state.objects.values()].filter(r => r.type === "tailoring");
-  if (!ts.length) return stageHead("tailor") + stageEmpty("tailor", "Catalog bundles usually carry authority class-tailorings only when the source publishes variants (CR26 does).");
+  if (!ts.length) return stageHead("tailor") + wbTailorHtml() +
+    `<p class="hint">No published Tailorings in this bundle yet — author one above; “Add to graph” drops it straight into the resolver.</p>`;
   const pick = state.stageSel?.tailor || ts[0].obj.id;
   const picker = `<div class="filterrow">${ts.map(t =>
     `<span class="fpill ${t.obj.id === pick ? "on" : ""}" data-tsel="${esc(t.obj.id)}">${TYPES.tailoring.glyph} ${esc(t.obj.label || t.obj.title || t.obj.id.split("/").pop())}</span>`).join("")}</div>`;
@@ -1021,7 +1046,7 @@ function renderStageTailor() {
     const stmt = state.objects.get(op["requirement-ref"])?.obj.statements?.find(s => s.id === op["statement-id"]);
     return stmt && modalityVerdict(stmt.modality, op.modality) !== "monotone";
   }).length;
-  return stageHead("tailor") + picker +
+  return stageHead("tailor") + wbTailorHtml() + picker +
     `<div style="margin:6px 0 10px">
       <div class="chip"><b>${selected.size}</b> requirements selected${predN ? ` <span class="hint">(+${predN} predicate selects, not evaluated here)</span>` : ""}</div>
       <div class="chip"><b>${(o.excludes || []).length}</b> excluded <span class="hint">— selection, never weakening</span></div>
@@ -1072,7 +1097,8 @@ function renderStageImplement() {
   const comps = [...state.objects.values()].filter(r => r.type === "component");
   const impls = [...state.objects.values()].filter(r => r.type === "implementation");
   if (!comps.length && !impls.length)
-    return stageHead("implement") + stageEmpty("implement", "Catalog bundles never carry this stage — open the skill's <span class='mono'>semantic-oscal/examples/</span> folder to see it live.");
+    return stageHead("implement") + wbImplementHtml() +
+      `<p class="hint">No Components / Implementations in this bundle — build your system above; “Add system to graph” makes it browsable and assessable.</p>`;
   const authIds = new Map();  // authorization id -> component id
   comps.forEach(c => (c.obj.authorizations || []).forEach(a => authIds.set(a.id, c.obj.id)));
   const compCards = comps.map(c => `<div class="stmt">
@@ -1099,7 +1125,7 @@ function renderStageImplement() {
       <td><span class="badge">${esc(o.status)}</span></td>
       <td><a class="reflink" data-ref="${esc(o.id)}">⋯</a></td></tr>`;
   }).join("");
-  return stageHead("implement") +
+  return stageHead("implement") + wbImplementHtml() +
     `<div class="nano sectionlabel">Components (${comps.length})</div>${compCards || '<span class="hint">none</span>'}
      <div class="nano sectionlabel">Implementation edges (${impls.length}) — every inherited edge must name its authorization basis (D5); ✓/✗ shows whether the basis resolves in this bundle</div>
      ${impls.length ? `<table class="flat"><tr><th>component</th><th>requirement · clause</th><th>responsibility</th><th>satisfied by</th><th>status</th><th></th></tr>${implRows}</table>` : '<span class="hint">none</span>'}`;
@@ -1138,7 +1164,8 @@ function renderStageAssess() {
   const finds = [...state.objects.values()].filter(r => r.type === "finding");
   const atts = [...state.objects.values()].filter(r => r.type === "attestation");
   if (!asmts.length && !finds.length && !atts.length)
-    return stageHead("assess") + stageEmpty("assess", "Catalog bundles never carry this stage — open the skill's <span class='mono'>semantic-oscal/examples/</span> folder to see it live.");
+    return stageHead("assess") + wbAssessHtml() +
+      `<p class="hint">No Assessments / Findings / Attestations in this bundle yet — run a check above; generated objects land on the board here.</p>`;
   const RESULT_C = { satisfied: "var(--green)", "not-satisfied": "var(--red)", inconclusive: "var(--amber)" };
   const aCards = asmts.map(a => `<div class="stmt">
     <span class="badge" style="border-color:${RESULT_C[a.obj.result] || "var(--border-2)"};color:${RESULT_C[a.obj.result] || "inherit"}">${esc(a.obj.result)}</span>
@@ -1161,10 +1188,432 @@ function renderStageAssess() {
     <span class="hint">signer ${esc((a.obj.signer || "").split("/").pop())} · ${esc(a.obj.timestamp || "")}</span>
     <div style="margin-top:6px"><button class="primary" data-att="${esc(a.obj.id)}">◉ Verify bi-modal</button>
     <span class="hint"> Full Match = bytes as signed · Semantic Match = meaning intact through repackaging · Tamper = meaning changed</span></div></div>`).join("");
-  return stageHead("assess") +
+  return stageHead("assess") + wbAssessHtml() +
     (asmts.length ? `<div class="nano sectionlabel">Assessments (${asmts.length})</div>${aCards}` : "") +
     (finds.length ? `<div class="nano sectionlabel">Findings (${finds.length}) — dispositions are Deviations, deadlines live in actions[].due</div>${kanban}` : "") +
     (atts.length ? `<div class="nano sectionlabel">Attestations (${atts.length})</div>${attCards}` : "");
+}
+
+/* ---------- workbench: author your own objects ---------- */
+const work = (() => {
+  try { return JSON.parse(localStorage.getItem("scr-work")) || null; } catch {} return null;
+})() || { ns: "https://example.org/my", tailor: { label: "my-tailoring", selects: [], excludes: [], operations: [] },
+          system: { title: "My System", components: [], implementations: [] },
+          assess: { scopeKey: "", performer: "assessor", results: {} }, _draft: {} };
+work._draft = work._draft || {};
+function saveWork() { const d = work._draft; work._draft = {}; localStorage.setItem("scr-work", JSON.stringify(work)); work._draft = d; }
+function mintId(kind, name) { return work.ns.replace(/\/$/, "") + "/" + kind + "/" + slug(name); }
+function today() { return new Date().toISOString().slice(0, 10); }
+function download(name, obj) {
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([JSON.stringify(obj, null, 1) + "\n"], { type: "application/json" }));
+  a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+  l.ok("downloaded " + name);
+}
+async function downloadMany(objs) { for (const o of objs) { download(slug(o.id.split("/").slice(-2).join("-")) + ".json", o); await new Promise(r => setTimeout(r, 250)); } }
+function addToGraph(objs) {
+  for (const o of objs) {
+    const t = inferType(o);
+    if (!t) { l.err("workspace object has no inferable type: " + o.id); continue; }
+    state.objects.set(o.id, { obj: o, path: "(workspace)", type: t, entry: null });
+    if (!state.order.includes(o.id)) state.order.push(o.id);
+    l.ok(`added to graph as ${t}: ${o.id}`);
+  }
+  renderAll();
+}
+function deviationFromDraft(d) {
+  return { type: d.devType || "risk-adjustment", state: "pending", rationale: d.devRationale,
+           "approver-ref": work.ns.replace(/\/$/, "") + "/party/" + slug(d.devApprover || "approver"), opened: today() };
+}
+function buildTailoringObject() {
+  const t = work.tailor;
+  return { id: mintId("tailoring", t.label || "my-tailoring"), version: "1", label: t.label,
+    lifecycle: "draft", title: t.label,
+    selects: t.selects.map(s => ({ "set-ref": s })),
+    ...(t.excludes.length ? { excludes: t.excludes.map(e => ({ ref: e })) } : {}),
+    operations: t.operations.map(o => JSON.parse(JSON.stringify(o))) };
+}
+function paramVerdict(p, value) {   // mirrors the conformance parameter law
+  if (!p) return { v: "invalid", why: "no parameter selected" };
+  if (p.type === "choice") {
+    const ok = (p.choices || []).some(c => c.value === value);
+    return ok ? { v: "valid" } : { v: "deviation-required", why: "value outside declared choices (the md5-evasion rule)" };
+  }
+  if (p.type === "integer") {
+    const n = Number(value);
+    if (!Number.isInteger(n)) return { v: "invalid", why: "not an integer" };
+    if ((p.min !== undefined && n < p.min) || (p.max !== undefined && n > p.max))
+      return { v: "deviation-required", why: "out of declared bounds" };
+    return { v: "valid", value: n };
+  }
+  if (p.type === "elapsed-duration" || p.type === "calendar-period") {
+    const num = Number(value.num), unit = value.unit;
+    const cls = p.type === "elapsed-duration" ? ["seconds","minutes","hours"] : ["days","bizdays","weeks","months","years"];
+    if (!cls.includes(unit)) return { v: "invalid", why: "unit-class crossing — elapsed vs calendar is a semantic boundary (C.9)" };
+    if (!(num > 0)) return { v: "invalid", why: "num must be positive" };
+    if (p.tightening === "lower" && p.unit === unit && p.num !== undefined && num > p.num)
+      return { v: "deviation-required", why: `easing against tightening:lower (base ${p.num} ${p.unit})` };
+    return { v: "valid", value: { num, unit } };
+  }
+  return { v: "valid", value };
+}
+function targetKey(op) { return [op["requirement-ref"], op["statement-id"], op.parameter, op.field, op.facet].join("|"); }
+
+function pickerHtml(id, placeholder) {
+  return `<span class="picker"><input type="text" id="${id}" placeholder="${esc(placeholder)}" autocomplete="off"><div class="sugg hidden" id="${id}-sugg"></div></span>`;
+}
+function wirePicker(el, id, types, onPick) {
+  const inp = el.querySelector("#" + id), sugg = el.querySelector("#" + id + "-sugg");
+  if (!inp) return;
+  inp.oninput = () => {
+    const q = inp.value.toLowerCase();
+    if (q.length < 2) { sugg.classList.add("hidden"); return; }
+    const hits = state.order.map(i => state.objects.get(i)).filter(r => r && types.includes(r.type) &&
+      (r.obj.id.toLowerCase().includes(q) || (r.obj.label || "").toLowerCase().includes(q) || (r.obj.title || "").toLowerCase().includes(q))).slice(0, 12);
+    sugg.innerHTML = hits.map(r => `<div data-pick="${esc(r.obj.id)}"><span style="color:${TYPES[r.type].color}">${TYPES[r.type].glyph}</span> ${esc(r.obj.label || r.obj.title || r.obj.id)}<div class="s">${esc(r.obj.id)}</div></div>`).join("") || `<div class="s" style="padding:6px 10px">no match</div>`;
+    sugg.classList.remove("hidden");
+    sugg.querySelectorAll("[data-pick]").forEach(d => d.onclick = () => { sugg.classList.add("hidden"); inp.value = ""; onPick(d.dataset.pick); });
+  };
+  inp.onblur = () => setTimeout(() => sugg.classList.add("hidden"), 250);
+}
+
+/* Tailor workbench */
+function wbTailorHtml() {
+  const t = work.tailor, d = work._draft;
+  const scope = new Set(); t.selects.forEach(s => expandSet(s).forEach(id => scope.add(id)));
+  t.excludes.forEach(e => scope.delete(e));
+  const req = d.opReq ? state.objects.get(d.opReq) : null;
+  const stmt = req?.obj.statements?.find(s => s.id === (d.opStmt || req.obj.statements[0].id));
+  const opType = d.opType || "set-modality";
+  let payloadUi = "", verdictUi = "", needDev = false;
+  if (req && stmt) {
+    if (opType === "set-modality") {
+      const to = d.opModality || stmt.modality;
+      const v = modalityVerdict(stmt.modality, to);
+      needDev = v !== "monotone";
+      payloadUi = `<label>new modality</label><select id="wb-t-mod">${Object.keys(MODALITY_COLORS).map(m => `<option ${m === to ? "selected" : ""}>${m}</option>`).join("")}</select>`;
+      verdictUi = `${modBadge(stmt.modality)} ▶ ${modBadge(to)} <span class="${VERDICT_CLS[v]}">${v}</span>`;
+    } else if (opType === "set-parameter") {
+      const params = stmt.parameters || [];
+      const p = params.find(x => x.name === d.opParam) || params[0];
+      if (!p) payloadUi = `<span class="hint">this statement declares no parameters</span>`;
+      else {
+        payloadUi = `<label>parameter</label><select id="wb-t-param">${params.map(x => `<option ${x.name === p.name ? "selected" : ""}>${x.name}</option>`).join("")}</select>`;
+        if (p.type === "choice")
+          payloadUi += `<label>value</label><select id="wb-t-val">${(p.choices || []).map(c => `<option ${d.opVal === c.value ? "selected" : ""}>${esc(c.value)}</option>`).join("")}<option value="__other__" ${d.opVal === "__other__" ? "selected" : ""}>other…</option></select>` +
+            (d.opVal === "__other__" ? `<input type="text" id="wb-t-valx" placeholder="custom value" value="${esc(d.opValX || "")}" style="width:130px">` : "");
+        else if (p.type === "elapsed-duration" || p.type === "calendar-period") {
+          const cls = p.type === "elapsed-duration" ? ["seconds","minutes","hours"] : ["days","bizdays","weeks","months","years"];
+          payloadUi += `<label>num</label><input type="text" id="wb-t-num" value="${esc(d.opNum ?? p.num ?? "")}" style="width:70px">
+            <label>unit</label><select id="wb-t-unit">${cls.map(u => `<option ${(d.opUnit || p.unit) === u ? "selected" : ""}>${u}</option>`).join("")}</select>
+            <span class="hint">base ${p.num} ${p.unit}${p.tightening ? " · tightening " + p.tightening : ""}</span>`;
+        } else payloadUi += `<label>value</label><input type="text" id="wb-t-val" value="${esc(d.opVal || "")}" style="width:150px">`;
+        const candidate = p.type === "choice" ? (d.opVal === "__other__" ? d.opValX : (d.opVal ?? (p.choices || [])[0]?.value))
+          : (p.type === "elapsed-duration" || p.type === "calendar-period") ? { num: d.opNum ?? p.num, unit: d.opUnit || p.unit } : d.opVal;
+        const pv = paramVerdict(p, candidate);
+        needDev = pv.v === "deviation-required";
+        verdictUi = pv.v === "valid" ? `<span class="verdict-ok">within declared bounds</span>` :
+          pv.v === "deviation-required" ? `<span class="verdict-warn">${esc(pv.why)}</span>` : `<span class="verdict-bad">INVALID: ${esc(pv.why)}</span>`;
+      }
+    } else if (opType === "replace-prose") {
+      needDev = (d.opIntent || "editorial") === "substantive";
+      payloadUi = `<label>lang</label><input type="text" id="wb-t-lang" value="${esc(d.opLang || Object.keys(stmt.prose)[0] || "en")}" style="width:52px">
+        <label>intent</label><select id="wb-t-intent"><option ${d.opIntent !== "substantive" ? "selected" : ""}>editorial</option><option ${d.opIntent === "substantive" ? "selected" : ""}>substantive</option></select>
+        <textarea id="wb-t-prose" style="min-height:70px;flex-basis:100%">${esc(d.opProse ?? Object.values(stmt.prose)[0] ?? "")}</textarea>`;
+      verdictUi = needDev ? `<span class="verdict-warn">substantive ⇒ Deviation (author's declaration is what gets audited)</span>` : `<span class="verdict-ok">editorial — free</span>`;
+    }
+  }
+  const devUi = needDev ? `<div class="devbox"><span class="nano" style="color:var(--amber)">Deviation required — the audited weakening channel</span>
+      <div class="wbrow"><label>type</label><select id="wb-t-devtype">${["risk-adjustment","operational-requirement","false-positive","vendor-dependency","derogation"].map(x => `<option ${d.devType === x ? "selected" : ""}>${x}</option>`).join("")}</select>
+      <label>approver</label><input type="text" id="wb-t-devappr" value="${esc(d.devApprover || "ciso")}" style="width:110px">
+      <input type="text" id="wb-t-devrat" placeholder="rationale (required)" value="${esc(d.devRationale || "")}" style="flex:1;min-width:200px"></div></div>` : "";
+  const opsList = t.operations.map((o, i) => `<div class="wbchip">
+      <span class="badge" style="border-color:var(--amber);color:var(--amber)">${esc(o.op)}</span>
+      ${esc((state.objects.get(o["requirement-ref"])?.obj.label) || o["requirement-ref"].split("/").pop())}${o["statement-id"] ? " · " + esc(o["statement-id"]) : ""}
+      ${o.modality ? "→ " + esc(o.modality) : ""}${o.parameter ? "⚙ " + esc(o.parameter) + "=" + esc(JSON.stringify(o.value)) : ""}
+      ${o.deviation ? `<span class="verdict-warn">⚑</span>` : ""}
+      <span class="x" data-delop="${i}">✕</span></div>`).join("");
+  return `<div class="wb"><div class="nano" style="margin-bottom:8px">Workbench — author a Tailoring</div>
+    <div class="wbrow"><label>namespace</label><input type="text" id="wb-ns" value="${esc(work.ns)}" style="min-width:230px">
+      <label>label</label><input type="text" id="wb-t-label" value="${esc(t.label)}" style="width:150px"></div>
+    <div class="wbrow"><label>select set</label>${pickerHtml("wb-t-selpick", "type to add a Set to selects…")}
+      <span class="chip"><b>${scope.size}</b> requirements in scope</span></div>
+    <div>${t.selects.map(s => `<span class="wbchip">▣ ${esc((state.objects.get(s)?.obj.title) || s)}<span class="x" data-delsel="${esc(s)}">✕</span></span>`).join("") || '<span class="hint">no selects yet — pick a Set (a baseline, a chapter, the root)</span>'}</div>
+    <div class="wbrow"><label>exclude</label>${pickerHtml("wb-t-expick", "type to exclude a requirement (selection, never weakening)…")}</div>
+    <div>${t.excludes.map(e => `<span class="wbchip">⊖ ${esc((state.objects.get(e)?.obj.label) || e)}<span class="x" data-delex="${esc(e)}">✕</span></span>`).join("")}</div>
+    <div class="wbrow" style="border-top:1px solid var(--border-1);padding-top:10px"><label>operation on</label>${pickerHtml("wb-t-reqpick", "type to pick a requirement…")}
+      ${req ? `<span class="wbchip">◇ ${esc(req.obj.label || req.obj.id)}</span>
+        <label>stmt</label><select id="wb-t-stmt">${req.obj.statements.map(s => `<option ${s.id === (d.opStmt || req.obj.statements[0].id) ? "selected" : ""}>${esc(s.id)}</option>`).join("")}</select>
+        <label>op</label><select id="wb-t-op">${["set-modality","set-parameter","replace-prose"].map(o => `<option ${o === opType ? "selected" : ""}>${o}</option>`).join("")}</select>` : ""}</div>
+    ${req ? `<div class="wbrow">${payloadUi}</div><div class="wbrow">${verdictUi}</div>${devUi}
+      <div class="wbrow"><button class="primary" id="wb-t-add">＋ Add operation</button><span class="hint" id="wb-t-err"></span></div>` : ""}
+    <div style="margin-top:8px">${opsList || '<span class="hint">no operations yet</span>'}</div>
+    <div class="wbrow" style="border-top:1px solid var(--border-1);padding-top:10px">
+      <button class="primary" id="wb-t-graph">◬ Add to graph &amp; resolve</button>
+      <button id="wb-t-dl">⤓ Download tailoring JSON</button>
+      <button id="wb-t-clear">✕ Clear workbench</button></div></div>`;
+}
+function wireTailorWb(el) {
+  const d = work._draft;
+  const rerender = () => { saveWork(); renderStageFn("tailor"); };
+  const bind = (id, key, ev = "onchange") => { const x = el.querySelector("#" + id); if (x) x[ev] = () => { d[key] = x.value; rerender(); }; };
+  const binput = (id, fn) => { const x = el.querySelector("#" + id); if (x) x.onchange = () => { fn(x.value); saveWork(); }; };
+  binput("wb-ns", v => work.ns = v.trim() || work.ns);
+  binput("wb-t-label", v => work.tailor.label = v.trim() || work.tailor.label);
+  wirePicker(el, "wb-t-selpick", ["requirementSet"], id => { if (!work.tailor.selects.includes(id)) work.tailor.selects.push(id); rerender(); });
+  wirePicker(el, "wb-t-expick", ["requirement"], id => { if (!work.tailor.excludes.includes(id)) work.tailor.excludes.push(id); rerender(); });
+  wirePicker(el, "wb-t-reqpick", ["requirement"], id => { d.opReq = id; d.opStmt = null; rerender(); });
+  el.querySelectorAll("[data-delsel]").forEach(x => x.onclick = () => { work.tailor.selects = work.tailor.selects.filter(s => s !== x.dataset.delsel); rerender(); });
+  el.querySelectorAll("[data-delex]").forEach(x => x.onclick = () => { work.tailor.excludes = work.tailor.excludes.filter(s => s !== x.dataset.delex); rerender(); });
+  el.querySelectorAll("[data-delop]").forEach(x => x.onclick = () => { work.tailor.operations.splice(+x.dataset.delop, 1); rerender(); });
+  bind("wb-t-stmt", "opStmt"); bind("wb-t-op", "opType"); bind("wb-t-mod", "opModality");
+  bind("wb-t-param", "opParam"); bind("wb-t-val", "opVal"); bind("wb-t-valx", "opValX");
+  bind("wb-t-num", "opNum"); bind("wb-t-unit", "opUnit");
+  bind("wb-t-lang", "opLang"); bind("wb-t-intent", "opIntent");
+  const pr = el.querySelector("#wb-t-prose"); if (pr) pr.onchange = () => { d.opProse = pr.value; saveWork(); };
+  ["wb-t-devtype","wb-t-devappr","wb-t-devrat"].forEach((id, i) => {
+    const x = el.querySelector("#" + id);
+    if (x) x.onchange = () => { d[["devType","devApprover","devRationale"][i]] = x.value; saveWork(); };
+  });
+  const add = el.querySelector("#wb-t-add");
+  if (add) add.onclick = () => {
+    const err = el.querySelector("#wb-t-err");
+    const req = state.objects.get(d.opReq); if (!req) return;
+    const sid = d.opStmt || req.obj.statements[0].id;
+    const stmt = req.obj.statements.find(s => s.id === sid);
+    const opType2 = d.opType || "set-modality";
+    const op = { op: opType2, "requirement-ref": d.opReq, "statement-id": sid };
+    let needDev = false;
+    if (opType2 === "set-modality") {
+      op.modality = d.opModality || stmt.modality;
+      needDev = modalityVerdict(stmt.modality, op.modality) !== "monotone";
+    } else if (opType2 === "set-parameter") {
+      const p = (stmt.parameters || []).find(x => x.name === d.opParam) || (stmt.parameters || [])[0];
+      if (!p) { err.textContent = "statement has no parameters"; return; }
+      op.parameter = p.name;
+      const candidate = p.type === "choice" ? (d.opVal === "__other__" ? d.opValX : (d.opVal ?? (p.choices || [])[0]?.value))
+        : (p.type === "elapsed-duration" || p.type === "calendar-period") ? { num: Number(d.opNum ?? p.num), unit: d.opUnit || p.unit } : d.opVal;
+      const pv = paramVerdict(p, candidate);
+      if (pv.v === "invalid") { err.textContent = "INVALID: " + pv.why + " — hard error, not even a Deviation helps"; return; }
+      op.value = pv.value ?? candidate; needDev = pv.v === "deviation-required";
+    } else if (opType2 === "replace-prose") {
+      if (!d.opProse) { err.textContent = "prose required"; return; }
+      op.prose = { [d.opLang || "en"]: d.opProse }; op.intent = d.opIntent || "editorial";
+      needDev = op.intent === "substantive";
+    }
+    const key = targetKey(op);
+    if (work.tailor.operations.some(o => targetKey(o) === key)) {
+      err.textContent = "same-target conflict — two operations on one target in one Tailoring is a validation error; chain Tailorings to override"; return;
+    }
+    if (needDev) {
+      if (!d.devRationale) { err.textContent = "this is a weakening — Deviation rationale required (or it stays blocked at consumer tier)"; return; }
+      op.deviation = deviationFromDraft(d);
+    }
+    work.tailor.operations.push(op);
+    d.devRationale = ""; err.textContent = "";
+    l.ok(`op added: ${op.op} on ${op["requirement-ref"].split("/").pop()}/${sid}${op.deviation ? " (with Deviation)" : ""}`);
+    rerender();
+  };
+  const g = el.querySelector("#wb-t-graph");
+  if (g) g.onclick = () => {
+    if (!work.tailor.selects.length) { l.warn("add at least one select first"); return; }
+    const obj = buildTailoringObject();
+    addToGraph([obj]);
+    state.stageSel = state.stageSel || {}; state.stageSel.tailor = obj.id;
+    renderStageFn("tailor");
+  };
+  const dl = el.querySelector("#wb-t-dl"); if (dl) dl.onclick = () => download(slug(work.tailor.label) + ".json", buildTailoringObject());
+  const cl = el.querySelector("#wb-t-clear"); if (cl) cl.onclick = () => { work.tailor = { label: "my-tailoring", selects: [], excludes: [], operations: [] }; work._draft = {}; rerender(); };
+}
+
+/* Implement workbench: system with assets carrying controls */
+function wbImplementHtml() {
+  const s = work.system, d = work._draft;
+  const KINDS = ["system","service","software","hardware","policy","process"];
+  const comps = s.components.map((c, ci) => {
+    const edges = s.implementations.filter(i => i["component-ref"] === c.id);
+    return `<div class="stmt"><span class="badge" style="border-color:${TYPES.component.color};color:${TYPES.component.color}">⬡ ${esc(c.kind)}</span>
+      <b>${esc(c.title)}</b> <span class="mono" style="font-size:9.5px;color:var(--text-quiet)">${esc(c.id)}</span>
+      <span class="x wbchip" data-delcomp="${ci}" style="float:right">✕ remove</span>
+      <div class="wbrow"><label>attach control</label>${pickerHtml("wb-i-pick-" + ci, "requirement or Set (bulk)…")}
+        <label>responsibility</label><select id="wb-i-resp-${ci}">${["provider","customer","shared","inherited"].map(r => `<option ${d["resp" + ci] === r ? "selected" : ""}>${r}</option>`).join("")}</select>
+        <label>status</label><select id="wb-i-stat-${ci}">${["planned","partial","implemented","not-applicable"].map(r => `<option ${d["stat" + ci] === r ? "selected" : ""}>${r}</option>`).join("")}</select></div>
+      ${edges.map(e => `<div class="wbchip">◇ ${esc((state.objects.get(e["requirement-ref"])?.obj.label) || e["requirement-ref"].split("/").pop())}
+        <span class="badge">${esc(e.responsibility)}</span><span class="badge">${esc(e.status)}</span>
+        <span class="x" data-delimpl="${esc(e.id)}">✕</span></div>`).join("") || '<span class="hint">no controls attached yet</span>'}
+    </div>`;
+  }).join("");
+  return `<div class="wb"><div class="nano" style="margin-bottom:8px">Workbench — build a system of assets that carry controls</div>
+    <div class="wbrow"><label>system title</label><input type="text" id="wb-i-title" value="${esc(s.title)}" style="min-width:180px">
+      <label>new asset</label><input type="text" id="wb-i-ctitle" placeholder="asset title…" value="${esc(d.cTitle || "")}" style="min-width:160px">
+      <select id="wb-i-ckind">${KINDS.map(k => `<option ${d.cKind === k ? "selected" : ""}>${k}</option>`).join("")}</select>
+      <button class="primary" id="wb-i-addcomp">＋ Add asset</button></div>
+    ${comps || '<span class="hint">no assets yet — add a server, a service, a policy…</span>'}
+    <div class="wbrow" style="border-top:1px solid var(--border-1);padding-top:10px">
+      <span class="chip"><b>${s.components.length}</b> assets</span>
+      <span class="chip"><b>${s.implementations.length}</b> implementation edges</span>
+      <button class="primary" id="wb-i-graph">⬡ Add system to graph</button>
+      <button id="wb-i-dl">⤓ Download objects (${s.components.length + s.implementations.length + 1} files)</button>
+      <button id="wb-i-clear">✕ Clear</button></div></div>`;
+}
+function buildSystemObjects() {
+  const s = work.system;
+  const sysSet = { id: mintId("set", s.title), version: "1", lifecycle: "draft", title: s.title,
+    members: s.components.map((c, i) => ({ ref: c.id, sequence: (i + 1) * 10 })) };
+  const comps = s.components.map(c => ({ id: c.id, version: "1", lifecycle: "draft", title: c.title, kind: c.kind }));
+  const impls = s.implementations.map(e => ({ id: e.id, version: "1", lifecycle: "draft",
+    "component-ref": e["component-ref"], "requirement-ref": e["requirement-ref"],
+    responsibility: e.responsibility, "satisfied-by": [{ "capability-ref": "declared" }], status: e.status }));
+  return [...comps, ...impls, sysSet];
+}
+function wireImplementWb(el) {
+  const d = work._draft;
+  const rerender = () => { saveWork(); renderStageFn("implement"); };
+  const ti = el.querySelector("#wb-i-title"); if (ti) ti.onchange = () => { work.system.title = ti.value; saveWork(); };
+  const ct = el.querySelector("#wb-i-ctitle"); if (ct) ct.onchange = () => { d.cTitle = ct.value; saveWork(); };
+  const ck = el.querySelector("#wb-i-ckind"); if (ck) ck.onchange = () => { d.cKind = ck.value; saveWork(); };
+  const ac = el.querySelector("#wb-i-addcomp");
+  if (ac) ac.onclick = () => {
+    const title = (el.querySelector("#wb-i-ctitle").value || "").trim();
+    if (!title) { l.warn("asset needs a title"); return; }
+    work.system.components.push({ id: mintId("comp", title), title, kind: el.querySelector("#wb-i-ckind").value });
+    d.cTitle = ""; l.ok("asset added: " + title); rerender();
+  };
+  work.system.components.forEach((c, ci) => {
+    ["resp","stat"].forEach(k => { const x = el.querySelector(`#wb-i-${k}-${ci}`); if (x) x.onchange = () => { d[k + ci] = x.value; saveWork(); }; });
+    wirePicker(el, "wb-i-pick-" + ci, ["requirement", "requirementSet"], id => {
+      const resp = el.querySelector(`#wb-i-resp-${ci}`)?.value || "provider";
+      const stat = el.querySelector(`#wb-i-stat-${ci}`)?.value || "planned";
+      const reqs = state.objects.get(id)?.type === "requirementSet" ? expandSet(id) : [id];
+      let added = 0;
+      for (const rid of reqs) {
+        if (work.system.implementations.some(e => e["component-ref"] === c.id && e["requirement-ref"] === rid)) continue;
+        work.system.implementations.push({ id: mintId("impl", c.title + "-" + (rid.split("/").pop())),
+          "component-ref": c.id, "requirement-ref": rid, responsibility: resp, status: stat });
+        added++;
+      }
+      l.ok(`attached ${added} control(s) to ${c.title}${reqs.length > 1 ? " (Set expanded)" : ""}`);
+      rerender();
+    });
+  });
+  el.querySelectorAll("[data-delcomp]").forEach(x => x.onclick = () => {
+    const c = work.system.components[+x.dataset.delcomp];
+    work.system.implementations = work.system.implementations.filter(e => e["component-ref"] !== c.id);
+    work.system.components.splice(+x.dataset.delcomp, 1); rerender();
+  });
+  el.querySelectorAll("[data-delimpl]").forEach(x => x.onclick = () => {
+    work.system.implementations = work.system.implementations.filter(e => e.id !== x.dataset.delimpl); rerender();
+  });
+  const g = el.querySelector("#wb-i-graph");
+  if (g) g.onclick = () => { if (!work.system.components.length) { l.warn("add an asset first"); return; } addToGraph(buildSystemObjects()); renderStageFn("implement"); };
+  const dl = el.querySelector("#wb-i-dl"); if (dl) dl.onclick = () => downloadMany(buildSystemObjects());
+  const cl = el.querySelector("#wb-i-clear"); if (cl) cl.onclick = () => { work.system = { title: "My System", components: [], implementations: [] }; rerender(); };
+}
+
+/* Assess workbench: check against all the things */
+function assessScopes() {
+  const scopes = [];
+  if (work.system.implementations.length)
+    scopes.push({ key: "system", label: `workspace system “${work.system.title}” (${new Set(work.system.implementations.map(i => i["requirement-ref"])).size} controls)`,
+      reqs: () => [...new Set(work.system.implementations.map(i => i["requirement-ref"]))] });
+  for (const r of state.objects.values()) if (r.type === "implementation" && r.path !== "(workspace)") {
+    scopes.push({ key: "impls", label: "all Implementation edges in bundle", reqs: () =>
+      [...new Set([...state.objects.values()].filter(x => x.type === "implementation").map(x => x.obj["requirement-ref"]))] });
+    break;
+  }
+  const parents = setsReferencing();
+  for (const r of state.objects.values())
+    if (r.type === "requirementSet" && !parents.has(r.obj.id))
+      scopes.push({ key: r.obj.id, label: "Set: " + (r.obj.title || r.obj.id), reqs: () => expandSet(r.obj.id) });
+  scopes.push({ key: "ALL", label: `ALL ${[...state.objects.values()].filter(r => r.type === "requirement").length} requirements in the bundle`,
+    reqs: () => state.order.filter(id => state.objects.get(id)?.type === "requirement") });
+  return scopes;
+}
+function wbAssessHtml() {
+  const a = work.assess, d = work._draft;
+  const scopes = assessScopes();
+  const cur = scopes.find(s => s.key === a.scopeKey) || scopes[scopes.length - 1];
+  const reqs = state.objects.size ? cur.reqs().filter(id => state.objects.get(id)?.type === "requirement") : [];
+  const q = (d.azq || "").toLowerCase();
+  const shown = reqs.filter(id => !q || id.toLowerCase().includes(q) ||
+    ((state.objects.get(id)?.obj.label || "") + (state.objects.get(id)?.obj.title || "")).toLowerCase().includes(q));
+  const answered = reqs.filter(id => a.results[id]?.result).length;
+  const counts = { satisfied: 0, "not-satisfied": 0, inconclusive: 0 };
+  reqs.forEach(id => { const r = a.results[id]?.result; if (r) counts[r]++; });
+  const rows = shown.slice(0, 250).map(id => {
+    const r = state.objects.get(id), res = a.results[id]?.result;
+    return `<tr><td style="width:38%"><a class="reflink" data-ref="${esc(id)}">${esc(r.obj.label || id.split("/").pop())}</a>
+        <div class="hint">${esc((r.obj.title || "").slice(0, 90))}</div></td>
+      <td>${r.obj.statements.slice(0, 2).map(s => modBadge(s.modality)).join("")}</td>
+      <td><span class="seg">
+        <button data-az="${esc(id)}|satisfied" class="${res === "satisfied" ? "on-sat" : ""}">satisfied</button>
+        <button data-az="${esc(id)}|not-satisfied" class="${res === "not-satisfied" ? "on-not" : ""}">not satisfied</button>
+        <button data-az="${esc(id)}|inconclusive" class="${res === "inconclusive" ? "on-inc" : ""}">inconclusive</button></span></td>
+      <td><input type="text" data-aznote="${esc(id)}" placeholder="note…" value="${esc(a.results[id]?.note || "")}" style="min-width:140px"></td></tr>`;
+  }).join("");
+  return `<div class="wb"><div class="nano" style="margin-bottom:8px">Workbench — run a check</div>
+    <div class="wbrow"><label>scope</label><select id="wb-a-scope" style="max-width:420px">${scopes.map(s => `<option value="${esc(s.key)}" ${s.key === cur.key ? "selected" : ""}>${esc(s.label)}</option>`).join("")}</select>
+      <label>performer</label><input type="text" id="wb-a-perf" value="${esc(a.performer)}" style="width:120px">
+      <input type="text" id="wb-a-q" placeholder="filter…" value="${esc(d.azq || "")}" style="width:140px"></div>
+    <div class="wbrow">
+      <span class="chip"><b>${answered}</b>/<b>${reqs.length}</b> checked</span>
+      <span class="chip" style="color:var(--green)"><b>${counts.satisfied}</b> satisfied</span>
+      <span class="chip" style="color:var(--red)"><b>${counts["not-satisfied"]}</b> not satisfied</span>
+      <span class="chip" style="color:var(--amber)"><b>${counts.inconclusive}</b> inconclusive</span>
+      <button id="wb-a-allsat" title="mark every unanswered row satisfied">✓ rest satisfied</button>
+      <button id="wb-a-reset">reset answers</button></div>
+    <table class="flat"><tr><th>requirement</th><th>modality</th><th>verdict</th><th>note</th></tr>${rows}</table>
+    ${shown.length > 250 ? `<div class="hint" style="padding:6px">…${shown.length - 250} more — use the filter</div>` : ""}
+    <div class="wbrow" style="border-top:1px solid var(--border-1);padding-top:10px">
+      <button class="primary" id="wb-a-gen">◉ Generate Assessment + Findings → graph</button>
+      <button id="wb-a-dl">⤓ Download objects</button>
+      <span class="hint">one Finding per “not satisfied” (state open, action planned); aggregate result: any-not-satisfied → not-satisfied, else any-inconclusive → inconclusive, else satisfied</span></div></div>`;
+}
+function buildAssessObjects() {
+  const a = work.assess;
+  const scopes = assessScopes();
+  const cur = scopes.find(s => s.key === a.scopeKey) || scopes[scopes.length - 1];
+  const reqs = cur.reqs().filter(id => state.objects.get(id)?.type === "requirement");
+  const counts = { satisfied: 0, "not-satisfied": 0, inconclusive: 0 };
+  reqs.forEach(id => { const r = a.results[id]?.result; if (r) counts[r]++; });
+  const agg = counts["not-satisfied"] ? "not-satisfied" : (counts.inconclusive || counts.satisfied < reqs.length) ? "inconclusive" : "satisfied";
+  const asmtId = mintId("asmt", "check-" + today());
+  const asmt = { id: asmtId, version: "1", lifecycle: "draft", title: `Check ${today()} — ${cur.label}`,
+    "subject-refs": reqs, method: { kind: "manual-check", note: "authored in the Semantic Core Bundle Reader workbench" },
+    "performer-ref": work.ns.replace(/\/$/, "") + "/party/" + slug(a.performer || "assessor"),
+    time: new Date().toISOString(), result: agg };
+  const findings = reqs.filter(id => a.results[id]?.result === "not-satisfied").map((id, i) => ({
+    id: mintId("finding", "f-" + today() + "-" + (i + 1)), version: "1", label: "F-" + (i + 1), lifecycle: "draft",
+    "assessment-ref": asmtId, "requirement-ref": id, state: "open",
+    actions: [{ description: "Remediate: " + ((state.objects.get(id)?.obj.title) || id) + (a.results[id]?.note ? " — " + a.results[id].note : ""), status: "planned" }] }));
+  return [asmt, ...findings];
+}
+function wireAssessWb(el) {
+  const d = work._draft;
+  const rerender = () => { saveWork(); renderStageFn("assess"); };
+  const sc = el.querySelector("#wb-a-scope"); if (sc) sc.onchange = () => { work.assess.scopeKey = sc.value; rerender(); };
+  const pf = el.querySelector("#wb-a-perf"); if (pf) pf.onchange = () => { work.assess.performer = pf.value; saveWork(); };
+  const qq = el.querySelector("#wb-a-q"); if (qq) qq.oninput = () => { d.azq = qq.value; clearTimeout(state._azT); state._azT = setTimeout(rerender, 300); };
+  el.querySelectorAll("[data-az]").forEach(b => b.onclick = () => {
+    const [id, res] = b.dataset.az.split("|");
+    work.assess.results[id] = { ...(work.assess.results[id] || {}), result: work.assess.results[id]?.result === res ? null : res };
+    rerender();
+  });
+  el.querySelectorAll("[data-aznote]").forEach(x => x.onchange = () => {
+    const id = x.dataset.aznote;
+    work.assess.results[id] = { ...(work.assess.results[id] || {}), note: x.value }; saveWork();
+  });
+  const alls = el.querySelector("#wb-a-allsat");
+  if (alls) alls.onclick = () => {
+    const scopes = assessScopes(); const cur = scopes.find(s => s.key === work.assess.scopeKey) || scopes[scopes.length - 1];
+    cur.reqs().forEach(id => { if (!work.assess.results[id]?.result) work.assess.results[id] = { ...(work.assess.results[id] || {}), result: "satisfied" }; });
+    rerender();
+  };
+  const rs = el.querySelector("#wb-a-reset"); if (rs) rs.onclick = () => { work.assess.results = {}; rerender(); };
+  const g = el.querySelector("#wb-a-gen");
+  if (g) g.onclick = () => { const objs = buildAssessObjects(); addToGraph(objs); renderStageFn("assess");
+    l.info(`assessment ${objs[0].result.toUpperCase()} with ${objs.length - 1} finding(s) — now on the board below`); };
+  const dl = el.querySelector("#wb-a-dl"); if (dl) dl.onclick = () => downloadMany(buildAssessObjects());
 }
 
 function renderStageFn(key) {
@@ -1180,6 +1629,9 @@ function renderStageFn(key) {
   if (mq) mq.oninput = e => { state.stageSel = state.stageSel || {}; state.stageSel.mapQ = e.target.value;
     clearTimeout(state._mqT); state._mqT = setTimeout(() => renderStageFn("map"), 250); };
   el.querySelectorAll("[data-att]").forEach(b => b.onclick = () => verifyAttestation(b.dataset.att, b));
+  if (key === "tailor") wireTailorWb(el);
+  if (key === "implement") wireImplementWb(el);
+  if (key === "assess") wireAssessWb(el);
 }
 function renderNavCounts() {
   const counts = typeCounts();
@@ -1276,7 +1728,7 @@ document.body.addEventListener("drop", async e => {
 renderLattice();
 renderStages();
 setView("overview");
-l.info("Semantic Core Bundle Reader v1.1.0 · build 2026-07-21 — everything runs locally, nothing leaves this page");
+l.info("Semantic Core Bundle Reader v1.2.0 · build 2026-07-21 — everything runs locally, nothing leaves this page");
 l.info("open a bundle folder (contains content-manifest.json + objects/) or drop it here");
 if (!crypto.subtle) l.warn("crypto.subtle unavailable in this context — digest verification uses the JS fallback (slower)");
 </script>
