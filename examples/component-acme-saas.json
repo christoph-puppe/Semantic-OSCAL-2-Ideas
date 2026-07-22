@@ -1,0 +1,22 @@
+{
+  "id": "https://cso.example/component/acme-saas",
+  "version": "2026-07",
+  "label": "Acme SaaS",
+  "lifecycle": "active",
+  "kind": "service",
+  "members": [
+    {
+      "component-ref": "https://paas.example/component/platform",
+      "context": "runtime"
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "cap-encrypt-transit",
+      "description": "TLS termination for all tenant traffic",
+      "parameter-bindings": {
+        "transport-crypto": "tls13"
+      }
+    }
+  ]
+}

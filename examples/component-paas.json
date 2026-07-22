@@ -1,0 +1,14 @@
+{
+  "id": "https://paas.example/component/platform",
+  "version": "2026-06",
+  "label": "Example PaaS",
+  "lifecycle": "active",
+  "kind": "system",
+  "authorizations": [
+    {
+      "id": "https://paas.example/auth/jab-moderate-2026",
+      "authority-ref": "https://ns.fedramp.gov/party/jab",
+      "scope-label": "FedRAMP Moderate P-ATO"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "https://ns.bsi.bund.de/gspp/req/KONF.14.1",
+  "version": "2026-07",
+  "label": "KONF.14.1",
+  "aliases": [
+    {
+      "scheme": "bsi-uuid",
+      "value": "0d9f3a52-6219b9704724"
+    },
+    {
+      "scheme": "sdt-ver",
+      "value": "VER.2"
+    }
+  ],
+  "lifecycle": "active",
+  "title": "Verschlüsselung beim Transport",
+  "statements": [
+    {
+      "id": "s1",
+      "modality": "may",
+      "obligated-parties": [
+        "https://ns.bsi.bund.de/gspp/party/betreiber"
+      ],
+      "parameters": [
+        {
+          "name": "transport-crypto",
+          "type": "choice",
+          "cardinality": "one",
+          "choices": [
+            {
+              "value": "tls13",
+              "label": {
+                "de": "TLS 1.3"
+              }
+            },
+            {
+              "value": "tls12-pfs",
+              "label": {
+                "de": "TLS 1.2 mit PFS"
+              }
+            }
+          ]
+        }
+      ],
+      "prose": {
+        "de": "Konfiguration für Anwendungen KANN Kommunikation beim Transport über Netze nach {param:transport-crypto} verschlüsseln."
+      }
+    },
+    {
+      "id": "s2",
+      "modality": "should",
+      "obligated-parties": [
+        "https://ns.bsi.bund.de/gspp/party/kunde"
+      ],
+      "prose": {
+        "de": "Kryptographische Schlüssel SOLLTEN in regelmäßigen Abständen gewechselt werden."
+      }
+    }
+  ],
+  "facets": {
+    "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+      "sec-level": "normal-sdt",
+      "effort": 2,
+      "tags": [
+        "produktbeschreibung",
+        "cryptography",
+        "zero-trust"
+      ]
+    }
+  },
+  "annotations": {
+    "tracker": "GSPP-142"
+  }
+}
