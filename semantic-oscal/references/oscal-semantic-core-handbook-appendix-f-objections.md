@@ -244,3 +244,53 @@ corrected on the record. The pattern is the point: this project's
 answer to a good objection is a diff, and its answer to a bad one is
 a count. To file yours: Chapter 15's door — bring corpus cases,
 bring numbers, expect both in return.
+
+---
+
+## F.6 First external-review round — objections that arrived after the manuscript closed
+
+*The first human review of the complete manuscript produced two
+objections within a day. Both partially landed; per F.5 house rules,
+the diffs are on the record (Ch. 6.A; the v0.6 backlog).*
+
+**Q22. I expected more first-class fields — force/modal-verb got
+promoted to the kernel, so why not security objectives, evidence
+duties, assurance levels?**
+Because promotion has a price and therefore had a bar — implicit
+until this question forced it into words: a semantic goes kernel when
+**at least two of three authorities encode it independently**, there
+is **one shared computation** every generic tool must perform on it,
+and **one vocabulary fits all corpora without flattening**. Modality
+passes all three (three encodings counting ISM's honest structural
+absence; monotonicity as the computation; one lattice). The expected
+candidates fail measurably: security objectives are 1-of-3, and even
+the one corpus's values ("1"/"0") share no scale with anyone;
+evidence duties are 2-of-3 with irreconcilable shapes (free-text
+document names vs. per-class artifact lists vs. KSI tests); and
+assurance *levels* — genuinely 3-of-3 — are the instructive case,
+because their kernel *mechanism* already exists: **membership**.
+Level-as-a-field is the 5,301-marker corpse; level-as-a-Set composes,
+while the incommensurable vocabularies stay in `assurance-levels@1`.
+The second half of the answer: stdlib facets *are* first-class
+ecosystem citizens — default-shipped, schema-pinned, fail-closed —
+and a kernel field is a tax on every Core validator forever. **What
+landed:** the promotion rule was nowhere normative. It is now a v0.6
+backlog item, and this entry is its first public statement.
+
+**Q23. In 1.x I amend a catalog — add controls, possibly nested — via
+profile and resolution. Where did that go?**
+The verb split in two, and the handbook had only documented one half.
+*Modifying* upstream content is Tailoring, under Chapter 6's
+operation laws. *Adding* content is **authorship**: new Requirements
+under your own prefix, composed with the upstream via a **shadow
+set** (interleaved `sequence`, multi-authority membership), with
+clause-level attachment by reference — a minted `supplements`
+relation or a statement-scoped Mapping — never by injection, because
+foreign statements live inside the owner's object and digest. What
+resolution used to *produce*, the shadow Set *is*: explicit
+references instead of merge provenance. The corpse: resolved
+artifacts whose lineage was a tool run, and the twin-catalog's ten
+silent divergences — forking-to-amend at any scale. **What landed:**
+the supplement pattern was genuinely missing from the book. It is now
+§6.A, a glossary entry, and a backlog item to give the pattern a
+normative name in the specification.
