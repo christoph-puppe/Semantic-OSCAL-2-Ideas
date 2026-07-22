@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.4.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.4.2",
  "lifecycle": "active",
  "title": "Automatische Angriffserkennung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "det.4.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einen automatisierten Mechanismus"
     }
    ]
   }
@@ -80,7 +81,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.4.2-prm1": {
-     "label": "einen automatisierten Mechanismus",
      "alt-identifier": "d1691e68-55a6-4b71-8d55-08a10eaeb4a5"
     }
    }

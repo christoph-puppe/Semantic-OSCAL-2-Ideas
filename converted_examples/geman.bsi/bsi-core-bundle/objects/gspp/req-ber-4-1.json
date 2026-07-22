@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BER.4.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BER.4.1",
  "lifecycle": "active",
  "title": "Prinzip der geringsten Berechtigungen",
@@ -37,7 +37,8 @@
    "parameters": [
     {
      "name": "ber.4.1.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "besonders kritische Ressourcen oder Zugänge"
     }
    ]
   }
@@ -166,7 +167,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "ber.4.1.2-prm1": {
-     "label": "besonders kritische Ressourcen oder Zugänge",
      "alt-identifier": "e549f464-b2fb-42a1-83b9-21bd3bb0f3cf"
     }
    }

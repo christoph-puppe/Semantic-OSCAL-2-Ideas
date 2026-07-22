@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/ARCH.6.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "ARCH.6.1",
  "lifecycle": "active",
  "title": "Kontrollierte Verbindungsführung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "arch.6.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "physisch oder logisch"
     }
    ]
   }
@@ -79,7 +80,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "arch.6.1-prm1": {
-     "label": "physisch oder logisch",
      "alt-identifier": "acd884af-7aad-470c-bfcf-216cff90e9be"
     }
    }

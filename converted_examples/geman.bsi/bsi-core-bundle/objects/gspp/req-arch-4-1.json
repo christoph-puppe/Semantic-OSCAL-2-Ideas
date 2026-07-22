@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/ARCH.4.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "ARCH.4.1",
  "lifecycle": "active",
  "title": "Netzzugangskontrolle",
@@ -27,7 +27,8 @@
    "parameters": [
     {
      "name": "arch.4.1.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "dynamischer Kriterien"
     }
    ]
   },
@@ -180,7 +181,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "arch.4.1.1-prm1": {
-     "label": "dynamischer Kriterien",
      "alt-identifier": "fec4fcdf-13e7-4a32-a3e1-52dce90ea1d7"
     }
    }

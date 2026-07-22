@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/VRB.6.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "VRB.6.1",
  "lifecycle": "active",
  "title": "Überprüfung der erreichten Verbesserung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "vrb.6.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -53,7 +54,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "vrb.6.1-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "89d9eada-bcdb-4b47-a3de-b26e22cca2a4"
     }
    }

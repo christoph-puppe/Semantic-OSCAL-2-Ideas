@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BER.6.5",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BER.6.5",
  "lifecycle": "active",
  "title": "Kriterien für die Qualität von Zufallszahlen",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "ber.6.5-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Kriterien"
     }
    ]
   }
@@ -78,7 +79,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "ber.6.5-prm1": {
-     "label": "Kriterien",
      "alt-identifier": "426ad852-4455-43a4-b4ff-795ee2caa47b"
     }
    }

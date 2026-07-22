@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/SENS.1.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "SENS.1.2",
  "lifecycle": "active",
  "title": "Erfolgsmessung",
@@ -17,11 +17,13 @@
    "parameters": [
     {
      "name": "sens.1.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "objektivierter Kriterien"
     },
     {
      "name": "sens.1.2-prm2",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -79,11 +81,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "sens.1.2-prm1": {
-     "label": "objektivierter Kriterien",
      "alt-identifier": "9d6cd1f9-6aa0-4042-a9dd-9d696a75a6de"
     },
     "sens.1.2-prm2": {
-     "label": "regelmäßig",
      "alt-identifier": "9d6cd1f9-6aa0-4042-a9dd-9d696a75a6de"
     }
    }

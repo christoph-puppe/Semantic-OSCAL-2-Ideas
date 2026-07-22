@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.4.13",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.4.13",
  "lifecycle": "active",
  "title": "Verfügbarkeit des Hostsystems",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "det.4.13-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Schwellwerten"
     }
    ]
   }
@@ -81,7 +82,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.4.13-prm1": {
-     "label": "Schwellwerten",
      "alt-identifier": "b186a9e9-cce6-4bb5-8e70-ac17499c71d8"
     }
    }

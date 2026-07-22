@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BER.3.18",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BER.3.18",
  "lifecycle": "active",
  "title": "Sperre der Anwendung bei Inaktivität",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "ber.3.18-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einer Frist"
     }
    ]
   }
@@ -83,7 +84,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "ber.3.18-prm1": {
-     "label": "einer Frist",
      "alt-identifier": "5c8bb88d-6692-4904-908a-ed3f7a81b34e"
     }
    }

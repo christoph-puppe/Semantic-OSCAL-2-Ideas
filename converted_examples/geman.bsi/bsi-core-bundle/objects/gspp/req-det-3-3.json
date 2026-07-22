@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.3.3",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.3.3",
  "lifecycle": "active",
  "title": "Filterung nicht benötigter Inhalte",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "det.3.3-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Kriterien"
     }
    ]
   }
@@ -78,7 +79,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.3.3-prm1": {
-     "label": "Kriterien",
      "alt-identifier": "fa239d57-3934-4664-bc2d-53aca634eaef"
     }
    }

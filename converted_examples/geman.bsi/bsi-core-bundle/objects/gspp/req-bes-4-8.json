@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BES.4.8",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BES.4.8",
  "lifecycle": "active",
  "title": "Konformitätsnachweise",
@@ -27,7 +27,8 @@
    "parameters": [
     {
      "name": "bes.4.8.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einem passenden Sicherheitsstandard"
     }
    ]
   },
@@ -267,7 +268,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "bes.4.8.1-prm1": {
-     "label": "einem passenden Sicherheitsstandard",
      "alt-identifier": "6cecab39-d08d-49a1-922e-b3f9ea7d5af4"
     }
    }

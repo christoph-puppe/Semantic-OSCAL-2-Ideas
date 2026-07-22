@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DEV.5.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DEV.5.1",
  "lifecycle": "active",
  "title": "Verankerung des Zeitraums für Updates",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "dev.5.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einen bestimmten Zeitraum"
     }
    ]
   }
@@ -81,7 +82,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "dev.5.1-prm1": {
-     "label": "einen bestimmten Zeitraum",
      "alt-identifier": "649b5b3b-fd58-4bec-84bb-71c93b264f94"
     }
    }

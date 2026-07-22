@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/GEB.8.4",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "GEB.8.4",
  "lifecycle": "active",
  "title": "Überwachung schonender Klimatisierung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "geb.8.4-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Schwellwerten"
     }
    ]
   }
@@ -81,7 +82,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "geb.8.4-prm1": {
-     "label": "Schwellwerten",
      "alt-identifier": "b76d96fa-3c33-470e-a624-1fe1aff44cc9"
     }
    }

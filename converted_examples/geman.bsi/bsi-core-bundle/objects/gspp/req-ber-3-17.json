@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BER.3.17",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BER.3.17",
  "lifecycle": "active",
  "title": "Systemsperre bei Inaktivität",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "ber.3.17-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einer Frist"
     }
    ]
   }
@@ -83,7 +84,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "ber.3.17-prm1": {
-     "label": "einer Frist",
      "alt-identifier": "de11e8f3-d1fa-4b11-a6b0-e0d327b42849"
     }
    }

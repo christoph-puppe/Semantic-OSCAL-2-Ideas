@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DLS.3.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DLS.3.1",
  "lifecycle": "active",
  "title": "Einhaltung der Sicherheitsvorgaben",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "dls.3.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   },
@@ -33,11 +34,13 @@
    "parameters": [
     {
      "name": "dls.3.1.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Audits, Zertifikates oder vergleichbaren Sicherheitsnachweises"
     },
     {
      "name": "dls.3.1.1-prm2",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -143,15 +146,12 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "dls.3.1-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "5b17bd9b-ff38-46eb-a1ef-7b38429f128b"
     },
     "dls.3.1.1-prm1": {
-     "label": "Audits, Zertifikates oder vergleichbaren Sicherheitsnachweises",
      "alt-identifier": "12c2c250-86b8-46a0-bccd-d0b2f59b6bae"
     },
     "dls.3.1.1-prm2": {
-     "label": "regelmäßig",
      "alt-identifier": "12c2c250-86b8-46a0-bccd-d0b2f59b6bae"
     }
    }

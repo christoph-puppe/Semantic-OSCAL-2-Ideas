@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.5.4",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.5.4",
  "lifecycle": "active",
  "title": "Regelmäßige Penetrationstests",
@@ -17,11 +17,13 @@
    "parameters": [
     {
      "name": "det.5.4-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einer anerkannten Vorgehensweise"
     },
     {
      "name": "det.5.4-prm2",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -86,11 +88,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.5.4-prm1": {
-     "label": "einer anerkannten Vorgehensweise",
      "alt-identifier": "622f98fa-a211-4c1e-b655-5e9dd6c0d507"
     },
     "det.5.4-prm2": {
-     "label": "regelmäßig",
      "alt-identifier": "622f98fa-a211-4c1e-b655-5e9dd6c0d507"
     }
    }
@@ -105,7 +105,7 @@
  "relations": [
   {
    "type": "related",
-   "ref": "https://ns.bsi.bund.de/gspp/req/TEST.3.1.10"
+   "ref": "https://ns.bsi.bund.de/gspp/req/TEST.3.1.11"
   }
  ]
 }

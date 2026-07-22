@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/NOT.4.4",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "NOT.4.4",
  "lifecycle": "active",
  "title": "Automatische Datensicherung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "not.4.4-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einen automatisierten Mechanismus"
     }
    ]
   }
@@ -79,7 +80,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "not.4.4-prm1": {
-     "label": "einen automatisierten Mechanismus",
      "alt-identifier": "20fa9557-7db9-4367-9592-35ca5d8e8be7"
     }
    }

@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/GEB.1.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "GEB.1.1",
  "lifecycle": "active",
  "title": "Verfahren und Regelungen",
@@ -12,7 +12,7 @@
     "https://ns.bsi.bund.de/gspp/party/institution"
    ],
    "prose": {
-    "de": "Gebäudemanagement MUSS Verfahren und Regelungen zum physischen Schutz von Standorten, an denen schützenswerte Informationen verarbeitet oder gespeichert werden, verankern."
+    "de": "Gebäudemanagement für Standorte MUSS Verfahren und Regelungen zum physischen Schutz von Standorten, an denen schützenswerte Informationen verarbeitet oder gespeichert werden, verankern."
    }
   },
   {
@@ -22,7 +22,7 @@
     "https://ns.bsi.bund.de/gspp/party/institution"
    ],
    "prose": {
-    "de": "Gebäudemanagement MUSS die Verfahren und Regelungen dokumentieren."
+    "de": "Gebäudemanagement für Standorte MUSS die Verfahren und Regelungen dokumentieren."
    }
   },
   {
@@ -32,12 +32,13 @@
     "https://ns.bsi.bund.de/gspp/party/institution"
    ],
    "prose": {
-    "de": "Gebäudemanagement MUSS die mit den Verfahren und Regelungen verbundenen Aufgaben {param:geb.1.1.2-prm1} zuweisen."
+    "de": "Gebäudemanagement für Standorte MUSS die mit den Verfahren und Regelungen verbundenen Aufgaben {param:geb.1.1.2-prm1} zuweisen."
    },
    "parameters": [
     {
      "name": "geb.1.1.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "zuständigen Personen oder Rollen"
     }
    ]
   },
@@ -48,7 +49,7 @@
     "https://ns.bsi.bund.de/gspp/party/institution"
    ],
    "prose": {
-    "de": "Gebäudemanagement MUSS die zuständigen Personen oder Rollen über die Verfahren und Regelungen informieren."
+    "de": "Gebäudemanagement für Standorte MUSS die zuständigen Personen oder Rollen über die Verfahren und Regelungen informieren."
    }
   }
  ],
@@ -57,20 +58,32 @@
    "by-statement": {
     "smt": {
      "action": "verankern",
-     "result": "Verfahren und Regelungen zum physischen Schutz von Standorten, an denen schützenswerte Informationen verarbeitet oder gespeichert werden,"
+     "result": "Verfahren und Regelungen zum physischen Schutz von Standorten, an denen schützenswerte Informationen verarbeitet oder gespeichert werden,",
+     "target-object-categories": [
+      "Standorte"
+     ]
     },
     "GEB.1.1.1": {
      "action": "dokumentieren",
-     "result": "die Verfahren und Regelungen"
+     "result": "die Verfahren und Regelungen",
+     "target-object-categories": [
+      "Standorte"
+     ]
     },
     "GEB.1.1.2": {
      "action": "zuweisen",
      "result": "die mit den Verfahren und Regelungen verbundenen Aufgaben",
-     "result-specification": "{{zuständigen Personen oder Rollen}}"
+     "result-specification": "{{zuständigen Personen oder Rollen}}",
+     "target-object-categories": [
+      "Standorte"
+     ]
     },
     "GEB.1.1.3": {
      "action": "informieren",
-     "result": "die zuständigen Personen oder Rollen über die Verfahren und Regelungen"
+     "result": "die zuständigen Personen oder Rollen über die Verfahren und Regelungen",
+     "target-object-categories": [
+      "Standorte"
+     ]
     }
    }
   },
@@ -198,7 +211,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "geb.1.1.2-prm1": {
-     "label": "zuständigen Personen oder Rollen",
      "alt-identifier": "3a95d0e2-6727-4b21-bf13-24d08781e26b"
     }
    }

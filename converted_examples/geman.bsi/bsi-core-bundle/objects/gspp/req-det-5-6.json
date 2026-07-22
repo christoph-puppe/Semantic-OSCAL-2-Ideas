@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.5.6",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.5.6",
  "lifecycle": "active",
  "title": "Threat Hunting",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "det.5.6-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -79,7 +80,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.5.6-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "ff549367-0992-4b06-a2c0-246915632cb1"
     }
    }

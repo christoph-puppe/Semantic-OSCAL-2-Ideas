@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/NOT.4.3",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "NOT.4.3",
  "lifecycle": "active",
  "title": "Sicherung der Anwendung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "not.4.3-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -80,7 +81,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "not.4.3-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "dcfb7d28-71df-45f4-ada5-a284415e8c90"
     }
    }

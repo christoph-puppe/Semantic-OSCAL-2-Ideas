@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/KONF.4.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "KONF.4.2",
  "lifecycle": "active",
  "title": "DNS-Anbindung",
@@ -27,7 +27,8 @@
    "parameters": [
     {
      "name": "konf.4.2.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einen anerkannten kryptographischen Algorithmus"
     }
    ]
   }
@@ -131,7 +132,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "konf.4.2.1-prm1": {
-     "label": "einen anerkannten kryptographischen Algorithmus",
      "alt-identifier": "ccb6bfb1-1b49-4d03-9705-2d05bca018b5"
     }
    }

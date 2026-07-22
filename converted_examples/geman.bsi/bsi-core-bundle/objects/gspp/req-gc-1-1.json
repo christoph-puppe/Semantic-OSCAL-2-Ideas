@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/GC.1.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "GC.1.1",
  "lifecycle": "active",
  "title": "Errichtung und Aufrechterhaltung eines ISMS",
@@ -17,7 +17,9 @@
    "parameters": [
     {
      "name": "gc.1.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "BSI Grundschutz++",
+     "default": "BSI Grundschutz++"
     }
    ]
   }
@@ -62,10 +64,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "gc.1.1-prm1": {
-     "label": "BSI Grundschutz++",
-     "values": [
-      "BSI Grundschutz++"
-     ],
      "alt-identifier": "80351189-6ffc-495e-a995-6219b9704724"
     }
    }

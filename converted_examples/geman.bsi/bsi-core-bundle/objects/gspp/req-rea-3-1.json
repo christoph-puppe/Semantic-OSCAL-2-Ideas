@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/REA.3.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "REA.3.1",
  "lifecycle": "active",
  "title": "Verbesserung durch Erkenntnisse",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "rea.3.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   },
@@ -119,7 +120,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "rea.3.1-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "eb3880e9-a0da-4372-84a7-7b0b69b8a852"
     }
    }

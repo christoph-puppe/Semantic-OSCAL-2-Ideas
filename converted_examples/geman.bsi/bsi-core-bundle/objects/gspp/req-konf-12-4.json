@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/KONF.12.4",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "KONF.12.4",
  "lifecycle": "active",
  "title": "Speicherung von Zugangsdaten",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "konf.12.4-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "in einem dedizierten Passwort-Manager mit Browser-Integration oder direkt im Browser durch ein Master-Passwort geschützt"
     }
    ]
   }
@@ -82,7 +83,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "konf.12.4-prm1": {
-     "label": "in einem dedizierten Passwort-Manager mit Browser-Integration oder direkt im Browser durch ein Master-Passwort geschützt",
      "alt-identifier": "93d5129d-c905-439f-b7cf-2ddcd92fac5a"
     }
    }

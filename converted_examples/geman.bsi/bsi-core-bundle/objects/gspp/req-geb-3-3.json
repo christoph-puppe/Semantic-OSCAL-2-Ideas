@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/GEB.3.3",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "GEB.3.3",
  "lifecycle": "active",
  "title": "Authentifizierung vor Zutritt",
@@ -27,7 +27,8 @@
    "parameters": [
     {
      "name": "geb.3.3.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einen automatiserten Mechanismus"
     }
    ]
   },
@@ -53,7 +54,8 @@
    "parameters": [
     {
      "name": "geb.3.3.3-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "eine zuständige Person oder Rolle"
     }
    ]
   }
@@ -228,11 +230,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "geb.3.3.1-prm1": {
-     "label": "einen automatiserten Mechanismus",
      "alt-identifier": "5bc938de-7123-4793-8ba4-3183c2264acf"
     },
     "geb.3.3.3-prm1": {
-     "label": "eine zuständige Person oder Rolle",
      "alt-identifier": "ce537201-8949-41a6-855b-c7671d226853"
     }
    }

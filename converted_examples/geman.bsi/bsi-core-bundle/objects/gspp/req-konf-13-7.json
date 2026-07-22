@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/KONF.13.7",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "KONF.13.7",
  "lifecycle": "active",
  "title": "TLS-Reports",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "konf.13.7-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -82,7 +83,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "konf.13.7-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "becbeefc-417d-42e4-b2a0-7a296c23fa9c"
     }
    }

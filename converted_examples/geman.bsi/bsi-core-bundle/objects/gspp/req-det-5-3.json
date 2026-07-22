@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.5.3",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.5.3",
  "lifecycle": "active",
  "title": "Schwachstellenscans",
@@ -27,7 +27,8 @@
    "parameters": [
     {
      "name": "det.5.3.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "zuständige Personen oder Rollen"
     }
    ]
   },
@@ -203,7 +204,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.5.3.1-prm1": {
-     "label": "zuständige Personen oder Rollen",
      "alt-identifier": "d19ef635-5438-4b4e-b75b-479764f39069"
     }
    }

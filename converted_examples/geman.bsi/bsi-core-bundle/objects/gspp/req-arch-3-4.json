@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/ARCH.3.4",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "ARCH.3.4",
  "lifecycle": "active",
  "title": "Verschlüsselte Netzanbindung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "arch.3.4-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "nach einem anerkannten Standard"
     }
    ]
   }
@@ -80,7 +81,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "arch.3.4-prm1": {
-     "label": "nach einem anerkannten Standard",
      "alt-identifier": "45bb11ba-1018-430e-be4f-7cae54407f3c"
     }
    }

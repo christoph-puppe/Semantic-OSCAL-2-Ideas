@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/KONF.15.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "KONF.15.1",
  "lifecycle": "active",
  "title": "Begrenzung des Speicherplatzes",
@@ -17,11 +17,13 @@
    "parameters": [
     {
      "name": "konf.15.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Zugangskonto oder Mandant"
     },
     {
      "name": "konf.15.1-prm2",
-     "type": "string"
+     "type": "string",
+     "label": "Schwellwerten"
     }
    ]
   }
@@ -88,11 +90,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "konf.15.1-prm1": {
-     "label": "Zugangskonto oder Mandant",
      "alt-identifier": "15596e08-6978-4e61-bf6c-63e24575788f"
     },
     "konf.15.1-prm2": {
-     "label": "Schwellwerten",
      "alt-identifier": "15596e08-6978-4e61-bf6c-63e24575788f"
     }
    }

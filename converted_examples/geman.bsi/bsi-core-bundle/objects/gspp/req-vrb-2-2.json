@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/VRB.2.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "VRB.2.2",
  "lifecycle": "active",
  "title": "Anpassung des ISMS",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "vrb.2.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -53,7 +54,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "vrb.2.2-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "b2be1d91-1744-467f-abd1-7bcde818fd65"
     }
    }

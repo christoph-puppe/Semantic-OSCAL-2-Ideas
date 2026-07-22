@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/GC.10.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "GC.10.1",
  "lifecycle": "active",
  "title": "Festlegung eines Verfahrens zum Kommunikationsmanagement",
@@ -37,7 +37,8 @@
    "parameters": [
     {
      "name": "gc.10.1.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "der relevanten Sicherheitsorgane"
     }
    ]
   }
@@ -115,7 +116,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "gc.10.1.2-prm1": {
-     "label": "der relevanten Sicherheitsorgane",
      "alt-identifier": "6ccbc3f1-0984-4b12-86f2-708d40e9b635"
     }
    }

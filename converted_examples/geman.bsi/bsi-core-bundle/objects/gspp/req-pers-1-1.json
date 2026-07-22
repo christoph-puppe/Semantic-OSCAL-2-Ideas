@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/PERS.1.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "PERS.1.1",
  "lifecycle": "active",
  "title": "Verfahren und Regelungen",
@@ -37,7 +37,8 @@
    "parameters": [
     {
      "name": "pers.1.1.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "zuständigen Personen oder Rollen"
     }
    ]
   },
@@ -201,7 +202,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "pers.1.1.2-prm1": {
-     "label": "zuständigen Personen oder Rollen",
      "alt-identifier": "e72ceb25-e617-43c9-b40f-e9f908580d6b"
     }
    }

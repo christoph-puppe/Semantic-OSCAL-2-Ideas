@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/BER.6.16",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "BER.6.16",
  "lifecycle": "active",
  "title": "Vorgaben für die Schlüsselbeglaubigung",
@@ -27,7 +27,8 @@
    "parameters": [
     {
      "name": "ber.6.16.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einer zuständigen Person oder Rolle"
     }
    ]
   },
@@ -343,7 +344,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "ber.6.16.1-prm1": {
-     "label": "einer zuständigen Person oder Rolle",
      "alt-identifier": "7b80290b-5c6d-4e39-857c-0a63a8e2543a"
     }
    }

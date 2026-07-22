@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/KONF.13.8",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "KONF.13.8",
  "lifecycle": "active",
  "title": "DMARC-Reports",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "konf.13.8-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig oder bei Eingang"
     }
    ]
   }
@@ -82,7 +83,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "konf.13.8-prm1": {
-     "label": "regelmäßig oder bei Eingang",
      "alt-identifier": "96dd928d-e5ac-47ec-a2a2-320ae0359e73"
     }
    }

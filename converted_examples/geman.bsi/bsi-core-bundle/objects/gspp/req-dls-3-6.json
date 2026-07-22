@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DLS.3.6",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DLS.3.6",
  "lifecycle": "active",
  "title": "Portabilität",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "dls.3.6-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -83,7 +84,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "dls.3.6-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "2563b59c-b3da-4bdd-99cd-3eedb94c0abb"
     }
    }

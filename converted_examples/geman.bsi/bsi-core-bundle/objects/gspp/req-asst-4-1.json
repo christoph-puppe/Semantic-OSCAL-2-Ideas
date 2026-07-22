@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/ASST.4.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "ASST.4.1",
  "lifecycle": "active",
  "title": "Autorisierung von Schnittstellen",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "asst.4.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "eine zuständige Person oder Rolle"
     }
    ]
   }
@@ -83,7 +84,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "asst.4.1-prm1": {
-     "label": "eine zuständige Person oder Rolle",
      "alt-identifier": "ddfc1b03-9014-4317-a7bb-09980b234457"
     }
    }

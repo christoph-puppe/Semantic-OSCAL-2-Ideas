@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.5.7",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.5.7",
  "lifecycle": "active",
  "title": "Analyse verdeckter Kanäle",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "det.5.7-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "bei Sicherheitsvorfällen mit verdeckten Kanälen und regelmäßig"
     }
    ]
   }
@@ -79,7 +80,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.5.7-prm1": {
-     "label": "bei Sicherheitsvorfällen mit verdeckten Kanälen und regelmäßig",
      "alt-identifier": "8f64e735-9870-4a8d-8b7b-220b93baddba"
     }
    }

@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.4.15",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.4.15",
  "lifecycle": "active",
  "title": "Ressourcenauslastung von Hostsystemen",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "det.4.15-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Schwellwerten"
     }
    ]
   }
@@ -80,7 +81,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.4.15-prm1": {
-     "label": "Schwellwerten",
      "alt-identifier": "7cfa26e7-7fe5-4a6a-999b-489c9785821e"
     }
    }

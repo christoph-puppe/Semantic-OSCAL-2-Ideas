@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/KONF.9.3",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "KONF.9.3",
  "lifecycle": "active",
  "title": "Alternative Komponenten für kritische Funktionen",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "konf.9.3-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "bestimmte kritische Funktionen"
     }
    ]
   }
@@ -82,7 +83,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "konf.9.3-prm1": {
-     "label": "bestimmte kritische Funktionen",
      "alt-identifier": "bd64ca41-01df-48ba-85ea-3241017cf750"
     }
    }

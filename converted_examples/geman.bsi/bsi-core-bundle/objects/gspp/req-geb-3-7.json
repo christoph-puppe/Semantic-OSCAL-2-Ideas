@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/GEB.3.7",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "GEB.3.7",
  "lifecycle": "active",
  "title": "Kontrolle der Zutrittskontrolle",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "geb.3.7-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -80,7 +81,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "geb.3.7-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "407e3436-9719-4c45-a009-183c7818d376"
     }
    }

@@ -109,7 +109,7 @@ The census corpora (gate 1):
 | Corpus | Source | Emitted | Coverage |
 |---|---|---|---|
 | [AU.ISM](converted_examples/AU.ISM/ism-coverage-report.md) | ACSC ISM, OSCAL 1.1.2 catalog, 1,150 controls | 1,150 Requirements · 322 Sets | 36,161 / 36,161 leaf values |
-| [geman.bsi](converted_examples/geman.bsi/bsi-coverage-report.md) | Grundschutz++ + MS-TLS, OSCAL 1.1.3 | 658 Requirements carrying 1,015 statements · 167 Sets | 49,804 / 49,804 |
+| [geman.bsi](converted_examples/geman.bsi/bsi-coverage-report.md) | Grundschutz++ v2026-07-16, OSCAL 1.1.3 (MS-TLS dropped by decision — defects reported to BSI) | 651 Requirements carrying 999 statements · 221 params with label/default · 162 Sets | 49,431 / 49,431 |
 | [FedRAMP-CR26](converted_examples/FedRAMP-CR26/cr26-coverage-report.md) | CR26 bespoke JSON, v2026.07.14.01 | 292 Requirements · 373 Mappings · 91 Sets · 4 Tailorings | 7,294 / 7,294 |
 
 Validation corpora (converted 2026-07-21; the model held without kernel

@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/ARCH.5.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "ARCH.5.1",
  "lifecycle": "active",
  "title": "Einschränkung und Inspektion von Verbindungen",
@@ -117,7 +117,8 @@
    "parameters": [
     {
      "name": "arch.5.1.10-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Kriterien"
     }
    ]
   },
@@ -811,7 +812,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "arch.5.1.10-prm1": {
-     "label": "Kriterien",
      "alt-identifier": "327ca27d-e60f-47d1-8840-5bcb09340030"
     }
    }

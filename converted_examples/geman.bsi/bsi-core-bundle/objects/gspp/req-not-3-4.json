@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/NOT.3.4",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "NOT.3.4",
  "lifecycle": "active",
  "title": "Funktionstest",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "not.3.4-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -75,7 +76,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "not.3.4-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "0c39ea3f-c7aa-47dc-9adb-dfaeac52d716"
     }
    }

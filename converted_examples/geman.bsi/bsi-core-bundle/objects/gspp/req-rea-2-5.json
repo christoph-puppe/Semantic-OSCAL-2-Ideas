@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/REA.2.5",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "REA.2.5",
  "lifecycle": "active",
  "title": "IT-Forensik",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "rea.2.5-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "bestimmte Kriterien"
     }
    ]
   },
@@ -53,7 +54,8 @@
    "parameters": [
     {
      "name": "rea.2.5.3-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einer Frist"
     }
    ]
   }
@@ -211,11 +213,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "rea.2.5-prm1": {
-     "label": "bestimmte Kriterien",
      "alt-identifier": "6de9ac83-2280-4fbd-ac54-f570faa7b211"
     },
     "rea.2.5.3-prm1": {
-     "label": "einer Frist",
      "alt-identifier": "ef31b4b8-5e5d-46fc-9baa-237808678a6d"
     }
    }

@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/RISK.1.1",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "RISK.1.1",
  "lifecycle": "active",
  "title": "Methodik für das Risikomanagement",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "risk.1.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "einem anerkannten Standard"
     }
    ]
   }
@@ -62,7 +63,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "risk.1.1-prm1": {
-     "label": "einem anerkannten Standard",
      "alt-identifier": "b6f7870d-6113-4039-974b-df571540c2f3"
     }
    }

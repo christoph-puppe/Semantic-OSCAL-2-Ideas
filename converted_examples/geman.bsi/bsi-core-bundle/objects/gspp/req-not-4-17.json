@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/NOT.4.17",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "NOT.4.17",
  "lifecycle": "active",
  "title": "Anwendungstest",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "not.4.17-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -80,7 +81,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "not.4.17-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "97025637-17d4-48fc-ace6-67f20e7ccee6"
     }
    }

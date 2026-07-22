@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DLS.3.5",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DLS.3.5",
  "lifecycle": "active",
  "title": "Blockierung unzuverlässiger Dienstleister",
@@ -12,7 +12,7 @@
     "https://ns.bsi.bund.de/gspp/party/institution"
    ],
    "prose": {
-    "de": "Dienstleistersteuerung SOLLTE unzuverlässige Dienstleister oder Subdienstleister blockieren."
+    "de": "Dienstleistersteuerung für Dienstleistungen SOLLTE unzuverlässige Dienstleister oder Subdienstleister blockieren."
    }
   }
  ],
@@ -21,7 +21,10 @@
    "by-statement": {
     "smt": {
      "action": "blockieren",
-     "result": "unzuverlässige Dienstleister oder Subdienstleister"
+     "result": "unzuverlässige Dienstleister oder Subdienstleister",
+     "target-object-categories": [
+      "Dienstleistungen"
+     ]
     }
    }
   },

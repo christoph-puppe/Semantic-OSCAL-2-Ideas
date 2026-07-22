@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/NOT.4.16",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "NOT.4.16",
  "lifecycle": "active",
  "title": "Test der Datensicherung",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "not.4.16-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   },
@@ -33,7 +34,8 @@
    "parameters": [
     {
      "name": "not.4.16.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "regelmäßig"
     }
    ]
   }
@@ -131,11 +133,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "not.4.16-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "09fe99af-64b5-478f-80c0-c4ea6f6d4561"
     },
     "not.4.16.1-prm1": {
-     "label": "regelmäßig",
      "alt-identifier": "77286239-41b4-49e0-86f7-1b64364d9759"
     }
    }

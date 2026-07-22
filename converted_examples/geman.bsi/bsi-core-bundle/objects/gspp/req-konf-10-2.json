@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/KONF.10.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "KONF.10.2",
  "lifecycle": "active",
  "title": "Kryptographische Verfahren in Anwendungen",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "konf.10.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "anerkannten Standards"
     }
    ]
   }
@@ -82,7 +83,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "konf.10.2-prm1": {
-     "label": "anerkannten Standards",
      "alt-identifier": "94aac721-fbe3-44d0-a0ce-55ebded001ab"
     }
    }

@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/ASST.7.2",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "ASST.7.2",
  "lifecycle": "active",
  "title": "Aufbewahrungs- und Löschfristen",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "asst.7.2-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "eine bestimmte Frist"
     }
    ]
   },
@@ -33,7 +34,8 @@
    "parameters": [
     {
      "name": "asst.7.2.1-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "eine bestimmte Frist"
     }
    ]
   }
@@ -140,11 +142,9 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "asst.7.2-prm1": {
-     "label": "eine bestimmte Frist",
      "alt-identifier": "2574ffa3-fa96-4eed-8a9a-e67216d499d9"
     },
     "asst.7.2.1-prm1": {
-     "label": "eine bestimmte Frist",
      "alt-identifier": "d26539e6-62c3-469a-87f3-87ab15fd9213"
     }
    }

@@ -1,6 +1,6 @@
 {
  "id": "https://ns.bsi.bund.de/gspp/req/DET.4.16",
- "version": "2026-07-03T09:11:21.450351+00:00",
+ "version": "2026-07-16T05:11:52.605669+00:00",
  "label": "DET.4.16",
  "lifecycle": "active",
  "title": "Ressourcenauslastung der Server-Dienste",
@@ -17,7 +17,8 @@
    "parameters": [
     {
      "name": "det.4.16-prm1",
-     "type": "string"
+     "type": "string",
+     "label": "Schwellwerten"
     }
    ]
   }
@@ -80,7 +81,6 @@
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "param-extras": {
     "det.4.16-prm1": {
-     "label": "Schwellwerten",
      "alt-identifier": "f094dca7-3bfb-477b-8a50-da1587033e4d"
     }
    }
