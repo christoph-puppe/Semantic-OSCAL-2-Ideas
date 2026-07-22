@@ -100,10 +100,15 @@ re-verified each, every object matching exactly one kernel shape.
 [`one-page-apps/semantic-core-reader.html`](one-page-apps/semantic-core-reader.html)
 is a zero-dependency, single-file bundle reader: open it in a browser, drop
 in any bundle folder from `converted_examples/`, and it renders the objects
-for humans — the five stages of the compliance graph explained, statements
-with their modality lattice, facets and annotations visually separated, and
-one-click re-verification of both SHA-256 digests per object, entirely
-client-side (nothing is uploaded anywhere).
+for humans — statements with their modality lattice, facets and annotations
+visually separated, and one-click re-verification of both SHA-256 digests
+per object, entirely client-side (nothing is uploaded anywhere). The five
+stages of the compliance graph are working views, not just explanations:
+a navigable catalog tree with baselines, a live Tailoring resolver
+(selection expansion, same-target conflict detection, before→after lattice
+verdicts), a filterable crosswalk table, an implementation inspector that
+checks inheritance basis-refs, and an assessment board with bi-modal
+attestation verification (Full/Semantic Match/Tamper).
 
 ### As a specification
 

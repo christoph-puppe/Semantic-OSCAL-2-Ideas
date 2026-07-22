@@ -55,6 +55,8 @@ body{background:var(--bg-deep);color:var(--text-primary);font:14px/1.55 Inter,sy
 .navitem:hover{background:var(--bg-elev-2)}
 .navitem.active{background:var(--accent-soft);color:var(--text-primary)}
 .navitem.active .glyph{color:var(--accent)}
+.navitem.sub{margin-left:18px;padding:5px 10px;font-size:12px}
+.navcount{margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-quiet)}
 .glyph{width:16px;text-align:center;color:var(--text-quiet)}
 .railgroup{display:flex;flex-direction:column;gap:4px}
 .railgroup .nano{margin:0 0 4px 4px}
@@ -128,6 +130,27 @@ pre.raw{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-t
 .legend .li{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-tertiary)}
 .dot{width:9px;height:9px;border-radius:50%}
 
+/* stage functional views */
+.tree{font-size:12.5px}
+.tree details{margin:0 0 0 14px;border-left:1px solid var(--border-1);padding-left:8px}
+.tree>details{margin-left:0;border-left:none;padding-left:0}
+.tree summary{list-style:none;display:flex;align-items:center;gap:7px;padding:3px 6px;border-radius:7px;cursor:pointer}
+.tree summary::before{content:"▸";color:var(--text-quiet);font-size:9px;transition:transform .12s ease}
+.tree details[open]>summary::before{transform:rotate(90deg)}
+.tree summary:hover{background:var(--bg-elev-2)}
+.tree .leaf{display:flex;align-items:center;gap:7px;padding:2px 6px 2px 19px;border-radius:7px}
+.tree .leaf:hover{background:var(--bg-elev-2)}
+.tree .cnt{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-quiet)}
+table.flat{width:100%;border-collapse:collapse;font-size:12px}
+table.flat th{text-align:left;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--text-quiet);padding:6px 8px;border-bottom:1px solid var(--border-2)}
+table.flat td{padding:6px 8px;border-bottom:1px solid var(--border-1);vertical-align:top}
+table.flat tr:hover td{background:var(--bg-elev-1)}
+.verdict-ok{color:var(--green)} .verdict-warn{color:var(--amber)} .verdict-bad{color:var(--red)}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:9px;border:1px solid var(--border-2);background:var(--bg-elev-1);font-size:12px;margin:0 8px 8px 0}
+.chip b{font-family:'JetBrains Mono',monospace;font-size:13px}
+.diffrow{display:grid;grid-template-columns:1fr 24px 1fr;gap:6px;align-items:center}
+.kanban{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.kanban .col{border:1px solid var(--border-1);border-radius:10px;padding:10px;background:var(--bg-elev-1)}
 /* progress + log */
 .progress-track{height:2px;background:var(--border-1);overflow:hidden;border-radius:1px;margin-top:8px}
 .progress-fill{height:100%;background:var(--accent);width:0%;transition:width .2s ease}
@@ -155,7 +178,7 @@ svg text{font-family:'JetBrains Mono',monospace}
     <div class="pill" id="pill-bundle">no bundle loaded</div>
     <div class="pill hidden" id="pill-verify"></div>
     <div style="flex:1"></div>
-    <div class="pill">v1.0.0 · build 2026-07-21</div>
+    <div class="pill">v1.1.0 · build 2026-07-21</div>
   </div>
 
   <div id="mid">
@@ -173,6 +196,11 @@ svg text{font-family:'JetBrains Mono',monospace}
         <div class="nano">Views</div>
         <div class="navitem active" data-view="overview"><span class="glyph">◐</span>Overview</div>
         <div class="navitem" data-view="stages"><span class="glyph">◬</span>Stages</div>
+        <div class="navitem sub" data-view="stage:author"><span class="glyph">◇</span>1 · Author <span class="navcount" id="nc-author"></span></div>
+        <div class="navitem sub" data-view="stage:tailor"><span class="glyph">◬</span>2 · Tailor <span class="navcount" id="nc-tailor"></span></div>
+        <div class="navitem sub" data-view="stage:map"><span class="glyph">⇄</span>3 · Map <span class="navcount" id="nc-map"></span></div>
+        <div class="navitem sub" data-view="stage:implement"><span class="glyph">⬡</span>4 · Implement <span class="navcount" id="nc-implement"></span></div>
+        <div class="navitem sub" data-view="stage:assess"><span class="glyph">◉</span>5 · Assess &amp; Attest <span class="navcount" id="nc-assess"></span></div>
         <div class="navitem" data-view="browser"><span class="glyph">⌕</span>Object browser</div>
         <div class="navitem" data-view="stats"><span class="glyph">▣</span>Statistics</div>
         <div class="navitem" data-view="legend"><span class="glyph">⬡</span>How to read this</div>
@@ -223,6 +251,9 @@ svg text{font-family:'JetBrains Mono',monospace}
         <div id="stages"></div>
         <div id="stage-detail" style="margin-top:14px" class="hint"></div>
       </div>
+
+      <!-- STAGE FUNCTION VIEW (dynamic per stage) -->
+      <div class="glass card hidden" id="view-stagefn"></div>
 
       <!-- BROWSER -->
       <div class="glass card" id="view-browser">
@@ -458,6 +489,7 @@ function indexBundle() {
   let manifestPath = null;
   for (const p of state.files.keys()) if (p.endsWith("content-manifest.json")) { manifestPath = p; break; }
   const prefix = manifestPath ? manifestPath.slice(0, -"content-manifest.json".length) : "";
+  state.manifestBytes = manifestPath ? state.files.get(manifestPath).bytes : null;
   if (manifestPath) {
     try {
       state.manifest = JSON.parse(state.files.get(manifestPath).text);
@@ -543,7 +575,10 @@ function renderStages() {
     $("stage-detail").innerHTML =
       `<div class="glass" style="padding:12px 16px"><b style="color:var(--text-secondary)">${esc(s.label)}</b><br>${esc(s.long)}<br><br>` +
       s.types.map(t => `<span class="badge" style="border-color:${TYPES[t].color};color:${TYPES[t].color}">${TYPES[t].glyph} ${t}</span> <span class="hint">${esc(TYPES[t].what)}</span><br>`).join("") +
-      (state.objects.size ? `<br><button class="primary" id="stage-browse">⌕ Browse these objects</button>` : "") + `</div>`;
+      `<br><button class="primary" id="stage-open">◬ Open the ${esc(s.label)} view</button> ` +
+      (state.objects.size ? `<button id="stage-browse">⌕ Browse raw objects</button>` : "") + `</div>`;
+    const bo = $("stage-open");
+    if (bo) bo.onclick = () => setView("stage:" + s.key);
     const b = $("stage-browse");
     if (b) b.onclick = () => { state.filterTypes = new Set(s.types); state.search = ""; $("search").value = ""; renderBrowser(); setView("browser"); };
   });
@@ -856,15 +891,316 @@ async function verifyAll() {
   if (state.selected) openObject(state.selected);
 }
 
+/* ---------- stage functionality ---------- */
+const OBL = {unspecified:0, may:1, should:2, must:3}, PRO = {unspecified:0, "should-not":1, "must-not":2};
+function modalityVerdict(frm, to) {   // mirrors validate_core.py / B.1.6
+  if (frm === to) return "monotone";
+  if (frm === "unspecified") return "monotone";
+  if (to === "unspecified") return "easing";
+  if (frm === "may" && to === "may-only") return "monotone";
+  if (frm === "may-only" && to === "may") return "easing";
+  if (frm === "may-only" || to === "may-only") return "axis-change";
+  const fo = frm in OBL, tp = to in PRO, fp = frm in PRO, to_ = to in OBL;
+  if (fo && to_) return OBL[to] >= OBL[frm] ? "monotone" : "easing";
+  if (fp && tp) return PRO[to] >= PRO[frm] ? "monotone" : "easing";
+  return "axis-change";
+}
+const VERDICT_CLS = { monotone: "verdict-ok", easing: "verdict-warn", "axis-change": "verdict-bad" };
+
+function setsReferencing() {  // set-id -> [parent set ids]
+  const parents = new Map();
+  for (const r of state.objects.values()) if (r.type === "requirementSet")
+    for (const m of r.obj.members || []) {
+      const t = state.objects.get(m.ref);
+      if (t?.type === "requirementSet") parents.set(m.ref, (parents.get(m.ref) || []).concat(r.obj.id));
+    }
+  return parents;
+}
+function expandSet(ref, seen = new Set()) {  // -> requirement ids (recursive)
+  if (seen.has(ref)) return [];
+  seen.add(ref);
+  const r = state.objects.get(ref);
+  if (!r) return [];
+  if (r.type === "requirement") return [ref];
+  if (r.type !== "requirementSet") return [];
+  const out = [];
+  for (const m of r.obj.members || []) out.push(...expandSet(m.ref, seen));
+  return out;
+}
+function stageEmpty(key, extra) {
+  const s = STAGES.find(x => x.key === key);
+  return `<p class="hint" style="max-width:74ch">${esc(s.long)}</p>
+    <p class="hint" style="margin-top:10px;color:var(--amber)">This bundle carries no ${s.types.join(" / ")} objects. ${extra || ""}</p>`;
+}
+function stageHead(key) {
+  const s = STAGES.find(x => x.key === key);
+  return `<h2><span class="glyph">◬</span>${esc(s.label)} — ${s.types.map(t => `<span style="color:${TYPES[t].color}">${TYPES[t].glyph} ${t}</span>`).join(" · ")}</h2>
+    <p class="hint" style="max-width:80ch;margin-bottom:12px">${esc(s.long)}</p>`;
+}
+
+/* S1 · Author: navigable catalog tree */
+function renderStageAuthor() {
+  const sets = [...state.objects.values()].filter(r => r.type === "requirementSet");
+  if (!sets.length && ![...state.objects.values()].some(r => r.type === "requirement"))
+    return stageHead("author") + stageEmpty("author");
+  const parents = setsReferencing();
+  const roots = sets.filter(r => !parents.has(r.obj.id));
+  const seenGlobal = new Set();
+  function node(ref, depth) {
+    const r = state.objects.get(ref);
+    if (!r) return `<div class="leaf"><span class="reflink dead">${esc(ref)}</span></div>`;
+    if (r.type === "requirement") {
+      const mods = r.obj.statements.map(s => s.modality);
+      return `<div class="leaf"><span style="color:${TYPES.requirement.color}">◇</span>
+        <a class="reflink" data-ref="${esc(ref)}">${esc(r.obj.label || r.obj.title || ref)}</a>
+        ${mods.slice(0,3).map(modBadge).join("")}<span class="cnt">${r.obj.statements.length > 1 ? r.obj.statements.length + " stmts" : ""}</span></div>`;
+    }
+    if (depth > 7) return `<div class="leaf cnt">… depth cap</div>`;
+    const cycle = seenGlobal.has(ref); seenGlobal.add(ref);
+    const mem = r.obj.members || [];
+    const reqN = expandSet(ref).length;
+    return `<details ${depth === 0 ? "open" : ""}><summary><span style="color:${TYPES.requirementSet.color}">▣</span>
+      <a class="reflink" data-ref="${esc(ref)}">${esc(r.obj.title || r.obj.label || ref)}</a>
+      <span class="cnt">${mem.length} members · ${reqN} reqs</span></summary>
+      ${cycle ? '<div class="leaf cnt">(already shown above)</div>' : mem.map(m => node(m.ref, depth + 1)).join("")}</details>`;
+  }
+  const baselineish = roots.filter(r => /baseline|profile|class|marker|ig[0-9]/.test(r.obj.id));
+  const taxish = roots.filter(r => !baselineish.includes(r));
+  return stageHead("author") +
+    `<div class="chip"><b>${[...state.objects.values()].filter(r => r.type === "requirement").length}</b> requirements</div>
+     <div class="chip"><b>${sets.length}</b> sets</div>
+     <div class="chip"><b>${roots.length}</b> root sets</div>
+     <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px">
+       <div><div class="nano" style="margin-bottom:6px">Taxonomy roots</div><div class="tree">${taxish.map(r => node(r.obj.id, 0)).join("") || '<span class="hint">—</span>'}</div></div>
+       <div><div class="nano" style="margin-bottom:6px">Baselines · profiles · markers <span class="hint">(membership IS the binding force in declarative frameworks)</span></div><div class="tree">${baselineish.map(r => node(r.obj.id, 0)).join("") || '<span class="hint">—</span>'}</div></div>
+     </div>`;
+}
+
+/* S2 · Tailor: run the Appendix-B resolution */
+function renderStageTailor() {
+  const ts = [...state.objects.values()].filter(r => r.type === "tailoring");
+  if (!ts.length) return stageHead("tailor") + stageEmpty("tailor", "Catalog bundles usually carry authority class-tailorings only when the source publishes variants (CR26 does).");
+  const pick = state.stageSel?.tailor || ts[0].obj.id;
+  const picker = `<div class="filterrow">${ts.map(t =>
+    `<span class="fpill ${t.obj.id === pick ? "on" : ""}" data-tsel="${esc(t.obj.id)}">${TYPES.tailoring.glyph} ${esc(t.obj.label || t.obj.title || t.obj.id.split("/").pop())}</span>`).join("")}</div>`;
+  const T = state.objects.get(pick); if (!T) return stageHead("tailor") + picker;
+  const o = T.obj;
+  const selected = new Set();
+  for (const s of o.selects || []) if (s["set-ref"]) expandSet(s["set-ref"]).forEach(id => selected.add(id));
+  const predN = (o.selects || []).filter(s => s.predicate).length;
+  for (const ex of o.excludes || []) selected.delete(ex.ref);
+  const targets = new Map(); const conflicts = [];
+  const rows = (o.operations || []).map(op => {
+    const key = [op["requirement-ref"], op["statement-id"], op.parameter, op.field, op.facet].join("|");
+    if (targets.has(key)) conflicts.push(key); targets.set(key, true);
+    const req = state.objects.get(op["requirement-ref"]);
+    const stmt = req?.obj.statements?.find(s => s.id === op["statement-id"]);
+    let before = "", after = "", verdict = "";
+    if (op.op === "set-modality" && stmt) {
+      before = modBadge(stmt.modality); after = modBadge(op.modality);
+      const v = modalityVerdict(stmt.modality, op.modality);
+      verdict = `<span class="${VERDICT_CLS[v]}">${v}</span>` +
+        (v !== "monotone" && !op.deviation && !op["deviation-ref"] ? ` <span class="hint">(no Deviation — legal only at Authority tier, D13 rev)</span>` : "") +
+        (op.deviation ? ` <span class="badge" style="border-color:var(--red);color:var(--red)">Deviation attached</span>` : "");
+    } else if (op.op === "set-parameter" && stmt) {
+      const p = (stmt.parameters || []).find(x => x.name === op.parameter);
+      before = p ? `<span class="mono" style="font-size:11px">${esc(JSON.stringify(p.default ?? (p.num !== undefined ? {num:p.num, unit:p.unit} : null) ?? "unset"))}</span>` : `<span class="hint">param not found</span>`;
+      after = `<span class="mono" style="font-size:11px">${esc(JSON.stringify(op.value))}</span>`;
+      verdict = p?.tightening ? `<span class="hint">tightening: ${esc(p.tightening)}</span>` : "";
+    } else { after = `<span class="mono" style="font-size:11px">${esc(JSON.stringify(op.value ?? op.prose ?? op.relation ?? op.payload ?? ""))}</span>`; }
+    const inScope = selected.has(op["requirement-ref"]);
+    return `<tr><td><span class="badge" style="border-color:var(--amber);color:var(--amber)">${esc(op.op)}</span></td>
+      <td>${req ? `<a class="reflink" data-ref="${esc(op["requirement-ref"])}">${esc(req.obj.label || op["requirement-ref"])}</a>` : esc(op["requirement-ref"])}
+          ${op["statement-id"] ? `<span class="badge">stmt ${esc(op["statement-id"])}</span>` : ""}
+          ${inScope ? "" : ` <span class="verdict-warn" title="operation targets a requirement outside the selection">⚠ out of scope</span>`}</td>
+      <td><div class="diffrow"><div>${before}</div><div style="text-align:center;color:var(--text-quiet)">▶</div><div>${after}</div></div></td>
+      <td>${verdict}</td></tr>`;
+  }).join("");
+  const easings = (o.operations || []).filter(op => {
+    if (op.op !== "set-modality") return false;
+    const stmt = state.objects.get(op["requirement-ref"])?.obj.statements?.find(s => s.id === op["statement-id"]);
+    return stmt && modalityVerdict(stmt.modality, op.modality) !== "monotone";
+  }).length;
+  return stageHead("tailor") + picker +
+    `<div style="margin:6px 0 10px">
+      <div class="chip"><b>${selected.size}</b> requirements selected${predN ? ` <span class="hint">(+${predN} predicate selects, not evaluated here)</span>` : ""}</div>
+      <div class="chip"><b>${(o.excludes || []).length}</b> excluded <span class="hint">— selection, never weakening</span></div>
+      <div class="chip"><b>${(o.operations || []).length}</b> operations</div>
+      <div class="chip ${conflicts.length ? "verdict-bad" : ""}"><b>${conflicts.length}</b> same-target conflicts ${conflicts.length ? "— VALIDATION ERROR (overrides only by chaining)" : "✓"}</div>
+      <div class="chip ${easings ? "verdict-warn" : ""}"><b>${easings}</b> non-monotone moves</div>
+     </div>
+     <table class="flat"><tr><th>op</th><th>target</th><th>before ▶ after</th><th>lattice verdict</th></tr>${rows || "<tr><td colspan=4 class='hint'>no operations</td></tr>"}</table>
+     <p class="hint" style="margin-top:10px">Resolution per spec Appendix B: expand selects through nested Sets, apply excludes, then apply operations in list order to deep copies. Two operations on one target in one Tailoring = error. Weakening needs an attached Deviation at consumer tier; an authority publishing its own variants owes none (D13 rev).</p>`;
+}
+
+/* S3 · Map: crosswalk table */
+function renderStageMap() {
+  const ms = [...state.objects.values()].filter(r => r.type === "mapping");
+  if (!ms.length) return stageHead("map") + stageEmpty("map");
+  state.stageSel = state.stageSel || {};
+  const fRel = state.stageSel.mapRel || "", fQ = (state.stageSel.mapQ || "").toLowerCase();
+  const rels = {};
+  ms.forEach(m => rels[m.obj.relationship] = (rels[m.obj.relationship] || 0) + 1);
+  const shown = ms.filter(m => (!fRel || m.obj.relationship === fRel) &&
+    (!fQ || m.obj["source-ref"].toLowerCase().includes(fQ) || m.obj["target-ref"].toLowerCase().includes(fQ)));
+  const extPrefix = {};
+  ms.forEach(m => { if (!state.objects.has(m.obj["target-ref"])) {
+    const p = m.obj["target-ref"].split("/").slice(0, 5).join("/");
+    extPrefix[p] = (extPrefix[p] || 0) + 1; } });
+  const rows = shown.slice(0, 400).map(m => {
+    const s = state.objects.get(m.obj["source-ref"]), t = state.objects.get(m.obj["target-ref"]);
+    return `<tr>
+      <td>${s ? `<a class="reflink" data-ref="${esc(m.obj["source-ref"])}">${esc(s.obj.label || m.obj["source-ref"].split("/").pop())}</a>` : esc(m.obj["source-ref"].split("/").pop())}</td>
+      <td><span class="badge" style="border-color:var(--teal);color:var(--teal)">${esc(m.obj.relationship)}</span></td>
+      <td>${t ? `<a class="reflink" data-ref="${esc(m.obj["target-ref"])}">${esc(t.obj.label || m.obj["target-ref"])}</a>`
+              : `<span class="mono" style="font-size:11px" title="target not in this bundle">${esc(m.obj["target-ref"])}</span> <span class="badge">external</span>`}</td>
+      <td><span class="badge">${esc(m.obj.confidence)}</span></td>
+      <td><a class="reflink" data-ref="${esc(m.obj.id)}" title="open mapping object">⋯</a></td></tr>`;
+  }).join("");
+  return stageHead("map") +
+    `<div class="filterrow"><span class="fpill ${!fRel ? "on" : ""}" data-mrel="">all · ${ms.length}</span>` +
+    Object.entries(rels).map(([r, n]) => `<span class="fpill ${fRel === r ? "on" : ""}" data-mrel="${esc(r)}">${esc(r)} · ${n}</span>`).join("") +
+    `</div><input type="text" id="mapq" placeholder="filter by source / target uri…" value="${esc(state.stageSel.mapQ || "")}" style="max-width:340px;margin-bottom:10px">
+     <table class="flat"><tr><th>source</th><th>relationship</th><th>target</th><th>confidence</th><th></th></tr>${rows}</table>
+     ${shown.length > 400 ? `<div class="hint" style="padding:6px">…and ${shown.length - 400} more — filter to narrow</div>` : ""}
+     ${Object.keys(extPrefix).length ? `<div class="nano sectionlabel">External target namespaces (not in this bundle)</div>` +
+        Object.entries(extPrefix).sort((a,b)=>b[1]-a[1]).map(([p, n]) => `<div class="hint mono" style="font-size:11px">↗ ${esc(p)}/… × ${n}</div>`).join("") : ""}`;
+}
+
+/* S4 · Implement: components, edges, basis-ref checks */
+function renderStageImplement() {
+  const comps = [...state.objects.values()].filter(r => r.type === "component");
+  const impls = [...state.objects.values()].filter(r => r.type === "implementation");
+  if (!comps.length && !impls.length)
+    return stageHead("implement") + stageEmpty("implement", "Catalog bundles never carry this stage — open the skill's <span class='mono'>semantic-oscal/examples/</span> folder to see it live.");
+  const authIds = new Map();  // authorization id -> component id
+  comps.forEach(c => (c.obj.authorizations || []).forEach(a => authIds.set(a.id, c.obj.id)));
+  const compCards = comps.map(c => `<div class="stmt">
+    <span class="badge" style="border-color:${TYPES.component.color};color:${TYPES.component.color}">⬡ ${esc(c.obj.kind)}</span>
+    <a class="reflink" data-ref="${esc(c.obj.id)}"><b>${esc(c.obj.title || c.obj.label || c.obj.id)}</b></a>
+    ${(c.obj.capabilities || []).map(cap => `<span class="badge" title="${esc(cap.description || "")}">⚙ ${esc(cap.id)}</span>`).join("")}
+    ${(c.obj.authorizations || []).map(a => `<span class="badge" style="border-color:var(--green);color:var(--green)" title="authority: ${esc(a["authority-ref"])}">✦ ${esc(a.id)}${a["scope-label"] ? " · " + esc(a["scope-label"]) : ""}</span>`).join("")}
+    ${(c.obj.members || []).map(m => `<div class="leaf" style="margin-top:4px">↳ ${refLink(m["component-ref"])} ${m.context ? `<span class="hint">(${esc(m.context)})</span>` : ""}</div>`).join("")}
+  </div>`).join("");
+  const implRows = impls.map(i => {
+    const o = i.obj;
+    const sat = (o["satisfied-by"] || []).map(s => {
+      if (s["capability-ref"]) return `<span class="badge">⚙ ${esc(s["capability-ref"])}</span>`;
+      const inh = s["inherited-from"];
+      const ok = inh && authIds.has(inh["basis-ref"]);
+      return `<span class="badge" style="border-color:${ok ? "var(--green)" : "var(--red)"};color:${ok ? "var(--green)" : "var(--red)"}"
+        title="${ok ? "basis authorization found on " + esc(authIds.get(inh["basis-ref"])) : "basis-ref does not resolve to any authorization in this bundle"}">⇡ inherited · basis ${esc(inh?.["basis-ref"] || "?")} ${ok ? "✓" : "✗"}</span>`;
+    }).join(" ");
+    return `<tr>
+      <td>${refLink(o["component-ref"])}</td>
+      <td>${refLink(o["requirement-ref"])}${(o["statement-refs"] || []).map(s => `<span class="badge">stmt ${esc(s)}</span>`).join("")}</td>
+      <td><span class="badge">${esc(o.responsibility)}</span></td>
+      <td>${sat}</td>
+      <td><span class="badge">${esc(o.status)}</span></td>
+      <td><a class="reflink" data-ref="${esc(o.id)}">⋯</a></td></tr>`;
+  }).join("");
+  return stageHead("implement") +
+    `<div class="nano sectionlabel">Components (${comps.length})</div>${compCards || '<span class="hint">none</span>'}
+     <div class="nano sectionlabel">Implementation edges (${impls.length}) — every inherited edge must name its authorization basis (D5); ✓/✗ shows whether the basis resolves in this bundle</div>
+     ${impls.length ? `<table class="flat"><tr><th>component</th><th>requirement · clause</th><th>responsibility</th><th>satisfied by</th><th>status</th><th></th></tr>${implRows}</table>` : '<span class="hint">none</span>'}`;
+}
+
+/* S5 · Assess & Attest: results board + bi-modal verification */
+async function verifyAttestation(attId, btn) {
+  const a = state.objects.get(attId)?.obj; if (!a) return;
+  btn.disabled = true; btn.textContent = "verifying…";
+  let subjOk = 0, subjBad = 0, subjUnknown = 0;
+  for (const s of a["subject-semantic-digests"] || []) {
+    const id = typeof s === "object" ? s.id : null;
+    const want = typeof s === "object" ? s["semantic-digest"] : s;
+    const target = id ? state.objects.get(id) : null;
+    if (!target) { subjUnknown++; continue; }
+    const got = "sha256:" + await sha256hex(canonical(target.obj));
+    got === want ? subjOk++ : subjBad++;
+  }
+  let manifestState = "unknown";
+  if (a["content-manifest-digest"] && state.manifestBytes) {
+    const got = "sha256:" + await sha256hex(state.manifestBytes);
+    manifestState = got === a["content-manifest-digest"] ? "match" : "differs";
+  }
+  let verdict, cls;
+  if (subjBad) { verdict = "TAMPER — a subject's meaning changed after signing"; cls = "verdict-bad"; }
+  else if (subjUnknown && !subjOk) { verdict = "UNKNOWN — subjects not in this bundle"; cls = "hint"; }
+  else if (manifestState === "match") { verdict = "FULL MATCH — bytes and meaning exactly as signed"; cls = "verdict-ok"; }
+  else if (manifestState === "differs") { verdict = "SEMANTIC MATCH — meaning intact, package repackaged"; cls = "verdict-warn"; }
+  else { verdict = "SEMANTIC MATCH (subjects) — manifest digest not comparable here"; cls = "verdict-warn"; }
+  btn.outerHTML = `<span class="${cls}" style="font-weight:600">${esc(verdict)}</span>
+    <span class="hint">subjects: ${subjOk} ok · ${subjBad} tampered · ${subjUnknown} not in bundle</span>`;
+  l[subjBad ? "err" : "ok"](`attestation ${attId}: ${verdict}`);
+}
+function renderStageAssess() {
+  const asmts = [...state.objects.values()].filter(r => r.type === "assessment");
+  const finds = [...state.objects.values()].filter(r => r.type === "finding");
+  const atts = [...state.objects.values()].filter(r => r.type === "attestation");
+  if (!asmts.length && !finds.length && !atts.length)
+    return stageHead("assess") + stageEmpty("assess", "Catalog bundles never carry this stage — open the skill's <span class='mono'>semantic-oscal/examples/</span> folder to see it live.");
+  const RESULT_C = { satisfied: "var(--green)", "not-satisfied": "var(--red)", inconclusive: "var(--amber)" };
+  const aCards = asmts.map(a => `<div class="stmt">
+    <span class="badge" style="border-color:${RESULT_C[a.obj.result] || "var(--border-2)"};color:${RESULT_C[a.obj.result] || "inherit"}">${esc(a.obj.result)}</span>
+    <a class="reflink" data-ref="${esc(a.obj.id)}"><b>${esc(a.obj.title || a.obj.label || a.obj.id.split("/").pop())}</b></a>
+    <span class="hint">by ${esc((a.obj["performer-ref"] || "").split("/").pop())} · ${esc(a.obj.time || "")}</span>
+    <div style="margin-top:4px">${(a.obj["subject-refs"] || []).map(s => refLink(s)).join(" · ")}</div></div>`).join("");
+  const cols = { open: [], "in-remediation": [], closed: [] };
+  finds.forEach(f => (cols[f.obj.state] = cols[f.obj.state] || []).push(f));
+  const kanban = `<div class="kanban">` + Object.entries(cols).map(([st, fs]) => `<div class="col">
+      <div class="nano" style="margin-bottom:6px">${esc(st)} · ${fs.length}</div>` +
+      fs.map(f => `<div class="stmt" style="margin:6px 0">
+        <a class="reflink" data-ref="${esc(f.obj.id)}"><b>${esc(f.obj.label || f.obj.id.split("/").pop())}</b></a>
+        <div class="hint">against ${refLink(f.obj["requirement-ref"])}${f.obj["statement-ref"] ? ` <span class="badge">stmt ${esc(f.obj["statement-ref"])}</span>` : ""}</div>
+        ${(f.obj.actions || []).map(ac => `<div class="hint">▸ ${esc(ac.description)} ${ac.due ? `<span class="badge" title="deadline">${esc(JSON.stringify(ac.due))}</span>` : ""} <span class="badge">${esc(ac.status)}</span></div>`).join("")}
+        ${(f.obj.deviations || []).map(d => `<div class="hint verdict-warn">⚑ Deviation: ${esc(d.type)} · ${esc(d.state)}</div>`).join("")}
+      </div>`).join("") + `</div>`).join("") + `</div>`;
+  const attCards = atts.map(a => `<div class="stmt">
+    <span class="badge" style="border-color:${TYPES.attestation.color}">✦ attestation</span>
+    <a class="reflink" data-ref="${esc(a.obj.id)}"><b>${esc(a.obj.title || a.obj.label || a.obj.id.split("/").pop())}</b></a>
+    <span class="hint">signer ${esc((a.obj.signer || "").split("/").pop())} · ${esc(a.obj.timestamp || "")}</span>
+    <div style="margin-top:6px"><button class="primary" data-att="${esc(a.obj.id)}">◉ Verify bi-modal</button>
+    <span class="hint"> Full Match = bytes as signed · Semantic Match = meaning intact through repackaging · Tamper = meaning changed</span></div></div>`).join("");
+  return stageHead("assess") +
+    (asmts.length ? `<div class="nano sectionlabel">Assessments (${asmts.length})</div>${aCards}` : "") +
+    (finds.length ? `<div class="nano sectionlabel">Findings (${finds.length}) — dispositions are Deviations, deadlines live in actions[].due</div>${kanban}` : "") +
+    (atts.length ? `<div class="nano sectionlabel">Attestations (${atts.length})</div>${attCards}` : "");
+}
+
+function renderStageFn(key) {
+  const el = $("view-stagefn");
+  el.innerHTML = { author: renderStageAuthor, tailor: renderStageTailor, map: renderStageMap,
+                   implement: renderStageImplement, assess: renderStageAssess }[key]();
+  wireRefs(el);
+  el.querySelectorAll("[data-tsel]").forEach(p => p.onclick = () => {
+    state.stageSel = state.stageSel || {}; state.stageSel.tailor = p.dataset.tsel; renderStageFn("tailor"); });
+  el.querySelectorAll("[data-mrel]").forEach(p => p.onclick = () => {
+    state.stageSel = state.stageSel || {}; state.stageSel.mapRel = p.dataset.mrel; renderStageFn("map"); });
+  const mq = el.querySelector("#mapq");
+  if (mq) mq.oninput = e => { state.stageSel = state.stageSel || {}; state.stageSel.mapQ = e.target.value;
+    clearTimeout(state._mqT); state._mqT = setTimeout(() => renderStageFn("map"), 250); };
+  el.querySelectorAll("[data-att]").forEach(b => b.onclick = () => verifyAttestation(b.dataset.att, b));
+}
+function renderNavCounts() {
+  const counts = typeCounts();
+  for (const s of STAGES) {
+    const n = s.types.reduce((a, t) => a + (counts[t] || 0), 0);
+    const el = $("nc-" + s.key);
+    if (el) el.textContent = state.objects.size ? String(n) : "";
+  }
+}
+
 /* ---------- views + wiring ---------- */
 function setView(v) {
   document.querySelectorAll(".navitem").forEach(el => el.classList.toggle("active", el.dataset.view === v));
-  for (const id of ["overview","stages","browser","stats","legend"])
-    $("view-" + id).classList.toggle("hidden", id !== v && !(id === "stats" && v === "stats"));
+  const stage = v.startsWith("stage:") ? v.slice(6) : null;
+  for (const id of ["overview","stages","stagefn","browser","stats","legend"])
+    $("view-" + id).classList.toggle("hidden", stage ? id !== "stagefn" : id !== v);
+  if (stage) renderStageFn(stage);
   if (v === "stats") renderStats();
 }
 document.querySelectorAll(".navitem").forEach(el => el.onclick = () => setView(el.dataset.view));
-function renderAll() { renderOverview(); renderStages(); renderBrowser(); renderStats(); }
+function renderAll() { renderOverview(); renderStages(); renderBrowser(); renderStats(); renderNavCounts(); }
 
 $("btn-folder").onclick = () => $("folderpick").click();
 $("btn-files").onclick = () => $("filepick").click();
@@ -940,7 +1276,7 @@ document.body.addEventListener("drop", async e => {
 renderLattice();
 renderStages();
 setView("overview");
-l.info("Semantic Core Bundle Reader v1.0.0 · build 2026-07-21 — everything runs locally, nothing leaves this page");
+l.info("Semantic Core Bundle Reader v1.1.0 · build 2026-07-21 — everything runs locally, nothing leaves this page");
 l.info("open a bundle folder (contains content-manifest.json + objects/) or drop it here");
 if (!crypto.subtle) l.warn("crypto.subtle unavailable in this context — digest verification uses the JS fallback (slower)");
 </script>
