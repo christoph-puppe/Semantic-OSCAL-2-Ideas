@@ -1,0 +1,161 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/RA-6",
+ "version": "5.2.0",
+ "label": "RA-6",
+ "lifecycle": "active",
+ "title": "Technical Surveillance Countermeasures Survey",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ a technical surveillance countermeasures survey at {param:ra-06_odp.01} {param:ra-06_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ra-06_odp.01",
+     "type": "string",
+     "label": "locations"
+    },
+    {
+     "name": "ra-06_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "{param:ra-06_odp.03} "
+      },
+      {
+       "value": "when {param:ra-06_odp.04} "
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "ra-06_odp.03",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "ra-06_odp.04",
+     "type": "string",
+     "label": "events or indicators"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "A technical surveillance countermeasures survey is a service provided by qualified personnel to detect the presence of technical surveillance devices and hazards and to identify technical security weaknesses that could be used in the conduct of a technical penetration of the surveyed facility. Technical surveillance countermeasures surveys also provide evaluations of the technical security posture of organizations and facilities and include visual, electronic, and physical examinations of surveyed facilities, internally and externally. The surveys also provide useful input for risk assessments and information regarding organizational exposure to potential adversaries."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ra-6_obj",
+     "label": "RA-06",
+     "prose": {
+      "en": "a technical surveillance countermeasures survey is employed at {param:ra-06_odp.01} {param:ra-06_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "RA-06-Examine",
+     "objects": [
+      {
+       "en": "Risk assessment policy"
+      },
+      {
+       "en": "procedures addressing technical surveillance countermeasures surveys"
+      },
+      {
+       "en": "audit records/event logs"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "RA-06-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with technical surveillance countermeasures surveys responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "RA-06-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for technical surveillance countermeasures surveys"
+      },
+      {
+       "en": "mechanisms/tools supporting and/or implementing technical surveillance countermeasure surveys"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ra-06_odp.01": {
+     "guidelines": [
+      {
+       "en": "locations to employ technical surveillance countermeasure surveys are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ra-6_prm_1"
+     ]
+    },
+    "ra-06_odp.02": {
+     "alt-identifiers": [
+      "ra-6_prm_2"
+     ]
+    },
+    "ra-06_odp.03": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to employ technical surveillance countermeasure surveys is defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "ra-6_prm_3"
+     ]
+    },
+    "ra-06_odp.04": {
+     "guidelines": [
+      {
+       "en": "events or indicators which, if they occur, trigger a technical surveillance countermeasures survey are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "ra-6_prm_4"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ }
+}

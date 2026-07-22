@@ -1,0 +1,189 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-12.3",
+ "version": "5.2.0",
+ "label": "SC-12(3)",
+ "lifecycle": "active",
+ "title": "Asymmetric Keys",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Produce, control, and distribute asymmetric cryptographic keys using {param:sc-12.03_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sc-12.03_odp",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "NSA-approved key management technology and processes"
+      },
+      {
+       "value": "prepositioned keying material"
+      },
+      {
+       "value": "DoD-approved or DoD-issued Medium Assurance PKI certificates"
+      },
+      {
+       "value": "DoD-approved or DoD-issued Medium Hardware Assurance PKI certificates and hardware security tokens that protect the user’s private key"
+      },
+      {
+       "value": "certificates issued in accordance with organization-defined requirements"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "SP 800-56A, SP 800-56B , and SP 800-56C provide guidance on cryptographic key establishment schemes and key derivation methods. SP 800-57-1, SP 800-57-2 , and SP 800-57-3 provide guidance on cryptographic key management."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-12.3_obj",
+     "label": "SC-12(03)",
+     "children": [
+      {
+       "id": "sc-12.3_obj-1",
+       "label": "SC-12(03)[01]",
+       "prose": {
+        "en": "asymmetric cryptographic keys are produced using {param:sc-12.03_odp};"
+       }
+      },
+      {
+       "id": "sc-12.3_obj-2",
+       "label": "SC-12(03)[02]",
+       "prose": {
+        "en": "asymmetric cryptographic keys are controlled using {param:sc-12.03_odp};"
+       }
+      },
+      {
+       "id": "sc-12.3_obj-3",
+       "label": "SC-12(03)[03]",
+       "prose": {
+        "en": "asymmetric cryptographic keys are distributed using {param:sc-12.03_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-12(03)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing cryptographic key establishment and management"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "list of NSA-approved cryptographic products"
+      },
+      {
+       "en": "list of approved PKI Class 3 and Class 4 certificates"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-12(03)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel with responsibilities for cryptographic key establishment or management"
+      },
+      {
+       "en": "organizational personnel with responsibilities for PKI certificates"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-12(03)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing asymmetric cryptographic key establishment and management"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-12.03_odp": {
+     "alt-identifiers": [
+      "sc-12.3_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12.4",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12.5",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SC-12.4",
+    "mode": "merged-into",
+    "label": "SC-12(04)",
+    "title": "PKI Certificates"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SC-12.5",
+    "mode": "merged-into",
+    "label": "SC-12(05)",
+    "title": "PKI Certificates / Hardware Tokens"
+   }
+  ]
+ }
+}

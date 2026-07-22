@@ -1,0 +1,186 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SR-3.1",
+ "version": "5.2.0",
+ "label": "SR-3(1)",
+ "lifecycle": "active",
+ "title": "Diverse Supply Base",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ a diverse set of sources for the following system components and services: {param:sr-3.1_prm_1}."
+   },
+   "parameters": [
+    {
+     "name": "sr-3.1_prm_1",
+     "type": "string",
+     "label": "organization-defined system components and services"
+    },
+    {
+     "name": "sr-03.01_odp.01",
+     "type": "string",
+     "label": "system components"
+    },
+    {
+     "name": "sr-03.01_odp.02",
+     "type": "string",
+     "label": "services"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Diversifying the supply of systems, system components, and services can reduce the probability that adversaries will successfully identify and target the supply chain and can reduce the impact of a supply chain event or compromise. Identifying multiple suppliers for replacement components can reduce the probability that the replacement component will become unavailable. Employing a diverse set of developers or logistics service providers can reduce the impact of a natural disaster or other supply chain event. Organizations consider designing the system to include diverse materials and components."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sr-3.1_obj",
+     "label": "SR-03(01)",
+     "children": [
+      {
+       "id": "sr-3.1_obj-1",
+       "label": "SR-03(01)[01]",
+       "prose": {
+        "en": "a diverse set of sources is employed for {param:sr-03.01_odp.01};"
+       }
+      },
+      {
+       "id": "sr-3.1_obj-2",
+       "label": "SR-03(01)[02]",
+       "prose": {
+        "en": "a diverse set of sources is employed for {param:sr-03.01_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SR-03(01)-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management policy and procedures"
+      },
+      {
+       "en": "system and services acquisition policy"
+      },
+      {
+       "en": "planning policy"
+      },
+      {
+       "en": "procedures addressing supply chain protection"
+      },
+      {
+       "en": "physical inventory of critical systems and system components"
+      },
+      {
+       "en": "inventory of critical suppliers, service providers, developers, and contracts"
+      },
+      {
+       "en": "inventory records of critical system components"
+      },
+      {
+       "en": "list of security safeguards ensuring an adequate supply of critical system components"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SR-03(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and services acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain protection responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SR-03(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for defining and employing security safeguards to ensure an adequate supply of critical system components"
+      },
+      {
+       "en": "processes to identify critical suppliers"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the security safeguards that ensure an adequate supply of critical system components"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sr-3.1_prm_1": {
+     "aggregates": [
+      "sr-03.01_odp.01",
+      "sr-03.01_odp.02"
+     ]
+    },
+    "sr-03.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "system components with a diverse set of sources are defined;"
+      }
+     ]
+    },
+    "sr-03.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "services with a diverse set of sources are defined;"
+      }
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-3"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-12.4",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-12.4",
+    "mode": "renamed",
+    "label": "SA-12(04)",
+    "title": "Diversity of Suppliers"
+   }
+  ]
+ }
+}

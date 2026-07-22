@@ -1,0 +1,137 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-3.5",
+ "version": "5.2.0",
+ "label": "CM-3(5)",
+ "lifecycle": "active",
+ "title": "Automated Security Response",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement the following security responses automatically if baseline configurations are changed in an unauthorized manner: {param:cm-03.05_odp}."
+   },
+   "parameters": [
+    {
+     "name": "cm-03.05_odp",
+     "type": "string",
+     "label": "security responses"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Automated security responses include halting selected system functions, halting system processing, and issuing alerts or notifications to organizational personnel when there is an unauthorized modification of a configuration item."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-3.5_obj",
+     "label": "CM-03(05)",
+     "prose": {
+      "en": "{param:cm-03.05_odp} are automatically implemented if baseline configurations are changed in an unauthorized manner."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-03(05)-Examine",
+     "objects": [
+      {
+       "en": "System security plan"
+      },
+      {
+       "en": "configuration management policy"
+      },
+      {
+       "en": "procedures addressing system configuration change control"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system architecture and configuration documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "alerts/notifications of unauthorized baseline configuration changes"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-03(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with configuration change control responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "members of change control board or similar"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-03(05)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for configuration change control"
+      },
+      {
+       "en": "automated mechanisms implementing security responses to unauthorized changes to the baseline configurations"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-03.05_odp": {
+     "guidelines": [
+      {
+       "en": "security responses to be automatically implemented are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-3.5_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-3"
+  }
+ ]
+}

@@ -1,0 +1,152 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-8.1",
+ "version": "5.2.0",
+ "label": "PE-8(1)",
+ "lifecycle": "active",
+ "title": "Automated Records Maintenance and Review",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Maintain and review visitor access records using {param:pe-8.1_prm_1}."
+   },
+   "parameters": [
+    {
+     "name": "pe-8.1_prm_1",
+     "type": "string",
+     "label": "organization-defined automated mechanisms"
+    },
+    {
+     "name": "pe-08.01_odp.01",
+     "type": "string",
+     "label": "automated mechanisms"
+    },
+    {
+     "name": "pe-08.01_odp.02",
+     "type": "string",
+     "label": "automated mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Visitor access records may be stored and maintained in a database management system that is accessible by organizational personnel. Automated access to such records facilitates record reviews on a regular basis to determine if access authorizations are current and still required to support organizational mission and business functions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-8.1_obj",
+     "label": "PE-08(01)",
+     "children": [
+      {
+       "id": "pe-8.1_obj-1",
+       "label": "PE-08(01)[01]",
+       "prose": {
+        "en": "visitor access records are maintained using {param:pe-08.01_odp.01};"
+       }
+      },
+      {
+       "id": "pe-8.1_obj-2",
+       "label": "PE-08(01)[02]",
+       "prose": {
+        "en": "visitor access records are reviewed using {param:pe-08.01_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-08(01)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing visitor access records"
+      },
+      {
+       "en": "automated mechanisms supporting management of visitor access records"
+      },
+      {
+       "en": "visitor access control logs or records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-08(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with visitor access record responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-08(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for maintaining and reviewing visitor access records"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing the maintenance and review of visitor access records"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-8.1_prm_1": {
+     "aggregates": [
+      "pe-08.01_odp.01",
+      "pe-08.01_odp.02"
+     ]
+    },
+    "pe-08.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to maintain visitor access records are defined;"
+      }
+     ]
+    },
+    "pe-08.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to review visitor access records are defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-8"
+  }
+ ]
+}

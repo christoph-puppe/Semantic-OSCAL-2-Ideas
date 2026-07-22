@@ -1,0 +1,133 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-8.4",
+ "version": "5.2.0",
+ "label": "SC-8(4)",
+ "lifecycle": "active",
+ "title": "Conceal or Randomize Communications",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement cryptographic mechanisms to conceal or randomize communication patterns unless otherwise protected by {param:sc-08.04_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sc-08.04_odp",
+     "type": "string",
+     "label": "alternative physical controls"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Concealing or randomizing communication patterns addresses protection from unauthorized disclosure of information. Communication patterns include frequency, periods, predictability, and amount. Changes to communications patterns can reveal information with intelligence value, especially when combined with other available information related to the mission and business functions of the organization. Concealing or randomizing communications prevents the derivation of intelligence based on communications patterns and applies to both internal and external networks or links that may be visible to individuals who are not authorized users. Encrypting the links and transmitting in continuous, fixed, or random patterns prevents the derivation of intelligence from the system communications patterns. Alternative physical controls include protected distribution systems."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-8.4_obj",
+     "label": "SC-08(04)",
+     "prose": {
+      "en": "cryptographic mechanisms are implemented to conceal or randomize communication patterns unless otherwise protected by {param:sc-08.04_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-08(04)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing transmission confidentiality and integrity"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-08(04)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-08(04)-Test",
+     "objects": [
+      {
+       "en": "Cryptographic mechanisms supporting and/or implementing concealment or randomization of communication patterns"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing alternative physical safeguards"
+      },
+      {
+       "en": "organizational processes for defining and implementing alternative physical safeguards"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-08.04_odp": {
+     "guidelines": [
+      {
+       "en": "alternative physical controls to protect against unauthorized disclosure of communication patterns are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-8.4_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  }
+ ]
+}

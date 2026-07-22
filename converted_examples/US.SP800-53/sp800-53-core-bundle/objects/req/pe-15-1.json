@@ -1,0 +1,147 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-15.1",
+ "version": "5.2.0",
+ "label": "PE-15(1)",
+ "lifecycle": "active",
+ "title": "Automation Support",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Detect the presence of water near the system and alert {param:pe-15.01_odp.01} using {param:pe-15.01_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "pe-15.01_odp.01",
+     "type": "string",
+     "label": "personnel or roles"
+    },
+    {
+     "name": "pe-15.01_odp.02",
+     "type": "string",
+     "label": "automated mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Automated mechanisms include notification systems, water detection sensors, and alarms."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-15.1_obj",
+     "label": "PE-15(01)",
+     "children": [
+      {
+       "id": "pe-15.1_obj-1",
+       "label": "PE-15(01)[01]",
+       "prose": {
+        "en": "the presence of water near the system can be detected automatically;"
+       }
+      },
+      {
+       "id": "pe-15.1_obj-2",
+       "label": "PE-15(01)[02]",
+       "prose": {
+        "en": "{param:pe-15.01_odp.01} is/are alerted using {param:pe-15.01_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-15(01)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing water damage protection"
+      },
+      {
+       "en": "facility housing the system"
+      },
+      {
+       "en": "automated mechanisms for water shutoff valves"
+      },
+      {
+       "en": "automated mechanisms for detecting the presence of water in the vicinity of the system"
+      },
+      {
+       "en": "alerts/notifications of water detection in system facility"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-15(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for system environmental controls"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-15(01)-Test",
+     "objects": [
+      {
+       "en": "Automated mechanisms supporting and/or implementing water detection capabilities and alerts for the system"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-15.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to be alerted when the presence of water is detected near the system is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-15.1_prm_1"
+     ]
+    },
+    "pe-15.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to detect the presence of water near the system are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-15.1_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-15"
+  }
+ ]
+}

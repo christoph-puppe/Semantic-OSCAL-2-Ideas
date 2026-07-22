@@ -1,0 +1,101 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-3.2",
+ "version": "5.2.0",
+ "label": "CP-3(2)",
+ "lifecycle": "active",
+ "title": "Mechanisms Used in Training Environments",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ mechanisms used in operations to provide a more thorough and realistic contingency training environment."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Operational mechanisms refer to processes that have been established to accomplish an organizational goal or a system that supports a particular organizational mission or business objective. Actual mission and business processes, systems, and/or facilities may be used to generate simulated events and enhance the realism of simulated events during contingency training."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-3.2_obj",
+     "label": "CP-03(02)",
+     "prose": {
+      "en": "mechanisms used in operations are employed to provide a more thorough and realistic contingency training environment."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-03(02)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing contingency training"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "contingency training curriculum"
+      },
+      {
+       "en": "contingency training material"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-03(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency planning, plan implementation, and training responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-03(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for contingency training"
+      },
+      {
+       "en": "mechanisms for providing contingency training environments"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-3"
+  }
+ ]
+}

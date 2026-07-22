@@ -1,0 +1,123 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-23",
+ "version": "5.2.0",
+ "label": "SC-23",
+ "lifecycle": "active",
+ "title": "Session Authenticity",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Protect the authenticity of communications sessions."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Protecting session authenticity addresses communications protection at the session level, not at the packet level. Such protection establishes grounds for confidence at both ends of communications sessions in the ongoing identities of other parties and the validity of transmitted information. Authenticity protection includes protecting against \"man-in-the-middle\" attacks, session hijacking, and the insertion of false information into sessions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-23_obj",
+     "label": "SC-23",
+     "prose": {
+      "en": "the authenticity of communication sessions is protected."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-23-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing session authenticity"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-23-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-23-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing session authenticity"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-52r2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-77r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-95"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-113"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-11"
+  }
+ ]
+}

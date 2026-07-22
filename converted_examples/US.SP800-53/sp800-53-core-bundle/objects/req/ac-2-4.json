@@ -1,0 +1,143 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-2.4",
+ "version": "5.2.0",
+ "label": "AC-2(4)",
+ "lifecycle": "active",
+ "title": "Automated Audit Actions",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Automatically audit account creation, modification, enabling, disabling, and removal actions."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Account management audit records are defined in accordance with AU-02 and reviewed, analyzed, and reported in accordance with AU-06."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-2.4_obj",
+     "label": "AC-02(04)",
+     "children": [
+      {
+       "id": "ac-2.4_obj-1",
+       "label": "AC-02(04)[01]",
+       "prose": {
+        "en": "account creation is automatically audited;"
+       }
+      },
+      {
+       "id": "ac-2.4_obj-2",
+       "label": "AC-02(04)[02]",
+       "prose": {
+        "en": "account modification is automatically audited;"
+       }
+      },
+      {
+       "id": "ac-2.4_obj-3",
+       "label": "AC-02(04)[03]",
+       "prose": {
+        "en": "account enabling is automatically audited;"
+       }
+      },
+      {
+       "id": "ac-2.4_obj-4",
+       "label": "AC-02(04)[04]",
+       "prose": {
+        "en": "account disabling is automatically audited;"
+       }
+      },
+      {
+       "id": "ac-2.4_obj-5",
+       "label": "AC-02(04)[05]",
+       "prose": {
+        "en": "account removal actions are automatically audited."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-02(04)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing account management"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "notifications/alerts of account creation, modification, enabling, disabling, and removal actions"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-02(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with account management responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-02(04)-Test",
+     "objects": [
+      {
+       "en": "Automated mechanisms implementing account management functions"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  }
+ ]
+}

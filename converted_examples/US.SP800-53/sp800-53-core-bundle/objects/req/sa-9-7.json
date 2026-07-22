@@ -1,0 +1,129 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-9.7",
+ "version": "5.2.0",
+ "label": "SA-9(7)",
+ "lifecycle": "active",
+ "title": "Organization-controlled Integrity Checking",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide the capability to check the integrity of information while it resides in the external system."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Storage of organizational information in an external system could limit visibility into the security status of its data. The ability of the organization to verify and validate the integrity of its stored data without transferring it out of the external system provides such visibility."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-9.7_obj",
+     "label": "SA-09(07)",
+     "prose": {
+      "en": "the capability is provided to check the integrity of information while it resides in the external system."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-09(07)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing external system services"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "procedures addressing organization-controlled integrity checking"
+      },
+      {
+       "en": "information/data and/or system services"
+      },
+      {
+       "en": "organizational security requirements or conditions for external providers"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-09(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organization personnel with integrity checking responsibilities"
+      },
+      {
+       "en": "external providers of system services"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-09(07)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for integrity checking"
+      },
+      {
+       "en": "mechanisms for supporting and implementing integrity checking of information in external systems"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  }
+ ]
+}

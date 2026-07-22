@@ -1,0 +1,238 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-17",
+ "version": "5.2.0",
+ "label": "SA-17",
+ "lifecycle": "active",
+ "title": "Developer Security and Privacy Architecture and Design",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to produce a design specification and security and privacy architecture that:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Is consistent with the organization’s security and privacy architecture that is an integral part the organization’s enterprise architecture;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Accurately and completely describes the required security and privacy functionality, and the allocation of controls among physical and logical components; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Expresses how individual security and privacy functions, mechanisms, and services work together to provide required security and privacy capabilities and a unified approach to protection."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Developer security and privacy architecture and design are directed at external developers, although they could also be applied to internal (in-house) development. In contrast, PL-8 is directed at internal developers to ensure that organizations develop a security and privacy architecture that is integrated with the enterprise architecture. The distinction between SA-17 and PL-8 is especially important when organizations outsource the development of systems, system components, or system services and when there is a requirement to demonstrate consistency with the enterprise architecture and security and privacy architecture of the organization. ISO 15408-2, ISO 15408-3 , and SP 800-160-1 provide information on security architecture and design, including formal policy models, security-relevant components, formal and informal correspondence, conceptually simple design, and structuring for least privilege and testing."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-17_obj",
+     "label": "SA-17",
+     "children": [
+      {
+       "id": "sa-17_obj.a",
+       "label": "SA-17(a)",
+       "children": [
+        {
+         "id": "sa-17_obj.a-1",
+         "label": "SA-17(a)[01]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to produce a design specification and security architecture that are consistent with the organization’s security architecture, which is an integral part the organization’s enterprise architecture;"
+         }
+        },
+        {
+         "id": "sa-17_obj.a-2",
+         "label": "SA-17(a)[02]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to produce a design specification and privacy architecture that are consistent with the organization’s privacy architecture, which is an integral part the organization’s enterprise architecture;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-17_obj.b",
+       "label": "SA-17(b)",
+       "children": [
+        {
+         "id": "sa-17_obj.b-1",
+         "label": "SA-17(b)[01]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to produce a design specification and security architecture that accurately and completely describe the required security functionality and the allocation of controls among physical and logical components;"
+         }
+        },
+        {
+         "id": "sa-17_obj.b-2",
+         "label": "SA-17(b)[02]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to produce a design specification and privacy architecture that accurately and completely describe the required privacy functionality and the allocation of controls among physical and logical components;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-17_obj.c",
+       "label": "SA-17(c)",
+       "children": [
+        {
+         "id": "sa-17_obj.c-1",
+         "label": "SA-17(c)[01]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to produce a design specification and security architecture that express how individual security functions, mechanisms, and services work together to provide required security capabilities and a unified approach to protection;"
+         }
+        },
+        {
+         "id": "sa-17_obj.c-2",
+         "label": "SA-17(c)[02]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to produce a design specification and privacy architecture that express how individual privacy functions, mechanisms, and services work together to provide required privacy capabilities and a unified approach to protection."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-17-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "enterprise architecture policy"
+      },
+      {
+       "en": "enterprise architecture documentation"
+      },
+      {
+       "en": "procedures addressing developer security and privacy architecture and design specifications for the system"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "information system configuration settings and associated documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-17-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.commoncriteriaportal.org/files/ccfiles/CCPART2V3.1R5.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.commoncriteriaportal.org/files/ccfiles/CCPART3V3.1R5.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  }
+ ]
+}

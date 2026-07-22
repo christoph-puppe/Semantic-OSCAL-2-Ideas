@@ -1,0 +1,170 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-5.4",
+ "version": "5.2.0",
+ "label": "MA-5(4)",
+ "lifecycle": "active",
+ "title": "Foreign Nationals",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Ensure that:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Foreign nationals with appropriate security clearances are used to conduct maintenance and diagnostic activities on classified systems only when the systems are jointly owned and operated by the United States and foreign allied governments, or owned and operated solely by foreign allied governments; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Approvals, consents, and detailed operational conditions regarding the use of foreign nationals to conduct maintenance and diagnostic activities on classified systems are fully documented within Memoranda of Agreements."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Personnel who conduct maintenance and diagnostic activities on organizational systems may be exposed to classified information. If non-U.S. citizens are permitted to perform maintenance and diagnostics activities on classified systems, then additional vetting is required to ensure agreements and restrictions are not being violated."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-5.4_obj",
+     "label": "MA-05(04)",
+     "children": [
+      {
+       "id": "ma-5.4_obj.a",
+       "label": "MA-05(04)(a)",
+       "prose": {
+        "en": "foreign nationals with appropriate security clearances are used to conduct maintenance and diagnostic activities on classified systems only when the systems are jointly owned and operated by the United States and foreign allied governments or owned and operated solely by foreign allied governments;"
+       }
+      },
+      {
+       "id": "ma-5.4_obj.b",
+       "label": "MA-05(04)(b)",
+       "children": [
+        {
+         "id": "ma-5.4_obj.b-1",
+         "label": "MA-05(04)(b)[01]",
+         "prose": {
+          "en": "approvals regarding the use of foreign nationals to conduct maintenance and diagnostic activities on classified systems are fully documented within Memoranda of Agreements;"
+         }
+        },
+        {
+         "id": "ma-5.4_obj.b-2",
+         "label": "MA-05(04)(b)[02]",
+         "prose": {
+          "en": "consents regarding the use of foreign nationals to conduct maintenance and diagnostic activities on classified systems are fully documented within Memoranda of Agreements;"
+         }
+        },
+        {
+         "id": "ma-5.4_obj.b-3",
+         "label": "MA-05(04)(b)[03]",
+         "prose": {
+          "en": "detailed operational conditions regarding the use of foreign nationals to conduct maintenance and diagnostic activities on classified systems are fully documented within Memoranda of Agreements."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-05(04)-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing maintenance personnel"
+      },
+      {
+       "en": "system media protection policy"
+      },
+      {
+       "en": "access control policy and procedures"
+      },
+      {
+       "en": "physical and environmental protection policy and procedures"
+      },
+      {
+       "en": "memorandum of agreement"
+      },
+      {
+       "en": "maintenance records"
+      },
+      {
+       "en": "access control records"
+      },
+      {
+       "en": "access credentials"
+      },
+      {
+       "en": "access authorizations"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-05(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities, organizational personnel with personnel security responsibilities"
+      },
+      {
+       "en": "organizational personnel managing memoranda of agreements"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MA-05(04)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing foreign national maintenance personnel"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-3"
+  }
+ ]
+}

@@ -1,0 +1,135 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-49",
+ "version": "5.2.0",
+ "label": "SC-49",
+ "lifecycle": "active",
+ "title": "Hardware-enforced Separation and Policy Enforcement",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement hardware-enforced separation and policy enforcement mechanisms between {param:sc-49_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sc-49_odp",
+     "type": "string",
+     "label": "security domains"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "System owners may require additional strength of mechanism and robustness to ensure domain separation and policy enforcement for specific types of threats and environments of operation. Hardware-enforced separation and policy enforcement provide greater strength of mechanism than software-enforced separation and policy enforcement."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-49_obj",
+     "label": "SC-49",
+     "prose": {
+      "en": "hardware-enforced separation and policy enforcement mechanisms are implemented between {param:sc-49_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-49-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing cross-domain policy enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-49-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-49-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing hardware-enforced security domain separation and policy enforcement"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-49_odp": {
+     "guidelines": [
+      {
+       "en": "security domains requiring hardware-enforced separation and policy enforcement mechanisms are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-49_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-50"
+  }
+ ]
+}

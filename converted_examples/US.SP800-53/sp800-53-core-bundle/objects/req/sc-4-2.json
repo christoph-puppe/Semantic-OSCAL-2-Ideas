@@ -1,0 +1,119 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-4.2",
+ "version": "5.2.0",
+ "label": "SC-4(2)",
+ "lifecycle": "active",
+ "title": "Multilevel or Periods Processing",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Prevent unauthorized information transfer via shared resources in accordance with {param:sc-04.02_odp} when system processing explicitly switches between different information classification levels or security categories."
+   },
+   "parameters": [
+    {
+     "name": "sc-04.02_odp",
+     "type": "string",
+     "label": "procedures"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Changes in processing levels can occur during multilevel or periods processing with information at different classification levels or security categories. It can also occur during serial reuse of hardware components at different classification levels. Organization-defined procedures can include approved sanitization processes for electronically stored information."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-4.2_obj",
+     "label": "SC-04(02)",
+     "prose": {
+      "en": "unauthorized information transfer via shared resources is prevented in accordance with {param:sc-04.02_odp} when system processing explicitly switches between different information classification levels or security categories."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-04(02)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing information protection in shared system resources"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-04(02)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-04(02)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms preventing the unauthorized transfer of information via shared system resources"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-04.02_odp": {
+     "guidelines": [
+      {
+       "en": "procedures to prevent unauthorized information transfer via shared resources are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-4.2_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-4"
+  }
+ ]
+}

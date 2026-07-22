@@ -1,0 +1,219 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-23",
+ "version": "5.2.0",
+ "label": "SI-23",
+ "lifecycle": "active",
+ "title": "Information Fragmentation",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Based on {param:si-23_odp.01}:"
+   },
+   "parameters": [
+    {
+     "name": "si-23_odp.01",
+     "type": "string",
+     "label": "circumstances"
+    }
+   ]
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Fragment the following information: {param:si-23_odp.02} ; and"
+   },
+   "parameters": [
+    {
+     "name": "si-23_odp.02",
+     "type": "string",
+     "label": "information"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Distribute the fragmented information across the following systems or system components: {param:si-23_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "si-23_odp.03",
+     "type": "string",
+     "label": "systems or system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "One objective of the advanced persistent threat is to exfiltrate valuable information. Once exfiltrated, there is generally no way for the organization to recover the lost information. Therefore, organizations may consider dividing the information into disparate elements and distributing those elements across multiple systems or system components and locations. Such actions will increase the adversary’s work factor to capture and exfiltrate the desired information and, in so doing, increase the probability of detection. The fragmentation of information impacts the organization’s ability to access the information in a timely manner. The extent of the fragmentation is dictated by the impact or classification level (and value) of the information, threat intelligence information received, and whether data tainting is used (i.e., data tainting-derived information about the exfiltration of some information could result in the fragmentation of the remaining information)."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-23_obj",
+     "label": "SI-23",
+     "children": [
+      {
+       "id": "si-23_obj.a",
+       "label": "SI-23a.",
+       "prose": {
+        "en": "under {param:si-23_odp.01}, {param:si-23_odp.02} is fragmented;"
+       }
+      },
+      {
+       "id": "si-23_obj.b",
+       "label": "SI-23b.",
+       "prose": {
+        "en": "under {param:si-23_odp.01} , the fragmented information is distributed across {param:si-23_odp.03}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-23-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "procedures addressing software and information integrity"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "procedures to identify information for fragmentation and distribution across systems/system components"
+      },
+      {
+       "en": "list of distributed and fragmented information"
+      },
+      {
+       "en": "list of circumstances requiring information fragmentation"
+      },
+      {
+       "en": "enterprise architecture"
+      },
+      {
+       "en": "system security architecture"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-23-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with systems security engineering responsibilities"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "security architects"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-23-Test",
+     "objects": [
+      {
+       "en": "Organizational processes to identify information for fragmentation and distribution across systems/system components"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing information fragmentation and distribution across systems/system components"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-23_odp.01": {
+     "guidelines": [
+      {
+       "en": "circumstances that require information fragmentation are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-23_prm_1"
+     ]
+    },
+    "si-23_odp.02": {
+     "guidelines": [
+      {
+       "en": "the information to be fragmented is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-23_prm_2"
+     ]
+    },
+    "si-23_odp.03": {
+     "guidelines": [
+      {
+       "en": "systems or system components across which the fragmented information is to be distributed are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-23_prm_3"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v2"
+  }
+ ]
+}

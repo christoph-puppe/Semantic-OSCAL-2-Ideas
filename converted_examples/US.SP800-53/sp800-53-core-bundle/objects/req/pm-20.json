@@ -1,0 +1,223 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-20",
+ "version": "5.2.0",
+ "label": "PM-20",
+ "lifecycle": "active",
+ "title": "Dissemination of Privacy Program Information",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Maintain a central resource webpage on the organization’s principal public website that serves as a central source of information about the organization’s privacy program and that:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Ensures that the public has access to information about organizational privacy activities and can communicate with its senior agency official for privacy;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Ensures that organizational privacy practices and reports are publicly available; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employs publicly facing email addresses and/or phone lines to enable the public to provide feedback and/or direct questions to privacy offices regarding privacy practices."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "For federal agencies, the webpage is located at www.[agency].gov/privacy. Federal agencies include public privacy impact assessments, system of records notices, computer matching notices and agreements, PRIVACT exemption and implementation rules, privacy reports, privacy policies, instructions for individuals making an access or amendment request, email addresses for questions/complaints, blogs, and periodic publications."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-20_obj",
+     "label": "PM-20",
+     "children": [
+      {
+       "id": "pm-20_obj-1",
+       "label": "PM-20[01]",
+       "prose": {
+        "en": "a central resource webpage is maintained on the organization’s principal public website;"
+       }
+      },
+      {
+       "id": "pm-20_obj-2",
+       "label": "PM-20[02]",
+       "prose": {
+        "en": "the webpage serves as a central source of information about the organization’s privacy program;"
+       }
+      },
+      {
+       "id": "pm-20_obj.a",
+       "label": "PM-20a.",
+       "children": [
+        {
+         "id": "pm-20_obj.a-1",
+         "label": "PM-20a.[01]",
+         "prose": {
+          "en": "the webpage ensures that the public has access to information about organizational privacy activities;"
+         }
+        },
+        {
+         "id": "pm-20_obj.a-2",
+         "label": "PM-20a.[02]",
+         "prose": {
+          "en": "the webpage ensures that the public can communicate with its senior agency official for privacy;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-20_obj.b",
+       "label": "PM-20b.",
+       "children": [
+        {
+         "id": "pm-20_obj.b-1",
+         "label": "PM-20b.[01]",
+         "prose": {
+          "en": "the webpage ensures that organizational privacy practices are publicly available;"
+         }
+        },
+        {
+         "id": "pm-20_obj.b-2",
+         "label": "PM-20b.[02]",
+         "prose": {
+          "en": "the webpage ensures that organizational privacy reports are publicly available;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-20_obj.c",
+       "label": "PM-20c.",
+       "prose": {
+        "en": "the webpage employs publicly facing email addresses and/or phone numbers to enable the public to provide feedback and/or direct questions to privacy offices regarding privacy practices."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-20-Examine",
+     "objects": [
+      {
+       "en": "Public website"
+      },
+      {
+       "en": "publicly posted privacy program documents, including policies, procedures, plans, and reports"
+      },
+      {
+       "en": "position description of the senior agency official for privacy"
+      },
+      {
+       "en": "public privacy notices, including Federal Register notices"
+      },
+      {
+       "en": "privacy impact assessments"
+      },
+      {
+       "en": "privacy risk assessments"
+      },
+      {
+       "en": "Privacy Act statements and system of records notices"
+      },
+      {
+       "en": "computer matching agreements and notices"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-20-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with privacy program information dissemination responsibilities"
+      },
+      {
+       "en": "organizational personnel with privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PM-20-Test",
+     "objects": [
+      {
+       "en": "Location, access, availability, and functionality of privacy resource webpage"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.govinfo.gov/content/pkg/STATUTE-88/pdf/STATUTE-88-Pg1896.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/memoranda/2017/m-17-06.pdf"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-19"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-8"
+  }
+ ]
+}

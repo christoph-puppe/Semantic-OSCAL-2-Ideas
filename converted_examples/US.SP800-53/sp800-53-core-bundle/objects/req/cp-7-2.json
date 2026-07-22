@@ -1,0 +1,109 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-7.2",
+ "version": "5.2.0",
+ "label": "CP-7(2)",
+ "lifecycle": "active",
+ "title": "Accessibility",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identify potential accessibility problems to alternate processing sites in the event of an area-wide disruption or disaster and outlines explicit mitigation actions."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Area-wide disruptions refer to those types of disruptions that are broad in geographic scope with such determinations made by organizations based on organizational assessments of risk."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-7.2_obj",
+     "label": "CP-07(02)",
+     "children": [
+      {
+       "id": "cp-7.2_obj-1",
+       "label": "CP-07(02)[01]",
+       "prose": {
+        "en": "potential accessibility problems to alternate processing sites in the event of an area-wide disruption or disaster are identified;"
+       }
+      },
+      {
+       "id": "cp-7.2_obj-2",
+       "label": "CP-07(02)[02]",
+       "prose": {
+        "en": "explicit mitigation actions to address identified accessibility problems are outlined."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-07(02)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing alternate processing sites"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "alternate processing site"
+      },
+      {
+       "en": "alternate processing site agreements"
+      },
+      {
+       "en": "primary processing site agreements"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-07(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency plan alternate processing site responsibilities"
+      },
+      {
+       "en": "organizational personnel with system recovery responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  }
+ ]
+}

@@ -1,0 +1,114 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-16.10",
+ "version": "5.2.0",
+ "label": "AC-16(10)",
+ "lifecycle": "active",
+ "title": "Attribute Configuration by Authorized Individuals",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide authorized individuals the capability to define or change the type and value of security and privacy attributes available for association with subjects and objects."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The content or assigned values of security and privacy attributes can directly affect the ability of individuals to access organizational information. Thus, it is important for systems to be able to limit the ability to create or modify the type and value of attributes available for association with subjects and objects to authorized individuals only."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-16.10_obj",
+     "label": "AC-16(10)",
+     "children": [
+      {
+       "id": "ac-16.10_obj-1",
+       "label": "AC-16(10)[01]",
+       "prose": {
+        "en": "authorized individuals are provided with the capability to define or change the type and value of security attributes available for association with subjects and objects;"
+       }
+      },
+      {
+       "id": "ac-16.10_obj-2",
+       "label": "AC-16(10)[02]",
+       "prose": {
+        "en": "authorized individuals are provided with the capability to define or change the type and value of privacy attributes available for association with subjects and objects."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-16(10)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing configuration of security and privacy attributes by authorized individuals"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-16(10)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for defining or changing security and privacy attributes associated with information"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-16(10)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing capability for defining or changing security and privacy attributes"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-16"
+  }
+ ]
+}

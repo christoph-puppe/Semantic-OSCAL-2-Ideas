@@ -1,0 +1,143 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-4.11",
+ "version": "5.2.0",
+ "label": "IR-4(11)",
+ "lifecycle": "active",
+ "title": "Integrated Incident Response Team",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish and maintain an integrated incident response team that can be deployed to any location identified by the organization in {param:ir-04.11_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ir-04.11_odp",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "An integrated incident response team is a team of experts that assesses, documents, and responds to incidents so that organizational systems and networks can recover quickly and implement the necessary controls to avoid future incidents. Incident response team personnel include forensic and malicious code analysts, tool developers, systems security and privacy engineers, and real-time operations personnel. The incident handling capability includes performing rapid forensic preservation of evidence and analysis of and response to intrusions. For some organizations, the incident response team can be a cross-organizational entity.\n\nAn integrated incident response team facilitates information sharing and allows organizational personnel (e.g., developers, implementers, and operators) to leverage team knowledge of the threat and implement defensive measures that enable organizations to deter intrusions more effectively. Moreover, integrated teams promote the rapid detection of intrusions, the development of appropriate mitigations, and the deployment of effective defensive measures. For example, when an intrusion is detected, the integrated team can rapidly develop an appropriate response for operators to implement, correlate the new incident with information on past intrusions, and augment ongoing cyber intelligence development. Integrated incident response teams are better able to identify adversary tactics, techniques, and procedures that are linked to the operations tempo or specific mission and business functions and to define responsive actions in a way that does not disrupt those mission and business functions. Incident response teams can be distributed within organizations to make the capability resilient."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-4.11_obj",
+     "label": "IR-04(11)",
+     "children": [
+      {
+       "id": "ir-4.11_obj-1",
+       "label": "IR-04(11)[01]",
+       "prose": {
+        "en": "an integrated incident response team is established and maintained;"
+       }
+      },
+      {
+       "id": "ir-4.11_obj-2",
+       "label": "IR-04(11)[02]",
+       "prose": {
+        "en": "the integrated incident response team can be deployed to any location identified by the organization in {param:ir-04.11_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-04(11)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing incident handling"
+      },
+      {
+       "en": "procedures addressing incident response planning"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-04(11)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident handling responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "members of the integrated incident response team"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ir-04.11_odp": {
+     "guidelines": [
+      {
+       "en": "the time period within which an integrated incident response team can be deployed is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-4.11_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-10",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/IR-10",
+    "mode": "renamed",
+    "label": "IR-10",
+    "title": "Integrated Information Security Analysis Team"
+   }
+  ]
+ }
+}

@@ -1,0 +1,89 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-8.2",
+ "version": "5.2.0",
+ "label": "CP-8(2)",
+ "lifecycle": "active",
+ "title": "Single Points of Failure",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Obtain alternate telecommunications services to reduce the likelihood of sharing a single point of failure with primary telecommunications services."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "In certain circumstances, telecommunications service providers or services may share the same physical lines, which increases the vulnerability of a single failure point. It is important to have provider transparency for the actual physical transmission capability for telecommunication services."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-8.2_obj",
+     "label": "CP-08(02)",
+     "prose": {
+      "en": "alternate telecommunications services to reduce the likelihood of sharing a single point of failure with primary telecommunications services are obtained."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-08(02)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing primary and alternate telecommunications services"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "primary and alternate telecommunications service agreements"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-08(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency plan telecommunications responsibilities"
+      },
+      {
+       "en": "organizational personnel with system recovery responsibilities"
+      },
+      {
+       "en": "primary and alternate telecommunications service providers"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-8"
+  }
+ ]
+}

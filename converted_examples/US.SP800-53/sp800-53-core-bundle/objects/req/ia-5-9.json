@@ -1,0 +1,124 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-5.9",
+ "version": "5.2.0",
+ "label": "IA-5(9)",
+ "lifecycle": "active",
+ "title": "Federated Credential Management",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Use the following external organizations to federate credentials: {param:ia-05.09_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ia-05.09_odp",
+     "type": "string",
+     "label": "external organizations"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Federation provides organizations with the capability to authenticate individuals and devices when conducting cross-organization activities involving the processing, storage, or transmission of information. Using a specific list of approved external organizations for authentication helps to ensure that those organizations are vetted and trusted."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-5.9_obj",
+     "label": "IA-05(09)",
+     "prose": {
+      "en": "{param:ia-05.09_odp} are used to federate credentials."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-05(09)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "procedures addressing authenticator management"
+      },
+      {
+       "en": "procedures addressing account management"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "security agreements"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-05(09)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with authenticator management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-05(09)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing safeguards for authenticator management"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ia-05.09_odp": {
+     "guidelines": [
+      {
+       "en": "external organizations to be used for federating credentials are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-5.9_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-16"
+  }
+ ]
+}

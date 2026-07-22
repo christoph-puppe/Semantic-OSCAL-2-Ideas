@@ -1,0 +1,99 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-12.6",
+ "version": "5.2.0",
+ "label": "SC-12(6)",
+ "lifecycle": "active",
+ "title": "Physical Control of Keys",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Maintain physical control of cryptographic keys when stored information is encrypted by external service providers."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "For organizations that use external service providers (e.g., cloud service or data center providers), physical control of cryptographic keys provides additional assurance that information stored by such external providers is not subject to unauthorized disclosure or modification."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-12.6_obj",
+     "label": "SC-12(06)",
+     "prose": {
+      "en": "physical control of cryptographic keys is maintained when stored information is encrypted by external service providers."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-12(06)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing cryptographic key establishment, management, and recovery"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-12(06)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibilities for cryptographic key establishment or management"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-12(06)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing cryptographic key establishment and management"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  }
+ ]
+}

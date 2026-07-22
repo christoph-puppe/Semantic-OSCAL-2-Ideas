@@ -1,0 +1,136 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-3.3",
+ "version": "5.2.0",
+ "label": "SA-3(3)",
+ "lifecycle": "active",
+ "title": "Technology Refresh",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Plan for and implement a technology refresh schedule for the system throughout the system development life cycle."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Technology refresh planning may encompass hardware, software, firmware, processes, personnel skill sets, suppliers, service providers, and facilities. The use of obsolete or nearing obsolete technology may increase the security and privacy risks associated with unsupported components, counterfeit or repurposed components, components unable to implement security or privacy requirements, slow or inoperable components, components from untrusted sources, inadvertent personnel error, or increased complexity. Technology refreshes typically occur during the operations and maintenance stage of the system development life cycle."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-3.3_obj",
+     "label": "SA-03(03)",
+     "children": [
+      {
+       "id": "sa-3.3_obj-1",
+       "label": "SA-03(03)[01]",
+       "prose": {
+        "en": "a technology refresh schedule is planned for the system throughout the system development life cycle;"
+       }
+      },
+      {
+       "id": "sa-3.3_obj-2",
+       "label": "SA-03(03)[02]",
+       "prose": {
+        "en": "a technology refresh schedule is implemented for the system throughout the system development life cycle."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-03(03)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "procedures addressing technology refresh planning and implementation"
+      },
+      {
+       "en": "system development life cycle documentation"
+      },
+      {
+       "en": "technology refresh schedule"
+      },
+      {
+       "en": "security risk assessment documentation"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-03(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with system life cycle development responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-03(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for defining and documenting the system development life cycle"
+      },
+      {
+       "en": "organizational processes for identifying system development life cycle roles and responsibilities"
+      },
+      {
+       "en": "organizational processes for integrating security and privacy risk management into the system development life cycle"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the system development life cycle"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-6"
+  }
+ ]
+}

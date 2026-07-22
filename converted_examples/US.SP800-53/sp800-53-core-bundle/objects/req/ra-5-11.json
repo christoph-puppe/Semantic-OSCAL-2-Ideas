@@ -1,0 +1,116 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/RA-5.11",
+ "version": "5.2.0",
+ "label": "RA-5(11)",
+ "lifecycle": "active",
+ "title": "Public Disclosure Program",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish a public reporting channel for receiving reports of vulnerabilities in organizational systems and system components."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The reporting channel is publicly discoverable and contains clear language authorizing good-faith research and the disclosure of vulnerabilities to the organization. The organization does not condition its authorization on an expectation of indefinite non-disclosure to the public by the reporting entity but may request a specific time period to properly remediate the vulnerability."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ra-5.11_obj",
+     "label": "RA-05(11)",
+     "prose": {
+      "en": "a public reporting channel is established for receiving reports of vulnerabilities in organizational systems and system components."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "RA-05(11)-Examine",
+     "objects": [
+      {
+       "en": "Risk assessment policy"
+      },
+      {
+       "en": "procedures addressing vulnerability scanning"
+      },
+      {
+       "en": "risk assessment"
+      },
+      {
+       "en": "vulnerability scanning tools and techniques documentation"
+      },
+      {
+       "en": "vulnerability scanning results"
+      },
+      {
+       "en": "vulnerability management records"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "public reporting channel"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "RA-05(11)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with vulnerability scanning responsibilities"
+      },
+      {
+       "en": "organizational personnel with vulnerability scan analysis responsibilities"
+      },
+      {
+       "en": "organizational personnel with security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "RA-05(11)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for vulnerability scanning"
+      },
+      {
+       "en": "mechanisms/tools supporting and/or implementing vulnerability scanning"
+      },
+      {
+       "en": "mechanisms implementing the public reporting of vulnerabilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  }
+ ]
+}

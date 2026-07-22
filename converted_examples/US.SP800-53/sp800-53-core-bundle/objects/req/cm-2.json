@@ -1,0 +1,339 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-2",
+ "version": "5.2.0",
+ "label": "CM-2",
+ "lifecycle": "active",
+ "title": "Baseline Configuration",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop, document, and maintain under configuration control, a current baseline configuration of the system; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review and update the baseline configuration of the system:"
+   }
+  },
+  {
+   "id": "smt.b.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "{param:cm-02_odp.01};"
+   },
+   "parameters": [
+    {
+     "name": "cm-02_odp.01",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.b.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "When required due to {param:cm-02_odp.02} ; and"
+   },
+   "parameters": [
+    {
+     "name": "cm-02_odp.02",
+     "type": "string",
+     "label": "circumstances"
+    }
+   ]
+  },
+  {
+   "id": "smt.b.3",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "When system components are installed or upgraded."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Baseline configurations for systems and system components include connectivity, operational, and communications aspects of systems. Baseline configurations are documented, formally reviewed, and agreed-upon specifications for systems or configuration items within those systems. Baseline configurations serve as a basis for future builds, releases, or changes to systems and include security and privacy control implementations, operational procedures, information about system components, network topology, and logical placement of components in the system architecture. Maintaining baseline configurations requires creating new baselines as organizational systems change over time. Baseline configurations of systems reflect the current enterprise architecture."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-2_obj",
+     "label": "CM-02",
+     "children": [
+      {
+       "id": "cm-2_obj.a",
+       "label": "CM-02a.",
+       "children": [
+        {
+         "id": "cm-2_obj.a-1",
+         "label": "CM-02a.[01]",
+         "prose": {
+          "en": "a current baseline configuration of the system is developed and documented;"
+         }
+        },
+        {
+         "id": "cm-2_obj.a-2",
+         "label": "CM-02a.[02]",
+         "prose": {
+          "en": "a current baseline configuration of the system is maintained under configuration control;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "cm-2_obj.b",
+       "label": "CM-02b.",
+       "children": [
+        {
+         "id": "cm-2_obj.b.1",
+         "label": "CM-02b.01",
+         "prose": {
+          "en": "the baseline configuration of the system is reviewed and updated {param:cm-02_odp.01};"
+         }
+        },
+        {
+         "id": "cm-2_obj.b.2",
+         "label": "CM-02b.02",
+         "prose": {
+          "en": "the baseline configuration of the system is reviewed and updated when required due to {param:cm-02_odp.02};"
+         }
+        },
+        {
+         "id": "cm-2_obj.b.3",
+         "label": "CM-02b.03",
+         "prose": {
+          "en": "the baseline configuration of the system is reviewed and updated when system components are installed or upgraded."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-02-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing the baseline configuration of the system"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "enterprise architecture documentation"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "system architecture and configuration documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-02-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with configuration management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-02-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing baseline configurations"
+      },
+      {
+       "en": "mechanisms supporting configuration control of the baseline configuration"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-02_odp.01": {
+     "guidelines": [
+      {
+       "en": "the frequency of baseline configuration review and update is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-2_prm_1"
+     ]
+    },
+    "cm-02_odp.02": {
+     "guidelines": [
+      {
+       "en": "the circumstances requiring baseline configuration review and update are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-2_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-124r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-128"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-19"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-15"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-18"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-2.1",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/CM-2.1",
+    "mode": "merged-into",
+    "label": "CM-02(01)",
+    "title": "Reviews and Updates"
+   }
+  ]
+ }
+}

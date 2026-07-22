@@ -1,0 +1,310 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-12",
+ "version": "5.2.0",
+ "label": "CM-12",
+ "lifecycle": "active",
+ "title": "Information Location",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identify and document the location of {param:cm-12_odp} and the specific system components on which the information is processed and stored;"
+   },
+   "parameters": [
+    {
+     "name": "cm-12_odp",
+     "type": "string",
+     "label": "information"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identify and document the users who have access to the system and system components where the information is processed and stored; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Document changes to the location (i.e., system or system components) where the information is processed and stored."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Information location addresses the need to understand where information is being processed and stored. Information location includes identifying where specific information types and information reside in system components and how information is being processed so that information flow can be understood and adequate protection and policy management provided for such information and system components. The security category of the information is also a factor in determining the controls necessary to protect the information and the system component where the information resides (see FIPS 199 ). The location of the information and system components is also a factor in the architecture and design of the system (see SA-4, SA-8, SA-17)."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-12_obj",
+     "label": "CM-12",
+     "children": [
+      {
+       "id": "cm-12_obj.a",
+       "label": "CM-12a.",
+       "children": [
+        {
+         "id": "cm-12_obj.a-1",
+         "label": "CM-12a.[01]",
+         "prose": {
+          "en": "the location of {param:cm-12_odp} is identified and documented;"
+         }
+        },
+        {
+         "id": "cm-12_obj.a-2",
+         "label": "CM-12a.[02]",
+         "prose": {
+          "en": "the specific system components on which {param:cm-12_odp} is processed are identified and documented;"
+         }
+        },
+        {
+         "id": "cm-12_obj.a-3",
+         "label": "CM-12a.[03]",
+         "prose": {
+          "en": "the specific system components on which {param:cm-12_odp} is stored are identified and documented;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "cm-12_obj.b",
+       "label": "CM-12b.",
+       "children": [
+        {
+         "id": "cm-12_obj.b-1",
+         "label": "CM-12b.[01]",
+         "prose": {
+          "en": "the users who have access to the system and system components where {param:cm-12_odp} is processed are identified and documented;"
+         }
+        },
+        {
+         "id": "cm-12_obj.b-2",
+         "label": "CM-12b.[02]",
+         "prose": {
+          "en": "the users who have access to the system and system components where {param:cm-12_odp} is stored are identified and documented;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "cm-12_obj.c",
+       "label": "CM-12c.",
+       "children": [
+        {
+         "id": "cm-12_obj.c-1",
+         "label": "CM-12c.[01]",
+         "prose": {
+          "en": "changes to the location (i.e., system or system components) where {param:cm-12_odp} is processed are documented;"
+         }
+        },
+        {
+         "id": "cm-12_obj.c-2",
+         "label": "CM-12c.[02]",
+         "prose": {
+          "en": "changes to the location (i.e., system or system components) where {param:cm-12_odp} is stored are documented."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-12-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing identification and documentation of information location"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system architecture documentation"
+      },
+      {
+       "en": "PII inventory documentation"
+      },
+      {
+       "en": "data mapping documentation"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "list of users with system and system component access"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-12-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for managing information location and user access to information"
+      },
+      {
+       "en": "organizational personnel with responsibilities for operating, using, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-12-Test",
+     "objects": [
+      {
+       "en": "Organizational processes governing information location"
+      },
+      {
+       "en": "mechanisms enforcing policies and methods for governing information location"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-12_odp": {
+     "guidelines": [
+      {
+       "en": "information for which the location is to be identified and documented is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-12_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.199"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-60v1r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-60v2r1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-23"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-28"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  }
+ ]
+}

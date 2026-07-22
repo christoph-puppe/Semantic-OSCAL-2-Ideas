@@ -1,0 +1,163 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CA-8.3",
+ "version": "5.2.0",
+ "label": "CA-8(3)",
+ "lifecycle": "active",
+ "title": "Facility Penetration Testing",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ a penetration testing process that includes {param:ca-08.03_odp.01} {param:ca-08.03_odp.02} attempts to bypass or circumvent controls associated with physical access points to the facility."
+   },
+   "parameters": [
+    {
+     "name": "ca-08.03_odp.01",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "ca-08.03_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "announced"
+      },
+      {
+       "value": "unannounced"
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Penetration testing of physical access points can provide information on critical vulnerabilities in the operating environments of organizational systems. Such information can be used to correct weaknesses or deficiencies in physical controls that are necessary to protect organizational systems."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ca-8.3_obj",
+     "label": "CA-08(03)",
+     "prose": {
+      "en": "the penetration testing process includes {param:ca-08.03_odp.01} {param:ca-08.03_odp.02} attempts to bypass or circumvent controls associated with physical access points to facility."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CA-08(03)-Examine",
+     "objects": [
+      {
+       "en": "Assessment, authorization, and monitoring policy"
+      },
+      {
+       "en": "procedures addressing penetration testing"
+      },
+      {
+       "en": "procedures addressing red team exercises"
+      },
+      {
+       "en": "assessment plan"
+      },
+      {
+       "en": "results of red team exercises"
+      },
+      {
+       "en": "penetration test report"
+      },
+      {
+       "en": "assessment report"
+      },
+      {
+       "en": "rules of engagement"
+      },
+      {
+       "en": "assessment evidence"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CA-08(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with assessment responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CA-08(03)-Test",
+     "objects": [
+      {
+       "en": "Automated mechanisms supporting the employment of red team exercises"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ca-08.03_odp.01": {
+     "guidelines": [
+      {
+       "en": "frequency at which to employ penetration testing that attempts to bypass or circumvent controls associated with physical access points to the facility is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ca-8.3_prm_1"
+     ]
+    },
+    "ca-08.03_odp.02": {
+     "alt-identifiers": [
+      "ca-8.3_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-3"
+  }
+ ]
+}

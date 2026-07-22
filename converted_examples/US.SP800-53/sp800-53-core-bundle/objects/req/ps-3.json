@@ -1,0 +1,252 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PS-3",
+ "version": "5.2.0",
+ "label": "PS-3",
+ "lifecycle": "active",
+ "title": "Personnel Screening",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Screen individuals prior to authorizing access to the system; and"
+   },
+   "parameters": [
+    {
+     "name": "ps-03_odp.01",
+     "type": "string",
+     "label": "conditions requiring rescreening"
+    },
+    {
+     "name": "ps-03_odp.02",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Rescreen individuals in accordance with {param:ps-3_prm_1}."
+   },
+   "parameters": [
+    {
+     "name": "ps-3_prm_1",
+     "type": "string",
+     "label": "organization-defined conditions requiring rescreening and, where rescreening is so indicated, the frequency of rescreening"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Personnel screening and rescreening activities reflect applicable laws, executive orders, directives, regulations, policies, standards, guidelines, and specific criteria established for the risk designations of assigned positions. Examples of personnel screening include background investigations and agency checks. Organizations may define different rescreening conditions and frequencies for personnel accessing systems based on types of information processed, stored, or transmitted by the systems."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ps-3_obj",
+     "label": "PS-03",
+     "children": [
+      {
+       "id": "ps-3_obj.a",
+       "label": "PS-03a.",
+       "prose": {
+        "en": "individuals are screened prior to authorizing access to the system;"
+       }
+      },
+      {
+       "id": "ps-3_obj.b",
+       "label": "PS-03b.",
+       "children": [
+        {
+         "id": "ps-3_obj.b-1",
+         "label": "PS-03b.[01]",
+         "prose": {
+          "en": "individuals are rescreened in accordance with {param:ps-03_odp.01};"
+         }
+        },
+        {
+         "id": "ps-3_obj.b-2",
+         "label": "PS-03b.[02]",
+         "prose": {
+          "en": "where rescreening is so indicated, individuals are rescreened {param:ps-03_odp.02}."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PS-03-Examine",
+     "objects": [
+      {
+       "en": "Personnel security policy"
+      },
+      {
+       "en": "procedures addressing personnel screening"
+      },
+      {
+       "en": "records of screened personnel"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PS-03-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personnel security responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PS-03-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for personnel screening"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ps-3_prm_1": {
+     "aggregates": [
+      "ps-03_odp.01",
+      "ps-03_odp.02"
+     ]
+    },
+    "ps-03_odp.01": {
+     "guidelines": [
+      {
+       "en": "conditions requiring rescreening of individuals are defined;"
+      }
+     ]
+    },
+    "ps-03_odp.02": {
+     "guidelines": [
+      {
+       "en": "the frequency of rescreening individuals where it is so indicated is defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.archives.gov/isoo/policy-documents/cnsi-eo.html"
+  },
+  {
+   "type": "reference",
+   "ref": "https://obamawhitehouse.archives.gov/the-press-office/2011/10/07/executive-order-13587-structural-reforms-improve-security-classified-net"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.199"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.201-2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-60v1r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-60v2r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-73-4"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-76-2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-78-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-21"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-6.1",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/PS-6.1",
+    "mode": "merged-into",
+    "label": "PS-06(01)",
+    "title": "Information Requiring Special Protection"
+   }
+  ]
+ }
+}

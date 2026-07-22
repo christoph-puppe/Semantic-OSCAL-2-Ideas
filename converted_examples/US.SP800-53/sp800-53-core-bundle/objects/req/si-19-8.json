@@ -1,0 +1,111 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-19.8",
+ "version": "5.2.0",
+ "label": "SI-19(8)",
+ "lifecycle": "active",
+ "title": "Motivated Intruder",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Perform a motivated intruder test on the de-identified dataset to determine if the identified data remains or if the de-identified data can be re-identified."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "A motivated intruder test is a test in which an individual or group takes a data release and specified resources and attempts to re-identify one or more individuals in the de-identified dataset. Such tests specify the amount of inside knowledge, computational resources, financial resources, data, and skills that intruders possess to conduct the tests. A motivated intruder test can determine if the de-identification is insufficient. It can also be a useful diagnostic tool to assess if de-identification is likely to be sufficient. However, the test alone cannot prove that de-identification is sufficient."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-19.8_obj",
+     "label": "SI-19(08)",
+     "prose": {
+      "en": "a motivated intruder test is performed on the de-identified dataset to determine if the identified data remains or if the de-identified data can be re-identified."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-19(08)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "de-identification procedures"
+      },
+      {
+       "en": "system configuration"
+      },
+      {
+       "en": "motivated intruder test procedures"
+      },
+      {
+       "en": "de-identified datasets"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-19(08)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for de-identifying the dataset"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-19(08)-Test",
+     "objects": [
+      {
+       "en": "Motivated intruder test"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-19"
+  }
+ ]
+}

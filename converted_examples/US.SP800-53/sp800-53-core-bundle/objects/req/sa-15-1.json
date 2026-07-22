@@ -1,0 +1,197 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-15.1",
+ "version": "5.2.0",
+ "label": "SA-15(1)",
+ "lifecycle": "active",
+ "title": "Quality Metrics",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to:"
+   },
+   "parameters": [
+    {
+     "name": "sa-15.01_odp.02",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "sa-15.01_odp.03",
+     "type": "string",
+     "label": "program review"
+    }
+   ]
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Define quality metrics at the beginning of the development process; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide evidence of meeting the quality metrics {param:sa-15.01_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "sa-15.01_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "{param:sa-15.01_odp.02} "
+      },
+      {
+       "value": "{param:sa-15.01_odp.03} "
+      },
+      {
+       "value": "upon delivery"
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations use quality metrics to establish acceptable levels of system quality. Metrics can include quality gates, which are collections of completion criteria or sufficiency standards that represent the satisfactory execution of specific phases of the system development project. For example, a quality gate may require the elimination of all compiler warnings or a determination that such warnings have no impact on the effectiveness of required security or privacy capabilities. During the execution phases of development projects, quality gates provide clear, unambiguous indications of progress. Other metrics apply to the entire development project. Metrics can include defining the severity thresholds of vulnerabilities in accordance with organizational risk tolerance, such as requiring no known vulnerabilities in the delivered system with a Common Vulnerability Scoring System (CVSS) severity of medium or high."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-15.1_obj",
+     "label": "SA-15(01)",
+     "children": [
+      {
+       "id": "sa-15.1_obj.a",
+       "label": "SA-15(01)(a)",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to define quality metrics at the beginning of the development process;"
+       }
+      },
+      {
+       "id": "sa-15.1_obj.b",
+       "label": "SA-15(01)(b)",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to provide evidence of meeting the quality metrics {param:sa-15.01_odp.01}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-15(01)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing development process, standards, and tools"
+      },
+      {
+       "en": "procedures addressing the integration of security requirements into the acquisition process"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "list of quality metrics"
+      },
+      {
+       "en": "documentation evidence of meeting quality metrics"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-15(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-15.01_odp.01": {
+     "alt-identifiers": [
+      "sa-15.1_prm_1"
+     ]
+    },
+    "sa-15.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "frequency at which to provide evidence of meeting the quality metrics is defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-15.1_prm_2"
+     ]
+    },
+    "sa-15.01_odp.03": {
+     "guidelines": [
+      {
+       "en": "program review milestones are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-15.1_prm_3"
+     ],
+     "alt-label": "program review milestones"
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-15"
+  }
+ ]
+}

@@ -1,0 +1,148 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-8.26",
+ "version": "5.2.0",
+ "label": "SA-8(26)",
+ "lifecycle": "active",
+ "title": "Performance Security",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement the security design principle of performance security in {param:sa-08.26_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sa-08.26_odp",
+     "type": "string",
+     "label": "systems or system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The principle of performance security states that security mechanisms are constructed so that they do not degrade system performance unnecessarily. Stakeholder and system design requirements for performance and security are precisely articulated and prioritized. For the system implementation to meet its design requirements and be found acceptable to stakeholders (i.e., validation against stakeholder requirements), the designers adhere to the specified constraints that capability performance needs place on protection needs. The overall impact of computationally intensive security services (e.g., cryptography) are assessed and demonstrated to pose no significant impact to higher-priority performance considerations or are deemed to provide an acceptable trade-off of performance for trustworthy protection. The trade-off considerations include less computationally intensive security services unless they are unavailable or insufficient. The insufficiency of a security service is determined by functional capability and strength of mechanism. The strength of mechanism is selected with respect to security requirements, performance-critical overhead issues (e.g., cryptographic key management), and an assessment of the capability of the threat.\n\nThe principle of performance security leads to the incorporation of features that help in the enforcement of security policy but incur minimum overhead, such as low-level hardware mechanisms upon which higher-level services can be built. Such low-level mechanisms are usually very specific, have very limited functionality, and are optimized for performance. For example, once access rights to a portion of memory is granted, many systems use hardware mechanisms to ensure that all further accesses involve the correct memory address and access mode. Application of this principle reinforces the need to design security into the system from the ground up and to incorporate simple mechanisms at the lower layers that can be used as building blocks for higher-level mechanisms."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-8.26_obj",
+     "label": "SA-08(26)",
+     "prose": {
+      "en": "{param:sa-08.26_odp} implement the security design principle of performance security."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-08(26)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing the security design principle of performance security used in the specification, design, development, implementation, and modification of the system"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "security and privacy requirements and specifications for the system"
+      },
+      {
+       "en": "system security and privacy architecture"
+      },
+      {
+       "en": "trade-off analysis between performance and security"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-08(26)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with the responsibility for determining system security and privacy requirements"
+      },
+      {
+       "en": "organizational personnel with system specification, design, development, implementation, and modification responsibilities"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-08(26)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for applying the security design principle of performance security in system specification, design, development, implementation, and modification"
+      },
+      {
+       "en": "mechanisms supporting the application of the security design principle of performance security in system specification, design, development, implementation, and modification"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-08.26_odp": {
+     "guidelines": [
+      {
+       "en": "systems or system components that implement the security design principle of performance security are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-8.26_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  }
+ ]
+}

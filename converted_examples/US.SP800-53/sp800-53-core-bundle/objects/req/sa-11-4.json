@@ -1,0 +1,164 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-11.4",
+ "version": "5.2.0",
+ "label": "SA-11(4)",
+ "lifecycle": "active",
+ "title": "Manual Code Reviews",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to perform a manual code review of {param:sa-11.04_odp.01} using the following processes, procedures, and/or techniques: {param:sa-11.04_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "sa-11.04_odp.01",
+     "type": "string",
+     "label": "specific code"
+    },
+    {
+     "name": "sa-11.04_odp.02",
+     "type": "string",
+     "label": "processes, procedures, and/or techniques"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Manual code reviews are usually reserved for the critical software and firmware components of systems. Manual code reviews are effective at identifying weaknesses that require knowledge of the application’s requirements or context that, in most cases, is unavailable to automated analytic tools and techniques, such as static and dynamic analysis. The benefits of manual code review include the ability to verify access control matrices against application controls and review detailed aspects of cryptographic implementations and controls."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-11.4_obj",
+     "label": "SA-11(04)",
+     "prose": {
+      "en": "the developer of the system, system component, or system service is required to perform a manual code review of {param:sa-11.04_odp.01} using {param:sa-11.04_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-11(04)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing system developer security testing"
+      },
+      {
+       "en": "processes, procedures, and/or techniques for performing manual code reviews"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "system developer security testing and evaluation plans"
+      },
+      {
+       "en": "system developer security testing and evaluation results"
+      },
+      {
+       "en": "list of code requiring manual reviews"
+      },
+      {
+       "en": "records of manual code reviews"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-11(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with developer security testing responsibilities"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "independent verification agent"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-11(04)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for monitoring developer security testing and evaluation"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the monitoring of developer testing and evaluation"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-11.04_odp.01": {
+     "guidelines": [
+      {
+       "en": "specific code requiring manual code review is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-11.4_prm_1"
+     ]
+    },
+    "sa-11.04_odp.02": {
+     "guidelines": [
+      {
+       "en": "processes, procedures, and/or techniques used for manual code reviews are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-11.4_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-11"
+  }
+ ]
+}

@@ -1,0 +1,127 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-14.3",
+ "version": "5.2.0",
+ "label": "AU-14(3)",
+ "lifecycle": "active",
+ "title": "Remote Viewing and Listening",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide and implement the capability for authorized users to remotely view and hear content related to an established user session in real time."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "None."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-14.3_obj",
+     "label": "AU-14(03)",
+     "children": [
+      {
+       "id": "au-14.3_obj-1",
+       "label": "AU-14(03)[01]",
+       "prose": {
+        "en": "the capability for authorized users to remotely view and hear content related to an established user session in real time is provided;"
+       }
+      },
+      {
+       "id": "au-14.3_obj-2",
+       "label": "AU-14(03)[02]",
+       "prose": {
+        "en": "the capability for authorized users to remotely view and hear content related to an established user session in real time is implemented."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-14(03)-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "procedures addressing user session auditing"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-14(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "legal counsel"
+      },
+      {
+       "en": "personnel with civil liberties responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AU-14(03)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing user session auditing capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-14"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-17"
+  }
+ ]
+}

@@ -1,0 +1,142 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PT-4",
+ "version": "5.2.0",
+ "label": "PT-4",
+ "lifecycle": "active",
+ "title": "Consent",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Implement {param:pt-04_odp} for individuals to consent to the processing of their personally identifiable information prior to its collection that facilitate individuals’ informed decision-making."
+   },
+   "parameters": [
+    {
+     "name": "pt-04_odp",
+     "type": "string",
+     "label": "tools or mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Consent allows individuals to participate in making decisions about the processing of their information and transfers some of the risk that arises from the processing of personally identifiable information from the organization to an individual. Consent may be required by applicable laws, executive orders, directives, regulations, policies, standards, or guidelines. Otherwise, when selecting consent as a control, organizations consider whether individuals can be reasonably expected to understand and accept the privacy risks that arise from their authorization. Organizations consider whether other controls may more effectively mitigate privacy risk either alone or in conjunction with consent. Organizations also consider any demographic or contextual factors that may influence the understanding or behavior of individuals with respect to the processing carried out by the system or organization. When soliciting consent from individuals, organizations consider the appropriate mechanism for obtaining consent, including the type of consent (e.g., opt-in, opt-out), how to properly authenticate and identity proof individuals and how to obtain consent through electronic means. In addition, organizations consider providing a mechanism for individuals to revoke consent once it has been provided, as appropriate. Finally, organizations consider usability factors to help individuals understand the risks being accepted when providing consent, including the use of plain language and avoiding technical jargon."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pt-4_obj",
+     "label": "PT-04",
+     "prose": {
+      "en": "the {param:pt-04_odp} are implemented for individuals to consent to the processing of their personally identifiable information prior to its collection that facilitate individuals’ informed decision-making."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PT-04-Examine",
+     "objects": [
+      {
+       "en": "Personally identifiable information processing and transparency policy and procedures"
+      },
+      {
+       "en": "consent policies and procedures"
+      },
+      {
+       "en": "consent tools and mechanisms"
+      },
+      {
+       "en": "consent presentation or display (user interface)"
+      },
+      {
+       "en": "evidence of individuals’ consent"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PT-04-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personally identifiable information processing and transparency responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PT-04-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for the collection of personally identifiable information"
+      },
+      {
+       "en": "consent tools or mechanisms for users to authorize the processing of their personally identifiable information"
+      },
+      {
+       "en": "mechanisms implementing consent"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pt-04_odp": {
+     "guidelines": [
+      {
+       "en": "the tools or mechanisms to be implemented for individuals to consent to the processing of their personally identifiable information are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pt-4_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.govinfo.gov/content/pkg/STATUTE-88/pdf/STATUTE-88-Pg1896.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-63-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-5"
+  }
+ ]
+}

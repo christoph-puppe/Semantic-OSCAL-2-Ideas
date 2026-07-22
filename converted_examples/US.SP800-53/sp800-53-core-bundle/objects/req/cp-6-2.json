@@ -1,0 +1,117 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-6.2",
+ "version": "5.2.0",
+ "label": "CP-6(2)",
+ "lifecycle": "active",
+ "title": "Recovery Time and Recovery Point Objectives",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Configure the alternate storage site to facilitate recovery operations in accordance with recovery time and recovery point objectives."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations establish recovery time and recovery point objectives as part of contingency planning. Configuration of the alternate storage site includes physical facilities and the systems supporting recovery operations that ensure accessibility and correct execution."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-6.2_obj",
+     "label": "CP-06(02)",
+     "children": [
+      {
+       "id": "cp-6.2_obj-1",
+       "label": "CP-06(02)[01]",
+       "prose": {
+        "en": "the alternate storage site is configured to facilitate recovery operations in accordance with recovery time objectives;"
+       }
+      },
+      {
+       "id": "cp-6.2_obj-2",
+       "label": "CP-06(02)[02]",
+       "prose": {
+        "en": "the alternate storage site is configured to facilitate recovery operations in accordance with recovery point objectives."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-06(02)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing alternate storage sites"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "alternate storage site"
+      },
+      {
+       "en": "alternate storage site agreements"
+      },
+      {
+       "en": "alternate storage site configurations"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-06(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency plan testing responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibilities for testing related plans"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-06(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for contingency plan testing"
+      },
+      {
+       "en": "mechanisms supporting recovery time and point objectives"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-6"
+  }
+ ]
+}

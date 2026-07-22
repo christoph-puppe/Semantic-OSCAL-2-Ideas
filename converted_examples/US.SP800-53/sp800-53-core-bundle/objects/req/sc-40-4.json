@@ -1,0 +1,142 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-40.4",
+ "version": "5.2.0",
+ "label": "SC-40(4)",
+ "lifecycle": "active",
+ "title": "Signal Parameter Identification",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement cryptographic mechanisms to prevent the identification of {param:sc-40.04_odp} by using the transmitter signal parameters."
+   },
+   "parameters": [
+    {
+     "name": "sc-40.04_odp",
+     "type": "string",
+     "label": "wireless transmitters"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The implementation of cryptographic mechanisms to prevent the identification of wireless transmitters protects against the unique identification of wireless transmitters for the purposes of intelligence exploitation by ensuring that anti-fingerprinting alterations to signal parameters are not predictable by unauthorized individuals. It also provides anonymity when required. Radio fingerprinting techniques identify the unique signal parameters of transmitters to fingerprint such transmitters for purposes of tracking and mission or user identification."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-40.4_obj",
+     "label": "SC-40(04)",
+     "prose": {
+      "en": "cryptographic mechanisms are implemented to prevent the identification of {param:sc-40.04_odp} by using the transmitter signal parameters."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-40(04)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "access control policy and procedures"
+      },
+      {
+       "en": "procedures addressing system design documentation"
+      },
+      {
+       "en": "wireless network diagrams"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "system communications hardware and software"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-40(04)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel authorizing, installing, configuring, and/or maintaining internal and external wireless links"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-40(04)-Test",
+     "objects": [
+      {
+       "en": "Cryptographic mechanisms preventing the identification of wireless transmitters"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-40.04_odp": {
+     "guidelines": [
+      {
+       "en": "wireless transmitters for which cryptographic mechanisms are to be implemented are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-40.4_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-40"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  }
+ ]
+}

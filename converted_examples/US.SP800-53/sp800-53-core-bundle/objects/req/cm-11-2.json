@@ -1,0 +1,124 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-11.2",
+ "version": "5.2.0",
+ "label": "CM-11(2)",
+ "lifecycle": "active",
+ "title": "Software Installation with Privileged Status",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Allow user installation of software only with explicit privileged status."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Privileged status can be obtained, for example, by serving in the role of system administrator."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-11.2_obj",
+     "label": "CM-11(02)",
+     "prose": {
+      "en": "user installation of software is allowed only with explicit privileged status."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-11(02)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing user-installed software"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "alerts/notifications of unauthorized software installations"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "continuous monitoring strategy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-11(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for governing user-installed software"
+      },
+      {
+       "en": "organizational personnel operating, using, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-11(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes governing user-installed software on the system"
+      },
+      {
+       "en": "mechanisms for prohibiting installation of software without privileged status (e.g., access controls)"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-6"
+  }
+ ]
+}

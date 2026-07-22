@@ -1,0 +1,185 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-5.1",
+ "version": "5.2.0",
+ "label": "CM-5(1)",
+ "lifecycle": "active",
+ "title": "Automated Access Enforcement and Audit Records",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Enforce access restrictions using {param:cm-05.01_odp} ; and"
+   },
+   "parameters": [
+    {
+     "name": "cm-05.01_odp",
+     "type": "string",
+     "label": "automated mechanisms"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Automatically generate audit records of the enforcement actions."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations log system accesses associated with applying configuration changes to ensure that configuration change control is implemented and to support after-the-fact actions should organizations discover any unauthorized changes."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-5.1_obj",
+     "label": "CM-05(01)",
+     "children": [
+      {
+       "id": "cm-5.1_obj.a",
+       "label": "CM-05(01)(a)",
+       "prose": {
+        "en": "access restrictions for change are enforced using {param:cm-05.01_odp};"
+       }
+      },
+      {
+       "id": "cm-5.1_obj.b",
+       "label": "CM-05(01)(b)",
+       "prose": {
+        "en": "audit records of enforcement actions are automatically generated."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-05(01)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing access restrictions for changes to the system"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system architecture and configuration documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-05(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with logical access control responsibilities"
+      },
+      {
+       "en": "organizational personnel with physical access control responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-05(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing access restrictions to change"
+      },
+      {
+       "en": "automated mechanisms implementing the enforcement of access restrictions for changes to the system"
+      },
+      {
+       "en": "automated mechanisms supporting auditing of enforcement actions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-05.01_odp": {
+     "guidelines": [
+      {
+       "en": "mechanisms used to automate the enforcement of access restrictions are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-5.1_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  }
+ ]
+}

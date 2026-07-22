@@ -1,0 +1,116 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/RA-5.10",
+ "version": "5.2.0",
+ "label": "RA-5(10)",
+ "lifecycle": "active",
+ "title": "Correlate Scanning Information",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Correlate the output from vulnerability scanning tools to determine the presence of multi-vulnerability and multi-hop attack vectors."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "An attack vector is a path or means by which an adversary can gain access to a system in order to deliver malicious code or exfiltrate information. Organizations can use attack trees to show how hostile activities by adversaries interact and combine to produce adverse impacts or negative consequences to systems and organizations. Such information, together with correlated data from vulnerability scanning tools, can provide greater clarity regarding multi-vulnerability and multi-hop attack vectors. The correlation of vulnerability scanning information is especially important when organizations are transitioning from older technologies to newer technologies (e.g., transitioning from IPv4 to IPv6 network protocols). During such transitions, some system components may inadvertently be unmanaged and create opportunities for adversary exploitation."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ra-5.10_obj",
+     "label": "RA-05(10)",
+     "prose": {
+      "en": "the output from vulnerability scanning tools is correlated to determine the presence of multi-vulnerability and multi-hop attack vectors."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "RA-05(10)-Examine",
+     "objects": [
+      {
+       "en": "Risk assessment policy"
+      },
+      {
+       "en": "procedures addressing vulnerability scanning"
+      },
+      {
+       "en": "risk assessment"
+      },
+      {
+       "en": "vulnerability scanning tools and techniques documentation"
+      },
+      {
+       "en": "vulnerability scanning results"
+      },
+      {
+       "en": "vulnerability management records"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "event/vulnerability correlation logs"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "RA-05(10)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with vulnerability scanning responsibilities"
+      },
+      {
+       "en": "organizational personnel with vulnerability scan analysis responsibilities"
+      },
+      {
+       "en": "organizational personnel with security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "RA-05(10)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for vulnerability scanning"
+      },
+      {
+       "en": "mechanisms/tools supporting and/or implementing vulnerability scanning"
+      },
+      {
+       "en": "mechanisms implementing the correlation of vulnerability scan results"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  }
+ ]
+}

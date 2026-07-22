@@ -1,0 +1,128 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-3.2",
+ "version": "5.2.0",
+ "label": "SC-3(2)",
+ "lifecycle": "active",
+ "title": "Access and Flow Control Functions",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Isolate security functions enforcing access and information flow control from nonsecurity functions and from other security functions."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Security function isolation occurs because of implementation. The functions can still be scanned and monitored. Security functions that are potentially isolated from access and flow control enforcement functions include auditing, intrusion detection, and malicious code protection functions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-3.2_obj",
+     "label": "SC-03(02)",
+     "children": [
+      {
+       "id": "sc-3.2_obj-1",
+       "label": "SC-03(02)[01]",
+       "prose": {
+        "en": "security functions enforcing access control are isolated from non-security functions;"
+       }
+      },
+      {
+       "id": "sc-3.2_obj-2",
+       "label": "SC-03(02)[02]",
+       "prose": {
+        "en": "security functions enforcing access control are isolated from other security functions;"
+       }
+      },
+      {
+       "id": "sc-3.2_obj-3",
+       "label": "SC-03(02)[03]",
+       "prose": {
+        "en": "security functions enforcing information flow control are isolated from non-security functions;"
+       }
+      },
+      {
+       "id": "sc-3.2_obj-4",
+       "label": "SC-03(02)[04]",
+       "prose": {
+        "en": "security functions enforcing information flow control are isolated from other security functions."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-03(02)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing security function isolation"
+      },
+      {
+       "en": "list of critical security functions"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-03(02)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-03(02)-Test",
+     "objects": [
+      {
+       "en": "Isolation of security functions enforcing access and information flow control"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-3"
+  }
+ ]
+}

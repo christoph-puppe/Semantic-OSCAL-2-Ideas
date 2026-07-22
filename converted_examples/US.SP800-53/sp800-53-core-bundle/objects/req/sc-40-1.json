@@ -1,0 +1,152 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-40.1",
+ "version": "5.2.0",
+ "label": "SC-40(1)",
+ "lifecycle": "active",
+ "title": "Electromagnetic Interference",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement cryptographic mechanisms that achieve {param:sc-40.01_odp} against the effects of intentional electromagnetic interference."
+   },
+   "parameters": [
+    {
+     "name": "sc-40.01_odp",
+     "type": "string",
+     "label": "level of protection"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The implementation of cryptographic mechanisms for electromagnetic interference protects systems against intentional jamming that might deny or impair communications by ensuring that wireless spread spectrum waveforms used to provide anti-jam protection are not predictable by unauthorized individuals. The implementation of cryptographic mechanisms may also coincidentally mitigate the effects of unintentional jamming due to interference from legitimate transmitters that share the same spectrum. Mission requirements, projected threats, concept of operations, and laws, executive orders, directives, regulations, policies, and standards determine levels of wireless link availability, cryptography needed, and performance."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-40.1_obj",
+     "label": "SC-40(01)",
+     "prose": {
+      "en": "cryptographic mechanisms that achieve {param:sc-40.01_odp} against the effects of intentional electromagnetic interference are implemented."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-40(01)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "access control policy and procedures"
+      },
+      {
+       "en": "procedures addressing wireless link protection"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "wireless network diagrams"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "system communications hardware and software"
+      },
+      {
+       "en": "security categorization results"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-40(01)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel authorizing, installing, configuring, and/or maintaining internal and external wireless links"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-40(01)-Test",
+     "objects": [
+      {
+       "en": "Cryptographic mechanisms enforcing protections against effects of intentional electromagnetic interference"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-40.01_odp": {
+     "guidelines": [
+      {
+       "en": "level of protection to be employed against the effects of intentional electromagnetic interference is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-40.1_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-40"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-21"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  }
+ ]
+}

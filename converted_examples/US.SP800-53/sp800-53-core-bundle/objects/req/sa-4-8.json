@@ -1,0 +1,123 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-4.8",
+ "version": "5.2.0",
+ "label": "SA-4(8)",
+ "lifecycle": "active",
+ "title": "Continuous Monitoring Plan for Controls",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to produce a plan for continuous monitoring of control effectiveness that is consistent with the continuous monitoring program of the organization."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The objective of continuous monitoring plans is to determine if the planned, required, and deployed controls within the system, system component, or system service continue to be effective over time based on the inevitable changes that occur. Developer continuous monitoring plans include a sufficient level of detail such that the information can be incorporated into continuous monitoring programs implemented by organizations. Continuous monitoring plans can include the types of control assessment and monitoring activities planned, frequency of control monitoring, and actions to be taken when controls fail or become ineffective."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-4.8_obj",
+     "label": "SA-04(08)",
+     "prose": {
+      "en": "the developer of the system, system component, or system service is required to produce a plan for the continuous monitoring of control effectiveness that is consistent with the continuous monitoring program of the organization."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-04(08)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing developer continuous monitoring plans"
+      },
+      {
+       "en": "procedures addressing the integration of security requirements, descriptions, and criteria into the acquisition process"
+      },
+      {
+       "en": "developer continuous monitoring plans"
+      },
+      {
+       "en": "security assessment plans"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-04(08)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with acquisition/contracting responsibilities"
+      },
+      {
+       "en": "organizational personnel with the responsibility for determining system security requirements"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-04(08)-Test",
+     "objects": [
+      {
+       "en": "Vendor processes for continuous monitoring"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing developer continuous monitoring"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  }
+ ]
+}

@@ -1,0 +1,148 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-40.2",
+ "version": "5.2.0",
+ "label": "SC-40(2)",
+ "lifecycle": "active",
+ "title": "Reduce Detection Potential",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement cryptographic mechanisms to reduce the detection potential of wireless links to {param:sc-40.02_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sc-40.02_odp",
+     "type": "string",
+     "label": "level of reduction"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The implementation of cryptographic mechanisms to reduce detection potential is used for covert communications and to protect wireless transmitters from geo-location. It also ensures that the spread spectrum waveforms used to achieve a low probability of detection are not predictable by unauthorized individuals. Mission requirements, projected threats, concept of operations, and applicable laws, executive orders, directives, regulations, policies, and standards determine the levels to which wireless links are undetectable."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-40.2_obj",
+     "label": "SC-40(02)",
+     "prose": {
+      "en": "cryptographic mechanisms to reduce the detection potential of wireless links to {param:sc-40.02_odp} are implemented."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-40(02)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "access control policy and procedures"
+      },
+      {
+       "en": "procedures addressing wireless link protection"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "wireless network diagrams"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "system communications hardware and software"
+      },
+      {
+       "en": "security categorization results"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-40(02)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel authorizing, installing, configuring, and/or maintaining internal and external wireless links"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-40(02)-Test",
+     "objects": [
+      {
+       "en": "Cryptographic mechanisms enforcing protections to reduce the detection of wireless links"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-40.02_odp": {
+     "guidelines": [
+      {
+       "en": "the level of reduction to be achieved to reduce the detection potential of wireless links is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-40.2_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-40"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  }
+ ]
+}

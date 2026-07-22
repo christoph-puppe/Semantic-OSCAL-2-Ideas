@@ -1,0 +1,135 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-10",
+ "version": "5.2.0",
+ "label": "AC-10",
+ "lifecycle": "active",
+ "title": "Concurrent Session Control",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Limit the number of concurrent sessions for each {param:ac-10_odp.01} to {param:ac-10_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ac-10_odp.01",
+     "type": "string",
+     "label": "account and/or account types"
+    },
+    {
+     "name": "ac-10_odp.02",
+     "type": "string",
+     "label": "number"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations may define the maximum number of concurrent sessions for system accounts globally, by account type, by account, or any combination thereof. For example, organizations may limit the number of concurrent sessions for system administrators or other individuals working in particularly sensitive domains or mission-critical applications. Concurrent session control addresses concurrent sessions for system accounts. It does not, however, address concurrent sessions by single users via multiple system accounts."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-10_obj",
+     "label": "AC-10",
+     "prose": {
+      "en": "the number of concurrent sessions for each {param:ac-10_odp.01} is limited to {param:ac-10_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-10-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing concurrent session control"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "security plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-10-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-10-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing access control policy for concurrent session control"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-10_odp.01": {
+     "guidelines": [
+      {
+       "en": "accounts and/or account types for which to limit the number of concurrent sessions is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-10_prm_1"
+     ],
+     "alt-label": "account and/or account type"
+    },
+    "ac-10_odp.02": {
+     "guidelines": [
+      {
+       "en": "the number of concurrent sessions to be allowed for each account and/or account type is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-10_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-23"
+  }
+ ]
+}

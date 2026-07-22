@@ -1,0 +1,119 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-15.6",
+ "version": "5.2.0",
+ "label": "SA-15(6)",
+ "lifecycle": "active",
+ "title": "Continuous Improvement",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to implement an explicit process to continuously improve the development process."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Developers of systems, system components, and system services consider the effectiveness and efficiency of their development processes for meeting quality objectives and addressing the security and privacy capabilities in current threat environments."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-15.6_obj",
+     "label": "SA-15(06)",
+     "prose": {
+      "en": "the developer of the system, system component, or system service is required to implement an explicit process to continuously improve the development process."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-15(06)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "procedures addressing development process, standards, and tools"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "quality goals and metrics for improving the system development process"
+      },
+      {
+       "en": "security assessments"
+      },
+      {
+       "en": "quality control reviews of system development process"
+      },
+      {
+       "en": "plans of action and milestones for improving the system development process"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-15(06)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-15"
+  }
+ ]
+}

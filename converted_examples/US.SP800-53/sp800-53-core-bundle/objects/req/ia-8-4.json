@@ -1,0 +1,125 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-8.4",
+ "version": "5.2.0",
+ "label": "IA-8(4)",
+ "lifecycle": "active",
+ "title": "Use of Defined Profiles",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Conform to the following profiles for identity management {param:ia-08.04_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ia-08.04_odp",
+     "type": "string",
+     "label": "identity management profiles"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations define profiles for identity management based on open identity management standards. To ensure that open identity management standards are viable, robust, reliable, sustainable, and interoperable as documented, the Federal Government assesses and scopes the standards and technology implementations against applicable laws, executive orders, directives, policies, regulations, standards, and guidelines."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-8.4_obj",
+     "label": "IA-08(04)",
+     "prose": {
+      "en": "there is conformance with {param:ia-08.04_odp} for identity management."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-08(04)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-08(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system operations responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with account management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-08(04)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing identification and authentication capabilities"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing conformance with profiles"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ia-08.04_odp": {
+     "guidelines": [
+      {
+       "en": "identity management profiles are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-8.4_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-8"
+  }
+ ]
+}

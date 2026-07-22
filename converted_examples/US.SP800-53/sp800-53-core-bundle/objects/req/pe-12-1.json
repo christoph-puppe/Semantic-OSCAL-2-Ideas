@@ -1,0 +1,98 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-12.1",
+ "version": "5.2.0",
+ "label": "PE-12(1)",
+ "lifecycle": "active",
+ "title": "Essential Mission and Business Functions",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide emergency lighting for all areas within the facility supporting essential mission and business functions."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations define their essential missions and functions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-12.1_obj",
+     "label": "PE-12(01)",
+     "prose": {
+      "en": "emergency lighting is provided for all areas within the facility supporting essential mission and business functions."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-12(01)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing emergency lighting"
+      },
+      {
+       "en": "emergency lighting documentation"
+      },
+      {
+       "en": "emergency lighting test records"
+      },
+      {
+       "en": "emergency exits and evacuation routes"
+      },
+      {
+       "en": "areas/locations within facility supporting essential missions and business functions"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-12(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with the responsibility for emergency lighting and/or planning"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-12(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the emergency lighting capability"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-12"
+  }
+ ]
+}

@@ -1,0 +1,160 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-10.5",
+ "version": "5.2.0",
+ "label": "SI-10(5)",
+ "lifecycle": "active",
+ "title": "Restrict Inputs to Trusted Sources and Approved Formats",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Restrict the use of information inputs to {param:si-10.05_odp.01} and/or {param:si-10.05_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "si-10.05_odp.01",
+     "type": "string",
+     "label": "trusted sources"
+    },
+    {
+     "name": "si-10.05_odp.02",
+     "type": "string",
+     "label": "formats"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Restricting the use of inputs to trusted sources and in trusted formats applies the concept of authorized or permitted software to information inputs. Specifying known trusted sources for information inputs and acceptable formats for such inputs can reduce the probability of malicious activity. The information inputs are those defined by the organization in the base control ( SI-10)."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-10.5_obj",
+     "label": "SI-10(05)",
+     "prose": {
+      "en": "the use of information inputs is restricted to {param:si-10.05_odp.01} and/or {param:si-10.05_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-10(05)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing information input validation"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of trusted sources for information inputs"
+      },
+      {
+       "en": "list of acceptable formats for input restrictions"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-10(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for information input validation"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-10(05)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for restricting information inputs"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing restriction of information inputs"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-10.05_odp.01": {
+     "guidelines": [
+      {
+       "en": "trusted sources to which the use of information inputs is to be restricted are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-10.5_prm_1"
+     ]
+    },
+    "si-10.05_odp.02": {
+     "guidelines": [
+      {
+       "en": "formats to which the use of information inputs is to be restricted are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-10.5_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-6"
+  }
+ ]
+}

@@ -1,0 +1,136 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-13",
+ "version": "5.2.0",
+ "label": "PE-13",
+ "lifecycle": "active",
+ "title": "Fire Protection",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ and maintain fire detection and suppression systems that are supported by an independent energy source."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The provision of fire detection and suppression systems applies primarily to organizational facilities that contain concentrations of system resources, including data centers, server rooms, and mainframe computer rooms. Fire detection and suppression systems that may require an independent energy source include sprinkler systems and smoke detectors. An independent energy source is an energy source, such as a microgrid, that is separate, or can be separated, from the energy sources providing power for the other parts of the facility."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-13_obj",
+     "label": "PE-13",
+     "children": [
+      {
+       "id": "pe-13_obj-1",
+       "label": "PE-13[01]",
+       "prose": {
+        "en": "fire detection systems are employed;"
+       }
+      },
+      {
+       "id": "pe-13_obj-2",
+       "label": "PE-13[02]",
+       "prose": {
+        "en": "employed fire detection systems are supported by an independent energy source;"
+       }
+      },
+      {
+       "id": "pe-13_obj-3",
+       "label": "PE-13[03]",
+       "prose": {
+        "en": "employed fire detection systems are maintained;"
+       }
+      },
+      {
+       "id": "pe-13_obj-4",
+       "label": "PE-13[04]",
+       "prose": {
+        "en": "fire suppression systems are employed;"
+       }
+      },
+      {
+       "id": "pe-13_obj-5",
+       "label": "PE-13[05]",
+       "prose": {
+        "en": "employed fire suppression systems are supported by an independent energy source;"
+       }
+      },
+      {
+       "id": "pe-13_obj-6",
+       "label": "PE-13[06]",
+       "prose": {
+        "en": "employed fire suppression systems are maintained."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-13-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing fire protection"
+      },
+      {
+       "en": "fire suppression and detection devices/systems"
+      },
+      {
+       "en": "fire suppression and detection devices/systems documentation"
+      },
+      {
+       "en": "test records of fire suppression and detection devices/systems"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-13-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for fire detection and suppression devices/systems"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-13-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing fire suppression/detection devices/systems"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  }
+ ]
+}

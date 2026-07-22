@@ -1,0 +1,282 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MP-7",
+ "version": "5.2.0",
+ "label": "MP-7",
+ "lifecycle": "active",
+ "title": "Media Use",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "{param:mp-07_odp.02} the use of {param:mp-07_odp.01} on {param:mp-07_odp.03} using {param:mp-07_odp.04} ; and"
+   },
+   "parameters": [
+    {
+     "name": "mp-07_odp.01",
+     "type": "string",
+     "label": "types of system media"
+    },
+    {
+     "name": "mp-07_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "restrict"
+      },
+      {
+       "value": "prohibit"
+      }
+     ]
+    },
+    {
+     "name": "mp-07_odp.03",
+     "type": "string",
+     "label": "systems or system components"
+    },
+    {
+     "name": "mp-07_odp.04",
+     "type": "string",
+     "label": "controls"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Prohibit the use of portable storage devices in organizational systems when such devices have no identifiable owner."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "System media includes both digital and non-digital media. Digital media includes diskettes, magnetic tapes, flash drives, compact discs, digital versatile discs, and removable hard disk drives. Non-digital media includes paper and microfilm. Media use protections also apply to mobile devices with information storage capabilities. In contrast to MP-2 , which restricts user access to media, MP-7 restricts the use of certain types of media on systems, for example, restricting or prohibiting the use of flash drives or external hard disk drives. Organizations use technical and nontechnical controls to restrict the use of system media. Organizations may restrict the use of portable storage devices, for example, by using physical cages on workstations to prohibit access to certain external ports or disabling or removing the ability to insert, read, or write to such devices. Organizations may also limit the use of portable storage devices to only approved devices, including devices provided by the organization, devices provided by other approved organizations, and devices that are not personally owned. Finally, organizations may restrict the use of portable storage devices based on the type of device, such as by prohibiting the use of writeable, portable storage devices and implementing this restriction by disabling or removing the capability to write to such devices. Requiring identifiable owners for storage devices reduces the risk of using such devices by allowing organizations to assign responsibility for addressing known vulnerabilities in the devices."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "mp-7_obj",
+     "label": "MP-07",
+     "children": [
+      {
+       "id": "mp-7_obj.a",
+       "label": "MP-07a.",
+       "prose": {
+        "en": "the use of {param:mp-07_odp.01} is {param:mp-07_odp.02} on {param:mp-07_odp.03} using {param:mp-07_odp.04};"
+       }
+      },
+      {
+       "id": "mp-7_obj.b",
+       "label": "MP-07b.",
+       "prose": {
+        "en": "the use of portable storage devices in organizational systems is prohibited when such devices have no identifiable owner."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MP-07-Examine",
+     "objects": [
+      {
+       "en": "System media protection policy"
+      },
+      {
+       "en": "system use policy"
+      },
+      {
+       "en": "procedures addressing media usage restrictions"
+      },
+      {
+       "en": "rules of behavior"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MP-07-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system media use responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MP-07-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for media use"
+      },
+      {
+       "en": "mechanisms restricting or prohibiting the use of system media on systems or system components"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "mp-07_odp.01": {
+     "guidelines": [
+      {
+       "en": "types of system media to be restricted or prohibited from use on systems or system components are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "mp-7_prm_2"
+     ]
+    },
+    "mp-07_odp.02": {
+     "alt-identifiers": [
+      "mp-7_prm_1"
+     ]
+    },
+    "mp-07_odp.03": {
+     "guidelines": [
+      {
+       "en": "systems or system components on which the use of specific types of system media to be restricted or prohibited are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "mp-7_prm_3"
+     ]
+    },
+    "mp-07_odp.04": {
+     "guidelines": [
+      {
+       "en": "controls to restrict or prohibit the use of specific types of system media on systems or system components are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "mp-7_prm_4"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.199"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-111"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-19"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-20"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-34"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-41"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-19.1",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-19.2",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-19.3",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-7.1",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-3.5",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/AC-19.1",
+    "mode": "merged-into",
+    "label": "AC-19(01)",
+    "title": "Use of Writable and Portable Storage Devices"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/AC-19.2",
+    "mode": "merged-into",
+    "label": "AC-19(02)",
+    "title": "Use of Personally Owned Portable Storage Devices"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/AC-19.3",
+    "mode": "merged-into",
+    "label": "AC-19(03)",
+    "title": "Use of Portable Storage Devices with No Identifiable Owner"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/MP-7.1",
+    "mode": "merged-into",
+    "label": "MP-07(01)",
+    "title": "Prohibit Use Without Owner"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SI-3.5",
+    "mode": "merged-into",
+    "label": "SI-03(05)",
+    "title": "Portable Storage Devices"
+   }
+  ]
+ }
+}

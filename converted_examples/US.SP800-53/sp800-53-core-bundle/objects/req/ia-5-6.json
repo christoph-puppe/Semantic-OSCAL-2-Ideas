@@ -1,0 +1,108 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-5.6",
+ "version": "5.2.0",
+ "label": "IA-5(6)",
+ "lifecycle": "active",
+ "title": "Protection of Authenticators",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Protect authenticators commensurate with the security category of the information to which use of the authenticator permits access."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "For systems that contain multiple security categories of information without reliable physical or logical separation between categories, authenticators used to grant access to the systems are protected commensurate with the highest security category of information on the systems. Security categories of information are determined as part of the security categorization process."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-5.6_obj",
+     "label": "IA-05(06)",
+     "prose": {
+      "en": "authenticators are protected commensurate with the security category of the information to which use of the authenticator permits access."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-05(06)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "procedures addressing authenticator management"
+      },
+      {
+       "en": "security categorization documentation for the system"
+      },
+      {
+       "en": "security assessments of authenticator protections"
+      },
+      {
+       "en": "risk assessment results"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-05(06)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with authenticator management responsibilities"
+      },
+      {
+       "en": "organizational personnel implementing and/or maintaining authenticator protections"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-05(06)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing authenticator management capability"
+      },
+      {
+       "en": "mechanisms protecting authenticators"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-2"
+  }
+ ]
+}

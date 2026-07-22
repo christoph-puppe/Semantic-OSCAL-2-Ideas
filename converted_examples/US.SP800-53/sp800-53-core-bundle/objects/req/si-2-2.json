@@ -1,0 +1,151 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-2.2",
+ "version": "5.2.0",
+ "label": "SI-2(2)",
+ "lifecycle": "active",
+ "title": "Automated Flaw Remediation Status",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Determine if system components have applicable security-relevant software and firmware updates installed using {param:si-02.02_odp.01} {param:si-02.02_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "si-02.02_odp.01",
+     "type": "string",
+     "label": "automated mechanisms"
+    },
+    {
+     "name": "si-02.02_odp.02",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Automated mechanisms can track and determine the status of known flaws for system components."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-2.2_obj",
+     "label": "SI-02(02)",
+     "prose": {
+      "en": "system components have applicable security-relevant software and firmware updates installed {param:si-02.02_odp.02} using {param:si-02.02_odp.01}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-02(02)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing flaw remediation"
+      },
+      {
+       "en": "automated mechanisms supporting centralized management of flaw remediation"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-02(02)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for flaw remediation"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-02(02)-Test",
+     "objects": [
+      {
+       "en": "Automated mechanisms used to determine the state of system components with regard to flaw remediation"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-02.02_odp.01": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms to determine if applicable security-relevant software and firmware updates are installed on system components are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-2.2_prm_1"
+     ]
+    },
+    "si-02.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to determine if applicable security-relevant software and firmware updates are installed on system components is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-2.2_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

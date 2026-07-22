@@ -1,0 +1,204 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-34",
+ "version": "5.2.0",
+ "label": "SC-34",
+ "lifecycle": "active",
+ "title": "Non-modifiable Executable Programs",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "For {param:sc-34_odp.01} , load and execute:"
+   },
+   "parameters": [
+    {
+     "name": "sc-34_odp.01",
+     "type": "string",
+     "label": "system components"
+    }
+   ]
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "The operating environment from hardware-enforced, read-only media; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "The following applications from hardware-enforced, read-only media: {param:sc-34_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "sc-34_odp.02",
+     "type": "string",
+     "label": "applications"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The operating environment for a system contains the code that hosts applications, including operating systems, executives, or virtual machine monitors (i.e., hypervisors). It can also include certain applications that run directly on hardware platforms. Hardware-enforced, read-only media include Compact Disc-Recordable (CD-R) and Digital Versatile Disc-Recordable (DVD-R) disk drives as well as one-time, programmable, read-only memory. The use of non-modifiable storage ensures the integrity of software from the point of creation of the read-only image. The use of reprogrammable, read-only memory can be accepted as read-only media provided that integrity can be adequately protected from the point of initial writing to the insertion of the memory into the system, and there are reliable hardware protections against reprogramming the memory while installed in organizational systems."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-34_obj",
+     "label": "SC-34",
+     "children": [
+      {
+       "id": "sc-34_obj.a",
+       "label": "SC-34a.",
+       "prose": {
+        "en": "the operating environment for {param:sc-34_odp.01} is loaded and executed from hardware-enforced, read-only media;"
+       }
+      },
+      {
+       "id": "sc-34_obj.b",
+       "label": "SC-34b.",
+       "prose": {
+        "en": "{param:sc-34_odp.02} for {param:sc-34_odp.01} are loaded and executed from hardware-enforced, read-only media."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-34-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing non-modifiable executable programs"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "list of operating system components to be loaded from hardware-enforced, read-only media"
+      },
+      {
+       "en": "list of applications to be loaded from hardware-enforced, read-only media"
+      },
+      {
+       "en": "media used to load and execute the system operating environment"
+      },
+      {
+       "en": "media used to load and execute system applications"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-34-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "system developers/integrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-34-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing, loading, and executing the operating environment from hardware-enforced, read-only media"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing, loading, and executing applications from hardware-enforced, read-only media"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-34_odp.01": {
+     "guidelines": [
+      {
+       "en": "system components for which the operating environment and applications are to be loaded and executed from hardware-enforced, read-only media are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-34_prm_1"
+     ]
+    },
+    "sc-34_odp.02": {
+     "guidelines": [
+      {
+       "en": "applications to be loaded and executed from hardware-enforced, read-only media are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-34_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-14"
+  }
+ ]
+}

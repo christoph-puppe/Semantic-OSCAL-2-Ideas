@@ -1,0 +1,238 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-37",
+ "version": "5.2.0",
+ "label": "SC-37",
+ "lifecycle": "active",
+ "title": "Out-of-band Channels",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ the following out-of-band channels for the physical delivery or electronic transmission of {param:sc-37_odp.02} to {param:sc-37_odp.03}: {param:sc-37_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "sc-37_odp.01",
+     "type": "string",
+     "label": "out-of-band channels"
+    },
+    {
+     "name": "sc-37_odp.02",
+     "type": "string",
+     "label": "information, system components, or devices"
+    },
+    {
+     "name": "sc-37_odp.03",
+     "type": "string",
+     "label": "individuals or systems"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Out-of-band channels include local, non-network accesses to systems; network paths physically separate from network paths used for operational traffic; or non-electronic paths, such as the U.S. Postal Service. The use of out-of-band channels is contrasted with the use of in-band channels (i.e., the same channels) that carry routine operational traffic. Out-of-band channels do not have the same vulnerability or exposure as in-band channels. Therefore, the confidentiality, integrity, or availability compromises of in-band channels will not compromise or adversely affect the out-of-band channels. Organizations may employ out-of-band channels in the delivery or transmission of organizational items, including authenticators and credentials; cryptographic key management information; system and data backups; configuration management changes for hardware, firmware, or software; security updates; maintenance information; and malicious code protection updates. For example, cryptographic keys for encrypted files are delivered using a different channel than the file."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-37_obj",
+     "label": "SC-37",
+     "prose": {
+      "en": "{param:sc-37_odp.01} are employed for the physical delivery or electronic transmission of {param:sc-37_odp.02} to {param:sc-37_odp.03}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-37-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing the use of out-of-band channels"
+      },
+      {
+       "en": "access control policy and procedures"
+      },
+      {
+       "en": "identification and authentication policy and procedures"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of out-of-band channels"
+      },
+      {
+       "en": "types of information, system components, or devices requiring the use of out-of-band channels for physical delivery or electronic transmission to authorized individuals or systems"
+      },
+      {
+       "en": "physical delivery records"
+      },
+      {
+       "en": "electronic transmission records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-37-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel authorizing, installing, configuring, operating, and/or using out-of-band channels"
+      },
+      {
+       "en": "system developers/integrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-37-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for the use of out-of-band channels"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the use of out-of-band channels"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-37_odp.01": {
+     "guidelines": [
+      {
+       "en": "out-of-band channels to be employed for the physical delivery or electronic transmission of information, system components, or devices to individuals or the system are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-37_prm_3"
+     ]
+    },
+    "sc-37_odp.02": {
+     "guidelines": [
+      {
+       "en": "information, system components, or devices to employ out-of-band-channels for physical delivery or electronic transmission are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-37_prm_1"
+     ]
+    },
+    "sc-37_odp.03": {
+     "guidelines": [
+      {
+       "en": "individuals or systems to which physical delivery or electronic transmission of information, system components, or devices is to be achieved via the employment of out-of-band channels are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-37_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-57pt1r5"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-57pt2r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-57pt3r1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  }
+ ]
+}

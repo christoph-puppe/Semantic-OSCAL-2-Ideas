@@ -1,0 +1,105 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AT-3.3",
+ "version": "5.2.0",
+ "label": "AT-3(3)",
+ "lifecycle": "active",
+ "title": "Practical Exercises",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide practical exercises in security and privacy training that reinforce training objectives."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Practical exercises for security include training for software developers that addresses simulated attacks that exploit common software vulnerabilities or spear or whale phishing attacks targeted at senior leaders or executives. Practical exercises for privacy include modules with quizzes on identifying and processing personally identifiable information in various scenarios or scenarios on conducting privacy impact assessments."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "at-3.3_obj",
+     "label": "AT-03(03)",
+     "children": [
+      {
+       "id": "at-3.3_obj-1",
+       "label": "AT-03(03)[01]",
+       "prose": {
+        "en": "practical exercises in security training that reinforce training objectives are provided;"
+       }
+      },
+      {
+       "id": "at-3.3_obj-2",
+       "label": "AT-03(03)[02]",
+       "prose": {
+        "en": "practical exercises in privacy training that reinforce training objectives are provided."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AT-03(03)-Examine",
+     "objects": [
+      {
+       "en": "Security and privacy awareness and training policy"
+      },
+      {
+       "en": "procedures addressing security and privacy awareness training implementation"
+      },
+      {
+       "en": "security and privacy awareness training curriculum"
+      },
+      {
+       "en": "security and privacy awareness training materials"
+      },
+      {
+       "en": "security and privacy awareness training reports and results"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AT-03(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for role-based security and privacy training"
+      },
+      {
+       "en": "organizational personnel who participate in security and privacy awareness training"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  }
+ ]
+}

@@ -1,0 +1,143 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-7.15",
+ "version": "5.2.0",
+ "label": "SI-7(15)",
+ "lifecycle": "active",
+ "title": "Code Authentication",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement cryptographic mechanisms to authenticate the following software or firmware components prior to installation: {param:si-07.15_odp}."
+   },
+   "parameters": [
+    {
+     "name": "si-07.15_odp",
+     "type": "string",
+     "label": "software or firmware components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Cryptographic authentication includes verifying that software or firmware components have been digitally signed using certificates recognized and approved by organizations. Code signing is an effective method to protect against malicious code. Organizations that employ cryptographic mechanisms also consider cryptographic key management solutions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-7.15_obj",
+     "label": "SI-07(15)",
+     "prose": {
+      "en": "cryptographic mechanisms are implemented to authenticate {param:si-07.15_odp} prior to installation."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-07(15)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing software, firmware, and information integrity"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "cryptographic mechanisms and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-07(15)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for software, firmware, and/or information integrity"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-07(15)-Test",
+     "objects": [
+      {
+       "en": "Cryptographic mechanisms authenticating software and firmware prior to installation"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-07.15_odp": {
+     "guidelines": [
+      {
+       "en": "software or firmware components to be authenticated by cryptographic mechanisms prior to installation are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-7.15_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  }
+ ]
+}

@@ -1,0 +1,159 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-48.1",
+ "version": "5.2.0",
+ "label": "SC-48(1)",
+ "lifecycle": "active",
+ "title": "Dynamic Relocation of Sensors or Monitoring Capabilities",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Dynamically relocate {param:sc-48.01_odp.01} to {param:sc-48.01_odp.02} under the following conditions or circumstances: {param:sc-48.01_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "sc-48.01_odp.01",
+     "type": "string",
+     "label": "sensors and monitoring capabilities"
+    },
+    {
+     "name": "sc-48.01_odp.02",
+     "type": "string",
+     "label": "locations"
+    },
+    {
+     "name": "sc-48.01_odp.03",
+     "type": "string",
+     "label": "conditions or circumstances"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "None."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-48.1_obj",
+     "label": "SC-48(01)",
+     "prose": {
+      "en": "{param:sc-48.01_odp.01} are dynamically relocated to {param:sc-48.01_odp.02} under {param:sc-48.01_odp.03}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-48(01)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing sensor and monitoring capability relocation"
+      },
+      {
+       "en": "list of sensors/monitoring capabilities to be relocated"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "configuration management records"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-48(01)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-48(01)-Test",
+     "objects": [
+      {
+       "en": "SELECT FROM: Mechanisms supporting and/or implementing sensor relocation"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-48.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "sensors and monitoring capabilities to be dynamically relocated are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-48.1_prm_1"
+     ]
+    },
+    "sc-48.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "locations to where sensors and monitoring capabilities are to be dynamically relocated are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-48.1_prm_2"
+     ]
+    },
+    "sc-48.01_odp.03": {
+     "guidelines": [
+      {
+       "en": "conditions or circumstances for dynamically relocating sensors and monitoring capabilities are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-48.1_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-48"
+  }
+ ]
+}

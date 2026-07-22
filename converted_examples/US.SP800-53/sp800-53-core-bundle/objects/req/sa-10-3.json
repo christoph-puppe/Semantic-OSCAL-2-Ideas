@@ -1,0 +1,126 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-10.3",
+ "version": "5.2.0",
+ "label": "SA-10(3)",
+ "lifecycle": "active",
+ "title": "Hardware Integrity Verification",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to enable integrity verification of hardware components."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Hardware integrity verification allows organizations to detect unauthorized changes to hardware components using developer-provided tools, techniques, methods, and mechanisms. Organizations may verify the integrity of hardware components with hard-to-copy labels, verifiable serial numbers provided by developers, and by requiring the use of anti-tamper technologies. Delivered hardware components also include hardware and firmware updates to such components."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-10.3_obj",
+     "label": "SA-10(03)",
+     "prose": {
+      "en": "the developer of the system, system component, or system service is required to enable integrity verification of hardware components."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-10(03)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing system developer configuration management"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "system developer configuration management plan"
+      },
+      {
+       "en": "hardware integrity verification records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-10(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with configuration management responsibilities"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-10(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for monitoring developer configuration management"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the monitoring of developer configuration management"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  }
+ ]
+}

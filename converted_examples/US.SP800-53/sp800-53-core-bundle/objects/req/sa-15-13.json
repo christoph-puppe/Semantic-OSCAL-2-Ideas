@@ -1,0 +1,175 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-15.13",
+ "version": "5.2.0",
+ "label": "SA-15(13)",
+ "lifecycle": "active",
+ "title": "Logging Syntax",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system or system component to minimize the use of personally identifiable information in development and test environments."
+   },
+   "parameters": [
+    {
+     "name": "sa-15.13_odp.01",
+     "type": "string",
+     "label": "secure logging format(s)"
+    },
+    {
+     "name": "sa-15.13_odp.02",
+     "type": "string",
+     "label": "events types to log"
+    },
+    {
+     "name": "sa-15.13_odp.03",
+     "type": "string",
+     "label": "level of detail to log"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "In support of better incident response and the ability to more quickly reconstruct security-related actions, identifying specific requirements for secure logging facilitates the ability to connect application-produced audit event logs with operational data. Event types are consistent with the event types defined in AU-02."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-15.13_obj",
+     "label": "SA-15(13)",
+     "prose": {
+      "en": "Determine if:\n\nthe developer of the system, system component, or system service uses {param:sa-15.13_odp.01} to log {param:sa-15.13_odp.02} at {param:sa-15.13_odp.03}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-15(12)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy;"
+      },
+      {
+       "en": "solicitation documentation;"
+      },
+      {
+       "en": "acquisition documentation;"
+      },
+      {
+       "en": "service level agreements;"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service;"
+      },
+      {
+       "en": "requirements for logging format, event types, and level of detail;"
+      },
+      {
+       "en": "documentation evidence of requirements for logging format, event types, and level of detail;"
+      },
+      {
+       "en": "system security plan; other relevant documents or records."
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-15(13)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities;"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities;"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-15(13)-Test",
+     "objects": [
+      {
+       "en": "Developer logs for the system, system component, or system service."
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-15.13_odp.01": {
+     "guidelines": [
+      {
+       "en": "secure logging format(s) are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-15.13_prm_1"
+     ]
+    },
+    "sa-15.13_odp.02": {
+     "guidelines": [
+      {
+       "en": "events types to log are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-15.13_prm_2"
+     ]
+    },
+    "sa-15.13_odp.03": {
+     "guidelines": [
+      {
+       "en": "level of detail to log is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-15.13_prm_3"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-15"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-5"
+  }
+ ]
+}

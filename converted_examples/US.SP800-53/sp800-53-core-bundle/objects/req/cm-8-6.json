@@ -1,0 +1,129 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-8.6",
+ "version": "5.2.0",
+ "label": "CM-8(6)",
+ "lifecycle": "active",
+ "title": "Assessed Configurations and Approved Deviations",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Include assessed component configurations and any approved deviations to current deployed configurations in the system component inventory."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Assessed configurations and approved deviations focus on configuration settings established by organizations for system components, the specific components that have been assessed to determine compliance with the required configuration settings, and any approved deviations from established configuration settings."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-8.6_obj",
+     "label": "CM-08(06)",
+     "children": [
+      {
+       "id": "cm-8.6_obj-1",
+       "label": "CM-08(06)[01]",
+       "prose": {
+        "en": "assessed component configurations are included in the system component inventory;"
+       }
+      },
+      {
+       "id": "cm-8.6_obj-2",
+       "label": "CM-08(06)[02]",
+       "prose": {
+        "en": "any approved deviations to current deployed configurations are included in the system component inventory."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-08(06)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing system component inventory"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-08(06)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with component inventory management responsibilities"
+      },
+      {
+       "en": "organizational personnel with assessment responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-08(06)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing the system component inventory"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing system component inventory"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  }
+ ]
+}

@@ -1,0 +1,130 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-3.5",
+ "version": "5.2.0",
+ "label": "AC-3(5)",
+ "lifecycle": "active",
+ "title": "Security-relevant Information",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Prevent access to {param:ac-03.05_odp} except during secure, non-operable system states."
+   },
+   "parameters": [
+    {
+     "name": "ac-03.05_odp",
+     "type": "string",
+     "label": "security-relevant information"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Security-relevant information is information within systems that can potentially impact the operation of security functions or the provision of security services in a manner that could result in failure to enforce system security and privacy policies or maintain the separation of code and data. Security-relevant information includes access control lists, filtering rules for routers or firewalls, configuration parameters for security services, and cryptographic key management information. Secure, non-operable system states include the times in which systems are not performing mission or business-related processing, such as when the system is offline for maintenance, boot-up, troubleshooting, or shut down."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-3.5_obj",
+     "label": "AC-03(05)",
+     "prose": {
+      "en": "access to {param:ac-03.05_odp} is prevented except during secure, non-operable system states."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-03(05)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing access enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-03(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with access enforcement responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-03(05)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms preventing access to security-relevant information within the system"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-03.05_odp": {
+     "guidelines": [
+      {
+       "en": "security-relevant information to which access is prevented except during secure, non-operable system states is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-3.5_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-39"
+  }
+ ]
+}

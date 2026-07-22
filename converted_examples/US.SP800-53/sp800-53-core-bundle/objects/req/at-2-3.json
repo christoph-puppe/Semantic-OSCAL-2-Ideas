@@ -1,0 +1,119 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AT-2.3",
+ "version": "5.2.0",
+ "label": "AT-2(3)",
+ "lifecycle": "active",
+ "title": "Social Engineering and Mining",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide literacy training on recognizing and reporting potential and actual instances of social engineering and social mining."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Social engineering is an attempt to trick an individual into revealing information or taking an action that can be used to breach, compromise, or otherwise adversely impact a system. Social engineering includes phishing, pretexting, impersonation, baiting, quid pro quo, thread-jacking, social media exploitation, and tailgating. Social mining is an attempt to gather information about the organization that may be used to support future attacks. Literacy training includes information on how to communicate the concerns of employees and management regarding potential and actual instances of social engineering and data mining through organizational channels based on established policies and procedures."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "at-2.3_obj",
+     "label": "AT-02(03)",
+     "children": [
+      {
+       "id": "at-2.3_obj-1",
+       "label": "AT-02(03)[01]",
+       "prose": {
+        "en": "literacy training on recognizing potential and actual instances of social engineering is provided;"
+       }
+      },
+      {
+       "id": "at-2.3_obj-2",
+       "label": "AT-02(03)[02]",
+       "prose": {
+        "en": "literacy training on reporting potential and actual instances of social engineering is provided;"
+       }
+      },
+      {
+       "id": "at-2.3_obj-3",
+       "label": "AT-02(03)[03]",
+       "prose": {
+        "en": "literacy training on recognizing potential and actual instances of social mining is provided;"
+       }
+      },
+      {
+       "id": "at-2.3_obj-4",
+       "label": "AT-02(03)[04]",
+       "prose": {
+        "en": "literacy training on reporting potential and actual instances of social mining is provided."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AT-02(03)-Examine",
+     "objects": [
+      {
+       "en": "System security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "literacy training and awareness policy"
+      },
+      {
+       "en": "procedures addressing literacy training and awareness implementation"
+      },
+      {
+       "en": "literacy training and awareness curriculum"
+      },
+      {
+       "en": "literacy training and awareness materials"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AT-02(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel who receive literacy training and awareness"
+      },
+      {
+       "en": "organizational personnel with responsibilities for literacy training and awareness"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-2"
+  }
+ ]
+}

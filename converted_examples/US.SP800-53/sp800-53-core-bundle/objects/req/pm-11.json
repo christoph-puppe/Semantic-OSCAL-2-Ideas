@@ -1,0 +1,250 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-11",
+ "version": "5.2.0",
+ "label": "PM-11",
+ "lifecycle": "active",
+ "title": "Mission and Business Process Definition",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Define organizational mission and business processes with consideration for information security and privacy and the resulting risk to organizational operations, organizational assets, individuals, other organizations, and the Nation; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Determine information protection and personally identifiable information processing needs arising from the defined mission and business processes; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review and revise the mission and business processes {param:pm-11_odp}."
+   },
+   "parameters": [
+    {
+     "name": "pm-11_odp",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Protection needs are technology-independent capabilities that are required to counter threats to organizations, individuals, systems, and the Nation through the compromise of information (i.e., loss of confidentiality, integrity, availability, or privacy). Information protection and personally identifiable information processing needs are derived from the mission and business needs defined by organizational stakeholders, the mission and business processes designed to meet those needs, and the organizational risk management strategy. Information protection and personally identifiable information processing needs determine the required controls for the organization and the systems. Inherent to defining protection and personally identifiable information processing needs is an understanding of the adverse impact that could result if a compromise or breach of information occurs. The categorization process is used to make such potential impact determinations. Privacy risks to individuals can arise from the compromise of personally identifiable information, but they can also arise as unintended consequences or a byproduct of the processing of personally identifiable information at any stage of the information life cycle. Privacy risk assessments are used to prioritize the risks that are created for individuals from system processing of personally identifiable information. These risk assessments enable the selection of the required privacy controls for the organization and systems. Mission and business process definitions and the associated protection requirements are documented in accordance with organizational policies and procedures."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-11_obj",
+     "label": "PM-11",
+     "children": [
+      {
+       "id": "pm-11_obj.a",
+       "label": "PM-11a.",
+       "children": [
+        {
+         "id": "pm-11_obj.a-1",
+         "label": "PM-11a.[01]",
+         "prose": {
+          "en": "organizational mission and business processes are defined with consideration for information security;"
+         }
+        },
+        {
+         "id": "pm-11_obj.a-2",
+         "label": "PM-11a.[02]",
+         "prose": {
+          "en": "organizational mission and business processes are defined with consideration for privacy;"
+         }
+        },
+        {
+         "id": "pm-11_obj.a-3",
+         "label": "PM-11a.[03]",
+         "prose": {
+          "en": "organizational mission and business processes are defined with consideration for the resulting risk to organizational operations, organizational assets, individuals, other organizations, and the Nation;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-11_obj.b",
+       "label": "PM-11b.",
+       "children": [
+        {
+         "id": "pm-11_obj.b-1",
+         "label": "PM-11b.[01]",
+         "prose": {
+          "en": "information protection needs arising from the defined mission and business processes are determined;"
+         }
+        },
+        {
+         "id": "pm-11_obj.b-2",
+         "label": "PM-11b.[02]",
+         "prose": {
+          "en": "personally identifiable information processing needs arising from the defined mission and business processes are determined;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-11_obj.c",
+       "label": "PM-11c.",
+       "prose": {
+        "en": "the mission and business processes are reviewed and revised {param:pm-11_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-11-Examine",
+     "objects": [
+      {
+       "en": "Information security program plan"
+      },
+      {
+       "en": "privacy program plan"
+      },
+      {
+       "en": "risk management strategy"
+      },
+      {
+       "en": "procedures for determining mission and business protection needs"
+      },
+      {
+       "en": "information security and privacy risk assessment results relevant to the determination of mission and business protection needs"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "personally identifiable information inventory"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-11-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy program planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel responsible for enterprise risk management"
+      },
+      {
+       "en": "organizational personnel responsible for determining information protection needs for mission and business processes"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PM-11-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for defining mission and business processes and their information protection needs"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pm-11_odp": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to review and revise the mission and business processes is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pm-11_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.199"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-39"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-60v1r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-60v2r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-2"
+  }
+ ]
+}

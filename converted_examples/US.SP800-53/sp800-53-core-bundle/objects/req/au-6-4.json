@@ -1,0 +1,125 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-6.4",
+ "version": "5.2.0",
+ "label": "AU-6(4)",
+ "lifecycle": "active",
+ "title": "Central Review and Analysis",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide and implement the capability to centrally review and analyze audit records from multiple components within the system."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Automated mechanisms for centralized reviews and analyses include Security Information and Event Management products."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-6.4_obj",
+     "label": "AU-06(04)",
+     "children": [
+      {
+       "id": "au-6.4_obj-1",
+       "label": "AU-06(04)[01]",
+       "prose": {
+        "en": "the capability to centrally review and analyze audit records from multiple components within the system is provided;"
+       }
+      },
+      {
+       "id": "au-6.4_obj-2",
+       "label": "AU-06(04)[02]",
+       "prose": {
+        "en": "the capability to centrally review and analyze audit records from multiple components within the system is implemented."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-06(04)-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "procedures addressing audit review, analysis, and reporting"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-06(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with audit review, analysis, and reporting responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AU-06(04)-Test",
+     "objects": [
+      {
+       "en": "System capability to centralize review and analysis of audit records"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-12"
+  }
+ ]
+}

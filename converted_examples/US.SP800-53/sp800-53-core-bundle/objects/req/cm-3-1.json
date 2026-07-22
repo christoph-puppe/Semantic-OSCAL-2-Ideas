@@ -1,0 +1,301 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-3.1",
+ "version": "5.2.0",
+ "label": "CM-3(1)",
+ "lifecycle": "active",
+ "title": "Automated Documentation, Notification, and Prohibition of Changes",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Use {param:cm-03.01_odp.01} to:"
+   },
+   "parameters": [
+    {
+     "name": "cm-03.01_odp.01",
+     "type": "string",
+     "label": "automated mechanisms"
+    }
+   ]
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Document proposed changes to the system;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Notify {param:cm-03.01_odp.02} of proposed changes to the system and request change approval;"
+   },
+   "parameters": [
+    {
+     "name": "cm-03.01_odp.02",
+     "type": "string",
+     "label": "approval authorities"
+    }
+   ]
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Highlight proposed changes to the system that have not been approved or disapproved within {param:cm-03.01_odp.03};"
+   },
+   "parameters": [
+    {
+     "name": "cm-03.01_odp.03",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Prohibit changes to the system until designated approvals are received;"
+   }
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Document all changes to the system; and"
+   }
+  },
+  {
+   "id": "smt.f",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Notify {param:cm-03.01_odp.04} when approved changes to the system are completed."
+   },
+   "parameters": [
+    {
+     "name": "cm-03.01_odp.04",
+     "type": "string",
+     "label": "personnel"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "None."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-3.1_obj",
+     "label": "CM-03(01)",
+     "children": [
+      {
+       "id": "cm-3.1_obj.a",
+       "label": "CM-03(01)(a)",
+       "prose": {
+        "en": "{param:cm-03.01_odp.01} are used to document proposed changes to the system;"
+       }
+      },
+      {
+       "id": "cm-3.1_obj.b",
+       "label": "CM-03(01)(b)",
+       "prose": {
+        "en": "{param:cm-03.01_odp.01} are used to notify {param:cm-03.01_odp.02} of proposed changes to the system and request change approval;"
+       }
+      },
+      {
+       "id": "cm-3.1_obj.c",
+       "label": "CM-03(01)(c)",
+       "prose": {
+        "en": "{param:cm-03.01_odp.01} are used to highlight proposed changes to the system that have not been approved or disapproved within {param:cm-03.01_odp.03};"
+       }
+      },
+      {
+       "id": "cm-3.1_obj.d",
+       "label": "CM-03(01)(d)",
+       "prose": {
+        "en": "{param:cm-03.01_odp.01} are used to prohibit changes to the system until designated approvals are received;"
+       }
+      },
+      {
+       "id": "cm-3.1_obj.e",
+       "label": "CM-03(01)(e)",
+       "prose": {
+        "en": "{param:cm-03.01_odp.01} are used to document all changes to the system;"
+       }
+      },
+      {
+       "id": "cm-3.1_obj.f",
+       "label": "CM-03(01)(f)",
+       "prose": {
+        "en": "{param:cm-03.01_odp.01} are used to notify {param:cm-03.01_odp.04} when approved changes to the system are completed."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-03(01)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing system configuration change control"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system architecture and configuration documentation"
+      },
+      {
+       "en": "automated configuration control mechanisms"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "change approval requests"
+      },
+      {
+       "en": "change approvals"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-03(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with configuration change control responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "members of change control board or similar"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-03(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for configuration change control"
+      },
+      {
+       "en": "automated mechanisms implementing configuration change control activities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-03.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "mechanisms used to automate configuration change control are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-3.1_prm_1"
+     ]
+    },
+    "cm-03.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "approval authorities to be notified of and request approval for proposed changes to the system are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-3.1_prm_2"
+     ]
+    },
+    "cm-03.01_odp.03": {
+     "guidelines": [
+      {
+       "en": "the time period after which to highlight changes that have not been approved or disapproved is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-3.1_prm_3"
+     ]
+    },
+    "cm-03.01_odp.04": {
+     "guidelines": [
+      {
+       "en": "personnel to be notified when approved changes are complete is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-3.1_prm_4"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-3"
+  }
+ ]
+}

@@ -1,0 +1,145 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-4.8",
+ "version": "5.2.0",
+ "label": "IR-4(8)",
+ "lifecycle": "active",
+ "title": "Correlation with External Organizations",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Coordinate with {param:ir-04.08_odp.01} to correlate and share {param:ir-04.08_odp.02} to achieve a cross-organization perspective on incident awareness and more effective incident responses."
+   },
+   "parameters": [
+    {
+     "name": "ir-04.08_odp.01",
+     "type": "string",
+     "label": "external organizations"
+    },
+    {
+     "name": "ir-04.08_odp.02",
+     "type": "string",
+     "label": "incident information"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The coordination of incident information with external organizations—including mission or business partners, military or coalition partners, customers, and developers—can provide significant benefits. Cross-organizational coordination can serve as an important risk management capability. This capability allows organizations to leverage information from a variety of sources to effectively respond to incidents and breaches that could potentially affect the organization’s operations, assets, and individuals."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-4.8_obj",
+     "label": "IR-04(08)",
+     "prose": {
+      "en": "there is coordination with {param:ir-04.08_odp.01} to correlate and share {param:ir-04.08_odp.02} to achieve a cross-organization perspective on incident awareness and more effective incident responses."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-04(08)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing incident handling"
+      },
+      {
+       "en": "list of external organizations"
+      },
+      {
+       "en": "records of incident handling coordination with external organizations"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-04(08)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident handling responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "personnel from external organizations with whom incident response information is to be coordinated, shared, and correlated"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IR-04(08)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for coordinating incident handling information with external organizations"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ir-04.08_odp.01": {
+     "guidelines": [
+      {
+       "en": "external organizations with whom organizational incident information is to be coordinated and shared are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-4.8_prm_1"
+     ]
+    },
+    "ir-04.08_odp.02": {
+     "guidelines": [
+      {
+       "en": "incident information to be correlated and shared with organization-defined external organizations are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-4.8_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-16"
+  }
+ ]
+}

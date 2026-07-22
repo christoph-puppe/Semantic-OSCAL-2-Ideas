@@ -1,0 +1,137 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-2.2",
+ "version": "5.2.0",
+ "label": "IA-2(2)",
+ "lifecycle": "active",
+ "title": "Multi-factor Authentication to Non-privileged Accounts",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement multi-factor authentication for access to non-privileged accounts."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Multi-factor authentication requires the use of two or more different factors to achieve authentication. The authentication factors are defined as follows: something you know (e.g., a personal identification number [PIN]), something you have (e.g., a physical authenticator such as a cryptographic private key), or something you are (e.g., a biometric). Multi-factor authentication solutions that feature physical authenticators include hardware authenticators that provide time-based or challenge-response outputs and smart cards such as the U.S. Government Personal Identity Verification card or the DoD Common Access Card. In addition to authenticating users at the system level, organizations may also employ authentication mechanisms at the application level, at their discretion, to provide increased information security. Regardless of the type of access (i.e., local, network, remote), non-privileged accounts are authenticated using multi-factor options appropriate for the level of risk. Organizations can provide additional security measures, such as additional or more rigorous authentication mechanisms, for specific types of access."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-2.2_obj",
+     "label": "IA-02(02)",
+     "prose": {
+      "en": "multi-factor authentication for access to non-privileged accounts is implemented."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-02(02)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "procedures addressing user identification and authentication"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "list of system accounts"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-02(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system operations responsibilities"
+      },
+      {
+       "en": "organizational personnel with account management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-02(02)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing a multi-factor authentication capability"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-5"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-2.4",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5.11",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/IA-2.4",
+    "mode": "merged-into",
+    "label": "IA-02(04)",
+    "title": "Local Access to Non-privileged Accounts"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/IA-5.11",
+    "mode": "merged-into",
+    "label": "IA-05(11)",
+    "title": "Hardware Token-based Authentication"
+   }
+  ]
+ }
+}

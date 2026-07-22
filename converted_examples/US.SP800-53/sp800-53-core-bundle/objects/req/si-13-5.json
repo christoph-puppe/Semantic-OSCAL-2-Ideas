@@ -1,0 +1,163 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-13.5",
+ "version": "5.2.0",
+ "label": "SI-13(5)",
+ "lifecycle": "active",
+ "title": "Failover Capability",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide {param:si-13.05_odp.01} {param:si-13.05_odp.02} for the system."
+   },
+   "parameters": [
+    {
+     "name": "si-13.05_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "real-time"
+      },
+      {
+       "value": "near real-time"
+      }
+     ]
+    },
+    {
+     "name": "si-13.05_odp.02",
+     "type": "string",
+     "label": "failover capability"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Failover refers to the automatic switchover to an alternate system upon the failure of the primary system. Failover capability includes incorporating mirrored system operations at alternate processing sites or periodic data mirroring at regular intervals defined by the recovery time periods of organizations."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-13.5_obj",
+     "label": "SI-13(05)",
+     "prose": {
+      "en": "{param:si-13.05_odp.01} {param:si-13.05_odp.02} is provided for the system."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-13(05)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing predictable failure prevention"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "documentation describing the failover capability provided for the system"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-13(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for the failover capability"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with contingency planning responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-13(05)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing the failover capability"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing the failover capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-13.05_odp.01": {
+     "alt-identifiers": [
+      "si-13.5_prm_1"
+     ]
+    },
+    "si-13.05_odp.02": {
+     "guidelines": [
+      {
+       "en": "a failover capability for the system has been defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-13.5_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-9"
+  }
+ ]
+}

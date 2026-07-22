@@ -1,0 +1,104 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-4.7",
+ "version": "5.2.0",
+ "label": "AC-4(7)",
+ "lifecycle": "active",
+ "title": "One-way Flow Mechanisms",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Enforce one-way information flows through hardware-based flow control mechanisms."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "One-way flow mechanisms may also be referred to as a unidirectional network, unidirectional security gateway, or data diode. One-way flow mechanisms can be used to prevent data from being exported from a higher impact or classified domain or system while permitting data from a lower impact or unclassified domain or system to be imported."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-4.7_obj",
+     "label": "AC-04(07)",
+     "prose": {
+      "en": "one-way information flows are enforced through hardware-based flow control mechanisms."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-04(07)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "information flow control policies"
+      },
+      {
+       "en": "procedures addressing information flow enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system hardware mechanisms and associated configurations"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-04(07)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-04(07)-Test",
+     "objects": [
+      {
+       "en": "Hardware mechanisms implementing information flow enforcement policy"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  }
+ ]
+}

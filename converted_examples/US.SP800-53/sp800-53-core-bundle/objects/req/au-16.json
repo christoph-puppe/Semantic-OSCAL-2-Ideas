@@ -1,0 +1,150 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-16",
+ "version": "5.2.0",
+ "label": "AU-16",
+ "lifecycle": "active",
+ "title": "Cross-organizational Audit Logging",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ {param:au-16_odp.01} for coordinating {param:au-16_odp.02} among external organizations when audit information is transmitted across organizational boundaries."
+   },
+   "parameters": [
+    {
+     "name": "au-16_odp.01",
+     "type": "string",
+     "label": "methods"
+    },
+    {
+     "name": "au-16_odp.02",
+     "type": "string",
+     "label": "audit information"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "When organizations use systems or services of external organizations, the audit logging capability necessitates a coordinated, cross-organization approach. For example, maintaining the identity of individuals who request specific services across organizational boundaries may often be difficult, and doing so may prove to have significant performance and privacy ramifications. Therefore, it is often the case that cross-organizational audit logging simply captures the identity of individuals who issue requests at the initial system, and subsequent systems record that the requests originated from authorized individuals. Organizations consider including processes for coordinating audit information requirements and protection of audit information in information exchange agreements."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-16_obj",
+     "label": "AU-16",
+     "prose": {
+      "en": "{param:au-16_odp.01} for coordinating {param:au-16_odp.02} among external organizations when audit information is transmitted across organizational boundaries are employed."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-16-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "procedures addressing methods for coordinating audit information among external organizations"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-16-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for coordinating audit information among external organizations"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AU-16-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing cross-organizational auditing"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "au-16_odp.01": {
+     "guidelines": [
+      {
+       "en": "methods for coordinating audit information among external organizations when audit information is transmitted across organizational boundaries are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-16_prm_1"
+     ]
+    },
+    "au-16_odp.02": {
+     "guidelines": [
+      {
+       "en": "audit information to be coordinated among external organizations when audit information is transmitted across organizational boundaries is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-16_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-7"
+  }
+ ]
+}

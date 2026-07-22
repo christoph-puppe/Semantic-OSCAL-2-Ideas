@@ -1,0 +1,237 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-36",
+ "version": "5.2.0",
+ "label": "SC-36",
+ "lifecycle": "active",
+ "title": "Distributed Processing and Storage",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Distribute the following processing and storage components across multiple {param:sc-36_prm_1}: {param:sc-36_prm_2}."
+   },
+   "parameters": [
+    {
+     "name": "sc-36_prm_1",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "physical locations"
+      },
+      {
+       "value": "logical domains"
+      }
+     ]
+    },
+    {
+     "name": "sc-36_prm_2",
+     "type": "string",
+     "label": "organization-defined processing and storage components"
+    },
+    {
+     "name": "sc-36_odp.01",
+     "type": "string",
+     "label": "processing components"
+    },
+    {
+     "name": "sc-36_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "physical locations"
+      },
+      {
+       "value": "logical domains"
+      }
+     ]
+    },
+    {
+     "name": "sc-36_odp.03",
+     "type": "string",
+     "label": "storage components"
+    },
+    {
+     "name": "sc-36_odp.04",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "physical locations"
+      },
+      {
+       "value": "logical domains"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Distributing processing and storage across multiple physical locations or logical domains provides a degree of redundancy or overlap for organizations. The redundancy and overlap increase the work factor of adversaries to adversely impact organizational operations, assets, and individuals. The use of distributed processing and storage does not assume a single primary processing or storage location. Therefore, it allows for parallel processing and storage."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-36_obj",
+     "label": "SC-36",
+     "children": [
+      {
+       "id": "sc-36_obj-1",
+       "label": "SC-36[01]",
+       "prose": {
+        "en": "{param:sc-36_odp.01} are distributed across {param:sc-36_odp.02};"
+       }
+      },
+      {
+       "id": "sc-36_obj-2",
+       "label": "SC-36[02]",
+       "prose": {
+        "en": "{param:sc-36_odp.03} are distributed across {param:sc-36_odp.04}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-36-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "contingency planning policy and procedures"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "list of system physical locations (or environments) with distributed processing and storage"
+      },
+      {
+       "en": "system facility diagrams"
+      },
+      {
+       "en": "processing site agreements"
+      },
+      {
+       "en": "storage site agreements"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-36-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel with contingency planning and plan implementation responsibilities"
+      },
+      {
+       "en": "system developers/integrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-36-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for distributed processing and storage across multiple physical locations"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the capability to distribute processing and storage across multiple physical locations"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-36_prm_1": {
+     "aggregates": [
+      "sc-36_odp.02",
+      "sc-36_odp.04"
+     ]
+    },
+    "sc-36_prm_2": {
+     "aggregates": [
+      "sc-36_odp.01",
+      "sc-36_odp.03"
+     ]
+    },
+    "sc-36_odp.01": {
+     "guidelines": [
+      {
+       "en": "processing components to be distributed across multiple locations/domains are defined;"
+      }
+     ]
+    },
+    "sc-36_odp.03": {
+     "guidelines": [
+      {
+       "en": "storage components to be distributed across multiple locations/domains are defined;"
+      }
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-32"
+  }
+ ]
+}

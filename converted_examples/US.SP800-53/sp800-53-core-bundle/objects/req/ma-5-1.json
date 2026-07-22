@@ -1,0 +1,204 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-5.1",
+ "version": "5.2.0",
+ "label": "MA-5(1)",
+ "lifecycle": "active",
+ "title": "Individuals Without Appropriate Access",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Implement procedures for the use of maintenance personnel that lack appropriate security clearances or are not U.S. citizens, that include the following requirements:"
+   }
+  },
+  {
+   "id": "smt.a.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Maintenance personnel who do not have needed access authorizations, clearances, or formal access approvals are escorted and supervised during the performance of maintenance and diagnostic activities on the system by approved organizational personnel who are fully cleared, have appropriate access authorizations, and are technically qualified; and"
+   }
+  },
+  {
+   "id": "smt.a.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Prior to initiating maintenance or diagnostic activities by personnel who do not have needed access authorizations, clearances or formal access approvals, all volatile information storage components within the system are sanitized and all nonvolatile storage media are removed or physically disconnected from the system and secured; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop and implement {param:ma-05.01_odp} in the event a system component cannot be sanitized, removed, or disconnected from the system."
+   },
+   "parameters": [
+    {
+     "name": "ma-05.01_odp",
+     "type": "string",
+     "label": "alternate controls"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Procedures for individuals who lack appropriate security clearances or who are not U.S. citizens are intended to deny visual and electronic access to classified or controlled unclassified information contained on organizational systems. Procedures for the use of maintenance personnel can be documented in security plans for the systems."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-5.1_obj",
+     "label": "MA-05(01)",
+     "children": [
+      {
+       "id": "ma-5.1_obj.a",
+       "label": "MA-05(01)(a)",
+       "children": [
+        {
+         "id": "ma-5.1_obj.a.1",
+         "label": "MA-05(01)(a)(01)",
+         "prose": {
+          "en": "procedures for the use of maintenance personnel who lack appropriate security clearances or are not U.S. citizens are implemented and include approved organizational personnel who are fully cleared, have appropriate access authorizations, and are technically qualified escorting and supervising maintenance personnel without the needed access authorization during the performance of maintenance and diagnostic activities;"
+         }
+        },
+        {
+         "id": "ma-5.1_obj.a.2",
+         "label": "MA-05(01)(a)(02)",
+         "prose": {
+          "en": "procedures for the use of maintenance personnel who lack appropriate security clearances or are not U.S. citizens are implemented and include all volatile information storage components within the system being sanitized and all non-volatile storage media being removed or physically disconnected from the system and secured prior to initiating maintenance or diagnostic activities;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ma-5.1_obj.b",
+       "label": "MA-05(01)(b)",
+       "prose": {
+        "en": "{param:ma-05.01_odp} are developed and implemented in the event that a system cannot be sanitized, removed, or disconnected from the system."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-05(01)-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing maintenance personnel"
+      },
+      {
+       "en": "system media protection policy"
+      },
+      {
+       "en": "physical and environmental protection policy"
+      },
+      {
+       "en": "list of maintenance personnel requiring escort/supervision"
+      },
+      {
+       "en": "maintenance records"
+      },
+      {
+       "en": "access control records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-05(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities"
+      },
+      {
+       "en": "organizational personnel with personnel security responsibilities"
+      },
+      {
+       "en": "organizational personnel with physical access control responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel responsible for media sanitization"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MA-05(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing maintenance personnel without appropriate access"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing alternative security safeguards"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing information storage component sanitization"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ma-05.01_odp": {
+     "guidelines": [
+      {
+       "en": "alternate controls to be developed and implemented in the event that a system component cannot be sanitized, removed, or disconnected from the system are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ma-5.1_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-2"
+  }
+ ]
+}

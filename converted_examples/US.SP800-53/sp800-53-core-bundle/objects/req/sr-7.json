@@ -1,0 +1,183 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SR-7",
+ "version": "5.2.0",
+ "label": "SR-7",
+ "lifecycle": "active",
+ "title": "Supply Chain Operations Security",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ the following Operations Security (OPSEC) controls to protect supply chain-related information for the system, system component, or system service: {param:sr-07_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sr-07_odp",
+     "type": "string",
+     "label": "OPSEC controls"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Supply chain OPSEC expands the scope of OPSEC to include suppliers and potential suppliers. OPSEC is a process that includes identifying critical information, analyzing friendly actions related to operations and other activities to identify actions that can be observed by potential adversaries, determining indicators that potential adversaries might obtain that could be interpreted or pieced together to derive information in sufficient time to cause harm to organizations, implementing safeguards or countermeasures to eliminate or reduce exploitable vulnerabilities and risk to an acceptable level, and considering how aggregated information may expose users or specific uses of the supply chain. Supply chain information includes user identities; uses for systems, system components, and system services; supplier identities; security and privacy requirements; system and component configurations; supplier processes; design specifications; and testing and evaluation results. Supply chain OPSEC may require organizations to withhold mission or business information from suppliers and may include the use of intermediaries to hide the end use or users of systems, system components, or system services."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sr-7_obj",
+     "label": "SR-07",
+     "prose": {
+      "en": "{param:sr-07_odp} are employed to protect supply chain-related information for the system, system component, or system service."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SR-07-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management plan"
+      },
+      {
+       "en": "supply chain risk management procedures"
+      },
+      {
+       "en": "system and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "procedures addressing supply chain protection"
+      },
+      {
+       "en": "list of OPSEC controls to be employed"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "records of all-source intelligence analyses"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SR-07-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with OPSEC responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SR-07-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for defining and employing OPSEC safeguards"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the definition and employment of OPSEC safeguards"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sr-07_odp": {
+     "guidelines": [
+      {
+       "en": "Operations Security (OPSEC) controls to protect supply chain-related information for the system, system component, or system service are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sr-7_prm_1"
+     ],
+     "alt-label": "Operations Security (OPSEC) controls"
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/presidential-actions/executive-order-securing-information-communications-technology-services-supply-chain"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-30r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.iso.org/standard/59648.html"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-161"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.7622"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-38"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-12.9",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-12.9",
+    "mode": "renamed",
+    "label": "SA-12(09)",
+    "title": "Operations Security"
+   }
+  ]
+ }
+}

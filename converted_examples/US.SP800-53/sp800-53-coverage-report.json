@@ -1,0 +1,1086 @@
+{
+ "totals": {
+  "leaf-values": 115680,
+  "mapped": 115680,
+  "unmapped": 0,
+  "coverage-pct": 100.0
+ },
+ "unmapped-paths": [],
+ "path-map": [
+  {
+   "path": "high.profile.back-matter.resources[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.back-matter.resources[].rlinks[].href",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.back-matter.resources[].rlinks[].media-type",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.back-matter.resources[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.imports[].href",
+   "count": 1,
+   "level": "L3",
+   "destination": "OSCAL-profile resolution mechanics; the selection IS the Set (no semantic residue)"
+  },
+  {
+   "path": "high.profile.imports[].include-controls[].with-ids[]",
+   "count": 370,
+   "level": "L1",
+   "destination": "baseline Set members (minted URIs, catalog order)"
+  },
+  {
+   "path": "high.profile.merge.as-is",
+   "count": 1,
+   "level": "L3",
+   "destination": "OSCAL-profile resolution mechanics; the selection IS the Set (no semantic residue)"
+  },
+  {
+   "path": "high.profile.metadata.last-modified",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.metadata.oscal-version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.metadata.parties[].addresses[].addr-lines[]",
+   "count": 8,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.metadata.parties[].addresses[].city",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.metadata.parties[].addresses[].postal-code",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.metadata.parties[].addresses[].state",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.metadata.parties[].email-addresses[]",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.metadata.parties[].name",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.metadata.parties[].short-name",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.metadata.parties[].type",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.metadata.parties[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.metadata.responsible-parties[].party-uuids[]",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.metadata.responsible-parties[].role-id",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.metadata.roles[].id",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.metadata.roles[].title",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.metadata.title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.metadata.version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "high.profile.uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.back-matter.resources[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.back-matter.resources[].rlinks[].href",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.back-matter.resources[].rlinks[].media-type",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.back-matter.resources[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.imports[].href",
+   "count": 1,
+   "level": "L3",
+   "destination": "OSCAL-profile resolution mechanics; the selection IS the Set (no semantic residue)"
+  },
+  {
+   "path": "low.profile.imports[].include-controls[].with-ids[]",
+   "count": 149,
+   "level": "L1",
+   "destination": "baseline Set members (minted URIs, catalog order)"
+  },
+  {
+   "path": "low.profile.merge.as-is",
+   "count": 1,
+   "level": "L3",
+   "destination": "OSCAL-profile resolution mechanics; the selection IS the Set (no semantic residue)"
+  },
+  {
+   "path": "low.profile.metadata.last-modified",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.metadata.oscal-version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.metadata.parties[].addresses[].addr-lines[]",
+   "count": 8,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.metadata.parties[].addresses[].city",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.metadata.parties[].addresses[].postal-code",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.metadata.parties[].addresses[].state",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.metadata.parties[].email-addresses[]",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.metadata.parties[].name",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.metadata.parties[].short-name",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.metadata.parties[].type",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.metadata.parties[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.metadata.responsible-parties[].party-uuids[]",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.metadata.responsible-parties[].role-id",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.metadata.roles[].id",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.metadata.roles[].title",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.metadata.title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.metadata.version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "low.profile.uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.back-matter.resources[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.back-matter.resources[].rlinks[].href",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.back-matter.resources[].rlinks[].media-type",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.back-matter.resources[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.imports[].href",
+   "count": 1,
+   "level": "L3",
+   "destination": "OSCAL-profile resolution mechanics; the selection IS the Set (no semantic residue)"
+  },
+  {
+   "path": "moderate.profile.imports[].include-controls[].with-ids[]",
+   "count": 287,
+   "level": "L1",
+   "destination": "baseline Set members (minted URIs, catalog order)"
+  },
+  {
+   "path": "moderate.profile.merge.as-is",
+   "count": 1,
+   "level": "L3",
+   "destination": "OSCAL-profile resolution mechanics; the selection IS the Set (no semantic residue)"
+  },
+  {
+   "path": "moderate.profile.metadata.last-modified",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.metadata.oscal-version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.metadata.parties[].addresses[].addr-lines[]",
+   "count": 8,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.metadata.parties[].addresses[].city",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.metadata.parties[].addresses[].postal-code",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.metadata.parties[].addresses[].state",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.metadata.parties[].email-addresses[]",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.metadata.parties[].name",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.metadata.parties[].short-name",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.metadata.parties[].type",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.metadata.parties[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.metadata.responsible-parties[].party-uuids[]",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.metadata.responsible-parties[].role-id",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.metadata.roles[].id",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.metadata.roles[].title",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.metadata.title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.metadata.version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "moderate.profile.uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "nist.catalog.back-matter.resources[].citation.text",
+   "count": 192,
+   "level": "L1",
+   "destination": "reference-link resolution table + references@1 facet on the root Set (title/citation/url)"
+  },
+  {
+   "path": "nist.catalog.back-matter.resources[].rlinks[].href",
+   "count": 201,
+   "level": "L1",
+   "destination": "reference-link resolution table + references@1 facet on the root Set (title/citation/url)"
+  },
+  {
+   "path": "nist.catalog.back-matter.resources[].rlinks[].media-type",
+   "count": 2,
+   "level": "L1",
+   "destination": "reference-link resolution table + references@1 facet on the root Set (title/citation/url)"
+  },
+  {
+   "path": "nist.catalog.back-matter.resources[].title",
+   "count": 201,
+   "level": "L1",
+   "destination": "reference-link resolution table + references@1 facet on the root Set (title/citation/url)"
+  },
+  {
+   "path": "nist.catalog.back-matter.resources[].uuid",
+   "count": 201,
+   "level": "L1",
+   "destination": "reference-link resolution table + references@1 facet on the root Set (title/citation/url)"
+  },
+  {
+   "path": "nist.catalog.groups[].class",
+   "count": 20,
+   "level": "L1",
+   "destination": "family Set id/title (D21 nesting under root)"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].class",
+   "count": 1196,
+   "level": "L1",
+   "destination": "encoded structurally: family Set membership + `required` base edge distinguishes enhancements"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].id",
+   "count": 1196,
+   "level": "L1",
+   "destination": "Requirement id (URI mint, dot form = corpus mapping endpoints) + title | withdrawn: dropped, lineage inverted"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].links[].href",
+   "count": 5265,
+   "level": "L1",
+   "destination": "related->related; required->required; reference->reference (resolved URL); incorporated-into/moved-to->successor replaces[] (merged-into/renamed) + nist-withdrawal annotation"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].links[].rel",
+   "count": 5265,
+   "level": "L1",
+   "destination": "related->related; required->required; reference->reference (resolved URL); incorporated-into/moved-to->successor replaces[] (merged-into/renamed) + nist-withdrawal annotation"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].params[].guidelines[].prose",
+   "count": 1327,
+   "level": "L2",
+   "destination": "odp@1 facet params.{name}.guidelines (language-tagged)"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].params[].id",
+   "count": 1600,
+   "level": "L1",
+   "destination": "statement-scoped kernel parameter decl (name, label) on each inserting statement (216 per-statement rule)"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].params[].label",
+   "count": 1467,
+   "level": "L1",
+   "destination": "statement-scoped kernel parameter decl (name, label) on each inserting statement (216 per-statement rule)"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].params[].props[].class",
+   "count": 1564,
+   "level": "L1",
+   "destination": "prop label (formal ODP id) -> L3-derivable (round-trip asserted); alt-identifier/alt-label/aggregates -> odp@1 facet"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].params[].props[].name",
+   "count": 3021,
+   "level": "L1",
+   "destination": "prop label (formal ODP id) -> L3-derivable (round-trip asserted); alt-identifier/alt-label/aggregates -> odp@1 facet"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].params[].props[].ns",
+   "count": 331,
+   "level": "L1",
+   "destination": "prop label (formal ODP id) -> L3-derivable (round-trip asserted); alt-identifier/alt-label/aggregates -> odp@1 facet"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].params[].props[].value",
+   "count": 3021,
+   "level": "L1",
+   "destination": "prop label (formal ODP id) -> L3-derivable (round-trip asserted); alt-identifier/alt-label/aggregates -> odp@1 facet"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].params[].select.choice[]",
+   "count": 355,
+   "level": "L1",
+   "destination": "choice type + choices[] + cardinality many (one-or-more)"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].params[].select.how-many",
+   "count": 97,
+   "level": "L1",
+   "destination": "choice type + choices[] + cardinality many (one-or-more)"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].parts[].id",
+   "count": 9798,
+   "level": "L1",
+   "destination": "statement/item -> flattened statements[] (id suffix); guidance -> narrative@1; assessment-* -> sp800-53a@1"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].parts[].links[].href",
+   "count": 3707,
+   "level": "L1",
+   "destination": "in-prose citation links; resolved with the same reference table (md #-links -> text; target rides control-level reference relation)"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].parts[].links[].rel",
+   "count": 3707,
+   "level": "L1",
+   "destination": "in-prose citation links; resolved with the same reference table (md #-links -> text; target rides control-level reference relation)"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].parts[].name",
+   "count": 12729,
+   "level": "L1",
+   "destination": "statement/item -> flattened statements[] (id suffix); guidance -> narrative@1; assessment-* -> sp800-53a@1"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].parts[].props[].class",
+   "count": 6644,
+   "level": "L1",
+   "destination": "item print labels -> L3-derivable (id-encoded); sp800-53a objective/method labels -> sp800-53a@1; method EXAMINE/INTERVIEW/TEST -> sp800-53a@1 methods"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].parts[].props[].name",
+   "count": 10697,
+   "level": "L1",
+   "destination": "item print labels -> L3-derivable (id-encoded); sp800-53a objective/method labels -> sp800-53a@1; method EXAMINE/INTERVIEW/TEST -> sp800-53a@1 methods"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].parts[].props[].ns",
+   "count": 2931,
+   "level": "L1",
+   "destination": "item print labels -> L3-derivable (id-encoded); sp800-53a objective/method labels -> sp800-53a@1; method EXAMINE/INTERVIEW/TEST -> sp800-53a@1 methods"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].parts[].props[].value",
+   "count": 10697,
+   "level": "L1",
+   "destination": "item print labels -> L3-derivable (id-encoded); sp800-53a objective/method labels -> sp800-53a@1; method EXAMINE/INTERVIEW/TEST -> sp800-53a@1 methods"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].parts[].prose",
+   "count": 8652,
+   "level": "L1",
+   "destination": "statement prose (insertions -> {param:} tokens); guidance/objectives/objects prose -> facets (language-tagged; md #-links -> text)"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].props[].class",
+   "count": 2391,
+   "level": "L1",
+   "destination": "label(plain)->label; zero-padded/sp800-53a->L3-derivable (equality asserted); sort-id->Set sequence; implementation-level->obligated-parties mint; contributes-to-assurance->rmf@1; status->tombstone drop + successor replaces[]"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].props[].name",
+   "count": 6557,
+   "level": "L1",
+   "destination": "label(plain)->label; zero-padded/sp800-53a->L3-derivable (equality asserted); sort-id->Set sequence; implementation-level->obligated-parties mint; contributes-to-assurance->rmf@1; status->tombstone drop + successor replaces[]"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].props[].ns",
+   "count": 1592,
+   "level": "L1",
+   "destination": "label(plain)->label; zero-padded/sp800-53a->L3-derivable (equality asserted); sort-id->Set sequence; implementation-level->obligated-parties mint; contributes-to-assurance->rmf@1; status->tombstone drop + successor replaces[]"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].props[].value",
+   "count": 6557,
+   "level": "L1",
+   "destination": "label(plain)->label; zero-padded/sp800-53a->L3-derivable (equality asserted); sort-id->Set sequence; implementation-level->obligated-parties mint; contributes-to-assurance->rmf@1; status->tombstone drop + successor replaces[]"
+  },
+  {
+   "path": "nist.catalog.groups[].controls[].title",
+   "count": 1196,
+   "level": "L1",
+   "destination": "Requirement id (URI mint, dot form = corpus mapping endpoints) + title | withdrawn: dropped, lineage inverted"
+  },
+  {
+   "path": "nist.catalog.groups[].id",
+   "count": 20,
+   "level": "L1",
+   "destination": "family Set id/title (D21 nesting under root)"
+  },
+  {
+   "path": "nist.catalog.groups[].parts[].id",
+   "count": 1,
+   "level": "L2",
+   "destination": "pm overview part -> narrative@1 guidance on the pm family Set (language-tagged)"
+  },
+  {
+   "path": "nist.catalog.groups[].parts[].name",
+   "count": 1,
+   "level": "L2",
+   "destination": "pm overview part -> narrative@1 guidance on the pm family Set (language-tagged)"
+  },
+  {
+   "path": "nist.catalog.groups[].parts[].prose",
+   "count": 1,
+   "level": "L2",
+   "destination": "pm overview part -> narrative@1 guidance on the pm family Set (language-tagged)"
+  },
+  {
+   "path": "nist.catalog.groups[].parts[].title",
+   "count": 1,
+   "level": "L2",
+   "destination": "pm overview part -> narrative@1 guidance on the pm family Set (language-tagged)"
+  },
+  {
+   "path": "nist.catalog.groups[].props[].name",
+   "count": 20,
+   "level": "L1",
+   "destination": "family Set label"
+  },
+  {
+   "path": "nist.catalog.groups[].props[].value",
+   "count": 20,
+   "level": "L1",
+   "destination": "family Set label"
+  },
+  {
+   "path": "nist.catalog.groups[].title",
+   "count": 20,
+   "level": "L1",
+   "destination": "family Set id/title (D21 nesting under root)"
+  },
+  {
+   "path": "nist.catalog.metadata.last-modified",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.links[].href",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.links[].rel",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.oscal-version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.parties[].addresses[].addr-lines[]",
+   "count": 8,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.parties[].addresses[].city",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.parties[].addresses[].postal-code",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.parties[].addresses[].state",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.parties[].email-addresses[]",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.parties[].name",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.parties[].short-name",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.parties[].type",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.parties[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.props[].name",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.props[].value",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.responsible-parties[].party-uuids[]",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.responsible-parties[].role-id",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.revisions[].last-modified",
+   "count": 7,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.revisions[].links[].href",
+   "count": 7,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.revisions[].links[].rel",
+   "count": 7,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.revisions[].oscal-version",
+   "count": 7,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.revisions[].remarks",
+   "count": 7,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.revisions[].title",
+   "count": 7,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.revisions[].version",
+   "count": 7,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.roles[].id",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.roles[].title",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.metadata.version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "nist.catalog.uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "privacy.profile.back-matter.resources[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.back-matter.resources[].rlinks[].href",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.back-matter.resources[].rlinks[].media-type",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.back-matter.resources[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.imports[].href",
+   "count": 1,
+   "level": "L3",
+   "destination": "OSCAL-profile resolution mechanics; the selection IS the Set (no semantic residue)"
+  },
+  {
+   "path": "privacy.profile.imports[].include-controls[].with-ids[]",
+   "count": 96,
+   "level": "L1",
+   "destination": "baseline Set members (minted URIs, catalog order)"
+  },
+  {
+   "path": "privacy.profile.merge.as-is",
+   "count": 1,
+   "level": "L3",
+   "destination": "OSCAL-profile resolution mechanics; the selection IS the Set (no semantic residue)"
+  },
+  {
+   "path": "privacy.profile.metadata.last-modified",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.metadata.oscal-version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.metadata.parties[].addresses[].addr-lines[]",
+   "count": 8,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.metadata.parties[].addresses[].city",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.metadata.parties[].addresses[].postal-code",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.metadata.parties[].addresses[].state",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.metadata.parties[].email-addresses[]",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.metadata.parties[].name",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.metadata.parties[].short-name",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.metadata.parties[].type",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.metadata.parties[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.metadata.responsible-parties[].party-uuids[]",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.metadata.responsible-parties[].role-id",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.metadata.roles[].id",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.metadata.roles[].title",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.metadata.title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.metadata.version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  },
+  {
+   "path": "privacy.profile.uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (baseline documents)"
+  }
+ ],
+ "source-version": "5.2.0",
+ "objects-emitted": {
+  "requirements": 1014,
+  "sets": 25
+ },
+ "withdrawn": {
+  "count": 182,
+  "successor-edges": 199,
+  "family-set-edges": 1,
+  "chains": [],
+  "dangling": []
+ },
+ "cross-control-params": [
+  {
+   "control": "ia-13.3",
+   "param": "ia-13_odp.01"
+  },
+  {
+   "control": "sc-42.2",
+   "param": "sc-42.01_odp"
+  },
+  {
+   "control": "si-10.1",
+   "param": "si-10_odp"
+  }
+ ],
+ "no-statement-site": {
+  "total": 399,
+  "facet-only": 326,
+  "nowhere": 73
+ },
+ "modality": {
+  "must": 1918
+ },
+ "backlog-10": {
+  "insertion-histogram": {
+   "0": 399,
+   "1": 1201
+  },
+  "multi-declared": []
+ },
+ "endpoint-crosscheck": {
+  "resolved": 373,
+  "distinct": 209,
+  "withdrawn-hits": {},
+  "unknown": {}
+ },
+ "baseline-missing": {},
+ "lang-wraps": {
+  "guidance": 1014,
+  "objective": 2787,
+  "assessment-objects": 14100,
+  "?": 1327,
+  "overview": 1
+ }
+}

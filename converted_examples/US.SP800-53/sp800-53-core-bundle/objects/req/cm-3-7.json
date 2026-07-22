@@ -1,0 +1,177 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-3.7",
+ "version": "5.2.0",
+ "label": "CM-3(7)",
+ "lifecycle": "active",
+ "title": "Review System Changes",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review changes to the system {param:cm-03.07_odp.01} or when {param:cm-03.07_odp.02} to determine whether unauthorized changes have occurred."
+   },
+   "parameters": [
+    {
+     "name": "cm-03.07_odp.01",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "cm-03.07_odp.02",
+     "type": "string",
+     "label": "circumstances"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Indications that warrant a review of changes to the system and the specific circumstances justifying such reviews may be obtained from activities carried out by organizations during the configuration change process or continuous monitoring process."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-3.7_obj",
+     "label": "CM-03(07)",
+     "prose": {
+      "en": "changes to the system are reviewed {param:cm-03.07_odp.01} or when {param:cm-03.07_odp.02} to determine whether unauthorized changes have occurred."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-03(07)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing system configuration change control"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system architecture and configuration documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-03(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with configuration change control responsibilities"
+      },
+      {
+       "en": "organizational personnel with security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "members of change control board or similar"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-03(07)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for configuration change control"
+      },
+      {
+       "en": "mechanisms implementing audit records for changes"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-03.07_odp.01": {
+     "guidelines": [
+      {
+       "en": "the frequency at which changes are to be reviewed is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-3.7_prm_1"
+     ]
+    },
+    "cm-03.07_odp.02": {
+     "guidelines": [
+      {
+       "en": "the circumstances under which changes are to be reviewed are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-3.7_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-3"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-5.2",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/CM-5.2",
+    "mode": "merged-into",
+    "label": "CM-05(02)",
+    "title": "Review System Changes"
+   }
+  ]
+ }
+}

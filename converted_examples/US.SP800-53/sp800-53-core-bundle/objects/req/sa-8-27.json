@@ -1,0 +1,138 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-8.27",
+ "version": "5.2.0",
+ "label": "SA-8(27)",
+ "lifecycle": "active",
+ "title": "Human Factored Security",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement the security design principle of human factored security in {param:sa-08.27_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sa-08.27_odp",
+     "type": "string",
+     "label": "systems or system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The principle of human factored security states that the user interface for security functions and supporting services is intuitive, user-friendly, and provides feedback for user actions that affect such policy and its enforcement. The mechanisms that enforce security policy are not intrusive to the user and are designed not to degrade user efficiency. Security policy enforcement mechanisms also provide the user with meaningful, clear, and relevant feedback and warnings when insecure choices are being made. Particular attention is given to interfaces through which personnel responsible for system administration and operation configure and set up the security policies. Ideally, these personnel are able to understand the impact of their choices. Personnel with system administrative and operational responsibilities are able to configure systems before start-up and administer them during runtime with confidence that their intent is correctly mapped to the system’s mechanisms. Security services, functions, and mechanisms do not impede or unnecessarily complicate the intended use of the system. There is a trade-off between system usability and the strictness necessary for security policy enforcement. If security mechanisms are frustrating or difficult to use, then users may disable them, avoid them, or use them in ways inconsistent with the security requirements and protection needs that the mechanisms were designed to satisfy."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-8.27_obj",
+     "label": "SA-08(27)",
+     "prose": {
+      "en": "{param:sa-08.27_odp} implement the security design principle of human factored security."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-08(27)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing the security design principle of human factored security used in the specification, design, development, implementation, and modification of the system"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "security and privacy requirements and specifications for the system"
+      },
+      {
+       "en": "system security and privacy architecture"
+      },
+      {
+       "en": "usability analysis"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-08(27)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with the responsibility for determining system security and privacy requirements"
+      },
+      {
+       "en": "organizational personnel with human factored security responsibilities"
+      },
+      {
+       "en": "organizational personnel with system specification, design, development, implementation, and modification responsibilities"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-08(27)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for applying the security design principle of human factored security in system specification, design, development, implementation, and modification"
+      },
+      {
+       "en": "mechanisms supporting the application of the security design principle of human factored security in system specification, design, development, implementation, and modification"
+      },
+      {
+       "en": "mechanisms that enforce security policies"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-08.27_odp": {
+     "guidelines": [
+      {
+       "en": "systems or system components that implement the security design principle of human factored security are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-8.27_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  }
+ ]
+}

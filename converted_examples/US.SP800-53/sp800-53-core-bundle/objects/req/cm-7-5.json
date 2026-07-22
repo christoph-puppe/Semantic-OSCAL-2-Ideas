@@ -1,0 +1,256 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-7.5",
+ "version": "5.2.0",
+ "label": "CM-7(5)",
+ "lifecycle": "active",
+ "title": "Authorized Software — Allow-by-exception",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Identify {param:cm-07.05_odp.01};"
+   },
+   "parameters": [
+    {
+     "name": "cm-07.05_odp.01",
+     "type": "string",
+     "label": "software programs"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Employ a deny-all, permit-by-exception policy to allow the execution of authorized software programs on the system; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Review and update the list of authorized software programs {param:cm-07.05_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "cm-07.05_odp.02",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Authorized software programs can be limited to specific versions or from a specific source. To facilitate a comprehensive authorized software process and increase the strength of protection for attacks that bypass application level authorized software, software programs may be decomposed into and monitored at different levels of detail. These levels include applications, application programming interfaces, application modules, scripts, system processes, system services, kernel functions, registries, drivers, and dynamic link libraries. The concept of permitting the execution of authorized software may also be applied to user actions, system ports and protocols, IP addresses/ranges, websites, and MAC addresses. Organizations consider verifying the integrity of authorized software programs using digital signatures, cryptographic checksums, or hash functions. Verification of authorized software can occur either prior to execution or at system startup. The identification of authorized URLs for websites is addressed in CA-3(5) and SC-7."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-7.5_obj",
+     "label": "CM-07(05)",
+     "children": [
+      {
+       "id": "cm-7.5_obj.a",
+       "label": "CM-07(05)(a)",
+       "prose": {
+        "en": "{param:cm-07.05_odp.01} are identified;"
+       }
+      },
+      {
+       "id": "cm-7.5_obj.b",
+       "label": "CM-07(05)(b)",
+       "prose": {
+        "en": "a deny-all, permit-by-exception policy to allow the execution of authorized software programs on the system is employed;"
+       }
+      },
+      {
+       "id": "cm-7.5_obj.c",
+       "label": "CM-07(05)(c)",
+       "prose": {
+        "en": "the list of authorized software programs is reviewed and updated {param:cm-07.05_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-07(05)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing least functionality in the system"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of software programs authorized to execute on the system"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "common secure configuration checklists"
+      },
+      {
+       "en": "review and update records associated with list of authorized software programs"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-07(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for identifying software authorized to execute on the system"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-07(05)-Test",
+     "objects": [
+      {
+       "en": "Organizational process for identifying, reviewing, and updating programs authorized to execute on the system"
+      },
+      {
+       "en": "organizational process for implementing authorized software policy"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing authorized software policy"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-07.05_odp.01": {
+     "guidelines": [
+      {
+       "en": "software programs authorized to execute on the system are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-7.5_prm_1"
+     ],
+     "alt-label": "software programs authorized to execute on the system"
+    },
+    "cm-07.05_odp.02": {
+     "guidelines": [
+      {
+       "en": "frequency at which to review and update the list of authorized software programs is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-7.5_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-34"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-2.5",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/CM-2.5",
+    "mode": "merged-into",
+    "label": "CM-02(05)",
+    "title": "Authorized Software"
+   }
+  ]
+ }
+}

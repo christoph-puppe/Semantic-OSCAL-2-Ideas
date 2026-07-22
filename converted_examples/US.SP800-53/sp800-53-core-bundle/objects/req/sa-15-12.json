@@ -1,0 +1,134 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-15.12",
+ "version": "5.2.0",
+ "label": "SA-15(12)",
+ "lifecycle": "active",
+ "title": "Minimize Personally Identifiable Information",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system or system component to minimize the use of personally identifiable information in development and test environments."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations can minimize the risk to an individual’s privacy by using techniques such as de-identification or synthetic data. Limiting the use of personally identifiable information in development and test environments helps reduce the level of privacy risk created by a system."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-15.12_obj",
+     "label": "SA-15(12)",
+     "prose": {
+      "en": "the developer of the system or system component is required to minimize the use of personally identifiable information in development and test environments."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-15(12)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "procedures addressing the development process"
+      },
+      {
+       "en": "procedures addressing the minimization of personally identifiable information in testing, training, and research"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "procedures addressing the authority to test with personally identifiable information"
+      },
+      {
+       "en": "standards and tools"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system or services"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-15(12)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-15(12)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for the minimization of personally identifiable information in development and test environments"
+      },
+      {
+       "en": "mechanisms to facilitate the minimization of personally identifiable information in development and test environments"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-15"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-25"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  }
+ ]
+}

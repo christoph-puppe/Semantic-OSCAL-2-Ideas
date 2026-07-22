@@ -1,0 +1,200 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-2.7",
+ "version": "5.2.0",
+ "label": "CM-2(7)",
+ "lifecycle": "active",
+ "title": "Configure Systems and Components for High-risk Areas",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Issue {param:cm-02.07_odp.01} with {param:cm-02.07_odp.02} to individuals traveling to locations that the organization deems to be of significant risk; and"
+   },
+   "parameters": [
+    {
+     "name": "cm-02.07_odp.01",
+     "type": "string",
+     "label": "systems or system components"
+    },
+    {
+     "name": "cm-02.07_odp.02",
+     "type": "string",
+     "label": "configurations"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Apply the following controls to the systems or components when the individuals return from travel: {param:cm-02.07_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "cm-02.07_odp.03",
+     "type": "string",
+     "label": "controls"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "When it is known that systems or system components will be in high-risk areas external to the organization, additional controls may be implemented to counter the increased threat in such areas. For example, organizations can take actions for notebook computers used by individuals departing on and returning from travel. Actions include determining the locations that are of concern, defining the required configurations for the components, ensuring that components are configured as intended before travel is initiated, and applying controls to the components after travel is completed. Specially configured notebook computers include computers with sanitized hard drives, limited applications, and more stringent configuration settings. Controls applied to mobile devices upon return from travel include examining the mobile device for signs of physical tampering and purging and reimaging disk drives. Protecting information that resides on mobile devices is addressed in the MP (Media Protection) family."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-2.7_obj",
+     "label": "CM-02(07)",
+     "children": [
+      {
+       "id": "cm-2.7_obj.a",
+       "label": "CM-02(07)(a)",
+       "prose": {
+        "en": "{param:cm-02.07_odp.01} with {param:cm-02.07_odp.02} are issued to individuals traveling to locations that the organization deems to be of significant risk;"
+       }
+      },
+      {
+       "id": "cm-2.7_obj.b",
+       "label": "CM-02(07)(b)",
+       "prose": {
+        "en": "{param:cm-02.07_odp.03} are applied to the systems or system components when the individuals return from travel."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-02(07)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "procedures addressing the baseline configuration of the system"
+      },
+      {
+       "en": "procedures addressing system component installations and upgrades"
+      },
+      {
+       "en": "system architecture and configuration documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "records of system baseline configuration reviews and updates"
+      },
+      {
+       "en": "system component installations/upgrades and associated records"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-02(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with configuration management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-02(07)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing baseline configurations"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-02.07_odp.01": {
+     "guidelines": [
+      {
+       "en": "the systems or system components to be issued when individuals travel to high-risk areas are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-2.7_prm_1"
+     ]
+    },
+    "cm-02.07_odp.02": {
+     "guidelines": [
+      {
+       "en": "configurations for systems or system components to be issued when individuals travel to high-risk areas are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-2.7_prm_2"
+     ]
+    },
+    "cm-02.07_odp.03": {
+     "guidelines": [
+      {
+       "en": "the controls to be applied when the individuals return from travel are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-2.7_prm_3"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-5"
+  }
+ ]
+}

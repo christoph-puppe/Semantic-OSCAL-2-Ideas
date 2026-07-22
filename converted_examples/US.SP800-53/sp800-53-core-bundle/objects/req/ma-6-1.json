@@ -1,0 +1,140 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-6.1",
+ "version": "5.2.0",
+ "label": "MA-6(1)",
+ "lifecycle": "active",
+ "title": "Preventive Maintenance",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Perform preventive maintenance on {param:ma-06.01_odp.01} at {param:ma-06.01_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ma-06.01_odp.01",
+     "type": "string",
+     "label": "system components"
+    },
+    {
+     "name": "ma-06.01_odp.02",
+     "type": "string",
+     "label": "time intervals"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Preventive maintenance includes proactive care and the servicing of system components to maintain organizational equipment and facilities in satisfactory operating condition. Such maintenance provides for the systematic inspection, tests, measurements, adjustments, parts replacement, detection, and correction of incipient failures either before they occur or before they develop into major defects. The primary goal of preventive maintenance is to avoid or mitigate the consequences of equipment failures. Preventive maintenance is designed to preserve and restore equipment reliability by replacing worn components before they fail. Methods of determining what preventive (or other) failure management policies to apply include original equipment manufacturer recommendations; statistical failure records; expert opinion; maintenance that has already been conducted on similar equipment; requirements of codes, laws, or regulations within a jurisdiction; or measured values and performance indications."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-6.1_obj",
+     "label": "MA-06(01)",
+     "prose": {
+      "en": "preventive maintenance is performed on {param:ma-06.01_odp.01} at {param:ma-06.01_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-06(01)-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing system maintenance"
+      },
+      {
+       "en": "service provider contracts"
+      },
+      {
+       "en": "service-level agreements"
+      },
+      {
+       "en": "maintenance records"
+      },
+      {
+       "en": "list of system components requiring preventive maintenance"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-06(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MA-06(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for preventive maintenance"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing preventive maintenance"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ma-06.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "system components on which preventive maintenance is to be performed are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ma-6.1_prm_1"
+     ]
+    },
+    "ma-06.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "time intervals within which preventive maintenance is to be performed on system components are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ma-6.1_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-6"
+  }
+ ]
+}

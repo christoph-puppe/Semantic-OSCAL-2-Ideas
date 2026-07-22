@@ -1,0 +1,192 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-20",
+ "version": "5.2.0",
+ "label": "SC-20",
+ "lifecycle": "active",
+ "title": "Secure Name/Address Resolution Service (Authoritative Source)",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide additional data origin authentication and integrity verification artifacts along with the authoritative name resolution data the system returns in response to external name/address resolution queries; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide the means to indicate the security status of child zones and (if the child supports secure resolution services) to enable verification of a chain of trust among parent and child domains, when operating as part of a distributed, hierarchical namespace."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Providing authoritative source information enables external clients, including remote Internet clients, to obtain origin authentication and integrity verification assurances for the host/service name to network address resolution information obtained through the service. Systems that provide name and address resolution services include domain name system (DNS) servers. Additional artifacts include DNS Security Extensions (DNSSEC) digital signatures and cryptographic keys. Authoritative data includes DNS resource records. The means for indicating the security status of child zones include the use of delegation signer resource records in the DNS. Systems that use technologies other than the DNS to map between host and service names and network addresses provide other means to assure the authenticity and integrity of response data."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-20_obj",
+     "label": "SC-20",
+     "children": [
+      {
+       "id": "sc-20_obj.a",
+       "label": "SC-20a.",
+       "children": [
+        {
+         "id": "sc-20_obj.a-1",
+         "label": "SC-20a.[01]",
+         "prose": {
+          "en": "additional data origin authentication is provided along with the authoritative name resolution data that the system returns in response to external name/address resolution queries;"
+         }
+        },
+        {
+         "id": "sc-20_obj.a-2",
+         "label": "SC-20a.[02]",
+         "prose": {
+          "en": "integrity verification artifacts are provided along with the authoritative name resolution data that the system returns in response to external name/address resolution queries;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sc-20_obj.b",
+       "label": "SC-20b.",
+       "children": [
+        {
+         "id": "sc-20_obj.b-1",
+         "label": "SC-20b.[01]",
+         "prose": {
+          "en": "the means to indicate the security status of child zones (and if the child supports secure resolution services) is provided when operating as part of a distributed, hierarchical namespace;"
+         }
+        },
+        {
+         "id": "sc-20_obj.b-2",
+         "label": "SC-20b.[02]",
+         "prose": {
+          "en": "the means to enable verification of a chain of trust among parent and child domains when operating as part of a distributed, hierarchical namespace is provided."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-20-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing secure name/address resolution services (authoritative source)"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-20-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibilities for managing DNS"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-20-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing secure name/address resolution services"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.140-3"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.186-4"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-81-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-21"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-22"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-20.1",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SC-20.1",
+    "mode": "merged-into",
+    "label": "SC-20(01)",
+    "title": "Child Subspaces"
+   }
+  ]
+ }
+}

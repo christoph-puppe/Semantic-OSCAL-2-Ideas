@@ -1,0 +1,128 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-13.3",
+ "version": "5.2.0",
+ "label": "SI-13(3)",
+ "lifecycle": "active",
+ "title": "Manual Transfer Between Components",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Manually initiate transfers between active and standby system components when the use of the active component reaches {param:si-13.03_odp} of the mean time to failure."
+   },
+   "parameters": [
+    {
+     "name": "si-13.03_odp",
+     "type": "string",
+     "label": "percentage"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "For example, if the MTTF for a system component is 100 days and the MTTF percentage defined by the organization is 90 percent, the manual transfer would occur after 90 days."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-13.3_obj",
+     "label": "SI-13(03)",
+     "prose": {
+      "en": "transfers are initiated manually between active and standby system components when the use of the active component reaches {param:si-13.03_odp} of the mean time to failure."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-13(03)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing predictable failure prevention"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-13(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for MTTF activities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with contingency planning responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-13(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing MTTF and conducting the manual transfer between active and standby components"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-13.03_odp": {
+     "guidelines": [
+      {
+       "en": "the percentage of the mean time to failure for transfers to be manually initiated is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-13.3_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-13"
+  }
+ ]
+}

@@ -1,0 +1,116 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-3.6",
+ "version": "5.2.0",
+ "label": "MA-3(6)",
+ "lifecycle": "active",
+ "title": "Software Updates and Patches",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Inspect maintenance tools to ensure the latest software updates and patches are installed."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Maintenance tools using outdated and/or unpatched software can provide a threat vector for adversaries and result in a significant vulnerability for organizations."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-3.6_obj",
+     "label": "MA-03(06)",
+     "prose": {
+      "en": "maintenance tools are inspected to ensure that the latest software updates and patches are installed."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-03(06)-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing system maintenance tools"
+      },
+      {
+       "en": "system maintenance tools and associated documentation"
+      },
+      {
+       "en": "list of personnel authorized to use maintenance tools"
+      },
+      {
+       "en": "maintenance tool usage records"
+      },
+      {
+       "en": "maintenance records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-03(06)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MA-03(06)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for inspecting maintenance tools"
+      },
+      {
+       "en": "organizational processes for maintenance tools updates"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the inspection of maintenance tools"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing maintenance tool updates."
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-6"
+  }
+ ]
+}

@@ -1,0 +1,140 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-15.10",
+ "version": "5.2.0",
+ "label": "SA-15(10)",
+ "lifecycle": "active",
+ "title": "Incident Response Plan",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to provide, implement, and test an incident response plan."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The incident response plan provided by developers may provide information not readily available to organizations and be incorporated into organizational incident response plans. Developer information may also be extremely helpful, such as when organizations respond to vulnerabilities in commercial off-the-shelf products."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-15.10_obj",
+     "label": "SA-15(10)",
+     "children": [
+      {
+       "id": "sa-15.10_obj-1",
+       "label": "SA-15(10)[01]",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to provide an incident response plan;"
+       }
+      },
+      {
+       "id": "sa-15.10_obj-2",
+       "label": "SA-15(10)[02]",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to implement an incident response plan;"
+       }
+      },
+      {
+       "id": "sa-15.10_obj-3",
+       "label": "SA-15(10)[03]",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to test an incident response plan."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-15(10)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing incident response, standards, and tools"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system components or services"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "developer incident response plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-15(10)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-15"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-8"
+  }
+ ]
+}

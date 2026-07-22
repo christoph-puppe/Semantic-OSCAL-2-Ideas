@@ -1,0 +1,123 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-9.7",
+ "version": "5.2.0",
+ "label": "AU-9(7)",
+ "lifecycle": "active",
+ "title": "Store on Component with Different Operating System",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Store audit information on a component running a different operating system than the system or component being audited."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Storing auditing information on a system component running a different operating system reduces the risk of a vulnerability specific to the system, resulting in a compromise of the audit records."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-9.7_obj",
+     "label": "AU-09(07)",
+     "prose": {
+      "en": "audit information is stored on a component running a different operating system than the system or component being audited."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-09(07)-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "access control policy and procedures"
+      },
+      {
+       "en": "procedures addressing protection of audit information"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-09(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with audit and accountability responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AU-09(07)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing operating system verification capability"
+      },
+      {
+       "en": "mechanisms verifying audit information storage location"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-29"
+  }
+ ]
+}

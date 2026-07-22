@@ -1,0 +1,118 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CA-6.2",
+ "version": "5.2.0",
+ "label": "CA-6(2)",
+ "lifecycle": "active",
+ "title": "Joint Authorization — Inter-organization",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ a joint authorization process for the system that includes multiple authorizing officials with at least one authorizing official from an organization external to the organization conducting the authorization."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Assigning multiple authorizing officials, at least one of whom comes from an external organization, to serve as co-authorizing officials for the system increases the level of independence in the risk-based decision-making process. It implements the concepts of separation of duties and dual authorization as applied to the system authorization process. Employing authorizing officials from external organizations to supplement the authorizing official from the organization that owns or hosts the system may be necessary when the external organizations have a vested interest or equities in the outcome of the authorization decision. The inter-organization joint authorization process is relevant and appropriate for connected systems, shared systems or services, and systems with multiple information owners. The authorizing officials from the external organizations are key stakeholders of the system undergoing authorization."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ca-6.2_obj",
+     "label": "CA-06(02)",
+     "children": [
+      {
+       "id": "ca-6.2_obj-1",
+       "label": "CA-06(02)[01]",
+       "prose": {
+        "en": "a joint authorization process is employed for the system;"
+       }
+      },
+      {
+       "id": "ca-6.2_obj-2",
+       "label": "CA-06(02)[02]",
+       "prose": {
+        "en": "the joint authorization process employed for the system includes multiple authorizing officials with at least one authorizing official from an organization external to the organization conducting the authorization."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CA-06(02)-Examine",
+     "objects": [
+      {
+       "en": "Assessment, authorization, and monitoring policy"
+      },
+      {
+       "en": "procedures addressing authorization"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "assessment report"
+      },
+      {
+       "en": "plan of action and milestones"
+      },
+      {
+       "en": "authorization statement"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CA-06(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with authorization responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CA-06(02)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms that facilitate authorizations and updates"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-6"
+  }
+ ]
+}

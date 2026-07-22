@@ -1,0 +1,120 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-7.3",
+ "version": "5.2.0",
+ "label": "AC-7(3)",
+ "lifecycle": "active",
+ "title": "Biometric Attempt Limiting",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Limit the number of unsuccessful biometric logon attempts to {param:ac-07.03_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ac-07.03_odp",
+     "type": "string",
+     "label": "number"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Biometrics are probabilistic in nature. The ability to successfully authenticate can be impacted by many factors, including matching performance and presentation attack detection mechanisms. Organizations select the appropriate number of attempts for users based on organizationally-defined factors."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-7.3_obj",
+     "label": "AC-07(03)",
+     "prose": {
+      "en": "unsuccessful biometric logon attempts are limited to {param:ac-07.03_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-07(03)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing unsuccessful logon attempts on biometric devices"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-07(03)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-07(03)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing access control policy for unsuccessful logon attempts"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-07.03_odp": {
+     "guidelines": [
+      {
+       "en": "the number of unsuccessful biometric logon attempts is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-7.3_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-3"
+  }
+ ]
+}

@@ -1,0 +1,222 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-2.2",
+ "version": "5.2.0",
+ "label": "MA-2(2)",
+ "lifecycle": "active",
+ "title": "Automated Maintenance Activities",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Schedule, conduct, and document maintenance, repair, and replacement actions for the system using {param:ma-2.2_prm_1} ; and"
+   },
+   "parameters": [
+    {
+     "name": "ma-2.2_prm_1",
+     "type": "string",
+     "label": "organization-defined automated mechanisms"
+    },
+    {
+     "name": "ma-02.02_odp.01",
+     "type": "string",
+     "label": "automated mechanisms"
+    },
+    {
+     "name": "ma-02.02_odp.02",
+     "type": "string",
+     "label": "automated mechanisms"
+    },
+    {
+     "name": "ma-02.02_odp.03",
+     "type": "string",
+     "label": "automated mechanisms"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Produce up-to date, accurate, and complete records of all maintenance, repair, and replacement actions requested, scheduled, in process, and completed."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The use of automated mechanisms to manage and control system maintenance programs and activities helps to ensure the generation of timely, accurate, complete, and consistent maintenance records."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-2.2_obj",
+     "label": "MA-02(02)",
+     "children": [
+      {
+       "id": "ma-2.2_obj.a",
+       "label": "MA-02(02)(a)",
+       "children": [
+        {
+         "id": "ma-2.2_obj.a-1",
+         "label": "MA-02(02)(a)[01]",
+         "prose": {
+          "en": "{param:ma-02.02_odp.01} are used to schedule maintenance, repair, and replacement actions for the system;"
+         }
+        },
+        {
+         "id": "ma-2.2_obj.a-2",
+         "label": "MA-02(02)(a)[02]",
+         "prose": {
+          "en": "{param:ma-02.02_odp.02} are used to conduct maintenance, repair, and replacement actions for the system;"
+         }
+        },
+        {
+         "id": "ma-2.2_obj.a-3",
+         "label": "MA-02(02)(a)[03]",
+         "prose": {
+          "en": "{param:ma-02.02_odp.03} are used to document maintenance, repair, and replacement actions for the system;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ma-2.2_obj.b",
+       "label": "MA-02(02)(b)",
+       "children": [
+        {
+         "id": "ma-2.2_obj.b-1",
+         "label": "MA-02(02)(b)[01]",
+         "prose": {
+          "en": "up-to date, accurate, and complete records of all maintenance actions requested, scheduled, in process, and completed are produced."
+         }
+        },
+        {
+         "id": "ma-2.2_obj.b-2",
+         "label": "MA-02(02)(b)[02]",
+         "prose": {
+          "en": "up-to date, accurate, and complete records of all repair actions requested, scheduled, in process, and completed are produced."
+         }
+        },
+        {
+         "id": "ma-2.2_obj.b-3",
+         "label": "MA-02(02)(b)[03]",
+         "prose": {
+          "en": "up-to date, accurate, and complete records of all replacement actions requested, scheduled, in process, and completed are produced."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-02(02)-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing controlled system maintenance"
+      },
+      {
+       "en": "automated mechanisms supporting system maintenance activities"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "maintenance records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-02(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MA-02(02)-Test",
+     "objects": [
+      {
+       "en": "Automated mechanisms supporting and/or implementing controlled maintenance"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing the production of records of maintenance and repair actions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ma-2.2_prm_1": {
+     "aggregates": [
+      "ma-02.02_odp.01",
+      "ma-02.02_odp.02",
+      "ma-02.02_odp.03"
+     ]
+    },
+    "ma-02.02_odp.01": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to schedule maintenance, repair, and replacement actions for the system are defined;"
+      }
+     ]
+    },
+    "ma-02.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to conduct maintenance, repair, and replacement actions for the system are defined;"
+      }
+     ]
+    },
+    "ma-02.02_odp.03": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to document maintenance, repair, and replacement actions for the system are defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-3"
+  }
+ ]
+}

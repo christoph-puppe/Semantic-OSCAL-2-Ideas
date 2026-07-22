@@ -1,0 +1,173 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PL-7",
+ "version": "5.2.0",
+ "label": "PL-7",
+ "lifecycle": "active",
+ "title": "Concept of Operations",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop a Concept of Operations (CONOPS) for the system describing how the organization intends to operate the system from the perspective of information security and privacy; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review and update the CONOPS {param:pl-07_odp}."
+   },
+   "parameters": [
+    {
+     "name": "pl-07_odp",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The CONOPS may be included in the security or privacy plans for the system or in other system development life cycle documents. The CONOPS is a living document that requires updating throughout the system development life cycle. For example, during system design reviews, the concept of operations is checked to ensure that it remains consistent with the design for controls, the system architecture, and the operational procedures. Changes to the CONOPS are reflected in ongoing updates to the security and privacy plans, security and privacy architectures, and other organizational documents, such as procurement specifications, system development life cycle documents, and systems engineering documents."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pl-7_obj",
+     "label": "PL-07",
+     "children": [
+      {
+       "id": "pl-7_obj.a",
+       "label": "PL-07a.",
+       "prose": {
+        "en": "a CONOPS for the system describing how the organization intends to operate the system from the perspective of information security and privacy is developed;"
+       }
+      },
+      {
+       "id": "pl-7_obj.b",
+       "label": "PL-07b.",
+       "prose": {
+        "en": "the CONOPS is reviewed and updated {param:pl-07_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PL-07-Examine",
+     "objects": [
+      {
+       "en": "Security and privacy planning policy"
+      },
+      {
+       "en": "procedures addressing security and privacy CONOPS development"
+      },
+      {
+       "en": "procedures addressing security and privacy CONOPS reviews and updates"
+      },
+      {
+       "en": "security and privacy CONOPS for the system"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "records of security and privacy CONOPS reviews and updates"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PL-07-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with security and privacy planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PL-07-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for developing, reviewing, and updating the security CONOPS"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the development, review, and update of the security CONOPS"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pl-07_odp": {
+     "guidelines": [
+      {
+       "en": "frequency for review and update of the Concept of Operations (CONOPS) is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pl-7_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-2.1",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/PL-2.1",
+    "mode": "merged-into",
+    "label": "PL-02(01)",
+    "title": "Concept of Operations"
+   }
+  ]
+ }
+}

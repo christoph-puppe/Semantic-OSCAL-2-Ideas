@@ -1,0 +1,168 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-17.2",
+ "version": "5.2.0",
+ "label": "SA-17(2)",
+ "lifecycle": "active",
+ "title": "Security-relevant Components",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Define security-relevant hardware, software, and firmware; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide a rationale that the definition for security-relevant hardware, software, and firmware is complete."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The security-relevant hardware, software, and firmware represent the portion of the system, component, or service that is trusted to perform correctly to maintain required security properties."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-17.2_obj",
+     "label": "SA-17(02)",
+     "children": [
+      {
+       "id": "sa-17.2_obj.a",
+       "label": "SA-17(02)(a)",
+       "children": [
+        {
+         "id": "sa-17.2_obj.a-1",
+         "label": "SA-17(02)(a)[01]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to define security-relevant hardware;"
+         }
+        },
+        {
+         "id": "sa-17.2_obj.a-2",
+         "label": "SA-17(02)(a)[02]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to define security-relevant software;"
+         }
+        },
+        {
+         "id": "sa-17.2_obj.a-3",
+         "label": "SA-17(02)(a)[03]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to define security-relevant firmware;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-17.2_obj.b",
+       "label": "SA-17(02)(b)",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to provide a rationale that the definition for security-relevant hardware, software, and firmware is complete."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-17(02)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "enterprise architecture policy"
+      },
+      {
+       "en": "procedures addressing developer security architecture and design specifications for the system"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "list of security-relevant hardware, software, and firmware components"
+      },
+      {
+       "en": "documented rationale of completeness regarding definitions provided for security-relevant hardware, software, and firmware"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-17(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with information security architecture and design responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-25"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-5"
+  }
+ ]
+}

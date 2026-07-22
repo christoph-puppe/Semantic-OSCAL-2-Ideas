@@ -1,0 +1,123 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-8.5",
+ "version": "5.2.0",
+ "label": "CP-8(5)",
+ "lifecycle": "active",
+ "title": "Alternate Telecommunication Service Testing",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Test alternate telecommunication services {param:cp-08.05_odp}."
+   },
+   "parameters": [
+    {
+     "name": "cp-08.05_odp",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Alternate telecommunications services testing is arranged through contractual agreements with service providers. The testing may occur in parallel with normal operations to ensure that there is no degradation in organizational missions or functions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-8.5_obj",
+     "label": "CP-08(05)",
+     "prose": {
+      "en": "alternate telecommunications services are tested {param:cp-08.05_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-08(05)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing alternate telecommunications services"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "evidence of testing alternate telecommunications services"
+      },
+      {
+       "en": "alternate telecommunications service agreements"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-08(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency planning, plan implementation, and testing responsibilities"
+      },
+      {
+       "en": "alternate telecommunications service providers"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-08(05)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting testing alternate telecommunications services"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cp-08.05_odp": {
+     "guidelines": [
+      {
+       "en": "frequency at which alternate telecommunications services are tested is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cp-8.5_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-3"
+  }
+ ]
+}

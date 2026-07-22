@@ -1,0 +1,317 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-7.4",
+ "version": "5.2.0",
+ "label": "SC-7(4)",
+ "lifecycle": "active",
+ "title": "External Telecommunications Services",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Implement a managed interface for each external telecommunication service;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish a traffic flow policy for each managed interface;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Protect the confidentiality and integrity of the information being transmitted across each interface;"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Document each exception to the traffic flow policy with a supporting mission or business need and duration of that need;"
+   }
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review exceptions to the traffic flow policy {param:sc-07.04_odp} and remove exceptions that are no longer supported by an explicit mission or business need;"
+   },
+   "parameters": [
+    {
+     "name": "sc-07.04_odp",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.f",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Prevent unauthorized exchange of control plane traffic with external networks;"
+   }
+  },
+  {
+   "id": "smt.g",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Publish information to enable remote networks to detect unauthorized control plane traffic from internal networks; and"
+   }
+  },
+  {
+   "id": "smt.h",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Filter unauthorized control plane traffic from external networks."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "External telecommunications services can provide data and/or voice communications services. Examples of control plane traffic include Border Gateway Protocol (BGP) routing, Domain Name System (DNS), and management protocols. See SP 800-189 for additional information on the use of the resource public key infrastructure (RPKI) to protect BGP routes and detect unauthorized BGP announcements."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-7.4_obj",
+     "label": "SC-07(04)",
+     "children": [
+      {
+       "id": "sc-7.4_obj.a",
+       "label": "SC-07(04)(a)",
+       "prose": {
+        "en": "a managed interface is implemented for each external telecommunication service;"
+       }
+      },
+      {
+       "id": "sc-7.4_obj.b",
+       "label": "SC-07(04)(b)",
+       "prose": {
+        "en": "a traffic flow policy is established for each managed interface;"
+       }
+      },
+      {
+       "id": "sc-7.4_obj.c",
+       "label": "SC-07(04)(c)",
+       "children": [
+        {
+         "id": "sc-7.4_obj.c-1",
+         "label": "SC-07(04)(c)[01]",
+         "prose": {
+          "en": "the confidentiality of the information being transmitted across each interface is protected;"
+         }
+        },
+        {
+         "id": "sc-7.4_obj.c-2",
+         "label": "SC-07(04)(c)[02]",
+         "prose": {
+          "en": "the integrity of the information being transmitted across each interface is protected;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sc-7.4_obj.d",
+       "label": "SC-07(04)(d)",
+       "prose": {
+        "en": "each exception to the traffic flow policy is documented with a supporting mission or business need and duration of that need;"
+       }
+      },
+      {
+       "id": "sc-7.4_obj.e",
+       "label": "SC-07(04)(e)",
+       "children": [
+        {
+         "id": "sc-7.4_obj.e-1",
+         "label": "SC-07(04)(e)[01]",
+         "prose": {
+          "en": "exceptions to the traffic flow policy are reviewed {param:sc-07.04_odp};"
+         }
+        },
+        {
+         "id": "sc-7.4_obj.e-2",
+         "label": "SC-07(04)(e)[02]",
+         "prose": {
+          "en": "exceptions to the traffic flow policy that are no longer supported by an explicit mission or business need are removed;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sc-7.4_obj.f",
+       "label": "SC-07(04)(f)",
+       "prose": {
+        "en": "unauthorized exchanges of control plan traffic with external networks are prevented;"
+       }
+      },
+      {
+       "id": "sc-7.4_obj.g",
+       "label": "SC-07(04)(g)",
+       "prose": {
+        "en": "information is published to enable remote networks to detect unauthorized control plane traffic from internal networks;"
+       }
+      },
+      {
+       "id": "sc-7.4_obj.h",
+       "label": "SC-07(04)(h)",
+       "prose": {
+        "en": "unauthorized control plane traffic is filtered from external networks."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-07(04)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "traffic flow policy"
+      },
+      {
+       "en": "information flow control policy"
+      },
+      {
+       "en": "procedures addressing boundary protection"
+      },
+      {
+       "en": "system security architecture"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "boundary protection hardware and software"
+      },
+      {
+       "en": "system architecture and configuration documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "records of traffic flow policy exceptions"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-07(04)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with boundary protection responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-07(04)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for documenting and reviewing exceptions to the traffic flow policy"
+      },
+      {
+       "en": "organizational processes for removing exceptions to the traffic flow policy"
+      },
+      {
+       "en": "mechanisms implementing boundary protection capabilities"
+      },
+      {
+       "en": "managed interfaces implementing traffic flow policy"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-07.04_odp": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to review exceptions to traffic flow policy is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-7.4_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-20"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-21"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-22"
+  }
+ ]
+}

@@ -1,0 +1,122 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-5.13",
+ "version": "5.2.0",
+ "label": "IA-5(13)",
+ "lifecycle": "active",
+ "title": "Expiration of Cached Authenticators",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Prohibit the use of cached authenticators after {param:ia-05.13_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ia-05.13_odp",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Cached authenticators are used to authenticate to the local machine when the network is not available. If cached authentication information is out of date, the validity of the authentication information may be questionable."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-5.13_obj",
+     "label": "IA-05(13)",
+     "prose": {
+      "en": "the use of cached authenticators is prohibited after {param:ia-05.13_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-05(13)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "procedures addressing authenticator management"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-05(13)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with authenticator management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-05(13)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing authenticator management capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ia-05.13_odp": {
+     "guidelines": [
+      {
+       "en": "the time period after which the use of cached authenticators is prohibited is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-5.13_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5"
+  }
+ ]
+}

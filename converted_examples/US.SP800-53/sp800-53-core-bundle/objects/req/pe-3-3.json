@@ -1,0 +1,137 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-3.3",
+ "version": "5.2.0",
+ "label": "PE-3(3)",
+ "lifecycle": "active",
+ "title": "Continuous Guards",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ guards to control {param:pe-03.03_odp} to the facility where the system resides 24 hours per day, 7 days per week."
+   },
+   "parameters": [
+    {
+     "name": "pe-03.03_odp",
+     "type": "string",
+     "label": "physical access points"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Employing guards at selected physical access points to the facility provides a more rapid response capability for organizations. Guards also provide the opportunity for human surveillance in areas of the facility not covered by video surveillance."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-3.3_obj",
+     "label": "PE-03(03)",
+     "prose": {
+      "en": "guards are employed to control {param:pe-03.03_odp} to the facility where the system resides 24 hours per day, 7 days per week."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-03(03)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing physical access control"
+      },
+      {
+       "en": "physical access control logs or records"
+      },
+      {
+       "en": "physical access control devices"
+      },
+      {
+       "en": "facility surveillance records"
+      },
+      {
+       "en": "facility layout documentation"
+      },
+      {
+       "en": "system entry and exit points"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-03(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with physical access control responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-03(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for physical access control to the facility where the system resides"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing physical access control for the facility where the system resides"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-03.03_odp": {
+     "guidelines": [
+      {
+       "en": "physical access points to the facility where the system resides are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-3.3_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-6"
+  }
+ ]
+}

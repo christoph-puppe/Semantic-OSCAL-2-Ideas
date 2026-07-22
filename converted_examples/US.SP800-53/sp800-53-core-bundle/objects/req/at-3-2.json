@@ -1,0 +1,140 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AT-3.2",
+ "version": "5.2.0",
+ "label": "AT-3(2)",
+ "lifecycle": "active",
+ "title": "Physical Security Controls",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide {param:at-03.02_odp.01} with initial and {param:at-03.02_odp.02} training in the employment and operation of physical security controls."
+   },
+   "parameters": [
+    {
+     "name": "at-03.02_odp.01",
+     "type": "string",
+     "label": "personnel or roles"
+    },
+    {
+     "name": "at-03.02_odp.02",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Physical security controls include physical access control devices, physical intrusion and detection alarms, operating procedures for facility security guards, and monitoring or surveillance equipment."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "at-3.2_obj",
+     "label": "AT-03(02)",
+     "prose": {
+      "en": "{param:at-03.02_odp.01} is/are provided with initial and refresher training {param:at-03.02_odp.02} in the employment and operation of physical security controls."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AT-03(02)-Examine",
+     "objects": [
+      {
+       "en": "Security and privacy awareness and training policy"
+      },
+      {
+       "en": "procedures addressing security and privacy training implementation"
+      },
+      {
+       "en": "security and privacy training curriculum"
+      },
+      {
+       "en": "security and privacy training materials"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "training records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AT-03(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for role-based security and privacy training"
+      },
+      {
+       "en": "organizational personnel with responsibilities for employing and operating physical security controls"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "at-03.02_odp.01": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to be provided with initial and refresher training in the employment and operation of physical security controls is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "at-3.2_prm_1"
+     ]
+    },
+    "at-03.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to provide refresher training in the employment and operation of physical security controls is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "at-3.2_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-4"
+  }
+ ]
+}

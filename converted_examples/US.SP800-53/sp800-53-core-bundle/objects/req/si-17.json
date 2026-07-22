@@ -1,0 +1,166 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-17",
+ "version": "5.2.0",
+ "label": "SI-17",
+ "lifecycle": "active",
+ "title": "Fail-safe Procedures",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement the indicated fail-safe procedures when the indicated failures occur: {param:si-17_prm_1}."
+   },
+   "parameters": [
+    {
+     "name": "si-17_prm_1",
+     "type": "string",
+     "label": "organization-defined list of failure conditions and associated fail-safe procedures"
+    },
+    {
+     "name": "si-17_odp.01",
+     "type": "string",
+     "label": "fail-safe procedures"
+    },
+    {
+     "name": "si-17_odp.02",
+     "type": "string",
+     "label": "list of failure conditions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Failure conditions include the loss of communications among critical system components or between system components and operational facilities. Fail-safe procedures include alerting operator personnel and providing specific instructions on subsequent steps to take. Subsequent steps may include doing nothing, reestablishing system settings, shutting down processes, restarting the system, or contacting designated organizational personnel."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-17_obj",
+     "label": "SI-17",
+     "prose": {
+      "en": "{param:si-17_odp.01} are implemented when {param:si-17_odp.02} occur."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-17-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "documentation addressing fail-safe procedures for the system"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of security safeguards protecting the system memory from unauthorized code execution"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-17-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for fail-safe procedures"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-17-Test",
+     "objects": [
+      {
+       "en": "Organizational fail-safe procedures"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing fail-safe procedures"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-17_prm_1": {
+     "aggregates": [
+      "si-17_odp.01",
+      "si-17_odp.02"
+     ]
+    },
+    "si-17_odp.01": {
+     "guidelines": [
+      {
+       "en": "fail-safe procedures associated with failure conditions are defined;"
+      }
+     ]
+    },
+    "si-17_odp.02": {
+     "guidelines": [
+      {
+       "en": "a list of failure conditions requiring fail-safe procedures is defined;"
+      }
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-24"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-13"
+  }
+ ]
+}

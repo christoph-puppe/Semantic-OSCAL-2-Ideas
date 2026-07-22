@@ -1,0 +1,522 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-5",
+ "version": "5.2.0",
+ "label": "SA-5",
+ "lifecycle": "active",
+ "title": "System Documentation",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Obtain or develop administrator documentation for the system, system component, or system service that describes:"
+   }
+  },
+  {
+   "id": "smt.a.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Secure configuration, installation, and operation of the system, component, or service;"
+   }
+  },
+  {
+   "id": "smt.a.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Effective use and maintenance of security and privacy functions and mechanisms; and"
+   }
+  },
+  {
+   "id": "smt.a.3",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Known vulnerabilities regarding configuration and use of administrative or privileged functions;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Obtain or develop user documentation for the system, system component, or system service that describes:"
+   }
+  },
+  {
+   "id": "smt.b.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "User-accessible security and privacy functions and mechanisms and how to effectively use those functions and mechanisms;"
+   }
+  },
+  {
+   "id": "smt.b.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Methods for user interaction, which enables individuals to use the system, component, or service in a more secure manner and protect individual privacy; and"
+   }
+  },
+  {
+   "id": "smt.b.3",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "User responsibilities in maintaining the security of the system, component, or service and privacy of individuals;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Document attempts to obtain system, system component, or system service documentation when such documentation is either unavailable or nonexistent and take {param:sa-05_odp.01} in response; and"
+   },
+   "parameters": [
+    {
+     "name": "sa-05_odp.01",
+     "type": "string",
+     "label": "actions"
+    }
+   ]
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Distribute documentation to {param:sa-05_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "sa-05_odp.02",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "System artifacts and documentation created by the developer helps organizational personnel understand the implementation and operation of controls. Organizations consider establishing specific measures to determine the quality and completeness of the content provided. System documentation may be used to delineate roles, responsibilities and expectations of the developer and organization, support the management of supply chain risk, incident response, flaw remediation, and other functions. Personnel or roles that require documentation include system owners, system security officers, and system administrators. Attempts to obtain documentation include contacting manufacturers or suppliers and conducting web-based searches. The inability to obtain documentation may occur due to the age of the system or component or the lack of support from developers and contractors. When documentation cannot be obtained, organizations may need to recreate the documentation if it is essential to the implementation or operation of the controls. The protection provided for the documentation is commensurate with the security category or classification of the system. Documentation that addresses system vulnerabilities may require an increased level of protection. Secure operation of the system includes initially starting the system and resuming secure system operation after a lapse in system operation. An example of least privilege in software development is minimizing the functions that operate with elevated privileges (e.g., limiting the tools and functionality that operate in kernel mode)"
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-5_obj",
+     "label": "SA-05",
+     "children": [
+      {
+       "id": "sa-5_obj.a",
+       "label": "SA-05a.",
+       "children": [
+        {
+         "id": "sa-5_obj.a.1",
+         "label": "SA-05a.01",
+         "children": [
+          {
+           "id": "sa-5_obj.a.1-1",
+           "label": "SA-05a.01[01]",
+           "prose": {
+            "en": "administrator documentation for the system, system component, or system service that describes the secure configuration of the system, component, or service is obtained or developed;"
+           }
+          },
+          {
+           "id": "sa-5_obj.a.1-2",
+           "label": "SA-05a.01[02]",
+           "prose": {
+            "en": "administrator documentation for the system, system component, or system service that describes the secure installation of the system, component, or service is obtained or developed;"
+           }
+          },
+          {
+           "id": "sa-5_obj.a.1-3",
+           "label": "SA-05a.01[03]",
+           "prose": {
+            "en": "administrator documentation for the system, system component, or system service that describes the secure operation of the system, component, or service is obtained or developed;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "sa-5_obj.a.2",
+         "label": "SA-05a.02",
+         "children": [
+          {
+           "id": "sa-5_obj.a.2-1",
+           "label": "SA-05a.02[01]",
+           "prose": {
+            "en": "administrator documentation for the system, system component, or system service that describes the effective use of security functions and mechanisms is obtained or developed;"
+           }
+          },
+          {
+           "id": "sa-5_obj.a.2-2",
+           "label": "SA-05a.02[02]",
+           "prose": {
+            "en": "administrator documentation for the system, system component, or system service that describes the effective maintenance of security functions and mechanisms is obtained or developed;"
+           }
+          },
+          {
+           "id": "sa-5_obj.a.2-3",
+           "label": "SA-05a.02[03]",
+           "prose": {
+            "en": "administrator documentation for the system, system component, or system service that describes the effective use of privacy functions and mechanisms is obtained or developed;"
+           }
+          },
+          {
+           "id": "sa-5_obj.a.2-4",
+           "label": "SA-05a.02[04]",
+           "prose": {
+            "en": "administrator documentation for the system, system component, or system service that describes the effective maintenance of privacy functions and mechanisms is obtained or developed;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "sa-5_obj.a.3",
+         "label": "SA-05a.03",
+         "children": [
+          {
+           "id": "sa-5_obj.a.3-1",
+           "label": "SA-05a.03[01]",
+           "prose": {
+            "en": "administrator documentation for the system, system component, or system service that describes known vulnerabilities regarding the configuration of administrative or privileged functions is obtained or developed;"
+           }
+          },
+          {
+           "id": "sa-5_obj.a.3-2",
+           "label": "SA-05a.03[02]",
+           "prose": {
+            "en": "administrator documentation for the system, system component, or system service that describes known vulnerabilities regarding the use of administrative or privileged functions is obtained or developed;"
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "sa-5_obj.b",
+       "label": "SA-05b.",
+       "children": [
+        {
+         "id": "sa-5_obj.b.1",
+         "label": "SA-05b.01",
+         "children": [
+          {
+           "id": "sa-5_obj.b.1-1",
+           "label": "SA-05b.01[01]",
+           "prose": {
+            "en": "user documentation for the system, system component, or system service that describes user-accessible security functions and mechanisms is obtained or developed;"
+           }
+          },
+          {
+           "id": "sa-5_obj.b.1-2",
+           "label": "SA-05b.01[02]",
+           "prose": {
+            "en": "user documentation for the system, system component, or system service that describes how to effectively use those (user-accessible security) functions and mechanisms is obtained or developed;"
+           }
+          },
+          {
+           "id": "sa-5_obj.b.1-3",
+           "label": "SA-05b.01[03]",
+           "prose": {
+            "en": "user documentation for the system, system component, or system service that describes user-accessible privacy functions and mechanisms is obtained or developed;"
+           }
+          },
+          {
+           "id": "sa-5_obj.b.1-4",
+           "label": "SA-05b.01[04]",
+           "prose": {
+            "en": "user documentation for the system, system component, or system service that describes how to effectively use those (user-accessible privacy) functions and mechanisms is obtained or developed;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "sa-5_obj.b.2",
+         "label": "SA-05b.02",
+         "children": [
+          {
+           "id": "sa-5_obj.b.2-1",
+           "label": "SA-05b.02[01]",
+           "prose": {
+            "en": "user documentation for the system, system component, or system service that describes methods for user interaction, which enable individuals to use the system, component, or service in a more secure manner is obtained or developed;"
+           }
+          },
+          {
+           "id": "sa-5_obj.b.2-2",
+           "label": "SA-05b.02[02]",
+           "prose": {
+            "en": "user documentation for the system, system component, or system service that describes methods for user interaction, which enable individuals to use the system, component, or service to protect individual privacy is obtained or developed;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "sa-5_obj.b.3",
+         "label": "SA-05b.03",
+         "children": [
+          {
+           "id": "sa-5_obj.b.3-1",
+           "label": "SA-05b.03[01]",
+           "prose": {
+            "en": "user documentation for the system, system component, or system service that describes user responsibilities for maintaining the security of the system, component, or service is obtained or developed;"
+           }
+          },
+          {
+           "id": "sa-5_obj.b.3-2",
+           "label": "SA-05b.03[02]",
+           "prose": {
+            "en": "user documentation for the system, system component, or system service that describes user responsibilities for maintaining the privacy of individuals is obtained or developed;"
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "sa-5_obj.c",
+       "label": "SA-05c.",
+       "children": [
+        {
+         "id": "sa-5_obj.c-1",
+         "label": "SA-05c.[01]",
+         "prose": {
+          "en": "attempts to obtain system, system component, or system service documentation when such documentation is either unavailable or nonexistent is documented;"
+         }
+        },
+        {
+         "id": "sa-5_obj.c-2",
+         "label": "SA-05c.[02]",
+         "prose": {
+          "en": "after attempts to obtain system, system component, or system service documentation when such documentation is either unavailable or nonexistent, {param:sa-05_odp.01} are taken in response;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-5_obj.d",
+       "label": "SA-05d.",
+       "prose": {
+        "en": "documentation is distributed to {param:sa-05_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-05-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "procedures addressing system documentation"
+      },
+      {
+       "en": "system documentation, including administrator and user guides"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "records documenting attempts to obtain unavailable or nonexistent system documentation"
+      },
+      {
+       "en": "list of actions to be taken in response to documented attempts to obtain system, system component, or system service documentation"
+      },
+      {
+       "en": "risk management strategy documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-05-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with acquisition/contracting responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system administrators"
+      },
+      {
+       "en": "organizational personnel responsible for operating, using, and/or maintaining the system"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-05-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for obtaining, protecting, and distributing system administrator and user documentation"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-05_odp.01": {
+     "guidelines": [
+      {
+       "en": "actions to take when system, system component, or system service documentation is either unavailable or nonexistent are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-5_prm_1"
+     ]
+    },
+    "sa-05_odp.02": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to distribute system documentation to is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-5_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-15"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-3"
+  }
+ ]
+}

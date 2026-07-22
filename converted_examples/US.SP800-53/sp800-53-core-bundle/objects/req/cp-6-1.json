@@ -1,0 +1,96 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-6.1",
+ "version": "5.2.0",
+ "label": "CP-6(1)",
+ "lifecycle": "active",
+ "title": "Separation from Primary Site",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identify an alternate storage site that is sufficiently separated from the primary storage site to reduce susceptibility to the same threats."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Threats that affect alternate storage sites are defined in organizational risk assessments and include natural disasters, structural failures, hostile attacks, and errors of omission or commission. Organizations determine what is considered a sufficient degree of separation between primary and alternate storage sites based on the types of threats that are of concern. For threats such as hostile attacks, the degree of separation between sites is less relevant."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-6.1_obj",
+     "label": "CP-06(01)",
+     "prose": {
+      "en": "an alternate storage site that is sufficiently separated from the primary storage site is identified to reduce susceptibility to the same threats."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-06(01)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing alternate storage sites"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "alternate storage site"
+      },
+      {
+       "en": "alternate storage site agreements"
+      },
+      {
+       "en": "primary storage site agreements"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-06(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency plan alternate storage site responsibilities"
+      },
+      {
+       "en": "organizational personnel with system recovery responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  }
+ ]
+}

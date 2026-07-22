@@ -1,0 +1,172 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-31",
+ "version": "5.2.0",
+ "label": "SC-31",
+ "lifecycle": "active",
+ "title": "Covert Channel Analysis",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Perform a covert channel analysis to identify those aspects of communications within the system that are potential avenues for covert {param:sc-31_odp} channels; and"
+   },
+   "parameters": [
+    {
+     "name": "sc-31_odp",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "storage"
+      },
+      {
+       "value": "timing"
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Estimate the maximum bandwidth of those channels."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Developers are in the best position to identify potential areas within systems that might lead to covert channels. Covert channel analysis is a meaningful activity when there is the potential for unauthorized information flows across security domains, such as in the case of systems that contain export-controlled information and have connections to external networks (i.e., networks that are not controlled by organizations). Covert channel analysis is also useful for multilevel secure systems, multiple security level systems, and cross-domain systems."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-31_obj",
+     "label": "SC-31",
+     "children": [
+      {
+       "id": "sc-31_obj.a",
+       "label": "SC-31a.",
+       "prose": {
+        "en": "a covert channel analysis is performed to identify those aspects of communications within the system that are potential avenues for covert {param:sc-31_odp} channels;"
+       }
+      },
+      {
+       "id": "sc-31_obj.b",
+       "label": "SC-31b.",
+       "prose": {
+        "en": "the maximum bandwidth of those channels is estimated."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-31-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing covert channel analysis"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "covert channel analysis documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-31-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with covert channel analysis responsibilities"
+      },
+      {
+       "en": "system developers/integrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-31-Test",
+     "objects": [
+      {
+       "en": "Organizational process for conducting covert channel analysis"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing covert channel analysis"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the capability to estimate the bandwidth of covert channels"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-31_odp": {
+     "alt-identifiers": [
+      "sc-31_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-11"
+  }
+ ]
+}

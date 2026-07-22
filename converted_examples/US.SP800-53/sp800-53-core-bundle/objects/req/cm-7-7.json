@@ -1,0 +1,209 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-7.7",
+ "version": "5.2.0",
+ "label": "CM-7(7)",
+ "lifecycle": "active",
+ "title": "Code Execution in Protected Environments",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Allow execution of binary or machine-executable code only in confined physical or virtual machine environments and with the explicit approval of {param:cm-07.07_odp} when such code is:"
+   },
+   "parameters": [
+    {
+     "name": "cm-07.07_odp",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Obtained from sources with limited or no warranty; and/or"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Without the provision of source code."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Code execution in protected environments applies to all sources of binary or machine-executable code, including commercial software and firmware and open-source software."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-7.7_obj",
+     "label": "CM-07(07)",
+     "prose": {
+      "en": "the execution of binary or machine-executable code is only allowed in confined physical or virtual machine environments;"
+     },
+     "children": [
+      {
+       "id": "cm-7.7_obj.a",
+       "label": "CM-07(07)(a)",
+       "prose": {
+        "en": "the execution of binary or machine-executable code obtained from sources with limited or no warranty is only allowed with the explicit approval of {param:cm-07.07_odp};"
+       }
+      },
+      {
+       "id": "cm-7.7_obj.b",
+       "label": "CM-07(07)(b)",
+       "prose": {
+        "en": "the execution of binary or machine-executable code without the provision of source code is only allowed with the explicit approval of {param:cm-07.07_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-07(07)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing least functionality in the system"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list or record of binary or machine-executable code"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "common secure configuration checklists"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-07(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for approving execution of binary or machine-executable code"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with software management responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-07(07)-Test",
+     "objects": [
+      {
+       "en": "Organizational process for approving execution of binary or machine-executable code"
+      },
+      {
+       "en": "organizational process for confining binary or machine-executable code to physical or virtual machine environments"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the confinement of binary or machine-executable code to physical or virtual machine environments"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-07.07_odp": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to explicitly approve execution of binary or machine-executable code is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-7.7_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-44"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7.13",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SI-7.13",
+    "mode": "renamed",
+    "label": "SI-07(13)",
+    "title": "Code Execution in Protected Environments"
+   }
+  ]
+ }
+}

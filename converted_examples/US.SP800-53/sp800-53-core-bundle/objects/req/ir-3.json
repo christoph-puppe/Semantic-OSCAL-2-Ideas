@@ -1,0 +1,172 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-3",
+ "version": "5.2.0",
+ "label": "IR-3",
+ "lifecycle": "active",
+ "title": "Incident Response Testing",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Test the effectiveness of the incident response capability for the system {param:ir-03_odp.01} using the following tests: {param:ir-03_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ir-03_odp.01",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "ir-03_odp.02",
+     "type": "string",
+     "label": "tests"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations test incident response capabilities to determine their effectiveness and identify potential weaknesses or deficiencies. Incident response testing includes the use of checklists, walk-through or tabletop exercises, and simulations (parallel or full interrupt). Incident response testing can include a determination of the effects on organizational operations and assets and individuals due to incident response. The use of qualitative and quantitative data aids in determining the effectiveness of incident response processes."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-3_obj",
+     "label": "IR-03",
+     "prose": {
+      "en": "the effectiveness of the incident response capability for the system is tested {param:ir-03_odp.01} using {param:ir-03_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-03-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "contingency planning policy"
+      },
+      {
+       "en": "procedures addressing incident response testing"
+      },
+      {
+       "en": "procedures addressing contingency plan testing"
+      },
+      {
+       "en": "incident response testing material"
+      },
+      {
+       "en": "incident response test results"
+      },
+      {
+       "en": "incident response test plan"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-03-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident response testing responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ir-03_odp.01": {
+     "guidelines": [
+      {
+       "en": "frequency at which to test the effectiveness of the incident response capability for the system is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-3_prm_1"
+     ]
+    },
+    "ir-03_odp.02": {
+     "guidelines": [
+      {
+       "en": "tests used to test the effectiveness of the incident response capability for the system are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-3_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-84"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-115"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-14"
+  }
+ ]
+}

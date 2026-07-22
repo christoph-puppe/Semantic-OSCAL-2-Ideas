@@ -1,0 +1,135 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/RA-3.3",
+ "version": "5.2.0",
+ "label": "RA-3(3)",
+ "lifecycle": "active",
+ "title": "Dynamic Threat Awareness",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Determine the current cyber threat environment on an ongoing basis using {param:ra-03.03_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ra-03.03_odp",
+     "type": "string",
+     "label": "means"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The threat awareness information that is gathered feeds into the organization’s information security operations to ensure that procedures are updated in response to the changing threat environment. For example, at higher threat levels, organizations may change the privilege or authentication thresholds required to perform certain operations."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ra-3.3_obj",
+     "label": "RA-03(03)",
+     "prose": {
+      "en": "the current cyber threat environment is determined on an ongoing basis using {param:ra-03.03_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "RA-03(03)-Examine",
+     "objects": [
+      {
+       "en": "Risk assessment policy"
+      },
+      {
+       "en": "security planning policy and procedures"
+      },
+      {
+       "en": "procedures addressing organizational assessments of risk"
+      },
+      {
+       "en": "risk assessment"
+      },
+      {
+       "en": "risk assessment results"
+      },
+      {
+       "en": "risk assessment reviews"
+      },
+      {
+       "en": "risk assessment updates"
+      },
+      {
+       "en": "risk reports"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "RA-03(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with risk assessment responsibilities"
+      },
+      {
+       "en": "organizational personnel with security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "RA-03(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for risk assessment"
+      },
+      {
+       "en": "mechanisms supporting and/or conducting, documenting, reviewing, disseminating, and updating the risk assessment"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ra-03.03_odp": {
+     "guidelines": [
+      {
+       "en": "means to determine the current cyber threat environment on an ongoing basis;"
+      }
+     ],
+     "alt-identifiers": [
+      "ra-3.3_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-2"
+  }
+ ]
+}

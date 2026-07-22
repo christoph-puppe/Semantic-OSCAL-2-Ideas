@@ -1,0 +1,136 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-7.15",
+ "version": "5.2.0",
+ "label": "SC-7(15)",
+ "lifecycle": "active",
+ "title": "Networked Privileged Accesses",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Route networked, privileged accesses through a dedicated, managed interface for purposes of access control and auditing."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Privileged access provides greater accessibility to system functions, including security functions. Adversaries attempt to gain privileged access to systems through remote access to cause adverse mission or business impacts, such as by exfiltrating information or bringing down a critical system capability. Routing networked, privileged access requests through a dedicated, managed interface further restricts privileged access for increased access control and auditing."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-7.15_obj",
+     "label": "SC-07(15)",
+     "children": [
+      {
+       "id": "sc-7.15_obj-1",
+       "label": "SC-07(15)[01]",
+       "prose": {
+        "en": "networked, privileged accesses are routed through a dedicated, managed interface for purposes of access control;"
+       }
+      },
+      {
+       "id": "sc-7.15_obj-2",
+       "label": "SC-07(15)[02]",
+       "prose": {
+        "en": "networked, privileged accesses are routed through a dedicated, managed interface for purposes of auditing."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-07(15)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing boundary protection"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system hardware and software"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "audit logs"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-07(15)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel with boundary protection responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-07(15)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the routing of networked, privileged access through dedicated, managed interfaces"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

@@ -1,0 +1,603 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-3",
+ "version": "5.2.0",
+ "label": "PE-3",
+ "lifecycle": "active",
+ "title": "Physical Access Control",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Enforce physical access authorizations at {param:pe-03_odp.01} by:"
+   },
+   "parameters": [
+    {
+     "name": "pe-03_odp.01",
+     "type": "string",
+     "label": "entry and exit points"
+    },
+    {
+     "name": "pe-03_odp.03",
+     "type": "string",
+     "label": "systems or devices"
+    },
+    {
+     "name": "pe-03_odp.09",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "pe-03_odp.10",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.a.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Verifying individual access authorizations before granting access to the facility; and"
+   }
+  },
+  {
+   "id": "smt.a.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Controlling ingress and egress to the facility using {param:pe-03_odp.02};"
+   },
+   "parameters": [
+    {
+     "name": "pe-03_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "{param:pe-03_odp.03} "
+      },
+      {
+       "value": "guards"
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Maintain physical access audit logs for {param:pe-03_odp.04};"
+   },
+   "parameters": [
+    {
+     "name": "pe-03_odp.04",
+     "type": "string",
+     "label": "entry or exit points"
+    }
+   ]
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Control access to areas within the facility designated as publicly accessible by implementing the following controls: {param:pe-03_odp.05};"
+   },
+   "parameters": [
+    {
+     "name": "pe-03_odp.05",
+     "type": "string",
+     "label": "physical access controls"
+    }
+   ]
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Escort visitors and control visitor activity {param:pe-03_odp.06};"
+   },
+   "parameters": [
+    {
+     "name": "pe-03_odp.06",
+     "type": "string",
+     "label": "circumstances"
+    }
+   ]
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Secure keys, combinations, and other physical access devices;"
+   }
+  },
+  {
+   "id": "smt.f",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Inventory {param:pe-03_odp.07} every {param:pe-03_odp.08} ; and"
+   },
+   "parameters": [
+    {
+     "name": "pe-03_odp.07",
+     "type": "string",
+     "label": "physical access devices"
+    },
+    {
+     "name": "pe-03_odp.08",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.g",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Change combinations and keys {param:pe-3_prm_9} and/or when keys are lost, combinations are compromised, or when individuals possessing the keys or combinations are transferred or terminated."
+   },
+   "parameters": [
+    {
+     "name": "pe-3_prm_9",
+     "type": "string",
+     "label": "organization-defined frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Physical access control applies to employees and visitors. Individuals with permanent physical access authorizations are not considered visitors. Physical access controls for publicly accessible areas may include physical access control logs/records, guards, or physical access devices and barriers to prevent movement from publicly accessible areas to non-public areas. Organizations determine the types of guards needed, including professional security staff, system users, or administrative staff. Physical access devices include keys, locks, combinations, biometric readers, and card readers. Physical access control systems comply with applicable laws, executive orders, directives, policies, regulations, standards, and guidelines. Organizations have flexibility in the types of audit logs employed. Audit logs can be procedural, automated, or some combination thereof. Physical access points can include facility access points, interior access points to systems that require supplemental access controls, or both. Components of systems may be in areas designated as publicly accessible with organizations controlling access to the components."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-3_obj",
+     "label": "PE-03",
+     "children": [
+      {
+       "id": "pe-3_obj.a",
+       "label": "PE-03a.",
+       "children": [
+        {
+         "id": "pe-3_obj.a.1",
+         "label": "PE-03a.01",
+         "prose": {
+          "en": "physical access authorizations are enforced at {param:pe-03_odp.01} by verifying individual access authorizations before granting access to the facility;"
+         }
+        },
+        {
+         "id": "pe-3_obj.a.2",
+         "label": "PE-03a.02",
+         "prose": {
+          "en": "physical access authorizations are enforced at {param:pe-03_odp.01} by controlling ingress and egress to the facility using {param:pe-03_odp.02};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pe-3_obj.b",
+       "label": "PE-03b.",
+       "prose": {
+        "en": "physical access audit logs are maintained for {param:pe-03_odp.04};"
+       }
+      },
+      {
+       "id": "pe-3_obj.c",
+       "label": "PE-03c.",
+       "prose": {
+        "en": "access to areas within the facility designated as publicly accessible are maintained by implementing {param:pe-03_odp.05};"
+       }
+      },
+      {
+       "id": "pe-3_obj.d",
+       "label": "PE-03d.",
+       "children": [
+        {
+         "id": "pe-3_obj.d-1",
+         "label": "PE-03d.[01]",
+         "prose": {
+          "en": "visitors are escorted;"
+         }
+        },
+        {
+         "id": "pe-3_obj.d-2",
+         "label": "PE-03d.[02]",
+         "prose": {
+          "en": "visitor activity is controlled {param:pe-03_odp.06};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pe-3_obj.e",
+       "label": "PE-03e.",
+       "children": [
+        {
+         "id": "pe-3_obj.e-1",
+         "label": "PE-03e.[01]",
+         "prose": {
+          "en": "keys are secured;"
+         }
+        },
+        {
+         "id": "pe-3_obj.e-2",
+         "label": "PE-03e.[02]",
+         "prose": {
+          "en": "combinations are secured;"
+         }
+        },
+        {
+         "id": "pe-3_obj.e-3",
+         "label": "PE-03e.[03]",
+         "prose": {
+          "en": "other physical access devices are secured;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pe-3_obj.f",
+       "label": "PE-03f.",
+       "prose": {
+        "en": "{param:pe-03_odp.07} are inventoried {param:pe-03_odp.08};"
+       }
+      },
+      {
+       "id": "pe-3_obj.g",
+       "label": "PE-03g.",
+       "children": [
+        {
+         "id": "pe-3_obj.g-1",
+         "label": "PE-03g.[01]",
+         "prose": {
+          "en": "combinations are changed {param:pe-03_odp.09} , when combinations are compromised, or when individuals possessing the combinations are transferred or terminated;"
+         }
+        },
+        {
+         "id": "pe-3_obj.g-2",
+         "label": "PE-03g.[02]",
+         "prose": {
+          "en": "keys are changed {param:pe-03_odp.10} , when keys are lost, or when individuals possessing the keys are transferred or terminated."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-03-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing physical access control"
+      },
+      {
+       "en": "physical access control logs or records"
+      },
+      {
+       "en": "inventory records of physical access control devices"
+      },
+      {
+       "en": "system entry and exit points"
+      },
+      {
+       "en": "records of key and lock combination changes"
+      },
+      {
+       "en": "storage locations for physical access control devices"
+      },
+      {
+       "en": "physical access control devices"
+      },
+      {
+       "en": "list of security safeguards controlling access to designated publicly accessible areas within facility"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-03-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with physical access control responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-03-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for physical access control"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing physical access control"
+      },
+      {
+       "en": "physical access control devices"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-3_prm_9": {
+     "aggregates": [
+      "pe-03_odp.09",
+      "pe-03_odp.10"
+     ]
+    },
+    "pe-03_odp.01": {
+     "guidelines": [
+      {
+       "en": "entry and exit points to the facility in which the system resides are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-3_prm_1"
+     ],
+     "alt-label": "entry and exit points to the facility where the system resides"
+    },
+    "pe-03_odp.02": {
+     "alt-identifiers": [
+      "pe-3_prm_2"
+     ]
+    },
+    "pe-03_odp.03": {
+     "guidelines": [
+      {
+       "en": "physical access control systems or devices used to control ingress and egress to the facility are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-3_prm_3"
+     ],
+     "alt-label": "physical access control systems or devices"
+    },
+    "pe-03_odp.04": {
+     "guidelines": [
+      {
+       "en": "entry or exit points for which physical access logs are maintained are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-3_prm_4"
+     ]
+    },
+    "pe-03_odp.05": {
+     "guidelines": [
+      {
+       "en": "physical access controls to control access to areas within the facility designated as publicly accessible are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-3_prm_5"
+     ]
+    },
+    "pe-03_odp.06": {
+     "guidelines": [
+      {
+       "en": "circumstances requiring visitor escorts and control of visitor activity are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-3_prm_6"
+     ],
+     "alt-label": "circumstances requiring visitor escorts and control of visitor activity"
+    },
+    "pe-03_odp.07": {
+     "guidelines": [
+      {
+       "en": "physical access devices to be inventoried are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-3_prm_7"
+     ]
+    },
+    "pe-03_odp.08": {
+     "guidelines": [
+      {
+       "en": "frequency at which to inventory physical access devices is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-3_prm_8"
+     ]
+    },
+    "pe-03_odp.09": {
+     "guidelines": [
+      {
+       "en": "frequency at which to change combinations is defined;"
+      }
+     ]
+    },
+    "pe-03_odp.10": {
+     "guidelines": [
+      {
+       "en": "frequency at which to change keys is defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.201-2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-73-4"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-76-2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-78-4"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-116r1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-28"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-3"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-7",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/PE-7",
+    "mode": "merged-into",
+    "label": "PE-07",
+    "title": "Visitor Control"
+   }
+  ]
+ }
+}

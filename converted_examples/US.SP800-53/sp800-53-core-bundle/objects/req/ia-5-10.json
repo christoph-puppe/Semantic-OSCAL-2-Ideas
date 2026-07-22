@@ -1,0 +1,133 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-5.10",
+ "version": "5.2.0",
+ "label": "IA-5(10)",
+ "lifecycle": "active",
+ "title": "Dynamic Credential Binding",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Bind identities and authenticators dynamically using the following rules: {param:ia-05.10_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ia-05.10_odp",
+     "type": "string",
+     "label": "binding rules"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Authentication requires some form of binding between an identity and the authenticator that is used to confirm the identity. In conventional approaches, binding is established by pre-provisioning both the identity and the authenticator to the system. For example, the binding between a username (i.e., identity) and a password (i.e., authenticator) is accomplished by provisioning the identity and authenticator as a pair in the system. New authentication techniques allow the binding between the identity and the authenticator to be implemented external to a system. For example, with smartcard credentials, the identity and authenticator are bound together on the smartcard. Using these credentials, systems can authenticate identities that have not been pre-provisioned, dynamically provisioning the identity after authentication. In these situations, organizations can anticipate the dynamic provisioning of identities. Pre-established trust relationships and mechanisms with appropriate authorities to validate identities and related credentials are essential."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-5.10_obj",
+     "label": "IA-05(10)",
+     "prose": {
+      "en": "identities and authenticators are dynamically bound using {param:ia-05.10_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-05(10)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "procedures addressing identifier management"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "automated mechanisms providing dynamic binding of identifiers and authenticators"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-05(10)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with identifier management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-05(10)-Test",
+     "objects": [
+      {
+       "en": "Automated mechanisms implementing identifier management capability"
+      },
+      {
+       "en": "automated mechanisms implementing dynamic binding of identities and authenticators"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ia-05.10_odp": {
+     "guidelines": [
+      {
+       "en": "rules for dynamically binding identities and authenticators are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-5.10_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5"
+  }
+ ]
+}

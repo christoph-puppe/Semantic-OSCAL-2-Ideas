@@ -1,0 +1,138 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-6.4",
+ "version": "5.2.0",
+ "label": "PE-6(4)",
+ "lifecycle": "active",
+ "title": "Monitoring Physical Access to Systems",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Monitor physical access to the system in addition to the physical access monitoring of the facility at {param:pe-06.04_odp}."
+   },
+   "parameters": [
+    {
+     "name": "pe-06.04_odp",
+     "type": "string",
+     "label": "physical spaces"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Monitoring physical access to systems provides additional monitoring for those areas within facilities where there is a concentration of system components, including server rooms, media storage areas, and communications centers. Physical access monitoring can be coordinated with intrusion detection systems and system monitoring capabilities to provide comprehensive and integrated threat coverage for the organization."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-6.4_obj",
+     "label": "PE-06(04)",
+     "prose": {
+      "en": "physical access to the system is monitored in addition to the physical access monitoring of the facility at {param:pe-06.04_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-06(04)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing physical access monitoring"
+      },
+      {
+       "en": "physical access control logs or records"
+      },
+      {
+       "en": "physical access control devices"
+      },
+      {
+       "en": "access authorizations"
+      },
+      {
+       "en": "access credentials"
+      },
+      {
+       "en": "list of areas within the facility containing concentrations of system components or system components requiring additional physical access monitoring"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-06(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with physical access monitoring responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-06(04)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for monitoring physical access to the system"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing physical access monitoring for facility areas containing system components"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-06.04_odp": {
+     "guidelines": [
+      {
+       "en": "physical spaces containing one or more components of the system are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-6.4_prm_1"
+     ],
+     "alt-label": "physical spaces containing one or more components of the system"
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-6"
+  }
+ ]
+}

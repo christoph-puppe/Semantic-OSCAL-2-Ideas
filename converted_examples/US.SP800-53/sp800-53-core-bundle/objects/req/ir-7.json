@@ -1,0 +1,151 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-7",
+ "version": "5.2.0",
+ "label": "IR-7",
+ "lifecycle": "active",
+ "title": "Incident Response Assistance",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide an incident response support resource, integral to the organizational incident response capability, that offers advice and assistance to users of the system for the handling and reporting of incidents."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Incident response support resources provided by organizations include help desks, assistance groups, automated ticketing systems to open and track incident response tickets, and access to forensics services or consumer redress services, when required."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-7_obj",
+     "label": "IR-07",
+     "children": [
+      {
+       "id": "ir-7_obj-1",
+       "label": "IR-07[01]",
+       "prose": {
+        "en": "an incident response support resource, integral to the organizational incident response capability, is provided;"
+       }
+      },
+      {
+       "id": "ir-7_obj-2",
+       "label": "IR-07[02]",
+       "prose": {
+        "en": "the incident response support resource offers advice and assistance to users of the system for the response and reporting of incidents."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-07-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing incident response assistance"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-07-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident response assistance and support responsibilities"
+      },
+      {
+       "en": "organizational personnel with access to incident response support and assistance capability"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IR-07-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for incident response assistance"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing incident response assistance"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.7559"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-22"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-26"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-18"
+  }
+ ]
+}

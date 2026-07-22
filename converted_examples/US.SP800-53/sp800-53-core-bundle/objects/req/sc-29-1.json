@@ -1,0 +1,153 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-29.1",
+ "version": "5.2.0",
+ "label": "SC-29(1)",
+ "lifecycle": "active",
+ "title": "Virtualization Techniques",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ virtualization techniques to support the deployment of a diversity of operating systems and applications that are changed {param:sc-29.01_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sc-29.01_odp",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "While frequent changes to operating systems and applications can pose significant configuration management challenges, the changes can result in an increased work factor for adversaries to conduct successful attacks. Changing virtual operating systems or applications, as opposed to changing actual operating systems or applications, provides virtual changes that impede attacker success while reducing configuration management efforts. Virtualization techniques can assist in isolating untrustworthy software or software of dubious provenance into confined execution environments."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-29.1_obj",
+     "label": "SC-29(01)",
+     "prose": {
+      "en": "virtualization techniques are employed to support the deployment of a diverse range of operating systems and applications that are changed {param:sc-29.01_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-29(01)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "configuration management policy and procedures"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "list of operating systems and applications deployed using virtualization techniques"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "configuration management records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-29(01)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibilities for implementing approved virtualization techniques to the system"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-29(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the employment of a diverse set of information technologies"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing virtualization techniques"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-29.01_odp": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to change the diversity of operating systems and applications deployed using virtualization techniques is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-29.1_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-29"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-30.1",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SC-30.1",
+    "mode": "merged-into",
+    "label": "SC-30(01)",
+    "title": "Virtualization Techniques"
+   }
+  ]
+ }
+}

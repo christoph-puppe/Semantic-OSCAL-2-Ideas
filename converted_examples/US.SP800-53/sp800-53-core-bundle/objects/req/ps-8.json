@@ -1,0 +1,181 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PS-8",
+ "version": "5.2.0",
+ "label": "PS-8",
+ "lifecycle": "active",
+ "title": "Personnel Sanctions",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ a formal sanctions process for individuals failing to comply with established information security and privacy policies and procedures; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Notify {param:ps-08_odp.01} within {param:ps-08_odp.02} when a formal employee sanctions process is initiated, identifying the individual sanctioned and the reason for the sanction."
+   },
+   "parameters": [
+    {
+     "name": "ps-08_odp.01",
+     "type": "string",
+     "label": "personnel or roles"
+    },
+    {
+     "name": "ps-08_odp.02",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizational sanctions reflect applicable laws, executive orders, directives, regulations, policies, standards, and guidelines. Sanctions processes are described in access agreements and can be included as part of general personnel policies for organizations and/or specified in security and privacy policies. Organizations consult with the Office of the General Counsel regarding matters of employee sanctions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ps-8_obj",
+     "label": "PS-08",
+     "children": [
+      {
+       "id": "ps-8_obj.a",
+       "label": "PS-08a.",
+       "prose": {
+        "en": "a formal sanctions process is employed for individuals failing to comply with established information security and privacy policies and procedures;"
+       }
+      },
+      {
+       "id": "ps-8_obj.b",
+       "label": "PS-08b.",
+       "prose": {
+        "en": "{param:ps-08_odp.01} is/are notified within {param:ps-08_odp.02} when a formal employee sanctions process is initiated, identifying the individual sanctioned and the reason for the sanction."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PS-08-Examine",
+     "objects": [
+      {
+       "en": "Personnel security policy"
+      },
+      {
+       "en": "personnel security procedures"
+      },
+      {
+       "en": "procedures addressing personnel sanctions"
+      },
+      {
+       "en": "access agreements (including non-disclosure agreements, acceptable use agreements, rules of behavior, and conflict-of-interest agreements)"
+      },
+      {
+       "en": "list of personnel or roles to be notified of formal employee sanctions"
+      },
+      {
+       "en": "records or notifications of formal employee sanctions"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PS-08-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personnel security responsibilities"
+      },
+      {
+       "en": "legal counsel"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PS-08-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing formal employee sanctions"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing formal employee sanctions notifications"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ps-08_odp.01": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to be notified when a formal employee sanctions process is initiated is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ps-8_prm_1"
+     ]
+    },
+    "ps-08_odp.02": {
+     "guidelines": [
+      {
+       "en": "the time period within which organization-defined personnel or roles must be notified when a formal employee sanctions process is initiated is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ps-8_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-1"
+  }
+ ]
+}

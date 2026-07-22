@@ -1,0 +1,92 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-7.3",
+ "version": "5.2.0",
+ "label": "CP-7(3)",
+ "lifecycle": "active",
+ "title": "Priority of Service",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop alternate processing site agreements that contain priority-of-service provisions in accordance with availability requirements (including recovery time objectives)."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Priority of service agreements refer to negotiated agreements with service providers that ensure that organizations receive priority treatment consistent with their availability requirements and the availability of information resources for logical alternate processing and/or at the physical alternate processing site. Organizations establish recovery time objectives as part of contingency planning."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-7.3_obj",
+     "label": "CP-07(03)",
+     "prose": {
+      "en": "alternate processing site agreements that contain priority-of-service provisions in accordance with availability requirements (including recovery time objectives) are developed."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-07(03)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing alternate processing sites"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "alternate processing site agreements"
+      },
+      {
+       "en": "service-level agreements"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-07(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency plan alternate processing site responsibilities"
+      },
+      {
+       "en": "organizational personnel with system recovery responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibility for acquisitions/contractual agreements"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-7"
+  }
+ ]
+}

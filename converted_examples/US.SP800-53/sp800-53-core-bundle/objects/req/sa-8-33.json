@@ -1,0 +1,172 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-8.33",
+ "version": "5.2.0",
+ "label": "SA-8(33)",
+ "lifecycle": "active",
+ "title": "Minimization",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement the privacy principle of minimization using {param:sa-08.33_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sa-08.33_odp",
+     "type": "string",
+     "label": "processes"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The principle of minimization states that organizations should only process personally identifiable information that is directly relevant and necessary to accomplish an authorized purpose and should only maintain personally identifiable information for as long as is necessary to accomplish the purpose. Organizations have processes in place, consistent with applicable laws and policies, to implement the principle of minimization."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-8.33_obj",
+     "label": "SA-08(33)",
+     "prose": {
+      "en": "the privacy principle of minimization is implemented using {param:sa-08.33_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-08(33)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "procedures addressing the minimization of personally identifiable information in system design"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "information security and privacy requirements and specifications for the system"
+      },
+      {
+       "en": "system security and privacy architecture"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-08(33)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with system specification, design, development, implementation, and modification responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-08(33)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for applying the privacy design principle of minimization in system specification, design, development, implementation, and modification"
+      },
+      {
+       "en": "mechanisms supporting the application of the security design principle of sufficient documentation in system specification, design, development, implementation, and modification"
+      },
+      {
+       "en": "mechanisms that enforce security and privacy policy"
+      },
+      {
+       "en": "organizational processes for managing change configuration"
+      },
+      {
+       "en": "mechanisms supporting configuration control"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-08.33_odp": {
+     "guidelines": [
+      {
+       "en": "processes that implement the privacy principle of minimization are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-8.33_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-25"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-42"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  }
+ ]
+}

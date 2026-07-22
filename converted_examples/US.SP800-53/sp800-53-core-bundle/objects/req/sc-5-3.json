@@ -1,0 +1,170 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-5.3",
+ "version": "5.2.0",
+ "label": "SC-5(3)",
+ "lifecycle": "active",
+ "title": "Detection and Monitoring",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Employ the following monitoring tools to detect indicators of denial-of-service attacks against, or launched from, the system: {param:sc-05.03_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "sc-05.03_odp.01",
+     "type": "string",
+     "label": "monitoring tools"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Monitor the following system resources to determine if sufficient resources exist to prevent effective denial-of-service attacks: {param:sc-05.03_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "sc-05.03_odp.02",
+     "type": "string",
+     "label": "system resources"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations consider the utilization and capacity of system resources when managing risk associated with a denial of service due to malicious attacks. Denial-of-service attacks can originate from external or internal sources. System resources that are sensitive to denial of service include physical disk storage, memory, and CPU cycles. Techniques used to prevent denial-of-service attacks related to storage utilization and capacity include instituting disk quotas, configuring systems to automatically alert administrators when specific storage capacity thresholds are reached, using file compression technologies to maximize available storage space, and imposing separate partitions for system and user data."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-5.3_obj",
+     "label": "SC-05(03)",
+     "children": [
+      {
+       "id": "sc-5.3_obj.a",
+       "label": "SC-05(03)(a)",
+       "prose": {
+        "en": "{param:sc-05.03_odp.01} are employed to detect indicators of denial-of-service attacks against or launched from the system;"
+       }
+      },
+      {
+       "id": "sc-5.3_obj.b",
+       "label": "SC-05(03)(b)",
+       "prose": {
+        "en": "{param:sc-05.03_odp.02} are monitored to determine if sufficient resources exist to prevent effective denial-of-service attacks."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-05(03)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing denial-of-service protection"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system monitoring tools and techniques documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-05(03)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with detection and monitoring responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-05(03)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms/tools implementing system monitoring for denial-of-service attacks"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-05.03_odp.01": {
+     "guidelines": [
+      {
+       "en": "monitoring tools for detecting indicators of denial-of-service attacks are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-5.3_prm_1"
+     ]
+    },
+    "sc-05.03_odp.02": {
+     "guidelines": [
+      {
+       "en": "system resources to be monitored to determine if sufficient resources exist to prevent effective denial-of-service attacks are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-5.3_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

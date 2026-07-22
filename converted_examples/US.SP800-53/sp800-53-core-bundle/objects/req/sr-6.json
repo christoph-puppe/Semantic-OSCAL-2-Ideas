@@ -1,0 +1,203 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SR-6",
+ "version": "5.2.0",
+ "label": "SR-6",
+ "lifecycle": "active",
+ "title": "Supplier Assessments and Reviews",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Assess and review the supply chain-related risks associated with suppliers or contractors and the system, system component, or system service they provide {param:sr-06_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sr-06_odp",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "An assessment and review of supplier risk includes security and supply chain risk management processes, foreign ownership, control or influence (FOCI), and the ability of the supplier to effectively assess subordinate second-tier and third-tier suppliers and contractors. The reviews may be conducted by the organization or by an independent third party. The reviews consider documented processes, documented controls, all-source intelligence, and publicly available information related to the supplier or contractor. Organizations can use open-source information to monitor for indications of stolen information, poor development and quality control practices, information spillage, or counterfeits. In some cases, it may be appropriate or required to share assessment and review results with other organizations in accordance with any applicable rules, policies, or inter-organizational agreements or contracts."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sr-6_obj",
+     "label": "SR-06",
+     "prose": {
+      "en": "the supply chain-related risks associated with suppliers or contractors and the systems, system components, or system services they provide are assessed and reviewed {param:sr-06_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SR-06-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management policy and procedures"
+      },
+      {
+       "en": "supply chain risk management strategy"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "system and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing supply chain protection"
+      },
+      {
+       "en": "procedures addressing the integration of information security requirements into the acquisition process"
+      },
+      {
+       "en": "records of supplier due diligence reviews"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SR-06-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and services acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain protection responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SR-06-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for conducting supplier reviews"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing supplier reviews"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sr-06_odp": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to assess and review the supply chain-related risks associated with suppliers or contractors and the systems, system components, or system services they provide is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sr-6_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.congress.gov/bill/115th-congress/senate-bill/3085"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.federalregister.gov/d/2020-18939"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/presidential-actions/executive-order-securing-information-communications-technology-services-supply-chain"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.iso.org/standard/59648.html"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.iso.org/standard/74399.html"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.140-3"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.180-4"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.186-4"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.202"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-30r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-161"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.7622"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.8272"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-5"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-12.2",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-12.2",
+    "mode": "renamed",
+    "label": "SA-12(02)",
+    "title": "Supplier Reviews"
+   }
+  ]
+ }
+}

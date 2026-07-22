@@ -1,0 +1,131 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-4.9",
+ "version": "5.2.0",
+ "label": "SI-4(9)",
+ "lifecycle": "active",
+ "title": "Testing of Monitoring Tools and Mechanisms",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Test intrusion-monitoring tools and mechanisms {param:si-04.09_odp}."
+   },
+   "parameters": [
+    {
+     "name": "si-04.09_odp",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Testing intrusion-monitoring tools and mechanisms is necessary to ensure that the tools and mechanisms are operating correctly and continue to satisfy the monitoring objectives of organizations. The frequency and depth of testing depends on the types of tools and mechanisms used by organizations and the methods of deployment."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-4.9_obj",
+     "label": "SI-04(09)",
+     "prose": {
+      "en": "intrusion-monitoring tools and mechanisms are tested {param:si-04.09_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-04(09)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing the testing of system monitoring tools and techniques"
+      },
+      {
+       "en": "documentation providing evidence of testing intrusion-monitoring tools"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-04(09)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for monitoring the system"
+      },
+      {
+       "en": "organizational personnel responsible for the intrusion detection system"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-04(09)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for intrusion detection and system monitoring"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing intrusion detection and system monitoring capabilities"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the testing of intrusion-monitoring tools"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-04.09_odp": {
+     "guidelines": [
+      {
+       "en": "a frequency at which to test intrusion-monitoring tools and mechanisms is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-4.9_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

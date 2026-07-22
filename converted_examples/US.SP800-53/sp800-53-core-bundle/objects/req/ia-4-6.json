@@ -1,0 +1,122 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-4.6",
+ "version": "5.2.0",
+ "label": "IA-4(6)",
+ "lifecycle": "active",
+ "title": "Cross-organization Management",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Coordinate with the following external organizations for cross-organization management of identifiers: {param:ia-04.06_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ia-04.06_odp",
+     "type": "string",
+     "label": "external organizations"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Cross-organization identifier management provides the capability to identify individuals, groups, roles, or devices when conducting cross-organization activities involving the processing, storage, or transmission of information."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-4.6_obj",
+     "label": "IA-04(06)",
+     "prose": {
+      "en": "cross-organization management of identifiers is coordinated with {param:ia-04.06_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-04(06)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "procedures addressing identifier management"
+      },
+      {
+       "en": "procedures addressing account management"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-04(06)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with identifier management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-04(06)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing identifier management"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ia-04.06_odp": {
+     "guidelines": [
+      {
+       "en": "external organizations with whom to coordinate the cross-organization management of identifiers are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-4.6_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5"
+  }
+ ]
+}

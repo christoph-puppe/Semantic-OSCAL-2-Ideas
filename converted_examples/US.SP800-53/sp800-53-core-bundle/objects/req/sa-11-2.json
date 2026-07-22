@@ -1,0 +1,435 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-11.2",
+ "version": "5.2.0",
+ "label": "SA-11(2)",
+ "lifecycle": "active",
+ "title": "Threat Modeling and Vulnerability Analyses",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to perform threat modeling and vulnerability analyses during development and the subsequent testing and evaluation of the system, component, or service that:"
+   },
+   "parameters": [
+    {
+     "name": "sa-11.02_odp.03",
+     "type": "string",
+     "label": "breadth and depth"
+    },
+    {
+     "name": "sa-11.02_odp.04",
+     "type": "string",
+     "label": "breadth and depth"
+    },
+    {
+     "name": "sa-11.02_odp.05",
+     "type": "string",
+     "label": "acceptance criteria"
+    },
+    {
+     "name": "sa-11.02_odp.06",
+     "type": "string",
+     "label": "acceptance criteria"
+    }
+   ]
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Uses the following contextual information: {param:sa-11.02_odp.01};"
+   },
+   "parameters": [
+    {
+     "name": "sa-11.02_odp.01",
+     "type": "string",
+     "label": "information"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employs the following tools and methods: {param:sa-11.02_odp.02};"
+   },
+   "parameters": [
+    {
+     "name": "sa-11.02_odp.02",
+     "type": "string",
+     "label": "tools and methods"
+    }
+   ]
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Conducts the modeling and analyses at the following level of rigor: {param:sa-11.2_prm_3} ; and"
+   },
+   "parameters": [
+    {
+     "name": "sa-11.2_prm_3",
+     "type": "string",
+     "label": "organization-defined breadth and depth of modeling and analyses"
+    }
+   ]
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Produces evidence that meets the following acceptance criteria: {param:sa-11.2_prm_4}."
+   },
+   "parameters": [
+    {
+     "name": "sa-11.2_prm_4",
+     "type": "string",
+     "label": "organization-defined acceptance criteria"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Systems, system components, and system services may deviate significantly from the functional and design specifications created during the requirements and design stages of the system development life cycle. Therefore, updates to threat modeling and vulnerability analyses of those systems, system components, and system services during development and prior to delivery are critical to the effective operation of those systems, components, and services. Threat modeling and vulnerability analyses at this stage of the system development life cycle ensure that design and implementation changes have been accounted for and that vulnerabilities created because of those changes have been reviewed and mitigated."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-11.2_obj",
+     "label": "SA-11(02)",
+     "children": [
+      {
+       "id": "sa-11.2_obj.a",
+       "label": "SA-11(02)(a)",
+       "children": [
+        {
+         "id": "sa-11.2_obj.a-1",
+         "label": "SA-11(02)(a)[01]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to perform threat modeling during development of the system, component, or service that uses {param:sa-11.02_odp.01};"
+         }
+        },
+        {
+         "id": "sa-11.2_obj.a-2",
+         "label": "SA-11(02)(a)[02]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to perform vulnerability analyses during development of the system, component, or service that uses {param:sa-11.02_odp.01};"
+         }
+        },
+        {
+         "id": "sa-11.2_obj.a-3",
+         "label": "SA-11(02)(a)[03]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to perform threat modeling during the subsequent testing and evaluation of the system, component, or service that uses {param:sa-11.02_odp.01};"
+         }
+        },
+        {
+         "id": "sa-11.2_obj.a-4",
+         "label": "SA-11(02)(a)[04]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to perform vulnerability analyses during the subsequent testing and evaluation of the system, component, or service that uses {param:sa-11.02_odp.01};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-11.2_obj.b",
+       "label": "SA-11(02)(b)",
+       "children": [
+        {
+         "id": "sa-11.2_obj.b-1",
+         "label": "SA-11(02)(b)[01]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to perform threat modeling during development of the system, component, or service that employs {param:sa-11.02_odp.02};"
+         }
+        },
+        {
+         "id": "sa-11.2_obj.b-2",
+         "label": "SA-11(02)(b)[02]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to perform threat modeling during the subsequent testing and evaluation of the system, component, or service that employs {param:sa-11.02_odp.02};"
+         }
+        },
+        {
+         "id": "sa-11.2_obj.b-3",
+         "label": "SA-11(02)(b)[03]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to perform vulnerability analyses during development of the system, component, or service that employs {param:sa-11.02_odp.02};"
+         }
+        },
+        {
+         "id": "sa-11.2_obj.b-4",
+         "label": "SA-11(02)(b)[04]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to perform vulnerability analyses during the subsequent testing and evaluation of the system, component, or service that employs {param:sa-11.02_odp.02};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-11.2_obj.c",
+       "label": "SA-11(02)(c)",
+       "children": [
+        {
+         "id": "sa-11.2_obj.c-1",
+         "label": "SA-11(02)(c)[01]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to perform threat modeling at {param:sa-11.02_odp.03} during development of the system, component, or service;"
+         }
+        },
+        {
+         "id": "sa-11.2_obj.c-2",
+         "label": "SA-11(02)(c)[02]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to perform vulnerability analyses during the subsequent testing and evaluation of the system, component, or service that conducts modeling and analyses at {param:sa-11.02_odp.04};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-11.2_obj.d",
+       "label": "SA-11(02)(d)",
+       "children": [
+        {
+         "id": "sa-11.2_obj.d-1",
+         "label": "SA-11(02)(d)[01]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to perform threat modeling during development of the system, component, or service that produces evidence that meets {param:sa-11.02_odp.05};"
+         }
+        },
+        {
+         "id": "sa-11.2_obj.d-2",
+         "label": "SA-11(02)(d)[02]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to perform threat modeling during the subsequent testing and evaluation of the system, component, or service that produces evidence that meets {param:sa-11.02_odp.05};"
+         }
+        },
+        {
+         "id": "sa-11.2_obj.d-3",
+         "label": "SA-11(02)(d)[03]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to perform vulnerability analyses during development of the system, component, or service that produces evidence that meets {param:sa-11.02_odp.06};"
+         }
+        },
+        {
+         "id": "sa-11.2_obj.d-4",
+         "label": "SA-11(02)(d)[04]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to perform vulnerability analyses during the subsequent testing and evaluation of the system, component, or service that produces evidence that meets {param:sa-11.02_odp.06}."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-11(02)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing system developer security testing"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "system developer security test plans"
+      },
+      {
+       "en": "records of developer security testing results for the system, system component, or system service"
+      },
+      {
+       "en": "vulnerability scanning results"
+      },
+      {
+       "en": "system risk assessment reports"
+      },
+      {
+       "en": "threat and vulnerability analysis reports"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-11(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with developer security testing responsibilities"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-11(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for monitoring developer security testing and evaluation"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the monitoring of developer security testing and evaluation"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-11.2_prm_3": {
+     "aggregates": [
+      "sa-11.02_odp.03",
+      "sa-11.02_odp.04"
+     ]
+    },
+    "sa-11.2_prm_4": {
+     "aggregates": [
+      "sa-11.02_odp.05",
+      "sa-11.02_odp.06"
+     ]
+    },
+    "sa-11.02_odp.01": {
+     "guidelines": [
+      {
+       "en": "information concerning impact, environment of operations, known or assumed threats, and acceptable risk levels to be used as contextual information for threat modeling and vulnerability analyses is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-11.2_prm_1"
+     ],
+     "alt-label": "information concerning impact, environment of operations, known or assumed threats, and acceptable risk levels"
+    },
+    "sa-11.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "the tools and methods to be employed for threat modeling and vulnerability analyses are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-11.2_prm_2"
+     ]
+    },
+    "sa-11.02_odp.03": {
+     "guidelines": [
+      {
+       "en": "the breadth and depth of threat modeling to be conducted is defined;"
+      }
+     ]
+    },
+    "sa-11.02_odp.04": {
+     "guidelines": [
+      {
+       "en": "the breadth and depth of vulnerability analyses to be conducted is defined;"
+      }
+     ]
+    },
+    "sa-11.02_odp.05": {
+     "guidelines": [
+      {
+       "en": "acceptance criteria to be met by produced evidence for threat modeling are defined;"
+      }
+     ]
+    },
+    "sa-11.02_odp.06": {
+     "guidelines": [
+      {
+       "en": "acceptance criteria to be met by produced evidence for vulnerability analyses are defined;"
+      }
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-15"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-15.4",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-15.4",
+    "mode": "merged-into",
+    "label": "SA-15(04)",
+    "title": "Threat Modeling and Vulnerability Analysis"
+   }
+  ]
+ }
+}

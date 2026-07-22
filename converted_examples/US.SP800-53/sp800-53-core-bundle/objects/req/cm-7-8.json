@@ -1,0 +1,187 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-7.8",
+ "version": "5.2.0",
+ "label": "CM-7(8)",
+ "lifecycle": "active",
+ "title": "Binary or Machine Executable Code",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Prohibit the use of binary or machine-executable code from sources with limited or no warranty or without the provision of source code; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Allow exceptions only for compelling mission or operational requirements and with the approval of the authorizing official."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Binary or machine executable code applies to all sources of binary or machine-executable code, including commercial software and firmware and open-source software. Organizations assess software products without accompanying source code or from sources with limited or no warranty for potential security impacts. The assessments address the fact that software products without the provision of source code may be difficult to review, repair, or extend. In addition, there may be no owners to make such repairs on behalf of organizations. If open-source software is used, the assessments address the fact that there is no warranty, the open-source software could contain back doors or malware, and there may be no support available."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-7.8_obj",
+     "label": "CM-07(08)",
+     "children": [
+      {
+       "id": "cm-7.8_obj.a",
+       "label": "CM-07(08)(a)",
+       "prose": {
+        "en": "the use of binary or machine-executable code is prohibited when it originates from sources with limited or no warranty or without the provision of source code;"
+       }
+      },
+      {
+       "id": "cm-7.8_obj.b",
+       "label": "CM-07(08)(b)",
+       "children": [
+        {
+         "id": "cm-7.8_obj.b-1",
+         "label": "CM-07(08)(b)[01]",
+         "prose": {
+          "en": "exceptions to the prohibition of binary or machine-executable code from sources with limited or no warranty or without the provision of source code are allowed only for compelling mission or operational requirements;"
+         }
+        },
+        {
+         "id": "cm-7.8_obj.b-2",
+         "label": "CM-07(08)(b)[02]",
+         "prose": {
+          "en": "exceptions to the prohibition of binary or machine-executable code from sources with limited or no warranty or without the provision of source code are allowed only with the approval of the authorizing official."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-07(08)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing least functionality in the system"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list or record of binary or machine-executable code"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "common secure configuration checklists"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-07(08)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for determining mission and operational requirements"
+      },
+      {
+       "en": "authorizing official for the system"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with software management responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-07(08)-Test",
+     "objects": [
+      {
+       "en": "Organizational process for approving execution of binary or machine-executable code"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the prohibition of binary or machine-executable code"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-22"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7.14",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SI-7.14",
+    "mode": "renamed",
+    "label": "SI-07(14)",
+    "title": "Binary or Machine Executable Code"
+   }
+  ]
+ }
+}

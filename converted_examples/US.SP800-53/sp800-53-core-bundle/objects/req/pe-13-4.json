@@ -1,0 +1,141 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-13.4",
+ "version": "5.2.0",
+ "label": "PE-13(4)",
+ "lifecycle": "active",
+ "title": "Inspections",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Ensure that the facility undergoes {param:pe-13.04_odp.01} fire protection inspections by authorized and qualified inspectors and identified deficiencies are resolved within {param:pe-13.04_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "pe-13.04_odp.01",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "pe-13.04_odp.02",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Authorized and qualified personnel within the jurisdiction of the organization include state, county, and city fire inspectors and fire marshals. Organizations provide escorts during inspections in situations where the systems that reside within the facilities contain sensitive information."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-13.4_obj",
+     "label": "PE-13(04)",
+     "children": [
+      {
+       "id": "pe-13.4_obj-1",
+       "label": "PE-13(04)[01]",
+       "prose": {
+        "en": "the facility undergoes fire protection inspections {param:pe-13.04_odp.01} by authorized and qualified inspectors;"
+       }
+      },
+      {
+       "id": "pe-13.4_obj-2",
+       "label": "PE-13(04)[02]",
+       "prose": {
+        "en": "the identified deficiencies from fire protection inspections are resolved within {param:pe-13.04_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-13(04)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing fire protection"
+      },
+      {
+       "en": "facility housing the system"
+      },
+      {
+       "en": "inspection plans"
+      },
+      {
+       "en": "inspection results"
+      },
+      {
+       "en": "inspect reports"
+      },
+      {
+       "en": "test records of fire suppression and detection devices/systems"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-13(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for planning, approving, and executing fire inspections"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-13.04_odp.01": {
+     "guidelines": [
+      {
+       "en": "the frequency for conducting fire protection inspections on the facility is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-13.4_prm_1"
+     ]
+    },
+    "pe-13.04_odp.02": {
+     "guidelines": [
+      {
+       "en": "a time period for resolving deficiencies identified by fire protection inspections is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-13.4_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-13"
+  }
+ ]
+}

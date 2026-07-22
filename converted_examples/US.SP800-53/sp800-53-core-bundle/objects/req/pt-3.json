@@ -1,0 +1,331 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PT-3",
+ "version": "5.2.0",
+ "label": "PT-3",
+ "lifecycle": "active",
+ "title": "Personally Identifiable Information Processing Purposes",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identify and document the {param:pt-03_odp.01} for processing personally identifiable information;"
+   },
+   "parameters": [
+    {
+     "name": "pt-03_odp.01",
+     "type": "string",
+     "label": "purpose(s)"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Describe the purpose(s) in the public privacy notices and policies of the organization;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Restrict the {param:pt-03_odp.02} of personally identifiable information to only that which is compatible with the identified purpose(s); and"
+   },
+   "parameters": [
+    {
+     "name": "pt-03_odp.02",
+     "type": "string",
+     "label": "processing"
+    }
+   ]
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Monitor changes in processing personally identifiable information and implement {param:pt-03_odp.03} to ensure that any changes are made in accordance with {param:pt-03_odp.04}."
+   },
+   "parameters": [
+    {
+     "name": "pt-03_odp.03",
+     "type": "string",
+     "label": "mechanisms"
+    },
+    {
+     "name": "pt-03_odp.04",
+     "type": "string",
+     "label": "requirements"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Identifying and documenting the purpose for processing provides organizations with a basis for understanding why personally identifiable information may be processed. The term \"process\" includes every step of the information life cycle, including creation, collection, use, processing, storage, maintenance, dissemination, disclosure, and disposal. Identifying and documenting the purpose of processing is a prerequisite to enabling owners and operators of the system and individuals whose information is processed by the system to understand how the information will be processed. This enables individuals to make informed decisions about their engagement with information systems and organizations and to manage their privacy interests. Once the specific processing purpose has been identified, the purpose is described in the organization’s privacy notices, policies, and any related privacy compliance documentation, including privacy impact assessments, system of records notices, PRIVACT statements, computer matching notices, and other applicable Federal Register notices.\n\nOrganizations take steps to help ensure that personally identifiable information is processed only for identified purposes, including training organizational personnel and monitoring and auditing organizational processing of personally identifiable information.\n\nOrganizations monitor for changes in personally identifiable information processing. Organizational personnel consult with the senior agency official for privacy and legal counsel to ensure that any new purposes that arise from changes in processing are compatible with the purpose for which the information was collected, or if the new purpose is not compatible, implement mechanisms in accordance with defined requirements to allow for the new processing, if appropriate. Mechanisms may include obtaining consent from individuals, revising privacy policies, or other measures to manage privacy risks that arise from changes in personally identifiable information processing purposes."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pt-3_obj",
+     "label": "PT-03",
+     "children": [
+      {
+       "id": "pt-3_obj.a",
+       "label": "PT-03a.",
+       "prose": {
+        "en": "the {param:pt-03_odp.01} for processing personally identifiable information is/are identified and documented;"
+       }
+      },
+      {
+       "id": "pt-3_obj.b",
+       "label": "PT-03b.",
+       "children": [
+        {
+         "id": "pt-3_obj.b-1",
+         "label": "PT-03b.[01]",
+         "prose": {
+          "en": "the purpose(s) is/are described in the public privacy notices of the organization;"
+         }
+        },
+        {
+         "id": "pt-3_obj.b-2",
+         "label": "PT-03b.[02]",
+         "prose": {
+          "en": "the purpose(s) is/are described in the policies of the organization;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pt-3_obj.c",
+       "label": "PT-03c.",
+       "prose": {
+        "en": "the {param:pt-03_odp.02} of personally identifiable information are restricted to only that which is compatible with the identified purpose(s);"
+       }
+      },
+      {
+       "id": "pt-3_obj.d",
+       "label": "PT-03d.",
+       "children": [
+        {
+         "id": "pt-3_obj.d-1",
+         "label": "PT-03d.[01]",
+         "prose": {
+          "en": "changes in the processing of personally identifiable information are monitored;"
+         }
+        },
+        {
+         "id": "pt-3_obj.d-2",
+         "label": "PT-03d.[02]",
+         "prose": {
+          "en": "{param:pt-03_odp.03} are implemented to ensure that any changes are made in accordance with {param:pt-03_odp.04}."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PT-03-Examine",
+     "objects": [
+      {
+       "en": "Personally identifiable information processing and transparency policy and procedures"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "organizational privacy notices"
+      },
+      {
+       "en": "organizational policies"
+      },
+      {
+       "en": "Privacy Act statements"
+      },
+      {
+       "en": "computer matching notices"
+      },
+      {
+       "en": "applicable Federal Register notices"
+      },
+      {
+       "en": "documented requirements for enforcing and monitoring the processing of personally identifiable information"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PT-03-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personally identifiable information processing and transparency responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PT-03-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for authorizing the processing of personally identifiable information"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the management of authorized personally identifiable information processing"
+      },
+      {
+       "en": "organizational processes for monitoring changes in processing personally identifiable information"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pt-03_odp.01": {
+     "guidelines": [
+      {
+       "en": "the purpose(s) for processing personally identifiable information is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pt-3_prm_1"
+     ]
+    },
+    "pt-03_odp.02": {
+     "guidelines": [
+      {
+       "en": "the processing of personally identifiable information to be restricted is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pt-3_prm_2"
+     ]
+    },
+    "pt-03_odp.03": {
+     "guidelines": [
+      {
+       "en": "mechanisms to be implemented for ensuring any changes in the processing of personally identifiable information are made in accordance with requirements are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pt-3_prm_3"
+     ]
+    },
+    "pt-03_odp.04": {
+     "guidelines": [
+      {
+       "en": "requirements for changing the processing of personally identifiable information are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pt-3_prm_4"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.govinfo.gov/content/pkg/STATUTE-88/pdf/STATUTE-88-Pg1896.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.8112"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-25"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-43"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-18"
+  }
+ ]
+}

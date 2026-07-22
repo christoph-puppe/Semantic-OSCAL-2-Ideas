@@ -1,0 +1,111 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-12.1",
+ "version": "5.2.0",
+ "label": "IA-12(1)",
+ "lifecycle": "active",
+ "title": "Supervisor Authorization",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require that the registration process to receive an account for logical access includes supervisor or sponsor authorization."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Including supervisor or sponsor authorization as part of the registration process provides an additional level of scrutiny to ensure that the user’s management chain is aware of the account, the account is essential to carry out organizational missions and functions, and the user’s privileges are appropriate for the anticipated responsibilities and authorities within the organization."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-12.1_obj",
+     "label": "IA-12(01)",
+     "prose": {
+      "en": "the registration process to receive an account for logical access includes supervisor or sponsor authorization."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-12(01)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "procedures addressing identity proofing"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-12(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system operations responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with identification and authentication responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-12(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing identification and authentication capabilities"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-12"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-4.2",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/IA-4.2",
+    "mode": "merged-into",
+    "label": "IA-04(02)",
+    "title": "Supervisor Authorization"
+   }
+  ]
+ }
+}

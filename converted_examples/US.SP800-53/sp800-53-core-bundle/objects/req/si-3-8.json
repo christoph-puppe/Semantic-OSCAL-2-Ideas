@@ -1,0 +1,210 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-3.8",
+ "version": "5.2.0",
+ "label": "SI-3(8)",
+ "lifecycle": "active",
+ "title": "Detect Unauthorized Commands",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Detect the following unauthorized operating system commands through the kernel application programming interface on {param:si-03.08_odp.02}: {param:si-03.08_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "si-03.08_odp.01",
+     "type": "string",
+     "label": "unauthorized operating system commands"
+    },
+    {
+     "name": "si-03.08_odp.02",
+     "type": "string",
+     "label": "system hardware components"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "{param:si-03.08_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "si-03.08_odp.03",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "issue a warning"
+      },
+      {
+       "value": "audit the command execution"
+      },
+      {
+       "value": "prevent the execution of the command"
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Detecting unauthorized commands can be applied to critical interfaces other than kernel-based interfaces, including interfaces with virtual machines and privileged applications. Unauthorized operating system commands include commands for kernel functions from system processes that are not trusted to initiate such commands as well as commands for kernel functions that are suspicious even though commands of that type are reasonable for processes to initiate. Organizations can define the malicious commands to be detected by a combination of command types, command classes, or specific instances of commands. Organizations can also define hardware components by component type, component, component location in the network, or a combination thereof. Organizations may select different actions for different types, classes, or instances of malicious commands."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-3.8_obj",
+     "label": "SI-03(08)",
+     "children": [
+      {
+       "id": "si-3.8_obj.a",
+       "label": "SI-03(08)(a)",
+       "prose": {
+        "en": "{param:si-03.08_odp.01} are detected through the kernel application programming interface on {param:si-03.08_odp.02};"
+       }
+      },
+      {
+       "id": "si-3.8_obj.b",
+       "label": "SI-03(08)(b)",
+       "prose": {
+        "en": "{param:si-03.08_odp.03} is/are performed."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-03(08)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing malicious code protection"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "malicious code protection mechanisms"
+      },
+      {
+       "en": "warning messages sent upon the detection of unauthorized operating system command execution"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-03(08)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for malicious code protection"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-03(08)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing malicious code protection capabilities"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the detection of unauthorized operating system commands through the kernel application programming interface"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-03.08_odp.01": {
+     "guidelines": [
+      {
+       "en": "system hardware components for which unauthorized operating system commands are to be detected through the kernel application programming interface are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-3.8_prm_2"
+     ]
+    },
+    "si-03.08_odp.02": {
+     "guidelines": [
+      {
+       "en": "unauthorized operating system commands to be detected are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-3.8_prm_1"
+     ]
+    },
+    "si-03.08_odp.03": {
+     "alt-identifiers": [
+      "si-3.8_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-12"
+  }
+ ]
+}

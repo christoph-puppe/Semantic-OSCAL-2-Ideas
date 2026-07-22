@@ -1,0 +1,296 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-2",
+ "version": "5.2.0",
+ "label": "PE-2",
+ "lifecycle": "active",
+ "title": "Physical Access Authorizations",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop, approve, and maintain a list of individuals with authorized access to the facility where the system resides;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Issue authorization credentials for facility access;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review the access list detailing authorized facility access by individuals {param:pe-02_odp} ; and"
+   },
+   "parameters": [
+    {
+     "name": "pe-02_odp",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Remove individuals from the facility access list when access is no longer required."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Physical access authorizations apply to employees and visitors. Individuals with permanent physical access authorization credentials are not considered visitors. Authorization credentials include ID badges, identification cards, and smart cards. Organizations determine the strength of authorization credentials needed consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines. Physical access authorizations may not be necessary to access certain areas within facilities that are designated as publicly accessible."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-2_obj",
+     "label": "PE-02",
+     "children": [
+      {
+       "id": "pe-2_obj.a",
+       "label": "PE-02a.",
+       "children": [
+        {
+         "id": "pe-2_obj.a-1",
+         "label": "PE-02a.[01]",
+         "prose": {
+          "en": "a list of individuals with authorized access to the facility where the system resides has been developed;"
+         }
+        },
+        {
+         "id": "pe-2_obj.a-2",
+         "label": "PE-02a.[02]",
+         "prose": {
+          "en": "the list of individuals with authorized access to the facility where the system resides has been approved;"
+         }
+        },
+        {
+         "id": "pe-2_obj.a-3",
+         "label": "PE-02a.[03]",
+         "prose": {
+          "en": "the list of individuals with authorized access to the facility where the system resides has been maintained;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pe-2_obj.b",
+       "label": "PE-02b.",
+       "prose": {
+        "en": "authorization credentials are issued for facility access;"
+       }
+      },
+      {
+       "id": "pe-2_obj.c",
+       "label": "PE-02c.",
+       "prose": {
+        "en": "the access list detailing authorized facility access by individuals is reviewed {param:pe-02_odp};"
+       }
+      },
+      {
+       "id": "pe-2_obj.d",
+       "label": "PE-02d.",
+       "prose": {
+        "en": "individuals are removed from the facility access list when access is no longer required."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-02-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing physical access authorizations"
+      },
+      {
+       "en": "authorized personnel access list"
+      },
+      {
+       "en": "authorization credentials"
+      },
+      {
+       "en": "physical access list reviews"
+      },
+      {
+       "en": "physical access termination records and associated documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-02-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with physical access authorization responsibilities"
+      },
+      {
+       "en": "organizational personnel with physical access to system facility"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-02-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for physical access authorizations"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing physical access authorizations"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-02_odp": {
+     "guidelines": [
+      {
+       "en": "frequency at which to review the access list detailing authorized facility access by individuals is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-2_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.201-2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-73-4"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-76-2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-78-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-6"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-7",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-8.2",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/PE-7",
+    "mode": "merged-into",
+    "label": "PE-07",
+    "title": "Visitor Control"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/PE-8.2",
+    "mode": "merged-into",
+    "label": "PE-08(02)",
+    "title": "Physical Access Records"
+   }
+  ]
+ }
+}

@@ -1,0 +1,202 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CA-2.2",
+ "version": "5.2.0",
+ "label": "CA-2(2)",
+ "lifecycle": "active",
+ "title": "Specialized Assessments",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Include as part of control assessments, {param:ca-02.02_odp.01}, {param:ca-02.02_odp.02}, {param:ca-02.02_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "ca-02.02_odp.01",
+     "type": "string",
+     "label": "specialized assessment frequency"
+    },
+    {
+     "name": "ca-02.02_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "announced"
+      },
+      {
+       "value": "unannounced"
+      }
+     ]
+    },
+    {
+     "name": "ca-02.02_odp.03",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "in-depth monitoring"
+      },
+      {
+       "value": "security instrumentation"
+      },
+      {
+       "value": "automated security test cases"
+      },
+      {
+       "value": "vulnerability scanning"
+      },
+      {
+       "value": "malicious user testing"
+      },
+      {
+       "value": "insider threat assessment"
+      },
+      {
+       "value": "performance and load testing"
+      },
+      {
+       "value": "data leakage or data loss assessment"
+      },
+      {
+       "value": "{param:ca-02.02_odp.04} "
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "ca-02.02_odp.04",
+     "type": "string",
+     "label": "other forms of assessment"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations can conduct specialized assessments, including verification and validation, system monitoring, insider threat assessments, malicious user testing, and other forms of testing. These assessments can improve readiness by exercising organizational capabilities and indicating current levels of performance as a means of focusing actions to improve security and privacy. Organizations conduct specialized assessments in accordance with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines. Authorizing officials approve the assessment methods in coordination with the organizational risk executive function. Organizations can include vulnerabilities uncovered during assessments into vulnerability remediation processes. Specialized assessments can also be conducted early in the system development life cycle (e.g., during initial design, development, and unit testing)."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ca-2.2_obj",
+     "label": "CA-02(02)",
+     "prose": {
+      "en": "{param:ca-02.02_odp.01} {param:ca-02.02_odp.02} {param:ca-02.02_odp.03} are included as part of control assessments."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CA-02(02)-Examine",
+     "objects": [
+      {
+       "en": "Assessment, authorization, and monitoring policy"
+      },
+      {
+       "en": "procedures addressing control assessments"
+      },
+      {
+       "en": "control assessment plan"
+      },
+      {
+       "en": "control assessment report"
+      },
+      {
+       "en": "control assessment evidence"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CA-02(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with control assessment responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CA-02(02)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting control assessment"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ca-02.02_odp.01": {
+     "guidelines": [
+      {
+       "en": "frequency at which to include specialized assessments as part of the control assessment is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ca-2.2_prm_1"
+     ],
+     "alt-label": "frequency"
+    },
+    "ca-02.02_odp.02": {
+     "alt-identifiers": [
+      "ca-2.2_prm_2"
+     ]
+    },
+    "ca-02.02_odp.03": {
+     "alt-identifiers": [
+      "ca-2.2_prm_3"
+     ]
+    },
+    "ca-02.02_odp.04": {
+     "guidelines": [
+      {
+       "en": "other forms of assessment are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "ca-2.2_prm_4"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-2"
+  }
+ ]
+}

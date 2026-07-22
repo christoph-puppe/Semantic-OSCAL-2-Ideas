@@ -1,0 +1,134 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-10.2",
+ "version": "5.2.0",
+ "label": "SA-10(2)",
+ "lifecycle": "active",
+ "title": "Alternative Configuration Management Processes",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide an alternate configuration management process using organizational personnel in the absence of a dedicated developer configuration management team."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Alternate configuration management processes may be required when organizations use commercial off-the-shelf information technology products. Alternate configuration management processes include organizational personnel who review and approve proposed changes to systems, system components, and system services and conduct security and privacy impact analyses prior to the implementation of changes to systems, components, or services."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-10.2_obj",
+     "label": "SA-10(02)",
+     "prose": {
+      "en": "an alternate configuration management process has been provided using organizational personnel in the absence of a dedicated developer configuration management team."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-10(02)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "configuration management policy"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "system developer configuration management plan"
+      },
+      {
+       "en": "security impact analyses"
+      },
+      {
+       "en": "privacy impact analyses"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-10(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with configuration management responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-10(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for monitoring developer configuration management"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the monitoring of developer configuration management"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-10"
+  }
+ ]
+}

@@ -1,0 +1,279 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SR-11",
+ "version": "5.2.0",
+ "label": "SR-11",
+ "lifecycle": "active",
+ "title": "Component Authenticity",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop and implement anti-counterfeit policy and procedures that include the means to detect and prevent counterfeit components from entering the system; and"
+   },
+   "parameters": [
+    {
+     "name": "sr-11_odp.02",
+     "type": "string",
+     "label": "external reporting organizations"
+    },
+    {
+     "name": "sr-11_odp.03",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Report counterfeit system components to {param:sr-11_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "sr-11_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "source of counterfeit component"
+      },
+      {
+       "value": "{param:sr-11_odp.02} "
+      },
+      {
+       "value": "{param:sr-11_odp.03} "
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Sources of counterfeit components include manufacturers, developers, vendors, and contractors. Anti-counterfeiting policies and procedures support tamper resistance and provide a level of protection against the introduction of malicious code. External reporting organizations include CISA."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sr-11_obj",
+     "label": "SR-11",
+     "children": [
+      {
+       "id": "sr-11_obj.a",
+       "label": "SR-11a.",
+       "children": [
+        {
+         "id": "sr-11_obj.a-1",
+         "label": "SR-11a.[01]",
+         "prose": {
+          "en": "an anti-counterfeit policy is developed and implemented;"
+         }
+        },
+        {
+         "id": "sr-11_obj.a-2",
+         "label": "SR-11a.[02]",
+         "prose": {
+          "en": "anti-counterfeit procedures are developed and implemented;"
+         }
+        },
+        {
+         "id": "sr-11_obj.a-3",
+         "label": "SR-11a.[03]",
+         "prose": {
+          "en": "the anti-counterfeit procedures include the means to detect counterfeit components entering the system;"
+         }
+        },
+        {
+         "id": "sr-11_obj.a-4",
+         "label": "SR-11a.[04]",
+         "prose": {
+          "en": "the anti-counterfeit procedures include the means to prevent counterfeit components from entering the system;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sr-11_obj.b",
+       "label": "SR-11b.",
+       "prose": {
+        "en": "counterfeit system components are reported to {param:sr-11_odp.01}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SR-11-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management policy and procedures"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "system and services acquisition policy"
+      },
+      {
+       "en": "anti-counterfeit plan"
+      },
+      {
+       "en": "anti-counterfeit policy and procedures"
+      },
+      {
+       "en": "media disposal policy"
+      },
+      {
+       "en": "media protection policy"
+      },
+      {
+       "en": "incident response policy"
+      },
+      {
+       "en": "reports notifying developers, manufacturers, vendors, contractors, and/or external reporting organizations of counterfeit system components"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "inter-organizational agreements and procedures"
+      },
+      {
+       "en": "records of reported counterfeit system components"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SR-11-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibilities for anti-counterfeit policies, procedures, and reporting"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SR-11-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for counterfeit prevention, detection, and reporting"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing anti-counterfeit detection, prevention, and reporting"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sr-11_odp.01": {
+     "alt-identifiers": [
+      "sr-11_prm_1"
+     ]
+    },
+    "sr-11_odp.02": {
+     "guidelines": [
+      {
+       "en": "external reporting organizations to whom counterfeit system components are to be reported is/are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "sr-11_prm_2"
+     ]
+    },
+    "sr-11_odp.03": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to whom counterfeit system components are to be reported is/are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "sr-11_prm_3"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.iso.org/standard/74399.html"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-10"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-19",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-19",
+    "mode": "renamed",
+    "label": "SA-19",
+    "title": "Component Authenticity"
+   }
+  ]
+ }
+}

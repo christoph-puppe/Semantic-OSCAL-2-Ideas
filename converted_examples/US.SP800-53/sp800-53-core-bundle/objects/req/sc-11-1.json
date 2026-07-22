@@ -1,0 +1,151 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-11.1",
+ "version": "5.2.0",
+ "label": "SC-11(1)",
+ "lifecycle": "active",
+ "title": "Irrefutable Communications Path",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide a trusted communications path that is irrefutably distinguishable from other communications paths; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Initiate the trusted communications path for communications between the {param:sc-11.01_odp} of the system and the user."
+   },
+   "parameters": [
+    {
+     "name": "sc-11.01_odp",
+     "type": "string",
+     "label": "security functions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "An irrefutable communications path permits the system to initiate a trusted path, which necessitates that the user can unmistakably recognize the source of the communication as a trusted system component. For example, the trusted path may appear in an area of the display that other applications cannot access or be based on the presence of an identifier that cannot be spoofed."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-11.1_obj",
+     "label": "SC-11(01)",
+     "children": [
+      {
+       "id": "sc-11.1_obj.a",
+       "label": "SC-11(01)(a)",
+       "prose": {
+        "en": "a trusted communication path that is irrefutably distinguishable from other communication paths is provided;"
+       }
+      },
+      {
+       "id": "sc-11.1_obj.b",
+       "label": "SC-11(01)(b)",
+       "prose": {
+        "en": "the trusted communication path for communications between the {param:sc-11.01_odp} of the system and the user is initiated."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-11(01)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing trusted communication paths"
+      },
+      {
+       "en": "security plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "assessment results from independent, testing organizations"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-11(01)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-11(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing trusted communication paths"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-11.01_odp": {
+     "guidelines": [
+      {
+       "en": "security functions of the system are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-11.1_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-11"
+  }
+ ]
+}

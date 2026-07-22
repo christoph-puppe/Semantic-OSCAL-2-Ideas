@@ -1,0 +1,126 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-6.1",
+ "version": "5.2.0",
+ "label": "IR-6(1)",
+ "lifecycle": "active",
+ "title": "Automated Reporting",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Report incidents using {param:ir-06.01_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ir-06.01_odp",
+     "type": "string",
+     "label": "automated mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The recipients of incident reports are specified in IR-6b . Automated reporting mechanisms include email, posting on websites (with automatic updates), and automated incident response tools and programs."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-6.1_obj",
+     "label": "IR-06(01)",
+     "prose": {
+      "en": "incidents are reported using {param:ir-06.01_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-06(01)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing incident reporting"
+      },
+      {
+       "en": "automated mechanisms supporting incident reporting"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-06(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident reporting responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IR-06(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for incident reporting"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing the reporting of security incidents"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ir-06.01_odp": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used for reporting incidents are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-6.1_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-7"
+  }
+ ]
+}

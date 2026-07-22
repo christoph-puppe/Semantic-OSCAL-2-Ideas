@@ -1,0 +1,156 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-24.1",
+ "version": "5.2.0",
+ "label": "AC-24(1)",
+ "lifecycle": "active",
+ "title": "Transmit Access Authorization Information",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Transmit {param:ac-24.01_odp.01} using {param:ac-24.01_odp.02} to {param:ac-24.01_odp.03} that enforce access control decisions."
+   },
+   "parameters": [
+    {
+     "name": "ac-24.01_odp.01",
+     "type": "string",
+     "label": "access authorization information"
+    },
+    {
+     "name": "ac-24.01_odp.02",
+     "type": "string",
+     "label": "controls"
+    },
+    {
+     "name": "ac-24.01_odp.03",
+     "type": "string",
+     "label": "systems"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Authorization processes and access control decisions may occur in separate parts of systems or in separate systems. In such instances, authorization information is transmitted securely (e.g., using cryptographic mechanisms) so that timely access control decisions can be enforced at the appropriate locations. To support the access control decisions, it may be necessary to transmit as part of the access authorization information supporting security and privacy attributes. This is because in distributed systems, there are various access control decisions that need to be made, and different entities make these decisions in a serial fashion, each requiring those attributes to make the decisions. Protecting access authorization information ensures that such information cannot be altered, spoofed, or compromised during transmission."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-24.1_obj",
+     "label": "AC-24(01)",
+     "prose": {
+      "en": "{param:ac-24.01_odp.01} is transmitted using {param:ac-24.01_odp.02} to {param:ac-24.01_odp.03} that enforce access control decisions."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-24(01)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing access enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-24(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with access enforcement responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-24(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing access enforcement functions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-24.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "access authorization information transmitted to systems that enforce access control decisions is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-24.1_prm_1"
+     ]
+    },
+    "ac-24.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "controls to be used when authorization information is transmitted to systems that enforce access control decisions are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-24.1_prm_2"
+     ]
+    },
+    "ac-24.01_odp.03": {
+     "guidelines": [
+      {
+       "en": "systems that enforce access control decisions are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-24.1_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-24"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-10"
+  }
+ ]
+}

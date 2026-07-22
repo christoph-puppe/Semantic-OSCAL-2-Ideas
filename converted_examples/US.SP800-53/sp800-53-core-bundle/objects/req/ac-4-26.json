@@ -1,0 +1,130 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-4.26",
+ "version": "5.2.0",
+ "label": "AC-4(26)",
+ "lifecycle": "active",
+ "title": "Audit Filtering Actions",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "When transferring information between different security domains, record and audit content filtering actions and results for the information being filtered."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Content filtering is the process of inspecting information as it traverses a cross-domain solution and determines if the information meets a predefined policy. Content filtering actions and the results of filtering actions are recorded for individual messages to ensure that the correct filter actions were applied. Content filter reports are used to assist in troubleshooting actions by, for example, determining why message content was modified and/or why it failed the filtering process. Audit events are defined in AU-2 . Audit records are generated in AU-12."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-4.26_obj",
+     "label": "AC-04(26)",
+     "children": [
+      {
+       "id": "ac-4.26_obj-1",
+       "label": "AC-04(26)[01]",
+       "prose": {
+        "en": "when transferring information between different security domains, content-filtering actions are recorded and audited;"
+       }
+      },
+      {
+       "id": "ac-4.26_obj-2",
+       "label": "AC-04(26)[02]",
+       "prose": {
+        "en": "when transferring information between different security domains, results for the information being filtered are recorded and audited."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-04(26)-Examine",
+     "objects": [
+      {
+       "en": "Information flow enforcement policy"
+      },
+      {
+       "en": "procedures addressing information flow enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-04(26)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information flow enforcement responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-04(26)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing information flow enforcement functions"
+      },
+      {
+       "en": "mechanisms implementing content filtering"
+      },
+      {
+       "en": "mechanisms recording and auditing content filtering"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-12"
+  }
+ ]
+}

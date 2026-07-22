@@ -1,0 +1,179 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SR-6.1",
+ "version": "5.2.0",
+ "label": "SR-6(1)",
+ "lifecycle": "active",
+ "title": "Testing and Analysis",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ {param:sr-06.01_odp.01} of the following supply chain elements, processes, and actors associated with the system, system component, or system service: {param:sr-06.01_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "sr-06.01_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "organizational analysis"
+      },
+      {
+       "value": "independent third-party analysis"
+      },
+      {
+       "value": "organizational testing"
+      },
+      {
+       "value": "independent third-party testing"
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "sr-06.01_odp.02",
+     "type": "string",
+     "label": "supply chain elements, processes, and actors"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Relationships between entities and procedures within the supply chain, including development and delivery, are considered. Supply chain elements include organizations, entities, or tools that are used for the research and development, design, manufacturing, acquisition, delivery, integration, operations, maintenance, and disposal of systems, system components, or system services. Supply chain processes include supply chain risk management programs; SCRM strategies and implementation plans; personnel and physical security programs; hardware, software, and firmware development processes; configuration management tools, techniques, and measures to maintain provenance; shipping and handling procedures; and programs, processes, or procedures associated with the production and distribution of supply chain elements. Supply chain actors are individuals with specific roles and responsibilities in the supply chain. The evidence generated and collected during analyses and testing of supply chain elements, processes, and actors is documented and used to inform organizational risk management activities and decisions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sr-6.1_obj",
+     "label": "SR-06(01)",
+     "prose": {
+      "en": "{param:sr-06.01_odp.01} is/are employed on {param:sr-06.01_odp.02} associated with the system, system component, or system service."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SR-06(01)-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management policy and procedures"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "system and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing supply chain protection"
+      },
+      {
+       "en": "evidence of organizational analysis, independent third-party analysis, organizational penetration testing, and/or independent third-party penetration testing"
+      },
+      {
+       "en": "list of supply chain elements, processes, and actors (associated with the system, system component, or system service) subject to analysis and/or testing"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SR-06(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and services acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibilities for analyzing and/or testing supply chain elements, processes, and actors"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SR-06(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for defining and employing methods of analysis/testing of supply chain elements, processes, and actors"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the analysis/testing of supply chain elements, processes, and actors"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sr-06.01_odp.01": {
+     "alt-identifiers": [
+      "sr-6.1_prm_1"
+     ]
+    },
+    "sr-06.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "supply chain elements, processes, and actors to be analyzed and tested are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sr-6.1_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-12.11",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-12.11",
+    "mode": "renamed",
+    "label": "SA-12(11)",
+    "title": "Penetration Testing / Analysis of Elements, Processes, and Actors"
+   }
+  ]
+ }
+}

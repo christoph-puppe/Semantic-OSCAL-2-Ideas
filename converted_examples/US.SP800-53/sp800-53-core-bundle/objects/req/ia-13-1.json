@@ -1,0 +1,137 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-13.1",
+ "version": "5.2.0",
+ "label": "IA-13(1)",
+ "lifecycle": "active",
+ "title": "Protection of Cryptographic Keys",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Cryptographic keys that protect access tokens are generated, managed, and protected from disclosure and misuse."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Identity assertions and access tokens are typically digitally signed. The private keys used to sign these assertions and tokens are protected commensurate with the impact of the system and information resources that can be accessed. "
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-13.1_obj",
+     "label": "IA-13(01)",
+     "children": [
+      {
+       "id": "ia-13.1_obj-1",
+       "label": "IA-13(01)[01]",
+       "prose": {
+        "en": "cryptographic keys that protect access tokens are generated;"
+       }
+      },
+      {
+       "id": "ia-13.1_obj-2",
+       "label": "IA-13(01)[02]",
+       "prose": {
+        "en": "cryptographic keys that protect access tokens are managed;"
+       }
+      },
+      {
+       "id": "ia-13.1_obj-3",
+       "label": "IA-13(01)[03]",
+       "prose": {
+        "en": "cryptographic keys that protect access tokens are protected from disclosure; and"
+       }
+      },
+      {
+       "id": "ia-13.1_obj-4",
+       "label": "IA-13(01)[04]",
+       "prose": {
+        "en": "cryptographic keys that protect access tokens are protected from disclosure and misuse"
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-13(01)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy;"
+      },
+      {
+       "en": "procedures addressing cryptographic key establishment and management;"
+      },
+      {
+       "en": "system design documentation;"
+      },
+      {
+       "en": "cryptographic mechanisms;"
+      },
+      {
+       "en": "system configuration settings and associated documentation;"
+      },
+      {
+       "en": "system security plan;"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-13(01)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators;"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities;"
+      },
+      {
+       "en": "organizational personnel with responsibilities for cryptographic key establishment and/or management"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-13(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for cryptographic key management;"
+      },
+      {
+       "en": "cryptographic modules generating, storing, and using cryptographic keys"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  }
+ ]
+}

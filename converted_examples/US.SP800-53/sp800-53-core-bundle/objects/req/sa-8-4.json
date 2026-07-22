@@ -1,0 +1,129 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-8.4",
+ "version": "5.2.0",
+ "label": "SA-8(4)",
+ "lifecycle": "active",
+ "title": "Partially Ordered Dependencies",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement the security design principle of partially ordered dependencies in {param:sa-08.04_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sa-08.04_odp",
+     "type": "string",
+     "label": "systems or system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The principle of partially ordered dependencies states that the synchronization, calling, and other dependencies in the system are partially ordered. A fundamental concept in system design is layering, whereby the system is organized into well-defined, functionally related modules or components. The layers are linearly ordered with respect to inter-layer dependencies, such that higher layers are dependent on lower layers. While providing functionality to higher layers, some layers can be self-contained and not dependent on lower layers. While a partial ordering of all functions in a given system may not be possible, if circular dependencies are constrained to occur within layers, the inherent problems of circularity can be more easily managed. Partially ordered dependencies and system layering contribute significantly to the simplicity and coherency of the system design. Partially ordered dependencies also facilitate system testing and analysis."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-8.4_obj",
+     "label": "SA-08(04)",
+     "prose": {
+      "en": "{param:sa-08.04_odp} implement the security design principle of partially ordered dependencies."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-08(04)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing the security design principle of partially ordered dependencies used in the specification, design, development, implementation, and modification of the system"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "security and privacy requirements and specifications for the system"
+      },
+      {
+       "en": "system security and privacy architecture"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-08(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with the responsibility for determining system security and privacy requirements"
+      },
+      {
+       "en": "organizational personnel with system specification, design, development, implementation, and modification responsibilities"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-08(04)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for applying the security design principle of partially ordered dependencies in system specification, design, development, implementation, and modification"
+      },
+      {
+       "en": "mechanisms supporting the application of the security design principle of partially ordered dependencies in system specification, design, development, implementation, and modification"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-08.04_odp": {
+     "guidelines": [
+      {
+       "en": "systems or system components that implement the security design principle of partially ordered dependencies are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-8.4_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  }
+ ]
+}

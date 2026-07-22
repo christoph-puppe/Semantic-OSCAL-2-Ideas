@@ -1,0 +1,292 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-2.7",
+ "version": "5.2.0",
+ "label": "SI-2(7)",
+ "lifecycle": "active",
+ "title": "Root Cause Analysis",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Conduct root cause analysis to identify underlying causes of issues or failures."
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Develop actions to address the root cause of the issue or failure."
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement the actions and monitor the implementation for effectiveness."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Root cause analysis includes a wide range of approaches, tools, and techniques to systematically identify the underlying cause of issues or failures to systems and systems components (hardware, software, and firmware). Organizations consider the severity of the incident to determine what root cause analysis method is used and how quickly implementation of the remediation actions. The root cause analysis includes a timeline, missed warning signs, key decisions, gaps, mitigations, and verification of effectiveness. The actions identified to address the source of the issue are implemented and integrated into applicable organizational policy, procedures, and control implementation."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-2.7_obj",
+     "label": "SI-02(07)",
+     "prose": {
+      "en": "Determine if:"
+     },
+     "children": [
+      {
+       "id": "si-2.7_obj.a",
+       "label": "SI-02(07)a.",
+       "prose": {
+        "en": "Root cause analysis is conducted to identify underlying causes of issues or failures"
+       }
+      },
+      {
+       "id": "si-2.7_obj.b",
+       "label": "SI-02(07)b.",
+       "prose": {
+        "en": "Actions to address the root cause of the issue of failure are developed"
+       }
+      },
+      {
+       "id": "si-2.7_obj.c",
+       "label": "SI-02(07)c.",
+       "children": [
+        {
+         "id": "si-2.7_obj.c-1",
+         "prose": {
+          "en": "The actions (defined in SI-02(07)b.) are implemented"
+         }
+        },
+        {
+         "id": "si-2.7_obj.c-2",
+         "prose": {
+          "en": "The implementation of actions is monitored for effectiveness."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-02(07)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy;"
+      },
+      {
+       "en": "system and information integrity procedures;"
+      },
+      {
+       "en": "procedures addressing flaw remediation;"
+      },
+      {
+       "en": "procedures addressing root cause analysis/process improvement;"
+      },
+      {
+       "en": "system design documentation;"
+      },
+      {
+       "en": "system configuration settings and associated documentation;"
+      },
+      {
+       "en": "system audit records;"
+      },
+      {
+       "en": "system security and privacy plan;"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-02(07)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators;"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities;"
+      },
+      {
+       "en": "organizational personnel responsible for installing, configuring, and/or maintaining the system;"
+      },
+      {
+       "en": "organizational personnel responsible for flaw remediation;"
+      },
+      {
+       "en": "organizational personnel with configuration management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-02(07)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for identifying, reporting, and correcting system flaws;"
+      },
+      {
+       "en": "organizational process for installing software and firmware updates;"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the reporting and correcting of system flaws;"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing testing software and firmware updates"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-15"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-8"
+  }
+ ]
+}

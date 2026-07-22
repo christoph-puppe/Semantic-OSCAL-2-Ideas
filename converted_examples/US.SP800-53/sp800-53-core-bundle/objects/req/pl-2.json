@@ -1,0 +1,943 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PL-2",
+ "version": "5.2.0",
+ "label": "PL-2",
+ "lifecycle": "active",
+ "title": "System Security and Privacy Plans",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop security and privacy plans for the system that:"
+   }
+  },
+  {
+   "id": "smt.a.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Are consistent with the organization’s enterprise architecture;"
+   }
+  },
+  {
+   "id": "smt.a.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Explicitly define the constituent system components;"
+   }
+  },
+  {
+   "id": "smt.a.3",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Describe the operational context of the system in terms of mission and business processes;"
+   }
+  },
+  {
+   "id": "smt.a.4",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identify the individuals that fulfill system roles and responsibilities;"
+   }
+  },
+  {
+   "id": "smt.a.5",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identify the information types processed, stored, and transmitted by the system;"
+   }
+  },
+  {
+   "id": "smt.a.6",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide the security categorization of the system, including supporting rationale;"
+   }
+  },
+  {
+   "id": "smt.a.7",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Describe any specific threats to the system that are of concern to the organization;"
+   }
+  },
+  {
+   "id": "smt.a.8",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide the results of a privacy risk assessment for systems processing personally identifiable information;"
+   }
+  },
+  {
+   "id": "smt.a.9",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Describe the operational environment for the system and any dependencies on or connections to other systems or system components;"
+   }
+  },
+  {
+   "id": "smt.a.10",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide an overview of the security and privacy requirements for the system;"
+   }
+  },
+  {
+   "id": "smt.a.11",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identify any relevant control baselines or overlays, if applicable;"
+   }
+  },
+  {
+   "id": "smt.a.12",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Describe the controls in place or planned for meeting the security and privacy requirements, including a rationale for any tailoring decisions;"
+   }
+  },
+  {
+   "id": "smt.a.13",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Include risk determinations for security and privacy architecture and design decisions;"
+   }
+  },
+  {
+   "id": "smt.a.14",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Include security- and privacy-related activities affecting the system that require planning and coordination with {param:pl-02_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "pl-02_odp.01",
+     "type": "string",
+     "label": "individuals or groups"
+    }
+   ]
+  },
+  {
+   "id": "smt.a.15",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Are reviewed and approved by the authorizing official or designated representative prior to plan implementation."
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Distribute copies of the plans and communicate subsequent changes to the plans to {param:pl-02_odp.02};"
+   },
+   "parameters": [
+    {
+     "name": "pl-02_odp.02",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review the plans {param:pl-02_odp.03};"
+   },
+   "parameters": [
+    {
+     "name": "pl-02_odp.03",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Update the plans to address changes to the system and environment of operation or problems identified during plan implementation or control assessments; and"
+   }
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Protect the plans from unauthorized disclosure and modification."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "System security and privacy plans are scoped to the system and system components within the defined authorization boundary and contain an overview of the security and privacy requirements for the system and the controls selected to satisfy the requirements. The plans describe the intended application of each selected control in the context of the system with a sufficient level of detail to correctly implement the control and to subsequently assess the effectiveness of the control. The control documentation describes how system-specific and hybrid controls are implemented and the plans and expectations regarding the functionality of the system. System security and privacy plans can also be used in the design and development of systems in support of life cycle-based security and privacy engineering processes. System security and privacy plans are living documents that are updated and adapted throughout the system development life cycle (e.g., during capability determination, analysis of alternatives, requests for proposal, and design reviews). Section 2.1 describes the different types of requirements that are relevant to organizations during the system development life cycle and the relationship between requirements and controls.\n\nOrganizations may develop a single, integrated security and privacy plan or maintain separate plans. Security and privacy plans relate security and privacy requirements to a set of controls and control enhancements. The plans describe how the controls and control enhancements meet the security and privacy requirements but do not provide detailed, technical descriptions of the design or implementation of the controls and control enhancements. Security and privacy plans contain sufficient information (including specifications of control parameter values for selection and assignment operations explicitly or by reference) to enable a design and implementation that is unambiguously compliant with the intent of the plans and subsequent determinations of risk to organizational operations and assets, individuals, other organizations, and the Nation if the plan is implemented.\n\nSecurity and privacy plans need not be single documents. The plans can be a collection of various documents, including documents that already exist. Effective security and privacy plans make extensive use of references to policies, procedures, and additional documents, including design and implementation specifications where more detailed information can be obtained. The use of references helps reduce the documentation associated with security and privacy programs and maintains the security- and privacy-related information in other established management and operational areas, including enterprise architecture, system development life cycle, systems engineering, and acquisition. Security and privacy plans need not contain detailed contingency plan or incident response plan information but can instead provide—explicitly or by reference—sufficient information to define what needs to be accomplished by those plans.\n\nSecurity- and privacy-related activities that may require coordination and planning with other individuals or groups within the organization include assessments, audits, inspections, hardware and software maintenance, acquisition and supply chain risk management, patch management, and contingency plan testing. Planning and coordination include emergency and nonemergency (i.e., planned or non-urgent unplanned) situations. The process defined by organizations to plan and coordinate security- and privacy-related activities can also be included in other documents, as appropriate."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pl-2_obj",
+     "label": "PL-02",
+     "children": [
+      {
+       "id": "pl-2_obj.a",
+       "label": "PL-02a.",
+       "children": [
+        {
+         "id": "pl-2_obj.a.1",
+         "label": "PL-02a.01",
+         "children": [
+          {
+           "id": "pl-2_obj.a.1-1",
+           "label": "PL-02a.01[01]",
+           "prose": {
+            "en": "a security plan for the system is developed that is consistent with the organization’s enterprise architecture;"
+           }
+          },
+          {
+           "id": "pl-2_obj.a.1-2",
+           "label": "PL-02a.01[02]",
+           "prose": {
+            "en": "a privacy plan for the system is developed that is consistent with the organization’s enterprise architecture;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pl-2_obj.a.2",
+         "label": "PL-02a.02",
+         "children": [
+          {
+           "id": "pl-2_obj.a.2-1",
+           "label": "PL-02a.02[01]",
+           "prose": {
+            "en": "a security plan for the system is developed that explicitly defines the constituent system components;"
+           }
+          },
+          {
+           "id": "pl-2_obj.a.2-2",
+           "label": "PL-02a.02[02]",
+           "prose": {
+            "en": "a privacy plan for the system is developed that explicitly defines the constituent system components;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pl-2_obj.a.3",
+         "label": "PL-02a.03",
+         "children": [
+          {
+           "id": "pl-2_obj.a.3-1",
+           "label": "PL-02a.03[01]",
+           "prose": {
+            "en": "a security plan for the system is developed that describes the operational context of the system in terms of mission and business processes;"
+           }
+          },
+          {
+           "id": "pl-2_obj.a.3-2",
+           "label": "PL-02a.03[02]",
+           "prose": {
+            "en": "a privacy plan for the system is developed that describes the operational context of the system in terms of mission and business processes;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pl-2_obj.a.4",
+         "label": "PL-02a.04",
+         "children": [
+          {
+           "id": "pl-2_obj.a.4-1",
+           "label": "PL-02a.04[01]",
+           "prose": {
+            "en": "a security plan for the system is developed that identifies the individuals that fulfill system roles and responsibilities;"
+           }
+          },
+          {
+           "id": "pl-2_obj.a.4-2",
+           "label": "PL-02a.04[02]",
+           "prose": {
+            "en": "a privacy plan for the system is developed that identifies the individuals that fulfill system roles and responsibilities;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pl-2_obj.a.5",
+         "label": "PL-02a.05",
+         "children": [
+          {
+           "id": "pl-2_obj.a.5-1",
+           "label": "PL-02a.05[01]",
+           "prose": {
+            "en": "a security plan for the system is developed that identifies the information types processed, stored, and transmitted by the system;"
+           }
+          },
+          {
+           "id": "pl-2_obj.a.5-2",
+           "label": "PL-02a.05[02]",
+           "prose": {
+            "en": "a privacy plan for the system is developed that identifies the information types processed, stored, and transmitted by the system;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pl-2_obj.a.6",
+         "label": "PL-02a.06",
+         "children": [
+          {
+           "id": "pl-2_obj.a.6-1",
+           "label": "PL-02a.06[01]",
+           "prose": {
+            "en": "a security plan for the system is developed that provides the security categorization of the system, including supporting rationale;"
+           }
+          },
+          {
+           "id": "pl-2_obj.a.6-2",
+           "label": "PL-02a.06[02]",
+           "prose": {
+            "en": "a privacy plan for the system is developed that provides the security categorization of the system, including supporting rationale;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pl-2_obj.a.7",
+         "label": "PL-02a.07",
+         "children": [
+          {
+           "id": "pl-2_obj.a.7-1",
+           "label": "PL-02a.07[01]",
+           "prose": {
+            "en": "a security plan for the system is developed that describes any specific threats to the system that are of concern to the organization;"
+           }
+          },
+          {
+           "id": "pl-2_obj.a.7-2",
+           "label": "PL-02a.07[02]",
+           "prose": {
+            "en": "a privacy plan for the system is developed that describes any specific threats to the system that are of concern to the organization;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pl-2_obj.a.8",
+         "label": "PL-02a.08",
+         "children": [
+          {
+           "id": "pl-2_obj.a.8-1",
+           "label": "PL-02a.08[01]",
+           "prose": {
+            "en": "a security plan for the system is developed that provides the results of a privacy risk assessment for systems processing personally identifiable information;"
+           }
+          },
+          {
+           "id": "pl-2_obj.a.8-2",
+           "label": "PL-02a.08[02]",
+           "prose": {
+            "en": "a privacy plan for the system is developed that provides the results of a privacy risk assessment for systems processing personally identifiable information;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pl-2_obj.a.9",
+         "label": "PL-02a.09",
+         "children": [
+          {
+           "id": "pl-2_obj.a.9-1",
+           "label": "PL-02a.09[01]",
+           "prose": {
+            "en": "a security plan for the system is developed that describes the operational environment for the system and any dependencies on or connections to other systems or system components;"
+           }
+          },
+          {
+           "id": "pl-2_obj.a.9-2",
+           "label": "PL-02a.09[02]",
+           "prose": {
+            "en": "a privacy plan for the system is developed that describes the operational environment for the system and any dependencies on or connections to other systems or system components;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pl-2_obj.a.10",
+         "label": "PL-02a.10",
+         "children": [
+          {
+           "id": "pl-2_obj.a.10-1",
+           "label": "PL-02a.10[01]",
+           "prose": {
+            "en": "a security plan for the system is developed that provides an overview of the security requirements for the system;"
+           }
+          },
+          {
+           "id": "pl-2_obj.a.10-2",
+           "label": "PL-02a.10[02]",
+           "prose": {
+            "en": "a privacy plan for the system is developed that provides an overview of the privacy requirements for the system;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pl-2_obj.a.11",
+         "label": "PL-02a.11",
+         "children": [
+          {
+           "id": "pl-2_obj.a.11-1",
+           "label": "PL-02a.11[01]",
+           "prose": {
+            "en": "a security plan for the system is developed that identifies any relevant control baselines or overlays, if applicable;"
+           }
+          },
+          {
+           "id": "pl-2_obj.a.11-2",
+           "label": "PL-02a.11[02]",
+           "prose": {
+            "en": "a privacy plan for the system is developed that identifies any relevant control baselines or overlays, if applicable;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pl-2_obj.a.12",
+         "label": "PL-02a.12",
+         "children": [
+          {
+           "id": "pl-2_obj.a.12-1",
+           "label": "PL-02a.12[01]",
+           "prose": {
+            "en": "a security plan for the system is developed that describes the controls in place or planned for meeting the security requirements, including rationale for any tailoring decisions;"
+           }
+          },
+          {
+           "id": "pl-2_obj.a.12-2",
+           "label": "PL-02a.12[02]",
+           "prose": {
+            "en": "a privacy plan for the system is developed that describes the controls in place or planned for meeting the privacy requirements, including rationale for any tailoring decisions;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pl-2_obj.a.13",
+         "label": "PL-02a.13",
+         "children": [
+          {
+           "id": "pl-2_obj.a.13-1",
+           "label": "PL-02a.13[01]",
+           "prose": {
+            "en": "a security plan for the system is developed that includes risk determinations for security architecture and design decisions;"
+           }
+          },
+          {
+           "id": "pl-2_obj.a.13-2",
+           "label": "PL-02a.13[02]",
+           "prose": {
+            "en": "a privacy plan for the system is developed that includes risk determinations for privacy architecture and design decisions;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pl-2_obj.a.14",
+         "label": "PL-02a.14",
+         "children": [
+          {
+           "id": "pl-2_obj.a.14-1",
+           "label": "PL-02a.14[01]",
+           "prose": {
+            "en": "a security plan for the system is developed that includes security-related activities affecting the system that require planning and coordination with {param:pl-02_odp.01};"
+           }
+          },
+          {
+           "id": "pl-2_obj.a.14-2",
+           "label": "PL-02a.14[02]",
+           "prose": {
+            "en": "a privacy plan for the system is developed that includes privacy-related activities affecting the system that require planning and coordination with {param:pl-02_odp.01};"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pl-2_obj.a.15",
+         "label": "PL-02a.15",
+         "children": [
+          {
+           "id": "pl-2_obj.a.15-1",
+           "label": "PL-02a.15[01]",
+           "prose": {
+            "en": "a security plan for the system is developed that is reviewed and approved by the authorizing official or designated representative prior to plan implementation;"
+           }
+          },
+          {
+           "id": "pl-2_obj.a.15-2",
+           "label": "PL-02a.15[02]",
+           "prose": {
+            "en": "a privacy plan for the system is developed that is reviewed and approved by the authorizing official or designated representative prior to plan implementation."
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "pl-2_obj.b",
+       "label": "PL-02b.",
+       "children": [
+        {
+         "id": "pl-2_obj.b-1",
+         "label": "PL-02b.[01]",
+         "prose": {
+          "en": "copies of the plans are distributed to {param:pl-02_odp.02};"
+         }
+        },
+        {
+         "id": "pl-2_obj.b-2",
+         "label": "PL-02b.[02]",
+         "prose": {
+          "en": "subsequent changes to the plans are communicated to {param:pl-02_odp.02};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pl-2_obj.c",
+       "label": "PL-02c.",
+       "prose": {
+        "en": "plans are reviewed {param:pl-02_odp.03};"
+       }
+      },
+      {
+       "id": "pl-2_obj.d",
+       "label": "PL-02d.",
+       "children": [
+        {
+         "id": "pl-2_obj.d-1",
+         "label": "PL-02d.[01]",
+         "prose": {
+          "en": "plans are updated to address changes to the system and environment of operations;"
+         }
+        },
+        {
+         "id": "pl-2_obj.d-2",
+         "label": "PL-02d.[02]",
+         "prose": {
+          "en": "plans are updated to address problems identified during the plan implementation;"
+         }
+        },
+        {
+         "id": "pl-2_obj.d-3",
+         "label": "PL-02d.[03]",
+         "prose": {
+          "en": "plans are updated to address problems identified during control assessments;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pl-2_obj.e",
+       "label": "PL-02e.",
+       "children": [
+        {
+         "id": "pl-2_obj.e-1",
+         "label": "PL-02e.[01]",
+         "prose": {
+          "en": "plans are protected from unauthorized disclosure;"
+         }
+        },
+        {
+         "id": "pl-2_obj.e-2",
+         "label": "PL-02e.[02]",
+         "prose": {
+          "en": "plans are protected from unauthorized modification."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PL-02-Examine",
+     "objects": [
+      {
+       "en": "Security and privacy planning policy"
+      },
+      {
+       "en": "procedures addressing system security and privacy plan development and implementation"
+      },
+      {
+       "en": "procedures addressing security and privacy plan reviews and updates"
+      },
+      {
+       "en": "enterprise architecture documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "records of system security and privacy plan reviews and updates"
+      },
+      {
+       "en": "security and privacy architecture and design documentation"
+      },
+      {
+       "en": "risk assessments"
+      },
+      {
+       "en": "risk assessment results"
+      },
+      {
+       "en": "control assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PL-02-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system security and privacy planning and plan implementation responsibilities"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PL-02-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for system security and privacy plan development, review, update, and approval"
+      },
+      {
+       "en": "mechanisms supporting the system security and privacy plan"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pl-02_odp.01": {
+     "guidelines": [
+      {
+       "en": "individuals or groups with whom security and privacy-related activities affecting the system that require planning and coordination is/are assigned;"
+      }
+     ],
+     "alt-identifiers": [
+      "pl-2_prm_1"
+     ]
+    },
+    "pl-02_odp.02": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to receive distributed copies of the system security and privacy plans is/are assigned;"
+      }
+     ],
+     "alt-identifiers": [
+      "pl-2_prm_2"
+     ]
+    },
+    "pl-02_odp.03": {
+     "guidelines": [
+      {
+       "en": "frequency to review system security and privacy plans is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pl-2_prm_3"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-18r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-37r2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-14"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-20"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-22"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-4"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-2.3",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-3",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-6",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/PL-2.3",
+    "mode": "merged-into",
+    "label": "PL-02(03)",
+    "title": "Plan and Coordinate with Other Organizational Entities"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/PL-3",
+    "mode": "merged-into",
+    "label": "PL-03",
+    "title": "System Security Plan Update"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/PL-6",
+    "mode": "merged-into",
+    "label": "PL-06",
+    "title": "Security-related Activity Planning"
+   }
+  ]
+ }
+}

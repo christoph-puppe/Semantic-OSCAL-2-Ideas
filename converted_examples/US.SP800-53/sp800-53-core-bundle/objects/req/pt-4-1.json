@@ -1,0 +1,126 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PT-4.1",
+ "version": "5.2.0",
+ "label": "PT-4(1)",
+ "lifecycle": "active",
+ "title": "Tailored Consent",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide {param:pt-04.01_odp} to allow individuals to tailor processing permissions to selected elements of personally identifiable information."
+   },
+   "parameters": [
+    {
+     "name": "pt-04.01_odp",
+     "type": "string",
+     "label": "mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "While some processing may be necessary for the basic functionality of the product or service, other processing may not. In these circumstances, organizations allow individuals to select how specific personally identifiable information elements may be processed. More tailored consent may help reduce privacy risk, increase individual satisfaction, and avoid adverse behaviors, such as abandonment of the product or service."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pt-4.1_obj",
+     "label": "PT-04(01)",
+     "prose": {
+      "en": "{param:pt-04.01_odp} are provided to allow individuals to tailor processing permissions to selected elements of personally identifiable information."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PT-04(01)-Examine",
+     "objects": [
+      {
+       "en": "Personally identifiable information processing and transparency policy and procedures"
+      },
+      {
+       "en": "consent policies and procedures"
+      },
+      {
+       "en": "consent tools and mechanisms"
+      },
+      {
+       "en": "consent presentation or display (user interface)"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PT-04(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personally identifiable information processing and transparency responsibilities"
+      },
+      {
+       "en": "organizational personnel with user interface or user experience responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PT-04(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for consenting to the processing of personally identifiable information"
+      },
+      {
+       "en": "consent tools or mechanisms"
+      },
+      {
+       "en": "mechanisms implementing consent"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pt-04.01_odp": {
+     "guidelines": [
+      {
+       "en": "tailoring mechanisms for processing selected elements of personally identifiable information permissions are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pt-4.1_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-2"
+  }
+ ]
+}

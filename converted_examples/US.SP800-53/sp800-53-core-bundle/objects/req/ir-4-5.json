@@ -1,0 +1,129 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-4.5",
+ "version": "5.2.0",
+ "label": "IR-4(5)",
+ "lifecycle": "active",
+ "title": "Automatic Disabling of System",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement a configurable capability to automatically disable the system if {param:ir-04.05_odp} are detected."
+   },
+   "parameters": [
+    {
+     "name": "ir-04.05_odp",
+     "type": "string",
+     "label": "security violations"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations consider whether the capability to automatically disable the system conflicts with continuity of operations requirements specified as part of CP-2 or IR-4(3) . Security violations include cyber-attacks that have compromised the integrity of the system or exfiltrated organizational information and serious errors in software programs that could adversely impact organizational missions or functions or jeopardize the safety of individuals."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-4.5_obj",
+     "label": "IR-04(05)",
+     "prose": {
+      "en": "a configurable capability is implemented to automatically disable the system if {param:ir-04.05_odp} are detected."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-04(05)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing incident handling"
+      },
+      {
+       "en": "automated mechanisms supporting incident handling"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-04(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident handling responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IR-04(05)-Test",
+     "objects": [
+      {
+       "en": "Incident handling capability for the organization"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing automatic disabling of the system"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ir-04.05_odp": {
+     "guidelines": [
+      {
+       "en": "security violations that automatically disable a system are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-4.5_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  }
+ ]
+}

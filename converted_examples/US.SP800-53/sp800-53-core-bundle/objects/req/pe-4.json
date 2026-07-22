@@ -1,0 +1,170 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-4",
+ "version": "5.2.0",
+ "label": "PE-4",
+ "lifecycle": "active",
+ "title": "Access Control for Transmission",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Control physical access to {param:pe-04_odp.01} within organizational facilities using {param:pe-04_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "pe-04_odp.01",
+     "type": "string",
+     "label": "system distribution and transmission lines"
+    },
+    {
+     "name": "pe-04_odp.02",
+     "type": "string",
+     "label": "security controls"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Security controls applied to system distribution and transmission lines prevent accidental damage, disruption, and physical tampering. Such controls may also be necessary to prevent eavesdropping or modification of unencrypted transmissions. Security controls used to control physical access to system distribution and transmission lines include disconnected or locked spare jacks, locked wiring closets, protection of cabling by conduit or cable trays, and wiretapping sensors."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-4_obj",
+     "label": "PE-04",
+     "prose": {
+      "en": "physical access to {param:pe-04_odp.01} within organizational facilities is controlled using {param:pe-04_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-04-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing access control for transmission mediums"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "facility communications and wiring diagrams"
+      },
+      {
+       "en": "list of physical security safeguards applied to system distribution and transmission lines"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-04-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with physical access control responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-04-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for access control to distribution and transmission lines"
+      },
+      {
+       "en": "mechanisms/security safeguards supporting and/or implementing access control to distribution and transmission lines"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-04_odp.01": {
+     "guidelines": [
+      {
+       "en": "system distribution and transmission lines requiring physical access controls are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-4_prm_1"
+     ]
+    },
+    "pe-04_odp.02": {
+     "guidelines": [
+      {
+       "en": "security controls to be implemented to control physical access to system distribution and transmission lines within the organizational facility are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-4_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-8"
+  }
+ ]
+}

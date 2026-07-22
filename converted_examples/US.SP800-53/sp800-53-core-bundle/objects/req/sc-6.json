@@ -1,0 +1,169 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-6",
+ "version": "5.2.0",
+ "label": "SC-6",
+ "lifecycle": "active",
+ "title": "Resource Availability",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Protect the availability of resources by allocating {param:sc-06_odp.01} by {param:sc-06_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "sc-06_odp.01",
+     "type": "string",
+     "label": "resources"
+    },
+    {
+     "name": "sc-06_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "priority"
+      },
+      {
+       "value": "quota"
+      },
+      {
+       "value": "{param:sc-06_odp.03} "
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "sc-06_odp.03",
+     "type": "string",
+     "label": "controls"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Priority protection prevents lower-priority processes from delaying or interfering with the system that services higher-priority processes. Quotas prevent users or processes from obtaining more than predetermined amounts of resources."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-6_obj",
+     "label": "SC-06",
+     "prose": {
+      "en": "the availability of resources is protected by allocating {param:sc-06_odp.01} by {param:sc-06_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-06-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing prioritization of system resources"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-06-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-06-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing a resource allocation capability"
+      },
+      {
+       "en": "safeguards employed to protect availability of resources"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-06_odp.01": {
+     "guidelines": [
+      {
+       "en": "resources to be allocated to protect the availability of resources are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-6_prm_1"
+     ]
+    },
+    "sc-06_odp.02": {
+     "alt-identifiers": [
+      "sc-6_prm_2"
+     ]
+    },
+    "sc-06_odp.03": {
+     "guidelines": [
+      {
+       "en": "controls to protect the availability of resources are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-6_prm_3"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://obamawhitehouse.archives.gov/sites/default/files/omb/assets/omb/memoranda/fy2008/m08-05.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.dhs.gov/trusted-internet-connections"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-5"
+  }
+ ]
+}

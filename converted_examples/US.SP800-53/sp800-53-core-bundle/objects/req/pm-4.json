@@ -1,0 +1,296 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-4",
+ "version": "5.2.0",
+ "label": "PM-4",
+ "lifecycle": "active",
+ "title": "Plan of Action and Milestones Process",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Implement a process to ensure that plans of action and milestones for the information security, privacy, and supply chain risk management programs and associated organizational systems:"
+   }
+  },
+  {
+   "id": "smt.a.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Are developed and maintained;"
+   }
+  },
+  {
+   "id": "smt.a.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Document the remedial information security, privacy, and supply chain risk management actions to adequately respond to risk to organizational operations and assets, individuals, other organizations, and the Nation; and"
+   }
+  },
+  {
+   "id": "smt.a.3",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Are reported in accordance with established reporting requirements."
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review plans of action and milestones for consistency with the organizational risk management strategy and organization-wide priorities for risk response actions."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The plan of action and milestones is a key organizational document and is subject to reporting requirements established by the Office of Management and Budget. Organizations develop plans of action and milestones with an organization-wide perspective, prioritizing risk response actions and ensuring consistency with the goals and objectives of the organization. Plan of action and milestones updates are based on findings from control assessments and continuous monitoring activities. There can be multiple plans of action and milestones corresponding to the information system level, mission/business process level, and organizational/governance level. While plans of action and milestones are required for federal organizations, other types of organizations can help reduce risk by documenting and tracking planned remediations. Specific guidance on plans of action and milestones at the system level is provided in CA-5."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-4_obj",
+     "label": "PM-04",
+     "children": [
+      {
+       "id": "pm-4_obj.a",
+       "label": "PM-04a.",
+       "children": [
+        {
+         "id": "pm-4_obj.a.1",
+         "label": "PM-04a.01",
+         "children": [
+          {
+           "id": "pm-4_obj.a.1-1",
+           "label": "PM-04a.01[01]",
+           "prose": {
+            "en": "a process to ensure that plans of action and milestones for the information security program and associated organizational systems are developed;"
+           }
+          },
+          {
+           "id": "pm-4_obj.a.1-2",
+           "label": "PM-04a.01[02]",
+           "prose": {
+            "en": "a process to ensure that plans of action and milestones for the information security program and associated organizational systems are maintained;"
+           }
+          },
+          {
+           "id": "pm-4_obj.a.1-3",
+           "label": "PM-04a.01[03]",
+           "prose": {
+            "en": "a process to ensure that plans of action and milestones for the privacy program and associated organizational systems are developed;"
+           }
+          },
+          {
+           "id": "pm-4_obj.a.1-4",
+           "label": "PM-04a.01[04]",
+           "prose": {
+            "en": "a process to ensure that plans of action and milestones for the privacy program and associated organizational systems are maintained;"
+           }
+          },
+          {
+           "id": "pm-4_obj.a.1-5",
+           "label": "PM-04a.01[05]",
+           "prose": {
+            "en": "a process to ensure that plans of action and milestones for the supply chain risk management program and associated organizational systems are developed;"
+           }
+          },
+          {
+           "id": "pm-4_obj.a.1-6",
+           "label": "PM-04a.01[06]",
+           "prose": {
+            "en": "a process to ensure that plans of action and milestones for the supply chain risk management program and associated organizational systems are maintained;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pm-4_obj.a.2",
+         "label": "PM-04a.02",
+         "children": [
+          {
+           "id": "pm-4_obj.a.2-1",
+           "label": "PM-04a.02[01]",
+           "prose": {
+            "en": "a process to ensure that plans of action and milestones for the information security program and associated organizational systems document remedial information security risk management actions to adequately respond to risks to organizational operations and assets, individuals, other organizations, and the Nation;"
+           }
+          },
+          {
+           "id": "pm-4_obj.a.2-2",
+           "label": "PM-04a.02[02]",
+           "prose": {
+            "en": "a process to ensure that plans of action and milestones for the privacy program and associated organizational systems document remedial privacy risk management actions to adequately respond to risks to organizational operations and assets, individuals, other organizations, and the Nation;"
+           }
+          },
+          {
+           "id": "pm-4_obj.a.2-3",
+           "label": "PM-04a.02[03]",
+           "prose": {
+            "en": "a process to ensure that plans of action and milestones for the supply chain risk management program and associated organizational systems document remedial supply chain risk management actions to adequately respond to risks to organizational operations and assets, individuals, other organizations, and the Nation;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pm-4_obj.a.3",
+         "label": "PM-04a.03",
+         "children": [
+          {
+           "id": "pm-4_obj.a.3-1",
+           "label": "PM-04a.03[01]",
+           "prose": {
+            "en": "a process to ensure that plans of action and milestones for the information security risk management programs and associated organizational systems are reported in accordance with established reporting requirements;"
+           }
+          },
+          {
+           "id": "pm-4_obj.a.3-2",
+           "label": "PM-04a.03[02]",
+           "prose": {
+            "en": "a process to ensure that plans of action and milestones for the privacy risk management programs and associated organizational systems are reported in accordance with established reporting requirements;"
+           }
+          },
+          {
+           "id": "pm-4_obj.a.3-3",
+           "label": "PM-04a.03[03]",
+           "prose": {
+            "en": "a process to ensure that plans of action and milestones for the supply chain risk management programs and associated organizational systems are reported in accordance with established reporting requirements;"
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "pm-4_obj.b",
+       "label": "PM-04b.",
+       "children": [
+        {
+         "id": "pm-4_obj.b-1",
+         "label": "PM-04b.[01]",
+         "prose": {
+          "en": "plans of action and milestones are reviewed for consistency with the organizational risk management strategy;"
+         }
+        },
+        {
+         "id": "pm-4_obj.b-2",
+         "label": "PM-04b.[02]",
+         "prose": {
+          "en": "plans of action and milestones are reviewed for consistency with organization-wide priorities for risk response actions."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-04-Examine",
+     "objects": [
+      {
+       "en": "Information security program plan"
+      },
+      {
+       "en": "plans of action and milestones"
+      },
+      {
+       "en": "procedures addressing plans of action and milestones development and maintenance"
+      },
+      {
+       "en": "procedures addressing plans of action and milestones reporting"
+      },
+      {
+       "en": "procedures for reviewing plans of action and milestones for consistency with risk management strategy and risk response priorities"
+      },
+      {
+       "en": "results of risk assessments associated with plans of action and milestones"
+      },
+      {
+       "en": "OMB FISMA reporting requirements"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-04-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for developing, maintaining, reviewing, and reporting plans of action and milestones"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PM-04-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for plan of action and milestones development, review, maintenance, and reporting"
+      },
+      {
+       "en": "mechanisms supporting plans of action and milestones"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.govinfo.gov/content/pkg/STATUTE-88/pdf/STATUTE-88-Pg1896.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-37r2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  }
+ ]
+}

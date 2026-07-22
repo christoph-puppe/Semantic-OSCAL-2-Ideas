@@ -1,0 +1,185 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-4.21",
+ "version": "5.2.0",
+ "label": "AC-4(21)",
+ "lifecycle": "active",
+ "title": "Physical or Logical Separation of Information Flows",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Separate information flows logically or physically using {param:ac-4.21_prm_1} to accomplish {param:ac-04.21_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "ac-04.21_odp.03",
+     "type": "string",
+     "label": "required separations"
+    },
+    {
+     "name": "ac-4.21_prm_1",
+     "type": "string",
+     "label": "organization-defined mechanisms and/or techniques"
+    },
+    {
+     "name": "ac-04.21_odp.01",
+     "type": "string",
+     "label": "mechanisms and/or techniques"
+    },
+    {
+     "name": "ac-04.21_odp.02",
+     "type": "string",
+     "label": "mechanisms and/or techniques"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Enforcing the separation of information flows associated with defined types of data can enhance protection by ensuring that information is not commingled while in transit and by enabling flow control by transmission paths that are not otherwise achievable. Types of separable information include inbound and outbound communications traffic, service requests and responses, and information of differing security impact or classification levels."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-4.21_obj",
+     "label": "AC-04(21)",
+     "children": [
+      {
+       "id": "ac-4.21_obj-1",
+       "label": "AC-04(21)[01]",
+       "prose": {
+        "en": "information flows are separated logically using {param:ac-04.21_odp.01} to accomplish {param:ac-04.21_odp.03};"
+       }
+      },
+      {
+       "id": "ac-4.21_obj-2",
+       "label": "AC-04(21)[02]",
+       "prose": {
+        "en": "information flows are separated physically using {param:ac-04.21_odp.02} to accomplish {param:ac-04.21_odp.03}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-04(21)-Examine",
+     "objects": [
+      {
+       "en": "Information flow enforcement policy"
+      },
+      {
+       "en": "information flow control policies"
+      },
+      {
+       "en": "procedures addressing information flow enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of required separation of information flows by information types"
+      },
+      {
+       "en": "list of mechanisms and/or techniques used to logically or physically separate information flows"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-04(21)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information flow enforcement responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-04(21)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing information flow enforcement functions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-4.21_prm_1": {
+     "aggregates": [
+      "ac-04.21_odp.01",
+      "ac-04.21_odp.02"
+     ]
+    },
+    "ac-04.21_odp.01": {
+     "guidelines": [
+      {
+       "en": "mechanisms and/or techniques used to logically separate information flows are defined (if selected);"
+      }
+     ]
+    },
+    "ac-04.21_odp.02": {
+     "guidelines": [
+      {
+       "en": "mechanisms and/or techniques used to physically separate information flows are defined (if selected);"
+      }
+     ]
+    },
+    "ac-04.21_odp.03": {
+     "guidelines": [
+      {
+       "en": "required separations by types of information are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-4.21_prm_2"
+     ],
+     "alt-label": "required separations by types of information"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-32"
+  }
+ ]
+}

@@ -1,0 +1,111 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MP-8.3",
+ "version": "5.2.0",
+ "label": "MP-8(3)",
+ "lifecycle": "active",
+ "title": "Controlled Unclassified Information",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Downgrade system media containing controlled unclassified information prior to public release."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The downgrading of controlled unclassified information uses approved sanitization tools, techniques, and procedures."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "mp-8.3_obj",
+     "label": "MP-08(03)",
+     "children": [
+      {
+       "id": "mp-8.3_obj-1",
+       "label": "MP-08(03)[01]",
+       "prose": {
+        "en": "system media containing controlled unclassified information is identified;"
+       }
+      },
+      {
+       "id": "mp-8.3_obj-2",
+       "label": "MP-08(03)[02]",
+       "prose": {
+        "en": "system media containing controlled unclassified information is downgraded prior to public release."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MP-08(03)-Examine",
+     "objects": [
+      {
+       "en": "System media protection policy"
+      },
+      {
+       "en": "access authorization policy"
+      },
+      {
+       "en": "procedures addressing downgrading of media containing CUI"
+      },
+      {
+       "en": "applicable federal and organizational standards and policies regarding protection of CUI"
+      },
+      {
+       "en": "media downgrading records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MP-08(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system media downgrading responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MP-08(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for media downgrading"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing media downgrading"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-8"
+  }
+ ]
+}

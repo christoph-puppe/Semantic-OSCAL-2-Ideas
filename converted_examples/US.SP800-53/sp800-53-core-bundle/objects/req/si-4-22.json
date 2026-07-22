@@ -1,0 +1,214 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-4.22",
+ "version": "5.2.0",
+ "label": "SI-4(22)",
+ "lifecycle": "active",
+ "title": "Unauthorized Network Services",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Detect network services that have not been authorized or approved by {param:si-04.22_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "si-04.22_odp.01",
+     "type": "string",
+     "label": "authorization or approval processes"
+    },
+    {
+     "name": "si-04.22_odp.03",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "{param:si-04.22_odp.02} when detected."
+   },
+   "parameters": [
+    {
+     "name": "si-04.22_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "audit"
+      },
+      {
+       "value": "alert {param:si-04.22_odp.03} "
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Unauthorized or unapproved network services include services in service-oriented architectures that lack organizational verification or validation and may therefore be unreliable or serve as malicious rogues for valid services."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-4.22_obj",
+     "label": "SI-04(22)",
+     "children": [
+      {
+       "id": "si-4.22_obj.a",
+       "label": "SI-04(22)(a)",
+       "prose": {
+        "en": "network services that have not been authorized or approved by {param:si-04.22_odp.01} are detected;"
+       }
+      },
+      {
+       "id": "si-4.22_obj.b",
+       "label": "SI-04(22)(b)",
+       "prose": {
+        "en": "{param:si-04.22_odp.02} is/are initiated when network services that have not been authorized or approved by authorization or approval processes are detected."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-04(22)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing system monitoring tools and techniques"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system monitoring tools and techniques documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "documented authorization/approval of network services"
+      },
+      {
+       "en": "notifications or alerts of unauthorized network services"
+      },
+      {
+       "en": "system monitoring logs or records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-04(22)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for monitoring the system"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-04(22)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for system monitoring"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing a system monitoring capability"
+      },
+      {
+       "en": "mechanisms for auditing network services"
+      },
+      {
+       "en": "mechanisms for providing alerts"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-04.22_odp.01": {
+     "guidelines": [
+      {
+       "en": "authorization or approval processes for network services are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-4.22_prm_1"
+     ]
+    },
+    "si-04.22_odp.02": {
+     "alt-identifiers": [
+      "si-4.22_prm_2"
+     ]
+    },
+    "si-04.22_odp.03": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to be alerted upon the detection of network services that have not been authorized or approved by authorization or approval processes is/are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "si-4.22_prm_3"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-7"
+  }
+ ]
+}

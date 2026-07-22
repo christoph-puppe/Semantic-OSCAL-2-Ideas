@@ -1,0 +1,147 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-8.28",
+ "version": "5.2.0",
+ "label": "SA-8(28)",
+ "lifecycle": "active",
+ "title": "Acceptable Security",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement the security design principle of acceptable security in {param:sa-08.28_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sa-08.28_odp",
+     "type": "string",
+     "label": "systems or system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The principle of acceptable security requires that the level of privacy and performance that the system provides is consistent with the users’ expectations. The perception of personal privacy may affect user behavior, morale, and effectiveness. Based on the organizational privacy policy and the system design, users should be able to restrict their actions to protect their privacy. When systems fail to provide intuitive interfaces or meet privacy and performance expectations, users may either choose to completely avoid the system or use it in ways that may be inefficient or even insecure."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-8.28_obj",
+     "label": "SA-08(28)",
+     "prose": {
+      "en": "{param:sa-08.28_odp} implement the security design principle of acceptable security."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-08(28)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "procedures addressing the security design principle of acceptable security used in the specification, design, development, implementation, and modification of the system"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "security and privacy requirements and specifications for the system"
+      },
+      {
+       "en": "system security and privacy architecture"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "privacy notifications provided to users"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-08(28)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with system specification, design, development, implementation, and modification responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-08(28)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for applying the security design principle of acceptable security in system specification, design, development, implementation, and modification"
+      },
+      {
+       "en": "mechanisms supporting the application of the security design principle of acceptable security in system specification, design, development, implementation, and modification"
+      },
+      {
+       "en": "mechanisms that enforce security policies"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-08.28_odp": {
+     "guidelines": [
+      {
+       "en": "systems or system components that implement the security design principle of acceptable security are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-8.28_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  }
+ ]
+}

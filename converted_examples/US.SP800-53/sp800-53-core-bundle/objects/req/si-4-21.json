@@ -1,0 +1,156 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-4.21",
+ "version": "5.2.0",
+ "label": "SI-4(21)",
+ "lifecycle": "active",
+ "title": "Probationary Periods",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Implement the following additional monitoring of individuals during {param:si-04.21_odp.02}: {param:si-04.21_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "si-04.21_odp.01",
+     "type": "string",
+     "label": "additional monitoring"
+    },
+    {
+     "name": "si-04.21_odp.02",
+     "type": "string",
+     "label": "probationary period"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "During probationary periods, employees do not have permanent employment status within organizations. Without such status or access to information that is resident on the system, additional monitoring can help identify any potentially malicious activity or inappropriate behavior."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-4.21_obj",
+     "label": "SI-04(21)",
+     "prose": {
+      "en": "{param:si-04.21_odp.01} of individuals is implemented during {param:si-04.21_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-04(21)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing system monitoring"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system monitoring tools and techniques documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system monitoring logs or records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-04(21)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for monitoring the system"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-04(21)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for system monitoring"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing a system monitoring capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-04.21_odp.01": {
+     "guidelines": [
+      {
+       "en": "additional monitoring to be implemented on individuals during probationary periods is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-4.21_prm_2"
+     ]
+    },
+    "si-04.21_odp.02": {
+     "guidelines": [
+      {
+       "en": "the probationary period of individuals is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-4.21_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-18"
+  }
+ ]
+}

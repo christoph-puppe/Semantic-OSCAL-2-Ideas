@@ -1,0 +1,167 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-6.2",
+ "version": "5.2.0",
+ "label": "CM-6(2)",
+ "lifecycle": "active",
+ "title": "Respond to Unauthorized Changes",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Take the following actions in response to unauthorized changes to {param:cm-06.02_odp.02}: {param:cm-06.02_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "cm-06.02_odp.01",
+     "type": "string",
+     "label": "actions"
+    },
+    {
+     "name": "cm-06.02_odp.02",
+     "type": "string",
+     "label": "configuration settings"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Responses to unauthorized changes to configuration settings include alerting designated organizational personnel, restoring established configuration settings, or—in extreme cases—halting affected system processing."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-6.2_obj",
+     "label": "CM-06(02)",
+     "prose": {
+      "en": "{param:cm-06.02_odp.01} are taken in response to unauthorized changes to {param:cm-06.02_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-06(02)-Examine",
+     "objects": [
+      {
+       "en": "System security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "configuration management policy"
+      },
+      {
+       "en": "procedures addressing configuration settings for the system"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "alerts/notifications of unauthorized changes to system configuration settings"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "documented responses to unauthorized changes to system configuration settings"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-06(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with security configuration management responsibilities"
+      },
+      {
+       "en": "organizational personnel with security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-06(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational process for responding to unauthorized changes to system configuration settings"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing actions in response to unauthorized changes"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-06.02_odp.01": {
+     "guidelines": [
+      {
+       "en": "actions to be taken upon an unauthorized change are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-6.2_prm_2"
+     ]
+    },
+    "cm-06.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "configuration settings requiring action upon an unauthorized change are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-6.2_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  }
+ ]
+}

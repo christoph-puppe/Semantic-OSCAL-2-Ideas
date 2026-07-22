@@ -1,0 +1,393 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-11",
+ "version": "5.2.0",
+ "label": "SA-11",
+ "lifecycle": "active",
+ "title": "Developer Testing and Evaluation",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service, at all post-design stages of the system development life cycle, to:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop and implement a plan for ongoing security and privacy control assessments;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Perform {param:sa-11_odp.01} testing/evaluation {param:sa-11_odp.02} at {param:sa-11_odp.03};"
+   },
+   "parameters": [
+    {
+     "name": "sa-11_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "unit"
+      },
+      {
+       "value": "integration"
+      },
+      {
+       "value": "system"
+      },
+      {
+       "value": "regression"
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "sa-11_odp.02",
+     "type": "string",
+     "label": "frequency to conduct"
+    },
+    {
+     "name": "sa-11_odp.03",
+     "type": "string",
+     "label": "depth and coverage"
+    }
+   ]
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Produce evidence of the execution of the assessment plan and the results of the testing and evaluation;"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Implement a verifiable flaw remediation process; and"
+   }
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Correct flaws identified during testing and evaluation."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Developmental testing and evaluation confirms that the required controls are implemented correctly, operating as intended, enforcing the desired security and privacy policies, and meeting established security and privacy requirements. Security properties of systems and the privacy of individuals may be affected by the interconnection of system components or changes to those components. The interconnections or changes—including upgrading or replacing applications, operating systems, and firmware—may adversely affect previously implemented controls. Ongoing assessment during development allows for additional types of testing and evaluation that developers can conduct to reduce or eliminate potential flaws. Testing custom software applications may require approaches such as manual code review, security architecture review, and penetration testing, as well as and static analysis, dynamic analysis, binary analysis, or a hybrid of the three analysis approaches.\n\nDevelopers can use the analysis approaches, along with security instrumentation and fuzzing, in a variety of tools and in source code reviews. The security and privacy assessment plans include the specific activities that developers plan to carry out, including the types of analyses, testing, evaluation, and reviews of software and firmware components; the degree of rigor to be applied; the frequency of the ongoing testing and evaluation; and the types of artifacts produced during those processes. The depth of testing and evaluation refers to the rigor and level of detail associated with the assessment process. The coverage of testing and evaluation refers to the scope (i.e., number and type) of the artifacts included in the assessment process. Contracts specify the acceptance criteria for security and privacy assessment plans, flaw remediation processes, and the evidence that the plans and processes have been diligently applied. Methods for reviewing and protecting assessment plans, evidence, and documentation are commensurate with the security category or classification level of the system. Contracts may specify protection requirements for documentation."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-11_obj",
+     "label": "SA-11",
+     "children": [
+      {
+       "id": "sa-11_obj.a",
+       "label": "SA-11a.",
+       "children": [
+        {
+         "id": "sa-11_obj.a-1",
+         "label": "SA-11a.[01]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required at all post-design stages of the system development life cycle to develop a plan for ongoing security assessments;"
+         }
+        },
+        {
+         "id": "sa-11_obj.a-2",
+         "label": "SA-11a.[02]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required at all post-design stages of the system development life cycle to implement a plan for ongoing security assessments;"
+         }
+        },
+        {
+         "id": "sa-11_obj.a-3",
+         "label": "SA-11a.[03]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required at all post-design stages of the system development life cycle to develop a plan for privacy assessments;"
+         }
+        },
+        {
+         "id": "sa-11_obj.a-4",
+         "label": "SA-11a.[04]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required at all post-design stages of the system development life cycle to implement a plan for ongoing privacy assessments;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-11_obj.b",
+       "label": "SA-11b.",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required at all post-design stages of the system development life cycle to perform {param:sa-11_odp.01} testing/evaluation {param:sa-11_odp.02} at {param:sa-11_odp.03};"
+       }
+      },
+      {
+       "id": "sa-11_obj.c",
+       "label": "SA-11c.",
+       "children": [
+        {
+         "id": "sa-11_obj.c-1",
+         "label": "SA-11c.[01]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required at all post-design stages of the system development life cycle to produce evidence of the execution of the assessment plan;"
+         }
+        },
+        {
+         "id": "sa-11_obj.c-2",
+         "label": "SA-11c.[02]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required at all post-design stages of the system development life cycle to produce the results of the testing and evaluation;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-11_obj.d",
+       "label": "SA-11d.",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required at all post-design stages of the system development life cycle to implement a verifiable flaw remediation process;"
+       }
+      },
+      {
+       "id": "sa-11_obj.e",
+       "label": "SA-11e.",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required at all post-design stages of the system development life cycle to correct flaws identified during testing and evaluation."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-11-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "procedures addressing system developer security and privacy testing"
+      },
+      {
+       "en": "procedures addressing flaw remediation"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "security and privacy architecture"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system developer security and privacy assessment plans"
+      },
+      {
+       "en": "results of developer security and privacy assessments for the system, system component, or system service"
+      },
+      {
+       "en": "security and privacy flaw and remediation tracking records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-11-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with developer security and privacy testing responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-11-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for monitoring developer security testing and evaluation"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the monitoring of developer security and privacy testing and evaluation"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-11_odp.01": {
+     "alt-identifiers": [
+      "sa-11_prm_1"
+     ]
+    },
+    "sa-11_odp.02": {
+     "guidelines": [
+      {
+       "en": "frequency at which to conduct {param:sa-11_odp.01} testing/evaluation is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-11_prm_2"
+     ],
+     "alt-label": "frequency"
+    },
+    "sa-11_odp.03": {
+     "guidelines": [
+      {
+       "en": "depth and coverage of {param:sa-11_odp.01} testing/evaluation is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-11_prm_3"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.commoncriteriaportal.org/files/ccfiles/CCPART3V3.1R5.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-30r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-53Ar4"
+  },
+  {
+   "type": "reference",
+   "ref": "https://csrc.nist.gov/publications/detail/sp/800-154/draft"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-15"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-7"
+  }
+ ]
+}

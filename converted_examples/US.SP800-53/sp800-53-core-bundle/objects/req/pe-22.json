@@ -1,0 +1,157 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-22",
+ "version": "5.2.0",
+ "label": "PE-22",
+ "lifecycle": "active",
+ "title": "Component Marking",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Mark {param:pe-22_odp} indicating the impact level or classification level of the information permitted to be processed, stored, or transmitted by the hardware component."
+   },
+   "parameters": [
+    {
+     "name": "pe-22_odp",
+     "type": "string",
+     "label": "system hardware components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Hardware components that may require marking include input and output devices. Input devices include desktop and notebook computers, keyboards, tablets, and smart phones. Output devices include printers, monitors/video displays, facsimile machines, scanners, copiers, and audio devices. Permissions controlling output to the output devices are addressed in AC-3 or AC-4 . Components are marked to indicate the impact level or classification level of the system to which the devices are connected, or the impact level or classification level of the information permitted to be output. Security marking refers to the use of human-readable security attributes. Security labeling refers to the use of security attributes for internal system data structures. Security marking is generally not required for hardware components that process, store, or transmit information determined by organizations to be in the public domain or to be publicly releasable. However, organizations may require markings for hardware components that process, store, or transmit public information in order to indicate that such information is publicly releasable. Marking of system hardware components reflects applicable laws, executive orders, directives, policies, regulations, and standards."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-22_obj",
+     "label": "PE-22",
+     "prose": {
+      "en": "{param:pe-22_odp} are marked indicating the impact level or classification level of the information permitted to be processed, stored, or transmitted by the hardware component."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-22-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing component marking"
+      },
+      {
+       "en": "list of component marking security attributes"
+      },
+      {
+       "en": "component inventory"
+      },
+      {
+       "en": "information types and their impact/classification level"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-22-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with component marking responsibilities"
+      },
+      {
+       "en": "organizational personnel with component inventory responsibilities"
+      },
+      {
+       "en": "organizational personnel with information categorization/classification responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-22-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for component marking"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing component marking"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-22_odp": {
+     "guidelines": [
+      {
+       "en": "system hardware components to be marked indicating the impact level or classification level of the information permitted to be processed, stored, or transmitted by the hardware component are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-22_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.8023"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-3"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-5.3",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/PE-5.3",
+    "mode": "merged-into",
+    "label": "PE-05(03)",
+    "title": "Marking Output Devices"
+   }
+  ]
+ }
+}

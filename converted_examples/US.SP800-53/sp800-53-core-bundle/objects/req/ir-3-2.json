@@ -1,0 +1,116 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-3.2",
+ "version": "5.2.0",
+ "label": "IR-3(2)",
+ "lifecycle": "active",
+ "title": "Coordination with Related Plans",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Coordinate incident response testing with organizational elements responsible for related plans."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizational plans related to incident response testing include business continuity plans, disaster recovery plans, continuity of operations plans, contingency plans, crisis communications plans, critical infrastructure plans, and occupant emergency plans."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-3.2_obj",
+     "label": "IR-03(02)",
+     "prose": {
+      "en": "incident response testing is coordinated with organizational elements responsible for related plans."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-03(02)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "contingency planning policy"
+      },
+      {
+       "en": "procedures addressing incident response testing"
+      },
+      {
+       "en": "incident response testing documentation"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "business continuity plans"
+      },
+      {
+       "en": "contingency plans"
+      },
+      {
+       "en": "disaster recovery plans"
+      },
+      {
+       "en": "continuity of operations plans"
+      },
+      {
+       "en": "crisis communications plans"
+      },
+      {
+       "en": "critical infrastructure plans"
+      },
+      {
+       "en": "occupant emergency plans"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-03(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident response testing responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibilities for testing organizational plans related to incident response testing"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-3"
+  }
+ ]
+}

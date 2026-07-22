@@ -1,0 +1,184 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-4.2",
+ "version": "5.2.0",
+ "label": "CM-4(2)",
+ "lifecycle": "active",
+ "title": "Verification of Controls",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "After system changes, verify that the impacted controls are implemented correctly, operating as intended, and producing the desired outcome with regard to meeting the security and privacy requirements for the system."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Implementation in this context refers to installing changed code in the operational system that may have an impact on security or privacy controls."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-4.2_obj",
+     "label": "CM-04(02)",
+     "children": [
+      {
+       "id": "cm-4.2_obj-1",
+       "label": "CM-04(02)[01]",
+       "prose": {
+        "en": "the impacted controls are implemented correctly with regard to meeting the security requirements for the system after system changes;"
+       }
+      },
+      {
+       "id": "cm-4.2_obj-2",
+       "label": "CM-04(02)[02]",
+       "prose": {
+        "en": "the impacted controls are implemented correctly with regard to meeting the privacy requirements for the system after system changes;"
+       }
+      },
+      {
+       "id": "cm-4.2_obj-3",
+       "label": "CM-04(02)[03]",
+       "prose": {
+        "en": "the impacted controls are operating as intended with regard to meeting the security requirements for the system after system changes;"
+       }
+      },
+      {
+       "id": "cm-4.2_obj-4",
+       "label": "CM-04(02)[04]",
+       "prose": {
+        "en": "the impacted controls are operating as intended with regard to meeting the privacy requirements for the system after system changes;"
+       }
+      },
+      {
+       "id": "cm-4.2_obj-5",
+       "label": "CM-04(02)[05]",
+       "prose": {
+        "en": "the impacted controls are producing the desired outcome with regard to meeting the security requirements for the system after system changes;"
+       }
+      },
+      {
+       "id": "cm-4.2_obj-6",
+       "label": "CM-04(02)[06]",
+       "prose": {
+        "en": "the impacted controls are producing the desired outcome with regard to meeting the privacy requirements for the system after system changes."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-04(02)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing security impact analyses for changes to the system"
+      },
+      {
+       "en": "procedures addressing privacy impact analyses for changes to the system"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "security and privacy impact analysis documentation"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "analysis tools and associated outputs"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "control assessment results"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-04(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibility for conducting security and privacy impact analyses"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "security and privacy assessors"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-04(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for security and privacy impact analyses"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing security and privacy impact analyses of changes"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-6"
+  }
+ ]
+}

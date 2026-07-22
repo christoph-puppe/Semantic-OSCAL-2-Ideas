@@ -1,0 +1,163 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-16.8",
+ "version": "5.2.0",
+ "label": "AC-16(8)",
+ "lifecycle": "active",
+ "title": "Association Techniques and Technologies",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement {param:ac-16.8_prm_1} in associating security and privacy attributes to information."
+   },
+   "parameters": [
+    {
+     "name": "ac-16.8_prm_1",
+     "type": "string",
+     "label": "organization-defined techniques and technologies"
+    },
+    {
+     "name": "ac-16.08_odp.01",
+     "type": "string",
+     "label": "techniques and technologies"
+    },
+    {
+     "name": "ac-16.08_odp.02",
+     "type": "string",
+     "label": "techniques and technologies"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The association of security and privacy attributes to information within systems is important for conducting automated access enforcement and flow enforcement actions. The association of such attributes to information (i.e., binding) can be accomplished with technologies and techniques that provide different levels of assurance. For example, systems can cryptographically bind attributes to information using digital signatures that support cryptographic keys protected by hardware devices (sometimes known as hardware roots of trust)."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-16.8_obj",
+     "label": "AC-16(08)",
+     "children": [
+      {
+       "id": "ac-16.8_obj-1",
+       "label": "AC-16(08)[01]",
+       "prose": {
+        "en": "{param:ac-16.08_odp.01} are implemented in associating security attributes to information;"
+       }
+      },
+      {
+       "id": "ac-16.8_obj-2",
+       "label": "AC-16(08)[02]",
+       "prose": {
+        "en": "{param:ac-16.08_odp.02} are implemented in associating privacy attributes to information."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-16(08)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing association of security and privacy attributes to information"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-16(08)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for associating security and privacy attributes to information"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-16(08)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing techniques or technologies associating security and privacy attributes to information"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-16.8_prm_1": {
+     "aggregates": [
+      "ac-16.08_odp.01",
+      "ac-16.08_odp.02"
+     ]
+    },
+    "ac-16.08_odp.01": {
+     "guidelines": [
+      {
+       "en": "techniques and technologies to be implemented in associating security attributes to information are defined;"
+      }
+     ]
+    },
+    "ac-16.08_odp.02": {
+     "guidelines": [
+      {
+       "en": "techniques and technologies to be implemented in associating privacy attributes to information are defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  }
+ ]
+}

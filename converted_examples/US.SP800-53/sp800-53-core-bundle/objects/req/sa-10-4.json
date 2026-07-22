@@ -1,0 +1,124 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-10.4",
+ "version": "5.2.0",
+ "label": "SA-10(4)",
+ "lifecycle": "active",
+ "title": "Trusted Generation",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to employ tools for comparing newly generated versions of security-relevant hardware descriptions, source code, and object code with previous versions."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The trusted generation of descriptions, source code, and object code addresses authorized changes to hardware, software, and firmware components between versions during development. The focus is on the efficacy of the configuration management process by the developer to ensure that newly generated versions of security-relevant hardware descriptions, source code, and object code continue to enforce the security policy for the system, system component, or system service. In contrast, SA-10(1) and SA-10(3) allow organizations to detect unauthorized changes to hardware, software, and firmware components using tools, techniques, or mechanisms provided by developers."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-10.4_obj",
+     "label": "SA-10(04)",
+     "children": [
+      {
+       "id": "sa-10.4_obj-1",
+       "label": "SA-10(04)[01]",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to employ tools for comparing newly generated versions of security-relevant hardware descriptions with previous versions;"
+       }
+      },
+      {
+       "id": "sa-10.4_obj-2",
+       "label": "SA-10(04)[02]",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to employ tools for comparing newly generated versions of source code with previous versions;"
+       }
+      },
+      {
+       "id": "sa-10.4_obj-3",
+       "label": "SA-10(04)[03]",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to employ tools for comparing newly generated versions of object code with previous versions."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-10(04)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing system developer configuration management"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "system developer configuration management plan"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "configuration management records"
+      },
+      {
+       "en": "configuration control audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-10(04)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for monitoring developer configuration management"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the monitoring of developer configuration management"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-10"
+  }
+ ]
+}

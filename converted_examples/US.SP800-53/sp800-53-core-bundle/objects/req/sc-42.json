@@ -1,0 +1,246 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-42",
+ "version": "5.2.0",
+ "label": "SC-42",
+ "lifecycle": "active",
+ "title": "Sensor Capability and Data",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Prohibit {param:sc-42_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "sc-42_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "the use of devices possessing {param:sc-42_odp.02} in {param:sc-42_odp.03} "
+      },
+      {
+       "value": "the remote activation of environmental sensing capabilities on organizational systems or system components with the following exceptions: {param:sc-42_odp.04} "
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "sc-42_odp.02",
+     "type": "string",
+     "label": "environmental sensing capabilities"
+    },
+    {
+     "name": "sc-42_odp.03",
+     "type": "string",
+     "label": "facilities, areas, or systems"
+    },
+    {
+     "name": "sc-42_odp.04",
+     "type": "string",
+     "label": "exceptions where remote activation of sensors is allowed"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide an explicit indication of sensor use to {param:sc-42_odp.05}."
+   },
+   "parameters": [
+    {
+     "name": "sc-42_odp.05",
+     "type": "string",
+     "label": "group of users"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Sensor capability and data applies to types of systems or system components characterized as mobile devices, such as cellular telephones, smart phones, and tablets. Mobile devices often include sensors that can collect and record data regarding the environment where the system is in use. Sensors that are embedded within mobile devices include microphones, cameras, Global Positioning System (GPS) mechanisms, and accelerometers. While the sensors on mobiles devices provide an important function, if activated covertly, such devices can potentially provide a means for adversaries to learn valuable information about individuals and organizations. For example, remotely activating the GPS function on a mobile device could provide an adversary with the ability to track the movements of an individual. Organizations may prohibit individuals from bringing cellular telephones or digital cameras into certain designated facilities or controlled areas within facilities where classified information is stored or sensitive conversations are taking place."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-42_obj",
+     "label": "SC-42",
+     "children": [
+      {
+       "id": "sc-42_obj.a",
+       "label": "SC-42a.",
+       "prose": {
+        "en": "{param:sc-42_odp.01} is/are prohibited;"
+       }
+      },
+      {
+       "id": "sc-42_obj.b",
+       "label": "SC-42b.",
+       "prose": {
+        "en": "an explicit indication of sensor use is provided to {param:sc-42_odp.05}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-42-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing sensor capabilities and data collection"
+      },
+      {
+       "en": "access control policy and procedures"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-42-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for sensor capabilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-42-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing access controls for the remote activation of system sensor capabilities"
+      },
+      {
+       "en": "mechanisms implementing the capability to indicate sensor use"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-42_odp.01": {
+     "alt-identifiers": [
+      "sc-42_prm_1"
+     ]
+    },
+    "sc-42_odp.02": {
+     "guidelines": [
+      {
+       "en": "environmental sensing capabilities in devices are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-42_prm_2"
+     ]
+    },
+    "sc-42_odp.03": {
+     "guidelines": [
+      {
+       "en": "facilities, areas, or systems where the use of devices possessing environmental sensing capabilities is prohibited are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-42_prm_3"
+     ]
+    },
+    "sc-42_odp.04": {
+     "guidelines": [
+      {
+       "en": "exceptions where remote activation of sensors is allowed are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-42_prm_4"
+     ]
+    },
+    "sc-42_odp.05": {
+     "guidelines": [
+      {
+       "en": "group of users to whom an explicit indication of sensor use is to be provided is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-42_prm_5"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-124r1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-15"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-42.3",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SC-42.3",
+    "mode": "merged-into",
+    "label": "SC-42(03)",
+    "title": "Prohibit Use of Devices"
+   }
+  ]
+ }
+}

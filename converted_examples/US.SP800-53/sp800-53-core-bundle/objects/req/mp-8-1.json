@@ -1,0 +1,104 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MP-8.1",
+ "version": "5.2.0",
+ "label": "MP-8(1)",
+ "lifecycle": "active",
+ "title": "Documentation of Process",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Document system media downgrading actions."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations can document the media downgrading process by providing information, such as the downgrading technique employed, the identification number of the downgraded media, and the identity of the individual that authorized and/or performed the downgrading action."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "mp-8.1_obj",
+     "label": "MP-08(01)",
+     "prose": {
+      "en": "system media downgrading actions are documented."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MP-08(01)-Examine",
+     "objects": [
+      {
+       "en": "System media protection policy"
+      },
+      {
+       "en": "procedures addressing media downgrading"
+      },
+      {
+       "en": "system categorization documentation"
+      },
+      {
+       "en": "list of media requiring downgrading"
+      },
+      {
+       "en": "records of media downgrading"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MP-08(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system media downgrading responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MP-08(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for media downgrading"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing media downgrading"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-8"
+  }
+ ]
+}

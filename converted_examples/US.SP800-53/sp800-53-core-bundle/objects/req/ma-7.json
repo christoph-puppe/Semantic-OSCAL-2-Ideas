@@ -1,0 +1,154 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-7",
+ "version": "5.2.0",
+ "label": "MA-7",
+ "lifecycle": "active",
+ "title": "Field Maintenance",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Restrict or prohibit field maintenance on {param:ma-07_odp.01} to {param:ma-07_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ma-07_odp.01",
+     "type": "string",
+     "label": "systems or system components"
+    },
+    {
+     "name": "ma-07_odp.02",
+     "type": "string",
+     "label": "trusted maintenance facilities"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Field maintenance is the type of maintenance conducted on a system or system component after the system or component has been deployed to a specific site (i.e., operational environment). In certain instances, field maintenance (i.e., local maintenance at the site) may not be executed with the same degree of rigor or with the same quality control checks as depot maintenance. For critical systems designated as such by the organization, it may be necessary to restrict or prohibit field maintenance at the local site and require that such maintenance be conducted in trusted facilities with additional controls."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-7_obj",
+     "label": "MA-07",
+     "prose": {
+      "en": "field maintenance on {param:ma-07_odp.01} are restricted or prohibited to {param:ma-07_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-07-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing field maintenance"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "maintenance records"
+      },
+      {
+       "en": "diagnostic records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records."
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-07-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MA-07-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing field maintenance"
+      },
+      {
+       "en": "mechanisms implementing, supporting, and/or managing field maintenance"
+      },
+      {
+       "en": "mechanisms for strong authentication of field maintenance diagnostic sessions"
+      },
+      {
+       "en": "mechanisms for terminating field maintenance sessions and network connections"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ma-07_odp.01": {
+     "guidelines": [
+      {
+       "en": "systems or system components on which field maintenance is restricted or prohibited to trusted maintenance facilities are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ma-7_prm_1"
+     ]
+    },
+    "ma-07_odp.02": {
+     "guidelines": [
+      {
+       "en": "trusted maintenance facilities that are not restricted or prohibited from conducting field maintenance are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ma-7_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-5"
+  }
+ ]
+}

@@ -1,0 +1,171 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-4.29",
+ "version": "5.2.0",
+ "label": "AC-4(29)",
+ "lifecycle": "active",
+ "title": "Filter Orchestration Engines",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "When transferring information between different security domains, employ content filter orchestration engines to ensure that:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Content filtering mechanisms successfully complete execution without errors; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Content filtering actions occur in the correct order and comply with {param:ac-04.29_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ac-04.29_odp",
+     "type": "string",
+     "label": "policy"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Content filtering is the process of inspecting information as it traverses a cross-domain solution and determines if the information meets a predefined security policy. An orchestration engine coordinates the sequencing of activities (manual and automated) in a content filtering process. Errors are defined as either anomalous actions or unexpected termination of the content filter process. This is not the same as a filter failing content due to non-compliance with policy. Content filter reports are a commonly used mechanism to ensure that expected filtering actions are completed successfully."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-4.29_obj",
+     "label": "AC-04(29)",
+     "children": [
+      {
+       "id": "ac-4.29_obj.a",
+       "label": "AC-04(29)(a)",
+       "prose": {
+        "en": "when transferring information between security domains, content filter orchestration engines are employed to ensure that content-filtering mechanisms successfully complete execution without errors;"
+       }
+      },
+      {
+       "id": "ac-4.29_obj.b",
+       "label": "AC-04(29)(b)",
+       "children": [
+        {
+         "id": "ac-4.29_obj.b-1",
+         "label": "AC-04(29)(b)[01]",
+         "prose": {
+          "en": "when transferring information between security domains, content filter orchestration engines are employed to ensure that content-filtering actions occur in the correct order;"
+         }
+        },
+        {
+         "id": "ac-4.29_obj.b-2",
+         "label": "AC-04(29)(b)[02]",
+         "prose": {
+          "en": "when transferring information between security domains, content filter orchestration engines are employed to ensure that content-filtering actions comply with {param:ac-04.29_odp}."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-04(29)-Examine",
+     "objects": [
+      {
+       "en": "Information flow enforcement policy"
+      },
+      {
+       "en": "procedures addressing information flow enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-04(29)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information flow enforcement responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-04(29)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing information flow enforcement functions"
+      },
+      {
+       "en": "mechanisms implementing content filter orchestration engines"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-04.29_odp": {
+     "guidelines": [
+      {
+       "en": "policy for content-filtering actions is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-4.29_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  }
+ ]
+}

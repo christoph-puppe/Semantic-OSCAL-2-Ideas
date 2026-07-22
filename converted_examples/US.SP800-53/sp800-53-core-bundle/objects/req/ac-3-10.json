@@ -1,0 +1,173 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-3.10",
+ "version": "5.2.0",
+ "label": "AC-3(10)",
+ "lifecycle": "active",
+ "title": "Audited Override of Access Control Mechanisms",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ an audited override of automated access control mechanisms under {param:ac-03.10_odp.01} by {param:ac-03.10_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ac-03.10_odp.01",
+     "type": "string",
+     "label": "conditions"
+    },
+    {
+     "name": "ac-03.10_odp.02",
+     "type": "string",
+     "label": "roles"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "In certain situations, such as when there is a threat to human life or an event that threatens the organization’s ability to carry out critical missions or business functions, an override capability for access control mechanisms may be needed. Override conditions are defined by organizations and used only in those limited circumstances. Audit events are defined in AU-2 . Audit records are generated in AU-12."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-3.10_obj",
+     "label": "AC-03(10)",
+     "prose": {
+      "en": "an audited override of automated access control mechanisms is employed under {param:ac-03.10_odp.01} by {param:ac-03.10_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-03(10)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing access enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "conditions for employing audited override of automated access control mechanisms"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-03(10)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with access enforcement responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-03(10)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing access enforcement functions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-03.10_odp.01": {
+     "guidelines": [
+      {
+       "en": "conditions under which to employ an audited override of automated access control mechanisms are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-3.10_prm_1"
+     ]
+    },
+    "ac-03.10_odp.02": {
+     "guidelines": [
+      {
+       "en": "roles allowed to employ an audited override of automated access control mechanisms are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-3.10_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-14"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-17.7",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/AC-17.7",
+    "mode": "merged-into",
+    "label": "AC-17(07)",
+    "title": "Additional Protection for Security Function Access"
+   }
+  ]
+ }
+}

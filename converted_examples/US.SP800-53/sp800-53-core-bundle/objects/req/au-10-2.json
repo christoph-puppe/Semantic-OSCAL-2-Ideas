@@ -1,0 +1,180 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-10.2",
+ "version": "5.2.0",
+ "label": "AU-10(2)",
+ "lifecycle": "active",
+ "title": "Validate Binding of Information Producer Identity",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Validate the binding of the information producer identity to the information at {param:au-10.02_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "au-10.02_odp.01",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Perform {param:au-10.02_odp.02} in the event of a validation error."
+   },
+   "parameters": [
+    {
+     "name": "au-10.02_odp.02",
+     "type": "string",
+     "label": "actions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Validating the binding of the information producer identity to the information prevents the modification of information between production and review. The validation of bindings can be achieved by, for example, using cryptographic checksums. Organizations determine if validations are in response to user requests or generated automatically."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-10.2_obj",
+     "label": "AU-10(02)",
+     "children": [
+      {
+       "id": "au-10.2_obj.a",
+       "label": "AU-10(02)(a)",
+       "prose": {
+        "en": "the binding of the information producer identity to the information is validated at {param:au-10.02_odp.01};"
+       }
+      },
+      {
+       "id": "au-10.2_obj.b",
+       "label": "AU-10(02)(b)",
+       "prose": {
+        "en": "{param:au-10.02_odp.02} in the event of a validation error are performed."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-10(02)-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "procedures addressing non-repudiation"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "validation records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-10(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AU-10(02)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing non-repudiation capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "au-10.02_odp.01": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to validate the binding of the information producer identity to the information is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-10.2_prm_1"
+     ]
+    },
+    "au-10.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "the actions to be performed in the event of a validation error are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-10.2_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-16"
+  }
+ ]
+}

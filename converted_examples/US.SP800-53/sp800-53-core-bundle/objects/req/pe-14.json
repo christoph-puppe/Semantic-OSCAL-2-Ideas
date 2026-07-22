@@ -1,0 +1,205 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-14",
+ "version": "5.2.0",
+ "label": "PE-14",
+ "lifecycle": "active",
+ "title": "Environmental Controls",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Maintain {param:pe-14_odp.01} levels within the facility where the system resides at {param:pe-14_odp.03} ; and"
+   },
+   "parameters": [
+    {
+     "name": "pe-14_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "temperature"
+      },
+      {
+       "value": "humidity"
+      },
+      {
+       "value": "pressure"
+      },
+      {
+       "value": "radiation"
+      },
+      {
+       "value": "{param:pe-14_odp.02} "
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "pe-14_odp.03",
+     "type": "string",
+     "label": "acceptable levels"
+    },
+    {
+     "name": "pe-14_odp.02",
+     "type": "string",
+     "label": "environmental control"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Monitor environmental control levels {param:pe-14_odp.04}."
+   },
+   "parameters": [
+    {
+     "name": "pe-14_odp.04",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The provision of environmental controls applies primarily to organizational facilities that contain concentrations of system resources (e.g., data centers, mainframe computer rooms, and server rooms). Insufficient environmental controls, especially in very harsh environments, can have a significant adverse impact on the availability of systems and system components that are needed to support organizational mission and business functions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-14_obj",
+     "label": "PE-14",
+     "children": [
+      {
+       "id": "pe-14_obj.a",
+       "label": "PE-14a.",
+       "prose": {
+        "en": "{param:pe-14_odp.01} levels are maintained at {param:pe-14_odp.03} within the facility where the system resides;"
+       }
+      },
+      {
+       "id": "pe-14_obj.b",
+       "label": "PE-14b.",
+       "prose": {
+        "en": "environmental control levels are monitored {param:pe-14_odp.04}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-14-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing temperature and humidity control"
+      },
+      {
+       "en": "temperature and humidity controls"
+      },
+      {
+       "en": "facility housing the system"
+      },
+      {
+       "en": "temperature and humidity controls documentation"
+      },
+      {
+       "en": "temperature and humidity records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-14-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for system environmental controls"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-14-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the maintenance and monitoring of temperature and humidity levels"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-14_odp.01": {
+     "alt-identifiers": [
+      "pe-14_prm_1"
+     ]
+    },
+    "pe-14_odp.02": {
+     "guidelines": [
+      {
+       "en": "environmental control(s) for which to maintain a specified level in the facility where the system resides are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-14_prm_2"
+     ]
+    },
+    "pe-14_odp.03": {
+     "guidelines": [
+      {
+       "en": "acceptable levels for environmental controls are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-14_prm_3"
+     ]
+    },
+    "pe-14_odp.04": {
+     "guidelines": [
+      {
+       "en": "frequency at which to monitor environmental control levels is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-14_prm_4"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  }
+ ]
+}

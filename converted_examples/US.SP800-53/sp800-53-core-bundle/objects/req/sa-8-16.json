@@ -1,0 +1,129 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-8.16",
+ "version": "5.2.0",
+ "label": "SA-8(16)",
+ "lifecycle": "active",
+ "title": "Self-reliant Trustworthiness",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement the security design principle of self-reliant trustworthiness in {param:sa-08.16_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sa-08.16_odp",
+     "type": "string",
+     "label": "systems or system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The principle of self-reliant trustworthiness states that systems minimize their reliance on other systems for their own trustworthiness. A system is trustworthy by default, and any connection to an external entity is used to supplement its function. If a system were required to maintain a connection with another external entity in order to maintain its trustworthiness, then that system would be vulnerable to malicious and non-malicious threats that could result in the loss or degradation of that connection. The benefit of the principle of self-reliant trustworthiness is that the isolation of a system will make it less vulnerable to attack. A corollary to this principle relates to the ability of the system (or system component) to operate in isolation and then resynchronize with other components when it is rejoined with them."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-8.16_obj",
+     "label": "SA-08(16)",
+     "prose": {
+      "en": "{param:sa-08.16_odp} implement the security design principle of self-reliant trustworthiness."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-08(16)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing the security design principle of self-reliant trustworthiness used in the specification, design, development, implementation, and modification of the system"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "security and privacy requirements and specifications for the system"
+      },
+      {
+       "en": "system security and privacy architecture"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-08(16)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with the responsibility for determining system security and privacy requirements"
+      },
+      {
+       "en": "organizational personnel with system specification, design, development, implementation, and modification responsibilities"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-08(16)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for applying the security design principle of self-reliant trustworthiness in system specification, design, development, implementation, and modification"
+      },
+      {
+       "en": "mechanisms supporting the application of the security design principle of self-reliant trustworthiness in system specification, design, development, implementation, and modification"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-08.16_odp": {
+     "guidelines": [
+      {
+       "en": "systems or system components that implement the security design principle of self-reliant trustworthiness are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-8.16_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  }
+ ]
+}

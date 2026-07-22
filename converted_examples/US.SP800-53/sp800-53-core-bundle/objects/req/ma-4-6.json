@@ -1,0 +1,157 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-4.6",
+ "version": "5.2.0",
+ "label": "MA-4(6)",
+ "lifecycle": "active",
+ "title": "Cryptographic Protection",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement the following cryptographic mechanisms to protect the integrity and confidentiality of nonlocal maintenance and diagnostic communications: {param:ma-04.06_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ma-04.06_odp",
+     "type": "string",
+     "label": "cryptographic mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Failure to protect nonlocal maintenance and diagnostic communications can result in unauthorized individuals gaining access to organizational information. Unauthorized access during remote maintenance sessions can result in a variety of hostile actions, including malicious code insertion, unauthorized changes to system parameters, and exfiltration of organizational information. Such actions can result in the loss or degradation of mission or business capabilities."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-4.6_obj",
+     "label": "MA-04(06)",
+     "children": [
+      {
+       "id": "ma-4.6_obj-1",
+       "label": "MA-04(06)[01]",
+       "prose": {
+        "en": "{param:ma-04.06_odp} are implemented to protect the integrity of nonlocal maintenance and diagnostic communications;"
+       }
+      },
+      {
+       "id": "ma-4.6_obj-2",
+       "label": "MA-04(06)[02]",
+       "prose": {
+        "en": "{param:ma-04.06_odp} are implemented to protect the confidentiality of nonlocal maintenance and diagnostic communications."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-04(06)-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing nonlocal system maintenance"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "cryptographic mechanisms protecting nonlocal maintenance activities"
+      },
+      {
+       "en": "maintenance records"
+      },
+      {
+       "en": "diagnostic records"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-04(06)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities"
+      },
+      {
+       "en": "network engineers"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MA-04(06)-Test",
+     "objects": [
+      {
+       "en": "Cryptographic mechanisms protecting nonlocal maintenance and diagnostic communications"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ma-04.06_odp": {
+     "guidelines": [
+      {
+       "en": "cryptographic mechanisms to be implemented to protect the integrity and confidentiality of nonlocal maintenance and diagnostic communications are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ma-4.6_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  }
+ ]
+}

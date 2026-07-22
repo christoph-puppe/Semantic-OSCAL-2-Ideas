@@ -1,0 +1,163 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/RA-5.8",
+ "version": "5.2.0",
+ "label": "RA-5(8)",
+ "lifecycle": "active",
+ "title": "Review Historic Audit Logs",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review historic audit logs to determine if a vulnerability identified in a {param:ra-05.08_odp.01} has been previously exploited within an {param:ra-05.08_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ra-05.08_odp.01",
+     "type": "string",
+     "label": "system"
+    },
+    {
+     "name": "ra-05.08_odp.02",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Reviewing historic audit logs to determine if a recently detected vulnerability in a system has been previously exploited by an adversary can provide important information for forensic analyses. Such analyses can help identify, for example, the extent of a previous intrusion, the trade craft employed during the attack, organizational information exfiltrated or modified, mission or business capabilities affected, and the duration of the attack."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ra-5.8_obj",
+     "label": "RA-05(08)",
+     "prose": {
+      "en": "historic audit logs are reviewed to determine if a vulnerability identified in a {param:ra-05.08_odp.01} has been previously exploited within {param:ra-05.08_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "RA-05(08)-Examine",
+     "objects": [
+      {
+       "en": "Risk assessment policy"
+      },
+      {
+       "en": "procedures addressing vulnerability scanning"
+      },
+      {
+       "en": "audit logs"
+      },
+      {
+       "en": "records of audit log reviews"
+      },
+      {
+       "en": "vulnerability scanning results"
+      },
+      {
+       "en": "patch and vulnerability management records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "RA-05(08)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with vulnerability scanning responsibilities"
+      },
+      {
+       "en": "organizational personnel with vulnerability scan analysis responsibilities"
+      },
+      {
+       "en": "organizational personnel with audit record review responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "RA-05(08)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for vulnerability scanning"
+      },
+      {
+       "en": "organizational process for audit record review and response"
+      },
+      {
+       "en": "mechanisms/tools supporting and/or implementing vulnerability scanning"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing audit record review"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ra-05.08_odp.01": {
+     "guidelines": [
+      {
+       "en": "a system whose historic audit logs are to be reviewed is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ra-5.8_prm_1"
+     ]
+    },
+    "ra-05.08_odp.02": {
+     "guidelines": [
+      {
+       "en": "a time period for a potential previous exploit of a system is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ra-5.8_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-11"
+  }
+ ]
+}

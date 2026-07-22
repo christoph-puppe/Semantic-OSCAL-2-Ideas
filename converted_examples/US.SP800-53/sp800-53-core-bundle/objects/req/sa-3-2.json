@@ -1,0 +1,189 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-3.2",
+ "version": "5.2.0",
+ "label": "SA-3(2)",
+ "lifecycle": "active",
+ "title": "Use of Live or Operational Data",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Approve, document, and control the use of live data in preproduction environments for the system, system component, or system service; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Protect preproduction environments for the system, system component, or system service at the same impact or classification level as any live data in use within the preproduction environments."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Live data is also referred to as operational data. The use of live or operational data in preproduction (i.e., development, test, and integration) environments can result in significant risks to organizations. In addition, the use of personally identifiable information in testing, research, and training increases the risk of unauthorized disclosure or misuse of such information. Therefore, it is important for the organization to manage any additional risks that may result from the use of live or operational data. Organizations can minimize such risks by using test or dummy data during the design, development, and testing of systems, system components, and system services. Risk assessment techniques may be used to determine if the risk of using live or operational data is acceptable."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-3.2_obj",
+     "label": "SA-03(02)",
+     "children": [
+      {
+       "id": "sa-3.2_obj.a",
+       "label": "SA-03(02)a.",
+       "children": [
+        {
+         "id": "sa-3.2_obj.a-1",
+         "label": "SA-03(02)a.[01]",
+         "prose": {
+          "en": "the use of live data in pre-production environments is approved for the system, system component, or system service;"
+         }
+        },
+        {
+         "id": "sa-3.2_obj.a-2",
+         "label": "SA-03(02)a.[02]",
+         "prose": {
+          "en": "the use of live data in pre-production environments is documented for the system, system component, or system service;"
+         }
+        },
+        {
+         "id": "sa-3.2_obj.a-3",
+         "label": "SA-03(02)a.[03]",
+         "prose": {
+          "en": "the use of live data in pre-production environments is controlled for the system, system component, or system service;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-3.2_obj.b",
+       "label": "SA-03(02)b.",
+       "prose": {
+        "en": "pre-production environments for the system, system component, or system service are protected at the same impact or classification level as any live data in use within the pre-production environments."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-03(02)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "procedures addressing the integration of security and privacy into the system development life cycle process"
+      },
+      {
+       "en": "system development life cycle documentation"
+      },
+      {
+       "en": "security risk assessment documentation"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "data mapping documentation"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "procedures addressing the authority to test with personally identifiable information"
+      },
+      {
+       "en": "procedures addressing the minimization of personally identifiable information used in testing, training, and research"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-03(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy responsibility"
+      },
+      {
+       "en": "organizational personnel with system life cycle development responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-03(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes the use of live data in pre-production environments"
+      },
+      {
+       "en": "mechanisms for protecting live data in pre-production environments"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-25"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-15.9",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-15.9",
+    "mode": "merged-into",
+    "label": "SA-15(09)",
+    "title": "Use of Live Data"
+   }
+  ]
+ }
+}

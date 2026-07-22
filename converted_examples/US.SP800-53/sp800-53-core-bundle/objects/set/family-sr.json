@@ -1,0 +1,133 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/set/family/sr",
+ "version": "5.2.0",
+ "lifecycle": "active",
+ "title": "Supply Chain Risk Management",
+ "label": "SR",
+ "members": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-1",
+   "sequence": 10
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-2",
+   "sequence": 20
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-2.1",
+   "sequence": 30
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-3",
+   "sequence": 40
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-3.1",
+   "sequence": 50
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-3.2",
+   "sequence": 60
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-3.3",
+   "sequence": 70
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-4",
+   "sequence": 80
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-4.1",
+   "sequence": 90
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-4.2",
+   "sequence": 100
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-4.3",
+   "sequence": 110
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-4.4",
+   "sequence": 120
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-5",
+   "sequence": 130
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-5.1",
+   "sequence": 140
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-5.2",
+   "sequence": 150
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-6",
+   "sequence": 160
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-6.1",
+   "sequence": 170
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-7",
+   "sequence": 180
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-8",
+   "sequence": 190
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-9",
+   "sequence": 200
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-9.1",
+   "sequence": 210
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-10",
+   "sequence": 220
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-11",
+   "sequence": 230
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-11.1",
+   "sequence": 240
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-11.2",
+   "sequence": 250
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-11.3",
+   "sequence": 260
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-12",
+   "sequence": 270
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-12",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-12",
+    "mode": "merged-into",
+    "label": "SA-12",
+    "title": "Supply Chain Protection"
+   }
+  ]
+ }
+}

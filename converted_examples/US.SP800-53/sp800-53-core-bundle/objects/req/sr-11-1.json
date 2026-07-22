@@ -1,0 +1,157 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SR-11.1",
+ "version": "5.2.0",
+ "label": "SR-11(1)",
+ "lifecycle": "active",
+ "title": "Anti-counterfeit Training",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Train {param:sr-11.01_odp} to detect counterfeit system components (including hardware, software, and firmware)."
+   },
+   "parameters": [
+    {
+     "name": "sr-11.01_odp",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "None."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sr-11.1_obj",
+     "label": "SR-11(01)",
+     "prose": {
+      "en": "{param:sr-11.01_odp} are trained to detect counterfeit system components (including hardware, software, and firmware)."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SR-11(01)-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management policy and procedures"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "system and services acquisition policy"
+      },
+      {
+       "en": "anti-counterfeit plan"
+      },
+      {
+       "en": "anti-counterfeit policy and procedures"
+      },
+      {
+       "en": "media disposal policy"
+      },
+      {
+       "en": "media protection policy"
+      },
+      {
+       "en": "incident response policy"
+      },
+      {
+       "en": "training materials addressing counterfeit system components"
+      },
+      {
+       "en": "training records on the detection and prevention of counterfeit components entering the system"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SR-11(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibilities for anti-counterfeit policies, procedures, and training"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SR-11(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for anti-counterfeit training"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sr-11.01_odp": {
+     "guidelines": [
+      {
+       "en": "personnel or roles requiring training to detect counterfeit system components (including hardware, software, and firmware) is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sr-11.1_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-19.1",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-19.1",
+    "mode": "renamed",
+    "label": "SA-19(01)",
+    "title": "Anti-counterfeit Training"
+   }
+  ]
+ }
+}

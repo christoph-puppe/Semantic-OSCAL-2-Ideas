@@ -1,0 +1,158 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-23",
+ "version": "5.2.0",
+ "label": "SA-23",
+ "lifecycle": "active",
+ "title": "Specialization",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ {param:sa-23_odp.01} on {param:sa-23_odp.02} supporting mission essential services or functions to increase the trustworthiness in those systems or components."
+   },
+   "parameters": [
+    {
+     "name": "sa-23_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "design modification"
+      },
+      {
+       "value": "augmentation"
+      },
+      {
+       "value": "reconfiguration"
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "sa-23_odp.02",
+     "type": "string",
+     "label": "systems or system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "It is often necessary for a system or system component that supports mission-essential services or functions to be enhanced to maximize the trustworthiness of the resource. Sometimes this enhancement is done at the design level. In other instances, it is done post-design, either through modifications of the system in question or by augmenting the system with additional components. For example, supplemental authentication or non-repudiation functions may be added to the system to enhance the identity of critical resources to other resources that depend on the organization-defined resources."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-23_obj",
+     "label": "SA-23",
+     "prose": {
+      "en": "{param:sa-23_odp.01} is employed on {param:sa-23_odp.02} supporting essential services or functions to increase the trustworthiness in those systems or components."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-23-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing design modification, augmentation, or reconfiguration of systems or system components"
+      },
+      {
+       "en": "documented evidence of design modification, augmentation, or reconfiguration"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-23-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with the responsibility for security architecture"
+      },
+      {
+       "en": "organizational personnel responsible for configuration management"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-23-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for the modification of design, augmentation, or reconfiguration of systems or system components"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing design modification, augmentation, or reconfiguration of systems or system components"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-23_odp.01": {
+     "alt-identifiers": [
+      "sa-23_prm_1"
+     ]
+    },
+    "sa-23_odp.02": {
+     "guidelines": [
+      {
+       "en": "systems or system components supporting mission-essential services or functions are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-23_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  }
+ ]
+}

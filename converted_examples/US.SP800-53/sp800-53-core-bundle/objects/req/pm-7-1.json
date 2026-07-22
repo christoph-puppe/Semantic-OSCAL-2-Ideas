@@ -1,0 +1,132 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-7.1",
+ "version": "5.2.0",
+ "label": "PM-7(1)",
+ "lifecycle": "active",
+ "title": "Offloading",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Offload {param:pm-07.01_odp} to other systems, system components, or an external provider."
+   },
+   "parameters": [
+    {
+     "name": "pm-07.01_odp",
+     "type": "string",
+     "label": "non-essential functions or services"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Not every function or service that a system provides is essential to organizational mission or business functions. Printing or copying is an example of a non-essential but supporting service for an organization. Whenever feasible, such supportive but non-essential functions or services are not co-located with the functions or services that support essential mission or business functions. Maintaining such functions on the same system or system component increases the attack surface of the organization’s mission-essential functions or services. Moving supportive but non-essential functions to a non-critical system, system component, or external provider can also increase efficiency by putting those functions or services under the control of individuals or providers who are subject matter experts in the functions or services."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-7.1_obj",
+     "label": "PM-07(01)",
+     "prose": {
+      "en": "{param:pm-07.01_odp} are offloaded to other systems, system components, or an external provider."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-07(01)-Examine",
+     "objects": [
+      {
+       "en": "Information security program plan"
+      },
+      {
+       "en": "privacy program plan"
+      },
+      {
+       "en": "enterprise architecture documentation"
+      },
+      {
+       "en": "procedures addressing enterprise architecture development"
+      },
+      {
+       "en": "procedures for identifying and offloading functions or services"
+      },
+      {
+       "en": "results of risk assessments of enterprise architecture"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-07(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy program planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel responsible for developing enterprise architecture"
+      },
+      {
+       "en": "organizational personnel responsible for risk assessments of enterprise architecture"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PM-07(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for enterprise architecture development"
+      },
+      {
+       "en": "mechanisms supporting the enterprise architecture and its development"
+      },
+      {
+       "en": "mechanisms for offloading functions and services"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pm-07.01_odp": {
+     "guidelines": [
+      {
+       "en": "non-essential functions or services to be offloaded are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pm-7.1_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  }
+ ]
+}

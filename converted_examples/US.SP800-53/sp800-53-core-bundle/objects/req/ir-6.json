@@ -1,0 +1,204 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-6",
+ "version": "5.2.0",
+ "label": "IR-6",
+ "lifecycle": "active",
+ "title": "Incident Reporting",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require personnel to report suspected incidents to the organizational incident response capability within {param:ir-06_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "ir-06_odp.01",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Report incident information to {param:ir-06_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ir-06_odp.02",
+     "type": "string",
+     "label": "authorities"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The types of incidents reported, the content and timeliness of the reports, and the designated reporting authorities reflect applicable laws, executive orders, directives, regulations, policies, standards, and guidelines. Incident information can inform risk assessments, control effectiveness assessments, security requirements for acquisitions, and selection criteria for technology products."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-6_obj",
+     "label": "IR-06",
+     "children": [
+      {
+       "id": "ir-6_obj.a",
+       "label": "IR-06a.",
+       "prose": {
+        "en": "personnel is/are required to report suspected incidents to the organizational incident response capability within {param:ir-06_odp.01};"
+       }
+      },
+      {
+       "id": "ir-6_obj.b",
+       "label": "IR-06b.",
+       "prose": {
+        "en": "incident information is reported to {param:ir-06_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-06-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing incident reporting"
+      },
+      {
+       "en": "incident reporting records and documentation"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-06-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident reporting responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "personnel who have/should have reported incidents"
+      },
+      {
+       "en": "personnel (authorities) to whom incident information is to be reported"
+      },
+      {
+       "en": "system users"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IR-06-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for incident reporting"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing incident reporting"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ir-06_odp.01": {
+     "guidelines": [
+      {
+       "en": "time period for personnel to report suspected incidents to the organizational incident response capability is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-6_prm_1"
+     ]
+    },
+    "ir-06_odp.02": {
+     "guidelines": [
+      {
+       "en": "authorities to whom incident information is to be reported are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-6_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.congress.gov/bill/115th-congress/senate-bill/3085"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.federalregister.gov/d/2020-18939"
+  },
+  {
+   "type": "reference",
+   "ref": "https://us-cert.cisa.gov/incident-notification-guidelines"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-61r2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-9"
+  }
+ ]
+}

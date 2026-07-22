@@ -1,0 +1,129 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-7.3",
+ "version": "5.2.0",
+ "label": "CM-7(3)",
+ "lifecycle": "active",
+ "title": "Registration Compliance",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Ensure compliance with {param:cm-07.03_odp}."
+   },
+   "parameters": [
+    {
+     "name": "cm-07.03_odp",
+     "type": "string",
+     "label": "registration requirements"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations use the registration process to manage, track, and provide oversight for systems and implemented functions, ports, protocols, and services."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-7.3_obj",
+     "label": "CM-07(03)",
+     "prose": {
+      "en": "{param:cm-07.03_odp} are complied with."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-07(03)-Examine",
+     "objects": [
+      {
+       "en": "System security plan"
+      },
+      {
+       "en": "configuration management policy"
+      },
+      {
+       "en": "procedures addressing least functionality in the system"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "audit and compliance reviews"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-07(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-07(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes ensuring compliance with registration requirements for functions, ports, protocols, and/or services"
+      },
+      {
+       "en": "mechanisms implementing compliance with registration requirements for functions, ports, protocols, and/or services"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-07.03_odp": {
+     "guidelines": [
+      {
+       "en": "registration requirements for functions, ports, protocols, and services are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-7.3_prm_1"
+     ],
+     "alt-label": "registration requirements for functions, ports, protocols, and services"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-7"
+  }
+ ]
+}

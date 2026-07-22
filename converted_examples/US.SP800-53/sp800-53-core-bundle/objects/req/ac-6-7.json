@@ -1,0 +1,171 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-6.7",
+ "version": "5.2.0",
+ "label": "AC-6(7)",
+ "lifecycle": "active",
+ "title": "Review of User Privileges",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review {param:ac-06.07_odp.01} the privileges assigned to {param:ac-06.07_odp.02} to validate the need for such privileges; and"
+   },
+   "parameters": [
+    {
+     "name": "ac-06.07_odp.01",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "ac-06.07_odp.02",
+     "type": "string",
+     "label": "roles and classes"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Reassign or remove privileges, if necessary, to correctly reflect organizational mission and business needs."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The need for certain assigned user privileges may change over time to reflect changes in organizational mission and business functions, environments of operation, technologies, or threats. A periodic review of assigned user privileges is necessary to determine if the rationale for assigning such privileges remains valid. If the need cannot be revalidated, organizations take appropriate corrective actions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-6.7_obj",
+     "label": "AC-06(07)",
+     "children": [
+      {
+       "id": "ac-6.7_obj.a",
+       "label": "AC-06(07)(a)",
+       "prose": {
+        "en": "privileges assigned to {param:ac-06.07_odp.02} are reviewed {param:ac-06.07_odp.01} to validate the need for such privileges;"
+       }
+      },
+      {
+       "id": "ac-6.7_obj.b",
+       "label": "AC-06(07)(b)",
+       "prose": {
+        "en": "privileges are reassigned or removed, if necessary, to correctly reflect organizational mission and business needs."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-06(07)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing least privilege"
+      },
+      {
+       "en": "list of system-generated roles or classes of users and assigned privileges"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "validation reviews of privileges assigned to roles or classes or users"
+      },
+      {
+       "en": "records of privilege removals or reassignments for roles or classes of users"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-06(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for reviewing least privileges necessary to accomplish specified tasks"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-06(07)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing review of user privileges"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-06.07_odp.01": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to review the privileges assigned to roles or classes of users is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-6.7_prm_1"
+     ]
+    },
+    "ac-06.07_odp.02": {
+     "guidelines": [
+      {
+       "en": "roles or classes of users to which privileges are assigned are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-6.7_prm_2"
+     ],
+     "alt-label": "roles or classes of users"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  }
+ ]
+}

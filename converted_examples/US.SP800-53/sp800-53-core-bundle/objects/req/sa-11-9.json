@@ -1,0 +1,138 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-11.9",
+ "version": "5.2.0",
+ "label": "SA-11(9)",
+ "lifecycle": "active",
+ "title": "Interactive Application Security Testing",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to employ interactive application security testing tools to identify flaws and document the results."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Interactive (also known as instrumentation-based) application security testing is a method of detecting vulnerabilities by observing applications as they run during testing. The use of instrumentation relies on direct measurements of the actual running applications and uses access to the code, user interaction, libraries, frameworks, backend connections, and configurations to directly measure control effectiveness. When combined with analysis techniques, interactive application security testing can identify a broad range of potential vulnerabilities and confirm control effectiveness. Instrumentation-based testing works in real time and can be used continuously throughout the system development life cycle."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-11.9_obj",
+     "label": "SA-11(09)",
+     "children": [
+      {
+       "id": "sa-11.9_obj-1",
+       "label": "SA-11(09)[01]",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to employ interactive application security testing tools to identify flaws;"
+       }
+      },
+      {
+       "id": "sa-11.9_obj-2",
+       "label": "SA-11(09)[02]",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to document the results of flaw identification."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-11(09)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing system developer security testing"
+      },
+      {
+       "en": "procedures addressing interactive application security testing"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "system developer security test and evaluation plans"
+      },
+      {
+       "en": "security test and evaluation results"
+      },
+      {
+       "en": "security flaw and remediation tracking reports"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-11(09)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with developer security testing responsibilities"
+      },
+      {
+       "en": "organizational personnel with configuration management responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-11(09)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for interactive application security testing"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing interactive application security testing"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-11"
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-7.7",
+ "version": "5.2.0",
+ "label": "SI-7(7)",
+ "lifecycle": "active",
+ "title": "Integration of Detection and Response",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Incorporate the detection of the following unauthorized changes into the organizational incident response capability: {param:si-07.07_odp}."
+   },
+   "parameters": [
+    {
+     "name": "si-07.07_odp",
+     "type": "string",
+     "label": "changes"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Integrating detection and response helps to ensure that detected events are tracked, monitored, corrected, and available for historical purposes. Maintaining historical records is important for being able to identify and discern adversary actions over an extended time period and for possible legal actions. Security-relevant changes include unauthorized changes to established configuration settings or the unauthorized elevation of system privileges."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-7.7_obj",
+     "label": "SI-07(07)",
+     "prose": {
+      "en": "the detection of {param:si-07.07_odp} are incorporated into the organizational incident response capability."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-07(07)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing software, firmware, and information integrity"
+      },
+      {
+       "en": "procedures addressing incident response"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "incident response records"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-07(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for software, firmware, and/or information integrity"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with incident response responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-07(07)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for incorporating the detection of unauthorized security-relevant changes into the incident response capability"
+      },
+      {
+       "en": "software, firmware, and information integrity verification tools"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the incorporation of detection of unauthorized security-relevant changes into the incident response capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-07.07_odp": {
+     "guidelines": [
+      {
+       "en": "security-relevant changes to the system are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-7.7_prm_1"
+     ],
+     "alt-label": "security-relevant changes to the system"
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

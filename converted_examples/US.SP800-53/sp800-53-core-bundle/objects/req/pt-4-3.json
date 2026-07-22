@@ -1,0 +1,120 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PT-4.3",
+ "version": "5.2.0",
+ "label": "PT-4(3)",
+ "lifecycle": "active",
+ "title": "Revocation",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Implement {param:pt-04.03_odp} for individuals to revoke consent to the processing of their personally identifiable information."
+   },
+   "parameters": [
+    {
+     "name": "pt-04.03_odp",
+     "type": "string",
+     "label": "tools or mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Revocation of consent enables individuals to exercise control over their initial consent decision when circumstances change. Organizations consider usability factors in enabling easy-to-use revocation capabilities."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pt-4.3_obj",
+     "label": "PT-04(03)",
+     "prose": {
+      "en": "the {param:pt-04.03_odp} are implemented for individuals to revoke consent to the processing of their personally identifiable information."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PT-04(03)-Examine",
+     "objects": [
+      {
+       "en": "Personally identifiable information processing and transparency policy and procedures"
+      },
+      {
+       "en": "consent revocation policies and procedures"
+      },
+      {
+       "en": "consent revocation user interface or user experience"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PT-04(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personally identifiable information processing and transparency responsibilities"
+      },
+      {
+       "en": "organizational personnel with user interface or user experience responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PT-04(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for consenting to the processing of personally identifiable information"
+      },
+      {
+       "en": "tools or mechanisms for implementing consent revocation"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pt-04.03_odp": {
+     "guidelines": [
+      {
+       "en": "the tools or mechanisms to be implemented for revoking consent to the processing of personally identifiable information are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pt-4.3_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-2"
+  }
+ ]
+}

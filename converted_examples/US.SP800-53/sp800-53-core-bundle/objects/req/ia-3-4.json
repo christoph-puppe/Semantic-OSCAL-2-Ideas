@@ -1,0 +1,146 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-3.4",
+ "version": "5.2.0",
+ "label": "IA-3(4)",
+ "lifecycle": "active",
+ "title": "Device Attestation",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Handle device identification and authentication based on attestation by {param:ia-03.04_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ia-03.04_odp",
+     "type": "string",
+     "label": "configuration management process"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Device attestation refers to the identification and authentication of a device based on its configuration and known operating state. Device attestation can be determined via a cryptographic hash of the device. If device attestation is the means of identification and authentication, then it is important that patches and updates to the device are handled via a configuration management process such that the patches and updates are done securely and do not disrupt identification and authentication to other devices."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-3.4_obj",
+     "label": "IA-03(04)",
+     "prose": {
+      "en": "device identification and authentication are handled based on attestation by {param:ia-03.04_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-03(04)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "procedures addressing device identification and authentication"
+      },
+      {
+       "en": "procedures addressing device configuration management"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "configuration management records"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-03(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with operational responsibilities for device identification and authentication"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-03(04)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing device identification and authentication capabilities"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing configuration management"
+      },
+      {
+       "en": "cryptographic mechanisms supporting device attestation"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ia-03.04_odp": {
+     "guidelines": [
+      {
+       "en": "configuration management process to be employed to handle device identification and authentication based on attestation is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-3.4_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-6"
+  }
+ ]
+}

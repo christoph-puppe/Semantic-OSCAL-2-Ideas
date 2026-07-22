@@ -1,0 +1,110 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-7.22",
+ "version": "5.2.0",
+ "label": "SC-7(22)",
+ "lifecycle": "active",
+ "title": "Separate Subnets for Connecting to Different Security Domains",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement separate network addresses to connect to systems in different security domains."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The decomposition of systems into subnetworks (i.e., subnets) helps to provide the appropriate level of protection for network connections to different security domains that contain information with different security categories or classification levels."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-7.22_obj",
+     "label": "SC-07(22)",
+     "prose": {
+      "en": "separate network addresses are implemented to connect to systems in different security domains."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-07(22)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing boundary protection"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system hardware and software"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-07(22)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel with boundary protection responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-07(22)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing separate network addresses/different subnets"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  }
+ ]
+}

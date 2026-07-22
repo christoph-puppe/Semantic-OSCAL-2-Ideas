@@ -1,0 +1,460 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-3",
+ "version": "5.2.0",
+ "label": "CM-3",
+ "lifecycle": "active",
+ "title": "Configuration Change Control",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Determine and document the types of changes to the system that are configuration-controlled;"
+   },
+   "parameters": [
+    {
+     "name": "cm-03_odp.04",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "cm-03_odp.05",
+     "type": "string",
+     "label": "configuration change conditions"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review proposed configuration-controlled changes to the system and approve or disapprove such changes with explicit consideration for security and privacy impact analyses;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Document configuration change decisions associated with the system;"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Implement approved configuration-controlled changes to the system;"
+   }
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Retain records of configuration-controlled changes to the system for {param:cm-03_odp.01};"
+   },
+   "parameters": [
+    {
+     "name": "cm-03_odp.01",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  },
+  {
+   "id": "smt.f",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Monitor and review activities associated with configuration-controlled changes to the system; and"
+   }
+  },
+  {
+   "id": "smt.g",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Coordinate and provide oversight for configuration change control activities through {param:cm-03_odp.02} that convenes {param:cm-03_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "cm-03_odp.02",
+     "type": "string",
+     "label": "configuration change control element"
+    },
+    {
+     "name": "cm-03_odp.03",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "{param:cm-03_odp.04} "
+      },
+      {
+       "value": "when {param:cm-03_odp.05} "
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Configuration change control for organizational systems involves the systematic proposal, justification, implementation, testing, review, and disposition of system changes, including system upgrades and modifications. Configuration change control includes changes to baseline configurations, configuration items of systems, operational procedures, configuration settings for system components, remediate vulnerabilities, and unscheduled or unauthorized changes. Processes for managing configuration changes to systems include Configuration Control Boards or Change Advisory Boards that review and approve proposed changes. For changes that impact privacy risk, the senior agency official for privacy updates privacy impact assessments and system of records notices. For new systems or major upgrades, organizations consider including representatives from the development organizations on the Configuration Control Boards or Change Advisory Boards. Auditing of changes includes activities before and after changes are made to systems and the auditing activities required to implement such changes. See also SA-10."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-3_obj",
+     "label": "CM-03",
+     "children": [
+      {
+       "id": "cm-3_obj.a",
+       "label": "CM-03a.",
+       "prose": {
+        "en": "the types of changes to the system that are configuration-controlled are determined and documented;"
+       }
+      },
+      {
+       "id": "cm-3_obj.b",
+       "label": "CM-03b.",
+       "children": [
+        {
+         "id": "cm-3_obj.b-1",
+         "label": "CM-03b.[01]",
+         "prose": {
+          "en": "proposed configuration-controlled changes to the system are reviewed;"
+         }
+        },
+        {
+         "id": "cm-3_obj.b-2",
+         "label": "CM-03b.[02]",
+         "prose": {
+          "en": "proposed configuration-controlled changes to the system are approved or disapproved with explicit consideration for security and privacy impact analyses;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "cm-3_obj.c",
+       "label": "CM-03c.",
+       "prose": {
+        "en": "configuration change decisions associated with the system are documented;"
+       }
+      },
+      {
+       "id": "cm-3_obj.d",
+       "label": "CM-03d.",
+       "prose": {
+        "en": "approved configuration-controlled changes to the system are implemented;"
+       }
+      },
+      {
+       "id": "cm-3_obj.e",
+       "label": "CM-03e.",
+       "prose": {
+        "en": "records of configuration-controlled changes to the system are retained for {param:cm-03_odp.01};"
+       }
+      },
+      {
+       "id": "cm-3_obj.f",
+       "label": "CM-03f.",
+       "children": [
+        {
+         "id": "cm-3_obj.f-1",
+         "label": "CM-03f.[01]",
+         "prose": {
+          "en": "activities associated with configuration-controlled changes to the system are monitored;"
+         }
+        },
+        {
+         "id": "cm-3_obj.f-2",
+         "label": "CM-03f.[02]",
+         "prose": {
+          "en": "activities associated with configuration-controlled changes to the system are reviewed;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "cm-3_obj.g",
+       "label": "CM-03g.",
+       "children": [
+        {
+         "id": "cm-3_obj.g-1",
+         "label": "CM-03g.[01]",
+         "prose": {
+          "en": "configuration change control activities are coordinated and overseen by {param:cm-03_odp.02};"
+         }
+        },
+        {
+         "id": "cm-3_obj.g-2",
+         "label": "CM-03g.[02]",
+         "prose": {
+          "en": "the configuration control element convenes {param:cm-03_odp.03}."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-03-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing system configuration change control"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system architecture and configuration documentation"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "change control audit and review reports"
+      },
+      {
+       "en": "agenda/minutes/documentation from configuration change control oversight meetings"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessments"
+      },
+      {
+       "en": "system of records notices"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-03-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with configuration change control responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "members of change control board or similar"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-03-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for configuration change control"
+      },
+      {
+       "en": "mechanisms that implement configuration change control"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-03_odp.01": {
+     "guidelines": [
+      {
+       "en": "the time period to retain records of configuration-controlled changes is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-3_prm_1"
+     ]
+    },
+    "cm-03_odp.02": {
+     "guidelines": [
+      {
+       "en": "the configuration change control element responsible for coordinating and overseeing change control activities is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-3_prm_2"
+     ]
+    },
+    "cm-03_odp.03": {
+     "alt-identifiers": [
+      "cm-3_prm_3"
+     ]
+    },
+    "cm-03_odp.04": {
+     "guidelines": [
+      {
+       "en": "the frequency at which the configuration control element convenes is defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-3_prm_4"
+     ]
+    },
+    "cm-03_odp.05": {
+     "guidelines": [
+      {
+       "en": "configuration change conditions that prompt the configuration control element to convene are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-3_prm_5"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-124r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-128"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.8062"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-28"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-34"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-37"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-11"
+  }
+ ]
+}

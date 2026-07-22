@@ -1,0 +1,120 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-4.10",
+ "version": "5.2.0",
+ "label": "IR-4(10)",
+ "lifecycle": "active",
+ "title": "Supply Chain Coordination",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Coordinate incident handling activities involving supply chain events with other organizations involved in the supply chain."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations involved in supply chain activities include product developers, system integrators, manufacturers, packagers, assemblers, distributors, vendors, and resellers. Supply chain incidents can occur anywhere through or to the supply chain and include compromises or breaches that involve primary or sub-tier providers, information technology products, system components, development processes or personnel, and distribution processes or warehousing facilities. Organizations consider including processes for protecting and sharing incident information in information exchange agreements and their obligations for reporting incidents to government oversight bodies (e.g., Federal Acquisition Security Council)."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-4.10_obj",
+     "label": "IR-04(10)",
+     "prose": {
+      "en": "incident handling activities involving supply chain events are coordinated with other organizations involved in the supply chain."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-04(10)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing supply chain coordination and supply chain risk information sharing with the Federal Acquisition Security Council"
+      },
+      {
+       "en": "acquisition contracts"
+      },
+      {
+       "en": "service-level agreements"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "incident response plans of other organization involved in supply chain activities"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-04(10)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident handling responsibilities"
+      },
+      {
+       "en": "organizational personnel with mission and business responsibilities"
+      },
+      {
+       "en": "organizational personnel with legal responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      },
+      {
+       "en": "organizational personnel with acquisition responsibilities"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-8"
+  }
+ ]
+}

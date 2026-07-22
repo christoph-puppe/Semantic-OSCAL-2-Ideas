@@ -1,0 +1,141 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-4.20",
+ "version": "5.2.0",
+ "label": "SI-4(20)",
+ "lifecycle": "active",
+ "title": "Privileged Users",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement the following additional monitoring of privileged users: {param:si-04.20_odp}."
+   },
+   "parameters": [
+    {
+     "name": "si-04.20_odp",
+     "type": "string",
+     "label": "additional monitoring"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Privileged users have access to more sensitive information, including security-related information, than the general user population. Access to such information means that privileged users can potentially do greater damage to systems and organizations than non-privileged users. Therefore, implementing additional monitoring on privileged users helps to ensure that organizations can identify malicious activity at the earliest possible time and take appropriate actions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-4.20_obj",
+     "label": "SI-04(20)",
+     "prose": {
+      "en": "{param:si-04.20_odp} of privileged users is implemented."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-04(20)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing system monitoring tools and techniques"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system monitoring tools and techniques documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system monitoring logs or records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-04(20)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for monitoring the system"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-04(20)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for system monitoring"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing a system monitoring capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-04.20_odp": {
+     "guidelines": [
+      {
+       "en": "additional monitoring of privileged users is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-4.20_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-18"
+  }
+ ]
+}

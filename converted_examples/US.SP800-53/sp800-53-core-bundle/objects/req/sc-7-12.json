@@ -1,0 +1,140 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-7.12",
+ "version": "5.2.0",
+ "label": "SC-7(12)",
+ "lifecycle": "active",
+ "title": "Host-based Protection",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement {param:sc-07.12_odp.01} at {param:sc-07.12_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "sc-07.12_odp.01",
+     "type": "string",
+     "label": "host-based boundary protection mechanisms"
+    },
+    {
+     "name": "sc-07.12_odp.02",
+     "type": "string",
+     "label": "system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Host-based boundary protection mechanisms include host-based firewalls. System components that employ host-based boundary protection mechanisms include servers, workstations, notebook computers, and mobile devices."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-7.12_obj",
+     "label": "SC-07(12)",
+     "prose": {
+      "en": "{param:sc-07.12_odp.01} are implemented at {param:sc-07.12_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-07(12)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing boundary protection"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "boundary protection hardware and software"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-07(12)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with boundary protection responsibilities"
+      },
+      {
+       "en": "system users"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-07(12)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing host-based boundary protection capabilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-07.12_odp.01": {
+     "guidelines": [
+      {
+       "en": "host-based boundary protection mechanisms to be implemented are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-7.12_prm_1"
+     ]
+    },
+    "sc-07.12_odp.02": {
+     "guidelines": [
+      {
+       "en": "system components where host-based boundary protection mechanisms are to be implemented are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-7.12_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  }
+ ]
+}

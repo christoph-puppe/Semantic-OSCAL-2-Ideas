@@ -1,0 +1,328 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-28",
+ "version": "5.2.0",
+ "label": "PM-28",
+ "lifecycle": "active",
+ "title": "Risk Framing",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identify and document:"
+   }
+  },
+  {
+   "id": "smt.a.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Assumptions affecting risk assessments, risk responses, and risk monitoring;"
+   }
+  },
+  {
+   "id": "smt.a.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Constraints affecting risk assessments, risk responses, and risk monitoring;"
+   }
+  },
+  {
+   "id": "smt.a.3",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Priorities and trade-offs considered by the organization for managing risk; and"
+   }
+  },
+  {
+   "id": "smt.a.4",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Organizational risk tolerance;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Distribute the results of risk framing activities to {param:pm-28_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "pm-28_odp.01",
+     "type": "string",
+     "label": "personnel"
+    }
+   ]
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review and update risk framing considerations {param:pm-28_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "pm-28_odp.02",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Risk framing is most effective when conducted at the organization level and in consultation with stakeholders throughout the organization including mission, business, and system owners. The assumptions, constraints, risk tolerance, priorities, and trade-offs identified as part of the risk framing process inform the risk management strategy, which in turn informs the conduct of risk assessment, risk response, and risk monitoring activities. Risk framing results are shared with organizational personnel, including mission and business owners, information owners or stewards, system owners, authorizing officials, senior agency information security officer, senior agency official for privacy, and senior accountable official for risk management."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-28_obj",
+     "label": "PM-28",
+     "children": [
+      {
+       "id": "pm-28_obj.a",
+       "label": "PM-28a.",
+       "children": [
+        {
+         "id": "pm-28_obj.a.1",
+         "label": "PM-28a.01",
+         "children": [
+          {
+           "id": "pm-28_obj.a.1-1",
+           "label": "PM-28a.01[01]",
+           "prose": {
+            "en": "assumptions affecting risk assessments are identified and documented;"
+           }
+          },
+          {
+           "id": "pm-28_obj.a.1-2",
+           "label": "PM-28a.01[02]",
+           "prose": {
+            "en": "assumptions affecting risk responses are identified and documented;"
+           }
+          },
+          {
+           "id": "pm-28_obj.a.1-3",
+           "label": "PM-28a.01[03]",
+           "prose": {
+            "en": "assumptions affecting risk monitoring are identified and documented;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pm-28_obj.a.2",
+         "label": "PM-28a.02",
+         "children": [
+          {
+           "id": "pm-28_obj.a.2-1",
+           "label": "PM-28a.02[01]",
+           "prose": {
+            "en": "constraints affecting risk assessments are identified and documented;"
+           }
+          },
+          {
+           "id": "pm-28_obj.a.2-2",
+           "label": "PM-28a.02[02]",
+           "prose": {
+            "en": "constraints affecting risk responses are identified and documented;"
+           }
+          },
+          {
+           "id": "pm-28_obj.a.2-3",
+           "label": "PM-28a.02[03]",
+           "prose": {
+            "en": "constraints affecting risk monitoring are identified and documented;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pm-28_obj.a.3",
+         "label": "PM-28a.03",
+         "children": [
+          {
+           "id": "pm-28_obj.a.3-1",
+           "label": "PM-28a.03[01]",
+           "prose": {
+            "en": "priorities considered by the organization for managing risk are identified and documented;"
+           }
+          },
+          {
+           "id": "pm-28_obj.a.3-2",
+           "label": "PM-28a.03[02]",
+           "prose": {
+            "en": "trade-offs considered by the organization for managing risk are identified and documented;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pm-28_obj.a.4",
+         "label": "PM-28a.04",
+         "prose": {
+          "en": "organizational risk tolerance is identified and documented;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-28_obj.b",
+       "label": "PM-28b.",
+       "prose": {
+        "en": "the results of risk framing activities are distributed to {param:pm-28_odp.01};"
+       }
+      },
+      {
+       "id": "pm-28_obj.c",
+       "label": "PM-28c.",
+       "prose": {
+        "en": "risk framing considerations are reviewed and updated {param:pm-28_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-28-Examine",
+     "objects": [
+      {
+       "en": "Information security program plan"
+      },
+      {
+       "en": "privacy program plan"
+      },
+      {
+       "en": "supply chain risk management strategy"
+      },
+      {
+       "en": "documentation of risk framing activities"
+      },
+      {
+       "en": "policies and procedures for risk framing activities"
+      },
+      {
+       "en": "risk management strategy"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-28-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel (including mission, business, and system owners or stewards"
+      },
+      {
+       "en": "authorizing officials"
+      },
+      {
+       "en": "senior agency information security officer"
+      },
+      {
+       "en": "senior agency official for privacy"
+      },
+      {
+       "en": "and senior accountable official for risk management)"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PM-28-Test",
+     "objects": [
+      {
+       "en": "Organizational procedures and practices for authorizing, conducting, managing, and reviewing personally identifiable information processing"
+      },
+      {
+       "en": "organizational processes for risk framing"
+      },
+      {
+       "en": "mechanisms supporting the development, review, update, and approval of risk framing"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pm-28_odp.01": {
+     "guidelines": [
+      {
+       "en": "the personnel to receive the results of risk framing activities is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pm-28_prm_1"
+     ]
+    },
+    "pm-28_odp.02": {
+     "guidelines": [
+      {
+       "en": "the frequency for reviewing and updating risk framing considerations is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pm-28_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-39"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-7"
+  }
+ ]
+}

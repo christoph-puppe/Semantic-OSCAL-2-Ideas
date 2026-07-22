@@ -1,0 +1,115 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-3.4",
+ "version": "5.2.0",
+ "label": "SC-3(4)",
+ "lifecycle": "active",
+ "title": "Module Coupling and Cohesiveness",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement security functions as largely independent modules that maximize internal cohesiveness within modules and minimize coupling between modules."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The reduction of inter-module interactions helps to constrain security functions and manage complexity. The concepts of coupling and cohesion are important with respect to modularity in software design. Coupling refers to the dependencies that one module has on other modules. Cohesion refers to the relationship between functions within a module. Best practices in software engineering and systems security engineering rely on layering, minimization, and modular decomposition to reduce and manage complexity. This produces software modules that are highly cohesive and loosely coupled."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-3.4_obj",
+     "label": "SC-03(04)",
+     "children": [
+      {
+       "id": "sc-3.4_obj-1",
+       "label": "SC-03(04)[01]",
+       "prose": {
+        "en": "security functions are implemented as largely independent modules that maximize internal cohesiveness within modules;"
+       }
+      },
+      {
+       "id": "sc-3.4_obj-2",
+       "label": "SC-03(04)[02]",
+       "prose": {
+        "en": "security functions are implemented as largely independent modules that minimize coupling between modules."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-03(04)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing security function isolation"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-03(04)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-03(04)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for maximizing internal cohesiveness within modules and minimizing coupling between modules"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing security functions as independent modules"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-3"
+  }
+ ]
+}

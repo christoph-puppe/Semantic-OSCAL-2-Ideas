@@ -1,0 +1,142 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-34.1",
+ "version": "5.2.0",
+ "label": "SC-34(1)",
+ "lifecycle": "active",
+ "title": "No Writable Storage",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ {param:sc-34.01_odp} with no writeable storage that is persistent across component restart or power on/off."
+   },
+   "parameters": [
+    {
+     "name": "sc-34.01_odp",
+     "type": "string",
+     "label": "system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Disallowing writeable storage eliminates the possibility of malicious code insertion via persistent, writeable storage within the designated system components. The restriction applies to fixed and removable storage, with the latter being addressed either directly or as specific restrictions imposed through access controls for mobile devices."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-34.1_obj",
+     "label": "SC-34(01)",
+     "prose": {
+      "en": "{param:sc-34.01_odp} are employed with no writeable storage that is persistent across component restart or power on/off."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-34(01)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing non-modifiable executable programs"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "list of system components to be employed without writeable storage capabilities"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-34(01)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "system developers/integrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-34(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the employment of components with no writeable storage"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing persistent non-writeable storage across component restart and power on/off"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-34.01_odp": {
+     "guidelines": [
+      {
+       "en": "system components to be employed with no writeable storage are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-34.1_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-34"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-19"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-7"
+  }
+ ]
+}

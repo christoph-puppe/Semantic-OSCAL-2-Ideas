@@ -1,0 +1,214 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-15",
+ "version": "5.2.0",
+ "label": "PM-15",
+ "lifecycle": "active",
+ "title": "Security and Privacy Groups and Associations",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish and institutionalize contact with selected groups and associations within the security and privacy communities:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "To facilitate ongoing security and privacy education and training for organizational personnel;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "To maintain currency with recommended security and privacy practices, techniques, and technologies; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "To share current security and privacy information, including threats, vulnerabilities, and incidents."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Ongoing contact with security and privacy groups and associations is important in an environment of rapidly changing technologies and threats. Groups and associations include special interest groups, professional associations, forums, news groups, users’ groups, and peer groups of security and privacy professionals in similar organizations. Organizations select security and privacy groups and associations based on mission and business functions. Organizations share threat, vulnerability, and incident information as well as contextual insights, compliance techniques, and privacy problems consistent with applicable laws, executive orders, directives, policies, regulations, standards, and guidelines."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-15_obj",
+     "label": "PM-15",
+     "children": [
+      {
+       "id": "pm-15_obj.a",
+       "label": "PM-15a.",
+       "children": [
+        {
+         "id": "pm-15_obj.a-1",
+         "label": "PM-15a.[01]",
+         "prose": {
+          "en": "contact is established and institutionalized with selected groups and associations within the security community to facilitate ongoing security education and training for organizational personnel;"
+         }
+        },
+        {
+         "id": "pm-15_obj.a-2",
+         "label": "PM-15a.[02]",
+         "prose": {
+          "en": "contact is established and institutionalized with selected groups and associations within the privacy community to facilitate ongoing privacy education and training for organizational personnel;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-15_obj.b",
+       "label": "PM-15b.",
+       "children": [
+        {
+         "id": "pm-15_obj.b-1",
+         "label": "PM-15b.[01]",
+         "prose": {
+          "en": "contact is established and institutionalized with selected groups and associations within the security community to maintain currency with recommended security practices, techniques, and technologies;"
+         }
+        },
+        {
+         "id": "pm-15_obj.b-2",
+         "label": "PM-15b.[02]",
+         "prose": {
+          "en": "contact is established and institutionalized with selected groups and associations within the privacy community to maintain currency with recommended privacy practices, techniques, and technologies;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-15_obj.c",
+       "label": "PM-15c.",
+       "children": [
+        {
+         "id": "pm-15_obj.c-1",
+         "label": "PM-15c.[01]",
+         "prose": {
+          "en": "contact is established and institutionalized with selected groups and associations within the security community to share current security information, including threats, vulnerabilities, and incidents;"
+         }
+        },
+        {
+         "id": "pm-15_obj.c-2",
+         "label": "PM-15c.[02]",
+         "prose": {
+          "en": "contact is established and institutionalized with selected groups and associations within the privacy community to share current privacy information, including threats, vulnerabilities, and incidents."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-15-Examine",
+     "objects": [
+      {
+       "en": "Information security program plan"
+      },
+      {
+       "en": "privacy program plan"
+      },
+      {
+       "en": "risk management strategy"
+      },
+      {
+       "en": "procedures for establishing and institutionalizing contacts with security and privacy groups and associations"
+      },
+      {
+       "en": "lists or other records of contacts with and/or membership in security and privacy groups and associations"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-15-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy program planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel responsible for establishing and institutionalizing contact with security and privacy groups and associations"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "personnel from selected groups and associations with which the organization has established and institutionalized contact"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PM-15-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for establishing and institutionalizing contact with security and privacy groups and associations"
+      },
+      {
+       "en": "mechanisms supporting contact with security and privacy groups and associations"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-5"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-5",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/AT-5",
+    "mode": "merged-into",
+    "label": "AT-05",
+    "title": "Contacts with Security Groups and Associations"
+   }
+  ]
+ }
+}

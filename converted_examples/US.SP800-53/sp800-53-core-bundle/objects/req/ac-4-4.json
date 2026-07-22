@@ -1,0 +1,166 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-4.4",
+ "version": "5.2.0",
+ "label": "AC-4(4)",
+ "lifecycle": "active",
+ "title": "Flow Control of Encrypted Information",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Prevent encrypted information from bypassing {param:ac-04.04_odp.01} by {param:ac-04.04_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ac-04.04_odp.01",
+     "type": "string",
+     "label": "information flow control mechanisms"
+    },
+    {
+     "name": "ac-04.04_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "decrypting the information"
+      },
+      {
+       "value": "blocking the flow of the encrypted information"
+      },
+      {
+       "value": "terminating communications sessions attempting to pass encrypted information"
+      },
+      {
+       "value": "{param:ac-04.04_odp.03} "
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "ac-04.04_odp.03",
+     "type": "string",
+     "label": "organization-defined procedure or method"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Flow control mechanisms include content checking, security policy filters, and data type identifiers. The term encryption is extended to cover encoded data not recognized by filtering mechanisms."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-4.4_obj",
+     "label": "AC-04(04)",
+     "prose": {
+      "en": "encrypted information is prevented from bypassing {param:ac-04.04_odp.01} by {param:ac-04.04_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-04(04)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "information flow control policies"
+      },
+      {
+       "en": "procedures addressing information flow enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-04(04)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-04(04)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing information flow enforcement policy"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-04.04_odp.01": {
+     "guidelines": [
+      {
+       "en": "information flow control mechanisms that encrypted information is prevented from bypassing are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-4.4_prm_1"
+     ]
+    },
+    "ac-04.04_odp.02": {
+     "alt-identifiers": [
+      "ac-4.4_prm_2"
+     ]
+    },
+    "ac-04.04_odp.03": {
+     "guidelines": [
+      {
+       "en": "the organization-defined procedure or method used to prevent encrypted information from bypassing information flow control mechanisms is defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-4.4_prm_3"
+     ],
+     "alt-label": "procedure or method"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

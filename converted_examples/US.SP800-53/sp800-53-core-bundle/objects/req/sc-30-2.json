@@ -1,0 +1,128 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-30.2",
+ "version": "5.2.0",
+ "label": "SC-30(2)",
+ "lifecycle": "active",
+ "title": "Randomness",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ {param:sc-30.02_odp} to introduce randomness into organizational operations and assets."
+   },
+   "parameters": [
+    {
+     "name": "sc-30.02_odp",
+     "type": "string",
+     "label": "techniques"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Randomness introduces increased levels of uncertainty for adversaries regarding the actions that organizations take to defend their systems against attacks. Such actions may impede the ability of adversaries to correctly target information resources of organizations that support critical missions or business functions. Uncertainty may also cause adversaries to hesitate before initiating or continuing attacks. Misdirection techniques that involve randomness include performing certain routine actions at different times of day, employing different information technologies, using different suppliers, and rotating roles and responsibilities of organizational personnel."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-30.2_obj",
+     "label": "SC-30(02)",
+     "prose": {
+      "en": "{param:sc-30.02_odp} are employed to introduce randomness into organizational operations and assets."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-30(02)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing concealment and misdirection techniques for the system"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "list of techniques to be employed to introduce randomness into organizational operations and assets"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-30(02)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with the responsibility to implement concealment and misdirection techniques for systems"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-30(02)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing randomness as a concealment and misdirection technique"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-30.02_odp": {
+     "guidelines": [
+      {
+       "en": "techniques employed to introduce randomness into organizational operations and assets are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-30.2_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-30"
+  }
+ ]
+}

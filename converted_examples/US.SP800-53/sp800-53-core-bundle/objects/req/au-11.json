@@ -1,0 +1,156 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-11",
+ "version": "5.2.0",
+ "label": "AU-11",
+ "lifecycle": "active",
+ "title": "Audit Record Retention",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Retain audit records for {param:au-11_odp} to provide support for after-the-fact investigations of incidents and to meet regulatory and organizational information retention requirements."
+   },
+   "parameters": [
+    {
+     "name": "au-11_odp",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations retain audit records until it is determined that the records are no longer needed for administrative, legal, audit, or other operational purposes. This includes the retention and availability of audit records relative to Freedom of Information Act (FOIA) requests, subpoenas, and law enforcement actions. Organizations develop standard categories of audit records relative to such types of actions and standard response processes for each type of action. The National Archives and Records Administration (NARA) General Records Schedules provide federal policy on records retention."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-11_obj",
+     "label": "AU-11",
+     "prose": {
+      "en": "audit records are retained for {param:au-11_odp} to provide support for after-the-fact investigations of incidents and to meet regulatory and organizational information retention requirements."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-11-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "audit record retention policy and procedures"
+      },
+      {
+       "en": "security plan"
+      },
+      {
+       "en": "organization-defined retention period for audit records"
+      },
+      {
+       "en": "audit record archives"
+      },
+      {
+       "en": "audit logs"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-11-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with audit record retention responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "au-11_odp": {
+     "guidelines": [
+      {
+       "en": "a time period to retain audit records that is consistent with the records retention policy is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-11_prm_1"
+     ],
+     "alt-label": "time period consistent with records retention policy"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-14"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  }
+ ]
+}

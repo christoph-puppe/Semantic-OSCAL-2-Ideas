@@ -1,0 +1,198 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-43",
+ "version": "5.2.0",
+ "label": "SC-43",
+ "lifecycle": "active",
+ "title": "Usage Restrictions",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Establish usage restrictions and implementation guidelines for the following system components: {param:sc-43_odp} ; and"
+   },
+   "parameters": [
+    {
+     "name": "sc-43_odp",
+     "type": "string",
+     "label": "components"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Authorize, monitor, and control the use of such components within the system."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Usage restrictions apply to all system components including but not limited to mobile code, mobile devices, wireless access, and wired and wireless peripheral components (e.g., copiers, printers, scanners, optical devices, and other similar technologies). The usage restrictions and implementation guidelines are based on the potential for system components to cause damage to the system and help to ensure that only authorized system use occurs."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-43_obj",
+     "label": "SC-43",
+     "children": [
+      {
+       "id": "sc-43_obj.a",
+       "label": "SC-43a.",
+       "prose": {
+        "en": "usage restrictions and implementation guidelines are established for {param:sc-43_odp};"
+       }
+      },
+      {
+       "id": "sc-43_obj.b",
+       "label": "SC-43b.",
+       "children": [
+        {
+         "id": "sc-43_obj.b-1",
+         "label": "SC-43b.[01]",
+         "prose": {
+          "en": "the use of {param:sc-43_odp} is authorized within the system;"
+         }
+        },
+        {
+         "id": "sc-43_obj.b-2",
+         "label": "SC-43b.[02]",
+         "prose": {
+          "en": "the use of {param:sc-43_odp} is monitored within the system;"
+         }
+        },
+        {
+         "id": "sc-43_obj.b-3",
+         "label": "SC-43b.[03]",
+         "prose": {
+          "en": "the use of {param:sc-43_odp} is controlled within the system."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-43-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "usage restrictions"
+      },
+      {
+       "en": "procedures addressing usage restrictions"
+      },
+      {
+       "en": "implementation policy and procedures"
+      },
+      {
+       "en": "authorization records"
+      },
+      {
+       "en": "system monitoring records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-43-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-43-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for authorizing, monitoring, and controlling the use of components with usage restrictions"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing, authorizing, monitoring, and controlling the use of components with usage restrictions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-43_odp": {
+     "guidelines": [
+      {
+       "en": "the components for which usage restrictions and implementation guidance are to be established are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-43_prm_1"
+     ],
+     "alt-label": "system components"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-124r1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-18"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-19"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-18"
+  }
+ ]
+}

@@ -1,0 +1,148 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-7.29",
+ "version": "5.2.0",
+ "label": "SC-7(29)",
+ "lifecycle": "active",
+ "title": "Separate Subnets to Isolate Functions",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement {param:sc-07.29_odp.01} separate subnetworks to isolate the following critical system components and functions: {param:sc-07.29_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "sc-07.29_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "physically"
+      },
+      {
+       "value": "logically"
+      }
+     ]
+    },
+    {
+     "name": "sc-07.29_odp.02",
+     "type": "string",
+     "label": "critical system components and functions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Separating critical system components and functions from other noncritical system components and functions through separate subnetworks may be necessary to reduce susceptibility to a catastrophic or debilitating breach or compromise that results in system failure. For example, physically separating the command and control function from the in-flight entertainment function through separate subnetworks in a commercial aircraft provides an increased level of assurance in the trustworthiness of critical system functions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-7.29_obj",
+     "label": "SC-07(29)",
+     "prose": {
+      "en": "subnetworks are separated {param:sc-07.29_odp.01} to isolate {param:sc-07.29_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-07(29)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing boundary protection"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system hardware and software"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "criticality analysis"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-07(29)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel with boundary protection responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-07(29)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms separating critical system components and functions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-07.29_odp.01": {
+     "alt-identifiers": [
+      "sc-7.29_prm_1"
+     ]
+    },
+    "sc-07.29_odp.02": {
+     "guidelines": [
+      {
+       "en": "critical system components and functions to be isolated are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-7.29_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  }
+ ]
+}

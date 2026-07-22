@@ -1,0 +1,139 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-15",
+ "version": "5.2.0",
+ "label": "SI-15",
+ "lifecycle": "active",
+ "title": "Information Output Filtering",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Validate information output from the following software programs and/or applications to ensure that the information is consistent with the expected content: {param:si-15_odp}."
+   },
+   "parameters": [
+    {
+     "name": "si-15_odp",
+     "type": "string",
+     "label": "software programs and/or applications"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Certain types of attacks, including SQL injections, produce output results that are unexpected or inconsistent with the output results that would be expected from software programs or applications. Information output filtering focuses on detecting extraneous content, preventing such extraneous content from being displayed, and then alerting monitoring tools that anomalous behavior has been discovered."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-15_obj",
+     "label": "SI-15",
+     "prose": {
+      "en": "information output from {param:si-15_odp} is validated to ensure that the information is consistent with the expected content."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-15-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing information output filtering"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-15-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for validating information output"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-15-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for validating information output"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing information output validation"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-15_odp": {
+     "guidelines": [
+      {
+       "en": "software programs and/or applications whose information output requires validation are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-15_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-11"
+  }
+ ]
+}

@@ -1,0 +1,166 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-20",
+ "version": "5.2.0",
+ "label": "PE-20",
+ "lifecycle": "active",
+ "title": "Asset Monitoring and Tracking",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ {param:pe-20_odp.01} to track and monitor the location and movement of {param:pe-20_odp.02} within {param:pe-20_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "pe-20_odp.01",
+     "type": "string",
+     "label": "asset location technologies"
+    },
+    {
+     "name": "pe-20_odp.02",
+     "type": "string",
+     "label": "assets"
+    },
+    {
+     "name": "pe-20_odp.03",
+     "type": "string",
+     "label": "controlled areas"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Asset location technologies can help ensure that critical assets—including vehicles, equipment, and system components—remain in authorized locations. Organizations consult with the Office of the General Counsel and senior agency official for privacy regarding the deployment and use of asset location technologies to address potential privacy concerns."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-20_obj",
+     "label": "PE-20",
+     "prose": {
+      "en": "{param:pe-20_odp.01} are employed to track and monitor the location and movement of {param:pe-20_odp.02} within {param:pe-20_odp.03}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-20-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing asset monitoring and tracking"
+      },
+      {
+       "en": "documentation showing the use of asset location technologies"
+      },
+      {
+       "en": "system configuration documentation"
+      },
+      {
+       "en": "list of organizational assets requiring tracking and monitoring"
+      },
+      {
+       "en": "asset monitoring and tracking records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-20-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with asset monitoring and tracking responsibilities"
+      },
+      {
+       "en": "legal counsel"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-20-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for tracking and monitoring assets"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the tracking and monitoring of assets"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-20_odp.01": {
+     "guidelines": [
+      {
+       "en": "asset location technologies to be employed to track and monitor the location and movement of assets is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-20_prm_1"
+     ]
+    },
+    "pe-20_odp.02": {
+     "guidelines": [
+      {
+       "en": "assets whose location and movement are to be tracked and monitored are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-20_prm_2"
+     ]
+    },
+    "pe-20_odp.03": {
+     "guidelines": [
+      {
+       "en": "controlled areas within which asset location and movement are to be tracked and monitored are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-20_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-8"
+  }
+ ]
+}

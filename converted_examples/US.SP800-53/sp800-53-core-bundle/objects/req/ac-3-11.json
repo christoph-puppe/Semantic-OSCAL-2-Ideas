@@ -1,0 +1,138 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-3.11",
+ "version": "5.2.0",
+ "label": "AC-3(11)",
+ "lifecycle": "active",
+ "title": "Restrict Access to Specific Information Types",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Restrict access to data repositories containing {param:ac-03.11_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ac-03.11_odp",
+     "type": "string",
+     "label": "information types"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Restricting access to specific information is intended to provide flexibility regarding access control of specific information types within a system. For example, role-based access could be employed to allow access to only a specific type of personally identifiable information within a database rather than allowing access to the database in its entirety. Other examples include restricting access to cryptographic keys, authentication information, and selected system information."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-3.11_obj",
+     "label": "AC-03(11)",
+     "prose": {
+      "en": "access to data repositories containing {param:ac-03.11_odp} is restricted."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-03(11)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing access enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-03(11)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with access enforcement responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibilities for data repositories"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-03(11)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing access enforcement functions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-03.11_odp": {
+     "guidelines": [
+      {
+       "en": "information types requiring restricted access to data repositories are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-3.11_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-5"
+  }
+ ]
+}

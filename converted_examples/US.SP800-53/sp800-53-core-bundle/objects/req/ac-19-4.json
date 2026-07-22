@@ -1,0 +1,276 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-19.4",
+ "version": "5.2.0",
+ "label": "AC-19(4)",
+ "lifecycle": "active",
+ "title": "Restrictions for Classified Information",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Prohibit the use of unclassified mobile devices in facilities containing systems processing, storing, or transmitting classified information unless specifically permitted by the authorizing official; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Enforce the following restrictions on individuals permitted by the authorizing official to use unclassified mobile devices in facilities containing systems processing, storing, or transmitting classified information:"
+   }
+  },
+  {
+   "id": "smt.b.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Connection of unclassified mobile devices to classified systems is prohibited;"
+   }
+  },
+  {
+   "id": "smt.b.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Connection of unclassified mobile devices to unclassified systems requires approval from the authorizing official;"
+   }
+  },
+  {
+   "id": "smt.b.3",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Use of internal or external modems or wireless interfaces within the unclassified mobile devices is prohibited; and"
+   }
+  },
+  {
+   "id": "smt.b.4",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Unclassified mobile devices and the information stored on those devices are subject to random reviews and inspections by {param:ac-19.04_odp.01} , and if classified information is found, the incident handling policy is followed."
+   },
+   "parameters": [
+    {
+     "name": "ac-19.04_odp.01",
+     "type": "string",
+     "label": "security officials"
+    }
+   ]
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Restrict the connection of classified mobile devices to classified systems in accordance with {param:ac-19.04_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ac-19.04_odp.02",
+     "type": "string",
+     "label": "security policies"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "None."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-19.4_obj",
+     "label": "AC-19(04)",
+     "children": [
+      {
+       "id": "ac-19.4_obj.a",
+       "label": "AC-19(04)(a)",
+       "prose": {
+        "en": "the use of unclassified mobile devices in facilities containing systems processing, storing, or transmitting classified information is prohibited unless specifically permitted by the authorizing official;"
+       }
+      },
+      {
+       "id": "ac-19.4_obj.b",
+       "label": "AC-19(04)(b)",
+       "children": [
+        {
+         "id": "ac-19.4_obj.b.1",
+         "label": "AC-19(04)(b)(01)",
+         "prose": {
+          "en": "prohibition of the connection of unclassified mobile devices to classified systems is enforced on individuals permitted by an authorizing official to use unclassified mobile devices in facilities containing systems processing, storing, or transmitting classified information;"
+         }
+        },
+        {
+         "id": "ac-19.4_obj.b.2",
+         "label": "AC-19(04)(b)(02)",
+         "prose": {
+          "en": "approval by the authorizing official for the connection of unclassified mobile devices to unclassified systems is enforced on individuals permitted to use unclassified mobile devices in facilities containing systems processing, storing, or transmitting classified information;"
+         }
+        },
+        {
+         "id": "ac-19.4_obj.b.3",
+         "label": "AC-19(04)(b)(03)",
+         "prose": {
+          "en": "prohibition of the use of internal or external modems or wireless interfaces within unclassified mobile devices is enforced on individuals permitted by an authorizing official to use unclassified mobile devices in facilities containing systems processing, storing, or transmitting classified information;"
+         }
+        },
+        {
+         "id": "ac-19.4_obj.b.4",
+         "label": "AC-19(04)(b)(04)",
+         "children": [
+          {
+           "id": "ac-19.4_obj.b.4-1",
+           "label": "AC-19(04)(b)(04)[01]",
+           "prose": {
+            "en": "random review and inspection of unclassified mobile devices and the information stored on those devices by {param:ac-19.04_odp.01} are enforced;"
+           }
+          },
+          {
+           "id": "ac-19.4_obj.b.4-2",
+           "label": "AC-19(04)(b)(04)[02]",
+           "prose": {
+            "en": "following of the incident handling policy is enforced if classified information is found during a random review and inspection of unclassified mobile devices;"
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "ac-19.4_obj.c",
+       "label": "AC-19(04)(c)",
+       "prose": {
+        "en": "the connection of classified mobile devices to classified systems is restricted in accordance with {param:ac-19.04_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-19(04)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "incident handling policy"
+      },
+      {
+       "en": "procedures addressing access control for mobile devices"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "evidentiary documentation for random inspections and reviews of mobile devices"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-19(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for random reviews/inspections of mobile devices"
+      },
+      {
+       "en": "organizational personnel using mobile devices in facilities containing systems processing, storing, or transmitting classified information"
+      },
+      {
+       "en": "organizational personnel with incident response responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-19(04)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms prohibiting the use of internal or external modems or wireless interfaces with mobile devices"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-19.04_odp.01": {
+     "guidelines": [
+      {
+       "en": "security officials responsible for the review and inspection of unclassified mobile devices and the information stored on those devices are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-19.4_prm_1"
+     ]
+    },
+    "ac-19.04_odp.02": {
+     "guidelines": [
+      {
+       "en": "security policies restricting the connection of classified mobile devices to classified systems are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-19.4_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-19"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  }
+ ]
+}

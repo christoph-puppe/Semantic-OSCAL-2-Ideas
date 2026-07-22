@@ -1,0 +1,129 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-11",
+ "version": "5.2.0",
+ "label": "PE-11",
+ "lifecycle": "active",
+ "title": "Emergency Power",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide an uninterruptible power supply to facilitate {param:pe-11_odp} in the event of a primary power source loss."
+   },
+   "parameters": [
+    {
+     "name": "pe-11_odp",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "an orderly shutdown of the system"
+      },
+      {
+       "value": "transition of the system to long-term alternate power"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "An uninterruptible power supply (UPS) is an electrical system or mechanism that provides emergency power when there is a failure of the main power source. A UPS is typically used to protect computers, data centers, telecommunication equipment, or other electrical equipment where an unexpected power disruption could cause injuries, fatalities, serious mission or business disruption, or loss of data or information. A UPS differs from an emergency power system or backup generator in that the UPS provides near-instantaneous protection from unanticipated power interruptions from the main power source by providing energy stored in batteries, supercapacitors, or flywheels. The battery duration of a UPS is relatively short but provides sufficient time to start a standby power source, such as a backup generator, or properly shut down the system."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-11_obj",
+     "label": "PE-11",
+     "prose": {
+      "en": "an uninterruptible power supply is provided to facilitate {param:pe-11_odp} in the event of a primary power source loss."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-11-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing emergency power"
+      },
+      {
+       "en": "uninterruptible power supply"
+      },
+      {
+       "en": "uninterruptible power supply documentation"
+      },
+      {
+       "en": "uninterruptible power supply test records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-11-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with the responsibility for emergency power and/or planning"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-11-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing an uninterruptible power supply"
+      },
+      {
+       "en": "the uninterruptable power supply"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-11_odp": {
+     "alt-identifiers": [
+      "pe-11_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-7"
+  }
+ ]
+}

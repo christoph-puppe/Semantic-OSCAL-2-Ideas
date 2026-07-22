@@ -1,0 +1,110 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PS-3.1",
+ "version": "5.2.0",
+ "label": "PS-3(1)",
+ "lifecycle": "active",
+ "title": "Classified Information",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Verify that individuals accessing a system processing, storing, or transmitting classified information are cleared and indoctrinated to the highest classification level of the information to which they have access on the system."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Classified information is the most sensitive information that the Federal Government processes, stores, or transmits. It is imperative that individuals have the requisite security clearances and system access authorizations prior to gaining access to such information. Access authorizations are enforced by system access controls (see AC-3 ) and flow controls (see AC-4)."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ps-3.1_obj",
+     "label": "PS-03(01)",
+     "children": [
+      {
+       "id": "ps-3.1_obj-1",
+       "label": "PS-03(01)[01]",
+       "prose": {
+        "en": "individuals accessing a system processing, storing, or transmitting classified information are cleared;"
+       }
+      },
+      {
+       "id": "ps-3.1_obj-2",
+       "label": "PS-03(01)[02]",
+       "prose": {
+        "en": "individuals accessing a system processing, storing, or transmitting classified information are indoctrinated to the highest classification level of the information to which they have access on the system."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PS-03(01)-Examine",
+     "objects": [
+      {
+       "en": "Personnel security policy"
+      },
+      {
+       "en": "procedures addressing personnel screening"
+      },
+      {
+       "en": "records of screened personnel"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PS-03(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personnel security responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PS-03(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for clearing and indoctrinating personnel for access to classified information"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  }
+ ]
+}

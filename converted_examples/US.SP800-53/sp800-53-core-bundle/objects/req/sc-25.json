@@ -1,0 +1,133 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-25",
+ "version": "5.2.0",
+ "label": "SC-25",
+ "lifecycle": "active",
+ "title": "Thin Nodes",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Employ minimal functionality and information storage on the following system components: {param:sc-25_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sc-25_odp",
+     "type": "string",
+     "label": "system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The deployment of system components with minimal functionality reduces the need to secure every endpoint and may reduce the exposure of information, systems, and services to attacks. Reduced or minimal functionality includes diskless nodes and thin client technologies."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-25_obj",
+     "label": "SC-25",
+     "children": [
+      {
+       "id": "sc-25_obj-1",
+       "label": "SC-25[01]",
+       "prose": {
+        "en": "minimal functionality for {param:sc-25_odp} is employed;"
+       }
+      },
+      {
+       "id": "sc-25_obj-2",
+       "label": "SC-25[02]",
+       "prose": {
+        "en": "minimal information storage on {param:sc-25_odp} is allocated."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-25-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing use of thin nodes"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-25-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-25-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing thin nodes"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-25_odp": {
+     "guidelines": [
+      {
+       "en": "system components to be employed with minimal functionality and information storage are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-25_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-30"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-44"
+  }
+ ]
+}

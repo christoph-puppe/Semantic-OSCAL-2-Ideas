@@ -1,0 +1,110 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-8.7",
+ "version": "5.2.0",
+ "label": "CM-8(7)",
+ "lifecycle": "active",
+ "title": "Centralized Repository",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide a centralized repository for the inventory of system components."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations may implement centralized system component inventories that include components from all organizational systems. Centralized repositories of component inventories provide opportunities for efficiencies in accounting for organizational hardware, software, and firmware assets. Such repositories may also help organizations rapidly identify the location and responsible individuals of components that have been compromised, breached, or are otherwise in need of mitigation actions. Organizations ensure that the resulting centralized inventories include system-specific information required for proper component accountability."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-8.7_obj",
+     "label": "CM-08(07)",
+     "prose": {
+      "en": "a centralized repository for the system component inventory is provided."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-08(07)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing system component inventory"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-08(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with component inventory management responsibilities"
+      },
+      {
+       "en": "organizational personnel with security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-08(07)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing the system component inventory"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing system component inventory"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  }
+ ]
+}

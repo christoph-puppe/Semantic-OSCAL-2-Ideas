@@ -1,0 +1,155 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-16.5",
+ "version": "5.2.0",
+ "label": "AC-16(5)",
+ "lifecycle": "active",
+ "title": "Attribute Displays on Objects to Be Output",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Display security and privacy attributes in human-readable form on each object that the system transmits to output devices to identify {param:ac-16.05_odp.01} using {param:ac-16.05_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ac-16.05_odp.01",
+     "type": "string",
+     "label": "instructions"
+    },
+    {
+     "name": "ac-16.05_odp.02",
+     "type": "string",
+     "label": "naming conventions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "System outputs include printed pages, screens, or equivalent items. System output devices include printers, notebook computers, video displays, smart phones, and tablets. To mitigate the risk of unauthorized exposure of information (e.g., shoulder surfing), the outputs display full attribute values when unmasked by the subscriber."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-16.5_obj",
+     "label": "AC-16(05)",
+     "children": [
+      {
+       "id": "ac-16.5_obj-1",
+       "label": "AC-16(05)[01]",
+       "prose": {
+        "en": "security attributes are displayed in human-readable form on each object that the system transmits to output devices to identify {param:ac-16.05_odp.01} using {param:ac-16.05_odp.02};"
+       }
+      },
+      {
+       "id": "ac-16.5_obj-2",
+       "label": "AC-16(05)[02]",
+       "prose": {
+        "en": "privacy attributes are displayed in human-readable form on each object that the system transmits to output devices to identify {param:ac-16.05_odp.01} using {param:ac-16.05_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-16(05)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing display of security and privacy attributes in human-readable form"
+      },
+      {
+       "en": "special dissemination, handling, or distribution instructions"
+      },
+      {
+       "en": "types of human-readable, standard naming conventions"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-16(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-16(05)-Test",
+     "objects": [
+      {
+       "en": "System output devices displaying security and privacy attributes in human-readable form on each object"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-16.05_odp.01": {
+     "guidelines": [
+      {
+       "en": "special dissemination, handling, or distribution instructions to be used for each object that the system transmits to output devices are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-16.5_prm_1"
+     ],
+     "alt-label": "special dissemination, handling, or distribution instructions"
+    },
+    "ac-16.05_odp.02": {
+     "guidelines": [
+      {
+       "en": "human-readable, standard naming conventions for the security and privacy attributes to be displayed in human-readable form on each object that the system transmits to output devices are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-16.5_prm_2"
+     ],
+     "alt-label": "human-readable, standard naming conventions"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-16"
+  }
+ ]
+}

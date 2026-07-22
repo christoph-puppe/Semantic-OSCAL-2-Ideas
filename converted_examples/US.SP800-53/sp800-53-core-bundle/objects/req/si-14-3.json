@@ -1,0 +1,144 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-14.3",
+ "version": "5.2.0",
+ "label": "SI-14(3)",
+ "lifecycle": "active",
+ "title": "Non-persistent Connectivity",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish connections to the system on demand and terminate connections after {param:si-14.03_odp}."
+   },
+   "parameters": [
+    {
+     "name": "si-14.03_odp",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "completion of a request"
+      },
+      {
+       "value": "a period of non-use"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Persistent connections to systems can provide advanced adversaries with paths to move laterally through systems and potentially position themselves closer to high value assets. Limiting the availability of such connections impedes the adversary’s ability to move freely through organizational systems."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-14.3_obj",
+     "label": "SI-14(03)",
+     "children": [
+      {
+       "id": "si-14.3_obj-1",
+       "label": "SI-14(03)[01]",
+       "prose": {
+        "en": "connections to the system are established on demand;"
+       }
+      },
+      {
+       "id": "si-14.3_obj-2",
+       "label": "SI-14(03)[02]",
+       "prose": {
+        "en": "connections to the system are terminated after {param:si-14.03_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-14(03)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing non-persistence for system components"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-14(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for limiting persistent connections"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-14(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for limiting persistent connections"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing non-persistent connectivity"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-14.03_odp": {
+     "alt-identifiers": [
+      "si-14.3_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-14"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-10"
+  }
+ ]
+}

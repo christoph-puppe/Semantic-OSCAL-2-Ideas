@@ -1,0 +1,130 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-9.6",
+ "version": "5.2.0",
+ "label": "CP-9(6)",
+ "lifecycle": "active",
+ "title": "Redundant Secondary System",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Conduct system backup by maintaining a redundant secondary system that is not collocated with the primary system and that can be activated without loss of information or disruption to operations."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The effect of system backup can be achieved by maintaining a redundant secondary system that mirrors the primary system, including the replication of information. If this type of redundancy is in place and there is sufficient geographic separation between the two systems, the secondary system can also serve as the alternate processing site."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-9.6_obj",
+     "label": "CP-09(06)",
+     "children": [
+      {
+       "id": "cp-9.6_obj-1",
+       "label": "CP-09(06)[01]",
+       "prose": {
+        "en": "system backup is conducted by maintaining a redundant secondary system that is not collocated with the primary system;"
+       }
+      },
+      {
+       "id": "cp-9.6_obj-2",
+       "label": "CP-09(06)[02]",
+       "prose": {
+        "en": "system backup is conducted by maintaining a redundant secondary system that can be activated without loss of information or disruption to operations."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-09(06)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing system backup"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "system backup test results"
+      },
+      {
+       "en": "contingency plan test results"
+      },
+      {
+       "en": "contingency plan test documentation"
+      },
+      {
+       "en": "redundant secondary system for system backups"
+      },
+      {
+       "en": "location(s) of redundant secondary backup system(s)"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-09(06)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system backup responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibility for the redundant secondary system"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-09(06)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for maintaining redundant secondary systems"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing system backups"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing information transfer to a redundant secondary system"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-7"
+  }
+ ]
+}

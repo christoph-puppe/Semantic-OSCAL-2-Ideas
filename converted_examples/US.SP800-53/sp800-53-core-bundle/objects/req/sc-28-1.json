@@ -1,0 +1,198 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-28.1",
+ "version": "5.2.0",
+ "label": "SC-28(1)",
+ "lifecycle": "active",
+ "title": "Cryptographic Protection",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement cryptographic mechanisms to prevent unauthorized disclosure and modification of the following information at rest on {param:sc-28.01_odp.02}: {param:sc-28.01_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "sc-28.01_odp.01",
+     "type": "string",
+     "label": "information"
+    },
+    {
+     "name": "sc-28.01_odp.02",
+     "type": "string",
+     "label": "system components or media"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The selection of cryptographic mechanisms is based on the need to protect the confidentiality and integrity of organizational information. The strength of mechanism is commensurate with the security category or classification of the information. Organizations have the flexibility to encrypt information on system components or media or encrypt data structures, including files, records, or fields."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-28.1_obj",
+     "label": "SC-28(01)",
+     "children": [
+      {
+       "id": "sc-28.1_obj-1",
+       "label": "SC-28(01)[01]",
+       "prose": {
+        "en": "cryptographic mechanisms are implemented to prevent unauthorized disclosure of {param:sc-28.01_odp.01} at rest on {param:sc-28.01_odp.02};"
+       }
+      },
+      {
+       "id": "sc-28.1_obj-2",
+       "label": "SC-28(01)[02]",
+       "prose": {
+        "en": "cryptographic mechanisms are implemented to prevent unauthorized modification of {param:sc-28.01_odp.01} at rest on {param:sc-28.01_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-28(01)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing the protection of information at rest"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "cryptographic mechanisms and associated configuration documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-28(01)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-28(01)-Test",
+     "objects": [
+      {
+       "en": "Cryptographic mechanisms implementing confidentiality and integrity protections for information at rest"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-28.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "information requiring cryptographic protection is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-28.1_prm_2"
+     ]
+    },
+    "sc-28.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "system components or media requiring cryptographic protection is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-28.1_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-28"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-19"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-2.2",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-4.1",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-5.4",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/MP-2.2",
+    "mode": "merged-into",
+    "label": "MP-02(02)",
+    "title": "Cryptographic Protection"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/MP-4.1",
+    "mode": "merged-into",
+    "label": "MP-04(01)",
+    "title": "Cryptographic Protection"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/MP-5.4",
+    "mode": "merged-into",
+    "label": "MP-05(04)",
+    "title": "Cryptographic Protection"
+   }
+  ]
+ }
+}

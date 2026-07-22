@@ -1,0 +1,108 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MP-5.3",
+ "version": "5.2.0",
+ "label": "MP-5(3)",
+ "lifecycle": "active",
+ "title": "Custodians",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ an identified custodian during transport of system media outside of controlled areas."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Identified custodians provide organizations with specific points of contact during the media transport process and facilitate individual accountability. Custodial responsibilities can be transferred from one individual to another if an unambiguous custodian is identified."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "mp-5.3_obj",
+     "label": "MP-05(03)",
+     "children": [
+      {
+       "id": "mp-5.3_obj-1",
+       "label": "MP-05(03)[01]",
+       "prose": {
+        "en": "a custodian to transport system media outside of controlled areas is identified;"
+       }
+      },
+      {
+       "id": "mp-5.3_obj-2",
+       "label": "MP-05(03)[02]",
+       "prose": {
+        "en": "the identified custodian is employed during the transport of system media outside of controlled areas."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MP-05(03)-Examine",
+     "objects": [
+      {
+       "en": "System media protection policy"
+      },
+      {
+       "en": "procedures addressing media transport"
+      },
+      {
+       "en": "physical and environmental protection policy and procedures"
+      },
+      {
+       "en": "system media transport records"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MP-05(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system media transport responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MP-05(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for identifying and employing a custodian to transport media outside of controlled areas"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-5"
+  }
+ ]
+}

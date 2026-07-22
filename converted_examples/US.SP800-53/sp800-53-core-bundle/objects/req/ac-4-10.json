@@ -1,0 +1,208 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-4.10",
+ "version": "5.2.0",
+ "label": "AC-4(10)",
+ "lifecycle": "active",
+ "title": "Enable and Disable Security or Privacy Policy Filters",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide the capability for privileged administrators to enable and disable {param:ac-4.10_prm_1} under the following conditions: {param:ac-4.10_prm_2}."
+   },
+   "parameters": [
+    {
+     "name": "ac-4.10_prm_1",
+     "type": "string",
+     "label": "organization-defined security or privacy policy filters"
+    },
+    {
+     "name": "ac-4.10_prm_2",
+     "type": "string",
+     "label": "organization-defined conditions"
+    },
+    {
+     "name": "ac-04.10_odp.01",
+     "type": "string",
+     "label": "security filters"
+    },
+    {
+     "name": "ac-04.10_odp.02",
+     "type": "string",
+     "label": "privacy filters"
+    },
+    {
+     "name": "ac-04.10_odp.03",
+     "type": "string",
+     "label": "conditions"
+    },
+    {
+     "name": "ac-04.10_odp.04",
+     "type": "string",
+     "label": "conditions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "For example, as allowed by the system authorization, administrators can enable security or privacy policy filters to accommodate approved data types. Administrators also have the capability to select the filters that are executed on a specific data flow based on the type of data that is being transferred, the source and destination security domains, and other security or privacy relevant features, as needed."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-4.10_obj",
+     "label": "AC-04(10)",
+     "children": [
+      {
+       "id": "ac-4.10_obj-1",
+       "label": "AC-04(10)[01]",
+       "prose": {
+        "en": "capability is provided for privileged administrators to enable and disable {param:ac-04.10_odp.01} under {param:ac-04.10_odp.03};"
+       }
+      },
+      {
+       "id": "ac-4.10_obj-2",
+       "label": "AC-04(10)[02]",
+       "prose": {
+        "en": "capability is provided for privileged administrators to enable and disable {param:ac-04.10_odp.02} under {param:ac-04.10_odp.04}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-04(10)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "information flow information policies"
+      },
+      {
+       "en": "procedures addressing information flow enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of security policy filters enabled/disabled by privileged administrators"
+      },
+      {
+       "en": "list of privacy policy filters enabled/disabled by privileged administrators"
+      },
+      {
+       "en": "list of approved data types for enabling/disabling by privileged administrators"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-04(10)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for enabling/disabling security and privacy policy filters"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-04(10)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing information flow enforcement policy"
+      },
+      {
+       "en": "security and privacy policy filters"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-4.10_prm_1": {
+     "aggregates": [
+      "ac-04.10_odp.01",
+      "ac-04.10_odp.02"
+     ]
+    },
+    "ac-4.10_prm_2": {
+     "aggregates": [
+      "ac-04.10_odp.03",
+      "ac-04.10_odp.04"
+     ]
+    },
+    "ac-04.10_odp.01": {
+     "guidelines": [
+      {
+       "en": "security policy filters that privileged administrators have the capability to enable and disable are defined;"
+      }
+     ]
+    },
+    "ac-04.10_odp.02": {
+     "guidelines": [
+      {
+       "en": "privacy policy filters that privileged administrators have the capability to enable and disable are defined;"
+      }
+     ]
+    },
+    "ac-04.10_odp.03": {
+     "guidelines": [
+      {
+       "en": "conditions under which privileged administrators have the capability to enable and disable security policy filters are defined;"
+      }
+     ]
+    },
+    "ac-04.10_odp.04": {
+     "guidelines": [
+      {
+       "en": "conditions under which privileged administrators have the capability to enable and disable privacy policy filters are defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  }
+ ]
+}

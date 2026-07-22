@@ -1,0 +1,159 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MP-6.1",
+ "version": "5.2.0",
+ "label": "MP-6(1)",
+ "lifecycle": "active",
+ "title": "Review, Approve, Track, Document, and Verify",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review, approve, track, document, and verify media sanitization and disposal actions."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations review and approve media to be sanitized to ensure compliance with records retention policies. Tracking and documenting actions include listing personnel who reviewed and approved sanitization and disposal actions, types of media sanitized, files stored on the media, sanitization methods used, date and time of the sanitization actions, personnel who performed the sanitization, verification actions taken and personnel who performed the verification, and the disposal actions taken. Organizations verify that the sanitization of the media was effective prior to disposal."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "mp-6.1_obj",
+     "label": "MP-06(01)",
+     "children": [
+      {
+       "id": "mp-6.1_obj-1",
+       "label": "MP-06(01)[01]",
+       "prose": {
+        "en": "media sanitization and disposal actions are reviewed;"
+       }
+      },
+      {
+       "id": "mp-6.1_obj-2",
+       "label": "MP-06(01)[02]",
+       "prose": {
+        "en": "media sanitization and disposal actions are approved;"
+       }
+      },
+      {
+       "id": "mp-6.1_obj-3",
+       "label": "MP-06(01)[03]",
+       "prose": {
+        "en": "media sanitization and disposal actions are tracked;"
+       }
+      },
+      {
+       "id": "mp-6.1_obj-4",
+       "label": "MP-06(01)[04]",
+       "prose": {
+        "en": "media sanitization and disposal actions are documented;"
+       }
+      },
+      {
+       "id": "mp-6.1_obj-5",
+       "label": "MP-06(01)[05]",
+       "prose": {
+        "en": "media sanitization and disposal actions are verified."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MP-06(01)-Examine",
+     "objects": [
+      {
+       "en": "System media protection policy"
+      },
+      {
+       "en": "procedures addressing media sanitization and disposal"
+      },
+      {
+       "en": "records retention and disposition policy"
+      },
+      {
+       "en": "records retention and disposition procedures"
+      },
+      {
+       "en": "media sanitization and disposal records"
+      },
+      {
+       "en": "review records for media sanitization and disposal actions"
+      },
+      {
+       "en": "approvals for media sanitization and disposal actions"
+      },
+      {
+       "en": "tracking records"
+      },
+      {
+       "en": "verification records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MP-06(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system media sanitization and disposal responsibilities"
+      },
+      {
+       "en": "organizational personnel with records retention and disposition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MP-06(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for media sanitization"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing media sanitization"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing verification of media sanitization"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-6"
+  }
+ ]
+}

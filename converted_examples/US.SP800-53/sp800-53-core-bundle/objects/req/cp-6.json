@@ -1,0 +1,177 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-6",
+ "version": "5.2.0",
+ "label": "CP-6",
+ "lifecycle": "active",
+ "title": "Alternate Storage Site",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish an alternate storage site, including necessary agreements to permit the storage and retrieval of system backup information; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Ensure that the alternate storage site provides controls equivalent to that of the primary site."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Alternate storage sites are geographically distinct from primary storage sites and maintain duplicate copies of information and data if the primary storage site is not available. Similarly, alternate processing sites provide processing capability if the primary processing site is not available. Geographically distributed architectures that support contingency requirements may be considered alternate storage sites. Items covered by alternate storage site agreements include environmental conditions at the alternate sites, access rules for systems and facilities, physical and environmental protection requirements, and coordination of delivery and retrieval of backup media. Alternate storage sites reflect the requirements in contingency plans so that organizations can maintain essential mission and business functions despite compromise, failure, or disruption in organizational systems."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-6_obj",
+     "label": "CP-06",
+     "children": [
+      {
+       "id": "cp-6_obj.a",
+       "label": "CP-06a.",
+       "children": [
+        {
+         "id": "cp-6_obj.a-1",
+         "label": "CP-06a.[01]",
+         "prose": {
+          "en": "an alternate storage site is established;"
+         }
+        },
+        {
+         "id": "cp-6_obj.a-2",
+         "label": "CP-06a.[02]",
+         "prose": {
+          "en": "establishment of the alternate storage site includes necessary agreements to permit the storage and retrieval of system backup information;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "cp-6_obj.b",
+       "label": "CP-06b.",
+       "prose": {
+        "en": "the alternate storage site provides controls equivalent to that of the primary site."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-06-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing alternate storage sites"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "alternate storage site agreements"
+      },
+      {
+       "en": "primary storage site agreements"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-06-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency plan alternate storage site responsibilities"
+      },
+      {
+       "en": "organizational personnel with system recovery responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-06-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for storing and retrieving system backup information at the alternate storage site"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the storage and retrieval of system backup information at the alternate storage site"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-34r1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-36"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-13"
+  }
+ ]
+}

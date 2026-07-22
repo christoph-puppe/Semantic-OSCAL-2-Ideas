@@ -1,0 +1,126 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/RA-3.2",
+ "version": "5.2.0",
+ "label": "RA-3(2)",
+ "lifecycle": "active",
+ "title": "Use of All-source Intelligence",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Use all-source intelligence to assist in the analysis of risk."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations employ all-source intelligence to inform engineering, acquisition, and risk management decisions. All-source intelligence consists of information derived from all available sources, including publicly available or open-source information, measurement and signature intelligence, human intelligence, signals intelligence, and imagery intelligence. All-source intelligence is used to analyze the risk of vulnerabilities (both intentional and unintentional) from development, manufacturing, and delivery processes, people, and the environment. The risk analysis may be performed on suppliers at multiple tiers in the supply chain sufficient to manage risks. Organizations may develop agreements to share all-source intelligence information or resulting decisions with other organizations, as appropriate."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ra-3.2_obj",
+     "label": "RA-03(02)",
+     "prose": {
+      "en": "all-source intelligence is used to assist in the analysis of risk."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "RA-03(02)-Examine",
+     "objects": [
+      {
+       "en": "Risk assessment policy"
+      },
+      {
+       "en": "security planning policy and procedures"
+      },
+      {
+       "en": "procedures addressing organizational assessments of risk"
+      },
+      {
+       "en": "risk assessment"
+      },
+      {
+       "en": "risk assessment results"
+      },
+      {
+       "en": "risk assessment reviews"
+      },
+      {
+       "en": "risk assessment updates"
+      },
+      {
+       "en": "risk intelligence reports"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "RA-03(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with risk assessment responsibilities"
+      },
+      {
+       "en": "organizational personnel with security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "RA-03(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for risk assessment"
+      },
+      {
+       "en": "mechanisms supporting and/or conducting, documenting, reviewing, disseminating, and updating the risk assessment"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-12.8",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-12.8",
+    "mode": "merged-into",
+    "label": "SA-12(08)",
+    "title": "Use of All-source Intelligence"
+   }
+  ]
+ }
+}

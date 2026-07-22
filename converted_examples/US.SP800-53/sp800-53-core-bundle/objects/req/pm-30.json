@@ -1,0 +1,325 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-30",
+ "version": "5.2.0",
+ "label": "PM-30",
+ "lifecycle": "active",
+ "title": "Supply Chain Risk Management Strategy",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop an organization-wide strategy for managing supply chain risks associated with the development, acquisition, maintenance, and disposal of systems, system components, and system services;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Implement the supply chain risk management strategy consistently across the organization; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review and update the supply chain risk management strategy on {param:pm-30_odp} or as required, to address organizational changes."
+   },
+   "parameters": [
+    {
+     "name": "pm-30_odp",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "An organization-wide supply chain risk management strategy includes an unambiguous expression of the supply chain risk appetite and tolerance for the organization, acceptable supply chain risk mitigation strategies or controls, a process for consistently evaluating and monitoring supply chain risk, approaches for implementing and communicating the supply chain risk management strategy, and the associated roles and responsibilities. Supply chain risk management includes considerations of the security and privacy risks associated with the development, acquisition, maintenance, and disposal of systems, system components, and system services. The supply chain risk management strategy can be incorporated into the organization’s overarching risk management strategy and can guide and inform supply chain policies and system-level supply chain risk management plans. In addition, the use of a risk executive function can facilitate a consistent, organization-wide application of the supply chain risk management strategy. The supply chain risk management strategy is implemented at the organization and mission/business levels, whereas the supply chain risk management plan (see SR-2 ) is implemented at the system level."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-30_obj",
+     "label": "PM-30",
+     "children": [
+      {
+       "id": "pm-30_obj.a",
+       "label": "PM-30a.",
+       "children": [
+        {
+         "id": "pm-30_obj.a-1",
+         "label": "PM-30a.[01]",
+         "prose": {
+          "en": "an organization-wide strategy for managing supply chain risks is developed;"
+         }
+        },
+        {
+         "id": "pm-30_obj.a-2",
+         "label": "PM-30a.[02]",
+         "prose": {
+          "en": "the supply chain risk management strategy addresses risks associated with the development of systems;"
+         }
+        },
+        {
+         "id": "pm-30_obj.a-3",
+         "label": "PM-30a.[03]",
+         "prose": {
+          "en": "the supply chain risk management strategy addresses risks associated with the development of system components;"
+         }
+        },
+        {
+         "id": "pm-30_obj.a-4",
+         "label": "PM-30a.[04]",
+         "prose": {
+          "en": "the supply chain risk management strategy addresses risks associated with the development of system services;"
+         }
+        },
+        {
+         "id": "pm-30_obj.a-5",
+         "label": "PM-30a.[05]",
+         "prose": {
+          "en": "the supply chain risk management strategy addresses risks associated with the acquisition of systems;"
+         }
+        },
+        {
+         "id": "pm-30_obj.a-6",
+         "label": "PM-30a.[06]",
+         "prose": {
+          "en": "the supply chain risk management strategy addresses risks associated with the acquisition of system components;"
+         }
+        },
+        {
+         "id": "pm-30_obj.a-7",
+         "label": "PM-30a.[07]",
+         "prose": {
+          "en": "the supply chain risk management strategy addresses risks associated with the acquisition of system services;"
+         }
+        },
+        {
+         "id": "pm-30_obj.a-8",
+         "label": "PM-30a.[08]",
+         "prose": {
+          "en": "the supply chain risk management strategy addresses risks associated with the maintenance of systems;"
+         }
+        },
+        {
+         "id": "pm-30_obj.a-9",
+         "label": "PM-30a.[09]",
+         "prose": {
+          "en": "the supply chain risk management strategy addresses risks associated with the maintenance of system components;"
+         }
+        },
+        {
+         "id": "pm-30_obj.a-10",
+         "label": "PM-30a.[10]",
+         "prose": {
+          "en": "the supply chain risk management strategy addresses risks associated with the maintenance of system services;"
+         }
+        },
+        {
+         "id": "pm-30_obj.a-11",
+         "label": "PM-30a.[11]",
+         "prose": {
+          "en": "the supply chain risk management strategy addresses risks associated with the disposal of systems;"
+         }
+        },
+        {
+         "id": "pm-30_obj.a-12",
+         "label": "PM-30a.[12]",
+         "prose": {
+          "en": "the supply chain risk management strategy addresses risks associated with the disposal of system components;"
+         }
+        },
+        {
+         "id": "pm-30_obj.a-13",
+         "label": "PM-30a.[13]",
+         "prose": {
+          "en": "the supply chain risk management strategy addresses risks associated with the disposal of system services;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-30_obj.b",
+       "label": "PM-30b.",
+       "prose": {
+        "en": "the supply chain risk management strategy is implemented consistently across the organization;"
+       }
+      },
+      {
+       "id": "pm-30_obj.c",
+       "label": "PM-30c.",
+       "prose": {
+        "en": "the supply chain risk management strategy is reviewed and updated {param:pm-30_odp} or as required to address organizational changes."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-30-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management strategy"
+      },
+      {
+       "en": "organizational risk management strategy"
+      },
+      {
+       "en": "enterprise risk management documents"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-30-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with supply chain risk management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with enterprise risk management responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pm-30_odp": {
+     "guidelines": [
+      {
+       "en": "the frequency for reviewing and updating the supply chain risk management strategy is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pm-30_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.govinfo.gov/content/pkg/STATUTE-88/pdf/STATUTE-88-Pg1896.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.congress.gov/bill/115th-congress/senate-bill/3085"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/presidential-actions/executive-order-securing-information-communications-technology-services-supply-chain"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.federalregister.gov/d/2020-18939"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/memoranda/2017/m-17-06.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.cnss.gov/CNSS/issuances/Directives.cfm"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.iso.org/standard/59648.html"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.iso.org/standard/74399.html"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-161"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.8272"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-11"
+  }
+ ]
+}

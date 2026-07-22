@@ -1,0 +1,150 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-8.5",
+ "version": "5.2.0",
+ "label": "IA-8(5)",
+ "lifecycle": "active",
+ "title": "Acceptance of PIV-I Credentials",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Accept and verify federated or PKI credentials that meet {param:ia-08.05_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ia-08.05_odp",
+     "type": "string",
+     "label": "policy"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Acceptance of PIV-I credentials can be implemented by PIV, PIV-I, and other commercial or external identity providers. The acceptance and verification of PIV-I-compliant credentials apply to both logical and physical access control systems. The acceptance and verification of PIV-I credentials address nonfederal issuers of identity cards that desire to interoperate with United States Government PIV systems and that can be trusted by Federal Government-relying parties. The X.509 certificate policy for the Federal Bridge Certification Authority (FBCA) addresses PIV-I requirements. The PIV-I card is commensurate with the PIV credentials as defined in cited references. PIV-I credentials are the credentials issued by a PIV-I provider whose PIV-I certificate policy maps to the Federal Bridge PIV-I Certificate Policy. A PIV-I provider is cross-certified with the FBCA (directly or through another PKI bridge) with policies that have been mapped and approved as meeting the requirements of the PIV-I policies defined in the FBCA certificate policy."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-8.5_obj",
+     "label": "IA-08(05)",
+     "children": [
+      {
+       "id": "ia-8.5_obj-1",
+       "label": "IA-08(05)[01]",
+       "prose": {
+        "en": "federated or PKI credentials that meet {param:ia-08.05_odp} are accepted;"
+       }
+      },
+      {
+       "id": "ia-8.5_obj-2",
+       "label": "IA-08(05)[02]",
+       "prose": {
+        "en": "federated or PKI credentials that meet {param:ia-08.05_odp} are verified."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-08(05)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "procedures addressing user identification and authentication"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "PIV-I verification records"
+      },
+      {
+       "en": "evidence of PIV-I credentials"
+      },
+      {
+       "en": "PIV-I credential authorizations"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-08(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system operations responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with account management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-08(05)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing identification and authentication capabilities"
+      },
+      {
+       "en": "mechanisms that accept and verify PIV-I credentials"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ia-08.05_odp": {
+     "guidelines": [
+      {
+       "en": "a policy for using federated or PKI credentials is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-8.5_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-8"
+  }
+ ]
+}

@@ -1,0 +1,146 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-2.2",
+ "version": "5.2.0",
+ "label": "AC-2(2)",
+ "lifecycle": "active",
+ "title": "Automated Temporary and Emergency Account Management",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Automatically {param:ac-02.02_odp.01} temporary and emergency accounts after {param:ac-02.02_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ac-02.02_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "remove"
+      },
+      {
+       "value": "disable"
+      }
+     ]
+    },
+    {
+     "name": "ac-02.02_odp.02",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Management of temporary and emergency accounts includes the removal or disabling of such accounts automatically after a predefined time period rather than at the convenience of the system administrator. Automatic removal or disabling of accounts provides a more consistent implementation."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-2.2_obj",
+     "label": "AC-02(02)",
+     "prose": {
+      "en": "temporary and emergency accounts are automatically {param:ac-02.02_odp.01} after {param:ac-02.02_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-02(02)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures for addressing account management"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system-generated list of temporary accounts removed and/or disabled"
+      },
+      {
+       "en": "system-generated list of emergency accounts removed and/or disabled"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-02(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with account management responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-02(02)-Test",
+     "objects": [
+      {
+       "en": "Automated mechanisms for implementing account management functions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-02.02_odp.01": {
+     "alt-identifiers": [
+      "ac-2.2_prm_1"
+     ]
+    },
+    "ac-02.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "the time period after which to automatically remove or disable temporary or emergency accounts is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2.2_prm_2"
+     ],
+     "alt-label": "time period for each type of account"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  }
+ ]
+}

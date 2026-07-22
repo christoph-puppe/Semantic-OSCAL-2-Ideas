@@ -1,0 +1,117 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-2.8",
+ "version": "5.2.0",
+ "label": "CP-2(8)",
+ "lifecycle": "active",
+ "title": "Identify Critical Assets",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identify critical system assets supporting {param:cp-02.08_odp} mission and business functions."
+   },
+   "parameters": [
+    {
+     "name": "cp-02.08_odp",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "all"
+      },
+      {
+       "value": "essential"
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations may choose to identify critical assets as part of criticality analysis, business continuity planning, or business impact analyses. Organizations identify critical system assets so that additional controls can be employed (beyond the controls routinely implemented) to help ensure that organizational mission and business functions can continue to be conducted during contingency operations. The identification of critical information assets also facilitates the prioritization of organizational resources. Critical system assets include technical and operational aspects. Technical aspects include system components, information technology services, information technology products, and mechanisms. Operational aspects include procedures (i.e., manually executed operations) and personnel (i.e., individuals operating technical controls and/or executing manual procedures). Organizational program protection plans can assist in identifying critical assets. If critical assets are resident within or supported by external service providers, organizations consider implementing CP-2(7) as a control enhancement."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-2.8_obj",
+     "label": "CP-02(08)",
+     "prose": {
+      "en": "critical system assets supporting {param:cp-02.08_odp} mission and business functions are identified."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-02(08)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing contingency operations for the system"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "business impact assessment"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-02(08)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel with knowledge of requirements for mission and business functions"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cp-02.08_odp": {
+     "alt-identifiers": [
+      "cp-2.8_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-9"
+  }
+ ]
+}

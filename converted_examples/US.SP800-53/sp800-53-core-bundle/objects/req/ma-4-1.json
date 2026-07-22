@@ -1,0 +1,211 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-4.1",
+ "version": "5.2.0",
+ "label": "MA-4(1)",
+ "lifecycle": "active",
+ "title": "Logging and Review",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Log {param:ma-4.1_prm_1} for nonlocal maintenance and diagnostic sessions; and"
+   },
+   "parameters": [
+    {
+     "name": "ma-4.1_prm_1",
+     "type": "string",
+     "label": "organization-defined audit events"
+    },
+    {
+     "name": "ma-04.01_odp.01",
+     "type": "string",
+     "label": "audit events"
+    },
+    {
+     "name": "ma-04.01_odp.02",
+     "type": "string",
+     "label": "audit events"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review the audit records of the maintenance and diagnostic sessions to detect anomalous behavior."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Audit logging for nonlocal maintenance is enforced by AU-2 . Audit events are defined in AU-2a."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-4.1_obj",
+     "label": "MA-04(01)",
+     "children": [
+      {
+       "id": "ma-4.1_obj.a",
+       "label": "MA-04(01)(a)",
+       "children": [
+        {
+         "id": "ma-4.1_obj.a-1",
+         "label": "MA-04(01)(a)[01]",
+         "prose": {
+          "en": "{param:ma-04.01_odp.01} are logged for nonlocal maintenance sessions;"
+         }
+        },
+        {
+         "id": "ma-4.1_obj.a-2",
+         "label": "MA-04(01)(a)[02]",
+         "prose": {
+          "en": "{param:ma-04.01_odp.02} are logged for nonlocal diagnostic sessions;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ma-4.1_obj.b",
+       "label": "MA-04(01)(b)",
+       "children": [
+        {
+         "id": "ma-4.1_obj.b-1",
+         "label": "MA-04(01)(b)[01]",
+         "prose": {
+          "en": "the audit records of the maintenance sessions are reviewed to detect anomalous behavior;"
+         }
+        },
+        {
+         "id": "ma-4.1_obj.b-2",
+         "label": "MA-04(01)(b)[02]",
+         "prose": {
+          "en": "the audit records of the diagnostic sessions are reviewed to detect anomalous behavior."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-04(01)-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing nonlocal system maintenance"
+      },
+      {
+       "en": "list of audit events"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "maintenance records"
+      },
+      {
+       "en": "diagnostic records"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "reviews of maintenance and diagnostic session records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-04(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with audit and review responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MA-04(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for audit and review of nonlocal maintenance"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing audit and review of nonlocal maintenance"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ma-4.1_prm_1": {
+     "aggregates": [
+      "ma-04.01_odp.01",
+      "ma-04.01_odp.02"
+     ]
+    },
+    "ma-04.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "audit events to be logged for nonlocal maintenance are defined;"
+      }
+     ]
+    },
+    "ma-04.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "audit events to be logged for diagnostic sessions are defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-12"
+  }
+ ]
+}

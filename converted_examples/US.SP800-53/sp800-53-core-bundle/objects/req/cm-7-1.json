@@ -1,0 +1,276 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-7.1",
+ "version": "5.2.0",
+ "label": "CM-7(1)",
+ "lifecycle": "active",
+ "title": "Periodic Review",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Review the system {param:cm-07.01_odp.01} to identify unnecessary and/or nonsecure functions, ports, protocols, software, and services; and"
+   },
+   "parameters": [
+    {
+     "name": "cm-07.01_odp.01",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "cm-07.01_odp.02",
+     "type": "string",
+     "label": "functions"
+    },
+    {
+     "name": "cm-07.01_odp.03",
+     "type": "string",
+     "label": "ports"
+    },
+    {
+     "name": "cm-07.01_odp.04",
+     "type": "string",
+     "label": "protocols"
+    },
+    {
+     "name": "cm-07.01_odp.05",
+     "type": "string",
+     "label": "software"
+    },
+    {
+     "name": "cm-07.01_odp.06",
+     "type": "string",
+     "label": "services"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Disable or remove {param:cm-7.1_prm_2}."
+   },
+   "parameters": [
+    {
+     "name": "cm-7.1_prm_2",
+     "type": "string",
+     "label": "organization-defined functions, ports, protocols, software, and services within the system deemed to be unnecessary and/or nonsecure"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations review functions, ports, protocols, and services provided by systems or system components to determine the functions and services that are candidates for elimination. Such reviews are especially important during transition periods from older technologies to newer technologies (e.g., transition from IPv4 to IPv6). These technology transitions may require implementing the older and newer technologies simultaneously during the transition period and returning to minimum essential functions, ports, protocols, and services at the earliest opportunity. Organizations can either decide the relative security of the function, port, protocol, and/or service or base the security decision on the assessment of other entities. Unsecure protocols include Bluetooth, FTP, and peer-to-peer networking."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-7.1_obj",
+     "label": "CM-07(01)",
+     "children": [
+      {
+       "id": "cm-7.1_obj.a",
+       "label": "CM-07(01)(a)",
+       "prose": {
+        "en": "the system is reviewed {param:cm-07.01_odp.01} to identify unnecessary and/or non-secure functions, ports, protocols, software, and services:"
+       }
+      },
+      {
+       "id": "cm-7.1_obj.b",
+       "label": "CM-07(01)(b)",
+       "children": [
+        {
+         "id": "cm-7.1_obj.b-1",
+         "label": "CM-07(01)(b)[01]",
+         "prose": {
+          "en": "{param:cm-07.01_odp.02} deemed to be unnecessary and/or non-secure are disabled or removed;"
+         }
+        },
+        {
+         "id": "cm-7.1_obj.b-2",
+         "label": "CM-07(01)(b)[02]",
+         "prose": {
+          "en": "{param:cm-07.01_odp.03} deemed to be unnecessary and/or non-secure are disabled or removed;"
+         }
+        },
+        {
+         "id": "cm-7.1_obj.b-3",
+         "label": "CM-07(01)(b)[03]",
+         "prose": {
+          "en": "{param:cm-07.01_odp.04} deemed to be unnecessary and/or non-secure are disabled or removed;"
+         }
+        },
+        {
+         "id": "cm-7.1_obj.b-4",
+         "label": "CM-07(01)(b)[04]",
+         "prose": {
+          "en": "{param:cm-07.01_odp.05} deemed to be unnecessary and/or non-secure is disabled or removed;"
+         }
+        },
+        {
+         "id": "cm-7.1_obj.b-5",
+         "label": "CM-07(01)(b)[05]",
+         "prose": {
+          "en": "{param:cm-07.01_odp.06} deemed to be unnecessary and/or non-secure are disabled or removed."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-07(01)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing least functionality in the system"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "common secure configuration checklists"
+      },
+      {
+       "en": "documented reviews of functions, ports, protocols, and/or services"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-07(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for reviewing functions, ports, protocols, and services on the system"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-07(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for reviewing or disabling functions, ports, protocols, and services on the system"
+      },
+      {
+       "en": "mechanisms implementing review and disabling of functions, ports, protocols, and/or services"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-7.1_prm_2": {
+     "aggregates": [
+      "cm-07.01_odp.02",
+      "cm-07.01_odp.03",
+      "cm-07.01_odp.04",
+      "cm-07.01_odp.05",
+      "cm-07.01_odp.06"
+     ]
+    },
+    "cm-07.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to review the system to identify unnecessary and/or non-secure functions, ports, protocols, software, and/or services is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-7.1_prm_1"
+     ]
+    },
+    "cm-07.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "functions to be disabled or removed when deemed unnecessary or non-secure are defined;"
+      }
+     ]
+    },
+    "cm-07.01_odp.03": {
+     "guidelines": [
+      {
+       "en": "ports to be disabled or removed when deemed unnecessary or non-secure are defined;"
+      }
+     ]
+    },
+    "cm-07.01_odp.04": {
+     "guidelines": [
+      {
+       "en": "protocols to be disabled or removed when deemed unnecessary or non-secure are defined;"
+      }
+     ]
+    },
+    "cm-07.01_odp.05": {
+     "guidelines": [
+      {
+       "en": "software to be disabled or removed when deemed unnecessary or non-secure is defined;"
+      }
+     ]
+    },
+    "cm-07.01_odp.06": {
+     "guidelines": [
+      {
+       "en": "services to be disabled or removed when deemed unnecessary or non-secure are defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-18"
+  }
+ ]
+}

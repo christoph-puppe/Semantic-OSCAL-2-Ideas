@@ -1,0 +1,110 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-8.3",
+ "version": "5.2.0",
+ "label": "SI-8(3)",
+ "lifecycle": "active",
+ "title": "Continuous Learning Capability",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement spam protection mechanisms with a learning capability to more effectively identify legitimate communications traffic."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Learning mechanisms include Bayesian filters that respond to user inputs that identify specific traffic as spam or legitimate by updating algorithm parameters and thereby more accurately separating types of traffic."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-8.3_obj",
+     "label": "SI-08(03)",
+     "prose": {
+      "en": "spam protection mechanisms with a learning capability are implemented to more effectively identify legitimate communications traffic."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-08(03)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing spam protection"
+      },
+      {
+       "en": "spam protection mechanisms"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-08(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for spam protection"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-08(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for spam protection"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing spam protection mechanisms with a learning capability"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-8"
+  }
+ ]
+}

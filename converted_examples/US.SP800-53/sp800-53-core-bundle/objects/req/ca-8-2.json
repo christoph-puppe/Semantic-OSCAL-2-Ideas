@@ -1,0 +1,137 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CA-8.2",
+ "version": "5.2.0",
+ "label": "CA-8(2)",
+ "lifecycle": "active",
+ "title": "Red Team Exercises",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ the following red-team exercises to simulate attempts by adversaries to compromise organizational systems in accordance with applicable rules of engagement: {param:ca-08.02_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ca-08.02_odp",
+     "type": "string",
+     "label": "red team exercises"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Red team exercises extend the objectives of penetration testing by examining the security and privacy posture of organizations and the capability to implement effective cyber defenses. Red team exercises simulate attempts by adversaries to compromise mission and business functions and provide a comprehensive assessment of the security and privacy posture of systems and organizations. Such attempts may include technology-based attacks and social engineering-based attacks. Technology-based attacks include interactions with hardware, software, or firmware components and/or mission and business processes. Social engineering-based attacks include interactions via email, telephone, shoulder surfing, or personal conversations. Red team exercises are most effective when conducted by penetration testing agents and teams with knowledge of and experience with current adversarial tactics, techniques, procedures, and tools. While penetration testing may be primarily laboratory-based testing, organizations can use red team exercises to provide more comprehensive assessments that reflect real-world conditions. The results from red team exercises can be used by organizations to improve security and privacy awareness and training and to assess control effectiveness."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ca-8.2_obj",
+     "label": "CA-08(02)",
+     "prose": {
+      "en": "{param:ca-08.02_odp} are employed to simulate attempts by adversaries to compromise organizational systems in accordance with applicable rules of engagement."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CA-08(02)-Examine",
+     "objects": [
+      {
+       "en": "Assessment, authorization, and monitoring policy"
+      },
+      {
+       "en": "procedures addressing penetration testing"
+      },
+      {
+       "en": "procedures addressing red team exercises"
+      },
+      {
+       "en": "assessment plan"
+      },
+      {
+       "en": "results of red team exercises"
+      },
+      {
+       "en": "penetration test report"
+      },
+      {
+       "en": "assessment report"
+      },
+      {
+       "en": "rules of engagement"
+      },
+      {
+       "en": "assessment evidence"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CA-08(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with assessment responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CA-08(02)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting the employment of red team exercises"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ca-08.02_odp": {
+     "guidelines": [
+      {
+       "en": "red team exercises to simulate attempts by adversaries to compromise organizational systems are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ca-8.2_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-8"
+  }
+ ]
+}

@@ -1,0 +1,416 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AT-3",
+ "version": "5.2.0",
+ "label": "AT-3",
+ "lifecycle": "active",
+ "title": "Role-based Training",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide role-based security and privacy training to personnel with the following roles and responsibilities: {param:at-3_prm_1}:"
+   },
+   "parameters": [
+    {
+     "name": "at-3_prm_1",
+     "type": "string",
+     "label": "organization-defined roles and responsibilities"
+    },
+    {
+     "name": "at-03_odp.01",
+     "type": "string",
+     "label": "roles and responsibilities"
+    },
+    {
+     "name": "at-03_odp.02",
+     "type": "string",
+     "label": "roles and responsibilities"
+    }
+   ]
+  },
+  {
+   "id": "smt.a.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Before authorizing access to the system, information, or performing assigned duties, and {param:at-03_odp.03} thereafter; and"
+   },
+   "parameters": [
+    {
+     "name": "at-03_odp.03",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.a.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "When required by system changes;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Update role-based training content {param:at-03_odp.04} and following {param:at-03_odp.05} ; and"
+   },
+   "parameters": [
+    {
+     "name": "at-03_odp.04",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "at-03_odp.05",
+     "type": "string",
+     "label": "events"
+    }
+   ]
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Incorporate lessons learned from internal or external security incidents or breaches into role-based training."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations determine the content of training based on the assigned roles and responsibilities of individuals as well as the security and privacy requirements of organizations and the systems to which personnel have authorized access, including technical training specifically tailored for assigned duties. Roles that may require role-based training include senior leaders or management officials (e.g., head of agency/chief executive officer, chief information officer, senior accountable official for risk management, senior agency information security officer, senior agency official for privacy), system owners; authorizing officials; system security officers; privacy officers; acquisition and procurement officials; enterprise architects; systems engineers; software developers; systems security engineers; privacy engineers; system, network, and database administrators; auditors; personnel conducting configuration management activities; personnel performing verification and validation activities; personnel with access to system-level software; control assessors; personnel with contingency planning and incident response duties; personnel with privacy management responsibilities; and personnel with access to personally identifiable information.\n\nComprehensive role-based training addresses management, operational, and technical roles and responsibilities covering physical, personnel, and technical controls. Role-based training also includes policies, procedures, tools, methods, and artifacts for the security and privacy roles defined. Organizations provide the training necessary for individuals to fulfill their responsibilities related to operations and supply chain risk management within the context of organizational security and privacy programs. Role-based training also applies to contractors who provide services to federal agencies. Types of training include web-based and computer-based training, classroom-style training, and hands-on training (including micro-training). Updating role-based training on a regular basis helps to ensure that the content remains relevant and effective. Events that may precipitate an update to role-based training content include, but are not limited to, assessment or audit findings, security incidents or breaches, or changes in applicable laws, executive orders, directives, regulations, policies, standards, and guidelines."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "at-3_obj",
+     "label": "AT-03",
+     "children": [
+      {
+       "id": "at-3_obj.a",
+       "label": "AT-03a.",
+       "children": [
+        {
+         "id": "at-3_obj.a.1",
+         "label": "AT-03a.01",
+         "children": [
+          {
+           "id": "at-3_obj.a.1-1",
+           "label": "AT-03a.01[01]",
+           "prose": {
+            "en": "role-based security training is provided to {param:at-03_odp.01} before authorizing access to the system, information, or performing assigned duties;"
+           }
+          },
+          {
+           "id": "at-3_obj.a.1-2",
+           "label": "AT-03a.01[02]",
+           "prose": {
+            "en": "role-based privacy training is provided to {param:at-03_odp.02} before authorizing access to the system, information, or performing assigned duties;"
+           }
+          },
+          {
+           "id": "at-3_obj.a.1-3",
+           "label": "AT-03a.01[03]",
+           "prose": {
+            "en": "role-based security training is provided to {param:at-03_odp.01} {param:at-03_odp.03} thereafter;"
+           }
+          },
+          {
+           "id": "at-3_obj.a.1-4",
+           "label": "AT-03a.01[04]",
+           "prose": {
+            "en": "role-based privacy training is provided to {param:at-03_odp.02} {param:at-03_odp.03} thereafter;"
+           }
+          }
+         ]
+        },
+        {
+         "id": "at-3_obj.a.2",
+         "label": "AT-03a.02",
+         "children": [
+          {
+           "id": "at-3_obj.a.2-1",
+           "label": "AT-03a.02[01]",
+           "prose": {
+            "en": "role-based security training is provided to personnel with assigned security roles and responsibilities when required by system changes;"
+           }
+          },
+          {
+           "id": "at-3_obj.a.2-2",
+           "label": "AT-03a.02[02]",
+           "prose": {
+            "en": "role-based privacy training is provided to personnel with assigned security roles and responsibilities when required by system changes;"
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "at-3_obj.b",
+       "label": "AT-03b.",
+       "children": [
+        {
+         "id": "at-3_obj.b-1",
+         "label": "AT-03b.[01]",
+         "prose": {
+          "en": "role-based training content is updated {param:at-03_odp.04};"
+         }
+        },
+        {
+         "id": "at-3_obj.b-2",
+         "label": "AT-03b.[02]",
+         "prose": {
+          "en": "role-based training content is updated following {param:at-03_odp.05};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "at-3_obj.c",
+       "label": "AT-03c.",
+       "prose": {
+        "en": "lessons learned from internal or external security incidents or breaches are incorporated into role-based training."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AT-03-Examine",
+     "objects": [
+      {
+       "en": "System security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "security and privacy awareness and training policy"
+      },
+      {
+       "en": "procedures addressing security and privacy training implementation"
+      },
+      {
+       "en": "codes of federal regulations"
+      },
+      {
+       "en": "security and privacy training curriculum"
+      },
+      {
+       "en": "security and privacy training materials"
+      },
+      {
+       "en": "training records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AT-03-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for role-based security and privacy training"
+      },
+      {
+       "en": "organizational personnel with assigned system security and privacy roles and responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AT-03-Test",
+     "objects": [
+      {
+       "en": "Mechanisms managing role-based security and privacy training"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "at-3_prm_1": {
+     "aggregates": [
+      "at-03_odp.01",
+      "at-03_odp.02"
+     ]
+    },
+    "at-03_odp.01": {
+     "guidelines": [
+      {
+       "en": "roles and responsibilities for role-based security training are defined;"
+      }
+     ]
+    },
+    "at-03_odp.02": {
+     "guidelines": [
+      {
+       "en": "roles and responsibilities for role-based privacy training are defined;"
+      }
+     ]
+    },
+    "at-03_odp.03": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to provide role-based security and privacy training to assigned personnel after initial training is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "at-3_prm_2"
+     ]
+    },
+    "at-03_odp.04": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to update role-based training content is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "at-3_prm_3"
+     ]
+    },
+    "at-03_odp.05": {
+     "guidelines": [
+      {
+       "en": "events that require role-based training content to be updated are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "at-3_prm_4"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-50"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-181r1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-22"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-23"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-11"
+  }
+ ]
+}

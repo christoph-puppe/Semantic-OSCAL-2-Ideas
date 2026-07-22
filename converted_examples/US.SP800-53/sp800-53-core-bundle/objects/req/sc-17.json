@@ -1,0 +1,172 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-17",
+ "version": "5.2.0",
+ "label": "SC-17",
+ "lifecycle": "active",
+ "title": "Public Key Infrastructure Certificates",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Issue public key certificates under an {param:sc-17_odp} or obtain public key certificates from an approved service provider; and"
+   },
+   "parameters": [
+    {
+     "name": "sc-17_odp",
+     "type": "string",
+     "label": "certificate policy"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Include only approved trust anchors in trust stores or certificate stores managed by the organization."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Public key infrastructure (PKI) certificates are certificates with visibility external to organizational systems and certificates related to the internal operations of systems, such as application-specific time services. In cryptographic systems with a hierarchical structure, a trust anchor is an authoritative source (i.e., a certificate authority) for which trust is assumed and not derived. A root certificate for a PKI system is an example of a trust anchor. A trust store or certificate store maintains a list of trusted root certificates."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-17_obj",
+     "label": "SC-17",
+     "children": [
+      {
+       "id": "sc-17_obj.a",
+       "label": "SC-17a.",
+       "prose": {
+        "en": "public key certificates are issued under {param:sc-17_odp} , or public key certificates are obtained from an approved service provider;"
+       }
+      },
+      {
+       "id": "sc-17_obj.b",
+       "label": "SC-17b.",
+       "prose": {
+        "en": "only approved trust anchors are included in trust stores or certificate stores managed by the organization."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-17-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing public key infrastructure certificates"
+      },
+      {
+       "en": "public key certificate policy or policies"
+      },
+      {
+       "en": "public key issuing process"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-17-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibilities for issuing public key certificates"
+      },
+      {
+       "en": "service providers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-17-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing the management of public key infrastructure certificates"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-17_odp": {
+     "guidelines": [
+      {
+       "en": "a certificate policy for issuing public key certificates is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-17_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-32"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-57pt1r5"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-57pt2r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-57pt3r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-63-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  }
+ ]
+}

@@ -1,0 +1,174 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SR-3.2",
+ "version": "5.2.0",
+ "label": "SR-3(2)",
+ "lifecycle": "active",
+ "title": "Limitation of Harm",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ the following controls to limit harm from potential adversaries identifying and targeting the organizational supply chain: {param:sr-03.02_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sr-03.02_odp",
+     "type": "string",
+     "label": "controls"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Controls that can be implemented to reduce the probability of adversaries successfully identifying and targeting the supply chain include avoiding the purchase of custom or non-standardized configurations, employing approved vendor lists with standing reputations in industry, following pre-agreed maintenance schedules and update and patch delivery mechanisms, maintaining a contingency plan in case of a supply chain event, using procurement carve-outs that provide exclusions to commitments or obligations, using diverse delivery routes, and minimizing the time between purchase decisions and delivery."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sr-3.2_obj",
+     "label": "SR-03(02)",
+     "prose": {
+      "en": "{param:sr-03.02_odp} are employed to limit harm from potential adversaries identifying and targeting the organizational supply chain."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SR-03(02)-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management policy and procedures"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "system and services acquisition policy"
+      },
+      {
+       "en": "configuration management policy"
+      },
+      {
+       "en": "procedures addressing supply chain protection"
+      },
+      {
+       "en": "procedures addressing the integration of information security requirements into the acquisition process"
+      },
+      {
+       "en": "procedures addressing the baseline configuration of the system"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system architecture and associated configuration documentation"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "threat assessments"
+      },
+      {
+       "en": "vulnerability assessments"
+      },
+      {
+       "en": "list of security safeguards to be taken to protect the organizational supply chain against potential supply chain threats"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SR-03(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and services acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SR-03(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for defining and employing safeguards to limit harm from adversaries of the organizational supply chain"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the definition and employment of safeguards to protect the organizational supply chain"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sr-03.02_odp": {
+     "guidelines": [
+      {
+       "en": "controls to limit harm from potential supply chain adversaries are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sr-3.2_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-3"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-12.5",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-12.5",
+    "mode": "renamed",
+    "label": "SA-12(05)",
+    "title": "Limitation of Harm"
+   }
+  ]
+ }
+}

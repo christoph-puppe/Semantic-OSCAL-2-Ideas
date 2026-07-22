@@ -1,0 +1,176 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-10.4",
+ "version": "5.2.0",
+ "label": "AU-10(4)",
+ "lifecycle": "active",
+ "title": "Validate Binding of Information Reviewer Identity",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Validate the binding of the information reviewer identity to the information at the transfer or release points prior to release or transfer between {param:au-10.04_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "au-10.04_odp.01",
+     "type": "string",
+     "label": "security domains"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Perform {param:au-10.04_odp.02} in the event of a validation error."
+   },
+   "parameters": [
+    {
+     "name": "au-10.04_odp.02",
+     "type": "string",
+     "label": "actions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Validating the binding of the information reviewer identity to the information at transfer or release points prevents the unauthorized modification of information between review and the transfer or release. The validation of bindings can be achieved by using cryptographic checksums. Organizations determine if validations are in response to user requests or generated automatically."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-10.4_obj",
+     "label": "AU-10(04)",
+     "children": [
+      {
+       "id": "au-10.4_obj.a",
+       "label": "AU-10(04)(a)",
+       "prose": {
+        "en": "the binding of the information reviewer identity to the information at the transfer or release points prior to release or transfer between {param:au-10.04_odp.01} is validated;"
+       }
+      },
+      {
+       "id": "au-10.4_obj.b",
+       "label": "AU-10(04)(b)",
+       "prose": {
+        "en": "{param:au-10.04_odp.02} are performed in the event of a validation error."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-10(04)-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "procedures addressing non-repudiation"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "validation records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-10(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AU-10(04)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing non-repudiation capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "au-10.04_odp.01": {
+     "guidelines": [
+      {
+       "en": "security domains for which the binding of the information reviewer identity to the information is to be validated at transfer or release are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-10.4_prm_1"
+     ]
+    },
+    "au-10.04_odp.02": {
+     "guidelines": [
+      {
+       "en": "actions to be performed in the event of a validation error are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-10.4_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-16"
+  }
+ ]
+}

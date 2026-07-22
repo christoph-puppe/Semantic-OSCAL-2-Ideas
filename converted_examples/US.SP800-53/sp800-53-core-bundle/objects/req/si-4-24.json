@@ -1,0 +1,185 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-4.24",
+ "version": "5.2.0",
+ "label": "SI-4(24)",
+ "lifecycle": "active",
+ "title": "Indicators of Compromise",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Discover, collect, and distribute to {param:si-04.24_odp.02} , indicators of compromise provided by {param:si-04.24_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "si-04.24_odp.01",
+     "type": "string",
+     "label": "sources"
+    },
+    {
+     "name": "si-04.24_odp.02",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Indicators of compromise (IOC) are forensic artifacts from intrusions that are identified on organizational systems at the host or network level. IOCs provide valuable information on systems that have been compromised. IOCs can include the creation of registry key values. IOCs for network traffic include Universal Resource Locator or protocol elements that indicate malicious code command and control servers. The rapid distribution and adoption of IOCs can improve information security by reducing the time that systems and organizations are vulnerable to the same exploit or attack. Threat indicators, signatures, tactics, techniques, procedures, and other indicators of compromise may be available via government and non-government cooperatives, including the Forum of Incident Response and Security Teams, the United States Computer Emergency Readiness Team, the Defense Industrial Base Cybersecurity Information Sharing Program, and the CERT Coordination Center."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-4.24_obj",
+     "label": "SI-04(24)",
+     "children": [
+      {
+       "id": "si-4.24_obj-1",
+       "label": "SI-04(24)[01]",
+       "prose": {
+        "en": "indicators of compromise provided by {param:si-04.24_odp.01} are discovered;"
+       }
+      },
+      {
+       "id": "si-4.24_obj-2",
+       "label": "SI-04(24)[02]",
+       "prose": {
+        "en": "indicators of compromise provided by {param:si-04.24_odp.01} are collected;"
+       }
+      },
+      {
+       "id": "si-4.24_obj-3",
+       "label": "SI-04(24)[03]",
+       "prose": {
+        "en": "indicators of compromise provided by {param:si-04.24_odp.01} are distributed to {param:si-04.24_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-04(24)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing system monitoring"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system monitoring tools and techniques documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system monitoring logs or records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-04(24)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for monitoring system hosts"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-04(24)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for system monitoring"
+      },
+      {
+       "en": "organizational processes for the discovery, collection, distribution, and use of indicators of compromise"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing a system monitoring capability"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the discovery, collection, distribution, and use of indicators of compromise"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-04.24_odp.01": {
+     "guidelines": [
+      {
+       "en": "sources that provide indicators of compromise are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-4.24_prm_2"
+     ]
+    },
+    "si-04.24_odp.02": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to whom indicators of compromise are to be distributed is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-4.24_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-18"
+  }
+ ]
+}

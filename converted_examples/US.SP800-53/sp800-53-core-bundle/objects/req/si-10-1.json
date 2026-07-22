@@ -1,0 +1,202 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-10.1",
+ "version": "5.2.0",
+ "label": "SI-10(1)",
+ "lifecycle": "active",
+ "title": "Manual Override Capability",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide a manual override capability for input validation of the following information inputs: {param:si-10_odp};"
+   },
+   "parameters": [
+    {
+     "name": "si-10_odp",
+     "type": "string",
+     "label": "information inputs"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Restrict the use of the manual override capability to only {param:si-10.01_odp} ; and"
+   },
+   "parameters": [
+    {
+     "name": "si-10.01_odp",
+     "type": "string",
+     "label": "authorized individuals"
+    }
+   ]
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Audit the use of the manual override capability."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "In certain situations, such as during events that are defined in contingency plans, a manual override capability for input validation may be needed. Manual overrides are used only in limited circumstances and with the inputs defined by the organization."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-10.1_obj",
+     "label": "SI-10(01)",
+     "children": [
+      {
+       "id": "si-10.1_obj.a",
+       "label": "SI-10(01)(a)",
+       "prose": {
+        "en": "a manual override capability for the validation of {param:si-10_odp} is provided;"
+       }
+      },
+      {
+       "id": "si-10.1_obj.b",
+       "label": "SI-10(01)(b)",
+       "prose": {
+        "en": "the use of the manual override capability is restricted to only {param:si-10.01_odp};"
+       }
+      },
+      {
+       "id": "si-10.1_obj.c",
+       "label": "SI-10(01)(c)",
+       "prose": {
+        "en": "the use of the manual override capability is audited."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-10(01)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "access control policy and procedures"
+      },
+      {
+       "en": "separation of duties policy and procedures"
+      },
+      {
+       "en": "procedures addressing information input validation"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-10(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for information input validation"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-10(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for the use of a manual override capability"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing a manual override capability for input validation"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing auditing of the use of a manual override capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-10.01_odp": {
+     "guidelines": [
+      {
+       "en": "authorized individuals who can use the manual override capability are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-10.1_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-12"
+  }
+ ]
+}

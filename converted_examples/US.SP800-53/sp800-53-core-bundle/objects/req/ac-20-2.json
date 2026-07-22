@@ -1,0 +1,127 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-20.2",
+ "version": "5.2.0",
+ "label": "AC-20(2)",
+ "lifecycle": "active",
+ "title": "Portable Storage Devices — Restricted Use",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Restrict the use of organization-controlled portable storage devices by authorized individuals on external systems using {param:ac-20.02_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ac-20.02_odp",
+     "type": "string",
+     "label": "restrictions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Limits on the use of organization-controlled portable storage devices in external systems include restrictions on how the devices may be used and under what conditions the devices may be used."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-20.2_obj",
+     "label": "AC-20(02)",
+     "prose": {
+      "en": "the use of organization-controlled portable storage devices by authorized individuals is restricted on external systems using {param:ac-20.02_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-20(02)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing the use of external systems"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system connection or processing agreements"
+      },
+      {
+       "en": "account management documents"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-20(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for restricting or prohibiting the use of organization-controlled storage devices on external systems"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-20(02)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing restrictions on the use of portable storage devices"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-20.02_odp": {
+     "guidelines": [
+      {
+       "en": "restrictions on the use of organization-controlled portable storage devices by authorized individuals on external systems are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-20.2_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-20"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-41"
+  }
+ ]
+}

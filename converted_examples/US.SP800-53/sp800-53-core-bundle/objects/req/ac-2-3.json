@@ -1,0 +1,215 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-2.3",
+ "version": "5.2.0",
+ "label": "AC-2(3)",
+ "lifecycle": "active",
+ "title": "Disable Accounts",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Disable accounts within {param:ac-02.03_odp.01} when the accounts:"
+   },
+   "parameters": [
+    {
+     "name": "ac-02.03_odp.01",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Have expired;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Are no longer associated with a user or individual;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Are in violation of organizational policy; or"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Have been inactive for {param:ac-02.03_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ac-02.03_odp.02",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Disabling expired, inactive, or otherwise anomalous accounts supports the concepts of least privilege and least functionality which reduce the attack surface of the system."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-2.3_obj",
+     "label": "AC-02(03)",
+     "children": [
+      {
+       "id": "ac-2.3_obj.a",
+       "label": "AC-02(03)(a)",
+       "prose": {
+        "en": "accounts are disabled within {param:ac-02.03_odp.01} when the accounts have expired;"
+       }
+      },
+      {
+       "id": "ac-2.3_obj.b",
+       "label": "AC-02(03)(b)",
+       "prose": {
+        "en": "accounts are disabled within {param:ac-02.03_odp.01} when the accounts are no longer associated with a user or individual;"
+       }
+      },
+      {
+       "id": "ac-2.3_obj.c",
+       "label": "AC-02(03)(c)",
+       "prose": {
+        "en": "accounts are disabled within {param:ac-02.03_odp.01} when the accounts are in violation of organizational policy;"
+       }
+      },
+      {
+       "id": "ac-2.3_obj.d",
+       "label": "AC-02(03)(d)",
+       "prose": {
+        "en": "accounts are disabled within {param:ac-02.03_odp.01} when the accounts have been inactive for {param:ac-02.03_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-02(03)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures for addressing account management"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system-generated list of accounts removed"
+      },
+      {
+       "en": "system-generated list of emergency accounts disabled"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-02(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with account management responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-02(03)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms for implementing account management functions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-02.03_odp.01": {
+     "guidelines": [
+      {
+       "en": "time period within which to disable accounts is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2.3_prm_1"
+     ]
+    },
+    "ac-02.03_odp.02": {
+     "guidelines": [
+      {
+       "en": "time period for account inactivity before disabling is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2.3_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  }
+ ]
+}

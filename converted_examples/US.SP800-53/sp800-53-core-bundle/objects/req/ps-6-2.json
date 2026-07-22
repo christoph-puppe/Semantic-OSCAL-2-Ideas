@@ -1,0 +1,154 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PS-6.2",
+ "version": "5.2.0",
+ "label": "PS-6(2)",
+ "lifecycle": "active",
+ "title": "Classified Information Requiring Special Protection",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Verify that access to classified information requiring special protection is granted only to individuals who:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Have a valid access authorization that is demonstrated by assigned official government duties;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Satisfy associated personnel security criteria; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Have read, understood, and signed a nondisclosure agreement."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Classified information that requires special protection includes collateral information, Special Access Program (SAP) information, and Sensitive Compartmented Information (SCI). Personnel security criteria reflect applicable laws, executive orders, directives, regulations, policies, standards, and guidelines."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ps-6.2_obj",
+     "label": "PS-06(02)",
+     "children": [
+      {
+       "id": "ps-6.2_obj.a",
+       "label": "PS-06(02)(a)",
+       "prose": {
+        "en": "access to classified information requiring special protection is granted only to individuals who have a valid access authorization that is demonstrated by assigned official government duties;"
+       }
+      },
+      {
+       "id": "ps-6.2_obj.b",
+       "label": "PS-06(02)(b)",
+       "prose": {
+        "en": "access to classified information requiring special protection is granted only to individuals who satisfy associated personnel security criteria;"
+       }
+      },
+      {
+       "id": "ps-6.2_obj.c",
+       "label": "PS-06(02)(c)",
+       "prose": {
+        "en": "access to classified information requiring special protection is granted only to individuals who have read, understood, and signed a non-disclosure agreement."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PS-06(02)-Examine",
+     "objects": [
+      {
+       "en": "Personnel security policy"
+      },
+      {
+       "en": "procedures addressing access agreements for organizational information and systems"
+      },
+      {
+       "en": "access agreements"
+      },
+      {
+       "en": "access authorizations"
+      },
+      {
+       "en": "personnel security criteria"
+      },
+      {
+       "en": "signed non-disclosure agreements"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PS-06(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personnel security responsibilities"
+      },
+      {
+       "en": "organizational personnel who have signed non-disclosure agreements"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PS-06(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for access to classified information requiring special protection"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-6"
+  }
+ ]
+}

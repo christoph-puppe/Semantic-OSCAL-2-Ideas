@@ -1,0 +1,117 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-2.3",
+ "version": "5.2.0",
+ "label": "IR-2(3)",
+ "lifecycle": "active",
+ "title": "Breach",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide incident response training on how to identify and respond to a breach, including the organization’s process for reporting a breach."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "For federal agencies, an incident that involves personally identifiable information is considered a breach. A breach results in the loss of control, compromise, unauthorized disclosure, unauthorized acquisition, or a similar occurrence where a person other than an authorized user accesses or potentially accesses personally identifiable information or an authorized user accesses or potentially accesses such information for other than authorized purposes. The incident response training emphasizes the obligation of individuals to report both confirmed and suspected breaches involving information in any medium or form, including paper, oral, and electronic. Incident response training includes tabletop exercises that simulate a breach. See IR-2(1)."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-2.3_obj",
+     "label": "IR-02(03)",
+     "children": [
+      {
+       "id": "ir-2.3_obj-1",
+       "label": "IR-02(03)[01]",
+       "prose": {
+        "en": "incident response training on how to identify and respond to a breach is provided;"
+       }
+      },
+      {
+       "id": "ir-2.3_obj-2",
+       "label": "IR-02(03)[02]",
+       "prose": {
+        "en": "incident response training on the organization’s process for reporting a breach is provided."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-02(03)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "contingency planning policy"
+      },
+      {
+       "en": "procedures addressing incident response testing"
+      },
+      {
+       "en": "procedures addressing contingency plan testing"
+      },
+      {
+       "en": "incident response testing material"
+      },
+      {
+       "en": "incident response test results"
+      },
+      {
+       "en": "incident response test plan"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-02(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident response training responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-2"
+  }
+ ]
+}

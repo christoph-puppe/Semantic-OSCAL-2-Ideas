@@ -1,0 +1,335 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-3",
+ "version": "5.2.0",
+ "label": "SA-3",
+ "lifecycle": "active",
+ "title": "System Development Life Cycle",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Acquire, develop, and manage the system using {param:sa-03_odp} that incorporates information security and privacy considerations;"
+   },
+   "parameters": [
+    {
+     "name": "sa-03_odp",
+     "type": "string",
+     "label": "system-development life cycle"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Define and document information security and privacy roles and responsibilities throughout the system development life cycle;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identify individuals having information security and privacy roles and responsibilities; and"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Integrate the organizational information security and privacy risk management process into system development life cycle activities."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "A system development life cycle process provides the foundation for the successful development, implementation, and operation of organizational systems. The integration of security and privacy considerations early in the system development life cycle is a foundational principle of systems security engineering and privacy engineering. To apply the required controls within the system development life cycle requires a basic understanding of information security and privacy, threats, vulnerabilities, adverse impacts, and risk to critical mission and business functions. The security engineering principles in SA-8 help individuals properly design, code, and test systems and system components. Organizations include qualified personnel (e.g., senior agency information security officers, senior agency officials for privacy, security and privacy architects, and security and privacy engineers) in system development life cycle processes to ensure that established security and privacy requirements are incorporated into organizational systems. Role-based security and privacy training programs can ensure that individuals with key security and privacy roles and responsibilities have the experience, skills, and expertise to conduct assigned system development life cycle activities.\n\nThe effective integration of security and privacy requirements into enterprise architecture also helps to ensure that important security and privacy considerations are addressed throughout the system life cycle and that those considerations are directly related to organizational mission and business processes. This process also facilitates the integration of the information security and privacy architectures into the enterprise architecture, consistent with the risk management strategy of the organization. Because the system development life cycle involves multiple organizations, (e.g., external suppliers, developers, integrators, service providers), acquisition and supply chain risk management functions and controls play significant roles in the effective management of the system during the life cycle."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-3_obj",
+     "label": "SA-03",
+     "children": [
+      {
+       "id": "sa-3_obj.a",
+       "label": "SA-03a.",
+       "children": [
+        {
+         "id": "sa-3_obj.a-1",
+         "label": "SA-03a.[01]",
+         "prose": {
+          "en": "the system is acquired, developed, and managed using {param:sa-03_odp} that incorporates information security considerations;"
+         }
+        },
+        {
+         "id": "sa-3_obj.a-2",
+         "label": "SA-03a.[02]",
+         "prose": {
+          "en": "the system is acquired, developed, and managed using {param:sa-03_odp} that incorporates privacy considerations;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-3_obj.b",
+       "label": "SA-03b.",
+       "children": [
+        {
+         "id": "sa-3_obj.b-1",
+         "label": "SA-03b.[01]",
+         "prose": {
+          "en": "information security roles and responsibilities are defined and documented throughout the system development life cycle;"
+         }
+        },
+        {
+         "id": "sa-3_obj.b-2",
+         "label": "SA-03b.[02]",
+         "prose": {
+          "en": "privacy roles and responsibilities are defined and documented throughout the system development life cycle;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-3_obj.c",
+       "label": "SA-03c.",
+       "children": [
+        {
+         "id": "sa-3_obj.c-1",
+         "label": "SA-03c.[01]",
+         "prose": {
+          "en": "individuals with information security roles and responsibilities are identified;"
+         }
+        },
+        {
+         "id": "sa-3_obj.c-2",
+         "label": "SA-03c.[02]",
+         "prose": {
+          "en": "individuals with privacy roles and responsibilities are identified;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-3_obj.d",
+       "label": "SA-03d.",
+       "children": [
+        {
+         "id": "sa-3_obj.d-1",
+         "label": "SA-03d.[01]",
+         "prose": {
+          "en": "organizational information security risk management processes are integrated into system development life cycle activities;"
+         }
+        },
+        {
+         "id": "sa-3_obj.d-2",
+         "label": "SA-03d.[02]",
+         "prose": {
+          "en": "organizational privacy risk management processes are integrated into system development life cycle activities."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-03-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "procedures addressing the integration of information security and privacy and supply chain risk management into the system development life cycle process"
+      },
+      {
+       "en": "system development life cycle documentation"
+      },
+      {
+       "en": "organizational risk management strategy"
+      },
+      {
+       "en": "information security and privacy risk management strategy documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy program plan"
+      },
+      {
+       "en": "enterprise architecture documentation"
+      },
+      {
+       "en": "role-based security and privacy training program documentation"
+      },
+      {
+       "en": "data mapping documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-03-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with system life cycle development responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-03-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for defining and documenting the system development life cycle"
+      },
+      {
+       "en": "organizational processes for identifying system development life cycle roles and responsibilities"
+      },
+      {
+       "en": "organizational processes for integrating information security and privacy and supply chain risk management into the system development life cycle"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the system development life cycle"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-03_odp": {
+     "guidelines": [
+      {
+       "en": "system development life cycle is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-3_prm_1"
+     ],
+     "alt-label": "system development life cycle"
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-30r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-37r2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-171r2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-172-draft"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-15"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-22"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-9"
+  }
+ ]
+}

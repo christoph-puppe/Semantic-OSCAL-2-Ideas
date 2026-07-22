@@ -1,0 +1,207 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-5",
+ "version": "5.2.0",
+ "label": "CM-5",
+ "lifecycle": "active",
+ "title": "Access Restrictions for Change",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Define, document, approve, and enforce physical and logical access restrictions associated with changes to the system."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Changes to the hardware, software, or firmware components of systems or the operational procedures related to the system can potentially have significant effects on the security of the systems or individuals’ privacy. Therefore, organizations permit only qualified and authorized individuals to access systems for purposes of initiating changes. Access restrictions include physical and logical access controls (see AC-3 and PE-3 ), software libraries, workflow automation, media libraries, abstract layers (i.e., changes implemented into external interfaces rather than directly into systems), and change windows (i.e., changes occur only during specified times)."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-5_obj",
+     "label": "CM-05",
+     "children": [
+      {
+       "id": "cm-5_obj-1",
+       "label": "CM-05[01]",
+       "prose": {
+        "en": "physical access restrictions associated with changes to the system are defined and documented;"
+       }
+      },
+      {
+       "id": "cm-5_obj-2",
+       "label": "CM-05[02]",
+       "prose": {
+        "en": "physical access restrictions associated with changes to the system are approved;"
+       }
+      },
+      {
+       "id": "cm-5_obj-3",
+       "label": "CM-05[03]",
+       "prose": {
+        "en": "physical access restrictions associated with changes to the system are enforced;"
+       }
+      },
+      {
+       "id": "cm-5_obj-4",
+       "label": "CM-05[04]",
+       "prose": {
+        "en": "logical access restrictions associated with changes to the system are defined and documented;"
+       }
+      },
+      {
+       "id": "cm-5_obj-5",
+       "label": "CM-05[05]",
+       "prose": {
+        "en": "logical access restrictions associated with changes to the system are approved;"
+       }
+      },
+      {
+       "id": "cm-5_obj-6",
+       "label": "CM-05[06]",
+       "prose": {
+        "en": "logical access restrictions associated with changes to the system are enforced."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-05-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing access restrictions for changes to the system"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system architecture and configuration documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "logical access approvals"
+      },
+      {
+       "en": "physical access approvals"
+      },
+      {
+       "en": "access credentials"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-05-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with logical access control responsibilities"
+      },
+      {
+       "en": "organizational personnel with physical access control responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-05-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing access restrictions to change"
+      },
+      {
+       "en": "mechanisms supporting, implementing, or enforcing access restrictions associated with changes to the system"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.140-3"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.186-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-28"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-34"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-37"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-10"
+  }
+ ]
+}

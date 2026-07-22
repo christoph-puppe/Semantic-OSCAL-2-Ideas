@@ -1,0 +1,467 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-7",
+ "version": "5.2.0",
+ "label": "SI-7",
+ "lifecycle": "active",
+ "title": "Software, Firmware, and Information Integrity",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Employ integrity verification tools to detect unauthorized changes to the following software, firmware, and information: {param:si-7_prm_1} ; and"
+   },
+   "parameters": [
+    {
+     "name": "si-7_prm_1",
+     "type": "string",
+     "label": "organization-defined software, firmware, and information"
+    },
+    {
+     "name": "si-07_odp.01",
+     "type": "string",
+     "label": "software"
+    },
+    {
+     "name": "si-07_odp.02",
+     "type": "string",
+     "label": "firmware"
+    },
+    {
+     "name": "si-07_odp.03",
+     "type": "string",
+     "label": "information"
+    },
+    {
+     "name": "si-07_odp.04",
+     "type": "string",
+     "label": "actions"
+    },
+    {
+     "name": "si-07_odp.05",
+     "type": "string",
+     "label": "actions"
+    },
+    {
+     "name": "si-07_odp.06",
+     "type": "string",
+     "label": "actions"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Take the following actions when unauthorized changes to the software, firmware, and information are detected: {param:si-7_prm_2}."
+   },
+   "parameters": [
+    {
+     "name": "si-7_prm_2",
+     "type": "string",
+     "label": "organization-defined actions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Unauthorized changes to software, firmware, and information can occur due to errors or malicious activity. Software includes operating systems (with key internal components, such as kernels or drivers), middleware, and applications. Firmware interfaces include Unified Extensible Firmware Interface (UEFI) and Basic Input/Output System (BIOS). Information includes personally identifiable information and metadata that contains security and privacy attributes associated with information. Integrity-checking mechanisms—including parity checks, cyclical redundancy checks, cryptographic hashes, and associated tools—can automatically monitor the integrity of systems and hosted applications."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-7_obj",
+     "label": "SI-07",
+     "children": [
+      {
+       "id": "si-7_obj.a",
+       "label": "SI-07a.",
+       "children": [
+        {
+         "id": "si-7_obj.a-1",
+         "label": "SI-07a.[01]",
+         "prose": {
+          "en": "integrity verification tools are employed to detect unauthorized changes to {param:si-07_odp.01};"
+         }
+        },
+        {
+         "id": "si-7_obj.a-2",
+         "label": "SI-07a.[02]",
+         "prose": {
+          "en": "integrity verification tools are employed to detect unauthorized changes to {param:si-07_odp.02};"
+         }
+        },
+        {
+         "id": "si-7_obj.a-3",
+         "label": "SI-07a.[03]",
+         "prose": {
+          "en": "integrity verification tools are employed to detect unauthorized changes to {param:si-07_odp.03};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "si-7_obj.b",
+       "label": "SI-07b.",
+       "children": [
+        {
+         "id": "si-7_obj.b-1",
+         "label": "SI-07b.[01]",
+         "prose": {
+          "en": "{param:si-07_odp.04} are taken when unauthorized changes to the software, are detected;"
+         }
+        },
+        {
+         "id": "si-7_obj.b-2",
+         "label": "SI-07b.[02]",
+         "prose": {
+          "en": "{param:si-07_odp.05} are taken when unauthorized changes to the firmware are detected;"
+         }
+        },
+        {
+         "id": "si-7_obj.b-3",
+         "label": "SI-07b.[03]",
+         "prose": {
+          "en": "{param:si-07_odp.06} are taken when unauthorized changes to the information are detected."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-07-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing software, firmware, and information integrity"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "integrity verification tools and associated documentation"
+      },
+      {
+       "en": "records generated or triggered by integrity verification tools regarding unauthorized software, firmware, and information changes"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-07-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for software, firmware, and/or information integrity"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-07-Test",
+     "objects": [
+      {
+       "en": "Software, firmware, and information integrity verification tools"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-7_prm_1": {
+     "aggregates": [
+      "si-07_odp.01",
+      "si-07_odp.02",
+      "si-07_odp.03"
+     ]
+    },
+    "si-7_prm_2": {
+     "aggregates": [
+      "si-07_odp.04",
+      "si-07_odp.05",
+      "si-07_odp.06"
+     ]
+    },
+    "si-07_odp.01": {
+     "guidelines": [
+      {
+       "en": "software requiring integrity verification tools to be employed to detect unauthorized changes is defined;"
+      }
+     ]
+    },
+    "si-07_odp.02": {
+     "guidelines": [
+      {
+       "en": "firmware requiring integrity verification tools to be employed to detect unauthorized changes is defined;"
+      }
+     ]
+    },
+    "si-07_odp.03": {
+     "guidelines": [
+      {
+       "en": "information requiring integrity verification tools to be employed to detect unauthorized changes is defined;"
+      }
+     ]
+    },
+    "si-07_odp.04": {
+     "guidelines": [
+      {
+       "en": "actions to be taken when unauthorized changes to software are detected are defined;"
+      }
+     ]
+    },
+    "si-07_odp.05": {
+     "guidelines": [
+      {
+       "en": "actions to be taken when unauthorized changes to firmware are detected are defined;"
+      }
+     ]
+    },
+    "si-07_odp.06": {
+     "guidelines": [
+      {
+       "en": "actions to be taken when unauthorized changes to information are detected are defined;"
+      }
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.140-3"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.180-4"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.186-4"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.202"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-70r4"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-147"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-28"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-37"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-11"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-10.5",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-5.7",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-6.3",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-6",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-7",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-14",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/AU-10.5",
+    "mode": "merged-into",
+    "label": "AU-10(05)",
+    "title": "Digital Signatures"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/CM-5.7",
+    "mode": "merged-into",
+    "label": "CM-05(07)",
+    "title": "Automatic Implementation of Security Safeguards"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/CM-6.3",
+    "mode": "merged-into",
+    "label": "CM-06(03)",
+    "title": "Unauthorized Change Detection"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-6",
+    "mode": "merged-into",
+    "label": "SA-06",
+    "title": "Software Usage Restrictions"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-7",
+    "mode": "merged-into",
+    "label": "SA-07",
+    "title": "User-installed Software"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SC-14",
+    "mode": "merged-into",
+    "label": "SC-14",
+    "title": "Public Access Protections"
+   }
+  ]
+ }
+}

@@ -1,0 +1,163 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-29",
+ "version": "5.2.0",
+ "label": "PM-29",
+ "lifecycle": "active",
+ "title": "Risk Management Program Leadership Roles",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Appoint a Senior Accountable Official for Risk Management to align organizational information security and privacy management processes with strategic, operational, and budgetary planning processes; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish a Risk Executive (function) to view and analyze risk from an organization-wide perspective and ensure management of risk is consistent across the organization."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The senior accountable official for risk management leads the risk executive (function) in organization-wide risk management activities."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-29_obj",
+     "label": "PM-29",
+     "children": [
+      {
+       "id": "pm-29_obj.a",
+       "label": "PM-29a.",
+       "children": [
+        {
+         "id": "pm-29_obj.a-1",
+         "label": "PM-29a.[01]",
+         "prose": {
+          "en": "a Senior Accountable Official for Risk Management is appointed;"
+         }
+        },
+        {
+         "id": "pm-29_obj.a-2",
+         "label": "PM-29a.[02]",
+         "prose": {
+          "en": "a Senior Accountable Official for Risk Management aligns information security and privacy management processes with strategic, operational, and budgetary planning processes;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-29_obj.b",
+       "label": "PM-29b.",
+       "children": [
+        {
+         "id": "pm-29_obj.b-1",
+         "label": "PM-29b.[01]",
+         "prose": {
+          "en": "a Risk Executive (function) is established;"
+         }
+        },
+        {
+         "id": "pm-29_obj.b-2",
+         "label": "PM-29b.[02]",
+         "prose": {
+          "en": "a Risk Executive (function) views and analyzes risk from an organization-wide perspective;"
+         }
+        },
+        {
+         "id": "pm-29_obj.b-3",
+         "label": "PM-29b.[03]",
+         "prose": {
+          "en": "a Risk Executive (function) ensures that the management of risk is consistent across the organization."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-29-Examine",
+     "objects": [
+      {
+       "en": "Information security program plan"
+      },
+      {
+       "en": "privacy program plan"
+      },
+      {
+       "en": "risk management strategy"
+      },
+      {
+       "en": "supply chain risk management strategy"
+      },
+      {
+       "en": "documentation of appointment, roles, and responsibilities of a Senior Accountable Official for Risk Management"
+      },
+      {
+       "en": "documentation of actions taken by the Official"
+      },
+      {
+       "en": "documentation of the establishment, policies, and procedures of a Risk Executive (function)"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-29-Interview",
+     "objects": [
+      {
+       "en": "Senior Accountable Official for Risk Management"
+      },
+      {
+       "en": "chief information officer"
+      },
+      {
+       "en": "senior agency information security officer"
+      },
+      {
+       "en": "senior agency official for privacy"
+      },
+      {
+       "en": "organizational personnel with information security and privacy program responsibilities"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-37r2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-181r1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-19"
+  }
+ ]
+}

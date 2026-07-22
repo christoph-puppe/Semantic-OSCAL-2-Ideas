@@ -1,0 +1,172 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-5.1",
+ "version": "5.2.0",
+ "label": "IR-5(1)",
+ "lifecycle": "active",
+ "title": "Automated Tracking, Data Collection, and Analysis",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Track incidents and collect and analyze incident information using {param:ir-5.1_prm_1}."
+   },
+   "parameters": [
+    {
+     "name": "ir-5.1_prm_1",
+     "type": "string",
+     "label": "organization-defined automated mechanisms"
+    },
+    {
+     "name": "ir-05.01_odp.01",
+     "type": "string",
+     "label": "automated mechanisms"
+    },
+    {
+     "name": "ir-05.01_odp.02",
+     "type": "string",
+     "label": "automated mechanisms"
+    },
+    {
+     "name": "ir-05.01_odp.03",
+     "type": "string",
+     "label": "automated mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Automated mechanisms for tracking incidents and collecting and analyzing incident information include Computer Incident Response Centers or other electronic databases of incidents and network monitoring devices."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-5.1_obj",
+     "label": "IR-05(01)",
+     "children": [
+      {
+       "id": "ir-5.1_obj-1",
+       "label": "IR-05(01)[01]",
+       "prose": {
+        "en": "incidents are tracked using {param:ir-05.01_odp.01};"
+       }
+      },
+      {
+       "id": "ir-5.1_obj-2",
+       "label": "IR-05(01)[02]",
+       "prose": {
+        "en": "incident information is collected using {param:ir-05.01_odp.02};"
+       }
+      },
+      {
+       "id": "ir-5.1_obj-3",
+       "label": "IR-05(01)[03]",
+       "prose": {
+        "en": "incident information is analyzed using {param:ir-05.01_odp.03}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-05(01)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing incident monitoring"
+      },
+      {
+       "en": "incident response records and documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-05(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident monitoring responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IR-05(01)-Test",
+     "objects": [
+      {
+       "en": "Incident monitoring capability for the organization"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing the tracking and documenting of system security incidents"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ir-5.1_prm_1": {
+     "aggregates": [
+      "ir-05.01_odp.01",
+      "ir-05.01_odp.02",
+      "ir-05.01_odp.03"
+     ]
+    },
+    "ir-05.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to track incidents are defined;"
+      }
+     ]
+    },
+    "ir-05.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to collect incident information are defined;"
+      }
+     ]
+    },
+    "ir-05.01_odp.03": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to analyze incident information are defined;"
+      }
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-5"
+  }
+ ]
+}

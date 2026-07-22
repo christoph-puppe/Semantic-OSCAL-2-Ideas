@@ -1,0 +1,123 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-12.4",
+ "version": "5.2.0",
+ "label": "AU-12(4)",
+ "lifecycle": "active",
+ "title": "Query Parameter Audits of Personally Identifiable Information",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide and implement the capability for auditing the parameters of user query events for data sets containing personally identifiable information."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Query parameters are explicit criteria that an individual or automated system submits to a system to retrieve data. Auditing of query parameters for datasets that contain personally identifiable information augments the capability of an organization to track and understand the access, usage, or sharing of personally identifiable information by authorized personnel."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-12.4_obj",
+     "label": "AU-12(04)",
+     "children": [
+      {
+       "id": "au-12.4_obj-1",
+       "label": "AU-12(04)[01]",
+       "prose": {
+        "en": "the capability to audit the parameters of user query events for data sets containing personally identifiable information is provided;"
+       }
+      },
+      {
+       "id": "au-12.4_obj-2",
+       "label": "AU-12(04)[02]",
+       "prose": {
+        "en": "the capability to audit the parameters of user query events for data sets containing personally identifiable information is implemented."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-12(04)-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "procedures addressing audit record generation"
+      },
+      {
+       "en": "query event records"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "map of system data actions"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-12(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with audit record generation responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AU-12(04)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing audit record generation capability"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-12"
+  }
+ ]
+}

@@ -1,0 +1,110 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PT-6.1",
+ "version": "5.2.0",
+ "label": "PT-6(1)",
+ "lifecycle": "active",
+ "title": "Routine Uses",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review all routine uses published in the system of records notice at {param:pt-06.01_odp} to ensure continued accuracy, and to ensure that routine uses continue to be compatible with the purpose for which the information was collected."
+   },
+   "parameters": [
+    {
+     "name": "pt-06.01_odp",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "A PRIVACT routine use is a particular kind of disclosure of a record outside of the federal agency maintaining the system of records. A routine use is an exception to the PRIVACT prohibition on the disclosure of a record in a system of records without the prior written consent of the individual to whom the record pertains. To qualify as a routine use, the disclosure must be for a purpose that is compatible with the purpose for which the information was originally collected. The PRIVACT requires agencies to describe each routine use of the records maintained in the system of records, including the categories of users of the records and the purpose of the use. Agencies may only establish routine uses by explicitly publishing them in the relevant system of records notice."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pt-6.1_obj",
+     "label": "PT-06(01)",
+     "prose": {
+      "en": "all routine uses published in the system of records notice are reviewed {param:pt-06.01_odp} to ensure continued accuracy, and to ensure that routine uses continue to be compatible with the purpose for which the information was collected."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PT-06(01)-Examine",
+     "objects": [
+      {
+       "en": "Personally identifiable information processing and transparency policy and procedures"
+      },
+      {
+       "en": "privacy notice"
+      },
+      {
+       "en": "Privacy Act system of records"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PT-06(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personally identifiable information processing and transparency responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PT-06(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for reviewing system of records notices"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pt-06.01_odp": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to review all routine uses published in the system of records notice is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pt-6.1_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-6"
+  }
+ ]
+}

@@ -1,0 +1,283 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-22",
+ "version": "5.2.0",
+ "label": "PM-22",
+ "lifecycle": "active",
+ "title": "Personally Identifiable Information Quality Management",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop and document organization-wide policies and procedures for:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Reviewing for the accuracy, relevance, timeliness, and completeness of personally identifiable information across the information life cycle;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Correcting or deleting inaccurate or outdated personally identifiable information;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Disseminating notice of corrected or deleted personally identifiable information to individuals or other appropriate entities; and"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Appeals of adverse decisions on correction or deletion requests."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Personally identifiable information quality management includes steps that organizations take to confirm the accuracy and relevance of personally identifiable information throughout the information life cycle. The information life cycle includes the creation, collection, use, processing, storage, maintenance, dissemination, disclosure, and disposition of personally identifiable information. Organizational policies and procedures for personally identifiable information quality management are important because inaccurate or outdated personally identifiable information maintained by organizations may cause problems for individuals. Organizations consider the quality of personally identifiable information involved in business functions where inaccurate information may result in adverse decisions or the denial of benefits and services, or the disclosure of the information may cause stigmatization. Correct information, in certain circumstances, can cause problems for individuals that outweigh the benefits of organizations maintaining the information. Organizations consider creating policies and procedures for the removal of such information.\n\nThe senior agency official for privacy ensures that practical means and mechanisms exist and are accessible for individuals or their authorized representatives to seek the correction or deletion of personally identifiable information. Processes for correcting or deleting data are clearly defined and publicly available. Organizations use discretion in determining whether data is to be deleted or corrected based on the scope of requests, the changes sought, and the impact of the changes. Additionally, processes include the provision of responses to individuals of decisions to deny requests for correction or deletion. The responses include the reasons for the decisions, a means to record individual objections to the decisions, and a means of requesting reviews of the initial determinations.\n\nOrganizations notify individuals or their designated representatives when their personally identifiable information is corrected or deleted to provide transparency and confirm the completed action. Due to the complexity of data flows and storage, other entities may need to be informed of the correction or deletion. Notice supports the consistent correction and deletion of personally identifiable information across the data ecosystem."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-22_obj",
+     "label": "PM-22",
+     "children": [
+      {
+       "id": "pm-22_obj-1",
+       "label": "PM-22[01]",
+       "prose": {
+        "en": "organization-wide policies for personally identifiable information quality management are developed and documented;"
+       }
+      },
+      {
+       "id": "pm-22_obj-2",
+       "label": "PM-22[02]",
+       "prose": {
+        "en": "organization-wide procedures for personally identifiable information quality management are developed and documented;"
+       }
+      },
+      {
+       "id": "pm-22_obj.a",
+       "label": "PM-22a.",
+       "children": [
+        {
+         "id": "pm-22_obj.a-1",
+         "label": "PM-22a.[01]",
+         "prose": {
+          "en": "the policies address reviewing the accuracy of personally identifiable information across the information life cycle;"
+         }
+        },
+        {
+         "id": "pm-22_obj.a-2",
+         "label": "PM-22a.[02]",
+         "prose": {
+          "en": "the policies address reviewing the relevance of personally identifiable information across the information life cycle;"
+         }
+        },
+        {
+         "id": "pm-22_obj.a-3",
+         "label": "PM-22a.[03]",
+         "prose": {
+          "en": "the policies address reviewing the timeliness of personally identifiable information across the information life cycle;"
+         }
+        },
+        {
+         "id": "pm-22_obj.a-4",
+         "label": "PM-22a.[04]",
+         "prose": {
+          "en": "the policies address reviewing the completeness of personally identifiable information across the information life cycle;"
+         }
+        },
+        {
+         "id": "pm-22_obj.a-5",
+         "label": "PM-22a.[05]",
+         "prose": {
+          "en": "the procedures address reviewing the accuracy of personally identifiable information across the information life cycle;"
+         }
+        },
+        {
+         "id": "pm-22_obj.a-6",
+         "label": "PM-22a.[06]",
+         "prose": {
+          "en": "the procedures address reviewing the relevance of personally identifiable information across the information life cycle;"
+         }
+        },
+        {
+         "id": "pm-22_obj.a-7",
+         "label": "PM-22a.[07]",
+         "prose": {
+          "en": "the procedures address reviewing the timeliness of personally identifiable information across the information life cycle;"
+         }
+        },
+        {
+         "id": "pm-22_obj.a-8",
+         "label": "PM-22a.[08]",
+         "prose": {
+          "en": "the procedures address reviewing the completeness of personally identifiable information across the information life cycle;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-22_obj.b",
+       "label": "PM-22b.",
+       "children": [
+        {
+         "id": "pm-22_obj.b-1",
+         "label": "PM-22b.[01]",
+         "prose": {
+          "en": "the policies address correcting or deleting inaccurate or outdated personally identifiable information;"
+         }
+        },
+        {
+         "id": "pm-22_obj.b-2",
+         "label": "PM-22b.[02]",
+         "prose": {
+          "en": "the procedures address correcting or deleting inaccurate or outdated personally identifiable information;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-22_obj.c",
+       "label": "PM-22c.",
+       "children": [
+        {
+         "id": "pm-22_obj.c-1",
+         "label": "PM-22c.[01]",
+         "prose": {
+          "en": "the policies address disseminating notice of corrected or deleted personally identifiable information to individuals or other appropriate entities;"
+         }
+        },
+        {
+         "id": "pm-22_obj.c-2",
+         "label": "PM-22c.[02]",
+         "prose": {
+          "en": "the procedures address disseminating notice of corrected or deleted personally identifiable information to individuals or other appropriate entities;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "pm-22_obj.d",
+       "label": "PM-22d.",
+       "children": [
+        {
+         "id": "pm-22_obj.d-1",
+         "label": "PM-22d.[01]",
+         "prose": {
+          "en": "the policies address appeals of adverse decisions on correction or deletion requests;"
+         }
+        },
+        {
+         "id": "pm-22_obj.d-2",
+         "label": "PM-22d.[02]",
+         "prose": {
+          "en": "the procedures address appeals of adverse decisions on correction or deletion requests."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-22-Examine",
+     "objects": [
+      {
+       "en": "Privacy program plan"
+      },
+      {
+       "en": "policies and procedures addressing personally identifiable information quality management, information life cycle documentation, and sample notices of correction or deletion"
+      },
+      {
+       "en": "records of monitoring PII quality management practices"
+      },
+      {
+       "en": "documentation of reviews and updates of policies and procedures"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-22-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with privacy program information dissemination responsibilities"
+      },
+      {
+       "en": "organizational personnel with privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PM-22-Test",
+     "objects": [
+      {
+       "en": "[Organizational processes for data quality and personally identifiable information quality management procedures"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing quality management requirements"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/wp-content/uploads/2019/04/M-19-15.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://csrc.nist.gov/publications/detail/sp/800-188/draft"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-23"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-18"
+  }
+ ]
+}

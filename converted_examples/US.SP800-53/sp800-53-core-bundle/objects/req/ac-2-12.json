@@ -1,0 +1,193 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-2.12",
+ "version": "5.2.0",
+ "label": "AC-2(12)",
+ "lifecycle": "active",
+ "title": "Account Monitoring for Atypical Usage",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Monitor system accounts for {param:ac-02.12_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "ac-02.12_odp.01",
+     "type": "string",
+     "label": "atypical usage"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Report atypical usage of system accounts to {param:ac-02.12_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ac-02.12_odp.02",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Atypical usage includes accessing systems at certain times of the day or from locations that are not consistent with the normal usage patterns of individuals. Monitoring for atypical usage may reveal rogue behavior by individuals or an attack in progress. Account monitoring may inadvertently create privacy risks since data collected to identify atypical usage may reveal previously unknown information about the behavior of individuals. Organizations assess and document privacy risks from monitoring accounts for atypical usage in their privacy impact assessment and make determinations that are in alignment with their privacy program plan."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-2.12_obj",
+     "label": "AC-02(12)",
+     "children": [
+      {
+       "id": "ac-2.12_obj.a",
+       "label": "AC-02(12)(a)",
+       "prose": {
+        "en": "system accounts are monitored for {param:ac-02.12_odp.01}; "
+       }
+      },
+      {
+       "id": "ac-2.12_obj.b",
+       "label": "AC-02(12)(b)",
+       "prose": {
+        "en": "atypical usage of system accounts is reported to {param:ac-02.12_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-02(12)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing account management"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system monitoring records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "audit tracking and monitoring reports"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-02(12)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with account management responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-02(12)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing account management functions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-02.12_odp.01": {
+     "guidelines": [
+      {
+       "en": "atypical usage for which to monitor system accounts is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2.12_prm_1"
+     ]
+    },
+    "ac-02.12_odp.02": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to report atypical usage is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2.12_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

@@ -1,0 +1,154 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CA-3.7",
+ "version": "5.2.0",
+ "label": "CA-3(7)",
+ "lifecycle": "active",
+ "title": "Transitive Information Exchanges",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Identify transitive (downstream) information exchanges with other systems through the systems identified in CA-3a ; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Take measures to ensure that transitive (downstream) information exchanges cease when the controls on identified transitive (downstream) systems cannot be verified or validated."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Transitive or \"downstream\" information exchanges are information exchanges between the system or systems with which the organizational system exchanges information and other systems. For mission-essential systems, services, and applications, including high value assets, it is necessary to identify such information exchanges. The transparency of the controls or protection measures in place in such downstream systems connected directly or indirectly to organizational systems is essential to understanding the security and privacy risks resulting from those information exchanges. Organizational systems can inherit risk from downstream systems through transitive connections and information exchanges, which can make the organizational systems more susceptible to threats, hazards, and adverse impacts."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ca-3.7_obj",
+     "label": "CA-03(07)",
+     "children": [
+      {
+       "id": "ca-3.7_obj.a",
+       "label": "CA-03(07)(a)",
+       "prose": {
+        "en": "transitive (downstream) information exchanges with other systems through the systems identified in CA-03a are identified;"
+       }
+      },
+      {
+       "id": "ca-3.7_obj.b",
+       "label": "CA-03(07)(b)",
+       "prose": {
+        "en": "measures are taken to ensure that transitive (downstream) information exchanges cease when the controls on identified transitive (downstream) systems cannot be verified or validated."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CA-03(07)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing system connections"
+      },
+      {
+       "en": "system and communications protection policy"
+      },
+      {
+       "en": "system interconnection agreements"
+      },
+      {
+       "en": "information exchange security agreements"
+      },
+      {
+       "en": "memoranda of understanding or agreements"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "non-disclosure agreements"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "control assessment report"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CA-03(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for managing connections to external systems"
+      },
+      {
+       "en": "network administrators"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CA-03(07)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing restrictions on external system connections"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  }
+ ]
+}

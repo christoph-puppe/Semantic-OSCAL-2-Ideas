@@ -1,0 +1,178 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PL-11",
+ "version": "5.2.0",
+ "label": "PL-11",
+ "lifecycle": "active",
+ "title": "Baseline Tailoring",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Tailor the selected control baseline by applying specified tailoring actions."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The concept of tailoring allows organizations to specialize or customize a set of baseline controls by applying a defined set of tailoring actions. Tailoring actions facilitate such specialization and customization by allowing organizations to develop security and privacy plans that reflect their specific mission and business functions, the environments where their systems operate, the threats and vulnerabilities that can affect their systems, and any other conditions or situations that can impact their mission or business success. Tailoring guidance is provided in SP 800-53B . Tailoring a control baseline is accomplished by identifying and designating common controls, applying scoping considerations, selecting compensating controls, assigning values to control parameters, supplementing the control baseline with additional controls as needed, and providing information for control implementation. The general tailoring actions in SP 800-53B can be supplemented with additional actions based on the needs of organizations. Tailoring actions can be applied to the baselines in SP 800-53B in accordance with the security and privacy requirements from FISMA, PRIVACT , and OMB A-130 . Alternatively, other communities of interest adopting different control baselines can apply the tailoring actions in SP 800-53B to specialize or customize the controls that represent the specific needs and concerns of those entities."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pl-11_obj",
+     "label": "PL-11",
+     "prose": {
+      "en": "the selected control baseline is tailored by applying specified tailoring actions."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PL-11-Examine",
+     "objects": [
+      {
+       "en": "Security and privacy planning policy"
+      },
+      {
+       "en": "procedures addressing system security and privacy plan development and implementation"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system categorization decision"
+      },
+      {
+       "en": "information types stored, transmitted, and processed by the system"
+      },
+      {
+       "en": "system element/component information"
+      },
+      {
+       "en": "stakeholder needs analysis"
+      },
+      {
+       "en": "list of security and privacy requirements allocated to the system, system elements, and environment of operation"
+      },
+      {
+       "en": "list of contractual requirements allocated to external providers of the system or system element"
+      },
+      {
+       "en": "business impact analysis or criticality analysis"
+      },
+      {
+       "en": "risk assessments"
+      },
+      {
+       "en": "risk management strategy"
+      },
+      {
+       "en": "organizational security and privacy policy"
+      },
+      {
+       "en": "federal or organization-approved or mandated baselines or overlays"
+      },
+      {
+       "en": "baseline tailoring rationale"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "records of system security and privacy plan reviews and updates"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PL-11-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with security and privacy planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.199"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.200"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-30r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-37r2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-39"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-53B"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-60v1r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-60v2r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.cnss.gov/CNSS/issuances/Instructions.cfm"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  }
+ ]
+}

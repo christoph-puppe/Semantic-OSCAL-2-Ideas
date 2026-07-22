@@ -1,0 +1,156 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-10.1",
+ "version": "5.2.0",
+ "label": "AU-10(1)",
+ "lifecycle": "active",
+ "title": "Association of Identities",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Bind the identity of the information producer with the information to {param:au-10.01_odp} ; and"
+   },
+   "parameters": [
+    {
+     "name": "au-10.01_odp",
+     "type": "string",
+     "label": "strength of binding"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide the means for authorized individuals to determine the identity of the producer of the information."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Binding identities to the information supports audit requirements that provide organizational personnel with the means to identify who produced specific information in the event of an information transfer. Organizations determine and approve the strength of attribute binding between the information producer and the information based on the security category of the information and other relevant risk factors."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-10.1_obj",
+     "label": "AU-10(01)",
+     "children": [
+      {
+       "id": "au-10.1_obj.a",
+       "label": "AU-10(01)(a)",
+       "prose": {
+        "en": "the identity of the information producer is bound with the information to {param:au-10.01_odp};"
+       }
+      },
+      {
+       "id": "au-10.1_obj.b",
+       "label": "AU-10(01)(b)",
+       "prose": {
+        "en": "the means for authorized individuals to determine the identity of the producer of the information is provided."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-10(01)-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "procedures addressing non-repudiation"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-10(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AU-10(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing non-repudiation capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "au-10.01_odp": {
+     "guidelines": [
+      {
+       "en": "the strength of binding between the identity of the information producer and the information is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-10.1_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-16"
+  }
+ ]
+}

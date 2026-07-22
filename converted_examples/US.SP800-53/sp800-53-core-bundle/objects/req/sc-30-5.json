@@ -1,0 +1,143 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-30.5",
+ "version": "5.2.0",
+ "label": "SC-30(5)",
+ "lifecycle": "active",
+ "title": "Concealment of System Components",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ the following techniques to hide or conceal {param:sc-30.05_odp.02}: {param:sc-30.05_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "sc-30.05_odp.01",
+     "type": "string",
+     "label": "techniques"
+    },
+    {
+     "name": "sc-30.05_odp.02",
+     "type": "string",
+     "label": "system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "By hiding, disguising, or concealing critical system components, organizations may be able to decrease the probability that adversaries target and successfully compromise those assets. Potential means to hide, disguise, or conceal system components include the configuration of routers or the use of encryption or virtualization techniques."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-30.5_obj",
+     "label": "SC-30(05)",
+     "prose": {
+      "en": "{param:sc-30.05_odp.01} are employed to hide or conceal {param:sc-30.05_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-30(05)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "configuration management policy and procedures"
+      },
+      {
+       "en": "procedures addressing concealment and misdirection techniques for the system"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of techniques employed to hide or conceal system components"
+      },
+      {
+       "en": "list of system components to be hidden or concealed"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-30(05)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with the responsibility to conceal system components"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-30(05)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing techniques for the concealment of system components"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-30.05_odp.01": {
+     "guidelines": [
+      {
+       "en": "techniques to be employed to hide or conceal system components are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-30.5_prm_2"
+     ]
+    },
+    "sc-30.05_odp.02": {
+     "guidelines": [
+      {
+       "en": "system components to be hidden or concealed using techniques (defined in SC-30(05)_ODP[01]) are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-30.5_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-30"
+  }
+ ]
+}

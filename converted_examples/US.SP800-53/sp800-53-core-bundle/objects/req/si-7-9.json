@@ -1,0 +1,141 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-7.9",
+ "version": "5.2.0",
+ "label": "SI-7(9)",
+ "lifecycle": "active",
+ "title": "Verify Boot Process",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Verify the integrity of the boot process of the following system components: {param:si-07.09_odp}."
+   },
+   "parameters": [
+    {
+     "name": "si-07.09_odp",
+     "type": "string",
+     "label": "system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Ensuring the integrity of boot processes is critical to starting system components in known, trustworthy states. Integrity verification mechanisms provide a level of assurance that only trusted code is executed during boot processes."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-7.9_obj",
+     "label": "SI-07(09)",
+     "prose": {
+      "en": "the integrity of the boot process of {param:si-07.09_odp} is verified."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-07(09)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing software, firmware, and information integrity"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "integrity verification tools and associated documentation"
+      },
+      {
+       "en": "documentation"
+      },
+      {
+       "en": "records of integrity verification scans"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-07(09)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for software, firmware, and/or information integrity"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-07(09)-Test",
+     "objects": [
+      {
+       "en": "Software, firmware, and information integrity verification tools"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing integrity verification of the boot process"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-07.09_odp": {
+     "guidelines": [
+      {
+       "en": "system components requiring integrity verification of the boot process are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-7.9_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-6"
+  }
+ ]
+}

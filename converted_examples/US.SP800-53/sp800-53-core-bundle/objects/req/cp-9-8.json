@@ -1,0 +1,128 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-9.8",
+ "version": "5.2.0",
+ "label": "CP-9(8)",
+ "lifecycle": "active",
+ "title": "Cryptographic Protection",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Implement cryptographic mechanisms to prevent unauthorized disclosure and modification of {param:cp-09.08_odp}."
+   },
+   "parameters": [
+    {
+     "name": "cp-09.08_odp",
+     "type": "string",
+     "label": "backup information"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The selection of cryptographic mechanisms is based on the need to protect the confidentiality and integrity of backup information. The strength of mechanisms selected is commensurate with the security category or classification of the information. Cryptographic protection applies to system backup information in storage at both primary and alternate locations. Organizations that implement cryptographic mechanisms to protect information at rest also consider cryptographic key management solutions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-9.8_obj",
+     "label": "CP-09(08)",
+     "prose": {
+      "en": "cryptographic mechanisms are implemented to prevent unauthorized disclosure and modification of {param:cp-09.08_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-09(08)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing system backup"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-09(08)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system backup responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-09(08)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing cryptographic protection of backup information"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cp-09.08_odp": {
+     "guidelines": [
+      {
+       "en": "backup information to protect against unauthorized disclosure and modification is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cp-9.8_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-28"
+  }
+ ]
+}

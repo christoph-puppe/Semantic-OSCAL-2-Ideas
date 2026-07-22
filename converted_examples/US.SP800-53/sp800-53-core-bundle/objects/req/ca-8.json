@@ -1,0 +1,186 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CA-8",
+ "version": "5.2.0",
+ "label": "CA-8",
+ "lifecycle": "active",
+ "title": "Penetration Testing",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Conduct penetration testing {param:ca-08_odp.01} on {param:ca-08_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ca-08_odp.01",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "ca-08_odp.02",
+     "type": "string",
+     "label": "system(s) or system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Penetration testing is a specialized type of assessment conducted on systems or individual system components to identify vulnerabilities that could be exploited by adversaries. Penetration testing goes beyond automated vulnerability scanning and is conducted by agents and teams with demonstrable skills and experience that include technical expertise in network, operating system, and/or application level security. Penetration testing can be used to validate vulnerabilities or determine the degree of penetration resistance of systems to adversaries within specified constraints. Such constraints include time, resources, and skills. Penetration testing attempts to duplicate the actions of adversaries and provides a more in-depth analysis of security- and privacy-related weaknesses or deficiencies. Penetration testing is especially important when organizations are transitioning from older technologies to newer technologies (e.g., transitioning from IPv4 to IPv6 network protocols).\n\nOrganizations can use the results of vulnerability analyses to support penetration testing activities. Penetration testing can be conducted internally or externally on the hardware, software, or firmware components of a system and can exercise both physical and technical controls. A standard method for penetration testing includes a pretest analysis based on full knowledge of the system, pretest identification of potential vulnerabilities based on the pretest analysis, and testing designed to determine the exploitability of vulnerabilities. All parties agree to the rules of engagement before commencing penetration testing scenarios. Organizations correlate the rules of engagement for the penetration tests with the tools, techniques, and procedures that are anticipated to be employed by adversaries. Penetration testing may result in the exposure of information that is protected by laws or regulations, to individuals conducting the testing. Rules of engagement, contracts, or other appropriate mechanisms can be used to communicate expectations for how to protect this information. Risk assessments guide the decisions on the level of independence required for the personnel conducting penetration testing."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ca-8_obj",
+     "label": "CA-08",
+     "prose": {
+      "en": "penetration testing is conducted {param:ca-08_odp.01} on {param:ca-08_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CA-08-Examine",
+     "objects": [
+      {
+       "en": "Assessment, authorization, and monitoring policy"
+      },
+      {
+       "en": "procedures addressing penetration testing"
+      },
+      {
+       "en": "assessment plan"
+      },
+      {
+       "en": "penetration test report"
+      },
+      {
+       "en": "assessment report"
+      },
+      {
+       "en": "assessment evidence"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CA-08-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with control assessment responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CA-08-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting penetration testing"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ca-08_odp.01": {
+     "guidelines": [
+      {
+       "en": "frequency at which to conduct penetration testing on systems or system components is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ca-8_prm_1"
+     ]
+    },
+    "ca-08_odp.02": {
+     "guidelines": [
+      {
+       "en": "systems or system components on which penetration testing is to be conducted are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ca-8_prm_2"
+     ],
+     "alt-label": "systems or system components"
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-6"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-3.6",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5.9",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/PE-3.6",
+    "mode": "merged-into",
+    "label": "PE-03(06)",
+    "title": "Facility Penetration Testing"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/RA-5.9",
+    "mode": "merged-into",
+    "label": "RA-05(09)",
+    "title": "Penetration Testing and Analyses"
+   }
+  ]
+ }
+}

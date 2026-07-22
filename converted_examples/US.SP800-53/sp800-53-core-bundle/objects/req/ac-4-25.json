@@ -1,0 +1,141 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-4.25",
+ "version": "5.2.0",
+ "label": "AC-4(25)",
+ "lifecycle": "active",
+ "title": "Data Sanitization",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "When transferring information between different security domains, sanitize data to minimize {param:ac-04.25_odp.01} in accordance with {param:ac-04.25_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ac-04.25_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "delivery of malicious content, command and control of malicious code, malicious code augmentation, and steganography-encoded data"
+      },
+      {
+       "value": "spillage of sensitive information"
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "ac-04.25_odp.02",
+     "type": "string",
+     "label": "policy"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Data sanitization is the process of irreversibly removing or destroying data stored on a memory device (e.g., hard drives, flash memory/solid state drives, mobile devices, CDs, and DVDs) or in hard copy form."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-4.25_obj",
+     "label": "AC-04(25)",
+     "prose": {
+      "en": "when transferring information between different security domains, data is sanitized to minimize {param:ac-04.25_odp.01} in accordance with {param:ac-04.25_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-04(25)-Examine",
+     "objects": [
+      {
+       "en": "Information flow enforcement policy"
+      },
+      {
+       "en": "procedures addressing information flow enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-04(25)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information flow enforcement responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-04(25)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing information flow enforcement functions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-04.25_odp.01": {
+     "alt-identifiers": [
+      "ac-4.25_prm_1"
+     ]
+    },
+    "ac-04.25_odp.02": {
+     "guidelines": [
+      {
+       "en": "policy for sanitizing data is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-4.25_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-6"
+  }
+ ]
+}

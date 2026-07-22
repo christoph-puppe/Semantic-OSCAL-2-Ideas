@@ -1,0 +1,152 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-4.2",
+ "version": "5.2.0",
+ "label": "IR-4(2)",
+ "lifecycle": "active",
+ "title": "Dynamic Reconfiguration",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Include the following types of dynamic reconfiguration for {param:ir-04.02_odp.02} as part of the incident response capability: {param:ir-04.02_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "ir-04.02_odp.01",
+     "type": "string",
+     "label": "types of dynamic reconfiguration"
+    },
+    {
+     "name": "ir-04.02_odp.02",
+     "type": "string",
+     "label": "system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Dynamic reconfiguration includes changes to router rules, access control lists, intrusion detection or prevention system parameters, and filter rules for guards or firewalls. Organizations may perform dynamic reconfiguration of systems to stop attacks, misdirect attackers, and isolate components of systems, thus limiting the extent of the damage from breaches or compromises. Organizations include specific time frames for achieving the reconfiguration of systems in the definition of the reconfiguration capability, considering the potential need for rapid response to effectively address cyber threats."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-4.2_obj",
+     "label": "IR-04(02)",
+     "prose": {
+      "en": "{param:ir-04.02_odp.01} for {param:ir-04.02_odp.02} are included as part of the incident response capability."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-04(02)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing incident handling"
+      },
+      {
+       "en": "mechanisms supporting incident handling"
+      },
+      {
+       "en": "list of system components to be dynamically reconfigured as part of incident response capability"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-04(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident handling responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IR-04(02)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms that support and/or implement the dynamic reconfiguration of components as part of incident response"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ir-04.02_odp.01": {
+     "guidelines": [
+      {
+       "en": "types of dynamic reconfiguration for system components are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-4.2_prm_2"
+     ]
+    },
+    "ir-04.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "system components that require dynamic reconfiguration are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-4.2_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-2"
+  }
+ ]
+}

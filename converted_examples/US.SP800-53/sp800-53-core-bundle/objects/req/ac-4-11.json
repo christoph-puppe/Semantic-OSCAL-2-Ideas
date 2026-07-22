@@ -1,0 +1,170 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-4.11",
+ "version": "5.2.0",
+ "label": "AC-4(11)",
+ "lifecycle": "active",
+ "title": "Configuration of Security or Privacy Policy Filters",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide the capability for privileged administrators to configure {param:ac-4.11_prm_1} to support different security or privacy policies."
+   },
+   "parameters": [
+    {
+     "name": "ac-4.11_prm_1",
+     "type": "string",
+     "label": "organization-defined security or privacy policy filters"
+    },
+    {
+     "name": "ac-04.11_odp.01",
+     "type": "string",
+     "label": "security policy filters"
+    },
+    {
+     "name": "ac-04.11_odp.02",
+     "type": "string",
+     "label": "privacy policy filters"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Documentation contains detailed information for configuring security or privacy policy filters. For example, administrators can configure security or privacy policy filters to include the list of inappropriate words that security or privacy policy mechanisms check in accordance with the definitions provided by organizations."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-4.11_obj",
+     "label": "AC-04(11)",
+     "children": [
+      {
+       "id": "ac-4.11_obj-1",
+       "label": "AC-04(11)[01]",
+       "prose": {
+        "en": "capability is provided for privileged administrators to configure {param:ac-04.11_odp.01} to support different security or privacy policies;"
+       }
+      },
+      {
+       "id": "ac-4.11_obj-2",
+       "label": "AC-04(11)[02]",
+       "prose": {
+        "en": "capability is provided for privileged administrators to configure {param:ac-04.11_odp.02} to support different security or privacy policies."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-04(11)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "information flow control policies"
+      },
+      {
+       "en": "procedures addressing information flow enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of security policy filters"
+      },
+      {
+       "en": "list of privacy policy filters"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-04(11)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for configuring security and privacy policy filters"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-04(11)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing information flow enforcement policy"
+      },
+      {
+       "en": "security and privacy policy filters"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-4.11_prm_1": {
+     "aggregates": [
+      "ac-04.11_odp.01",
+      "ac-04.11_odp.02"
+     ]
+    },
+    "ac-04.11_odp.01": {
+     "guidelines": [
+      {
+       "en": "security policy filters that privileged administrators have the capability to configure to support different security and privacy policies are defined;"
+      }
+     ]
+    },
+    "ac-04.11_odp.02": {
+     "guidelines": [
+      {
+       "en": "privacy policy filters that privileged administrators have the capability to configure to support different security and privacy policies are defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  }
+ ]
+}

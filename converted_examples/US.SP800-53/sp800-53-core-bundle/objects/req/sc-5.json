@@ -1,0 +1,205 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-5",
+ "version": "5.2.0",
+ "label": "SC-5",
+ "lifecycle": "active",
+ "title": "Denial-of-service Protection",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "{param:sc-05_odp.02} the effects of the following types of denial-of-service events: {param:sc-05_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "sc-05_odp.01",
+     "type": "string",
+     "label": "types of denial-of-service events"
+    },
+    {
+     "name": "sc-05_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "protect against"
+      },
+      {
+       "value": "limit"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Employ the following controls to achieve the denial-of-service objective: {param:sc-05_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "sc-05_odp.03",
+     "type": "string",
+     "label": "controls by type of denial-of-service event"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Denial-of-service events may occur due to a variety of internal and external causes, such as an attack by an adversary or a lack of planning to support organizational needs with respect to capacity and bandwidth. Such attacks can occur across a wide range of network protocols (e.g., IPv4, IPv6). A variety of technologies are available to limit or eliminate the origination and effects of denial-of-service events. For example, boundary protection devices can filter certain types of packets to protect system components on internal networks from being directly affected by or the source of denial-of-service attacks. Employing increased network capacity and bandwidth combined with service redundancy also reduces the susceptibility to denial-of-service events."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-5_obj",
+     "label": "SC-05",
+     "children": [
+      {
+       "id": "sc-5_obj.a",
+       "label": "SC-05a.",
+       "prose": {
+        "en": "the effects of {param:sc-05_odp.01} are {param:sc-05_odp.02};"
+       }
+      },
+      {
+       "id": "sc-5_obj.b",
+       "label": "SC-05b.",
+       "prose": {
+        "en": "{param:sc-05_odp.03} are employed to achieve the denial-of-service protection objective."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-05-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing denial-of-service protection"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "list of denial-of-service attacks requiring employment of security safeguards to protect against or limit effects of such attacks"
+      },
+      {
+       "en": "list of security safeguards protecting against or limiting the effects of denial-of-service attacks"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-05-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with incident response responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-05-Test",
+     "objects": [
+      {
+       "en": "Mechanisms protecting against or limiting the effects of denial-of-service attacks"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-05_odp.01": {
+     "guidelines": [
+      {
+       "en": "types of denial-of-service events to be protected against or limited are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-5_prm_2"
+     ]
+    },
+    "sc-05_odp.02": {
+     "alt-identifiers": [
+      "sc-5_prm_1"
+     ]
+    },
+    "sc-05_odp.03": {
+     "guidelines": [
+      {
+       "en": "controls to achieve the denial-of-service objective by type of denial-of-service event are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-5_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-189"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-40"
+  }
+ ]
+}

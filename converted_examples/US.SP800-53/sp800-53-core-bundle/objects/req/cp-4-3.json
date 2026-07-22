@@ -1,0 +1,125 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-4.3",
+ "version": "5.2.0",
+ "label": "CP-4(3)",
+ "lifecycle": "active",
+ "title": "Automated Testing",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Test the contingency plan using {param:cp-04.03_odp}."
+   },
+   "parameters": [
+    {
+     "name": "cp-04.03_odp",
+     "type": "string",
+     "label": "automated mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Automated mechanisms facilitate thorough and effective testing of contingency plans by providing more complete coverage of contingency issues, selecting more realistic test scenarios and environments, and effectively stressing the system and supported mission and business functions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-4.3_obj",
+     "label": "CP-04(03)",
+     "prose": {
+      "en": "the contingency plan is tested using {param:cp-04.03_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-04(03)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing contingency plan testing"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "automated mechanisms supporting contingency plan testing"
+      },
+      {
+       "en": "contingency plan test documentation"
+      },
+      {
+       "en": "contingency plan test results"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-04(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency plan testing responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-04(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for contingency plan testing"
+      },
+      {
+       "en": "automated mechanisms supporting contingency plan testing"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cp-04.03_odp": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms for contingency plan testing are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cp-4.3_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-4"
+  }
+ ]
+}

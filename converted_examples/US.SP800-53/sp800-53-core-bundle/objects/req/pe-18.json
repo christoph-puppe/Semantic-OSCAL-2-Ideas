@@ -1,0 +1,132 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-18",
+ "version": "5.2.0",
+ "label": "PE-18",
+ "lifecycle": "active",
+ "title": "Location of System Components",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Position system components within the facility to minimize potential damage from {param:pe-18_odp} and to minimize the opportunity for unauthorized access."
+   },
+   "parameters": [
+    {
+     "name": "pe-18_odp",
+     "type": "string",
+     "label": "physical and environmental hazards"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Physical and environmental hazards include floods, fires, tornadoes, earthquakes, hurricanes, terrorism, vandalism, an electromagnetic pulse, electrical interference, and other forms of incoming electromagnetic radiation. Organizations consider the location of entry points where unauthorized individuals, while not being granted access, might nonetheless be near systems. Such proximity can increase the risk of unauthorized access to organizational communications using wireless packet sniffers or microphones, or unauthorized disclosure of information."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-18_obj",
+     "label": "PE-18",
+     "prose": {
+      "en": "system components are positioned within the facility to minimize potential damage from {param:pe-18_odp} and to minimize the opportunity for unauthorized access."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-18-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing the positioning of system components"
+      },
+      {
+       "en": "documentation providing the location and position of system components within the facility"
+      },
+      {
+       "en": "locations housing system components within the facility"
+      },
+      {
+       "en": "list of physical and environmental hazards with the potential to damage system components within the facility"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-18-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for positioning system components"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-18-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for positioning system components"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-18_odp": {
+     "guidelines": [
+      {
+       "en": "physical and environmental hazards that could result in potential damage to system components within the facility are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-18_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-19"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-20"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  }
+ ]
+}

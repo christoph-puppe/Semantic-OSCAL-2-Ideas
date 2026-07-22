@@ -1,0 +1,345 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-3.3",
+ "version": "5.2.0",
+ "label": "AC-3(3)",
+ "lifecycle": "active",
+ "title": "Mandatory Access Control",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Enforce {param:ac-3.3_prm_1} over the set of covered subjects and objects specified in the policy, and where the policy:"
+   },
+   "parameters": [
+    {
+     "name": "ac-3.3_prm_1",
+     "type": "string",
+     "label": "organization-defined mandatory access control policy"
+    },
+    {
+     "name": "ac-03.03_odp.01",
+     "type": "string",
+     "label": "mandatory access control policy"
+    },
+    {
+     "name": "ac-03.03_odp.02",
+     "type": "string",
+     "label": "mandatory access control policy"
+    }
+   ]
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Is uniformly enforced across the covered subjects and objects within the system;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Specifies that a subject that has been granted access to information is constrained from doing any of the following;"
+   }
+  },
+  {
+   "id": "smt.b.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Passing the information to unauthorized subjects or objects;"
+   }
+  },
+  {
+   "id": "smt.b.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Granting its privileges to other subjects;"
+   }
+  },
+  {
+   "id": "smt.b.3",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Changing one or more security attributes (specified by the policy) on subjects, objects, the system, or system components;"
+   }
+  },
+  {
+   "id": "smt.b.4",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Choosing the security attributes and attribute values (specified by the policy) to be associated with newly created or modified objects; and"
+   }
+  },
+  {
+   "id": "smt.b.5",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Changing the rules governing access control; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Specifies that {param:ac-03.03_odp.03} may explicitly be granted {param:ac-03.03_odp.04} such that they are not limited by any defined subset (or all) of the above constraints."
+   },
+   "parameters": [
+    {
+     "name": "ac-03.03_odp.03",
+     "type": "string",
+     "label": "subjects"
+    },
+    {
+     "name": "ac-03.03_odp.04",
+     "type": "string",
+     "label": "privileges"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Mandatory access control is a type of nondiscretionary access control. Mandatory access control policies constrain what actions subjects can take with information obtained from objects for which they have already been granted access. This prevents the subjects from passing the information to unauthorized subjects and objects. Mandatory access control policies constrain actions that subjects can take with respect to the propagation of access control privileges; that is, a subject with a privilege cannot pass that privilege to other subjects. The policy is uniformly enforced over all subjects and objects to which the system has control. Otherwise, the access control policy can be circumvented. This enforcement is provided by an implementation that meets the reference monitor concept as described in AC-25 . The policy is bounded by the system (i.e., once the information is passed outside of the control of the system, additional means may be required to ensure that the constraints on the information remain in effect).\n\nThe trusted subjects described above are granted privileges consistent with the concept of least privilege (see AC-6 ). Trusted subjects are only given the minimum privileges necessary for satisfying organizational mission/business needs relative to the above policy. The control is most applicable when there is a mandate that establishes a policy regarding access to controlled unclassified information or classified information and some users of the system are not authorized access to all such information resident in the system. Mandatory access control can operate in conjunction with discretionary access control as described in AC-3(4) . A subject constrained in its operation by mandatory access control policies can still operate under the less rigorous constraints of AC-3(4), but mandatory access control policies take precedence over the less rigorous constraints of AC-3(4). For example, while a mandatory access control policy imposes a constraint that prevents a subject from passing information to another subject operating at a different impact or classification level, AC-3(4) permits the subject to pass the information to any other subject with the same impact or classification level as the subject. Examples of mandatory access control policies include the Bell-LaPadula policy to protect confidentiality of information and the Biba policy to protect the integrity of information."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-3.3_obj",
+     "label": "AC-03(03)",
+     "children": [
+      {
+       "id": "ac-3.3_obj-1",
+       "label": "AC-03(03)[01]",
+       "prose": {
+        "en": "{param:ac-03.03_odp.01} is enforced over the set of covered subjects specified in the policy;"
+       }
+      },
+      {
+       "id": "ac-3.3_obj-2",
+       "label": "AC-03(03)[02]",
+       "prose": {
+        "en": "{param:ac-03.03_odp.02} is enforced over the set of covered objects specified in the policy;"
+       }
+      },
+      {
+       "id": "ac-3.3_obj.a",
+       "label": "AC-03(03)(a)",
+       "children": [
+        {
+         "id": "ac-3.3_obj.a-1",
+         "label": "AC-03(03)(a)[01]",
+         "prose": {
+          "en": "{param:ac-03.03_odp.01} is uniformly enforced across the covered subjects within the system;"
+         }
+        },
+        {
+         "id": "ac-3.3_obj.a-2",
+         "label": "AC-03(03)(a)[02]",
+         "prose": {
+          "en": "{param:ac-03.03_odp.02} is uniformly enforced across the covered objects within the system;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ac-3.3_obj.b",
+       "label": "AC-03(03)(b)",
+       "children": [
+        {
+         "id": "ac-3.3_obj.b.1",
+         "label": "AC-03(03)(b)(01)",
+         "prose": {
+          "en": "{param:ac-03.03_odp.01} and {param:ac-03.03_odp.02} specifying that a subject that has been granted access to information is constrained from passing the information to unauthorized subjects or objects are enforced;"
+         }
+        },
+        {
+         "id": "ac-3.3_obj.b.2",
+         "label": "AC-03(03)(b)(02)",
+         "prose": {
+          "en": "{param:ac-03.03_odp.01} and {param:ac-03.03_odp.02} specifying that a subject that has been granted access to information is constrained from granting its privileges to other subjects are enforced;"
+         }
+        },
+        {
+         "id": "ac-3.3_obj.b.3",
+         "label": "AC-03(03)(b)(03)",
+         "prose": {
+          "en": "{param:ac-03.03_odp.01} and {param:ac-03.03_odp.02} specifying that a subject that has been granted access to information is constrained from changing one of more security attributes (specified by the policy) on subjects, objects, the system, or system components are enforced;"
+         }
+        },
+        {
+         "id": "ac-3.3_obj.b.4",
+         "label": "AC-03(03)(b)(04)",
+         "prose": {
+          "en": "{param:ac-03.03_odp.01} and {param:ac-03.03_odp.02} specifying that a subject that has been granted access to information is constrained from choosing the security attributes and attribute values (specified by the policy) to be associated with newly created or modified objects are enforced;"
+         }
+        },
+        {
+         "id": "ac-3.3_obj.b.5",
+         "label": "AC-03(03)(b)(05)",
+         "prose": {
+          "en": "{param:ac-03.03_odp.01} and {param:ac-03.03_odp.02} specifying that a subject that has been granted access to information is constrained from changing the rules governing access control are enforced;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ac-3.3_obj.c",
+       "label": "AC-03(03)(c)",
+       "prose": {
+        "en": "{param:ac-03.03_odp.01} and {param:ac-03.03_odp.02} specifying that {param:ac-03.03_odp.03} may explicitly be granted {param:ac-03.03_odp.04} such that they are not limited by any defined subset (or all) of the above constraints are enforced."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-03(03)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "mandatory access control policies"
+      },
+      {
+       "en": "procedures addressing access enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of subjects and objects (i.e., users and resources) requiring enforcement of mandatory access control policies"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-03(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with access enforcement responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-03(03)-Test",
+     "objects": [
+      {
+       "en": "Automated mechanisms implementing mandatory access control"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-3.3_prm_1": {
+     "aggregates": [
+      "ac-03.03_odp.01",
+      "ac-03.03_odp.02"
+     ]
+    },
+    "ac-03.03_odp.01": {
+     "guidelines": [
+      {
+       "en": "mandatory access control policy enforced over the set of covered subjects is defined;"
+      }
+     ]
+    },
+    "ac-03.03_odp.02": {
+     "guidelines": [
+      {
+       "en": "mandatory access control policy enforced over the set of covered objects is defined;"
+      }
+     ]
+    },
+    "ac-03.03_odp.03": {
+     "guidelines": [
+      {
+       "en": "subjects to be explicitly granted privileges are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-3.3_prm_2"
+     ]
+    },
+    "ac-03.03_odp.04": {
+     "guidelines": [
+      {
+       "en": "privileges to be explicitly granted to subjects are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-3.3_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  }
+ ]
+}

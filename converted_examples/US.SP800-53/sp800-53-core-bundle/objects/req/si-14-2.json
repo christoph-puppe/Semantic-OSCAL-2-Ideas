@@ -1,0 +1,195 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-14.2",
+ "version": "5.2.0",
+ "label": "SI-14(2)",
+ "lifecycle": "active",
+ "title": "Non-persistent Information",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "{param:si-14.02_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "si-14.02_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "refresh {param:si-14.02_odp.02} {param:si-14.02_odp.03} "
+      },
+      {
+       "value": "generate {param:si-14.02_odp.04} on demand"
+      }
+     ]
+    },
+    {
+     "name": "si-14.02_odp.02",
+     "type": "string",
+     "label": "information"
+    },
+    {
+     "name": "si-14.02_odp.03",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "si-14.02_odp.04",
+     "type": "string",
+     "label": "information"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Delete information when no longer needed."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Retaining information longer than is needed makes the information a potential target for advanced adversaries searching for high value assets to compromise through unauthorized disclosure, unauthorized modification, or exfiltration. For system-related information, unnecessary retention provides advanced adversaries information that can assist in their reconnaissance and lateral movement through the system."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-14.2_obj",
+     "label": "SI-14(02)",
+     "children": [
+      {
+       "id": "si-14.2_obj.a",
+       "label": "SI-14(02)(a)",
+       "prose": {
+        "en": "{param:si-14.02_odp.01} is performed;"
+       }
+      },
+      {
+       "id": "si-14.2_obj.b",
+       "label": "SI-14(02)(b)",
+       "prose": {
+        "en": "information is deleted when no longer needed."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-14(02)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing non-persistence for system components"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-14(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for ensuring that information is and remains non-persistent"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-14(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for ensuring that information is and remains non-persistent"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing component and service refreshes"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-14.02_odp.01": {
+     "alt-identifiers": [
+      "si-14.2_prm_1"
+     ]
+    },
+    "si-14.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "the information to be refreshed is defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "si-14.2_prm_2"
+     ]
+    },
+    "si-14.02_odp.03": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to refresh information is defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "si-14.2_prm_3"
+     ]
+    },
+    "si-14.02_odp.04": {
+     "guidelines": [
+      {
+       "en": "the information to be generated is defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "si-14.2_prm_4"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-14"
+  }
+ ]
+}

@@ -1,0 +1,171 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-9",
+ "version": "5.2.0",
+ "label": "IA-9",
+ "lifecycle": "active",
+ "title": "Service Identification and Authentication",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Uniquely identify and authenticate {param:ia-09_odp} before establishing communications with devices, users, or other services or applications."
+   },
+   "parameters": [
+    {
+     "name": "ia-09_odp",
+     "type": "string",
+     "label": "system services and applications"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Services that may require identification and authentication include web applications using digital certificates or services or applications that query a database. Identification and authentication methods for system services and applications include information or code signing, provenance graphs, and electronic signatures that indicate the sources of services. Decisions regarding the validity of identification and authentication claims can be made by services separate from the services acting on those decisions. This can occur in distributed system architectures. In such situations, the identification and authentication decisions (instead of actual identifiers and authentication data) are provided to the services that need to act on those decisions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-9_obj",
+     "label": "IA-09",
+     "prose": {
+      "en": "{param:ia-09_odp} are uniquely identified and authenticated before establishing communications with devices, users, or other services or applications."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-09-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "procedures addressing service identification and authentication"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "security safeguards used to identify and authenticate system services"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-09-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system operations responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with identification and authentication responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-09-Test",
+     "objects": [
+      {
+       "en": "Security safeguards implementing service identification and authentication capabilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ia-09_odp": {
+     "guidelines": [
+      {
+       "en": "system services and applications to be uniquely identified and authenticated are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-9_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-8"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-9.1",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-9.2",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/IA-9.1",
+    "mode": "merged-into",
+    "label": "IA-09(01)",
+    "title": "Information Exchange"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/IA-9.2",
+    "mode": "merged-into",
+    "label": "IA-09(02)",
+    "title": "Transmission of Decisions"
+   }
+  ]
+ }
+}

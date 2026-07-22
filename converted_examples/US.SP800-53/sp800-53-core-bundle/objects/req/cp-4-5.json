@@ -1,0 +1,141 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-4.5",
+ "version": "5.2.0",
+ "label": "CP-4(5)",
+ "lifecycle": "active",
+ "title": "Self-challenge",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Employ {param:cp-04.05_odp.01} to {param:cp-04.05_odp.02} to disrupt and adversely affect the system or system component."
+   },
+   "parameters": [
+    {
+     "name": "cp-04.05_odp.01",
+     "type": "string",
+     "label": "mechanisms"
+    },
+    {
+     "name": "cp-04.05_odp.02",
+     "type": "string",
+     "label": "system or system component"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Often, the best method of assessing system resilience is to disrupt the system in some manner. The mechanisms used by the organization could disrupt system functions or system services in many ways, including terminating or disabling critical system components, changing the configuration of system components, degrading critical functionality (e.g., restricting network bandwidth), or altering privileges. Automated, on-going, and simulated cyber-attacks and service disruptions can reveal unexpected functional dependencies and help the organization determine its ability to ensure resilience in the face of an actual cyber-attack."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-4.5_obj",
+     "label": "CP-04(05)",
+     "prose": {
+      "en": "{param:cp-04.05_odp.01} are employed to disrupt and adversely affect the {param:cp-04.05_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-04(05)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing system recovery and reconstitution"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "contingency plan test documentation"
+      },
+      {
+       "en": "contingency plan test results"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-04(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency plan testing responsibilities"
+      },
+      {
+       "en": "organizational personnel with system recovery and reconstitution responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-04(05)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for contingency plan testing"
+      },
+      {
+       "en": "mechanisms supporting contingency plan testing"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cp-04.05_odp.01": {
+     "guidelines": [
+      {
+       "en": "mechanisms employed to disrupt and adversely affect the system or system component are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cp-4.5_prm_1"
+     ]
+    },
+    "cp-04.05_odp.02": {
+     "guidelines": [
+      {
+       "en": "system or system component on which to apply disruption mechanisms are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cp-4.5_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-4"
+  }
+ ]
+}

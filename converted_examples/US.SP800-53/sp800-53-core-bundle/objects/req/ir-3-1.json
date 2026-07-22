@@ -1,0 +1,134 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-3.1",
+ "version": "5.2.0",
+ "label": "IR-3(1)",
+ "lifecycle": "active",
+ "title": "Automated Testing",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Test the incident response capability using {param:ir-03.01_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ir-03.01_odp",
+     "type": "string",
+     "label": "automated mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations use automated mechanisms to more thoroughly and effectively test incident response capabilities. This can be accomplished by providing more complete coverage of incident response issues, selecting realistic test scenarios and environments, and stressing the response capability."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-3.1_obj",
+     "label": "IR-03(01)",
+     "prose": {
+      "en": "the incident response capability is tested using {param:ir-03.01_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-03(01)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "contingency planning policy"
+      },
+      {
+       "en": "procedures addressing incident response testing"
+      },
+      {
+       "en": "procedures addressing contingency plan testing"
+      },
+      {
+       "en": "incident response testing documentation"
+      },
+      {
+       "en": "incident response test results"
+      },
+      {
+       "en": "incident response test plan"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "automated mechanisms supporting incident response tests"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-03(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident response testing responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IR-03(01)-Test",
+     "objects": [
+      {
+       "en": "Automated mechanisms that more thoroughly and effectively test the incident response capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ir-03.01_odp": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to test the incident response capability are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-3.1_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-3"
+  }
+ ]
+}

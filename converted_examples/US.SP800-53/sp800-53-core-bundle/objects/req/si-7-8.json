@@ -1,0 +1,213 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-7.8",
+ "version": "5.2.0",
+ "label": "SI-7(8)",
+ "lifecycle": "active",
+ "title": "Auditing Capability for Significant Events",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Upon detection of a potential integrity violation, provide the capability to audit the event and initiate the following actions: {param:si-07.08_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "si-07.08_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "generate an audit record"
+      },
+      {
+       "value": "alert current user"
+      },
+      {
+       "value": "alert {param:si-07.08_odp.02} "
+      },
+      {
+       "value": "{param:si-07.08_odp.03} "
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "si-07.08_odp.02",
+     "type": "string",
+     "label": "personnel or roles"
+    },
+    {
+     "name": "si-07.08_odp.03",
+     "type": "string",
+     "label": "other actions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations select response actions based on types of software, specific software, or information for which there are potential integrity violations."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-7.8_obj",
+     "label": "SI-07(08)",
+     "children": [
+      {
+       "id": "si-7.8_obj-1",
+       "label": "SI-07(08)[01]",
+       "prose": {
+        "en": "the capability to audit an event upon the detection of a potential integrity violation is provided;"
+       }
+      },
+      {
+       "id": "si-7.8_obj-2",
+       "label": "SI-07(08)[02]",
+       "prose": {
+        "en": "{param:si-07.08_odp.01} is/are initiated upon the detection of a potential integrity violation."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-07(08)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing software, firmware, and information integrity"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "integrity verification tools and associated documentation"
+      },
+      {
+       "en": "records of integrity scans"
+      },
+      {
+       "en": "incident response records"
+      },
+      {
+       "en": "list of security-relevant changes to the system"
+      },
+      {
+       "en": "automated tools supporting alerts and notifications if unauthorized security changes are detected"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-07(08)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for software, firmware, and/or information integrity"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-07(08)-Test",
+     "objects": [
+      {
+       "en": "Software, firmware, and information integrity verification tools"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the capability to audit potential integrity violations"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing alerts about potential integrity violations"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-07.08_odp.01": {
+     "alt-identifiers": [
+      "si-7.8_prm_1"
+     ]
+    },
+    "si-07.08_odp.02": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to be alerted upon the detection of a potential integrity violation is/are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "si-7.8_prm_2"
+     ]
+    },
+    "si-07.08_odp.03": {
+     "guidelines": [
+      {
+       "en": "other actions to be taken upon the detection of a potential integrity violation are defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "si-7.8_prm_3"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-12"
+  }
+ ]
+}

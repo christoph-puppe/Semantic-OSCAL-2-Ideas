@@ -1,0 +1,132 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-5.3",
+ "version": "5.2.0",
+ "label": "AU-5(3)",
+ "lifecycle": "active",
+ "title": "Configurable Traffic Volume Thresholds",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Enforce configurable network communications traffic volume thresholds reflecting limits on audit log storage capacity and {param:au-05.03_odp} network traffic above those thresholds."
+   },
+   "parameters": [
+    {
+     "name": "au-05.03_odp",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "reject"
+      },
+      {
+       "value": "delay"
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations have the capability to reject or delay the processing of network communications traffic if audit logging information about such traffic is determined to exceed the storage capacity of the system audit logging function. The rejection or delay response is triggered by the established organizational traffic volume thresholds that can be adjusted based on changes to audit log storage capacity."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-5.3_obj",
+     "label": "AU-05(03)",
+     "children": [
+      {
+       "id": "au-5.3_obj-1",
+       "label": "AU-05(03)[01]",
+       "prose": {
+        "en": "configurable network communications traffic volume thresholds reflecting limits on audit log storage capacity are enforced;"
+       }
+      },
+      {
+       "id": "au-5.3_obj-2",
+       "label": "AU-05(03)[02]",
+       "prose": {
+        "en": "network traffic is {param:au-05.03_odp} if network traffic volume is above configured thresholds."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-05(03)-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "procedures addressing response to audit processing failures"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-05(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with audit and accountability responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "au-05.03_odp": {
+     "alt-identifiers": [
+      "au-5.3_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-5"
+  }
+ ]
+}

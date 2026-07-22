@@ -1,0 +1,225 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-4.2",
+ "version": "5.2.0",
+ "label": "SA-4(2)",
+ "lifecycle": "active",
+ "title": "Design and Implementation Information for Controls",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to provide design and implementation information for the controls that includes: {param:sa-04.02_odp.01} at {param:sa-04.02_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "sa-04.02_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "security-relevant external system interfaces"
+      },
+      {
+       "value": "high-level design"
+      },
+      {
+       "value": "low-level design"
+      },
+      {
+       "value": "source code or hardware schematics"
+      },
+      {
+       "value": "{param:sa-04.02_odp.02} "
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "sa-04.02_odp.03",
+     "type": "string",
+     "label": "level of detail"
+    },
+    {
+     "name": "sa-04.02_odp.02",
+     "type": "string",
+     "label": "design and implementation information"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations may require different levels of detail in the documentation for the design and implementation of controls in organizational systems, system components, or system services based on mission and business requirements, requirements for resiliency and trustworthiness, and requirements for analysis and testing. Systems can be partitioned into multiple subsystems. Each subsystem within the system can contain one or more modules. The high-level design for the system is expressed in terms of subsystems and the interfaces between subsystems providing security-relevant functionality. The low-level design for the system is expressed in terms of modules and the interfaces between modules providing security-relevant functionality. Design and implementation documentation can include manufacturer, version, serial number, verification hash signature, software libraries used, date of purchase or download, and the vendor or download source. Source code and hardware schematics are referred to as the implementation representation of the system."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-4.2_obj",
+     "label": "SA-04(02)",
+     "prose": {
+      "en": "the developer of the system, system component, or system service is required to provide design and implementation information for the controls that includes using {param:sa-04.02_odp.01} at {param:sa-04.02_odp.03}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-04(02)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "procedures addressing the integration of security requirements, descriptions, and criteria into the acquisition process"
+      },
+      {
+       "en": "solicitation documents"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "acquisition contracts for the system, system components, or system services"
+      },
+      {
+       "en": "design and implementation information for controls employed in the system, system component, or system service"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-04(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with acquisition/contracting responsibilities"
+      },
+      {
+       "en": "organizational personnel with the responsibility to determine system security requirements"
+      },
+      {
+       "en": "system developers or service provider"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-04(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for determining the level of detail for system design and controls"
+      },
+      {
+       "en": "organizational processes for developing acquisition contracts"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the development of system design details"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-04.02_odp.01": {
+     "alt-identifiers": [
+      "sa-4.2_prm_1"
+     ]
+    },
+    "sa-04.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "design and implementation information is defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-4.2_prm_2"
+     ]
+    },
+    "sa-04.02_odp.03": {
+     "guidelines": [
+      {
+       "en": "level of detail is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-4.2_prm_3"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-4"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-5.2",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-5.3",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-5.4",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-5.5",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-5.2",
+    "mode": "merged-into",
+    "label": "SA-05(02)",
+    "title": "Security-relevant External System Interfaces"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-5.3",
+    "mode": "merged-into",
+    "label": "SA-05(03)",
+    "title": "High-level Design"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-5.4",
+    "mode": "merged-into",
+    "label": "SA-05(04)",
+    "title": "Low-level Design"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-5.5",
+    "mode": "merged-into",
+    "label": "SA-05(05)",
+    "title": "Source Code"
+   }
+  ]
+ }
+}

@@ -1,0 +1,134 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-19.5",
+ "version": "5.2.0",
+ "label": "SI-19(5)",
+ "lifecycle": "active",
+ "title": "Statistical Disclosure Control",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Manipulate numerical data, contingency tables, and statistical findings so that no individual or organization is identifiable in the results of the analysis."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Many types of statistical analyses can result in the disclosure of information about individuals even if only summary information is provided. For example, if a school that publishes a monthly table with the number of minority students enrolled, reports that it has 10-19 such students in January, and subsequently reports that it has 20-29 such students in March, then it can be inferred that the student who enrolled in February was a minority."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-19.5_obj",
+     "label": "SI-19(05)",
+     "children": [
+      {
+       "id": "si-19.5_obj-1",
+       "label": "SI-19(05)[01]",
+       "prose": {
+        "en": "numerical data is manipulated so that no individual or organization is identifiable in the results of the analysis;"
+       }
+      },
+      {
+       "id": "si-19.5_obj-2",
+       "label": "SI-19(05)[02]",
+       "prose": {
+        "en": "contingency tables are manipulated so that no individual or organization is identifiable in the results of the analysis;"
+       }
+      },
+      {
+       "id": "si-19.5_obj-3",
+       "label": "SI-19(05)[03]",
+       "prose": {
+        "en": "statistical findings are manipulated so that no individual or organization is identifiable in the results of the analysis."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-19(05)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "de-identification procedures"
+      },
+      {
+       "en": "system configuration"
+      },
+      {
+       "en": "de-identified datasets"
+      },
+      {
+       "en": "statistical analysis report"
+      },
+      {
+       "en": "tools for the control of statistical disclosure"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-19(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for de-identifying the dataset"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-19(05)-Test",
+     "objects": [
+      {
+       "en": "Automated mechanisms supporting and/or implementing the control of statistical disclosure"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-19"
+  }
+ ]
+}

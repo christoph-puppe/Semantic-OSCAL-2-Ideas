@@ -1,0 +1,166 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-4.23",
+ "version": "5.2.0",
+ "label": "SI-4(23)",
+ "lifecycle": "active",
+ "title": "Host-based Devices",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Implement the following host-based monitoring mechanisms at {param:si-04.23_odp.02}: {param:si-04.23_odp.01}."
+   },
+   "parameters": [
+    {
+     "name": "si-04.23_odp.01",
+     "type": "string",
+     "label": "host-based monitoring mechanisms"
+    },
+    {
+     "name": "si-04.23_odp.02",
+     "type": "string",
+     "label": "system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Host-based monitoring collects information about the host (or system in which it resides). System components in which host-based monitoring can be implemented include servers, notebook computers, and mobile devices. Organizations may consider employing host-based monitoring mechanisms from multiple product developers or vendors."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-4.23_obj",
+     "label": "SI-04(23)",
+     "prose": {
+      "en": "{param:si-04.23_odp.01} are implemented on {param:si-04.23_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-04(23)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing system monitoring tools and techniques"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "host-based monitoring mechanisms"
+      },
+      {
+       "en": "system monitoring tools and techniques documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of system components requiring host-based monitoring"
+      },
+      {
+       "en": "system monitoring logs or records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-04(23)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel responsible for monitoring system hosts"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-04(23)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for system monitoring"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing a host-based monitoring capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-04.23_odp.01": {
+     "guidelines": [
+      {
+       "en": "host-based monitoring mechanisms to be implemented on system components are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-4.23_prm_2"
+     ]
+    },
+    "si-04.23_odp.02": {
+     "guidelines": [
+      {
+       "en": "system components where host-based monitoring is to be implemented are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-4.23_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-18"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-19"
+  }
+ ]
+}

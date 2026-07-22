@@ -1,0 +1,120 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-16",
+ "version": "5.2.0",
+ "label": "PM-16",
+ "lifecycle": "active",
+ "title": "Threat Awareness Program",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Implement a threat awareness program that includes a cross-organization information-sharing capability for threat intelligence."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Because of the constantly changing and increasing sophistication of adversaries, especially the advanced persistent threat (APT), it may be more likely that adversaries can successfully breach or compromise organizational systems. One of the best techniques to address this concern is for organizations to share threat information, including threat events (i.e., tactics, techniques, and procedures) that organizations have experienced, mitigations that organizations have found are effective against certain types of threats, and threat intelligence (i.e., indications and warnings about threats). Threat information sharing may be bilateral or multilateral. Bilateral threat sharing includes government-to-commercial and government-to-government cooperatives. Multilateral threat sharing includes organizations taking part in threat-sharing consortia. Threat information may require special agreements and protection, or it may be freely shared."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-16_obj",
+     "label": "PM-16",
+     "prose": {
+      "en": "a threat awareness program that includes a cross-organization information-sharing capability for threat intelligence is implemented."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-16-Examine",
+     "objects": [
+      {
+       "en": "Information security program plan"
+      },
+      {
+       "en": "privacy program plan"
+      },
+      {
+       "en": "threat awareness program policy"
+      },
+      {
+       "en": "threat awareness program procedures"
+      },
+      {
+       "en": "risk assessment results relevant to threat awareness"
+      },
+      {
+       "en": "documentation about the cross-organization information-sharing capability"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-16-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with information security and privacy program planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel responsible for the threat awareness program"
+      },
+      {
+       "en": "organizational personnel responsible for the cross-organization information-sharing capability"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "external personnel with whom threat awareness information is shared by the organization"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PM-16-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for implementing the threat awareness program"
+      },
+      {
+       "en": "organizational processes for implementing the cross-organization information-sharing capability"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the threat awareness program"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the cross-organization information-sharing capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-12"
+  }
+ ]
+}

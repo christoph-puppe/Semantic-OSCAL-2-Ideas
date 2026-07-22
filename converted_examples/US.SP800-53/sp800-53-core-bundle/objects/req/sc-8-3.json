@@ -1,0 +1,133 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-8.3",
+ "version": "5.2.0",
+ "label": "SC-8(3)",
+ "lifecycle": "active",
+ "title": "Cryptographic Protection for Message Externals",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement cryptographic mechanisms to protect message externals unless otherwise protected by {param:sc-08.03_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sc-08.03_odp",
+     "type": "string",
+     "label": "alternative physical controls"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Cryptographic protection for message externals addresses protection from the unauthorized disclosure of information. Message externals include message headers and routing information. Cryptographic protection prevents the exploitation of message externals and applies to internal and external networks or links that may be visible to individuals who are not authorized users. Header and routing information is sometimes transmitted in clear text (i.e., unencrypted) because the information is not identified by organizations as having significant value or because encrypting the information can result in lower network performance or higher costs. Alternative physical controls include protected distribution systems."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-8.3_obj",
+     "label": "SC-08(03)",
+     "prose": {
+      "en": "cryptographic mechanisms are implemented to protect message externals unless otherwise protected by {param:sc-08.03_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-08(03)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing transmission confidentiality and integrity"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-08(03)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-08(03)-Test",
+     "objects": [
+      {
+       "en": "Cryptographic mechanisms supporting and/or implementing transmission confidentiality and/or integrity for message externals"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing alternative physical safeguards"
+      },
+      {
+       "en": "organizational processes for defining and implementing alternative physical safeguards"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-08.03_odp": {
+     "guidelines": [
+      {
+       "en": "alternative physical controls to protect message externals are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-8.3_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  }
+ ]
+}

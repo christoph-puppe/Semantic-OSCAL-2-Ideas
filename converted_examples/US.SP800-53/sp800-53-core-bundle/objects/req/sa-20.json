@@ -1,0 +1,163 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-20",
+ "version": "5.2.0",
+ "label": "SA-20",
+ "lifecycle": "active",
+ "title": "Customized Development of Critical Components",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Reimplement or custom develop the following critical system components: {param:sa-20_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sa-20_odp",
+     "type": "string",
+     "label": "critical system"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations determine that certain system components likely cannot be trusted due to specific threats to and vulnerabilities in those components for which there are no viable security controls to adequately mitigate risk. Reimplementation or custom development of such components may satisfy requirements for higher assurance and is carried out by initiating changes to system components (including hardware, software, and firmware) such that the standard attacks by adversaries are less likely to succeed. In situations where no alternative sourcing is available and organizations choose not to reimplement or custom develop critical system components, additional controls can be employed. Controls include enhanced auditing, restrictions on source code and system utility access, and protection from deletion of system and application files."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-20_obj",
+     "label": "SA-20",
+     "prose": {
+      "en": "{param:sa-20_odp} are reimplemented or custom-developed."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-20-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management plan"
+      },
+      {
+       "en": "system and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing the customized development of critical system components"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system development life cycle documentation addressing the custom development of critical system components"
+      },
+      {
+       "en": "configuration management records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-20-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibility for the reimplementation or customized development of critical system components"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-20-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for the reimplementation or customized development of critical system components"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the reimplementation or customized development of critical system components"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-20_odp": {
+     "guidelines": [
+      {
+       "en": "critical system components to be reimplemented or custom-developed are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-20_prm_1"
+     ],
+     "alt-label": "critical system components"
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-160v1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-14.1",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-14.1",
+    "mode": "merged-into",
+    "label": "SA-14(01)",
+    "title": "Critical Components with No Viable Alternative Sourcing"
+   }
+  ]
+ }
+}

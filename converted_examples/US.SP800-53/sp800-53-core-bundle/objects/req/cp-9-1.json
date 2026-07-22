@@ -1,0 +1,159 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-9.1",
+ "version": "5.2.0",
+ "label": "CP-9(1)",
+ "lifecycle": "active",
+ "title": "Testing for Reliability and Integrity",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Test backup information {param:cp-9.1_prm_1} to verify media reliability and information integrity."
+   },
+   "parameters": [
+    {
+     "name": "cp-9.1_prm_1",
+     "type": "string",
+     "label": "organization-defined frequency"
+    },
+    {
+     "name": "cp-09.01_odp.01",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "cp-09.01_odp.02",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations need assurance that backup information can be reliably retrieved. Reliability pertains to the systems and system components where the backup information is stored, the operations used to retrieve the information, and the integrity of the information being retrieved. Independent and specialized tests can be used for each of the aspects of reliability. For example, decrypting and transporting (or transmitting) a random sample of backup files from the alternate storage or backup site and comparing the information to the same information at the primary processing site can provide such assurance."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-9.1_obj",
+     "label": "CP-09(01)",
+     "children": [
+      {
+       "id": "cp-9.1_obj-1",
+       "label": "CP-09(01)[01]",
+       "prose": {
+        "en": "backup information is tested {param:cp-09.01_odp.01} to verify media reliability;"
+       }
+      },
+      {
+       "id": "cp-9.1_obj-2",
+       "label": "CP-09(01)[02]",
+       "prose": {
+        "en": "backup information is tested {param:cp-09.01_odp.02} to verify information integrity."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-09(01)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing system backup"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "system backup test results"
+      },
+      {
+       "en": "contingency plan test documentation"
+      },
+      {
+       "en": "contingency plan test results"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-09(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system backup responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-09(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for conducting system backups"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing system backups"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cp-9.1_prm_1": {
+     "aggregates": [
+      "cp-09.01_odp.01",
+      "cp-09.01_odp.02"
+     ]
+    },
+    "cp-09.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "frequency at which to test backup information for media reliability is defined;"
+      }
+     ]
+    },
+    "cp-09.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "frequency at which to test backup information for information integrity is defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-4"
+  }
+ ]
+}

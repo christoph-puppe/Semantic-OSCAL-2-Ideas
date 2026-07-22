@@ -1,0 +1,177 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-11.7",
+ "version": "5.2.0",
+ "label": "SA-11(7)",
+ "lifecycle": "active",
+ "title": "Verify Scope of Testing and Evaluation",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to verify that the scope of testing and evaluation provides complete coverage of the required controls at the following level of rigor: {param:sa-11.7_prm_1}."
+   },
+   "parameters": [
+    {
+     "name": "sa-11.7_prm_1",
+     "type": "string",
+     "label": "organization-defined breadth and depth of testing and evaluation"
+    },
+    {
+     "name": "sa-11.07_odp.01",
+     "type": "string",
+     "label": "breadth"
+    },
+    {
+     "name": "sa-11.07_odp.02",
+     "type": "string",
+     "label": "depth"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Verifying that testing and evaluation provides complete coverage of required controls can be accomplished by a variety of analytic techniques ranging from informal to formal. Each of these techniques provides an increasing level of assurance that corresponds to the degree of formality of the analysis. Rigorously demonstrating control coverage at the highest levels of assurance can be achieved using formal modeling and analysis techniques, including correlation between control implementation and corresponding test cases."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-11.7_obj",
+     "label": "SA-11(07)",
+     "children": [
+      {
+       "id": "sa-11.7_obj-1",
+       "label": "SA-11(07)[01]",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to verify that the scope of testing and evaluation provides complete coverage of the required controls at {param:sa-11.07_odp.01};"
+       }
+      },
+      {
+       "id": "sa-11.7_obj-2",
+       "label": "SA-11(07)[02]",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to verify that the scope of testing and evaluation provides complete coverage of the required controls at {param:sa-11.07_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-11(07)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing system developer security testing"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "system developer security testing and evaluation plans"
+      },
+      {
+       "en": "system developer security testing and evaluation results"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-11(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with developer security testing responsibilities"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "independent verification agent"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-11(07)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for monitoring developer security testing and evaluation"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the monitoring of developer security testing and evaluation"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-11.7_prm_1": {
+     "aggregates": [
+      "sa-11.07_odp.01",
+      "sa-11.07_odp.02"
+     ]
+    },
+    "sa-11.07_odp.01": {
+     "guidelines": [
+      {
+       "en": "the breadth of testing and evaluation of required controls is defined;"
+      }
+     ]
+    },
+    "sa-11.07_odp.02": {
+     "guidelines": [
+      {
+       "en": "the depth of testing and evaluation of required controls is defined;"
+      }
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-15"
+  }
+ ]
+}

@@ -1,0 +1,194 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-3.3",
+ "version": "5.2.0",
+ "label": "IA-3(3)",
+ "lifecycle": "active",
+ "title": "Dynamic Address Allocation",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Where addresses are allocated dynamically, standardize dynamic address allocation lease information and the lease duration assigned to devices in accordance with {param:ia-3.3_prm_1} ; and"
+   },
+   "parameters": [
+    {
+     "name": "ia-3.3_prm_1",
+     "type": "string",
+     "label": "organization-defined lease information and lease duration"
+    },
+    {
+     "name": "ia-03.03_odp.01",
+     "type": "string",
+     "label": "lease information"
+    },
+    {
+     "name": "ia-03.03_odp.02",
+     "type": "string",
+     "label": "lease duration"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Audit lease information when assigned to a device."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The Dynamic Host Configuration Protocol (DHCP) is an example of a means by which clients can dynamically receive network address assignments."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-3.3_obj",
+     "label": "IA-03(03)",
+     "children": [
+      {
+       "id": "ia-3.3_obj.a",
+       "label": "IA-03(03)(a)",
+       "children": [
+        {
+         "id": "ia-3.3_obj.a-1",
+         "label": "IA-03(03)(a)[01]",
+         "prose": {
+          "en": "dynamic address allocation lease information assigned to devices where addresses are allocated dynamically are standardized in accordance with {param:ia-03.03_odp.01};"
+         }
+        },
+        {
+         "id": "ia-3.3_obj.a-2",
+         "label": "IA-03(03)(a)[02]",
+         "prose": {
+          "en": "dynamic address allocation lease duration assigned to devices where addresses are allocated dynamically are standardized in accordance with {param:ia-03.03_odp.02};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ia-3.3_obj.b",
+       "label": "IA-03(03)(b)",
+       "prose": {
+        "en": "lease information is audited when assigned to a device."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-03(03)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "procedures addressing device identification and authentication"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "evidence of lease information and lease duration assigned to devices"
+      },
+      {
+       "en": "device connection reports"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-03(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with operational responsibilities for device identification and authentication"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-03(03)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing device identification and authentication capabilities"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing dynamic address allocation"
+      },
+      {
+       "en": "mechanisms supporting and/or implanting auditing of lease information"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ia-3.3_prm_1": {
+     "aggregates": [
+      "ia-03.03_odp.01",
+      "ia-03.03_odp.02"
+     ]
+    },
+    "ia-03.03_odp.01": {
+     "guidelines": [
+      {
+       "en": "lease information to be employed to standardize dynamic address allocation for devices is defined;"
+      }
+     ]
+    },
+    "ia-03.03_odp.02": {
+     "guidelines": [
+      {
+       "en": "lease duration to be employed to standardize dynamic address allocation for devices is defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  }
+ ]
+}

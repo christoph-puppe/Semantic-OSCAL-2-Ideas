@@ -1,0 +1,121 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-4.1",
+ "version": "5.2.0",
+ "label": "CP-4(1)",
+ "lifecycle": "active",
+ "title": "Coordinate with Related Plans",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Coordinate contingency plan testing with organizational elements responsible for related plans."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Plans related to contingency planning for organizational systems include Business Continuity Plans, Disaster Recovery Plans, Continuity of Operations Plans, Crisis Communications Plans, Critical Infrastructure Plans, Cyber Incident Response Plans, and Occupant Emergency Plans. Coordination of contingency plan testing does not require organizations to create organizational elements to handle related plans or to align such elements with specific plans. However, it does require that if such organizational elements are responsible for related plans, organizations coordinate with those elements."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-4.1_obj",
+     "label": "CP-04(01)",
+     "prose": {
+      "en": "contingency plan testing is coordinated with organizational elements responsible for related plans."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-04(01)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "incident response policy"
+      },
+      {
+       "en": "procedures addressing contingency plan testing"
+      },
+      {
+       "en": "contingency plan testing documentation"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "business continuity plans"
+      },
+      {
+       "en": "disaster recovery plans"
+      },
+      {
+       "en": "continuity of operations plans"
+      },
+      {
+       "en": "crisis communications plans"
+      },
+      {
+       "en": "critical infrastructure plans"
+      },
+      {
+       "en": "cyber incident response plans"
+      },
+      {
+       "en": "occupant emergency plans"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-04(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency plan testing responsibilities"
+      },
+      {
+       "en": "personnel with responsibilities for related plans"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-8"
+  }
+ ]
+}

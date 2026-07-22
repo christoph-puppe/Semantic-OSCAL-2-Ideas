@@ -1,0 +1,136 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CA-7.3",
+ "version": "5.2.0",
+ "label": "CA-7(3)",
+ "lifecycle": "active",
+ "title": "Trend Analyses",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ trend analyses to determine if control implementations, the frequency of continuous monitoring activities, and the types of activities used in the continuous monitoring process need to be modified based on empirical data."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Trend analyses include examining recent threat information that addresses the types of threat events that have occurred in the organization or the Federal Government, success rates of certain types of attacks, emerging vulnerabilities in technologies, evolving social engineering techniques, the effectiveness of configuration settings, results from multiple control assessments, and findings from Inspectors General or auditors."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ca-7.3_obj",
+     "label": "CA-07(03)",
+     "children": [
+      {
+       "id": "ca-7.3_obj-1",
+       "label": "CA-07(03)[01]",
+       "prose": {
+        "en": "trend analysis is employed to determine if control implementations used in the continuous monitoring process need to be modified based on empirical data;"
+       }
+      },
+      {
+       "id": "ca-7.3_obj-2",
+       "label": "CA-07(03)[02]",
+       "prose": {
+        "en": "trend analysis is employed to determine if the frequency of continuous monitoring activities used in the continuous monitoring process needs to be modified based on empirical data;"
+       }
+      },
+      {
+       "id": "ca-7.3_obj-3",
+       "label": "CA-07(03)[03]",
+       "prose": {
+        "en": "trend analysis is employed to determine if the types of activities used in the continuous monitoring process need to be modified based on empirical data."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CA-07(03)-Examine",
+     "objects": [
+      {
+       "en": "Organizational continuous monitoring strategy"
+      },
+      {
+       "en": "system-level continuous monitoring strategy"
+      },
+      {
+       "en": "assessment, authorization, and monitoring policy"
+      },
+      {
+       "en": "procedures addressing continuous monitoring of system controls"
+      },
+      {
+       "en": "privacy controls"
+      },
+      {
+       "en": "assessment report"
+      },
+      {
+       "en": "plan of action and milestones"
+      },
+      {
+       "en": "system monitoring records"
+      },
+      {
+       "en": "impact analyses"
+      },
+      {
+       "en": "status reports"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CA-07(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with continuous monitoring responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CA-07(03)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting trend analyses"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-7"
+  }
+ ]
+}

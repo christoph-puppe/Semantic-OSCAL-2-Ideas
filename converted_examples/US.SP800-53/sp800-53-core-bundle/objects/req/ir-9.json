@@ -1,0 +1,318 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-9",
+ "version": "5.2.0",
+ "label": "IR-9",
+ "lifecycle": "active",
+ "title": "Information Spillage Response",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Respond to information spills by:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Assigning {param:ir-09_odp.01} with responsibility for responding to information spills;"
+   },
+   "parameters": [
+    {
+     "name": "ir-09_odp.01",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identifying the specific information involved in the system contamination;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Alerting {param:ir-09_odp.02} of the information spill using a method of communication not associated with the spill;"
+   },
+   "parameters": [
+    {
+     "name": "ir-09_odp.02",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Isolating the contaminated system or system component;"
+   }
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Eradicating the information from the contaminated system or component;"
+   }
+  },
+  {
+   "id": "smt.f",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identifying other systems or system components that may have been subsequently contaminated; and"
+   }
+  },
+  {
+   "id": "smt.g",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Performing the following additional actions: {param:ir-09_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "ir-09_odp.03",
+     "type": "string",
+     "label": "actions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Information spillage refers to instances where information is placed on systems that are not authorized to process such information. Information spills occur when information that is thought to be a certain classification or impact level is transmitted to a system and subsequently is determined to be of a higher classification or impact level. At that point, corrective action is required. The nature of the response is based on the classification or impact level of the spilled information, the security capabilities of the system, the specific nature of the contaminated storage media, and the access authorizations of individuals with authorized access to the contaminated system. The methods used to communicate information about the spill after the fact do not involve methods directly associated with the actual spill to minimize the risk of further spreading the contamination before such contamination is isolated and eradicated."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-9_obj",
+     "label": "IR-09",
+     "children": [
+      {
+       "id": "ir-9_obj.a",
+       "label": "IR-09a.",
+       "prose": {
+        "en": "{param:ir-09_odp.01} is/are assigned the responsibility to respond to information spills;"
+       }
+      },
+      {
+       "id": "ir-9_obj.b",
+       "label": "IR-09b.",
+       "prose": {
+        "en": "the specific information involved in the system contamination is identified in response to information spills;"
+       }
+      },
+      {
+       "id": "ir-9_obj.c",
+       "label": "IR-09c.",
+       "prose": {
+        "en": "{param:ir-09_odp.02} is/are alerted of the information spill using a method of communication not associated with the spill;"
+       }
+      },
+      {
+       "id": "ir-9_obj.d",
+       "label": "IR-09d.",
+       "prose": {
+        "en": "the contaminated system or system component is isolated in response to information spills;"
+       }
+      },
+      {
+       "id": "ir-9_obj.e",
+       "label": "IR-09e.",
+       "prose": {
+        "en": "the information is eradicated from the contaminated system or component in response to information spills;"
+       }
+      },
+      {
+       "id": "ir-9_obj.f",
+       "label": "IR-09f.",
+       "prose": {
+        "en": "other systems or system components that may have been subsequently contaminated are identified in response to information spills;"
+       }
+      },
+      {
+       "id": "ir-9_obj.g",
+       "label": "IR-09g.",
+       "prose": {
+        "en": "{param:ir-09_odp.03} are performed in response to information spills."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-09-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing information spillage"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "records of information spillage alerts/notifications"
+      },
+      {
+       "en": "list of personnel who should receive alerts of information spillage"
+      },
+      {
+       "en": "list of actions to be performed regarding information spillage"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-09-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident response responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IR-09-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for information spillage response"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing information spillage response actions and related communications"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ir-09_odp.01": {
+     "guidelines": [
+      {
+       "en": "personnel or roles assigned the responsibility for responding to information spills is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-9_prm_1"
+     ]
+    },
+    "ir-09_odp.02": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to be alerted of the information spill using a method of communication not associated with the spill is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-9_prm_2"
+     ]
+    },
+    "ir-09_odp.03": {
+     "guidelines": [
+      {
+       "en": "actions to be performed are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-9_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-26"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-27"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-7"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-9.1",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/IR-9.1",
+    "mode": "merged-into",
+    "label": "IR-09(01)",
+    "title": "Responsible Personnel"
+   }
+  ]
+ }
+}

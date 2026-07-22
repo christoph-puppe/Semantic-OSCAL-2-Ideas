@@ -1,0 +1,109 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-7.2",
+ "version": "5.2.0",
+ "label": "IR-7(2)",
+ "lifecycle": "active",
+ "title": "Coordination with External Providers",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish a direct, cooperative relationship between its incident response capability and external providers of system protection capability; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identify organizational incident response team members to the external providers."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "External providers of a system protection capability include the Computer Network Defense program within the U.S. Department of Defense. External providers help to protect, monitor, analyze, detect, and respond to unauthorized activity within organizational information systems and networks. It may be beneficial to have agreements in place with external providers to clarify the roles and responsibilities of each party before an incident occurs."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-7.2_obj",
+     "label": "IR-07(02)",
+     "children": [
+      {
+       "id": "ir-7.2_obj.a",
+       "label": "IR-07(02)(a)",
+       "prose": {
+        "en": "a direct, cooperative relationship is established between its incident response capability and external providers of the system protection capability;"
+       }
+      },
+      {
+       "id": "ir-7.2_obj.b",
+       "label": "IR-07(02)(b)",
+       "prose": {
+        "en": "organizational incident response team members are identified to the external providers."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-07(02)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing incident response assistance"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-07(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident response support and assistance responsibilities"
+      },
+      {
+       "en": "external providers of system protection capability"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-7"
+  }
+ ]
+}

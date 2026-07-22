@@ -1,0 +1,123 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MP-6.3",
+ "version": "5.2.0",
+ "label": "MP-6(3)",
+ "lifecycle": "active",
+ "title": "Nondestructive Techniques",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Apply nondestructive sanitization techniques to portable storage devices prior to connecting such devices to the system under the following circumstances: {param:mp-06.03_odp}."
+   },
+   "parameters": [
+    {
+     "name": "mp-06.03_odp",
+     "type": "string",
+     "label": "circumstances"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Portable storage devices include external or removable hard disk drives (e.g., solid state, magnetic), optical discs, magnetic or optical tapes, flash memory devices, flash memory cards, and other external or removable disks. Portable storage devices can be obtained from untrustworthy sources and contain malicious code that can be inserted into or transferred to organizational systems through USB ports or other entry portals. While scanning storage devices is recommended, sanitization provides additional assurance that such devices are free of malicious code. Organizations consider nondestructive sanitization of portable storage devices when the devices are purchased from manufacturers or vendors prior to initial use or when organizations cannot maintain a positive chain of custody for the devices."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "mp-6.3_obj",
+     "label": "MP-06(03)",
+     "prose": {
+      "en": "non-destructive sanitization techniques are applied to portable storage devices prior to connecting such devices to the system under {param:mp-06.03_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MP-06(03)-Examine",
+     "objects": [
+      {
+       "en": "System media protection policy"
+      },
+      {
+       "en": "procedures addressing media sanitization and disposal"
+      },
+      {
+       "en": "information on portable storage devices for the system"
+      },
+      {
+       "en": "list of circumstances requiring sanitization of portable storage devices"
+      },
+      {
+       "en": "media sanitization records"
+      },
+      {
+       "en": "audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MP-06(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system media sanitization responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MP-06(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for media sanitization of portable storage devices"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing media sanitization"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "mp-06.03_odp": {
+     "guidelines": [
+      {
+       "en": "circumstances requiring sanitization of portable storage devices are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "mp-6.3_prm_1"
+     ],
+     "alt-label": "circumstances requiring sanitization of portable storage devices"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-6"
+  }
+ ]
+}

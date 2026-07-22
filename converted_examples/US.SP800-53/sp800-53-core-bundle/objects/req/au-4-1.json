@@ -1,0 +1,129 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-4.1",
+ "version": "5.2.0",
+ "label": "AU-4(1)",
+ "lifecycle": "active",
+ "title": "Transfer to Alternate Storage",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Transfer audit logs {param:au-04.01_odp} to a different system, system component, or media other than the system or system component conducting the logging."
+   },
+   "parameters": [
+    {
+     "name": "au-04.01_odp",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Audit log transfer, also known as off-loading, is a common process in systems with limited audit log storage capacity and thus supports availability of the audit logs. The initial audit log storage is only used in a transitory fashion until the system can communicate with the secondary or alternate system allocated to audit log storage, at which point the audit logs are transferred. Transferring audit logs to alternate storage is similar to AU-9(2) in that audit logs are transferred to a different entity. However, the purpose of selecting AU-9(2) is to protect the confidentiality and integrity of audit records. Organizations can select either control enhancement to obtain the benefit of increased audit log storage capacity and preserving the confidentiality, integrity, and availability of audit records and logs."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-4.1_obj",
+     "label": "AU-04(01)",
+     "prose": {
+      "en": "audit logs are transferred {param:au-04.01_odp} to a different system, system component, or media other than the system or system component conducting the logging."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-04(01)-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "procedures addressing audit storage capacity"
+      },
+      {
+       "en": "procedures addressing transfer of system audit records to secondary or alternate systems"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "logs of audit record transfers to secondary or alternate systems"
+      },
+      {
+       "en": "system audit records transferred to secondary or alternate systems"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-04(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with audit storage capacity planning responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AU-04(01)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting the transfer of audit records onto a different system"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "au-04.01_odp": {
+     "guidelines": [
+      {
+       "en": "the frequency of audit logs transferred to a different system, system component, or media other than the system or system component conducting the logging is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-4.1_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-4"
+  }
+ ]
+}

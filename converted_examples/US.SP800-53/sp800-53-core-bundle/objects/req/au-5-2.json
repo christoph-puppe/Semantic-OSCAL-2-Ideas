@@ -1,0 +1,146 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-5.2",
+ "version": "5.2.0",
+ "label": "AU-5(2)",
+ "lifecycle": "active",
+ "title": "Real-time Alerts",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Provide an alert within {param:au-05.02_odp.01} to {param:au-05.02_odp.02} when the following audit failure events occur: {param:au-05.02_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "au-05.02_odp.01",
+     "type": "string",
+     "label": "real-time period"
+    },
+    {
+     "name": "au-05.02_odp.02",
+     "type": "string",
+     "label": "personnel, roles, and/or locations"
+    },
+    {
+     "name": "au-05.02_odp.03",
+     "type": "string",
+     "label": "audit logging failure events requiring real-time alerts"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Alerts provide organizations with urgent messages. Real-time alerts provide these messages at information technology speed (i.e., the time from event detection to alert occurs in seconds or less)."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-5.2_obj",
+     "label": "AU-05(02)",
+     "prose": {
+      "en": "an alert is provided within {param:au-05.02_odp.01} to {param:au-05.02_odp.02} when {param:au-05.02_odp.03} occur."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-05(02)-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "procedures addressing response to audit processing failures"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-05(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with audit and accountability responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "au-05.02_odp.01": {
+     "guidelines": [
+      {
+       "en": "real-time period requiring alerts when audit failure events (defined in AU-05(02)_ODP[03]) occur is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-5.2_prm_1"
+     ]
+    },
+    "au-05.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "personnel, roles, and/or locations to be alerted in real time when audit failure events (defined in AU-05(02)_ODP[03]) occur is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-5.2_prm_2"
+     ]
+    },
+    "au-05.02_odp.03": {
+     "guidelines": [
+      {
+       "en": "audit logging failure events requiring real-time alerts are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-5.2_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-5"
+  }
+ ]
+}

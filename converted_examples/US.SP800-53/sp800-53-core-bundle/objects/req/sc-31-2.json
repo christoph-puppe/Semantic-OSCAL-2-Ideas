@@ -1,0 +1,158 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-31.2",
+ "version": "5.2.0",
+ "label": "SC-31(2)",
+ "lifecycle": "active",
+ "title": "Maximum Bandwidth",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Reduce the maximum bandwidth for identified covert {param:sc-31.02_odp.01} channels to {param:sc-31.02_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "sc-31.02_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "storage"
+      },
+      {
+       "value": "timing"
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "sc-31.02_odp.02",
+     "type": "string",
+     "label": "values"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The complete elimination of covert channels, especially covert timing channels, is usually not possible without significant performance impacts."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-31.2_obj",
+     "label": "SC-31(02)",
+     "prose": {
+      "en": "the maximum bandwidth for identified covert {param:sc-31.02_odp.01} channels is reduced to {param:sc-31.02_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-31(02)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing covert channel analysis"
+      },
+      {
+       "en": "acquisition contracts for systems or services"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "covert channel analysis documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-31(02)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with covert channel analysis responsibilities"
+      },
+      {
+       "en": "system developers/integrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-31(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational process for conducting covert channel analysis"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing covert channel analysis"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the capability to reduce the bandwidth of covert channels"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sc-31.02_odp.01": {
+     "alt-identifiers": [
+      "sc-31.2_prm_1"
+     ]
+    },
+    "sc-31.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "values for the maximum bandwidth for identified covert channels are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sc-31.2_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-31"
+  }
+ ]
+}

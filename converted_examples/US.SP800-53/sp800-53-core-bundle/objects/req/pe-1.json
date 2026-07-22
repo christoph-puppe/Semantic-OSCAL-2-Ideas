@@ -1,0 +1,490 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-1",
+ "version": "5.2.0",
+ "label": "PE-1",
+ "lifecycle": "active",
+ "title": "Policy and Procedures",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop, document, and disseminate to {param:pe-1_prm_1}:"
+   },
+   "parameters": [
+    {
+     "name": "pe-1_prm_1",
+     "type": "string",
+     "label": "organization-defined personnel or roles"
+    },
+    {
+     "name": "pe-01_odp.01",
+     "type": "string",
+     "label": "personnel or roles"
+    },
+    {
+     "name": "pe-01_odp.02",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  },
+  {
+   "id": "smt.a.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "{param:pe-01_odp.03} physical and environmental protection policy that:"
+   },
+   "parameters": [
+    {
+     "name": "pe-01_odp.03",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "organization-level"
+      },
+      {
+       "value": "mission/business process-level"
+      },
+      {
+       "value": "system-level"
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  },
+  {
+   "id": "smt.a.1.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Addresses purpose, scope, roles, responsibilities, management commitment, coordination among organizational entities, and compliance; and"
+   }
+  },
+  {
+   "id": "smt.a.1.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Is consistent with applicable laws, executive orders, directives, regulations, policies, standards, and guidelines; and"
+   }
+  },
+  {
+   "id": "smt.a.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Procedures to facilitate the implementation of the physical and environmental protection policy and the associated physical and environmental protection controls;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Designate an {param:pe-01_odp.04} to manage the development, documentation, and dissemination of the physical and environmental protection policy and procedures; and"
+   },
+   "parameters": [
+    {
+     "name": "pe-01_odp.04",
+     "type": "string",
+     "label": "official"
+    }
+   ]
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review and update the current physical and environmental protection:"
+   }
+  },
+  {
+   "id": "smt.c.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Policy {param:pe-01_odp.05} and following {param:pe-01_odp.06} ; and"
+   },
+   "parameters": [
+    {
+     "name": "pe-01_odp.05",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "pe-01_odp.06",
+     "type": "string",
+     "label": "events"
+    }
+   ]
+  },
+  {
+   "id": "smt.c.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Procedures {param:pe-01_odp.07} and following {param:pe-01_odp.08}."
+   },
+   "parameters": [
+    {
+     "name": "pe-01_odp.07",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "pe-01_odp.08",
+     "type": "string",
+     "label": "events"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Physical and environmental protection policy and procedures address the controls in the PE family that are implemented within systems and organizations. The risk management strategy is an important factor in establishing such policies and procedures. Policies and procedures contribute to security and privacy assurance. Therefore, it is important that security and privacy programs collaborate on the development of physical and environmental protection policy and procedures. Security and privacy program policies and procedures at the organization level are preferable, in general, and may obviate the need for mission- or system-specific policies and procedures. The policy can be included as part of the general security and privacy policy or be represented by multiple policies that reflect the complex nature of organizations. Procedures can be established for security and privacy programs, for mission or business processes, and for systems, if needed. Procedures describe how the policies or controls are implemented and can be directed at the individual or role that is the object of the procedure. Procedures can be documented in system security and privacy plans or in one or more separate documents. Events that may precipitate an update to physical and environmental protection policy and procedures include assessment or audit findings, security incidents or breaches, or changes in applicable laws, executive orders, directives, regulations, policies, standards, and guidelines. Simply restating controls does not constitute an organizational policy or procedure."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-1_obj",
+     "label": "PE-01",
+     "children": [
+      {
+       "id": "pe-1_obj.a",
+       "label": "PE-01a.",
+       "children": [
+        {
+         "id": "pe-1_obj.a-1",
+         "label": "PE-01a.[01]",
+         "prose": {
+          "en": "a physical and environmental protection policy is developed and documented;"
+         }
+        },
+        {
+         "id": "pe-1_obj.a-2",
+         "label": "PE-01a.[02]",
+         "prose": {
+          "en": "the physical and environmental protection policy is disseminated to {param:pe-01_odp.01};"
+         }
+        },
+        {
+         "id": "pe-1_obj.a-3",
+         "label": "PE-01a.[03]",
+         "prose": {
+          "en": "physical and environmental protection procedures to facilitate the implementation of the physical and environmental protection policy and associated physical and environmental protection controls are developed and documented;"
+         }
+        },
+        {
+         "id": "pe-1_obj.a-4",
+         "label": "PE-01a.[04]",
+         "prose": {
+          "en": "the physical and environmental protection procedures are disseminated to {param:pe-01_odp.02};"
+         }
+        },
+        {
+         "id": "pe-1_obj.a.1",
+         "label": "PE-01a.01",
+         "children": [
+          {
+           "id": "pe-1_obj.a.1.a",
+           "label": "PE-01a.01(a)",
+           "children": [
+            {
+             "id": "pe-1_obj.a.1.a-1",
+             "label": "PE-01a.01(a)[01]",
+             "prose": {
+              "en": "the {param:pe-01_odp.03} physical and environmental protection policy addresses purpose;"
+             }
+            },
+            {
+             "id": "pe-1_obj.a.1.a-2",
+             "label": "PE-01a.01(a)[02]",
+             "prose": {
+              "en": "the {param:pe-01_odp.03} physical and environmental protection policy addresses scope;"
+             }
+            },
+            {
+             "id": "pe-1_obj.a.1.a-3",
+             "label": "PE-01a.01(a)[03]",
+             "prose": {
+              "en": "the {param:pe-01_odp.03} physical and environmental protection policy addresses roles;"
+             }
+            },
+            {
+             "id": "pe-1_obj.a.1.a-4",
+             "label": "PE-01a.01(a)[04]",
+             "prose": {
+              "en": "the {param:pe-01_odp.03} physical and environmental protection policy addresses responsibilities;"
+             }
+            },
+            {
+             "id": "pe-1_obj.a.1.a-5",
+             "label": "PE-01a.01(a)[05]",
+             "prose": {
+              "en": "the {param:pe-01_odp.03} physical and environmental protection policy addresses management commitment;"
+             }
+            },
+            {
+             "id": "pe-1_obj.a.1.a-6",
+             "label": "PE-01a.01(a)[06]",
+             "prose": {
+              "en": "the {param:pe-01_odp.03} physical and environmental protection policy addresses coordination among organizational entities;"
+             }
+            },
+            {
+             "id": "pe-1_obj.a.1.a-7",
+             "label": "PE-01a.01(a)[07]",
+             "prose": {
+              "en": "the {param:pe-01_odp.03} physical and environmental protection policy addresses compliance;"
+             }
+            }
+           ]
+          },
+          {
+           "id": "pe-1_obj.a.1.b",
+           "label": "PE-01a.01(b)",
+           "prose": {
+            "en": "the {param:pe-01_odp.03} physical and environmental protection policy is consistent with applicable laws, Executive Orders, directives, regulations, policies, standards, and guidelines;"
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "pe-1_obj.b",
+       "label": "PE-01b.",
+       "prose": {
+        "en": "the {param:pe-01_odp.04} is designated to manage the development, documentation, and dissemination of the physical and environmental protection policy and procedures;"
+       }
+      },
+      {
+       "id": "pe-1_obj.c",
+       "label": "PE-01c.",
+       "children": [
+        {
+         "id": "pe-1_obj.c.1",
+         "label": "PE-01c.01",
+         "children": [
+          {
+           "id": "pe-1_obj.c.1-1",
+           "label": "PE-01c.01[01]",
+           "prose": {
+            "en": "the current physical and environmental protection policy is reviewed and updated {param:pe-01_odp.05};"
+           }
+          },
+          {
+           "id": "pe-1_obj.c.1-2",
+           "label": "PE-01c.01[02]",
+           "prose": {
+            "en": "the current physical and environmental protection policy is reviewed and updated following {param:pe-01_odp.06};"
+           }
+          }
+         ]
+        },
+        {
+         "id": "pe-1_obj.c.2",
+         "label": "PE-01c.02",
+         "children": [
+          {
+           "id": "pe-1_obj.c.2-1",
+           "label": "PE-01c.02[01]",
+           "prose": {
+            "en": "the current physical and environmental protection procedures are reviewed and updated {param:pe-01_odp.07};"
+           }
+          },
+          {
+           "id": "pe-1_obj.c.2-2",
+           "label": "PE-01c.02[02]",
+           "prose": {
+            "en": "the current physical and environmental protection procedures are reviewed and updated following {param:pe-01_odp.08}."
+           }
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-01-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy and procedures"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "organizational risk management strategy"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-01-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with physical and environmental protection responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-1_prm_1": {
+     "aggregates": [
+      "pe-01_odp.01",
+      "pe-01_odp.02"
+     ]
+    },
+    "pe-01_odp.01": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to whom the physical and environmental protection policy is to be disseminated is/are defined;"
+      }
+     ]
+    },
+    "pe-01_odp.02": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to whom the physical and environmental protection procedures are to be disseminated is/are defined;"
+      }
+     ]
+    },
+    "pe-01_odp.03": {
+     "alt-identifiers": [
+      "pe-1_prm_2"
+     ]
+    },
+    "pe-01_odp.04": {
+     "guidelines": [
+      {
+       "en": "an official to manage the physical and environmental protection policy and procedures is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-1_prm_3"
+     ]
+    },
+    "pe-01_odp.05": {
+     "guidelines": [
+      {
+       "en": "the frequency at which the current physical and environmental protection policy is reviewed and updated is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-1_prm_4"
+     ]
+    },
+    "pe-01_odp.06": {
+     "guidelines": [
+      {
+       "en": "events that would require the current physical and environmental protection policy to be reviewed and updated are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-1_prm_5"
+     ]
+    },
+    "pe-01_odp.07": {
+     "guidelines": [
+      {
+       "en": "the frequency at which the current physical and environmental protection procedures are reviewed and updated is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-1_prm_6"
+     ]
+    },
+    "pe-01_odp.08": {
+     "guidelines": [
+      {
+       "en": "events that would require the physical and environmental protection procedures to be reviewed and updated are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-1_prm_7"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-12r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-30r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-39"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-100"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  }
+ ]
+}

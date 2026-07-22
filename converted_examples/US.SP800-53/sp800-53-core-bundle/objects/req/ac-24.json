@@ -1,0 +1,146 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-24",
+ "version": "5.2.0",
+ "label": "AC-24",
+ "lifecycle": "active",
+ "title": "Access Control Decisions",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "{param:ac-24_odp.01} to ensure {param:ac-24_odp.02} are applied to each access request prior to access enforcement."
+   },
+   "parameters": [
+    {
+     "name": "ac-24_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "establish procedures"
+      },
+      {
+       "value": "implement mechanisms"
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "ac-24_odp.02",
+     "type": "string",
+     "label": "access control decisions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Access control decisions (also known as authorization decisions) occur when authorization information is applied to specific accesses. In contrast, access enforcement occurs when systems enforce access control decisions. While it is common to have access control decisions and access enforcement implemented by the same entity, it is not required, and it is not always an optimal implementation choice. For some architectures and distributed systems, different entities may make access control decisions and enforce access."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-24_obj",
+     "label": "AC-24",
+     "prose": {
+      "en": "{param:ac-24_odp.01} are taken to ensure that {param:ac-24_odp.02} are applied to each access request prior to access enforcement."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-24-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing access control decisions"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-24-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for establishing procedures regarding access control decisions to the system"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-24-Test",
+     "objects": [
+      {
+       "en": "Mechanisms applying established access control decisions and procedures"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-24_odp.01": {
+     "alt-identifiers": [
+      "ac-24_prm_1"
+     ]
+    },
+    "ac-24_odp.02": {
+     "guidelines": [
+      {
+       "en": "access control decisions applied to each access request prior to access enforcement are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-24_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-162"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-178"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  }
+ ]
+}

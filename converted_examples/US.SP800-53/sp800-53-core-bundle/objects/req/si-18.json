@@ -1,0 +1,262 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-18",
+ "version": "5.2.0",
+ "label": "SI-18",
+ "lifecycle": "active",
+ "title": "Personally Identifiable Information Quality Operations",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Check the accuracy, relevance, timeliness, and completeness of personally identifiable information across the information life cycle {param:si-18_prm_1} ; and"
+   },
+   "parameters": [
+    {
+     "name": "si-18_prm_1",
+     "type": "string",
+     "label": "organization-defined frequency"
+    },
+    {
+     "name": "si-18_odp.01",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "si-18_odp.02",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "si-18_odp.03",
+     "type": "string",
+     "label": "frequency"
+    },
+    {
+     "name": "si-18_odp.04",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Correct or delete inaccurate or outdated personally identifiable information."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Personally identifiable information quality operations include the steps that organizations take to confirm the accuracy and relevance of personally identifiable information throughout the information life cycle. The information life cycle includes the creation, collection, use, processing, storage, maintenance, dissemination, disclosure, and disposal of personally identifiable information. Personally identifiable information quality operations include editing and validating addresses as they are collected or entered into systems using automated address verification look-up application programming interfaces. Checking personally identifiable information quality includes the tracking of updates or changes to data over time, which enables organizations to know how and what personally identifiable information was changed should erroneous information be identified. The measures taken to protect personally identifiable information quality are based on the nature and context of the personally identifiable information, how it is to be used, how it was obtained, and the potential de-identification methods employed. The measures taken to validate the accuracy of personally identifiable information used to make determinations about the rights, benefits, or privileges of individuals covered under federal programs may be more comprehensive than the measures used to validate personally identifiable information used for less sensitive purposes."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-18_obj",
+     "label": "SI-18",
+     "children": [
+      {
+       "id": "si-18_obj.a",
+       "label": "SI-18a.",
+       "children": [
+        {
+         "id": "si-18_obj.a-1",
+         "label": "SI-18a.[01]",
+         "prose": {
+          "en": "the accuracy of personally identifiable information across the information life cycle is checked {param:si-18_odp.01};"
+         }
+        },
+        {
+         "id": "si-18_obj.a-2",
+         "label": "SI-18a.[02]",
+         "prose": {
+          "en": "the relevance of personally identifiable information across the information life cycle is checked {param:si-18_odp.02};"
+         }
+        },
+        {
+         "id": "si-18_obj.a-3",
+         "label": "SI-18a.[03]",
+         "prose": {
+          "en": "the timeliness of personally identifiable information across the information life cycle is checked {param:si-18_odp.03};"
+         }
+        },
+        {
+         "id": "si-18_obj.a-4",
+         "label": "SI-18a.[04]",
+         "prose": {
+          "en": "the completeness of personally identifiable information across the information life cycle is checked {param:si-18_odp.04};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "si-18_obj.b",
+       "label": "SI-18b.",
+       "prose": {
+        "en": "inaccurate or outdated personally identifiable information is corrected or deleted."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-18-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "documentation addressing personally identifiable information quality operations"
+      },
+      {
+       "en": "quality reports"
+      },
+      {
+       "en": "maintenance logs"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "audit findings"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-18-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for performing personally identifiable information quality inspections"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-18-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for personally identifiable information quality inspection"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing personally identifiable information quality operations"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-18_prm_1": {
+     "aggregates": [
+      "si-18_odp.01",
+      "si-18_odp.02",
+      "si-18_odp.03",
+      "si-18_odp.04"
+     ]
+    },
+    "si-18_odp.01": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to check the accuracy of personally identifiable information across the information life cycle is defined;"
+      }
+     ]
+    },
+    "si-18_odp.02": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to check the relevance of personally identifiable information across the information life cycle is defined;"
+      }
+     ]
+    },
+    "si-18_odp.03": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to check the timeliness of personally identifiable information across the information life cycle is defined;"
+      }
+     ]
+    },
+    "si-18_odp.04": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to check the completeness of personally identifiable information across the information life cycle is defined;"
+      }
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/wp-content/uploads/2019/04/M-19-15.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://csrc.nist.gov/publications/detail/sp/800-188/draft"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.8112"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-22"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-24"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

@@ -1,0 +1,118 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MP-7.2",
+ "version": "5.2.0",
+ "label": "MP-7(2)",
+ "lifecycle": "active",
+ "title": "Prohibit Use of Sanitization-resistant Media",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Prohibit the use of sanitization-resistant media in organizational systems."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Sanitization resistance refers to how resistant media are to non-destructive sanitization techniques with respect to the capability to purge information from media. Certain types of media do not support sanitization commands, or if supported, the interfaces are not supported in a standardized way across these devices. Sanitization-resistant media includes compact flash, embedded flash on boards and devices, solid state drives, and USB removable media."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "mp-7.2_obj",
+     "label": "MP-07(02)",
+     "children": [
+      {
+       "id": "mp-7.2_obj-1",
+       "label": "MP-07(02)[01]",
+       "prose": {
+        "en": "sanitization-resistant media is identified;"
+       }
+      },
+      {
+       "id": "mp-7.2_obj-2",
+       "label": "MP-07(02)[02]",
+       "prose": {
+        "en": "the use of sanitization-resistant media in organizational systems is prohibited."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MP-07(02)-Examine",
+     "objects": [
+      {
+       "en": "System media protection policy"
+      },
+      {
+       "en": "system use policy"
+      },
+      {
+       "en": "procedures addressing media usage restrictions"
+      },
+      {
+       "en": "rules of behavior"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MP-07(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system media use responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MP-07(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for media use"
+      },
+      {
+       "en": "mechanisms prohibiting use of media on systems or system components"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-6"
+  }
+ ]
+}

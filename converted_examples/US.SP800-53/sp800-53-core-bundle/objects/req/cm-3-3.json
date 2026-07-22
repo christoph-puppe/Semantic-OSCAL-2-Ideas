@@ -1,0 +1,153 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-3.3",
+ "version": "5.2.0",
+ "label": "CM-3(3)",
+ "lifecycle": "active",
+ "title": "Automated Change Implementation",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Implement changes to the current system baseline and deploy the updated baseline across the installed base using {param:cm-03.03_odp}."
+   },
+   "parameters": [
+    {
+     "name": "cm-03.03_odp",
+     "type": "string",
+     "label": "automated mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Automated tools can improve the accuracy, consistency, and availability of configuration baseline information. Automation can also provide data aggregation and data correlation capabilities, alerting mechanisms, and dashboards to support risk-based decision-making within the organization."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-3.3_obj",
+     "label": "CM-03(03)",
+     "children": [
+      {
+       "id": "cm-3.3_obj-1",
+       "label": "CM-03(03)[01]",
+       "prose": {
+        "en": "changes to the current system baseline are implemented using {param:cm-03.03_odp};"
+       }
+      },
+      {
+       "id": "cm-3.3_obj-2",
+       "label": "CM-03(03)[02]",
+       "prose": {
+        "en": "the updated baseline is deployed across the installed base using {param:cm-03.03_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-03(03)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "procedures addressing system configuration change control"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system architecture and configuration documentation"
+      },
+      {
+       "en": "automated configuration control mechanisms"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-03(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with configuration change control responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "members of change control board or similar"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-03(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for configuration change control"
+      },
+      {
+       "en": "automated mechanisms implementing changes to current system baseline"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-03.03_odp": {
+     "guidelines": [
+      {
+       "en": "mechanisms used to automate the implementation of changes and deployment of the updated baseline across the installed base are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-3.3_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-3"
+  }
+ ]
+}

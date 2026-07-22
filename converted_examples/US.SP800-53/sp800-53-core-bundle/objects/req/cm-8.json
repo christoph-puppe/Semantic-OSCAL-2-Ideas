@@ -1,0 +1,374 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-8",
+ "version": "5.2.0",
+ "label": "CM-8",
+ "lifecycle": "active",
+ "title": "System Component Inventory",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Develop and document an inventory of system components that:"
+   }
+  },
+  {
+   "id": "smt.a.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Accurately reflects the system;"
+   }
+  },
+  {
+   "id": "smt.a.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Includes all components within the system;"
+   }
+  },
+  {
+   "id": "smt.a.3",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Does not include duplicate accounting of components or components assigned to any other system;"
+   }
+  },
+  {
+   "id": "smt.a.4",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Is at the level of granularity deemed necessary for tracking and reporting; and"
+   }
+  },
+  {
+   "id": "smt.a.5",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Includes the following information to achieve system component accountability: {param:cm-08_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "cm-08_odp.01",
+     "type": "string",
+     "label": "information"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review and update the system component inventory {param:cm-08_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "cm-08_odp.02",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "System components are discrete, identifiable information technology assets that include hardware, software, and firmware. Organizations may choose to implement centralized system component inventories that include components from all organizational systems. In such situations, organizations ensure that the inventories include system-specific information required for component accountability. The information necessary for effective accountability of system components includes the system name, software owners, software version numbers, hardware inventory specifications, software license information, and for networked components, the machine names and network addresses across all implemented protocols (e.g., IPv4, IPv6). Inventory specifications include date of receipt, cost, model, serial number, manufacturer, supplier information, component type, and physical location.\n\nPreventing duplicate accounting of system components addresses the lack of accountability that occurs when component ownership and system association is not known, especially in large or complex connected systems. Effective prevention of duplicate accounting of system components necessitates use of a unique identifier for each component. For software inventory, centrally managed software that is accessed via other systems is addressed as a component of the system on which it is installed and managed. Software installed on multiple organizational systems and managed at the system level is addressed for each individual system and may appear more than once in a centralized component inventory, necessitating a system association for each software instance in the centralized inventory to avoid duplicate accounting of components. Scanning systems implementing multiple network protocols (e.g., IPv4 and IPv6) can result in duplicate components being identified in different address spaces. The implementation of CM-8(7) can help to eliminate duplicate accounting of components."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-8_obj",
+     "label": "CM-08",
+     "children": [
+      {
+       "id": "cm-8_obj.a",
+       "label": "CM-08a.",
+       "children": [
+        {
+         "id": "cm-8_obj.a.1",
+         "label": "CM-08a.01",
+         "prose": {
+          "en": "an inventory of system components that accurately reflects the system is developed and documented;"
+         }
+        },
+        {
+         "id": "cm-8_obj.a.2",
+         "label": "CM-08a.02",
+         "prose": {
+          "en": "an inventory of system components that includes all components within the system is developed and documented;"
+         }
+        },
+        {
+         "id": "cm-8_obj.a.3",
+         "label": "CM-08a.03",
+         "prose": {
+          "en": "an inventory of system components that does not include duplicate accounting of components or components assigned to any other system is developed and documented;"
+         }
+        },
+        {
+         "id": "cm-8_obj.a.4",
+         "label": "CM-08a.04",
+         "prose": {
+          "en": "an inventory of system components that is at the level of granularity deemed necessary for tracking and reporting is developed and documented;"
+         }
+        },
+        {
+         "id": "cm-8_obj.a.5",
+         "label": "CM-08a.05",
+         "prose": {
+          "en": "an inventory of system components that includes {param:cm-08_odp.01} is developed and documented;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "cm-8_obj.b",
+       "label": "CM-08b.",
+       "prose": {
+        "en": "the system component inventory is reviewed and updated {param:cm-08_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-08-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing system component inventory"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "inventory reviews and update records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-08-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with component inventory management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-08-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing the system component inventory"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing system component inventory"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-08_odp.01": {
+     "guidelines": [
+      {
+       "en": "information deemed necessary to achieve effective system component accountability is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-8_prm_1"
+     ],
+     "alt-label": "information deemed necessary to achieve effective system component accountability"
+    },
+    "cm-08_odp.02": {
+     "guidelines": [
+      {
+       "en": "frequency at which to review and update the system component inventory is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-8_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-57pt1r5"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-57pt2r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-57pt3r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-128"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.8011-2"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.8011-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-20"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-4"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-8.5",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5.7",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/CM-8.5",
+    "mode": "merged-into",
+    "label": "CM-08(05)",
+    "title": "No Duplicate Accounting of Components"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/RA-5.7",
+    "mode": "merged-into",
+    "label": "RA-05(07)",
+    "title": "Automated Detection and Notification of Unauthorized Components"
+   }
+  ]
+ }
+}

@@ -1,0 +1,188 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-9.3",
+ "version": "5.2.0",
+ "label": "SA-9(3)",
+ "lifecycle": "active",
+ "title": "Establish and Maintain Trust Relationship with Providers",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish, document, and maintain trust relationships with external service providers based on the following requirements, properties, factors, or conditions: {param:sa-9.3_prm_1}."
+   },
+   "parameters": [
+    {
+     "name": "sa-9.3_prm_1",
+     "type": "string",
+     "label": "organization-defined security and privacy requirements, properties, factors, or conditions defining acceptable trust relationships"
+    },
+    {
+     "name": "sa-09.03_odp.01",
+     "type": "string",
+     "label": "security requirements, properties, factors, or conditions"
+    },
+    {
+     "name": "sa-09.03_odp.02",
+     "type": "string",
+     "label": "privacy requirements, properties, factors, or conditions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Trust relationships between organizations and external service providers reflect the degree of confidence that the risk from using external services is at an acceptable level. Trust relationships can help organizations gain increased levels of confidence that service providers are providing adequate protection for the services rendered and can also be useful when conducting incident response or when planning for upgrades or obsolescence. Trust relationships can be complicated due to the potentially large number of entities participating in the consumer-provider interactions, subordinate relationships and levels of trust, and types of interactions between the parties. In some cases, the degree of trust is based on the level of control that organizations can exert on external service providers regarding the controls necessary for the protection of the service, information, or individual privacy and the evidence brought forth as to the effectiveness of the implemented controls. The level of control is established by the terms and conditions of the contracts or service-level agreements."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-9.3_obj",
+     "label": "SA-09(03)",
+     "children": [
+      {
+       "id": "sa-9.3_obj-1",
+       "label": "SA-09(03)[01]",
+       "prose": {
+        "en": "trust relationships with external service provides based on {param:sa-09.03_odp.01} are established and documented;"
+       }
+      },
+      {
+       "id": "sa-9.3_obj-2",
+       "label": "SA-09(03)[02]",
+       "prose": {
+        "en": "trust relationships with external service provides based on {param:sa-09.03_odp.01} are maintained;"
+       }
+      },
+      {
+       "id": "sa-9.3_obj-3",
+       "label": "SA-09(03)[03]",
+       "prose": {
+        "en": "trust relationships with external service provides based on {param:sa-09.03_odp.02} are established and documented;"
+       }
+      },
+      {
+       "id": "sa-9.3_obj-4",
+       "label": "SA-09(03)[04]",
+       "prose": {
+        "en": "trust relationships with external service provides based on {param:sa-09.03_odp.02} are maintained."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-09(03)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "memorandum of understanding"
+      },
+      {
+       "en": "memorandum of agreements"
+      },
+      {
+       "en": "list of organizational security and privacy requirements, properties, factors, or conditions for external provider services"
+      },
+      {
+       "en": "documentation of trust relationships with external service providers"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-09(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "external providers of system services"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-9.3_prm_1": {
+     "aggregates": [
+      "sa-09.03_odp.01",
+      "sa-09.03_odp.02"
+     ]
+    },
+    "sa-09.03_odp.01": {
+     "guidelines": [
+      {
+       "en": "security requirements, properties, factors, or conditions defining acceptable trust relationships on which a trust relationship is maintained are defined;"
+      }
+     ]
+    },
+    "sa-09.03_odp.02": {
+     "guidelines": [
+      {
+       "en": "privacy requirements, properties, factors, or conditions defining acceptable trust relationships on which a trust relationship is maintained are defined;"
+      }
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-2"
+  }
+ ]
+}

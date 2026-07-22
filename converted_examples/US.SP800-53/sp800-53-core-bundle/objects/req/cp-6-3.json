@@ -1,0 +1,112 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-6.3",
+ "version": "5.2.0",
+ "label": "CP-6(3)",
+ "lifecycle": "active",
+ "title": "Accessibility",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identify potential accessibility problems to the alternate storage site in the event of an area-wide disruption or disaster and outline explicit mitigation actions."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Area-wide disruptions refer to those types of disruptions that are broad in geographic scope with such determinations made by organizations based on organizational assessments of risk. Explicit mitigation actions include duplicating backup information at other alternate storage sites if access problems occur at originally designated alternate sites or planning for physical access to retrieve backup information if electronic accessibility to the alternate site is disrupted."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-6.3_obj",
+     "label": "CP-06(03)",
+     "children": [
+      {
+       "id": "cp-6.3_obj-1",
+       "label": "CP-06(03)[01]",
+       "prose": {
+        "en": "potential accessibility problems to the alternate storage site in the event of an area-wide disruption or disaster are identified;"
+       }
+      },
+      {
+       "id": "cp-6.3_obj-2",
+       "label": "CP-06(03)[02]",
+       "prose": {
+        "en": "explicit mitigation actions to address identified accessibility problems are outlined."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-06(03)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing alternate storage sites"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "alternate storage site"
+      },
+      {
+       "en": "list of potential accessibility problems to alternate storage site"
+      },
+      {
+       "en": "mitigation actions for accessibility problems to alternate storage site"
+      },
+      {
+       "en": "organizational risk assessments"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-06(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency plan alternate storage site responsibilities"
+      },
+      {
+       "en": "organizational personnel with system recovery responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  }
+ ]
+}

@@ -1,0 +1,123 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-19.7",
+ "version": "5.2.0",
+ "label": "SI-19(7)",
+ "lifecycle": "active",
+ "title": "Validated Algorithms and Software",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Perform de-identification using validated algorithms and software that is validated to implement the algorithms."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Algorithms that appear to remove personally identifiable information from a dataset may in fact leave information that is personally identifiable or data that is re-identifiable. Software that is claimed to implement a validated algorithm may contain bugs or implement a different algorithm. Software may de-identify one type of data, such as integers, but not de-identify another type of data, such as floating point numbers. For these reasons, de-identification is performed using algorithms and software that are validated."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-19.7_obj",
+     "label": "SI-19(07)",
+     "children": [
+      {
+       "id": "si-19.7_obj-1",
+       "label": "SI-19(07)[01]",
+       "prose": {
+        "en": "de-identification is performed using validated algorithms;"
+       }
+      },
+      {
+       "id": "si-19.7_obj-2",
+       "label": "SI-19(07)[02]",
+       "prose": {
+        "en": "de-identification is performed using software that is validated to implement the algorithms."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-19(07)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "de-identification procedures"
+      },
+      {
+       "en": "system configuration"
+      },
+      {
+       "en": "de-identified datasets"
+      },
+      {
+       "en": "algorithm and software validation tools"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-19(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for de-identifying the dataset"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-19(07)-Test",
+     "objects": [
+      {
+       "en": "Validated algorithms and software"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-19"
+  }
+ ]
+}

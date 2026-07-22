@@ -1,0 +1,190 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-3",
+ "version": "5.2.0",
+ "label": "IA-3",
+ "lifecycle": "active",
+ "title": "Device Identification and Authentication",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Uniquely identify and authenticate {param:ia-03_odp.01} before establishing a {param:ia-03_odp.02} connection."
+   },
+   "parameters": [
+    {
+     "name": "ia-03_odp.01",
+     "type": "string",
+     "label": "devices and/or types of devices"
+    },
+    {
+     "name": "ia-03_odp.02",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "local"
+      },
+      {
+       "value": "remote"
+      },
+      {
+       "value": "network"
+      }
+     ],
+     "cardinality": "many"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Devices that require unique device-to-device identification and authentication are defined by type, device, or a combination of type and device. Organization-defined device types include devices that are not owned by the organization. Systems use shared known information (e.g., Media Access Control [MAC], Transmission Control Protocol/Internet Protocol [TCP/IP] addresses) for device identification or organizational authentication solutions (e.g., Institute of Electrical and Electronics Engineers (IEEE) 802.1x and Extensible Authentication Protocol [EAP], RADIUS server with EAP-Transport Layer Security [TLS] authentication, Kerberos) to identify and authenticate devices on local and wide area networks. Organizations determine the required strength of authentication mechanisms based on the security categories of systems and mission or business requirements. Because of the challenges of implementing device authentication on a large scale, organizations can restrict the application of the control to a limited number/type of devices based on mission or business needs."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-3_obj",
+     "label": "IA-03",
+     "prose": {
+      "en": "{param:ia-03_odp.01} are uniquely identified and authenticated before establishing a {param:ia-03_odp.02} connection."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-03-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "procedures addressing device identification and authentication"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "list of devices requiring unique identification and authentication"
+      },
+      {
+       "en": "device connection reports"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-03-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with operational responsibilities for device identification and authentication"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-03-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing device identification and authentication capabilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ia-03_odp.01": {
+     "guidelines": [
+      {
+       "en": "devices and/or types of devices to be uniquely identified and authenticated before establishing a connection are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ia-3_prm_1"
+     ]
+    },
+    "ia-03_odp.02": {
+     "alt-identifiers": [
+      "ia-3_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-18"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-19"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

@@ -1,0 +1,262 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-11.5",
+ "version": "5.2.0",
+ "label": "SA-11(5)",
+ "lifecycle": "active",
+ "title": "Penetration Testing",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to perform penetration testing:"
+   },
+   "parameters": [
+    {
+     "name": "sa-11.05_odp.01",
+     "type": "string",
+     "label": "breadth"
+    },
+    {
+     "name": "sa-11.05_odp.02",
+     "type": "string",
+     "label": "depth"
+    }
+   ]
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "At the following level of rigor: {param:sa-11.5_prm_1} ; and"
+   },
+   "parameters": [
+    {
+     "name": "sa-11.5_prm_1",
+     "type": "string",
+     "label": "organization-defined breadth and depth of testing"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Under the following constraints: {param:sa-11.05_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "sa-11.05_odp.03",
+     "type": "string",
+     "label": "constraints"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Penetration testing is an assessment methodology in which assessors, using all available information technology product or system documentation and working under specific constraints, attempt to circumvent the implemented security and privacy features of information technology products and systems. Useful information for assessors who conduct penetration testing includes product and system design specifications, source code, and administrator and operator manuals. Penetration testing can include white-box, gray-box, or black-box testing with analyses performed by skilled professionals who simulate adversary actions. The objective of penetration testing is to discover vulnerabilities in systems, system components, and services that result from implementation errors, configuration faults, or other operational weaknesses or deficiencies. Penetration tests can be performed in conjunction with automated and manual code reviews to provide a greater level of analysis than would ordinarily be possible. When user session information and other personally identifiable information is captured or recorded during penetration testing, such information is handled appropriately to protect privacy."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-11.5_obj",
+     "label": "SA-11(05)",
+     "children": [
+      {
+       "id": "sa-11.5_obj.a",
+       "label": "SA-11(05)(a)",
+       "children": [
+        {
+         "id": "sa-11.5_obj.a-1",
+         "label": "SA-11(05)(a)[01]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to perform penetration testing at the following level of rigor: {param:sa-11.05_odp.01};"
+         }
+        },
+        {
+         "id": "sa-11.5_obj.a-2",
+         "label": "SA-11(05)(a)[02]",
+         "prose": {
+          "en": "the developer of the system, system component, or system service is required to perform penetration testing at the following level of rigor: {param:sa-11.05_odp.02};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-11.5_obj.b",
+       "label": "SA-11(05)(b)",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to perform penetration testing under {param:sa-11.05_odp.03}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-11(05)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "procedures addressing system developer security testing"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "system developer penetration testing and evaluation plans"
+      },
+      {
+       "en": "system developer penetration testing and evaluation results"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-11(05)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with developer security testing responsibilities"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "independent verification agent"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-11(05)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for monitoring developer security and privacy assessments"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the monitoring of developer security and privacy assessments"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-11.5_prm_1": {
+     "aggregates": [
+      "sa-11.05_odp.01",
+      "sa-11.05_odp.02"
+     ]
+    },
+    "sa-11.05_odp.01": {
+     "guidelines": [
+      {
+       "en": "the breadth of penetration testing is defined;"
+      }
+     ]
+    },
+    "sa-11.05_odp.02": {
+     "guidelines": [
+      {
+       "en": "the depth of penetration testing is defined;"
+      }
+     ]
+    },
+    "sa-11.05_odp.03": {
+     "guidelines": [
+      {
+       "en": "constraints of penetration testing are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-11.5_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-14"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-25"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-6"
+  }
+ ]
+}

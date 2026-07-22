@@ -1,0 +1,171 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-8.2",
+ "version": "5.2.0",
+ "label": "IA-8(2)",
+ "lifecycle": "active",
+ "title": "Acceptance of External Authenticators",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Accept only external authenticators that are NIST-compliant; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Document and maintain a list of accepted external authenticators."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Acceptance of only NIST-compliant external authenticators applies to organizational systems that are accessible to the public (e.g., public-facing websites). External authenticators are issued by nonfederal government entities and are compliant with SP 800-63B . Approved external authenticators meet or exceed the minimum Federal Government-wide technical, security, privacy, and organizational maturity requirements. Meeting or exceeding Federal requirements allows Federal Government relying parties to trust external authenticators in connection with an authentication transaction at a specified authenticator assurance level."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-8.2_obj",
+     "label": "IA-08(02)",
+     "children": [
+      {
+       "id": "ia-8.2_obj.a",
+       "label": "IA-08(02)(a)",
+       "prose": {
+        "en": "only external authenticators that are NIST-compliant are accepted;"
+       }
+      },
+      {
+       "id": "ia-8.2_obj.b",
+       "label": "IA-08(02)(b)",
+       "children": [
+        {
+         "id": "ia-8.2_obj.b-1",
+         "label": "IA-08(02)(b)[01]",
+         "prose": {
+          "en": "a list of accepted external authenticators is documented;"
+         }
+        },
+        {
+         "id": "ia-8.2_obj.b-2",
+         "label": "IA-08(02)(b)[02]",
+         "prose": {
+          "en": "a list of accepted external authenticators is maintained."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-08(02)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "procedures addressing user identification and authentication"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "list of third-party credentialing products, components, or services procured and implemented by organization"
+      },
+      {
+       "en": "third-party credential verification records"
+      },
+      {
+       "en": "evidence of third-party credentials"
+      },
+      {
+       "en": "third-party credential authorizations"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-08(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system operations responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "organizational personnel with account management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-08(02)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing identification and authentication capabilities"
+      },
+      {
+       "en": "mechanisms that accept external credentials"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-8"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-8.3",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/IA-8.3",
+    "mode": "merged-into",
+    "label": "IA-08(03)",
+    "title": "Use of FICAM-approved Products"
+   }
+  ]
+ }
+}

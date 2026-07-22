@@ -1,0 +1,165 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-7.2",
+ "version": "5.2.0",
+ "label": "AC-7(2)",
+ "lifecycle": "active",
+ "title": "Purge or Wipe Mobile Device",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Purge or wipe information from {param:ac-07.02_odp.01} based on {param:ac-07.02_odp.02} after {param:ac-07.02_odp.03} consecutive, unsuccessful device logon attempts."
+   },
+   "parameters": [
+    {
+     "name": "ac-07.02_odp.01",
+     "type": "string",
+     "label": "mobile devices"
+    },
+    {
+     "name": "ac-07.02_odp.02",
+     "type": "string",
+     "label": "purging or wiping requirements and techniques"
+    },
+    {
+     "name": "ac-07.02_odp.03",
+     "type": "string",
+     "label": "number"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "A mobile device is a computing device that has a small form factor such that it can be carried by a single individual; is designed to operate without a physical connection; possesses local, non-removable or removable data storage; and includes a self-contained power source. Purging or wiping the device applies only to mobile devices for which the organization-defined number of unsuccessful logons occurs. The logon is to the mobile device, not to any one account on the device. Successful logons to accounts on mobile devices reset the unsuccessful logon count to zero. Purging or wiping may be unnecessary if the information on the device is protected with sufficiently strong encryption mechanisms."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-7.2_obj",
+     "label": "AC-07(02)",
+     "prose": {
+      "en": "information is purged or wiped from {param:ac-07.02_odp.01} based on {param:ac-07.02_odp.02} after {param:ac-07.02_odp.03} consecutive, unsuccessful device logon attempts."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-07(02)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing unsuccessful logon attempts on mobile devices"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of mobile devices to be purged/wiped after organization-defined consecutive, unsuccessful device logon attempts"
+      },
+      {
+       "en": "list of purging/wiping requirements or techniques for mobile devices"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-07(02)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-07(02)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing access control policy for unsuccessful device logon attempts"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-07.02_odp.01": {
+     "guidelines": [
+      {
+       "en": "mobile devices to be purged or wiped of information are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-7.2_prm_1"
+     ]
+    },
+    "ac-07.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "purging and wiping requirements and techniques to be used when mobile devices are purged or wiped of information are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-7.2_prm_2"
+     ],
+     "alt-label": "purging or wiping requirements and techniques"
+    },
+    "ac-07.02_odp.03": {
+     "guidelines": [
+      {
+       "en": "the number of consecutive, unsuccessful logon attempts before the information is purged or wiped from mobile devices is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-7.2_prm_3"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-19"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MP-6"
+  }
+ ]
+}

@@ -1,0 +1,178 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-6.2",
+ "version": "5.2.0",
+ "label": "PE-6(2)",
+ "lifecycle": "active",
+ "title": "Automated Intrusion Recognition and Responses",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Recognize {param:pe-06.02_odp.01} and initiate {param:pe-06.02_odp.02} using {param:pe-06.02_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "pe-06.02_odp.01",
+     "type": "string",
+     "label": "classes or types of intrusions"
+    },
+    {
+     "name": "pe-06.02_odp.02",
+     "type": "string",
+     "label": "response actions"
+    },
+    {
+     "name": "pe-06.02_odp.03",
+     "type": "string",
+     "label": "automated mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Response actions can include notifying selected organizational personnel or law enforcement personnel. Automated mechanisms implemented to initiate response actions include system alert notifications, email and text messages, and activating door locking mechanisms. Physical access monitoring can be coordinated with intrusion detection systems and system monitoring capabilities to provide integrated threat coverage for the organization."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-6.2_obj",
+     "label": "PE-06(02)",
+     "children": [
+      {
+       "id": "pe-6.2_obj-1",
+       "label": "PE-06(02)[01]",
+       "prose": {
+        "en": "{param:pe-06.02_odp.01} are recognized;"
+       }
+      },
+      {
+       "id": "pe-6.2_obj-2",
+       "label": "PE-06(02)[02]",
+       "prose": {
+        "en": "{param:pe-06.02_odp.02} are initiated using {param:pe-06.02_odp.03}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-06(02)-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing physical access monitoring"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "list of response actions to be initiated when specific classes/types of intrusions are recognized"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-06(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with physical access monitoring responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-06(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for monitoring physical access"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing physical access monitoring"
+      },
+      {
+       "en": "automated mechanisms supporting and/or implementing recognition of classes/types of intrusions and initiation of a response"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "pe-06.02_odp.01": {
+     "guidelines": [
+      {
+       "en": "classes or types of intrusions to be recognized by automated mechanisms are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-6.2_prm_1"
+     ]
+    },
+    "pe-06.02_odp.02": {
+     "guidelines": [
+      {
+       "en": "response actions to be initiated by automated mechanisms when organization-defined classes or types of intrusions are recognized are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-6.2_prm_2"
+     ]
+    },
+    "pe-06.02_odp.03": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to recognize classes or types of intrusions and initiate response actions (defined in PE-06(02)_ODP) are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "pe-6.2_prm_3"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

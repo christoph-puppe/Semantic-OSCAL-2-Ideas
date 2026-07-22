@@ -1,0 +1,148 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-4.3",
+ "version": "5.2.0",
+ "label": "IR-4(3)",
+ "lifecycle": "active",
+ "title": "Continuity of Operations",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Identify {param:ir-04.03_odp.01} and take the following actions in response to those incidents to ensure continuation of organizational mission and business functions: {param:ir-04.03_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ir-04.03_odp.01",
+     "type": "string",
+     "label": "classes of incidents"
+    },
+    {
+     "name": "ir-04.03_odp.02",
+     "type": "string",
+     "label": "actions"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Classes of incidents include malfunctions due to design or implementation errors and omissions, targeted malicious attacks, and untargeted malicious attacks. Incident response actions include orderly system degradation, system shutdown, fall back to manual mode or activation of alternative technology whereby the system operates differently, employing deceptive measures, alternate information flows, or operating in a mode that is reserved for when systems are under attack. Organizations consider whether continuity of operations requirements during an incident conflict with the capability to automatically disable the system as specified as part of IR-4(5)."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-4.3_obj",
+     "label": "IR-04(03)",
+     "children": [
+      {
+       "id": "ir-4.3_obj-1",
+       "label": "IR-04(03)[01]",
+       "prose": {
+        "en": "{param:ir-04.03_odp.01} are identified;"
+       }
+      },
+      {
+       "id": "ir-4.3_obj-2",
+       "label": "IR-04(03)[02]",
+       "prose": {
+        "en": "{param:ir-04.03_odp.02} are taken in response to those incidents (defined in IR-04(03)_ODP[01]) to ensure the continuation of organizational mission and business functions."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-04(03)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing incident handling"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "list of classes of incidents"
+      },
+      {
+       "en": "list of appropriate incident response actions"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-04(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident handling responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IR-04(03)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms that support and/or implement continuity of operations"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ir-04.03_odp.01": {
+     "guidelines": [
+      {
+       "en": "classes of incidents requiring an organization-defined action (defined in IR-04(03)_ODP[02]) to be taken are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-4.3_prm_1"
+     ]
+    },
+    "ir-04.03_odp.02": {
+     "guidelines": [
+      {
+       "en": "actions to be taken in response to organization-defined classes of incidents are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ir-4.3_prm_2"
+     ],
+     "alt-label": "actions to take in response to classes of incidents"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  }
+ ]
+}

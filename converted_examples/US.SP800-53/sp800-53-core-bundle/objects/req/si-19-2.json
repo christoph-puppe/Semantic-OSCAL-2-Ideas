@@ -1,0 +1,111 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-19.2",
+ "version": "5.2.0",
+ "label": "SI-19(2)",
+ "lifecycle": "active",
+ "title": "Archiving",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization",
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Prohibit archiving of personally identifiable information elements if those elements in a dataset will not be needed after the dataset is archived."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Datasets can be archived for many reasons. The envisioned purposes for the archived dataset are specified, and if personally identifiable information elements are not required, the elements are not archived. For example, social security numbers may have been collected for record linkage, but the archived dataset may include the required elements from the linked records. In this case, it is not necessary to archive the social security numbers."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-19.2_obj",
+     "label": "SI-19(02)",
+     "prose": {
+      "en": "the archiving of personally identifiable information elements is prohibited if those elements in a dataset will not be needed after the dataset is archived."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-19(02)-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "personally identifiable information processing policy"
+      },
+      {
+       "en": "de-identification procedures"
+      },
+      {
+       "en": "system configuration documentation"
+      },
+      {
+       "en": "data archiving mechanisms"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy impact assessment"
+      },
+      {
+       "en": "privacy risk assessment documentation"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-19(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for de-identifying the dataset"
+      },
+      {
+       "en": "organizational personnel with dataset archival responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-19(02)-Test",
+     "objects": [
+      {
+       "en": "Automated mechanisms prohibiting the archival of personally identifiable information elements"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-19"
+  }
+ ]
+}

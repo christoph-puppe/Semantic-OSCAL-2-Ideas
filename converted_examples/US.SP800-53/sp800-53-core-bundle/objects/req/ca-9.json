@@ -1,0 +1,289 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CA-9",
+ "version": "5.2.0",
+ "label": "CA-9",
+ "lifecycle": "active",
+ "title": "Internal System Connections",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Authorize internal connections of {param:ca-09_odp.01} to the system;"
+   },
+   "parameters": [
+    {
+     "name": "ca-09_odp.01",
+     "type": "string",
+     "label": "system components"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Document, for each internal connection, the interface characteristics, security and privacy requirements, and the nature of the information communicated;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Terminate internal system connections after {param:ca-09_odp.02} ; and"
+   },
+   "parameters": [
+    {
+     "name": "ca-09_odp.02",
+     "type": "string",
+     "label": "conditions"
+    }
+   ]
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review {param:ca-09_odp.03} the continued need for each internal connection."
+   },
+   "parameters": [
+    {
+     "name": "ca-09_odp.03",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Internal system connections are connections between organizational systems and separate constituent system components (i.e., connections between components that are part of the same system) including components used for system development. Intra-system connections include connections with mobile devices, notebook and desktop computers, tablets, printers, copiers, facsimile machines, scanners, sensors, and servers. Instead of authorizing each internal system connection individually, organizations can authorize internal connections for a class of system components with common characteristics and/or configurations, including printers, scanners, and copiers with a specified processing, transmission, and storage capability or smart phones and tablets with a specific baseline configuration. The continued need for an internal system connection is reviewed from the perspective of whether it provides support for organizational missions or business functions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ca-9_obj",
+     "label": "CA-09",
+     "children": [
+      {
+       "id": "ca-9_obj.a",
+       "label": "CA-09a.",
+       "prose": {
+        "en": "internal connections of {param:ca-09_odp.01} to the system are authorized;"
+       }
+      },
+      {
+       "id": "ca-9_obj.b",
+       "label": "CA-09b.",
+       "children": [
+        {
+         "id": "ca-9_obj.b-1",
+         "label": "CA-09b.[01]",
+         "prose": {
+          "en": "for each internal connection, the interface characteristics are documented;"
+         }
+        },
+        {
+         "id": "ca-9_obj.b-2",
+         "label": "CA-09b.[02]",
+         "prose": {
+          "en": "for each internal connection, the security requirements are documented;"
+         }
+        },
+        {
+         "id": "ca-9_obj.b-3",
+         "label": "CA-09b.[03]",
+         "prose": {
+          "en": "for each internal connection, the privacy requirements are documented;"
+         }
+        },
+        {
+         "id": "ca-9_obj.b-4",
+         "label": "CA-09b.[04]",
+         "prose": {
+          "en": "for each internal connection, the nature of the information communicated is documented;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ca-9_obj.c",
+       "label": "CA-09c.",
+       "prose": {
+        "en": "internal system connections are terminated after {param:ca-09_odp.02};"
+       }
+      },
+      {
+       "id": "ca-9_obj.d",
+       "label": "CA-09d.",
+       "prose": {
+        "en": "the continued need for each internal connection is reviewed {param:ca-09_odp.03}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CA-09-Examine",
+     "objects": [
+      {
+       "en": "Assessment, authorization, and monitoring policy"
+      },
+      {
+       "en": "access control policy"
+      },
+      {
+       "en": "procedures addressing system connections"
+      },
+      {
+       "en": "system and communications protection policy"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of components or classes of components authorized as internal system connections"
+      },
+      {
+       "en": "assessment report"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CA-09-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for developing, implementing, or authorizing internal system connections"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CA-09-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting internal system connections"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ca-09_odp.01": {
+     "guidelines": [
+      {
+       "en": "system components or classes of components requiring internal connections to the system are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ca-9_prm_1"
+     ],
+     "alt-label": "system components or classes of components"
+    },
+    "ca-09_odp.02": {
+     "guidelines": [
+      {
+       "en": "conditions requiring termination of internal connections are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ca-9_prm_2"
+     ]
+    },
+    "ca-09_odp.03": {
+     "guidelines": [
+      {
+       "en": "frequency at which to review the continued need for each internal connection is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ca-9_prm_3"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-124r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.8023"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-18"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-19"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  }
+ ]
+}

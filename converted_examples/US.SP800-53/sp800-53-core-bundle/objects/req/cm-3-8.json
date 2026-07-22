@@ -1,0 +1,104 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-3.8",
+ "version": "5.2.0",
+ "label": "CM-3(8)",
+ "lifecycle": "active",
+ "title": "Prevent or Restrict Configuration Changes",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Prevent or restrict changes to the configuration of the system under the following circumstances: {param:cm-03.08_odp}."
+   },
+   "parameters": [
+    {
+     "name": "cm-03.08_odp",
+     "type": "string",
+     "label": "circumstances"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "System configuration changes can adversely affect critical system security and privacy functionality. Change restrictions can be enforced through automated mechanisms."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-3.8_obj",
+     "label": "CM-03(08)",
+     "prose": {
+      "en": "changes to the configuration of the system are prevented or restricted under {param:cm-03.08_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-03(08)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing system configuration change control"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system architecture and configuration documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-03.08_odp": {
+     "guidelines": [
+      {
+       "en": "the circumstances under which changes are to be prevented or restricted are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-3.8_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-3"
+  }
+ ]
+}

@@ -1,0 +1,196 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-11.3",
+ "version": "5.2.0",
+ "label": "SA-11(3)",
+ "lifecycle": "active",
+ "title": "Independent Verification of Assessment Plans and Evidence",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require an independent agent satisfying {param:sa-11.03_odp} to verify the correct implementation of the developer security and privacy assessment plans and the evidence produced during testing and evaluation; and"
+   },
+   "parameters": [
+    {
+     "name": "sa-11.03_odp",
+     "type": "string",
+     "label": "independence criteria"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Verify that the independent agent is provided with sufficient information to complete the verification process or granted the authority to obtain such information."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Independent agents have the qualifications—including the expertise, skills, training, certifications, and experience—to verify the correct implementation of developer security and privacy assessment plans."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-11.3_obj",
+     "label": "SA-11(03)",
+     "children": [
+      {
+       "id": "sa-11.3_obj.a",
+       "label": "SA-11(03)(a)",
+       "children": [
+        {
+         "id": "sa-11.3_obj.a-1",
+         "label": "SA-11(03)(a)[01]",
+         "prose": {
+          "en": "an independent agent is required to satisfy {param:sa-11.03_odp} to verify the correct implementation of the developer security assessment plan and the evidence produced during testing and evaluation;"
+         }
+        },
+        {
+         "id": "sa-11.3_obj.a-2",
+         "label": "SA-11(03)(a)[02]",
+         "prose": {
+          "en": "an independent agent is required to satisfy {param:sa-11.03_odp} to verify the correct implementation of the developer privacy assessment plan and the evidence produced during testing and evaluation;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-11.3_obj.b",
+       "label": "SA-11(03)(b)",
+       "prose": {
+        "en": "the independent agent is provided with sufficient information to complete the verification process or granted the authority to obtain such information."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-11(03)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "procedures addressing system developer security testing"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "independent verification and validation reports"
+      },
+      {
+       "en": "security and privacy assessment plans"
+      },
+      {
+       "en": "results of security and privacy assessments for the system, system component, or system service"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy program plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-11(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with developer security testing responsibilities"
+      },
+      {
+       "en": "system developers"
+      },
+      {
+       "en": "independent verification agent"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-11(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for monitoring developer security testing and evaluation"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the monitoring of developer security testing and evaluation"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sa-11.03_odp": {
+     "guidelines": [
+      {
+       "en": "independence criteria to be satisfied by an independent agent are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sa-11.3_prm_1"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  }
+ ]
+}

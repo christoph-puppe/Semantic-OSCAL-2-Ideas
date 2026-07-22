@@ -1,0 +1,151 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-4.7",
+ "version": "5.2.0",
+ "label": "SA-4(7)",
+ "lifecycle": "active",
+ "title": "NIAP-approved Protection Profiles ",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Limit the use of commercially provided information assurance and information assurance-enabled information technology products to those products that have been successfully evaluated against a National Information Assurance partnership (NIAP)-approved Protection Profile for a specific technology type, if such a profile exists; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require, if no NIAP-approved Protection Profile exists for a specific technology type but a commercially provided information technology product relies on cryptographic functionality to enforce its security policy, that the cryptographic module is FIPS-validated or NSA-approved."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "See NIAP CCEVS for additional information on NIAP. See NIST CMVP for additional information on FIPS-validated cryptographic modules."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-4.7_obj",
+     "label": "SA-04(07)",
+     "children": [
+      {
+       "id": "sa-4.7_obj.a",
+       "label": "SA-04(07)(a)",
+       "prose": {
+        "en": "the use of commercially provided information assurance and information assurance-enabled information technology products is limited to those products that have been successfully evaluated against a National Information Assurance partnership (NIAP)-approved Protection Profile for a specific technology type, if such a profile exists;"
+       }
+      },
+      {
+       "id": "sa-4.7_obj.b",
+       "label": "SA-04(07)(b)",
+       "prose": {
+        "en": "if no NIAP-approved Protection Profile exists for a specific technology type but a commercially provided information technology product relies on cryptographic functionality to enforce its security policy, that cryptographic module is required to be FIPS-validated or NSA-approved."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-04(07)-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management plan"
+      },
+      {
+       "en": "system and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing the integration of security requirements, descriptions, and criteria into the acquisition process"
+      },
+      {
+       "en": "solicitation documents"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "list of deployed IT products/solutions"
+      },
+      {
+       "en": "NAIP-approved protection profiles"
+      },
+      {
+       "en": "FIPS-validation information for cryptographic functionality"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-04(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with acquisition/contracting responsibilities"
+      },
+      {
+       "en": "organizational personnel with the responsibility for determining system security requirements"
+      },
+      {
+       "en": "organizational personnel responsible for ensuring that information assurance products have been evaluated against a NIAP-approved protection profile or for ensuring products relying on cryptographic functionality are FIPS-validated"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SA-04(07)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for selecting and employing products/services evaluated against a NIAP-approved protection profile or FIPS-validated products"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  }
+ ]
+}

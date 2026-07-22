@@ -1,0 +1,324 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CA-3",
+ "version": "5.2.0",
+ "label": "CA-3",
+ "lifecycle": "active",
+ "title": "Information Exchange",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Approve and manage the exchange of information between the system and other systems using {param:ca-03_odp.01};"
+   },
+   "parameters": [
+    {
+     "name": "ca-03_odp.01",
+     "type": "choice",
+     "choices": [
+      {
+       "value": "interconnection security agreements"
+      },
+      {
+       "value": "information exchange security agreements"
+      },
+      {
+       "value": "memoranda of understanding or agreement"
+      },
+      {
+       "value": "service level agreements"
+      },
+      {
+       "value": "user agreements"
+      },
+      {
+       "value": "non-disclosure agreements"
+      },
+      {
+       "value": "{param:ca-03_odp.02} "
+      }
+     ],
+     "cardinality": "many"
+    },
+    {
+     "name": "ca-03_odp.02",
+     "type": "string",
+     "label": "type of agreement"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Document, as part of each exchange agreement, the interface characteristics, security and privacy requirements, controls, and responsibilities for each system, and the impact level of the information communicated; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review and update the agreements {param:ca-03_odp.03}."
+   },
+   "parameters": [
+    {
+     "name": "ca-03_odp.03",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "System information exchange requirements apply to information exchanges between two or more systems. System information exchanges include connections via leased lines or virtual private networks, connections to internet service providers, database sharing or exchanges of database transaction information, connections and exchanges with cloud services, exchanges via web-based services, or exchanges of files via file transfer protocols, network protocols (e.g., IPv4, IPv6), email, or other organization-to-organization communications. Organizations consider the risk related to new or increased threats that may be introduced when systems exchange information with other systems that may have different security and privacy requirements and controls. This includes systems within the same organization and systems that are external to the organization. A joint authorization of the systems exchanging information, as described in CA-6(1) or CA-6(2) , may help to communicate and reduce risk.\n\nAuthorizing officials determine the risk associated with system information exchange and the controls needed for appropriate risk mitigation. The types of agreements selected are based on factors such as the impact level of the information being exchanged, the relationship between the organizations exchanging information (e.g., government to government, government to business, business to business, government or business to service provider, government or business to individual), or the level of access to the organizational system by users of the other system. If systems that exchange information have the same authorizing official, organizations need not develop agreements. Instead, the interface characteristics between the systems (e.g., how the information is being exchanged. how the information is protected) are described in the respective security and privacy plans. If the systems that exchange information have different authorizing officials within the same organization, the organizations can develop agreements or provide the same information that would be provided in the appropriate agreement type from CA-3a in the respective security and privacy plans for the systems. Organizations may incorporate agreement information into formal contracts, especially for information exchanges established between federal agencies and nonfederal organizations (including service providers, contractors, system developers, and system integrators). Risk considerations include systems that share the same networks."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ca-3_obj",
+     "label": "CA-03",
+     "children": [
+      {
+       "id": "ca-3_obj.a",
+       "label": "CA-03a.",
+       "prose": {
+        "en": "the exchange of information between the system and other systems is approved and managed using {param:ca-03_odp.01};"
+       }
+      },
+      {
+       "id": "ca-3_obj.b",
+       "label": "CA-03b.",
+       "children": [
+        {
+         "id": "ca-3_obj.b-1",
+         "label": "CA-03b.[01]",
+         "prose": {
+          "en": "the interface characteristics are documented as part of each exchange agreement;"
+         }
+        },
+        {
+         "id": "ca-3_obj.b-2",
+         "label": "CA-03b.[02]",
+         "prose": {
+          "en": "security requirements are documented as part of each exchange agreement;"
+         }
+        },
+        {
+         "id": "ca-3_obj.b-3",
+         "label": "CA-03b.[03]",
+         "prose": {
+          "en": "privacy requirements are documented as part of each exchange agreement;"
+         }
+        },
+        {
+         "id": "ca-3_obj.b-4",
+         "label": "CA-03b.[04]",
+         "prose": {
+          "en": "controls are documented as part of each exchange agreement;"
+         }
+        },
+        {
+         "id": "ca-3_obj.b-5",
+         "label": "CA-03b.[05]",
+         "prose": {
+          "en": "responsibilities for each system are documented as part of each exchange agreement;"
+         }
+        },
+        {
+         "id": "ca-3_obj.b-6",
+         "label": "CA-03b.[06]",
+         "prose": {
+          "en": "the impact level of the information communicated is documented as part of each exchange agreement;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ca-3_obj.c",
+       "label": "CA-03c.",
+       "prose": {
+        "en": "agreements are reviewed and updated {param:ca-03_odp.03}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CA-03-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing system connections"
+      },
+      {
+       "en": "system and communications protection policy"
+      },
+      {
+       "en": "system interconnection security agreements"
+      },
+      {
+       "en": "information exchange security agreements"
+      },
+      {
+       "en": "memoranda of understanding or agreements"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "non-disclosure agreements"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "enterprise architecture"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CA-03-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for developing, implementing, or approving system interconnection agreements"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "personnel managing the system(s) to which the interconnection security agreement applies"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ca-03_odp.01": {
+     "alt-identifiers": [
+      "ca-3_prm_1"
+     ]
+    },
+    "ca-03_odp.02": {
+     "guidelines": [
+      {
+       "en": "the type of agreement used to approve and manage the exchange of information is defined (if selected);"
+      }
+     ],
+     "alt-identifiers": [
+      "ca-3_prm_2"
+     ]
+    },
+    "ca-03_odp.03": {
+     "guidelines": [
+      {
+       "en": "the frequency at which to review and update agreements is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ca-3_prm_3"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.199"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-47"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-20"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-16"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-12"
+  }
+ ]
+}

@@ -1,0 +1,158 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CM-12.1",
+ "version": "5.2.0",
+ "label": "CM-12(1)",
+ "lifecycle": "active",
+ "title": "Automated Tools to Support Information Location",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Use automated tools to identify {param:cm-12.01_odp.01} on {param:cm-12.01_odp.02} to ensure controls are in place to protect organizational information and individual privacy."
+   },
+   "parameters": [
+    {
+     "name": "cm-12.01_odp.01",
+     "type": "string",
+     "label": "information by information type"
+    },
+    {
+     "name": "cm-12.01_odp.02",
+     "type": "string",
+     "label": "system components"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The use of automated tools helps to increase the effectiveness and efficiency of the information location capability implemented within the system. Automation also helps organizations manage the data produced during information location activities and share such information across the organization. The output of automated information location tools can be used to guide and inform system architecture and design decisions."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cm-12.1_obj",
+     "label": "CM-12(01)",
+     "prose": {
+      "en": "automated tools are used to identify {param:cm-12.01_odp.01} on {param:cm-12.01_odp.02} to ensure that controls are in place to protect organizational information and individual privacy."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CM-12(01)-Examine",
+     "objects": [
+      {
+       "en": "Configuration management policy"
+      },
+      {
+       "en": "procedures addressing identification and documentation of information location"
+      },
+      {
+       "en": "configuration management plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "PII inventory documentation"
+      },
+      {
+       "en": "data mapping documentation"
+      },
+      {
+       "en": "change control records"
+      },
+      {
+       "en": "system component inventory"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CM-12(01)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for managing information location"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CM-12(01)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes governing information location"
+      },
+      {
+       "en": "automated mechanisms enforcing policies and methods for governing information location"
+      },
+      {
+       "en": "automated tools used to identify information on system components"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "cm-12.01_odp.01": {
+     "guidelines": [
+      {
+       "en": "information to be protected is defined by information type;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-12.1_prm_1"
+     ]
+    },
+    "cm-12.01_odp.02": {
+     "guidelines": [
+      {
+       "en": "system components where the information is located are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "cm-12.1_prm_2"
+     ]
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-12"
+  }
+ ]
+}

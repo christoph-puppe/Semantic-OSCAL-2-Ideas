@@ -1,0 +1,901 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-2",
+ "version": "5.2.0",
+ "label": "AC-2",
+ "lifecycle": "active",
+ "title": "Account Management",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Define and document the types of accounts allowed and specifically prohibited for use within the system;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Assign account managers;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require {param:ac-02_odp.01} for group and role membership;"
+   },
+   "parameters": [
+    {
+     "name": "ac-02_odp.01",
+     "type": "string",
+     "label": "prerequisites and criteria"
+    }
+   ]
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Specify:"
+   }
+  },
+  {
+   "id": "smt.d.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Authorized users of the system;"
+   }
+  },
+  {
+   "id": "smt.d.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Group and role membership; and"
+   }
+  },
+  {
+   "id": "smt.d.3",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Access authorizations (i.e., privileges) and {param:ac-02_odp.02} for each account;"
+   },
+   "parameters": [
+    {
+     "name": "ac-02_odp.02",
+     "type": "string",
+     "label": "attributes (as required)"
+    }
+   ]
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require approvals by {param:ac-02_odp.03} for requests to create accounts;"
+   },
+   "parameters": [
+    {
+     "name": "ac-02_odp.03",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  },
+  {
+   "id": "smt.f",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Create, enable, modify, disable, and remove accounts in accordance with {param:ac-02_odp.04};"
+   },
+   "parameters": [
+    {
+     "name": "ac-02_odp.04",
+     "type": "string",
+     "label": "policy, procedures, prerequisites, and criteria"
+    }
+   ]
+  },
+  {
+   "id": "smt.g",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Monitor the use of accounts;"
+   }
+  },
+  {
+   "id": "smt.h",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Notify account managers and {param:ac-02_odp.05} within:"
+   },
+   "parameters": [
+    {
+     "name": "ac-02_odp.05",
+     "type": "string",
+     "label": "personnel or roles"
+    }
+   ]
+  },
+  {
+   "id": "smt.h.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "{param:ac-02_odp.06} when accounts are no longer required;"
+   },
+   "parameters": [
+    {
+     "name": "ac-02_odp.06",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  },
+  {
+   "id": "smt.h.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "{param:ac-02_odp.07} when users are terminated or transferred; and"
+   },
+   "parameters": [
+    {
+     "name": "ac-02_odp.07",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  },
+  {
+   "id": "smt.h.3",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "{param:ac-02_odp.08} when system usage or need-to-know changes for an individual;"
+   },
+   "parameters": [
+    {
+     "name": "ac-02_odp.08",
+     "type": "string",
+     "label": "time period"
+    }
+   ]
+  },
+  {
+   "id": "smt.i",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Authorize access to the system based on:"
+   }
+  },
+  {
+   "id": "smt.i.1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "A valid access authorization;"
+   }
+  },
+  {
+   "id": "smt.i.2",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Intended system usage; and"
+   }
+  },
+  {
+   "id": "smt.i.3",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "{param:ac-02_odp.09};"
+   },
+   "parameters": [
+    {
+     "name": "ac-02_odp.09",
+     "type": "string",
+     "label": "attributes (as required)"
+    }
+   ]
+  },
+  {
+   "id": "smt.j",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Review accounts for compliance with account management requirements {param:ac-02_odp.10};"
+   },
+   "parameters": [
+    {
+     "name": "ac-02_odp.10",
+     "type": "string",
+     "label": "frequency"
+    }
+   ]
+  },
+  {
+   "id": "smt.k",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Establish and implement a process for changing shared or group account authenticators (if deployed) when individuals are removed from the group; and"
+   }
+  },
+  {
+   "id": "smt.l",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Align account management processes with personnel termination and transfer processes."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Examples of system account types include individual, shared, group, system, guest, anonymous, emergency, developer, temporary, and service. Identification of authorized system users and the specification of access privileges reflect the requirements in other controls in the security plan. Users requiring administrative privileges on system accounts receive additional scrutiny by organizational personnel responsible for approving such accounts and privileged access, including system owner, mission or business owner, senior agency information security officer, or senior agency official for privacy. Types of accounts that organizations may wish to prohibit due to increased risk include shared, group, emergency, anonymous, temporary, and guest accounts.\n\nWhere access involves personally identifiable information, security programs collaborate with the senior agency official for privacy to establish the specific conditions for group and role membership; specify authorized users, group and role membership, and access authorizations for each account; and create, adjust, or remove system accounts in accordance with organizational policies. Policies can include such information as account expiration dates or other factors that trigger the disabling of accounts. Organizations may choose to define access privileges or other attributes by account, type of account, or a combination of the two. Examples of other attributes required for authorizing access include restrictions on time of day, day of week, and point of origin. In defining other system account attributes, organizations consider system-related requirements and mission/business requirements. Failure to consider these factors could affect system availability.\n\nTemporary and emergency accounts are intended for short-term use. Organizations establish temporary accounts as part of normal account activation procedures when there is a need for short-term accounts without the demand for immediacy in account activation. Organizations establish emergency accounts in response to crisis situations and with the need for rapid account activation. Therefore, emergency account activation may bypass normal account authorization processes. Emergency and temporary accounts are not to be confused with infrequently used accounts, including local logon accounts used for special tasks or when network resources are unavailable (may also be known as accounts of last resort). Such accounts remain available and are not subject to automatic disabling or removal dates. Conditions for disabling or deactivating accounts include when shared/group, emergency, or temporary accounts are no longer required and when individuals are transferred or terminated. Changing shared/group authenticators when members leave the group is intended to ensure that former group members do not retain access to the shared or group account. Some types of system accounts may require specialized training."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-2_obj",
+     "label": "AC-02",
+     "children": [
+      {
+       "id": "ac-2_obj.a",
+       "label": "AC-02a.",
+       "children": [
+        {
+         "id": "ac-2_obj.a-1",
+         "label": "AC-02a.[01]",
+         "prose": {
+          "en": "account types allowed for use within the system are defined and documented;"
+         }
+        },
+        {
+         "id": "ac-2_obj.a-2",
+         "label": "AC-02a.[02]",
+         "prose": {
+          "en": "account types specifically prohibited for use within the system are defined and documented;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ac-2_obj.b",
+       "label": "AC-02b.",
+       "prose": {
+        "en": "account managers are assigned;"
+       }
+      },
+      {
+       "id": "ac-2_obj.c",
+       "label": "AC-02c.",
+       "prose": {
+        "en": "{param:ac-02_odp.01} for group and role membership are required;"
+       }
+      },
+      {
+       "id": "ac-2_obj.d",
+       "label": "AC-02d.",
+       "children": [
+        {
+         "id": "ac-2_obj.d.1",
+         "label": "AC-02d.01",
+         "prose": {
+          "en": "authorized users of the system are specified;"
+         }
+        },
+        {
+         "id": "ac-2_obj.d.2",
+         "label": "AC-02d.02",
+         "prose": {
+          "en": "group and role membership are specified;"
+         }
+        },
+        {
+         "id": "ac-2_obj.d.3",
+         "label": "AC-02d.03",
+         "children": [
+          {
+           "id": "ac-2_obj.d.3-1",
+           "label": "AC-02d.03[01]",
+           "prose": {
+            "en": "access authorizations (i.e., privileges) are specified for each account;"
+           }
+          },
+          {
+           "id": "ac-2_obj.d.3-2",
+           "label": "AC-02d.03[02]",
+           "prose": {
+            "en": "{param:ac-02_odp.02} are specified for each account;"
+           }
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "id": "ac-2_obj.e",
+       "label": "AC-02e.",
+       "prose": {
+        "en": "approvals are required by {param:ac-02_odp.03} for requests to create accounts;"
+       }
+      },
+      {
+       "id": "ac-2_obj.f",
+       "label": "AC-02f.",
+       "children": [
+        {
+         "id": "ac-2_obj.f-1",
+         "label": "AC-02f.[01]",
+         "prose": {
+          "en": "accounts are created in accordance with {param:ac-02_odp.04};"
+         }
+        },
+        {
+         "id": "ac-2_obj.f-2",
+         "label": "AC-02f.[02]",
+         "prose": {
+          "en": "accounts are enabled in accordance with {param:ac-02_odp.04};"
+         }
+        },
+        {
+         "id": "ac-2_obj.f-3",
+         "label": "AC-02f.[03]",
+         "prose": {
+          "en": "accounts are modified in accordance with {param:ac-02_odp.04};"
+         }
+        },
+        {
+         "id": "ac-2_obj.f-4",
+         "label": "AC-02f.[04]",
+         "prose": {
+          "en": "accounts are disabled in accordance with {param:ac-02_odp.04};"
+         }
+        },
+        {
+         "id": "ac-2_obj.f-5",
+         "label": "AC-02f.[05]",
+         "prose": {
+          "en": "accounts are removed in accordance with {param:ac-02_odp.04};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ac-2_obj.g",
+       "label": "AC-02g.",
+       "prose": {
+        "en": "the use of accounts is monitored; "
+       }
+      },
+      {
+       "id": "ac-2_obj.h",
+       "label": "AC-02h.",
+       "children": [
+        {
+         "id": "ac-2_obj.h.1",
+         "label": "AC-02h.01",
+         "prose": {
+          "en": "account managers and {param:ac-02_odp.05} are notified within {param:ac-02_odp.06} when accounts are no longer required;"
+         }
+        },
+        {
+         "id": "ac-2_obj.h.2",
+         "label": "AC-02h.02",
+         "prose": {
+          "en": "account managers and {param:ac-02_odp.05} are notified within {param:ac-02_odp.07} when users are terminated or transferred;"
+         }
+        },
+        {
+         "id": "ac-2_obj.h.3",
+         "label": "AC-02h.03",
+         "prose": {
+          "en": "account managers and {param:ac-02_odp.05} are notified within {param:ac-02_odp.08} when system usage or the need to know changes for an individual;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ac-2_obj.i",
+       "label": "AC-02i.",
+       "children": [
+        {
+         "id": "ac-2_obj.i.1",
+         "label": "AC-02i.01",
+         "prose": {
+          "en": "access to the system is authorized based on a valid access authorization;"
+         }
+        },
+        {
+         "id": "ac-2_obj.i.2",
+         "label": "AC-02i.02",
+         "prose": {
+          "en": "access to the system is authorized based on intended system usage;"
+         }
+        },
+        {
+         "id": "ac-2_obj.i.3",
+         "label": "AC-02i.03",
+         "prose": {
+          "en": "access to the system is authorized based on {param:ac-02_odp.09};"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ac-2_obj.j",
+       "label": "AC-02j.",
+       "prose": {
+        "en": "accounts are reviewed for compliance with account management requirements {param:ac-02_odp.10};"
+       }
+      },
+      {
+       "id": "ac-2_obj.k",
+       "label": "AC-02k.",
+       "children": [
+        {
+         "id": "ac-2_obj.k-1",
+         "label": "AC-02k.[01]",
+         "prose": {
+          "en": "a process is established for changing shared or group account authenticators (if deployed) when individuals are removed from the group;"
+         }
+        },
+        {
+         "id": "ac-2_obj.k-2",
+         "label": "AC-02k.[02]",
+         "prose": {
+          "en": "a process is implemented for changing shared or group account authenticators (if deployed) when individuals are removed from the group;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ac-2_obj.l",
+       "label": "AC-02l.",
+       "children": [
+        {
+         "id": "ac-2_obj.l-1",
+         "label": "AC-02l.[01]",
+         "prose": {
+          "en": "account management processes are aligned with personnel termination processes;"
+         }
+        },
+        {
+         "id": "ac-2_obj.l-2",
+         "label": "AC-02l.[02]",
+         "prose": {
+          "en": "account management processes are aligned with personnel transfer processes."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-02-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "personnel termination policy and procedure"
+      },
+      {
+       "en": "personnel transfer policy and procedure"
+      },
+      {
+       "en": "procedures for addressing account management"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of active system accounts along with the name of the individual associated with each account"
+      },
+      {
+       "en": "list of recently disabled system accounts and the name of the individual associated with each account"
+      },
+      {
+       "en": "list of conditions for group and role membership"
+      },
+      {
+       "en": "notifications of recent transfers, separations, or terminations of employees"
+      },
+      {
+       "en": "access authorization records"
+      },
+      {
+       "en": "account management compliance reviews"
+      },
+      {
+       "en": "system monitoring records"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-02-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with account management responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security with information security and privacy responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-02-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for account management on the system"
+      },
+      {
+       "en": "mechanisms for implementing account management"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-02_odp.01": {
+     "guidelines": [
+      {
+       "en": "prerequisites and criteria for group and role membership are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2_prm_1"
+     ]
+    },
+    "ac-02_odp.02": {
+     "guidelines": [
+      {
+       "en": "attributes (as required) for each account are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2_prm_2"
+     ]
+    },
+    "ac-02_odp.03": {
+     "guidelines": [
+      {
+       "en": "personnel or roles required to approve requests to create accounts is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2_prm_3"
+     ]
+    },
+    "ac-02_odp.04": {
+     "guidelines": [
+      {
+       "en": "policy, procedures, prerequisites, and criteria for account creation, enabling, modification, disabling, and removal are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2_prm_4"
+     ]
+    },
+    "ac-02_odp.05": {
+     "guidelines": [
+      {
+       "en": "personnel or roles to be notified is/are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2_prm_5"
+     ]
+    },
+    "ac-02_odp.06": {
+     "guidelines": [
+      {
+       "en": "time period within which to notify account managers when accounts are no longer required is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2_prm_6"
+     ]
+    },
+    "ac-02_odp.07": {
+     "guidelines": [
+      {
+       "en": "time period within which to notify account managers when users are terminated or transferred is defined; "
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2_prm_7"
+     ]
+    },
+    "ac-02_odp.08": {
+     "guidelines": [
+      {
+       "en": "time period within which to notify account managers when system usage or the need to know changes for an individual is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2_prm_8"
+     ]
+    },
+    "ac-02_odp.09": {
+     "guidelines": [
+      {
+       "en": "attributes needed to authorize system access (as required) are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2_prm_9"
+     ]
+    },
+    "ac-02_odp.10": {
+     "guidelines": [
+      {
+       "en": "the frequency of account review is defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-2_prm_10"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-162"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-178"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-192"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-18"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-20"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-24"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CM-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PL-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-37"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-2.10",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-13",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-14",
+   "mode": "merged-into"
+  },
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-9",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/AC-2.10",
+    "mode": "merged-into",
+    "label": "AC-02(10)",
+    "title": "Shared and Group Account Credential Change",
+    "into": "smt.k"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/AC-13",
+    "mode": "merged-into",
+    "label": "AC-13",
+    "title": "Supervision and Review — Access Control"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SC-14",
+    "mode": "merged-into",
+    "label": "SC-14",
+    "title": "Public Access Protections"
+   },
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SI-9",
+    "mode": "merged-into",
+    "label": "SI-09",
+    "title": "Information Input Restrictions"
+   }
+  ]
+ }
+}

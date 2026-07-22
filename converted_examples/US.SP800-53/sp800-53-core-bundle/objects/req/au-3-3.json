@@ -1,0 +1,141 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AU-3.3",
+ "version": "5.2.0",
+ "label": "AU-3(3)",
+ "lifecycle": "active",
+ "title": "Limit Personally Identifiable Information Elements",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Limit personally identifiable information contained in audit records to the following elements identified in the privacy risk assessment: {param:au-03.03_odp}."
+   },
+   "parameters": [
+    {
+     "name": "au-03.03_odp",
+     "type": "string",
+     "label": "elements"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Limiting personally identifiable information in audit records when such information is not needed for operational purposes helps reduce the level of privacy risk created by a system."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "au-3.3_obj",
+     "label": "AU-03(03)",
+     "prose": {
+      "en": "personally identifiable information contained in audit records is limited to {param:au-03.03_odp} identified in the privacy risk assessment."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AU-03(03)-Examine",
+     "objects": [
+      {
+       "en": "Audit and accountability policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "privacy risk assessment"
+      },
+      {
+       "en": "privacy risk assessment results"
+      },
+      {
+       "en": "procedures addressing content of audit records"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of organization-defined auditable events"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "third party contracts"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AU-03(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with audit and accountability responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AU-03(03)-Test",
+     "objects": [
+      {
+       "en": "system audit capability"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "au-03.03_odp": {
+     "guidelines": [
+      {
+       "en": "elements identified in the privacy risk assessment are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "au-3.3_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-3"
+  }
+ ]
+}

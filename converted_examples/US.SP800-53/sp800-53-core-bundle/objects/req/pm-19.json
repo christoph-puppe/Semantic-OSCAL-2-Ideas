@@ -1,0 +1,155 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PM-19",
+ "version": "5.2.0",
+ "label": "PM-19",
+ "lifecycle": "active",
+ "title": "Privacy Program Leadership Role",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Appoint a senior agency official for privacy with the authority, mission, accountability, and resources to coordinate, develop, and implement, applicable privacy requirements and manage privacy risks through the organization-wide privacy program."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The privacy officer is an organizational official. For federal agencies—as defined by applicable laws, executive orders, directives, regulations, policies, standards, and guidelines—this official is designated as the senior agency official for privacy. Organizations may also refer to this official as the chief privacy officer. The senior agency official for privacy also has roles on the data management board (see PM-23 ) and the data integrity board (see PM-24)."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pm-19_obj",
+     "label": "PM-19",
+     "children": [
+      {
+       "id": "pm-19_obj-1",
+       "label": "PM-19[01]",
+       "prose": {
+        "en": "a senior agency official for privacy with authority, mission, accountability, and resources is appointed;"
+       }
+      },
+      {
+       "id": "pm-19_obj-2",
+       "label": "PM-19[02]",
+       "prose": {
+        "en": "the senior agency official for privacy coordinates applicable privacy requirements;"
+       }
+      },
+      {
+       "id": "pm-19_obj-3",
+       "label": "PM-19[03]",
+       "prose": {
+        "en": "the senior agency official for privacy develops applicable privacy requirements;"
+       }
+      },
+      {
+       "id": "pm-19_obj-4",
+       "label": "PM-19[04]",
+       "prose": {
+        "en": "the senior agency official for privacy implements applicable privacy requirements;"
+       }
+      },
+      {
+       "id": "pm-19_obj-5",
+       "label": "PM-19[05]",
+       "prose": {
+        "en": "the senior agency official for privacy manages privacy risks through the organization-wide privacy program."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PM-19-Examine",
+     "objects": [
+      {
+       "en": "Privacy program documents, including policies, procedures, plans, and reports"
+      },
+      {
+       "en": "public privacy notices, including Federal Register notices"
+      },
+      {
+       "en": "privacy impact assessments"
+      },
+      {
+       "en": "privacy risk assessments"
+      },
+      {
+       "en": "Privacy Act statements"
+      },
+      {
+       "en": "system of records notices"
+      },
+      {
+       "en": "computer matching agreements and notices"
+      },
+      {
+       "en": "contracts, information sharing agreements, and memoranda of understanding"
+      },
+      {
+       "en": "governing requirements, including laws, executive orders, regulations, standards, and guidance"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PM-19-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with privacy program planning and plan implementation responsibilities"
+      },
+      {
+       "en": "organizational personnel with privacy responsibilities"
+      },
+      {
+       "en": "senior agency official for privacy"
+      },
+      {
+       "en": "privacy officials"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/sites/whitehouse.gov/files/omb/circulars/A130/a130revised.pdf"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-18"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-20"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-23"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-24"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PM-27"
+  }
+ ]
+}

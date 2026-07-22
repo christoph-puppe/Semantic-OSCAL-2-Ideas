@@ -1,0 +1,212 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SI-13",
+ "version": "5.2.0",
+ "label": "SI-13",
+ "lifecycle": "active",
+ "title": "Predictable Failure Prevention",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Determine mean time to failure (MTTF) for the following system components in specific environments of operation: {param:si-13_odp.01} ; and"
+   },
+   "parameters": [
+    {
+     "name": "si-13_odp.01",
+     "type": "string",
+     "label": "system components"
+    }
+   ]
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide substitute system components and a means to exchange active and standby components in accordance with the following criteria: {param:si-13_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "si-13_odp.02",
+     "type": "string",
+     "label": "mean time to failure (MTTF) substitution criteria"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "While MTTF is primarily a reliability issue, predictable failure prevention is intended to address potential failures of system components that provide security capabilities. Failure rates reflect installation-specific consideration rather than the industry-average. Organizations define the criteria for the substitution of system components based on the MTTF value with consideration for the potential harm from component failures. The transfer of responsibilities between active and standby components does not compromise safety, operational readiness, or security capabilities. The preservation of system state variables is also critical to help ensure a successful transfer process. Standby components remain available at all times except for maintenance issues or recovery failures in progress."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "si-13_obj",
+     "label": "SI-13",
+     "children": [
+      {
+       "id": "si-13_obj.a",
+       "label": "SI-13a.",
+       "prose": {
+        "en": "mean time to failure (MTTF) is determined for {param:si-13_odp.01} in specific environments of operation;"
+       }
+      },
+      {
+       "id": "si-13_obj.b",
+       "label": "SI-13b.",
+       "prose": {
+        "en": "substitute system components and a means to exchange active and standby components are provided in accordance with {param:si-13_odp.02}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SI-13-Examine",
+     "objects": [
+      {
+       "en": "System and information integrity policy"
+      },
+      {
+       "en": "system and information integrity procedures"
+      },
+      {
+       "en": "procedures addressing predictable failure prevention"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of MTTF substitution criteria"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SI-13-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel responsible for MTTF determinations and activities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with contingency planning responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SI-13-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for managing MTTF"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "si-13_odp.01": {
+     "guidelines": [
+      {
+       "en": "system components for which mean time to failure (MTTF) should be determined are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-13_prm_1"
+     ]
+    },
+    "si-13_odp.02": {
+     "guidelines": [
+      {
+       "en": "mean time to failure (MTTF) substitution criteria to be used as a means to exchange active and standby components are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "si-13_prm_2"
+     ],
+     "alt-label": "MTTF substitution criteria"
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-6"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-10.5",
+   "mode": "merged-into"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/CP-10.5",
+    "mode": "merged-into",
+    "label": "CP-10(05)",
+    "title": "Failover Capability"
+   }
+  ]
+ }
+}

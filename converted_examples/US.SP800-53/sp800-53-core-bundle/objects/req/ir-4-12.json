@@ -1,0 +1,135 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-4.12",
+ "version": "5.2.0",
+ "label": "IR-4(12)",
+ "lifecycle": "active",
+ "title": "Malicious Code and Forensic Analysis",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Analyze malicious code and/or other residual artifacts remaining in the system after the incident."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "When conducted carefully in an isolated environment, analysis of malicious code and other residual artifacts of a security incident or breach can give the organization insight into adversary tactics, techniques, and procedures. It can also indicate the identity or some defining characteristics of the adversary. In addition, malicious code analysis can help the organization develop responses to future incidents."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-4.12_obj",
+     "label": "IR-04(12)",
+     "children": [
+      {
+       "id": "ir-4.12_obj-1",
+       "label": "IR-04(12)[01]",
+       "prose": {
+        "en": "malicious code remaining in the system is analyzed after the incident;"
+       }
+      },
+      {
+       "id": "ir-4.12_obj-2",
+       "label": "IR-04(12)[02]",
+       "prose": {
+        "en": "other residual artifacts remaining in the system (if any) are analyzed after the incident."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-04(12)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "procedures addressing incident handling"
+      },
+      {
+       "en": "procedures addressing code and forensic analysis"
+      },
+      {
+       "en": "procedures addressing incident response"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "malicious code protection mechanisms, tools, and techniques"
+      },
+      {
+       "en": "results from malicious code analyses"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-04(12)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel installing, configuring, and/or maintaining the system"
+      },
+      {
+       "en": "organizational personnel with responsibility for malicious code protection"
+      },
+      {
+       "en": "organizational personnel responsible for incident response/management"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IR-04(12)-Test",
+     "objects": [
+      {
+       "en": "Organizational process for incident response"
+      },
+      {
+       "en": "organizational processes for conducting forensic analysis"
+      },
+      {
+       "en": "tools and techniques for analysis of malicious code characteristics and behavior"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-4"
+  }
+ ]
+}

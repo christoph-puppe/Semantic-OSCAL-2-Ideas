@@ -1,0 +1,131 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PS-6.3",
+ "version": "5.2.0",
+ "label": "PS-6(3)",
+ "lifecycle": "active",
+ "title": "Post-employment Requirements",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Notify individuals of applicable, legally binding post-employment requirements for protection of organizational information; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require individuals to sign an acknowledgment of these requirements, if applicable, as part of granting initial access to covered information."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizations consult with the Office of the General Counsel regarding matters of post-employment requirements on terminated individuals."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ps-6.3_obj",
+     "label": "PS-06(03)",
+     "children": [
+      {
+       "id": "ps-6.3_obj.a",
+       "label": "PS-06(03)(a)",
+       "prose": {
+        "en": "individuals are notified of applicable, legally binding post-employment requirements for the protection of organizational information;"
+       }
+      },
+      {
+       "id": "ps-6.3_obj.b",
+       "label": "PS-06(03)(b)",
+       "prose": {
+        "en": "individuals are required to sign an acknowledgement of applicable, legally binding post-employment requirements as part of being granted initial access to covered information."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PS-06(03)-Examine",
+     "objects": [
+      {
+       "en": "Personnel security policy"
+      },
+      {
+       "en": "procedures addressing access agreements for organizational information and systems"
+      },
+      {
+       "en": "signed post-employment acknowledgement forms"
+      },
+      {
+       "en": "access agreements"
+      },
+      {
+       "en": "list of applicable, legally binding post-employment requirements"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PS-06(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with personnel security responsibilities"
+      },
+      {
+       "en": "organizational personnel who have signed access agreements that include post-employment requirements"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PS-06(03)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for post-employment requirements"
+      },
+      {
+       "en": "mechanisms supporting notifications and individual acknowledgements of post-employment requirements"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PS-4"
+  }
+ ]
+}

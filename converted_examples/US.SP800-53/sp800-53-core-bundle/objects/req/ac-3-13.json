@@ -1,0 +1,143 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-3.13",
+ "version": "5.2.0",
+ "label": "AC-3(13)",
+ "lifecycle": "active",
+ "title": "Attribute-based Access Control",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Enforce attribute-based access control policy over defined subjects and objects and control access based upon {param:ac-03.13_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ac-03.13_odp",
+     "type": "string",
+     "label": "attributes"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Attribute-based access control is an access control policy that restricts system access to authorized users based on specified organizational attributes (e.g., job function, identity), action attributes (e.g., read, write, delete), environmental attributes (e.g., time of day, location), and resource attributes (e.g., classification of a document). Organizations can create rules based on attributes and the authorizations (i.e., privileges) to perform needed operations on the systems associated with organization-defined attributes and rules. When users are assigned to attributes defined in attribute-based access control policies or rules, they can be provisioned to a system with the appropriate privileges or dynamically granted access to a protected resource. Attribute-based access control can be implemented as either a mandatory or discretionary form of access control. When implemented with mandatory access controls, the requirements in AC-3(3) define the scope of the subjects and objects covered by the policy."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-3.13_obj",
+     "label": "AC-03(13)",
+     "children": [
+      {
+       "id": "ac-3.13_obj-1",
+       "label": "AC-03(13)[01]",
+       "prose": {
+        "en": "the attribute-based access control policy is enforced over defined subjects;"
+       }
+      },
+      {
+       "id": "ac-3.13_obj-2",
+       "label": "AC-03(13)[02]",
+       "prose": {
+        "en": "the attribute-based access control policy is enforced over defined objects;"
+       }
+      },
+      {
+       "id": "ac-3.13_obj-3",
+       "label": "AC-03(13)[03]",
+       "prose": {
+        "en": "access is controlled based on {param:ac-03.13_odp}."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-03(13)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing access enforcement"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "list of subjects and objects (i.e., users and resources) requiring enforcement of attribute-based access control policies"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-03(13)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with access enforcement responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-03(13)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing access enforcement functions"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-03.13_odp": {
+     "guidelines": [
+      {
+       "en": "attributes to assume access permissions are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-3.13_prm_1"
+     ],
+     "alt-label": "attributes to assume access permissions"
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  }
+ ]
+}

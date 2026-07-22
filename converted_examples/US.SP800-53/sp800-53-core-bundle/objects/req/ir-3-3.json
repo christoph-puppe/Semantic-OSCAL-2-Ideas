@@ -1,0 +1,233 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IR-3.3",
+ "version": "5.2.0",
+ "label": "IR-3(3)",
+ "lifecycle": "active",
+ "title": "Continuous Improvement",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Use qualitative and quantitative data from testing to:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Determine the effectiveness of incident response processes;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Continuously improve incident response processes; and"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Provide incident response measures and metrics that are accurate, consistent, and in a reproducible format."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "To help incident response activities function as intended, organizations may use metrics and evaluation criteria to assess incident response programs as part of an effort to continually improve response performance. These efforts facilitate improvement in incident response efficacy and lessen the impact of incidents."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ir-3.3_obj",
+     "label": "IR-03(03)",
+     "children": [
+      {
+       "id": "ir-3.3_obj.a",
+       "label": "IR-03(03)(a)",
+       "children": [
+        {
+         "id": "ir-3.3_obj.a-1",
+         "label": "IR-03(03)(a)[01]",
+         "prose": {
+          "en": "qualitative data from testing are used to determine the effectiveness of incident response processes;"
+         }
+        },
+        {
+         "id": "ir-3.3_obj.a-2",
+         "label": "IR-03(03)(a)[02]",
+         "prose": {
+          "en": "quantitative data from testing are used to determine the effectiveness of incident response processes;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ir-3.3_obj.b",
+       "label": "IR-03(03)(b)",
+       "children": [
+        {
+         "id": "ir-3.3_obj.b-1",
+         "label": "IR-03(03)(b)[01]",
+         "prose": {
+          "en": "qualitative data from testing are used to continuously improve incident response processes;"
+         }
+        },
+        {
+         "id": "ir-3.3_obj.b-2",
+         "label": "IR-03(03)(b)[02]",
+         "prose": {
+          "en": "quantitative data from testing are used to continuously improve incident response processes;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "ir-3.3_obj.c",
+       "label": "IR-03(03)(c)",
+       "children": [
+        {
+         "id": "ir-3.3_obj.c-1",
+         "label": "IR-03(03)(c)[01]",
+         "prose": {
+          "en": "qualitative data from testing are used to provide incident response measures and metrics that are accurate;"
+         }
+        },
+        {
+         "id": "ir-3.3_obj.c-2",
+         "label": "IR-03(03)(c)[02]",
+         "prose": {
+          "en": "quantitative data from testing are used to provide incident response measures and metrics that are accurate;"
+         }
+        },
+        {
+         "id": "ir-3.3_obj.c-3",
+         "label": "IR-03(03)(c)[03]",
+         "prose": {
+          "en": "qualitative data from testing are used to provide incident response measures and metrics that are consistent;"
+         }
+        },
+        {
+         "id": "ir-3.3_obj.c-4",
+         "label": "IR-03(03)(c)[04]",
+         "prose": {
+          "en": "quantitative data from testing are used to provide incident response measures and metrics that are consistent;"
+         }
+        },
+        {
+         "id": "ir-3.3_obj.c-5",
+         "label": "IR-03(03)(c)[05]",
+         "prose": {
+          "en": "qualitative data from testing are used to provide incident response measures and metrics in a reproducible format;"
+         }
+        },
+        {
+         "id": "ir-3.3_obj.c-6",
+         "label": "IR-03(03)(c)[06]",
+         "prose": {
+          "en": "quantitative data from testing are used to provide incident response measures and metrics in a reproducible format."
+         }
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IR-03(03)-Examine",
+     "objects": [
+      {
+       "en": "Incident response policy"
+      },
+      {
+       "en": "contingency planning policy"
+      },
+      {
+       "en": "procedures addressing incident response testing"
+      },
+      {
+       "en": "incident response testing documentation"
+      },
+      {
+       "en": "incident response plan"
+      },
+      {
+       "en": "business continuity plans"
+      },
+      {
+       "en": "contingency plans"
+      },
+      {
+       "en": "disaster recovery plans"
+      },
+      {
+       "en": "continuity of operations plans"
+      },
+      {
+       "en": "crisis communications plans"
+      },
+      {
+       "en": "critical infrastructure plans"
+      },
+      {
+       "en": "occupant emergency plans"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IR-03(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with incident response testing responsibilities"
+      },
+      {
+       "en": "organizational personnel with responsibilities for testing organizational plans related to incident response testing"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IR-3"
+  }
+ ]
+}

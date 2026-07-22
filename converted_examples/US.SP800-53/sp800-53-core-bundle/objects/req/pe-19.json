@@ -1,0 +1,107 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/PE-19",
+ "version": "5.2.0",
+ "label": "PE-19",
+ "lifecycle": "active",
+ "title": "Information Leakage",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Protect the system from information leakage due to electromagnetic signals emanations."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Information leakage is the intentional or unintentional release of data or information to an untrusted environment from electromagnetic signals emanations. The security categories or classifications of systems (with respect to confidentiality), organizational security policies, and risk tolerance guide the selection of controls employed to protect systems against information leakage due to electromagnetic signals emanations."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "pe-19_obj",
+     "label": "PE-19",
+     "prose": {
+      "en": "the system is protected from information leakage due to electromagnetic signal emanations."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "PE-19-Examine",
+     "objects": [
+      {
+       "en": "Physical and environmental protection policy"
+      },
+      {
+       "en": "procedures addressing information leakage due to electromagnetic signal emanations"
+      },
+      {
+       "en": "mechanisms protecting the system against electronic signal emanations"
+      },
+      {
+       "en": "facility housing the system"
+      },
+      {
+       "en": "records from electromagnetic signal emanation tests"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "PE-19-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with responsibilities for system environmental controls"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "PE-19-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing protection from information leakage due to electromagnetic signal emanations"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.FIPS.199"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-18"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-18"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/PE-20"
+  }
+ ]
+}

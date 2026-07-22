@@ -1,0 +1,243 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SA-17.3",
+ "version": "5.2.0",
+ "label": "SA-17(3)",
+ "lifecycle": "active",
+ "title": "Formal Correspondence",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Require the developer of the system, system component, or system service to:"
+   }
+  },
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Produce, as an integral part of the development process, a formal top-level specification that specifies the interfaces to security-relevant hardware, software, and firmware in terms of exceptions, error messages, and effects;"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Show via proof to the extent feasible with additional informal demonstration as necessary, that the formal top-level specification is consistent with the formal policy model;"
+   }
+  },
+  {
+   "id": "smt.c",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Show via informal demonstration, that the formal top-level specification completely covers the interfaces to security-relevant hardware, software, and firmware;"
+   }
+  },
+  {
+   "id": "smt.d",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Show that the formal top-level specification is an accurate description of the implemented security-relevant hardware, software, and firmware; and"
+   }
+  },
+  {
+   "id": "smt.e",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Describe the security-relevant hardware, software, and firmware mechanisms not addressed in the formal top-level specification but strictly internal to the security-relevant hardware, software, and firmware."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Correspondence is an important part of the assurance gained through modeling. It demonstrates that the implementation is an accurate transformation of the model, and that any additional code or implementation details that are present have no impact on the behaviors or policies being modeled. Formal methods can be used to show that the high-level security properties are satisfied by the formal system description, and that the formal system description is correctly implemented by a description of some lower level, including a hardware description. Consistency between the formal top-level specification and the formal policy models is generally not amenable to being fully proven. Therefore, a combination of formal and informal methods may be needed to demonstrate such consistency. Consistency between the formal top-level specification and the actual implementation may require the use of an informal demonstration due to limitations on the applicability of formal methods to prove that the specification accurately reflects the implementation. Hardware, software, and firmware mechanisms internal to security-relevant components include mapping registers and direct memory input and output."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sa-17.3_obj",
+     "label": "SA-17(03)",
+     "children": [
+      {
+       "id": "sa-17.3_obj.a",
+       "label": "SA-17(03)(a)",
+       "children": [
+        {
+         "id": "sa-17.3_obj.a-1",
+         "label": "SA-17(03)(a)[01]",
+         "prose": {
+          "en": "as an integral part of the development process, the developer of the system, system component, or system service is required to produce a formal top-level specification that specifies the interfaces to security-relevant hardware, software, and firmware in terms of exceptions;"
+         }
+        },
+        {
+         "id": "sa-17.3_obj.a-2",
+         "label": "SA-17(03)(a)[02]",
+         "prose": {
+          "en": "as an integral part of the development process, the developer of the system, system component, or system service is required to produce a formal top-level specification that specifies the interfaces to security-relevant hardware, software, and firmware in terms of error messages;"
+         }
+        },
+        {
+         "id": "sa-17.3_obj.a-3",
+         "label": "SA-17(03)(a)[03]",
+         "prose": {
+          "en": "as an integral part of the development process, the developer of the system, system component, or system service is required to produce a formal top-level specification that specifies the interfaces to security-relevant hardware, software, and firmware in terms of effects;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sa-17.3_obj.b",
+       "label": "SA-17(03)(b)",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to show proof that the formal top-level specification is consistent with the formal policy model to the extent feasible with additional informal demonstration as necessary;"
+       }
+      },
+      {
+       "id": "sa-17.3_obj.c",
+       "label": "SA-17(03)(c)",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to show via informal demonstration that the formal top-level specification completely covers the interfaces to security-relevant hardware, software, and firmware;"
+       }
+      },
+      {
+       "id": "sa-17.3_obj.d",
+       "label": "SA-17(03)(d)",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to show that the formal top-level specification is an accurate description of the implemented security-relevant hardware, software, and firmware;"
+       }
+      },
+      {
+       "id": "sa-17.3_obj.e",
+       "label": "SA-17(03)(e)",
+       "prose": {
+        "en": "the developer of the system, system component, or system service is required to describe the security-relevant hardware, software, and firmware mechanisms that are not addressed in the formal top-level specification but are strictly internal to the security-relevant hardware, software, and firmware."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SA-17(03)-Examine",
+     "objects": [
+      {
+       "en": "System and services acquisition policy"
+      },
+      {
+       "en": "enterprise architecture policy"
+      },
+      {
+       "en": "formal policy model"
+      },
+      {
+       "en": "procedures addressing developer security architecture and design specifications for the system"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for the system, system component, or system service"
+      },
+      {
+       "en": "formal top-level specification documentation"
+      },
+      {
+       "en": "system security architecture and design documentation"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "documentation describing security-relevant hardware, software, and firmware mechanisms not addressed in the formal top-level specification documentation"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SA-17(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and service acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel with information security architecture and design responsibilities"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-25"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-5"
+  }
+ ]
+}

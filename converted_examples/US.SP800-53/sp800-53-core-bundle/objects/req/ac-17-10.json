@@ -1,0 +1,162 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/AC-17.10",
+ "version": "5.2.0",
+ "label": "AC-17(10)",
+ "lifecycle": "active",
+ "title": "Authenticate Remote Commands",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Implement {param:ac-17.10_odp.01} to authenticate {param:ac-17.10_odp.02}."
+   },
+   "parameters": [
+    {
+     "name": "ac-17.10_odp.01",
+     "type": "string",
+     "label": "mechanisms"
+    },
+    {
+     "name": "ac-17.10_odp.02",
+     "type": "string",
+     "label": "remote commands"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Authenticating remote commands protects against unauthorized commands and the replay of authorized commands. The ability to authenticate remote commands is important for remote systems for which loss, malfunction, misdirection, or exploitation would have immediate or serious consequences, such as injury, death, property damage, loss of high value assets, failure of mission or business functions, or compromise of classified or controlled unclassified information. Authentication mechanisms for remote commands ensure that systems accept and execute commands in the order intended, execute only authorized commands, and reject unauthorized commands. Cryptographic mechanisms can be used, for example, to authenticate remote commands."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ac-17.10_obj",
+     "label": "AC-17(10)",
+     "prose": {
+      "en": "{param:ac-17.10_odp.01} are implemented to authenticate {param:ac-17.10_odp.02}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "AC-17(10)-Examine",
+     "objects": [
+      {
+       "en": "Access control policy"
+      },
+      {
+       "en": "procedures addressing authentication of remote commands"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "AC-17(10)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "AC-17(10)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing authentication of remote commands"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ac-17.10_odp.01": {
+     "guidelines": [
+      {
+       "en": "mechanisms implemented to authenticate remote commands are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-17.10_prm_1"
+     ]
+    },
+    "ac-17.10_odp.02": {
+     "guidelines": [
+      {
+       "en": "remote commands to be authenticated by mechanisms are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ac-17.10_prm_2"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/AC-17"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-12"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-13"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-23"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-3.9",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SI-3.9",
+    "mode": "renamed",
+    "label": "SI-03(09)",
+    "title": "Authenticate Remote Commands"
+   }
+  ]
+ }
+}

@@ -1,0 +1,128 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/CP-4.4",
+ "version": "5.2.0",
+ "label": "CP-4(4)",
+ "lifecycle": "active",
+ "title": "Full Recovery and Reconstitution",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Include a full recovery and reconstitution of the system to a known state as part of contingency plan testing."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Recovery is executing contingency plan activities to restore organizational mission and business functions. Reconstitution takes place following recovery and includes activities for returning systems to fully operational states. Organizations establish a known state for systems that includes system state information for hardware, software programs, and data. Preserving system state information facilitates system restart and return to the operational mode of organizations with less disruption of mission and business processes."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "cp-4.4_obj",
+     "label": "CP-04(04)",
+     "children": [
+      {
+       "id": "cp-4.4_obj-1",
+       "label": "CP-04(04)[01]",
+       "prose": {
+        "en": "a full recovery of the system to a known state is included as part of contingency plan testing;"
+       }
+      },
+      {
+       "id": "cp-4.4_obj-2",
+       "label": "CP-04(04)[02]",
+       "prose": {
+        "en": "a full reconstitution of the system to a known state is included as part of contingency plan testing."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "CP-04(04)-Examine",
+     "objects": [
+      {
+       "en": "Contingency planning policy"
+      },
+      {
+       "en": "procedures addressing system recovery and reconstitution"
+      },
+      {
+       "en": "contingency plan"
+      },
+      {
+       "en": "contingency plan test documentation"
+      },
+      {
+       "en": "contingency plan test results"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "CP-04(04)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with contingency plan testing responsibilities"
+      },
+      {
+       "en": "organizational personnel with system recovery and reconstitution responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "CP-04(04)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for contingency plan testing"
+      },
+      {
+       "en": "mechanisms supporting contingency plan testing"
+      },
+      {
+       "en": "mechanisms supporting recovery and reconstitution of the system"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CP-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-24"
+  }
+ ]
+}

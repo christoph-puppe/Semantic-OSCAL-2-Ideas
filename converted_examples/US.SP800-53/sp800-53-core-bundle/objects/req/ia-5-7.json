@@ -1,0 +1,107 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/IA-5.7",
+ "version": "5.2.0",
+ "label": "IA-5(7)",
+ "lifecycle": "active",
+ "title": "No Embedded Unencrypted Static Authenticators",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Ensure that unencrypted static authenticators are not embedded in applications or other forms of static storage."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "In addition to applications, other forms of static storage include access scripts and function keys. Organizations exercise caution when determining whether embedded or stored authenticators are in encrypted or unencrypted form. If authenticators are used in the manner stored, then those representations are considered unencrypted authenticators."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ia-5.7_obj",
+     "label": "IA-05(07)",
+     "prose": {
+      "en": "unencrypted static authenticators are not embedded in applications or other forms of static storage."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "IA-05(07)-Examine",
+     "objects": [
+      {
+       "en": "Identification and authentication policy"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "procedures addressing authenticator management"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "logical access scripts"
+      },
+      {
+       "en": "application code reviews for detecting unencrypted static authenticators"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "IA-05(07)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with authenticator management responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      },
+      {
+       "en": "system developers"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "IA-05(07)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms supporting and/or implementing authenticator management capability"
+      },
+      {
+       "en": "mechanisms implementing authentication in applications"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/IA-5"
+  }
+ ]
+}

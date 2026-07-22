@@ -1,0 +1,125 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/MA-6.3",
+ "version": "5.2.0",
+ "label": "MA-6(3)",
+ "lifecycle": "active",
+ "title": "Automated Support for Predictive Maintenance",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Transfer predictive maintenance data to a maintenance management system using {param:ma-06.03_odp}."
+   },
+   "parameters": [
+    {
+     "name": "ma-06.03_odp",
+     "type": "string",
+     "label": "automated mechanisms"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "A computerized maintenance management system maintains a database of information about the maintenance operations of organizations and automates the processing of equipment condition data to trigger maintenance planning, execution, and reporting."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "ma-6.3_obj",
+     "label": "MA-06(03)",
+     "prose": {
+      "en": "predictive maintenance data is transferred to a maintenance management system using {param:ma-06.03_odp}."
+     }
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "MA-06(03)-Examine",
+     "objects": [
+      {
+       "en": "Maintenance policy"
+      },
+      {
+       "en": "procedures addressing system maintenance"
+      },
+      {
+       "en": "service provider contracts"
+      },
+      {
+       "en": "service-level agreements"
+      },
+      {
+       "en": "maintenance records"
+      },
+      {
+       "en": "list of system components requiring predictive maintenance"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "MA-06(03)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system maintenance responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system/network administrators"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "MA-06(03)-Test",
+     "objects": [
+      {
+       "en": "Automated mechanisms implementing the transfer of predictive maintenance data to a computerized maintenance management system"
+      },
+      {
+       "en": "operations of the computer maintenance management system"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "ma-06.03_odp": {
+     "guidelines": [
+      {
+       "en": "automated mechanisms used to transfer predictive maintenance data to a maintenance management system are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "ma-6.3_prm_1"
+     ]
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/MA-6"
+  }
+ ]
+}

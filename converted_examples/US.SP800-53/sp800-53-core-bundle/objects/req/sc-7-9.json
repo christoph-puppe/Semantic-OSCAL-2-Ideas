@@ -1,0 +1,177 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SC-7.9",
+ "version": "5.2.0",
+ "label": "SC-7(9)",
+ "lifecycle": "active",
+ "title": "Restrict Threatening Outgoing Communications Traffic",
+ "statements": [
+  {
+   "id": "smt.a",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Detect and deny outgoing communications traffic posing a threat to external systems; and"
+   }
+  },
+  {
+   "id": "smt.b",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/system"
+   ],
+   "prose": {
+    "en": "Audit the identity of internal users associated with denied communications."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Detecting outgoing communications traffic from internal actions that may pose threats to external systems is known as extrusion detection. Extrusion detection is carried out within the system at managed interfaces. Extrusion detection includes the analysis of incoming and outgoing communications traffic while searching for indications of internal threats to the security of external systems. Internal threats to external systems include traffic indicative of denial-of-service attacks, traffic with spoofed source addresses, and traffic that contains malicious code. Organizations have criteria to determine, update, and manage identified threats related to extrusion detection."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sc-7.9_obj",
+     "label": "SC-07(09)",
+     "children": [
+      {
+       "id": "sc-7.9_obj.a",
+       "label": "SC-07(09)(a)",
+       "children": [
+        {
+         "id": "sc-7.9_obj.a-1",
+         "label": "SC-07(09)(a)[01]",
+         "prose": {
+          "en": "outgoing communications traffic posing a threat to external systems is detected;"
+         }
+        },
+        {
+         "id": "sc-7.9_obj.a-2",
+         "label": "SC-07(09)(a)[02]",
+         "prose": {
+          "en": "outgoing communications traffic posing a threat to external systems is denied;"
+         }
+        }
+       ]
+      },
+      {
+       "id": "sc-7.9_obj.b",
+       "label": "SC-07(09)(b)",
+       "prose": {
+        "en": "the identity of internal users associated with denied communications is audited."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SC-07(09)-Examine",
+     "objects": [
+      {
+       "en": "System and communications protection policy"
+      },
+      {
+       "en": "procedures addressing boundary protection"
+      },
+      {
+       "en": "system design documentation"
+      },
+      {
+       "en": "system hardware and software"
+      },
+      {
+       "en": "system architecture"
+      },
+      {
+       "en": "system configuration settings and associated documentation"
+      },
+      {
+       "en": "system audit records"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SC-07(09)-Interview",
+     "objects": [
+      {
+       "en": "System/network administrators"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "system developer"
+      },
+      {
+       "en": "organizational personnel with boundary protection responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SC-07(09)-Test",
+     "objects": [
+      {
+       "en": "Mechanisms implementing boundary protection capabilities"
+      },
+      {
+       "en": "mechanisms implementing the detection and denial of threatening outgoing communications traffic"
+      },
+      {
+       "en": "mechanisms implementing auditing of outgoing communications traffic"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-7"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AU-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-38"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SC-44"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-4"
+  }
+ ]
+}

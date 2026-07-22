@@ -1,0 +1,172 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SR-5.2",
+ "version": "5.2.0",
+ "label": "SR-5(2)",
+ "lifecycle": "active",
+ "title": "Assessments Prior to Selection, Acceptance, Modification, or Update",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Assess the system, system component, or system service prior to selection, acceptance, modification, or update."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "Organizational personnel or independent, external entities conduct assessments of systems, components, products, tools, and services to uncover evidence of tampering, unintentional and intentional vulnerabilities, or evidence of non-compliance with supply chain controls. These include malicious code, malicious processes, defective software, backdoors, and counterfeits. Assessments can include evaluations; design proposal reviews; visual or physical inspection; static and dynamic analyses; visual, x-ray, or magnetic particle inspections; simulations; white, gray, or black box testing; fuzz testing; stress testing; and penetration testing (see SR-6(1) ). Evidence generated during assessments is documented for follow-on actions by organizations. The evidence generated during the organizational or independent assessments of supply chain elements may be used to improve supply chain processes and inform the supply chain risk management process. The evidence can be leveraged in follow-on assessments. Evidence and other documentation may be shared in accordance with organizational agreements."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sr-5.2_obj",
+     "label": "SR-05(02)",
+     "children": [
+      {
+       "id": "sr-5.2_obj-1",
+       "label": "SR-05(02)[01]",
+       "prose": {
+        "en": "the system, system component, or system service is assessed prior to selection;"
+       }
+      },
+      {
+       "id": "sr-5.2_obj-2",
+       "label": "SR-05(02)[02]",
+       "prose": {
+        "en": "the system, system component, or system service is assessed prior to acceptance;"
+       }
+      },
+      {
+       "id": "sr-5.2_obj-3",
+       "label": "SR-05(02)[03]",
+       "prose": {
+        "en": "the system, system component, or system service is assessed prior to modification;"
+       }
+      },
+      {
+       "id": "sr-5.2_obj-4",
+       "label": "SR-05(02)[04]",
+       "prose": {
+        "en": "the system, system component, or system service is assessed prior to update."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SR-05(02)-Examine",
+     "objects": [
+      {
+       "en": "System security plan"
+      },
+      {
+       "en": "system and services acquisition policy"
+      },
+      {
+       "en": "procedures addressing supply chain protection"
+      },
+      {
+       "en": "procedures addressing the integration of information security requirements into the acquisition process"
+      },
+      {
+       "en": "security test and evaluation results"
+      },
+      {
+       "en": "vulnerability assessment results"
+      },
+      {
+       "en": "penetration testing results"
+      },
+      {
+       "en": "organizational risk assessment results"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SR-05(02)-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with system and services acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain protection responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SR-05(02)-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for conducting assessments prior to selection, acceptance, or update"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the conducting of assessments prior to selection, acceptance, or update"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/CA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/RA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SI-7"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-12.7",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-12.7",
+    "mode": "renamed",
+    "label": "SA-12(07)",
+    "title": "Assessments Prior to Selection / Acceptance / Update"
+   }
+  ]
+ }
+}

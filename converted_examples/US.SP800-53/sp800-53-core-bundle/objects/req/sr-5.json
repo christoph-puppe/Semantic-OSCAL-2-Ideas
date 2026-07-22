@@ -1,0 +1,270 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/req/SR-5",
+ "version": "5.2.0",
+ "label": "SR-5",
+ "lifecycle": "active",
+ "title": "Acquisition Strategies, Tools, and Methods",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.nist.gov/sp800-53/party/organization"
+   ],
+   "prose": {
+    "en": "Employ the following acquisition strategies, contract tools, and procurement methods to protect against, identify, and mitigate supply chain risks: {param:sr-05_odp}."
+   },
+   "parameters": [
+    {
+     "name": "sr-05_odp",
+     "type": "string",
+     "label": "strategies, tools, and methods"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.nist.gov/sp800-53/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The use of the acquisition process provides an important vehicle to protect the supply chain. There are many useful tools and techniques available, including obscuring the end use of a system or system component, using blind or filtered buys, requiring tamper-evident packaging, or using trusted or controlled distribution. The results from a supply chain risk assessment can guide and inform the strategies, tools, and methods that are most applicable to the situation. Tools and techniques may provide protections against unauthorized production, theft, tampering, insertion of counterfeits, insertion of malicious software or backdoors, and poor development practices throughout the system development life cycle. Organizations also consider providing incentives for suppliers who implement controls, promote transparency into their processes and security and privacy practices, provide contract language that addresses the prohibition of tainted or counterfeit components, and restrict purchases from untrustworthy suppliers. Organizations consider providing training, education, and awareness programs for personnel regarding supply chain risk, available mitigation strategies, and when the programs should be employed. Methods for reviewing and protecting development plans, documentation, and evidence are commensurate with the security and privacy requirements of the organization. Contracts may specify documentation protection requirements."
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/sp800-53a@1": {
+   "objectives": [
+    {
+     "id": "sr-5_obj",
+     "label": "SR-05",
+     "children": [
+      {
+       "id": "sr-5_obj-1",
+       "label": "SR-05[01]",
+       "prose": {
+        "en": "{param:sr-05_odp} are employed to protect against supply chain risks;"
+       }
+      },
+      {
+       "id": "sr-5_obj-2",
+       "label": "SR-05[02]",
+       "prose": {
+        "en": "{param:sr-05_odp} are employed to identify supply chain risks;"
+       }
+      },
+      {
+       "id": "sr-5_obj-3",
+       "label": "SR-05[03]",
+       "prose": {
+        "en": "{param:sr-05_odp} are employed to mitigate supply chain risks."
+       }
+      }
+     ]
+    }
+   ],
+   "methods": [
+    {
+     "method": "EXAMINE",
+     "label": "SR-05-Examine",
+     "objects": [
+      {
+       "en": "Supply chain risk management policy"
+      },
+      {
+       "en": "supply chain risk management procedures"
+      },
+      {
+       "en": "supply chain risk management plan"
+      },
+      {
+       "en": "system and services acquisition policy"
+      },
+      {
+       "en": "system and services acquisition procedures"
+      },
+      {
+       "en": "procedures addressing supply chain protection"
+      },
+      {
+       "en": "procedures addressing the integration of information security and privacy requirements into the acquisition process"
+      },
+      {
+       "en": "solicitation documentation"
+      },
+      {
+       "en": "acquisition documentation (including purchase orders)"
+      },
+      {
+       "en": "service level agreements"
+      },
+      {
+       "en": "acquisition contracts for systems, system components, or services"
+      },
+      {
+       "en": "documentation of training, education, and awareness programs for personnel regarding supply chain risk"
+      },
+      {
+       "en": "system security plan"
+      },
+      {
+       "en": "privacy plan"
+      },
+      {
+       "en": "other relevant documents or records"
+      }
+     ]
+    },
+    {
+     "method": "INTERVIEW",
+     "label": "SR-05-Interview",
+     "objects": [
+      {
+       "en": "Organizational personnel with acquisition responsibilities"
+      },
+      {
+       "en": "organizational personnel with information security and privacy responsibilities"
+      },
+      {
+       "en": "organizational personnel with supply chain risk management responsibilities"
+      }
+     ]
+    },
+    {
+     "method": "TEST",
+     "label": "SR-05-Test",
+     "objects": [
+      {
+       "en": "Organizational processes for defining and employing tailored acquisition strategies, contract tools, and procurement methods"
+      },
+      {
+       "en": "mechanisms supporting and/or implementing the definition and employment of tailored acquisition strategies, contract tools, and procurement methods"
+      }
+     ]
+    }
+   ]
+  },
+  "https://ns.nist.gov/sp800-53/facet/odp@1": {
+   "params": {
+    "sr-05_odp": {
+     "guidelines": [
+      {
+       "en": "acquisition strategies, contract tools, and procurement methods to protect against, identify, and mitigate supply chain risks are defined;"
+      }
+     ],
+     "alt-identifiers": [
+      "sr-5_prm_1"
+     ],
+     "alt-label": "acquisition strategies, contract tools, and procurement methods"
+    }
+   }
+  },
+  "https://ns.nist.gov/sp800-53/facet/rmf@1": {
+   "contributes-to-assurance": true
+  }
+ },
+ "relations": [
+  {
+   "type": "reference",
+   "ref": "https://www.congress.gov/bill/115th-congress/senate-bill/3085"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.federalregister.gov/d/2020-18939"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.whitehouse.gov/presidential-actions/executive-order-securing-information-communications-technology-services-supply-chain"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.iso.org/standard/59648.html"
+  },
+  {
+   "type": "reference",
+   "ref": "https://www.iso.org/standard/74399.html"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-30r1"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.SP.800-161"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.7622"
+  },
+  {
+   "type": "reference",
+   "ref": "https://doi.org/10.6028/NIST.IR.8272"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/AT-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-3"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-4"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-5"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-8"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-15"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-9"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.nist.gov/sp800-53/req/SR-11"
+  }
+ ],
+ "replaces": [
+  {
+   "ref": "https://ns.nist.gov/sp800-53/req/SA-12.1",
+   "mode": "renamed"
+  }
+ ],
+ "annotations": {
+  "nist-withdrawal": [
+   {
+    "ref": "https://ns.nist.gov/sp800-53/req/SA-12.1",
+    "mode": "renamed",
+    "label": "SA-12(01)",
+    "title": "Acquisition Strategies / Tools / Methods"
+   }
+  ]
+ }
+}

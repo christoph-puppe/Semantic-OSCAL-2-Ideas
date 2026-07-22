@@ -1,0 +1,18 @@
+{
+ "id": "https://ns.nist.gov/sp800-53/facet/sp800-53a",
+ "version": "1.0.0",
+ "modifies-semantics": [],
+ "note": "ILLUSTRATIVE STUB - normative schemas ship with the gate-2 deliverable",
+ "schema": {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+   "objectives": {
+    "type": "array"
+   },
+   "methods": {
+    "type": "array"
+   }
+  }
+ }
+}
