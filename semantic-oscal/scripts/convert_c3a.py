@@ -47,7 +47,7 @@ RULES = [
 MODAL = {"MUSS": "must", "DARF NICHT": "must-not", "MUSS NICHT": "must-not",
          "SOLLTE": "should", "SOLLTE NICHT": "should-not", "KANN": "may", "DARF NUR": "may-only"}
 
-bundle = Bundle(os.path.join(OUTDIR, "c3a-core-bundle"))
+bundle = Bundle(os.path.join(OUTDIR, "c3a-core-bundle"), lang="de")
 mod_count = collections.Counter()
 sec_members = collections.defaultdict(list)
 class_members = collections.defaultdict(list)
@@ -133,8 +133,7 @@ for cls, refs in sorted(class_members.items()):
                 "title": f"C3A class: {cls}",
                 "members": [{"ref": r, "sequence": (i + 1) * 10} for i, r in enumerate(sorted(set(refs)))]})
 
-bundle.stub("statement-grammar-stub.json", F_GRAM.split("@")[0], [],
-            {"by-statement": {"type": "object"}})
+bundle.pin_stdlib("statement-grammar-1.0.0.json")   # 26: stdlib pins are VERBATIM
 bundle.stub("c3a-taxonomy-stub.json", F_TAX.split("@")[0], [],
             {"effort-level": {"type": "string"}, "tags": {"type": "array"}})
 bundle.stub("c3a-narrative-stub.json", F_NARR.split("@")[0], [], {"guidance": {"type": "array"}})

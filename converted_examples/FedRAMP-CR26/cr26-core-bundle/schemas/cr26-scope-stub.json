@@ -4,14 +4,27 @@
  "modifies-semantics": [
   "selection"
  ],
- "note": "ILLUSTRATIVE STUB - normative schemas ship with the v0.6 schema deliverable",
+ "note": "NORMATIVE pinned payload schema (backlog 26): closed shape - unknown keys are rejected, never smuggled",
  "schema": {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "properties": {
    "classes": {
     "type": "array"
+   },
+   "types": {
+    "type": "array"
+   },
+   "paths": {
+    "type": "array"
+   },
+   "affects": {
+    "type": "array"
+   },
+   "tag": {
+    "type": "string"
    }
-  }
+  },
+  "additionalProperties": false
  }
 }

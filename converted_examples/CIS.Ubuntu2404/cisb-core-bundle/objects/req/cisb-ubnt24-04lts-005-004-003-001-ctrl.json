@@ -3,7 +3,9 @@
  "version": "1.0.0",
  "label": "5.4.3.1",
  "lifecycle": "active",
- "title": "Ensure nologin is not listed in /etc/shells",
+ "title": {
+  "en": "Ensure nologin is not listed in /etc/shells"
+ },
  "statements": [
   {
    "id": "s1",

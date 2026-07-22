@@ -2,7 +2,9 @@
  "id": "https://ns.cisecurity.org/benchmark/ubuntu-24.04-lts/set/tax/cisb-ubnt24-04lts-001-007-grp",
  "version": "1.0.0",
  "lifecycle": "active",
- "title": "Configure GNOME Display Manager",
+ "title": {
+  "en": "Configure GNOME Display Manager"
+ },
  "members": [
   {
    "ref": "https://ns.cisecurity.org/benchmark/ubuntu-24.04-lts/req/cisb-ubnt24.04lts-001.007.001_ctrl",

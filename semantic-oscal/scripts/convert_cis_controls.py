@@ -160,8 +160,7 @@ for kind, mem in [("asset", asset_members), ("function", func_members)]:
 s1, s2, s3 = (set(ig_members.get(k, [])) for k in ("1", "2", "3"))
 cumulative_ok = s1 <= s2 <= s3
 
-bundle.stub("assessment-criteria-stub.json", F_ACRIT.split("@")[0], ["assessment"],
-            {"objectives": {"type": "array"}})
+bundle.pin_stdlib("assessment-criteria-1.0.0.json")   # 26: stdlib pins are VERBATIM
 bundle.stub("cis-narrative-stub.json", F_NARR.split("@")[0], [],
             {"example": {"type": "array"}, "guidance": {"type": "array"}})
 bundle.write({"source": cat["metadata"]["title"], "source-version": VER,

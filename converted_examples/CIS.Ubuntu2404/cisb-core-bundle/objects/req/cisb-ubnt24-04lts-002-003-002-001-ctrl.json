@@ -3,7 +3,9 @@
  "version": "1.0.0",
  "label": "2.3.2.1",
  "lifecycle": "active",
- "title": "Ensure systemd-timesyncd configured with authorized timeserver",
+ "title": {
+  "en": "Ensure systemd-timesyncd configured with authorized timeserver"
+ },
  "statements": [
   {
    "id": "s1",

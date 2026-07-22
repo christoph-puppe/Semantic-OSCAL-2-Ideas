@@ -2,7 +2,9 @@
  "id": "https://ns.cisecurity.org/benchmark/ubuntu-24.04-lts/set/profile/level-2-server",
  "version": "1.0.0",
  "lifecycle": "active",
- "title": "Benchmark profile: Level 2  - Server",
+ "title": {
+  "en": "Benchmark profile: Level 2  - Server"
+ },
  "members": [
   {
    "ref": "https://ns.cisecurity.org/benchmark/ubuntu-24.04-lts/req/cisb-ubnt24.04lts-001.001.001.001_ctrl",

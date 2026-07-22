@@ -138,9 +138,19 @@ The project moves through evidence gates; nothing advances on narrative.
   catalog bundles schema-valid against the official NIST 1.2.2 schema,
   5,647/5,647 objects round-trip digest-equal). Numbers:
   [`drafts/gate-4-measurement.md`](drafts/gate-4-measurement.md).
-- **Next.** The converter rerun (the `text` primitive delivery, `sharpens`→URI,
-  real pinned facet schemas), OSCAL mapping/profile-model exports, and the
-  standing invitation: a third-party clean-room validator build against the
+- **The converter rerun — done (2026-07-22, same day).** The three
+  decided-but-undelivered items landed in one digest churn: the **`text`
+  primitive** is live everywhere (every kernel human-readable field is
+  `{BCP-47: string}` — the EU-27-languages decision, delivered; German
+  corpora carry `de`, and the reader renders both), extension relation
+  types are **URI-constrained** in the schema, and every pinned facet
+  schema is **normative and fail-closed** (stdlib pins verbatim, divergence
+  rejected by both validators). **The spec-feedback backlog is empty** —
+  every item that ever entered it left through a register entry.
+- **Next: the 1.0 release train.** Spec consolidation into a release
+  document, `v1.0.0-rc.1`, one adversarial review round of the consolidated
+  text — plus OSCAL mapping/profile-model exports and the standing
+  invitation: a third-party clean-room validator build against the
   conformance corpus.
 
 Reproduce the whole verdict in one line (needs [uv](https://docs.astral.sh/uv/)):

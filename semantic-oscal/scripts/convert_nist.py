@@ -358,13 +358,16 @@ bundle.write({"source": cat["metadata"]["title"], "source-version": VER,
 # ---------- corpus cross-check: mapping endpoints vs minted ids ----------
 cited = collections.Counter()
 for base, _, files in os.walk(os.path.join(ROOT, "converted_examples")):
-    if "US.SP800-53" in base: continue
+    if "US.SP800-53" in base or "oscal-export" in base: continue
     for fn in files:
         if not fn.endswith(".json"): continue
         try:
             txt = open(os.path.join(base, fn), encoding="utf-8").read()
         except OSError:
             continue
+        # carried COPIES of sp800-53 objects (the authorization-package
+        # pattern) are the objects themselves, not citations - skip them
+        if '"id": "https://ns.nist.gov/sp800-53/' in txt[:400]: continue
         for m in re.finditer(r'"https://ns\.nist\.gov/sp800-53/req/([A-Za-z0-9.()-]+)"', txt):
             cited[m.group(1)] += 1
 minted_names = {rid.rsplit("/", 1)[-1] for cid, (rid, _, _) in req_ids.items()}

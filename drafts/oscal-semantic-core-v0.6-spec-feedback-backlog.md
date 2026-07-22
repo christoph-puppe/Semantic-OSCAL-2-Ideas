@@ -6,11 +6,25 @@ proposed disposition, and its source. This file is the input queue
 for the v0.6 specification revision; items leave it only via a
 decision recorded in the register.
 
+**THE BACKLOG IS EMPTY** (2026-07-22, the converter rerun — register
+"Amendments — the converter rerun"): **#12 DELIVERED** (the `text`
+primitive live in schema, all 11 bundles, fixtures, examples, reader
+v1.6.1, and the OSCAL export — D9 rev 2) · **#20 DELIVERED** (relation
+extension types URI-constrained in the schema; `sharpens` ×28 migrated
+to `https://ns.bsi.bund.de/c5/rel/sharpens`) · **#26 DELIVERED** (all
+pins fail-closed `additionalProperties: false`; stdlib pins VERBATIM
+with divergence enforced by both validators). Every item that ever
+entered this file has left it through a register entry.
+
+<details><summary>The last open rows as they stood (closed by the rerun)</summary>
+
 | # | Item | Evidence | Proposed disposition | Source |
 |---|---|---|---|---|
 | 12 | **`text` primitive — DECIDED, adopt** *(author 2026-07-22; register "D9 rev 2").* `text` = `{BCP-47: string}` for all human-readable fields (`title` ×3,041, Mapping `rationale` ×373, action/capability descriptions, deviation rationale, facet free text); identifiers stay strings (`id`/`version`/codes/`label`). Generalizes the existing `langMap`. Payload harmonization **shipped for ISM + CR26** (2026-07-21). | **Rationale: EU standards must be available in all 27 official languages** (NIS2/DORA/CRA); the tagged-vs-bare inconsistency is already measured (converters disagreed) | Delivery — schema field-switch + all-converter reruns + full re-pin — **rides the converter rerun** (a transitional string-or-`text` schema MAY bridge); stays open until delivered | Review round 1, finding 3 |
 | 20 | **Relations: constrain extension types to URI shape** *(round-2 partial).* Done: D13 row aligned with B.3 (`remove-relation(required) ⇒ Deviation`); C.8 `supersedes` deleted (register "C.8 rev"). Remaining: the schema types relation `type` as any non-empty string, so a typo'd base code silently becomes a carried extension (P9b-4). **Blocked on the converter rerun** migrating the corpus's bare-word `sharpens` ×28 to a namespaced URI. | P9b-4; `sharpens` ×28 measured | After the rerun: constrain extension relation `type` to a URI shape (base codes ∪ URI) in the schema; add a vector | P9 run 2 |
 | 26 | **Facet enforcement: ship real pinned schemas + pin-honoring** *(round-2 partial).* Decision recorded (register "D26"): stdlib strict, non-stdlib against the pin. Remaining: bundles pin permissive illustrative stubs (`additionalProperties` defaults `true`), so framework/compat payloads are under-validated and the reference validator diverges from a pin-honoring sealed tool. | Demonstrated: `cr26/scope` stub accepts a smuggled key; stubs are ILLUSTRATIVE | **Converter rerun** ships pinned schemas with `additionalProperties:false`; fix pin-vs-descriptor precedence | P9c run (2026-07-22), Major P9c-3 |
+
+</details>
 
 **Closed 2026-07-21** (review round 1 decisions; register "Amendments —
 v0.6 cycle" + spec changelog IV.7): **#1** → D9 rev (parameter

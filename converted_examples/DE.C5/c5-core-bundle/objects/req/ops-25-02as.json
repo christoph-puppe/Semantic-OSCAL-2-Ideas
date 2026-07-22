@@ -3,7 +3,9 @@
  "version": "C5:2026",
  "label": "OPS-25-02AS",
  "lifecycle": "active",
- "title": "OPS-25 Additional Sharpen 02AS",
+ "title": {
+  "en": "OPS-25 Additional Sharpen 02AS"
+ },
  "statements": [
   {
    "id": "stmt",
@@ -18,7 +20,7 @@
  ],
  "relations": [
   {
-   "type": "sharpens",
+   "type": "https://ns.bsi.bund.de/c5/rel/sharpens",
    "ref": "https://ns.bsi.bund.de/c5/req/ops-25-02b"
   }
  ]

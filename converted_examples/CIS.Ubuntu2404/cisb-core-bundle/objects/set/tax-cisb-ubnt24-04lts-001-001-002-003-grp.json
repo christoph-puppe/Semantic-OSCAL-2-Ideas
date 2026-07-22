@@ -2,7 +2,9 @@
  "id": "https://ns.cisecurity.org/benchmark/ubuntu-24.04-lts/set/tax/cisb-ubnt24-04lts-001-001-002-003-grp",
  "version": "1.0.0",
  "lifecycle": "active",
- "title": "Configure /home",
+ "title": {
+  "en": "Configure /home"
+ },
  "members": [
   {
    "ref": "https://ns.cisecurity.org/benchmark/ubuntu-24.04-lts/req/cisb-ubnt24.04lts-001.001.002.003.001_ctrl",

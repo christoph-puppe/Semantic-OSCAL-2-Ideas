@@ -213,7 +213,7 @@ def mint_requirement(prefix_ns, c, version, bm_map):
     return rid,req
 
 # rebuild output (lib Bundle: Windows-safe in-place writes)
-bundle=Bundle(OUT)
+bundle=Bundle(OUT,lang="de")
 paths=collections.Counter(); catalogs_meta=[]; baseline=collections.defaultdict(list)
 seq={"n":0}
 def nseq(): seq["n"]+=10; return seq["n"]
@@ -281,14 +281,11 @@ for (key,lvl),refs in sorted(baseline.items()):
 # promotions per D10 rev 2 (backlog #8): security-objectives -> [selection]
 bundle.stub("gspp-taxonomy-1.0.0-stub.json","https://ns.bsi.bund.de/facet/gspp-taxonomy",["selection"],
      {"by-statement":{"type":"object"},"observed-sec-levels":{"enum":sorted(sec_values)}})
-bundle.stub("statement-grammar-1.0.0-stub.json","https://ns.oscal.org/stdlib/facet/statement-grammar",[],
-     {"by-statement":{"type":"object"}})
-bundle.stub("security-objectives-1.0.0-stub.json","https://ns.oscal.org/stdlib/facet/security-objectives",["selection"],
-     {"by-statement":{"type":"object"}})
-bundle.stub("assessment-criteria-1.0.0-stub.json","https://ns.oscal.org/stdlib/facet/assessment-criteria",["assessment"],
-     {"by-statement":{"type":"object"}})
+bundle.pin_stdlib("statement-grammar-1.0.0.json")   # 26: stdlib pins are VERBATIM
+bundle.pin_stdlib("security-objectives-1.0.0.json")
+bundle.pin_stdlib("assessment-criteria-1.0.0.json")
 bundle.stub("gspp-narrative-1.0.0-stub.json","https://ns.bsi.bund.de/facet/gspp-narrative",[],
-     {"by-statement":{"type":"object"}})
+     {"by-statement":{"type":"object"},"description":{"type":"object"}})
 bundle.stub("oscal-1x-compat-1.0.0-stub.json","https://ns.oscal.org/compat/oscal-1x",[],
      {"param-extras":{"type":"object"}})
 

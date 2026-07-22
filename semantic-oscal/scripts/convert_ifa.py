@@ -370,9 +370,19 @@ bundle.stub("sp800-53a-stub.json", "https://ns.nist.gov/sp800-53/facet/sp800-53a
             {"objectives": {"type": "array"}, "methods": {"type": "array"}})
 bundle.stub("sp800-53-odp-stub.json", "https://ns.nist.gov/sp800-53/facet/odp", [],
             {"params": {"type": "object"}})
-bundle.stub("goodread-system-stub.json", F_SYS.split("@")[0], [], {})
+bundle.stub("goodread-system-stub.json", F_SYS.split("@")[0], [],
+            {"system-ids": {"type": "array"}, "description": {"type": "object"},
+             "status": {"type": "string"}, "sensitivity": {"type": "string"},
+             "date-authorized": {"type": "string"}, "impact": {"type": "object"},
+             "boundary": {"type": "object"}, "network-architecture": {"type": "object"},
+             "data-flow": {"type": "object"}, "users": {"type": "array"},
+             "inventory-items": {"type": "array"}, "customer-responsibilities": {"type": "array"}})
 bundle.stub("goodread-observations-stub.json", F_OBS.split("@")[0], [], {"observations": {"type": "array"}})
-bundle.stub("goodread-risk-stub.json", F_RISK.split("@")[0], [], {})
+bundle.stub("goodread-risk-stub.json", F_RISK.split("@")[0], [],
+            {"risk-status": {"type": "string"}, "deadline": {"type": "string"},
+             "statement": {"type": "object"}, "characterizations": {"type": "array"},
+             "mitigating-factors": {"type": "array"}, "target-objective-id": {"type": "string"},
+             "implementation-statement-uuid": {"type": "string"}})
 bundle.stub("goodread-ap-stub.json", F_AP.split("@")[0], [], {"activities": {"type": "array"}})
 bundle.stub("goodread-protocols-stub.json", F_PROTO.split("@")[0], [], {"protocols": {"type": "array"}})
 bundle.write({"source": "OSCAL IFA GoodRead example set (SSP 1.1.1, AP, AR, POA&M) + leveraged/"

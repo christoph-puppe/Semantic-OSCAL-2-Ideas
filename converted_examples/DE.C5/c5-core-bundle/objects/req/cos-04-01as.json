@@ -3,7 +3,9 @@
  "version": "C5:2026",
  "label": "COS-04-01AS",
  "lifecycle": "active",
- "title": "COS-04 Additional Sharpen 01AS",
+ "title": {
+  "en": "COS-04 Additional Sharpen 01AS"
+ },
  "statements": [
   {
    "id": "stmt",
@@ -18,7 +20,7 @@
  ],
  "relations": [
   {
-   "type": "sharpens",
+   "type": "https://ns.bsi.bund.de/c5/rel/sharpens",
    "ref": "https://ns.bsi.bund.de/c5/req/cos-04-01b"
   }
  ]

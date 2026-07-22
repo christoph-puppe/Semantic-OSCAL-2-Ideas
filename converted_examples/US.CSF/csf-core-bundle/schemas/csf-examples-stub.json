@@ -2,7 +2,7 @@
  "id": "https://ns.nist.gov/csf/facet/examples",
  "version": "1.0.0",
  "modifies-semantics": [],
- "note": "ILLUSTRATIVE STUB - normative schemas ship with the gate-2 deliverable",
+ "note": "NORMATIVE pinned payload schema (backlog #26): closed shape - unknown keys are rejected, never smuggled",
  "schema": {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
@@ -10,6 +10,7 @@
    "examples": {
     "type": "array"
    }
-  }
+  },
+  "additionalProperties": false
  }
 }

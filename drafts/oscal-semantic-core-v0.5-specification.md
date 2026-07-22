@@ -884,6 +884,35 @@ families (+ dsse 5 · composition 7 · conditional 8).
   author + AI, independence limited to language/runtime; the
   clean-room third-party build is the standing invitation.
 
+## IV.11 The converter rerun (2026-07-22) — the backlog reaches zero
+
+The first step of the 1.0 release train (register "Amendments — the
+converter rerun"): the three decided-but-undelivered items land in one
+digest churn across all 11 bundles.
+
+- **#12 DELIVERED — the `text` primitive.** `langMap` → `text`;
+  `title`, `rationale` (Deviation/Mapping/excludes), `description`
+  (capabilities/actions) are `{BCP-47: string | [string]}` everywhere —
+  schema, bundles (GS++ and C3A carry `de`, the rest `en`), fixtures,
+  the 13 examples, the reader (v1.6.1), and the OSCAL export
+  (round-trip stays 5,647/5,647). Identifiers and labels stay strings.
+- **#20 DELIVERED — URI-shaped extension relations.** Relation `type` =
+  the five base codes ∪ `^https?://`; C5's `sharpens` ×28 →
+  `https://ns.bsi.bund.de/c5/rel/sharpens`. Measured on the way:
+  OSCAL 1.2.2 link `rel` is a token — URI relation vocabularies cannot
+  ride 1.x links at all (props channel, counted ×28).
+- **#26 DELIVERED — normative fail-closed pins.** Every pin closes its
+  shape; stdlib ids are pinned VERBATIM and both validators reject a
+  diverging stdlib pin. The strict pins immediately surfaced every
+  undeclared payload key (30 keys across 5 facets) — each now a
+  declared contract.
+
+**The v0.6 spec-feedback backlog is EMPTY** — every item that entered
+it left via a register entry. Remaining before the 1.0 tag: spec
+consolidation into a release document (+ the D22 pre-1.0 marker and
+the name decision), `v1.0.0-rc.1`, one adversarial review round (P10)
+of the consolidated text.
+
 ---
 
 # Appendix A — Normative kernel shapes (summary; JSON Schemas at the v0.6 gate)

@@ -1,33 +1,37 @@
 {
-  "id": "https://assessor.example/finding/2026-q3-acme-017",
-  "version": "1",
-  "lifecycle": "active",
-  "assessment-ref": "https://assessor.example/assessment/2026-q3-acme",
-  "requirement-ref": "https://ns.bsi.bund.de/gspp/req/KONF.14.1",
-  "statement-ref": "s2",
-  "state": "closed",
-  "actions": [
-    {
-      "description": "Provide key-rotation runbook and rotation evidence",
-      "due": {
-        "type": "calendar-period",
-        "num": 20,
-        "unit": "bizdays",
-        "calendar-ref": "https://ns.fedramp.gov/cr26/calendar/us-federal"
-      },
-      "status": "closed"
-    }
-  ],
-  "deviations": [
-    {
-      "type": "false-positive",
-      "state": "approved",
-      "rationale": "Scanner misread KMS export; monthly rotation evidenced in KMS logs.",
-      "approver-ref": "https://assessor.example/party/lead-assessor",
-      "opened": "2026-07-16",
-      "refs": [
-        "https://cso.example/doc/kms-log-extract-2026-07"
-      ]
-    }
-  ]
+ "id": "https://assessor.example/finding/2026-q3-acme-017",
+ "version": "1",
+ "lifecycle": "active",
+ "assessment-ref": "https://assessor.example/assessment/2026-q3-acme",
+ "requirement-ref": "https://ns.bsi.bund.de/gspp/req/KONF.14.1",
+ "statement-ref": "s2",
+ "state": "closed",
+ "actions": [
+  {
+   "description": {
+    "en": "Provide key-rotation runbook and rotation evidence"
+   },
+   "due": {
+    "type": "calendar-period",
+    "num": 20,
+    "unit": "bizdays",
+    "calendar-ref": "https://ns.fedramp.gov/cr26/calendar/us-federal"
+   },
+   "status": "closed"
+  }
+ ],
+ "deviations": [
+  {
+   "type": "false-positive",
+   "state": "approved",
+   "rationale": {
+    "en": "Scanner misread KMS export; monthly rotation evidenced in KMS logs."
+   },
+   "approver-ref": "https://assessor.example/party/lead-assessor",
+   "opened": "2026-07-16",
+   "refs": [
+    "https://cso.example/doc/kms-log-extract-2026-07"
+   ]
+  }
+ ]
 }

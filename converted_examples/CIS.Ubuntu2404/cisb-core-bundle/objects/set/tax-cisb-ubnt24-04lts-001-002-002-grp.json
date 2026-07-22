@@ -2,7 +2,9 @@
  "id": "https://ns.cisecurity.org/benchmark/ubuntu-24.04-lts/set/tax/cisb-ubnt24-04lts-001-002-002-grp",
  "version": "1.0.0",
  "lifecycle": "active",
- "title": "Configure Package Updates",
+ "title": {
+  "en": "Configure Package Updates"
+ },
  "members": [
   {
    "ref": "https://ns.cisecurity.org/benchmark/ubuntu-24.04-lts/req/cisb-ubnt24.04lts-001.002.002.001_ctrl",

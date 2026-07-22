@@ -2,10 +2,48 @@
  "id": "https://ifa.gov/goodread/facet/system",
  "version": "1.0.0",
  "modifies-semantics": [],
- "note": "ILLUSTRATIVE STUB - normative schemas ship with the gate-2 deliverable",
+ "note": "NORMATIVE pinned payload schema (backlog #26): closed shape - unknown keys are rejected, never smuggled",
  "schema": {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
-  "properties": {}
+  "properties": {
+   "system-ids": {
+    "type": "array"
+   },
+   "description": {
+    "type": "object"
+   },
+   "status": {
+    "type": "string"
+   },
+   "sensitivity": {
+    "type": "string"
+   },
+   "date-authorized": {
+    "type": "string"
+   },
+   "impact": {
+    "type": "object"
+   },
+   "boundary": {
+    "type": "object"
+   },
+   "network-architecture": {
+    "type": "object"
+   },
+   "data-flow": {
+    "type": "object"
+   },
+   "users": {
+    "type": "array"
+   },
+   "inventory-items": {
+    "type": "array"
+   },
+   "customer-responsibilities": {
+    "type": "array"
+   }
+  },
+  "additionalProperties": false
  }
 }

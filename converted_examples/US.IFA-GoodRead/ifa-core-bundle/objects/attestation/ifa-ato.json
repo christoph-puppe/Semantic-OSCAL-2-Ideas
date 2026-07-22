@@ -2,7 +2,9 @@
  "id": "https://ifa.gov/goodread/attestation/ifa-ato",
  "version": "1.1.1",
  "lifecycle": "active",
- "title": "IFA ATO for IFA SYSTEM1234 (modeled from SSP date-authorized)",
+ "title": {
+  "en": "IFA ATO for IFA SYSTEM1234 (modeled from SSP date-authorized)"
+ },
  "subject-semantic-digests": [
   {
    "id": "https://ifa.gov/goodread/component/system1234",
@@ -14,10 +16,10 @@
   },
   {
    "id": "https://ns.nist.gov/sp800-53/req/AC-6.1",
-   "semantic-digest": "sha256:03be3ac79ce5fd9deb29283b6eca376de8a83fb65bebd9ebb8923309fb94de3e"
+   "semantic-digest": "sha256:21637d8ecfe2f6255b6d385528772eac9ca7605d64c72d3d7666e1428c67ca3b"
   }
  ],
- "content-manifest-digest": "sha256:939d57adad5ebf221aa1268680454c48337fcc86c3cc6f96caa6e8d58dbe735a",
+ "content-manifest-digest": "sha256:2d508eba78bb4030c11bd7f265e9679b8012b15a615719fa19d8d352a0486505",
  "signer": "https://ifa.gov/goodread/party/authorizing-official",
  "timestamp": "2025-05-19T00:00:00Z"
 }

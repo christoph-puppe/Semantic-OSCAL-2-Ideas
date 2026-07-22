@@ -3,7 +3,9 @@
  "version": "1.0.0",
  "label": "6.1.2.1.4",
  "lifecycle": "active",
- "title": "Ensure systemd-journal-remote service is not in use",
+ "title": {
+  "en": "Ensure systemd-journal-remote service is not in use"
+ },
  "statements": [
   {
    "id": "s1",

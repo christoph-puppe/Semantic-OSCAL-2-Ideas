@@ -21,7 +21,7 @@ prose here is explanatory, the conformance corpus is definitive.
 | `label` | ○ | string | Human display handle. Evidence: ISM `label` ×49 + 1,101 id-derived; BSI group labels ×162; CR26 rule ids as labels. |
 | `aliases` | ○ | [{scheme, value}] | Other names, with provenance. Absorbs `alt-identifier` (BSI ×1,219 incl. params), FRD `alts` (×188, in-payload). |
 | `lifecycle` | ● | code (A → C.2) | draft · active · deprecated · withdrawn. |
-| `title` | ○ | string | Display title. |
+| `title` | ○ | text | Display title — `text` = `{BCP-47: string}` (#12 delivered; D9 rev 2: EU standards must be available in all 27 official languages). All kernel human-readable fields (title, rationale, description) are `text`; identifiers and labels stay strings. |
 | `relations` | ○ | [{type, ref}] | Typed outbound links: base codes `related`, `required`, `uses-term`, `reference`, `schema` (C.8; `supersedes` removed v0.6 — backlog #20); extension types SHOULD be namespaced URIs (schema constraint pending the converter rerun that migrates the corpus's bare-word `sharpens` ×28). Evidence: BSI links ×197+67; CR26 `related` ×23, `schema` ×24, `terms` ×222. |
 | `facets` | ○ | {facet-uri@major: payload} | Registered extensions; schema-pinned via manifest; semantics per declaration (D10). |
 | `annotations` | ○ | {string: any} | Chrome. Compliance-invisible, digest-excluded, strippable. Evidence: `web_name`, `do_not_link` (CR26). |
@@ -48,7 +48,7 @@ registry-rot corpse; ISM's own OCR→ISM renumbering history.
 | `modality` | ● | code (C.1 lattice) | unspecified · may · should · must · should-not · must-not · may-only. Evidence: BSI `modal_verb` ×1,006 (should 626 / may 225 / must 155); CR26 `force` 246 layered; ISM structurally modal-free → honest `unspecified` ×1,149. |
 | `obligated-parties` | ● | [code/ref] | Who the clause binds. Evidence: CR26 `affects[]` (Providers 159 / Agencies 24 / Assessors 23 / FedRAMP 16 / Advisors 3); BSI/ISM: documented single-party defaults. |
 | `parameters` | ○ | [Parameter] | Declared insertion points; prose references them as `{param:name}` — an unbound token is a validation error (the 216 lesson). |
-| `prose` | ● | {lang: string} | The normative text, language-tagged. |
+| `prose` | ● | text | The normative text — `text` = `{BCP-47: string \| [string]}` (the #12 primitive; formerly named langMap). |
 
 **Parameter algebra (D9/D14):** every parameter carries `name` ● and
 `type` ●, optionally `label` ○ (display handle — never an identifier,

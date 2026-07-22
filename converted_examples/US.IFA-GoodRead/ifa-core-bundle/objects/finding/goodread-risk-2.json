@@ -2,13 +2,17 @@
  "id": "https://ifa.gov/goodread/finding/goodread-risk-2",
  "version": "1.2.1",
  "lifecycle": "active",
- "title": "SYSTEM1234 AwesomeCloud Account's System Engineer Role Permits High Risk Actions",
+ "title": {
+  "en": "SYSTEM1234 AwesomeCloud Account's System Engineer Role Permits High Risk Actions"
+ },
  "assessment-ref": "https://ifa.gov/goodread/assessment/conmon-2023-06",
  "requirement-ref": "https://ns.nist.gov/sp800-53/req/AC-6.1",
  "state": "in-remediation",
  "actions": [
   {
-   "description": "IFA-GOODREAD-RISK1-RESPONSE: IFA SYSTEM1234 Product Team Response: Completion of SYSTEM1234 Sprint Ending June 23, 2023",
+   "description": {
+    "en": "IFA-GOODREAD-RISK1-RESPONSE: IFA SYSTEM1234 Product Team Response: Completion of SYSTEM1234 Sprint Ending June 23, 2023"
+   },
    "status": "planned",
    "due": {
     "type": "datetime",

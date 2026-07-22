@@ -3,7 +3,9 @@
  "version": "1.0.0",
  "label": "6.1.2.2",
  "lifecycle": "active",
- "title": "Ensure journald ForwardToSyslog is disabled",
+ "title": {
+  "en": "Ensure journald ForwardToSyslog is disabled"
+ },
  "statements": [
   {
    "id": "s1",

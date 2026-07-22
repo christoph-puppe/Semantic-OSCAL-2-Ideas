@@ -3,7 +3,9 @@
  "version": "1.0.0",
  "label": "1.1.2.6.3",
  "lifecycle": "active",
- "title": "Ensure nosuid option set on /var/log partition",
+ "title": {
+  "en": "Ensure nosuid option set on /var/log partition"
+ },
  "statements": [
   {
    "id": "s1",

@@ -26,7 +26,7 @@ Source: **Electronic (OSCAL) Version of NIST SP 800-53 Rev 5.2.0 Controls and SP
 ## Findings (computed)
 
 - **#10 measure (ODP -> statement addressing)**: insertion-count histogram {0: 399, 1: 1201}; params inserted in >=2 statements: **0** (none) - the (requirement, ODP) address resolves via the declaring statement.
-- **Corpus mapping endpoints vs minted ids**: 373 citations resolve (209 distinct), 0 hit withdrawn tombstones ([]) - a resolver follows the successor's `replaces[]` backwards; 0 cite unknown labels ([]).
+- **Corpus mapping endpoints vs minted ids**: 437 citations resolve (217 distinct), 0 hit withdrawn tombstones ([]) - a resolver follows the successor's `replaces[]` backwards; 0 cite unknown labels ([]).
 - **Baseline ids not emitted** (withdrawn or unknown): none.
 - **Cross-control param insertions x3** ([('ia-13.3', 'ia-13_odp.01'), ('sc-42.2', 'sc-42.01_odp'), ('si-10.1', 'si-10_odp')]): prose in one control inserts another control's ODP - a source irregularity (3 of 2,945 insertions); the declaration is duplicated onto the inserting statement per the 216 per-statement rule. REPORTED upstream.
 - **Params bound nowhere x73** (ODPs defined for assessment that neither control text nor 53A objectives insert) - declarations without any insertion site.

@@ -3,7 +3,9 @@
  "version": "1.0.0",
  "label": "6.1.3.7",
  "lifecycle": "active",
- "title": "Ensure rsyslog is not configured to receive logs from a remote client",
+ "title": {
+  "en": "Ensure rsyslog is not configured to receive logs from a remote client"
+ },
  "statements": [
   {
    "id": "s1",

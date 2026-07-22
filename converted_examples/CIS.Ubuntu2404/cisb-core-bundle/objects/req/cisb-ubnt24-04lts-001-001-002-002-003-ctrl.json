@@ -3,7 +3,9 @@
  "version": "1.0.0",
  "label": "1.1.2.2.3",
  "lifecycle": "active",
- "title": "Ensure nosuid option set on /dev/shm partition",
+ "title": {
+  "en": "Ensure nosuid option set on /dev/shm partition"
+ },
  "statements": [
   {
    "id": "s1",

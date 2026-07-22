@@ -455,16 +455,25 @@ for c,t in class_tailorings.items():
     if t["operations"]: objects[f"objects/tailoring/class-{c}.json"]=t
 
 def stub(path,fid,mods,props):
+    # 26 delivered: pins are the normative payload contract, fail-closed
     w(path,{"id":fid,"version":"1.0.0","modifies-semantics":mods,
-        "note":"ILLUSTRATIVE STUB - normative schemas ship with the v0.6 schema deliverable",
-        "schema":{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","properties":props}})
-stub("schemas/terminology-stub.json",F_TERM.split("@")[0],[],{"terms":{"type":"object"}})
-stub("schemas/reporting-obligation-stub.json",F_REP.split("@")[0],["assessment"],{"notification":{"type":"array"}})
-stub("schemas/effectivity-stub.json",F_EFF.split("@")[0],["selection"],{"default":{"type":"object"}})
-stub("schemas/assessment-criteria-stub.json",F_ACRIT.split("@")[0],["assessment"],{"required-artifacts":{"type":"array"}})
-stub("schemas/cr26-scope-stub.json",F_SCOPE.split("@")[0],["selection"],{"classes":{"type":"array"}})
+        "note":"NORMATIVE pinned payload schema (backlog 26): closed shape - unknown keys are rejected, never smuggled",
+        "schema":{"$schema":"https://json-schema.org/draft/2020-12/schema","type":"object","properties":props,
+                  "additionalProperties":False}})
+def pin_stdlib(fn):
+    import shutil as _sh
+    src=os.path.join(ROOT,"semantic-oscal","schemas","stdlib",fn)
+    w(f"schemas/{fn}",json.load(open(src,encoding="utf-8")))
+pin_stdlib("terminology-1.0.0.json")   # 26: stdlib pins are VERBATIM
+pin_stdlib("reporting-obligation-1.0.0.json")
+pin_stdlib("effectivity-1.0.0.json")
+pin_stdlib("assessment-criteria-1.0.0.json")
+stub("schemas/cr26-scope-stub.json",F_SCOPE.split("@")[0],["selection"],
+     {"classes":{"type":"array"},"types":{"type":"array"},"paths":{"type":"array"},"affects":{"type":"array"},"tag":{"type":"string"}})
 stub("schemas/cr26-narrative-stub.json",F_NARR.split("@")[0],[],
-     {"description":{"type":"object","additionalProperties":{"type":"string"}}})
+     {"description":{"type":"object"},"note":{"type":"object"},"notes":{"type":"object"},
+      "schema-name":{"type":"string"},"reference":{"type":"string"},"danger":{"type":"object"},
+      "corrective-actions":{"type":"object"}})
 stub("schemas/oscal-1x-compat-stub.json",F_COMPAT.split("@")[0],[],{"class-variants":{"type":"object"},"ctl":{"type":"object"}})
 # carried Rev 5 Requirements bring their facet pins (#17 fail-closed)
 stub("schemas/sp800-53-narrative-stub.json","https://ns.nist.gov/sp800-53/facet/narrative",[],{"guidance":{"type":"array"}})
@@ -475,8 +484,8 @@ stub("schemas/sp800-53-rmf-stub.json","https://ns.nist.gov/sp800-53/facet/rmf",[
 # stale-file cleanup (files only, never rmdir): everything not re-emitted goes
 want={os.path.normpath(r) for r in objects}|{"content-manifest.json"}
 want|={os.path.normpath(f"schemas/{s}") for s in
-       ("terminology-stub.json","reporting-obligation-stub.json","effectivity-stub.json",
-        "assessment-criteria-stub.json","cr26-scope-stub.json","cr26-narrative-stub.json",
+       ("terminology-1.0.0.json","reporting-obligation-1.0.0.json","effectivity-1.0.0.json",
+        "assessment-criteria-1.0.0.json","cr26-scope-stub.json","cr26-narrative-stub.json",
         "oscal-1x-compat-stub.json","sp800-53-narrative-stub.json","sp800-53a-stub.json",
         "sp800-53-odp-stub.json","sp800-53-rmf-stub.json")}
 if os.path.exists(OUT):
@@ -490,6 +499,8 @@ if os.path.exists(OUT):
                     except OSError:
                         if i==4: raise
                         _t.sleep(0.3*(i+1))
+from oscal_conv_lib import textify
+for o in objects.values(): textify(o,LANG)   # 12 delivery
 for rel,o in objects.items(): w(rel,o)
 manifest={"manifest-version":"1",
  "provenance":{"source":d["info"]["title"],"source-version":VER,

@@ -996,3 +996,48 @@ toolchain.
 |---|---|
 | #18 | **Close** — both named families delivered with their engines (composition 7 + conditional 8 vectors); B.1.3 negative corpus folded into the lifecycle family's disjointness cases (measured equivalent); DSSE profile verification live (D7-applied) |
 | #24 | **Close** — signature verification live behind trusted-key input; unsigned attestations cannot prove in verification mode; prefix-spoof + unsigned negative vectors shipped (dsse family) |
+
+# Amendments — the converter rerun (2026-07-22): the backlog reaches zero
+
+The release-train step the 1.0 decision required: the three
+decided-but-undelivered items land in one digest churn across all 11
+bundles. **The v0.6 spec-feedback backlog is now EMPTY.** All 149
+vectors and all bundles green in both validators after the rerun; the
+bidirectional export holds at 5,647/5,647.
+
+## D9 rev 2 — #12 DELIVERED: the `text` primitive is live
+**Delivery.** Schema: `langMap` renamed `text`; `title` (base),
+`rationale` (Deviation, Mapping, Tailoring excludes), `description`
+(Component capabilities, Finding actions) flip from string to `text` =
+`{BCP-47: string | [string]}`. Identifiers and labels stay strings by
+decision (choice labels were already language-tagged and stay so).
+Converters author plain strings; `oscal_conv_lib.textify()` wraps at
+write time in each corpus's language (`de` for GS++ and C3A, `en`
+elsewhere) — one central point, no per-site edits. Conformance
+fixtures and the 13 examples re-shaped; the examples manifest
+re-pinned. The reader (v1.6.1) renders `text` via a display accessor
+and textifies authored objects at workspace export. The OSCAL export
+carries single-language titles natively (+`title-lang`) and
+multi-language via the props channel — round-trip stays 100 %.
+
+## C.8/#20 DELIVERED — extension relation types are URI-shaped
+**Delivery.** Schema: relation `type` = base codes
+(`related · required · uses-term · reference · schema`) ∪ `^https?://`
+— a typo'd base code can no longer smuggle as a carried extension.
+C5's bare-word `sharpens` ×28 migrated to
+`https://ns.bsi.bund.de/c5/rel/sharpens`. Measured on the way (D16):
+OSCAL 1.2.2 link `rel` is a TOKEN — URI-typed relation vocabularies
+cannot ride links at all; the export carries them on the ordered props
+channel (×28, counted).
+
+## D26 DELIVERED — #26: pins are normative, fail-closed, and stdlib pins are verbatim
+**Delivery.** Every pinned payload schema now closes its shape
+(`additionalProperties: false`) and drops the ILLUSTRATIVE note — the
+`cr26/scope` smuggle demo is dead. Stdlib facet ids are pinned
+VERBATIM from the normative descriptors (`Bundle.pin_stdlib`), and
+both validators enforce it: a pin of a stdlib id that diverges from
+the descriptor is an error (the pin-vs-descriptor precedence question
+dissolves — they cannot differ). The strict pins immediately earned
+their keep: first validation surfaced every undeclared payload key
+(cr26 narrative ×6 keys, scope ×4, ifa system ×12, risk ×7, gspp
+narrative ×1) — each now a declared contract, none smuggled.

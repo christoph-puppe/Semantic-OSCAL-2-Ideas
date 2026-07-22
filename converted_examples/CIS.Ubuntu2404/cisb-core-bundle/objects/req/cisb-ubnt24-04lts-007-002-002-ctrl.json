@@ -3,7 +3,9 @@
  "version": "1.0.0",
  "label": "7.2.2",
  "lifecycle": "active",
- "title": "Ensure /etc/shadow password fields are not empty",
+ "title": {
+  "en": "Ensure /etc/shadow password fields are not empty"
+ },
  "statements": [
   {
    "id": "s1",

@@ -3,7 +3,9 @@
  "version": "1.0.0",
  "label": "7.2.1",
  "lifecycle": "active",
- "title": "Ensure accounts in /etc/passwd use shadowed passwords",
+ "title": {
+  "en": "Ensure accounts in /etc/passwd use shadowed passwords"
+ },
  "statements": [
   {
    "id": "s1",

@@ -2,7 +2,9 @@
  "id": "https://ns.cisecurity.org/benchmark/ubuntu-24.04-lts/set/tax/cisb-ubnt24-04lts-005-003-003-004-grp",
  "version": "1.0.0",
  "lifecycle": "active",
- "title": "Configure pam_unix module",
+ "title": {
+  "en": "Configure pam_unix module"
+ },
  "members": [
   {
    "ref": "https://ns.cisecurity.org/benchmark/ubuntu-24.04-lts/req/cisb-ubnt24.04lts-005.003.003.004.001_ctrl",

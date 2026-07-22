@@ -82,7 +82,7 @@ def convert_child(c, parent_id):
     if sharp:
         target = f"{parent_id}-{sharp.lower()}"
         turi = f"{NS}/req/{target}"
-        req.setdefault("relations", []).append({"type": "sharpens", "ref": turi})
+        req.setdefault("relations", []).append({"type": f"{NS}/rel/sharpens", "ref": turi})  # #20: extension rels are URI-typed
         (sharpens_ok if True else sharpens_broken).append((c["id"], target))
     elif cls == "additional-sharpen":
         sharpens_missing.append(c["id"])

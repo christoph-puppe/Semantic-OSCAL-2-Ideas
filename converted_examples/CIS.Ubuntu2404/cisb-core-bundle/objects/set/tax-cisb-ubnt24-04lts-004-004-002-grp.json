@@ -2,7 +2,9 @@
  "id": "https://ns.cisecurity.org/benchmark/ubuntu-24.04-lts/set/tax/cisb-ubnt24-04lts-004-004-002-grp",
  "version": "1.0.0",
  "lifecycle": "active",
- "title": "Configure IPv4 iptables",
+ "title": {
+  "en": "Configure IPv4 iptables"
+ },
  "members": [
   {
    "ref": "https://ns.cisecurity.org/benchmark/ubuntu-24.04-lts/req/cisb-ubnt24.04lts-004.004.002.001_ctrl",
