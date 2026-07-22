@@ -22,7 +22,7 @@ The **OSCAL Semantic Core** specification presents a rigorously engineered, empi
 
 ---
 
-## Deep-Dive Section Findings
+## Deep-Dive Section Findings (Dimensions 1–5)
 
 ### 1. Architectural & Graph Model Integrity
 
@@ -150,6 +150,95 @@ Legacy OSCAL digital signatures fail when transport tools strip non-normative me
 
 ---
 
+## Extended Section Findings (Dimensions 6–11)
+
+### 6. Governance, Regulatory Harmonization & Standards Strategy
+
+#### EU Regulatory Harmonization (NIS2, DORA, CRA)
+- **Reporting & Effectivity Primitives**: Incoming mandatory EU regulations (**NIS2, DORA, Cyber Resilience Act**) focus heavily on strict incident reporting windows, transition dates, and supplier supply-chain reporting duties. Semantic OSCAL accommodates these natively via stdlib facets:
+  - `reporting-obligation@1` (absorbs notification triggers, parties, and methods).
+  - `effectivity@1` (absorbs obtain/maintain dates and grace periods).
+  - Both facets are promoted to anticipated kernel candidates under the D22 amendment path.
+- **Multi-Framework Crosswalks via Kernel `Mapping` (D20)**: Cross-framework mappings between NIST 800-53, ISO 27001, NIS2, and DORA operate as first-class `Mapping` graph objects with IR 8477 / OLIR relationship codes (`equal`, `subset-of`, `superset-of`, `intersects`, `supports`, `supplements`), keeping catalog structures untouched.
+
+#### Standards Body Coexistence Strategy (D11, D19, Ch 15.3)
+- **NIST SP 800-53 as Canonical Reference Facet (D11)**: NIST's framework conventions live as a shipped-by-default standard library facet owned by NIST. NIST retains out-of-the-box primacy without imposing document structural constraints on other national authorities (BSI, ACSC).
+- **Engine Positioning & Sunset Trigger (D19, Ch 15.5)**: Semantic Core operates as an internal authoritative graph engine compiling down to OSCAL 1.x JSON/XML for legacy regulatory submission. The dual-model window ends at a measurable **sunset trigger** (authorities authoring natively, Portable implementations available in multiple languages, conformance corpus green).
+
+#### Facet Registry Governance (D10, Ch 15.2)
+- **Federated Governance via `.well-known`**: Facet schemas are federated at publishers' `.well-known` domains and pinned by SHA-256 digest in `content-manifest.json`. The Foundation maintains an append-only transparency log without acting as a central permission gatekeeper.
+
+---
+
+### 7. Developer Experience (DX) & Human Authoring UX
+
+#### The "Weekend Validator" Acceptance Test (Ch 12)
+- **Reduced Implementation Cliff**: Building a conformant **Core** validator is designed to take a single weekend rather than a quarter:
+  - Plain JSON Schema (Draft 2020-12) instead of a custom Metaschema parser.
+  - 1 serialization (JSON) instead of 3 synchronized formats (XML/YAML/JSON).
+  - 5 small structural functions (`references-resolve`, `digest-verified`, `unique-within`, `code-from`, `prose-params-resolve`) instead of a Schematron rule engine.
+  - Zero profile-resolution algebra with merge strategies.
+
+#### Human Authoring Ergonomics
+- **Human-Readable Draft Formats**: Authors can write requirements using Markdown frontmatter or YAML local drafts that compile deterministically to JSON canonical objects.
+- **Identity-Addressed Resiliency**: Tailoring operations target global IDs (`requirement-ref` + `statement-id`) rather than fragile JSON pointers (RFC 6902). Upstream catalog reorderings never shatter downstream tailorings.
+
+#### Printable Rationale & Error Quality ([Ch 12.3](semantic-oscal/references/ch12-building-a-validator.md#L99-L105))
+- **Mandatory Rationale Output**: Every validation rule instantiation carries `{rule, target, rationale, message}`, and the human **rationale MUST print on failure**. Rules without printable rationales are non-conformant, eliminating the opaque error messages of 1.x legacy tools.
+
+---
+
+### 8. Performance, Graph Query Scalability & Storage Efficiency
+
+#### Shallow Graph Indexability & Database Ingestion
+- **O(1) Document Ingestion**: Replaces deeply nested document trees (which require deep positional parsing) with 9 flat objects carrying global URIs. Ingestion into document or graph databases (MongoDB, PostgreSQL JSONB, Neo4j) is flat and instantaneous.
+- **Single-Hop Graph Traversals**: Querying multi-framework relationships (e.g. *"Find all SaaS implementation controls fulfilling NIST AC-2 statement 'a' under ATO Y"*) executes via simple single-hop key lookups over `statement-id` and `authorization-id` edges.
+
+#### Storage & LLM Token Efficiency
+- **>70% Payload Reduction**: Eliminating custom `props` boilerplate and redundant XML/Metaschema metadata reduces raw JSON file size by 50–70% across converted catalogs.
+- **Context Window Optimization**: Flat kernel objects use ~60% fewer tokens in LLM context windows (RAG & automated compliance checking) compared to OSCAL 1.x trees, preventing token truncation and attention degradation.
+
+---
+
+### 9. Continuous Compliance, Telemetry & Multi-Party Supply Chain
+
+#### Continuous Evidence Ingestion & Telemetry Mapping
+- **Real-Time Assessment Ingest**: Telemetry events from security scanners (Wiz, AWS Config, GitHub Actions) map directly into `Assessment` (using `assessment-criteria@1`) and `Finding` kernel objects.
+- **Automated SLA Tracking**: State transitions on `Finding` (`investigating` $\rightarrow$ `pending` $\rightarrow$ `approved` / `withdrawn`) bind to `duration` parameters (elapsed vs calendar), enabling automated SLA tracking in Jira/ServiceNow workflows.
+
+#### Multi-Tenant & Tiered Supply Chain Inheritance (D5, Ch 9)
+- **Explicit Authorization Scoping**: Multi-tier supply chains (*IaaS $\rightarrow$ PaaS $\rightarrow$ SaaS $\rightarrow$ Enterprise*) attach via explicit `authorizations[]` with `includes[]` component scoping.
+- **Inductive Boundary Checking**: Every `inherited-from` edge must carry a `basis-ref` pointing to a specific `authorization-id`, allowing auditors to verify multi-hop inheritance chains edge-by-edge without risking false-positive compliance assertions.
+
+---
+
+### 10. AI Native / LLM Interoperability & Agentic Workflows
+
+#### Built-In AI Assistant Skill (`semantic-oscal/SKILL.md`)
+- **Ready-to-Install Claude / Gemini Skill**: Includes an installable AI agent skill containing 14 numbered normative requirements, reference chapters, 18 self-consistent worked JSON bundle examples, and python conversion scripts.
+
+#### Hallucination Resistance & Agentic Precision
+- **Identity-Addressed Edits**: AI agents editing compliance rules use identity targets (`statement-id`, `requirement-ref`) rather than array indices, preventing hallucinated positional path edits.
+- **Bound Parameter Syntax**: Parameters in statement prose use explicit `{param:id}` tokens (`prose-params-resolve`), making unmapped LLM parameter hallucinations unrepresentable and machine-rejectable.
+
+---
+
+### 11. Legal Admissibility, Non-Repudiation & Audit Trail
+
+#### Cryptographic Non-Repudiation (D7, Ch 11)
+- **DSSE Signature Envelopes**: `Attestation` objects link to DSSE signature envelopes (`envelope-ref`) binding three distinct layers:
+  1. `subject-semantic-digests[]` (canonical compliance meaning).
+  2. `content-manifest-digest` (packaging and delivered file byte state).
+  3. `rendering` (`artifact-digest` of rendered PDF/Markdown + pinned template digest).
+
+#### Bi-Modal Legal Clarity
+- **Full Match vs Semantic Match**: In regulatory or court proceedings, **Full Match** proves byte-for-byte exact packaging as signed by the Authorizing Official. **Semantic Match** cryptographically proves that compliance meaning is 100% untampered even if intermediate hygiene tools stripped non-normative UI chrome.
+
+#### Statement-Level Audit Lineage
+- **Direct Traceability**: Auditors can trace any compliance `Finding` directly to its fine-grained `statement-id`, component `Implementation` clause, and DSSE `Attestation` envelope without relying on vendor-proprietary GRC database logs.
+
+---
+
 ## Critical Vulnerabilities & Blindspots
 
 1. **Calendar Dependency in Deadline Arithmetic (D9)**:
@@ -161,6 +250,9 @@ Legacy OSCAL digital signatures fail when transport tools strip non-normative me
 3. **Over-Reliance on Authority Diligence for Alias Rebrands (D2)**:
    - *Risk*: `canonical-alias` allows tools to auto-substitute control identifiers.
    - *Consequence*: If an authority incorrectly issues a `canonical-alias` for a control revision that actually altered normative requirements, consumer implementations will be silently misaligned.
+4. **Renderer Template Accreditation Gap (Ch 15.3)**:
+   - *Risk*: Rendering templates steer human-readable output (PDFs/Markdown).
+   - *Consequence*: While template pins and hashes make tampering detectable, official accreditation of renderer templates remains an unowned governance gap.
 
 ---
 
