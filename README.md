@@ -115,8 +115,14 @@ stages also *author*: build your own Tailoring (with the weakening rules
 enforced live — easings demand a Deviation, unit-class crossings are
 blocked, same-target conflicts refused), assemble a system of assets that
 carry controls, and run a checklist assessment that mints real Assessment
-and Finding objects back into the graph — all exportable as
-schema-conformant JSON.
+and Finding objects back into the graph. Since v1.3 all five stages
+author (Requirements and Sets too, with `{param:}` tokens auto-declared;
+Mappings with external targets), a Tailoring resolves to an exportable
+resolved package (Appendix B steps 3–4 in the browser), and the whole
+workspace exports as a **real bundle**: a client-side ZIP whose
+content-manifest carries both SHA-256 digests per object — re-loadable
+here, verifiable by `validate_core.py`. Authored objects persist across
+reloads.
 
 ### As a specification
 

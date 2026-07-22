@@ -201,7 +201,7 @@ svg text{font-family:'JetBrains Mono',monospace}
     <div class="pill" id="pill-bundle">no bundle loaded</div>
     <div class="pill hidden" id="pill-verify"></div>
     <div style="flex:1"></div>
-    <div class="pill">v1.2.0 · build 2026-07-21</div>
+    <div class="pill">v1.3.0 · build 2026-07-21</div>
   </div>
 
   <div id="mid">
@@ -227,6 +227,11 @@ svg text{font-family:'JetBrains Mono',monospace}
         <div class="navitem" data-view="browser"><span class="glyph">⌕</span>Object browser</div>
         <div class="navitem" data-view="stats"><span class="glyph">▣</span>Statistics</div>
         <div class="navitem" data-view="legend"><span class="glyph">⬡</span>How to read this</div>
+      </div>
+      <div class="railgroup">
+        <div class="nano">Workspace</div>
+        <button id="btn-export-ws">⤓ Export workspace bundle (.zip)</button>
+        <div class="hint">Everything you authored, as a real bundle: objects + content-manifest with both SHA-256 digests — re-loadable here, verifiable by validate_core.py.</div>
       </div>
       <div class="railgroup">
         <div class="nano">Integrity</div>
@@ -966,7 +971,8 @@ function stageHead(key) {
 function renderStageAuthor() {
   const sets = [...state.objects.values()].filter(r => r.type === "requirementSet");
   if (!sets.length && ![...state.objects.values()].some(r => r.type === "requirement"))
-    return stageHead("author") + stageEmpty("author");
+    return stageHead("author") + wbAuthorHtml() +
+      `<p class="hint">Nothing loaded — author your first Requirement above, or open a bundle folder.</p>`;
   const parents = setsReferencing();
   const roots = sets.filter(r => !parents.has(r.obj.id));
   const seenGlobal = new Set();
@@ -990,7 +996,7 @@ function renderStageAuthor() {
   }
   const baselineish = roots.filter(r => /baseline|profile|class|marker|ig[0-9]/.test(r.obj.id));
   const taxish = roots.filter(r => !baselineish.includes(r));
-  return stageHead("author") +
+  return stageHead("author") + wbAuthorHtml() +
     `<div class="chip"><b>${[...state.objects.values()].filter(r => r.type === "requirement").length}</b> requirements</div>
      <div class="chip"><b>${sets.length}</b> sets</div>
      <div class="chip"><b>${roots.length}</b> root sets</div>
@@ -1055,13 +1061,15 @@ function renderStageTailor() {
       <div class="chip ${easings ? "verdict-warn" : ""}"><b>${easings}</b> non-monotone moves</div>
      </div>
      <table class="flat"><tr><th>op</th><th>target</th><th>before ▶ after</th><th>lattice verdict</th></tr>${rows || "<tr><td colspan=4 class='hint'>no operations</td></tr>"}</table>
-     <p class="hint" style="margin-top:10px">Resolution per spec Appendix B: expand selects through nested Sets, apply excludes, then apply operations in list order to deep copies. Two operations on one target in one Tailoring = error. Weakening needs an attached Deviation at consumer tier; an authority publishing its own variants owes none (D13 rev).</p>`;
+     <p class="hint" style="margin-top:10px">Resolution per spec Appendix B: expand selects through nested Sets, apply excludes, then apply operations in list order to deep copies. Two operations on one target in one Tailoring = error. Weakening needs an attached Deviation at consumer tier; an authority publishing its own variants owes none (D13 rev).</p>` +
+     resolvedPreviewHtml(o);
 }
 
 /* S3 · Map: crosswalk table */
 function renderStageMap() {
   const ms = [...state.objects.values()].filter(r => r.type === "mapping");
-  if (!ms.length) return stageHead("map") + stageEmpty("map");
+  if (!ms.length) return stageHead("map") + wbMapHtml() +
+    `<p class="hint">No mappings yet — author a crosswalk claim above.</p>`;
   state.stageSel = state.stageSel || {};
   const fRel = state.stageSel.mapRel || "", fQ = (state.stageSel.mapQ || "").toLowerCase();
   const rels = {};
@@ -1082,7 +1090,7 @@ function renderStageMap() {
       <td><span class="badge">${esc(m.obj.confidence)}</span></td>
       <td><a class="reflink" data-ref="${esc(m.obj.id)}" title="open mapping object">⋯</a></td></tr>`;
   }).join("");
-  return stageHead("map") +
+  return stageHead("map") + wbMapHtml() +
     `<div class="filterrow"><span class="fpill ${!fRel ? "on" : ""}" data-mrel="">all · ${ms.length}</span>` +
     Object.entries(rels).map(([r, n]) => `<span class="fpill ${fRel === r ? "on" : ""}" data-mrel="${esc(r)}">${esc(r)} · ${n}</span>`).join("") +
     `</div><input type="text" id="mapq" placeholder="filter by source / target uri…" value="${esc(state.stageSel.mapQ || "")}" style="max-width:340px;margin-bottom:10px">
@@ -1194,6 +1202,44 @@ function renderStageAssess() {
     (atts.length ? `<div class="nano sectionlabel">Attestations (${atts.length})</div>${attCards}` : "");
 }
 
+/* ---------- zip writer (STORE, no deps) ---------- */
+const CRC_TABLE = (() => { const t = new Int32Array(256);
+  for (let n = 0; n < 256; n++) { let c = n;
+    for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1;
+    t[n] = c; } return t; })();
+function crc32(bytes) {
+  let c = ~0;
+  for (let i = 0; i < bytes.length; i++) c = CRC_TABLE[(c ^ bytes[i]) & 0xff] ^ (c >>> 8);
+  return ~c >>> 0;
+}
+function buildZip(files) {   // files: [{name, bytes}] -> Uint8Array
+  const enc = new TextEncoder();
+  const chunks = [], central = [];
+  let offset = 0;
+  const u16 = v => [v & 255, (v >> 8) & 255];
+  const u32 = v => [v & 255, (v >> 8) & 255, (v >> 16) & 255, (v >>> 24) & 255];
+  for (const f of files) {
+    const name = enc.encode(f.name), crc = crc32(f.bytes), sz = f.bytes.length;
+    const common = [...u16(20), ...u16(0x0800), ...u16(0), ...u16(0x8021), ...u16(0x5895),
+                    ...u32(crc), ...u32(sz), ...u32(sz), ...u16(name.length), ...u16(0)];
+    const local = new Uint8Array([...u32(0x04034b50), ...common, ...name]);
+    chunks.push(local, f.bytes);
+    central.push(new Uint8Array([...u32(0x02014b50), ...u16(20), ...common,
+      ...u16(0), ...u16(0), ...u16(0), ...u32(0), ...u32(offset), ...name]));
+    offset += local.length + sz;
+  }
+  const cdStart = offset;
+  let cdLen = 0;
+  for (const c of central) { chunks.push(c); cdLen += c.length; }
+  chunks.push(new Uint8Array([...u32(0x06054b50), ...u16(0), ...u16(0),
+    ...u16(files.length), ...u16(files.length), ...u32(cdLen), ...u32(cdStart), ...u16(0)]));
+  const total = chunks.reduce((s, c) => s + c.length, 0);
+  const out = new Uint8Array(total);
+  let p = 0;
+  for (const c of chunks) { out.set(c, p); p += c.length; }
+  return out;
+}
+
 /* ---------- workbench: author your own objects ---------- */
 const work = (() => {
   try { return JSON.parse(localStorage.getItem("scr-work")) || null; } catch {} return null;
@@ -1211,15 +1257,65 @@ function download(name, obj) {
   l.ok("downloaded " + name);
 }
 async function downloadMany(objs) { for (const o of objs) { download(slug(o.id.split("/").slice(-2).join("-")) + ".json", o); await new Promise(r => setTimeout(r, 250)); } }
-function addToGraph(objs) {
+function addToGraph(objs, opts = {}) {
   for (const o of objs) {
     const t = inferType(o);
     if (!t) { l.err("workspace object has no inferable type: " + o.id); continue; }
     state.objects.set(o.id, { obj: o, path: "(workspace)", type: t, entry: null });
     if (!state.order.includes(o.id)) state.order.push(o.id);
-    l.ok(`added to graph as ${t}: ${o.id}`);
+    if (!opts.silent) l.ok(`added to graph as ${t}: ${o.id}`);
+    if (!opts.ephemeral) {
+      work.created = work.created || [];
+      const i = work.created.findIndex(x => x.id === o.id);
+      if (i >= 0) work.created[i] = o; else work.created.push(o);
+    }
   }
+  if (!opts.ephemeral) saveWork();
   renderAll();
+}
+function restoreWorkspaceObjects() {
+  if (work.created?.length) {
+    addToGraph(work.created, { ephemeral: true, silent: true });
+    l.info(`workspace restored: ${work.created.length} authored object(s) back in the graph`);
+  }
+}
+function workspaceObjects() {
+  return state.order.map(id => state.objects.get(id))
+    .filter(r => r && r.path === "(workspace)").map(r => r.obj);
+}
+async function buildWorkspaceBundleFiles(objs, provenance) {
+  const enc = new TextEncoder();
+  const files = []; const manifest = { "manifest-version": "1", provenance,
+    objects: [], "facet-schemas": [] };
+  const DIR = { requirement: "req", requirementSet: "set", tailoring: "tailoring",
+    mapping: "map", component: "comp", implementation: "impl",
+    assessment: "asmt", finding: "finding", attestation: "att" };
+  for (const o of objs) {
+    const t = inferType(o);
+    const rel = `objects/${DIR[t] || "obj"}/${slug(o.id.split("/").slice(-2).join("-"))}.json`;
+    const bytes = enc.encode(JSON.stringify(o, null, 1) + "\n");
+    files.push({ name: rel, bytes });
+    manifest.objects.push({ id: o.id, version: o.version,
+      "package-digest": "sha256:" + await sha256hex(bytes),
+      "semantic-digest": "sha256:" + await sha256hex(canonical(o)), path: rel });
+  }
+  files.push({ name: "content-manifest.json",
+    bytes: enc.encode(JSON.stringify(manifest, null, 1) + "\n") });
+  return files;
+}
+async function exportWorkspaceBundle() {
+  const objs = workspaceObjects();
+  if (!objs.length) { l.warn("workspace is empty — use 'Add to graph' in a workbench first"); return; }
+  const files = await buildWorkspaceBundleFiles(objs, {
+    source: "Semantic Core Bundle Reader workbench",
+    converter: "semantic-core-reader.html v1.3.0",
+    created: new Date().toISOString() });
+  const zip = buildZip(files.map(f => ({ name: "workspace-bundle/" + f.name, bytes: f.bytes })));
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([zip], { type: "application/zip" }));
+  a.download = "workspace-bundle.zip"; a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+  l.ok(`workspace bundle exported: ${objs.length} objects + content-manifest with both digests (${(zip.length / 1024).toFixed(1)} kB zip) — loads back into this reader and passes validate_core.py`);
 }
 function deviationFromDraft(d) {
   return { type: d.devType || "risk-adjustment", state: "pending", rationale: d.devRationale,
@@ -1616,6 +1712,177 @@ function wireAssessWb(el) {
   const dl = el.querySelector("#wb-a-dl"); if (dl) dl.onclick = () => downloadMany(buildAssessObjects());
 }
 
+/* Author workbench: mint Requirements and Sets */
+function wbAuthorHtml() {
+  const d = work._draft, a = work.author = work.author || { setMembers: [] };
+  return `<div class="wb"><div class="nano" style="margin-bottom:8px">Workbench — author Requirements and Sets</div>
+    <div class="wbrow"><label>namespace</label><input type="text" id="wb-ns2" value="${esc(work.ns)}" style="min-width:230px"></div>
+    <div class="wbrow" style="border-top:1px solid var(--border-1);padding-top:8px">
+      <label>new requirement</label><input type="text" id="wb-au-title" placeholder="title, e.g. 'Encrypt backups'…" value="${esc(d.auTitle || "")}" style="min-width:220px">
+      <label>modality</label><select id="wb-au-mod">${Object.keys(MODALITY_COLORS).map(m => `<option ${(d.auMod || "must") === m ? "selected" : ""}>${m}</option>`).join("")}</select>
+      <label>lang</label><input type="text" id="wb-au-lang" value="${esc(d.auLang || "en")}" style="width:48px">
+      <label>party</label><input type="text" id="wb-au-party" value="${esc(d.auParty || "organisation")}" style="width:120px"></div>
+    <div class="wbrow"><textarea id="wb-au-prose" placeholder="statement prose — the normative sentence; reference parameters as {param:name}…" style="min-height:64px;flex-basis:100%">${esc(d.auProse || "")}</textarea></div>
+    <div class="wbrow"><button class="primary" id="wb-au-addreq">＋ Add requirement to graph</button><span class="hint" id="wb-au-err"></span></div>
+    <div class="wbrow" style="border-top:1px solid var(--border-1);padding-top:8px">
+      <label>new set</label><input type="text" id="wb-au-settitle" placeholder="set title, e.g. 'My baseline'…" value="${esc(d.auSetTitle || "")}" style="min-width:200px">
+      ${pickerHtml("wb-au-mempick", "type to add a member (requirement or set)…")}</div>
+    <div>${(a.setMembers || []).map(mid => `<span class="wbchip">${esc((state.objects.get(mid)?.obj.label || state.objects.get(mid)?.obj.title) || mid)}<span class="x" data-delmem="${esc(mid)}">✕</span></span>`).join("") || '<span class="hint">no members picked yet</span>'}</div>
+    <div class="wbrow"><button class="primary" id="wb-au-addset">＋ Add set to graph</button>
+      <span class="hint">a Set is taxonomy AND baseline — membership is the one hierarchy mechanism (D21)</span></div></div>`;
+}
+function wireAuthorWb(el) {
+  const d = work._draft, a = work.author = work.author || { setMembers: [] };
+  const rerender = () => { saveWork(); renderStageFn("author"); };
+  const b = (id, key) => { const x = el.querySelector("#" + id); if (x) x.onchange = () => { d[key] = x.value; saveWork(); }; };
+  const ns = el.querySelector("#wb-ns2"); if (ns) ns.onchange = () => { work.ns = ns.value.trim() || work.ns; saveWork(); };
+  b("wb-au-title", "auTitle"); b("wb-au-mod", "auMod"); b("wb-au-lang", "auLang");
+  b("wb-au-party", "auParty"); b("wb-au-prose", "auProse"); b("wb-au-settitle", "auSetTitle");
+  wirePicker(el, "wb-au-mempick", ["requirement", "requirementSet"], id => {
+    if (!a.setMembers.includes(id)) a.setMembers.push(id); rerender(); });
+  el.querySelectorAll("[data-delmem]").forEach(x => x.onclick = () => {
+    a.setMembers = a.setMembers.filter(m => m !== x.dataset.delmem); rerender(); });
+  const ar = el.querySelector("#wb-au-addreq");
+  if (ar) ar.onclick = () => {
+    const err = el.querySelector("#wb-au-err");
+    const title = (el.querySelector("#wb-au-title").value || "").trim();
+    const prose = (el.querySelector("#wb-au-prose").value || "").trim();
+    if (!title || !prose) { err.textContent = "title and prose are both required"; return; }
+    const tokens = [...prose.matchAll(/\{param:([^}]+)\}/g)].map(m => m[1]);
+    const st = { id: "s1", modality: el.querySelector("#wb-au-mod").value,
+      "obligated-parties": [work.ns.replace(/\/$/, "") + "/party/" + slug(el.querySelector("#wb-au-party").value || "organisation")],
+      prose: { [el.querySelector("#wb-au-lang").value || "en"]: prose } };
+    if (tokens.length) st.parameters = [...new Set(tokens)].map(n => ({ name: n, type: "string" }));
+    const req = { id: mintId("req", title), version: "1", label: slug(title).toUpperCase().slice(0, 24),
+      lifecycle: "draft", title, statements: [st] };
+    addToGraph([req]);
+    if (tokens.length) l.info(`declared ${new Set(tokens).size} parameter(s) from {param:} tokens — the 216 rule works both ways`);
+    d.auTitle = ""; d.auProse = ""; err.textContent = ""; rerender();
+  };
+  const as = el.querySelector("#wb-au-addset");
+  if (as) as.onclick = () => {
+    const title = (el.querySelector("#wb-au-settitle").value || "").trim();
+    if (!title) { l.warn("set needs a title"); return; }
+    if (!a.setMembers.length) { l.warn("pick at least one member"); return; }
+    addToGraph([{ id: mintId("set", title), version: "1", lifecycle: "draft", title,
+      members: a.setMembers.map((m, i) => ({ ref: m, sequence: (i + 1) * 10 })) }]);
+    d.auSetTitle = ""; a.setMembers = []; rerender();
+  };
+}
+
+/* Map workbench: mint crosswalk claims */
+function wbMapHtml() {
+  const d = work._draft;
+  const src = d.mapSrc ? state.objects.get(d.mapSrc) : null;
+  const REL = ["supports", "equal", "subset-of", "superset-of", "intersects", "conflicts", "supplements"];
+  return `<div class="wb"><div class="nano" style="margin-bottom:8px">Workbench — author a Mapping (a claim with provenance)</div>
+    <div class="wbrow"><label>source</label>${pickerHtml("wb-m-srcpick", "type to pick the source requirement…")}
+      ${src ? `<span class="wbchip">◇ ${esc(src.obj.label || src.obj.id)}</span>
+        <label>scope</label><select id="wb-m-scope"><option value="">whole requirement</option>${src.obj.statements.map(s => `<option ${d.mapScope === s.id ? "selected" : ""} value="${esc(s.id)}">statement ${esc(s.id)}</option>`).join("")}</select>` : ""}</div>
+    <div class="wbrow"><label>relationship</label><select id="wb-m-rel">${REL.map(r => `<option ${(d.mapRel || "supports") === r ? "selected" : ""}>${r}</option>`).join("")}</select>
+      <span class="hint" id="wb-m-relhint">${(d.mapRel || "supports") === "supplements" ? "attachment claim (supplement pattern §6.A) — non-chaining, OLIR exports degrade it to supports" : (d.mapRel || "supports") === "equal" ? "the strongest claim — flattering an untyped link into equal is how crosswalk trust dies (8.6)" : ""}</span></div>
+    <div class="wbrow"><label>target</label>${pickerHtml("wb-m-tgtpick", "pick in-bundle — or paste any external requirement URI…")}
+      ${d.mapTgt ? `<span class="wbchip">${esc((state.objects.get(d.mapTgt)?.obj.label) || d.mapTgt)}${state.objects.has(d.mapTgt) ? "" : ' <span class="badge">external</span>'}<span class="x" id="wb-m-cleartgt">✕</span></span>` : ""}</div>
+    <div class="wbrow"><label>confidence</label><select id="wb-m-conf">${["draft", "reviewed", "authoritative"].map(c => `<option ${(d.mapConf || "draft") === c ? "selected" : ""}>${c}</option>`).join("")}</select>
+      <input type="text" id="wb-m-rat" placeholder="rationale — why does this relationship hold?" value="${esc(d.mapRat || "")}" style="flex:1;min-width:220px"></div>
+    <div class="wbrow"><button class="primary" id="wb-m-add">＋ Add mapping to graph</button><span class="hint" id="wb-m-err"></span></div></div>`;
+}
+function wireMapWb(el) {
+  const d = work._draft;
+  const rerender = () => { saveWork(); renderStageFn("map"); };
+  wirePicker(el, "wb-m-srcpick", ["requirement"], id => { d.mapSrc = id; d.mapScope = ""; rerender(); });
+  wirePicker(el, "wb-m-tgtpick", ["requirement"], id => { d.mapTgt = id; rerender(); });
+  const ti = el.querySelector("#wb-m-tgtpick");
+  if (ti) ti.addEventListener("keydown", e => {
+    if (e.key === "Enter" && ti.value.trim().startsWith("http")) { d.mapTgt = ti.value.trim(); ti.value = ""; rerender(); } });
+  const ct = el.querySelector("#wb-m-cleartgt"); if (ct) ct.onclick = () => { d.mapTgt = null; rerender(); };
+  ["wb-m-rel|mapRel", "wb-m-scope|mapScope", "wb-m-conf|mapConf", "wb-m-rat|mapRat"].forEach(p => {
+    const [id, key] = p.split("|"); const x = el.querySelector("#" + id);
+    if (x) x.onchange = () => { d[key] = x.value; key === "mapRel" ? rerender() : saveWork(); }; });
+  const add = el.querySelector("#wb-m-add");
+  if (add) add.onclick = () => {
+    const err = el.querySelector("#wb-m-err");
+    if (!d.mapSrc) { err.textContent = "pick a source requirement"; return; }
+    if (!d.mapTgt) { err.textContent = "pick a target — or paste an external URI and press Enter"; return; }
+    const m = { id: mintId("map", (d.mapSrc.split("/").pop()) + "--" + (d.mapTgt.split("/").pop() || "ext")),
+      version: "1", lifecycle: "draft",
+      "source-ref": d.mapSrc, "target-ref": d.mapTgt,
+      relationship: d.mapRel || "supports", direction: "source-to-target",
+      confidence: d.mapConf || "draft",
+      ...(d.mapRat ? { rationale: d.mapRat } : {}),
+      provenance: { "author-ref": work.ns.replace(/\/$/, "") + "/party/" + slug(work.assess?.performer || "author"), date: today() } };
+    if (d.mapScope) m["source-scope"] = ["statement:" + d.mapScope];
+    addToGraph([m]); err.textContent = ""; rerender();
+  };
+}
+
+/* Tailoring resolution preview: Appendix B steps 3-4, in the browser */
+function resolveTailoring(tObj) {
+  const scope = new Set();
+  for (const s of tObj.selects || []) if (s["set-ref"]) expandSet(s["set-ref"]).forEach(id => scope.add(id));
+  for (const ex of tObj.excludes || []) scope.delete(ex.ref);
+  const resolved = new Map(), touched = new Map(), errors = [];
+  const seen = new Set();
+  for (const op of tObj.operations || []) {
+    const key = [op["requirement-ref"], op["statement-id"], op.parameter, op.field, op.facet].join("|");
+    if (seen.has(key)) { errors.push(`same-target conflict on ${key}`); continue; }
+    seen.add(key);
+    const base = state.objects.get(op["requirement-ref"]);
+    if (!base) { errors.push(`op targets unknown requirement ${op["requirement-ref"]}`); continue; }
+    if (!resolved.has(base.obj.id)) resolved.set(base.obj.id, JSON.parse(JSON.stringify(base.obj)));
+    const copy = resolved.get(base.obj.id);
+    const stmt = copy.statements?.find(s => s.id === op["statement-id"]);
+    if (!stmt) { errors.push(`op targets unknown statement ${op["statement-id"]} of ${copy.id}`); continue; }
+    const notes = touched.get(copy.id) || []; touched.set(copy.id, notes);
+    if (op.op === "set-modality") {
+      notes.push({ what: `stmt ${stmt.id}: modality`, from: stmt.modality, to: op.modality,
+        verdict: modalityVerdict(stmt.modality, op.modality) });
+      stmt.modality = op.modality;
+    } else if (op.op === "set-parameter") {
+      const p = (stmt.parameters || []).find(x => x.name === op.parameter);
+      notes.push({ what: `stmt ${stmt.id}: ⚙ ${op.parameter}`, from: JSON.stringify(p?.default ?? (p?.num !== undefined ? { num: p.num, unit: p.unit } : "unset")), to: JSON.stringify(op.value) });
+      if (p) { if (typeof op.value === "object" && op.value?.num !== undefined) { p.num = op.value.num; p.unit = op.value.unit; } else p.default = op.value; }
+    } else if (op.op === "replace-prose") {
+      const lang = Object.keys(op.prose)[0];
+      notes.push({ what: `stmt ${stmt.id}: prose (${lang}, ${op.intent})`, from: (stmt.prose[lang] || "").slice(0, 60) + "…", to: (op.prose[lang] || "").slice(0, 60) + "…" });
+      Object.assign(stmt.prose, op.prose);
+    }
+  }
+  return { scope, resolved, touched, errors };
+}
+async function exportResolved(tObj) {
+  const { scope, resolved, errors } = resolveTailoring(tObj);
+  if (errors.length) { l.err("cannot export: resolution has errors — " + errors[0]); return; }
+  const objs = [...scope].map(id => resolved.get(id) || state.objects.get(id)?.obj).filter(Boolean)
+    .map(o => JSON.parse(JSON.stringify(o)));
+  const files = await buildWorkspaceBundleFiles(objs, {
+    source: "resolved package", tailoring: tObj.id, "tailoring-version": tObj.version,
+    converter: "semantic-core-reader.html v1.3.0", created: new Date().toISOString() });
+  const zip = buildZip(files.map(f => ({ name: "resolved-bundle/" + f.name, bytes: f.bytes })));
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([zip], { type: "application/zip" }));
+  a.download = slug(tObj.label || "resolved") + "-resolved.zip"; a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 5000);
+  l.ok(`resolved package exported: ${objs.length} requirements, fresh manifest, provenance records the Tailoring (Appendix B step 4)`);
+}
+function resolvedPreviewHtml(tObj) {
+  const { scope, resolved, touched, errors } = resolveTailoring(tObj);
+  const cards = [...touched.entries()].slice(0, 40).map(([id, notes]) => {
+    const o = resolved.get(id);
+    return `<div class="stmt"><a class="reflink" data-ref="${esc(id)}"><b>${esc(o.label || id)}</b></a>
+      ${notes.map(n => `<div class="diffrow" style="margin-top:4px"><div>${n.from === undefined ? "" : (n.what.includes("modality") ? modBadge(n.from) : `<span class="mono" style="font-size:11px">${esc(String(n.from))}</span>`)}</div>
+        <div style="text-align:center;color:var(--text-quiet)">▶</div>
+        <div>${n.what.includes("modality") ? modBadge(n.to) : `<span class="mono" style="font-size:11px">${esc(String(n.to))}</span>`} <span class="hint">${esc(n.what)}${n.verdict ? " · " : ""}${n.verdict ? `<span class="${VERDICT_CLS[n.verdict]}">${n.verdict}</span>` : ""}</span></div></div>`).join("")}
+    </div>`;
+  }).join("");
+  return `<div class="nano sectionlabel">Resolved preview — operations applied in list order to deep copies (Appendix B step 3)</div>
+    ${errors.length ? errors.map(e => `<div class="verdict-bad">✗ ${esc(e)}</div>`).join("") : ""}
+    <div class="wbrow"><span class="chip"><b>${scope.size}</b> requirements in resolved scope</span>
+      <span class="chip"><b>${touched.size}</b> modified</span>
+      <button class="primary" id="wb-t-export-resolved" ${errors.length ? "disabled" : ""}>⤓ Export resolved package (.zip)</button></div>
+    ${cards || '<span class="hint">no operations touch any requirement</span>'}`;
+}
+
 function renderStageFn(key) {
   const el = $("view-stagefn");
   el.innerHTML = { author: renderStageAuthor, tailor: renderStageTailor, map: renderStageMap,
@@ -1629,7 +1896,17 @@ function renderStageFn(key) {
   if (mq) mq.oninput = e => { state.stageSel = state.stageSel || {}; state.stageSel.mapQ = e.target.value;
     clearTimeout(state._mqT); state._mqT = setTimeout(() => renderStageFn("map"), 250); };
   el.querySelectorAll("[data-att]").forEach(b => b.onclick = () => verifyAttestation(b.dataset.att, b));
-  if (key === "tailor") wireTailorWb(el);
+  if (key === "author") wireAuthorWb(el);
+  if (key === "tailor") {
+    wireTailorWb(el);
+    const xr = el.querySelector("#wb-t-export-resolved");
+    if (xr) xr.onclick = () => {
+      const t = state.objects.get(state.stageSel?.tailor) ||
+        [...state.objects.values()].find(r => r.type === "tailoring");
+      if (t) exportResolved(t.obj);
+    };
+  }
+  if (key === "map") wireMapWb(el);
   if (key === "implement") wireImplementWb(el);
   if (key === "assess") wireAssessWb(el);
 }
@@ -1724,11 +2001,14 @@ document.body.addEventListener("drop", async e => {
   });
 })();
 
+$("btn-export-ws").onclick = exportWorkspaceBundle;
+
 /* boot */
 renderLattice();
+restoreWorkspaceObjects();
 renderStages();
 setView("overview");
-l.info("Semantic Core Bundle Reader v1.2.0 · build 2026-07-21 — everything runs locally, nothing leaves this page");
+l.info("Semantic Core Bundle Reader v1.3.0 · build 2026-07-21 — everything runs locally, nothing leaves this page");
 l.info("open a bundle folder (contains content-manifest.json + objects/) or drop it here");
 if (!crypto.subtle) l.warn("crypto.subtle unavailable in this context — digest verification uses the JS fallback (slower)");
 </script>
