@@ -1,0 +1,410 @@
+{
+ "description": "DSSE verification vectors (gate 4, backlog #24). The reference engine pins Ed25519 (RFC 8032); payload = the Attestation's canonical form (annotations excluded); signature input = PAE(payloadType, payload) per DSSE v1. Fixture seed = sha256('oscal-semantic-core dsse fixture key 1'); PUBLIC KEY (hex) embedded in trusted-keys. Digests and signatures are LITERALS - re-run the authoring script after any object edit (it fails loudly, never silently).",
+ "fixture-public-key": "bb10925493ae5228537a99fc91cdcca6a2bd5cde8b7c5b8e3f40f50e5edb2e65",
+ "vectors": [
+  {
+   "name": "signed-envelope-proves-in-verification-mode",
+   "note": "gate 4 (#24): authority-proven in verification mode requires a VERIFYING envelope - digest match alone no longer proves. The easing op then needs no Deviation (authority tier).",
+   "objects": [
+    {
+     "id": "https://ns.auth.gov/fw/req/1",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "should",
+       "obligated-parties": [
+        "https://ns.auth.gov/fw/p/o"
+       ],
+       "prose": {
+        "en": "X."
+       }
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/set/base",
+     "version": "1",
+     "lifecycle": "active",
+     "members": [
+      {
+       "ref": "https://ns.auth.gov/fw/req/1",
+       "sequence": 10
+      }
+     ]
+    },
+    {
+     "id": "https://ns.other.example/tailoring/eased",
+     "version": "1",
+     "lifecycle": "active",
+     "selects": [
+      {
+       "set-ref": "https://ns.auth.gov/fw/set/base"
+      }
+     ],
+     "operations": [
+      {
+       "op": "set-modality",
+       "requirement-ref": "https://ns.auth.gov/fw/req/1",
+       "statement-id": "s1",
+       "modality": "may"
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/attestation/tailoring-approval",
+     "version": "1",
+     "lifecycle": "active",
+     "subject-semantic-digests": [
+      {
+       "id": "https://ns.other.example/tailoring/eased",
+       "semantic-digest": "sha256:b4e530f9f24f1fff396b3467822f5857cf30c946fe4992a818093a20238de9b8"
+      }
+     ],
+     "content-manifest-digest": "sha256:7b1a6b9ee0f176cb8d1e9e16309c5ec71fe32d6e22841af4248b55186e64606f",
+     "signer": "https://ns.auth.gov/fw/party/ao",
+     "timestamp": "2026-07-22T12:00:00Z",
+     "envelope-ref": "env-1"
+    }
+   ],
+   "envelopes": {
+    "env-1": {
+     "payload": "eyJjb250ZW50LW1hbmlmZXN0LWRpZ2VzdCI6InNoYTI1Njo3YjFhNmI5ZWUwZjE3NmNiOGQxZTllMTYzMDljNWVjNzFmZTMyZDZlMjI4NDFhZjQyNDhiNTUxODZlNjQ2MDZmIiwiZW52ZWxvcGUtcmVmIjoiZW52LTEiLCJpZCI6Imh0dHBzOi8vbnMuYXV0aC5nb3YvZncvYXR0ZXN0YXRpb24vdGFpbG9yaW5nLWFwcHJvdmFsIiwibGlmZWN5Y2xlIjoiYWN0aXZlIiwic2lnbmVyIjoiaHR0cHM6Ly9ucy5hdXRoLmdvdi9mdy9wYXJ0eS9hbyIsInN1YmplY3Qtc2VtYW50aWMtZGlnZXN0cyI6W3siaWQiOiJodHRwczovL25zLm90aGVyLmV4YW1wbGUvdGFpbG9yaW5nL2Vhc2VkIiwic2VtYW50aWMtZGlnZXN0Ijoic2hhMjU2OmI0ZTUzMGY5ZjI0ZjFmZmYzOTZiMzQ2NzgyMmY1ODU3Y2YzMGM5NDZmZTQ5OTJhODE4MDkzYTIwMjM4ZGU5YjgifV0sInRpbWVzdGFtcCI6IjIwMjYtMDctMjJUMTI6MDA6MDBaIiwidmVyc2lvbiI6IjEifQ==",
+     "payloadType": "application/vnd.oscal-semantic-core.attestation+json",
+     "signatures": [
+      {
+       "keyid": "fixture-1",
+       "sig": "fjnSiLcZyOtnFEJpEoA2K+g45SPfqDhAWFll0qLT4nXYi3zsSBmx/GtcXIdXuxNgNGTdOZKfNDegd5CNkCWzCw=="
+      }
+     ]
+    }
+   },
+   "trusted-keys": {
+    "https://ns.auth.gov/fw/party/ao": "bb10925493ae5228537a99fc91cdcca6a2bd5cde8b7c5b8e3f40f50e5edb2e65"
+   },
+   "expected-envelope": "verified",
+   "expected-tier": "authority-proven"
+  },
+  {
+   "name": "unsigned-attestation-cannot-prove-in-verification-mode",
+   "note": "the P9c-1 forgery closed: a minted, unsigned attestation under the content origin flips claimed->proven in structural mode but NOT under --trusted-keys.",
+   "objects": [
+    {
+     "id": "https://ns.auth.gov/fw/req/1",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "should",
+       "obligated-parties": [
+        "https://ns.auth.gov/fw/p/o"
+       ],
+       "prose": {
+        "en": "X."
+       }
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/set/base",
+     "version": "1",
+     "lifecycle": "active",
+     "members": [
+      {
+       "ref": "https://ns.auth.gov/fw/req/1",
+       "sequence": 10
+      }
+     ]
+    },
+    {
+     "id": "https://ns.other.example/tailoring/eased",
+     "version": "1",
+     "lifecycle": "active",
+     "selects": [
+      {
+       "set-ref": "https://ns.auth.gov/fw/set/base"
+      }
+     ],
+     "operations": [
+      {
+       "op": "set-modality",
+       "requirement-ref": "https://ns.auth.gov/fw/req/1",
+       "statement-id": "s1",
+       "modality": "may"
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/attestation/tailoring-approval",
+     "version": "1",
+     "lifecycle": "active",
+     "subject-semantic-digests": [
+      {
+       "id": "https://ns.other.example/tailoring/eased",
+       "semantic-digest": "sha256:b4e530f9f24f1fff396b3467822f5857cf30c946fe4992a818093a20238de9b8"
+      }
+     ],
+     "content-manifest-digest": "sha256:7b1a6b9ee0f176cb8d1e9e16309c5ec71fe32d6e22841af4248b55186e64606f",
+     "signer": "https://ns.auth.gov/fw/party/ao",
+     "timestamp": "2026-07-22T12:00:00Z"
+    }
+   ],
+   "envelopes": {},
+   "trusted-keys": {
+    "https://ns.auth.gov/fw/party/ao": "bb10925493ae5228537a99fc91cdcca6a2bd5cde8b7c5b8e3f40f50e5edb2e65"
+   },
+   "expected-tier": "consumer"
+  },
+  {
+   "name": "tampered-payload-fails-binds",
+   "note": "the envelope's payload is the canonical Attestation; ANY normative delta (here: timestamp) fails attestation-binds before any signature math.",
+   "objects": [
+    {
+     "id": "https://ns.auth.gov/fw/req/1",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "should",
+       "obligated-parties": [
+        "https://ns.auth.gov/fw/p/o"
+       ],
+       "prose": {
+        "en": "X."
+       }
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/set/base",
+     "version": "1",
+     "lifecycle": "active",
+     "members": [
+      {
+       "ref": "https://ns.auth.gov/fw/req/1",
+       "sequence": 10
+      }
+     ]
+    },
+    {
+     "id": "https://ns.other.example/tailoring/eased",
+     "version": "1",
+     "lifecycle": "active",
+     "selects": [
+      {
+       "set-ref": "https://ns.auth.gov/fw/set/base"
+      }
+     ],
+     "operations": [
+      {
+       "op": "set-modality",
+       "requirement-ref": "https://ns.auth.gov/fw/req/1",
+       "statement-id": "s1",
+       "modality": "may"
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/attestation/tailoring-approval",
+     "version": "1",
+     "lifecycle": "active",
+     "subject-semantic-digests": [
+      {
+       "id": "https://ns.other.example/tailoring/eased",
+       "semantic-digest": "sha256:b4e530f9f24f1fff396b3467822f5857cf30c946fe4992a818093a20238de9b8"
+      }
+     ],
+     "content-manifest-digest": "sha256:7b1a6b9ee0f176cb8d1e9e16309c5ec71fe32d6e22841af4248b55186e64606f",
+     "signer": "https://ns.auth.gov/fw/party/ao",
+     "timestamp": "2026-07-22T12:00:00Z",
+     "envelope-ref": "env-1"
+    }
+   ],
+   "envelopes": {
+    "env-1": {
+     "payload": "eyJjb250ZW50LW1hbmlmZXN0LWRpZ2VzdCI6InNoYTI1Njo3YjFhNmI5ZWUwZjE3NmNiOGQxZTllMTYzMDljNWVjNzFmZTMyZDZlMjI4NDFhZjQyNDhiNTUxODZlNjQ2MDZmIiwiZW52ZWxvcGUtcmVmIjoiZW52LTEiLCJpZCI6Imh0dHBzOi8vbnMuYXV0aC5nb3YvZncvYXR0ZXN0YXRpb24vdGFpbG9yaW5nLWFwcHJvdmFsIiwibGlmZWN5Y2xlIjoiYWN0aXZlIiwic2lnbmVyIjoiaHR0cHM6Ly9ucy5hdXRoLmdvdi9mdy9wYXJ0eS9hbyIsInN1YmplY3Qtc2VtYW50aWMtZGlnZXN0cyI6W3siaWQiOiJodHRwczovL25zLm90aGVyLmV4YW1wbGUvdGFpbG9yaW5nL2Vhc2VkIiwic2VtYW50aWMtZGlnZXN0Ijoic2hhMjU2OmI0ZTUzMGY5ZjI0ZjFmZmYzOTZiMzQ2NzgyMmY1ODU3Y2YzMGM5NDZmZTQ5OTJhODE4MDkzYTIwMjM4ZGU5YjgifV0sInRpbWVzdGFtcCI6IjIwMjYtMDctMjNUMTI6MDA6MDBaIiwidmVyc2lvbiI6IjEifQ==",
+     "payloadType": "application/vnd.oscal-semantic-core.attestation+json",
+     "signatures": [
+      {
+       "keyid": "fixture-1",
+       "sig": "XpDhY+Pr1mVy1ZViMwVQyylzia2EKZ/kX2arPA5xK+mO0WXrb+kby75jxfbsXnA4s1pp9AiwIMX/2jXpoMwCDg=="
+      }
+     ]
+    }
+   },
+   "trusted-keys": {
+    "https://ns.auth.gov/fw/party/ao": "bb10925493ae5228537a99fc91cdcca6a2bd5cde8b7c5b8e3f40f50e5edb2e65"
+   },
+   "expected-envelope": "error:canonical form",
+   "expected-tier": "consumer"
+  },
+  {
+   "name": "wrong-key-fails-signature",
+   "objects": [
+    {
+     "id": "https://ns.auth.gov/fw/req/1",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "should",
+       "obligated-parties": [
+        "https://ns.auth.gov/fw/p/o"
+       ],
+       "prose": {
+        "en": "X."
+       }
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/set/base",
+     "version": "1",
+     "lifecycle": "active",
+     "members": [
+      {
+       "ref": "https://ns.auth.gov/fw/req/1",
+       "sequence": 10
+      }
+     ]
+    },
+    {
+     "id": "https://ns.other.example/tailoring/eased",
+     "version": "1",
+     "lifecycle": "active",
+     "selects": [
+      {
+       "set-ref": "https://ns.auth.gov/fw/set/base"
+      }
+     ],
+     "operations": [
+      {
+       "op": "set-modality",
+       "requirement-ref": "https://ns.auth.gov/fw/req/1",
+       "statement-id": "s1",
+       "modality": "may"
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/attestation/tailoring-approval",
+     "version": "1",
+     "lifecycle": "active",
+     "subject-semantic-digests": [
+      {
+       "id": "https://ns.other.example/tailoring/eased",
+       "semantic-digest": "sha256:b4e530f9f24f1fff396b3467822f5857cf30c946fe4992a818093a20238de9b8"
+      }
+     ],
+     "content-manifest-digest": "sha256:7b1a6b9ee0f176cb8d1e9e16309c5ec71fe32d6e22841af4248b55186e64606f",
+     "signer": "https://ns.auth.gov/fw/party/ao",
+     "timestamp": "2026-07-22T12:00:00Z",
+     "envelope-ref": "env-1"
+    }
+   ],
+   "envelopes": {
+    "env-1": {
+     "payload": "eyJjb250ZW50LW1hbmlmZXN0LWRpZ2VzdCI6InNoYTI1Njo3YjFhNmI5ZWUwZjE3NmNiOGQxZTllMTYzMDljNWVjNzFmZTMyZDZlMjI4NDFhZjQyNDhiNTUxODZlNjQ2MDZmIiwiZW52ZWxvcGUtcmVmIjoiZW52LTEiLCJpZCI6Imh0dHBzOi8vbnMuYXV0aC5nb3YvZncvYXR0ZXN0YXRpb24vdGFpbG9yaW5nLWFwcHJvdmFsIiwibGlmZWN5Y2xlIjoiYWN0aXZlIiwic2lnbmVyIjoiaHR0cHM6Ly9ucy5hdXRoLmdvdi9mdy9wYXJ0eS9hbyIsInN1YmplY3Qtc2VtYW50aWMtZGlnZXN0cyI6W3siaWQiOiJodHRwczovL25zLm90aGVyLmV4YW1wbGUvdGFpbG9yaW5nL2Vhc2VkIiwic2VtYW50aWMtZGlnZXN0Ijoic2hhMjU2OmI0ZTUzMGY5ZjI0ZjFmZmYzOTZiMzQ2NzgyMmY1ODU3Y2YzMGM5NDZmZTQ5OTJhODE4MDkzYTIwMjM4ZGU5YjgifV0sInRpbWVzdGFtcCI6IjIwMjYtMDctMjJUMTI6MDA6MDBaIiwidmVyc2lvbiI6IjEifQ==",
+     "payloadType": "application/vnd.oscal-semantic-core.attestation+json",
+     "signatures": [
+      {
+       "keyid": "fixture-1",
+       "sig": "S6NgnZETbUa8K76ky8pP8vQMkfaL3L3sHDapRnLMnlQxgjegmP5CFYfqYKWGjMhSO0BiTBVwdDjghCyMrgF6DA=="
+      }
+     ]
+    }
+   },
+   "trusted-keys": {
+    "https://ns.auth.gov/fw/party/ao": "bb10925493ae5228537a99fc91cdcca6a2bd5cde8b7c5b8e3f40f50e5edb2e65"
+   },
+   "expected-envelope": "error:no signature verifies",
+   "expected-tier": "consumer"
+  },
+  {
+   "name": "missing-trusted-key-is-unverified-not-proven",
+   "note": "sealed verification without the signer's key: the envelope is intact but unverifiable - proven is NOT granted on hope.",
+   "objects": [
+    {
+     "id": "https://ns.auth.gov/fw/req/1",
+     "version": "1",
+     "lifecycle": "active",
+     "statements": [
+      {
+       "id": "s1",
+       "modality": "should",
+       "obligated-parties": [
+        "https://ns.auth.gov/fw/p/o"
+       ],
+       "prose": {
+        "en": "X."
+       }
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/set/base",
+     "version": "1",
+     "lifecycle": "active",
+     "members": [
+      {
+       "ref": "https://ns.auth.gov/fw/req/1",
+       "sequence": 10
+      }
+     ]
+    },
+    {
+     "id": "https://ns.other.example/tailoring/eased",
+     "version": "1",
+     "lifecycle": "active",
+     "selects": [
+      {
+       "set-ref": "https://ns.auth.gov/fw/set/base"
+      }
+     ],
+     "operations": [
+      {
+       "op": "set-modality",
+       "requirement-ref": "https://ns.auth.gov/fw/req/1",
+       "statement-id": "s1",
+       "modality": "may"
+      }
+     ]
+    },
+    {
+     "id": "https://ns.auth.gov/fw/attestation/tailoring-approval",
+     "version": "1",
+     "lifecycle": "active",
+     "subject-semantic-digests": [
+      {
+       "id": "https://ns.other.example/tailoring/eased",
+       "semantic-digest": "sha256:b4e530f9f24f1fff396b3467822f5857cf30c946fe4992a818093a20238de9b8"
+      }
+     ],
+     "content-manifest-digest": "sha256:7b1a6b9ee0f176cb8d1e9e16309c5ec71fe32d6e22841af4248b55186e64606f",
+     "signer": "https://ns.auth.gov/fw/party/ao",
+     "timestamp": "2026-07-22T12:00:00Z",
+     "envelope-ref": "env-1"
+    }
+   ],
+   "envelopes": {
+    "env-1": {
+     "payload": "eyJjb250ZW50LW1hbmlmZXN0LWRpZ2VzdCI6InNoYTI1Njo3YjFhNmI5ZWUwZjE3NmNiOGQxZTllMTYzMDljNWVjNzFmZTMyZDZlMjI4NDFhZjQyNDhiNTUxODZlNjQ2MDZmIiwiZW52ZWxvcGUtcmVmIjoiZW52LTEiLCJpZCI6Imh0dHBzOi8vbnMuYXV0aC5nb3YvZncvYXR0ZXN0YXRpb24vdGFpbG9yaW5nLWFwcHJvdmFsIiwibGlmZWN5Y2xlIjoiYWN0aXZlIiwic2lnbmVyIjoiaHR0cHM6Ly9ucy5hdXRoLmdvdi9mdy9wYXJ0eS9hbyIsInN1YmplY3Qtc2VtYW50aWMtZGlnZXN0cyI6W3siaWQiOiJodHRwczovL25zLm90aGVyLmV4YW1wbGUvdGFpbG9yaW5nL2Vhc2VkIiwic2VtYW50aWMtZGlnZXN0Ijoic2hhMjU2OmI0ZTUzMGY5ZjI0ZjFmZmYzOTZiMzQ2NzgyMmY1ODU3Y2YzMGM5NDZmZTQ5OTJhODE4MDkzYTIwMjM4ZGU5YjgifV0sInRpbWVzdGFtcCI6IjIwMjYtMDctMjJUMTI6MDA6MDBaIiwidmVyc2lvbiI6IjEifQ==",
+     "payloadType": "application/vnd.oscal-semantic-core.attestation+json",
+     "signatures": [
+      {
+       "keyid": "fixture-1",
+       "sig": "fjnSiLcZyOtnFEJpEoA2K+g45SPfqDhAWFll0qLT4nXYi3zsSBmx/GtcXIdXuxNgNGTdOZKfNDegd5CNkCWzCw=="
+      }
+     ]
+    }
+   },
+   "trusted-keys": {},
+   "expected-envelope": "unverified",
+   "expected-tier": "consumer"
+  }
+ ]
+}
