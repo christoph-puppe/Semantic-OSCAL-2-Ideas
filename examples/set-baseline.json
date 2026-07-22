@@ -1,0 +1,21 @@
+{
+  "id": "https://ns.bsi.bund.de/gspp/set/baseline/example",
+  "version": "2026-07",
+  "label": "Example-Baseline",
+  "lifecycle": "active",
+  "title": "Example baseline (multi-authority)",
+  "members": [
+    {
+      "ref": "https://ns.bsi.bund.de/gspp/set/tax/crypto",
+      "sequence": 10
+    },
+    {
+      "ref": "https://ns.cyber.gov.au/ism/req/ISM-1234",
+      "sequence": 20
+    },
+    {
+      "ref": "https://ns.fedramp.gov/cr26/req/IEC-CSO-IIR",
+      "sequence": 30
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "https://ns.cyber.gov.au/ism/req/ISM-1234",
+  "version": "2026.06.18",
+  "label": "ISM-1234",
+  "lifecycle": "active",
+  "statements": [
+    {
+      "id": "s1",
+      "modality": "must",
+      "obligated-parties": [
+        "https://ns.cyber.gov.au/ism/party/organisation"
+      ],
+      "prose": {
+        "en": "Privileged access to systems is limited to personnel with a demonstrated business need."
+      }
+    }
+  ]
+}

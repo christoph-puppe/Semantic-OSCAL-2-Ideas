@@ -1,0 +1,38 @@
+{
+  "id": "https://ns.fedramp.gov/cr26/req/IEC-CSO-IIR",
+  "version": "2026.07.14.01",
+  "label": "IEC-CSO-IIR",
+  "lifecycle": "active",
+  "title": "Initial Incident Report",
+  "statements": [
+    {
+      "id": "s1",
+      "modality": "must",
+      "obligated-parties": [
+        "https://ns.fedramp.gov/cr26/party/provider"
+      ],
+      "parameters": [
+        {
+          "name": "iir-deadline",
+          "type": "calendar-period",
+          "num": 1,
+          "unit": "bizdays",
+          "calendar-ref": "https://ns.fedramp.gov/cr26/calendar/us-federal",
+          "tightening": "lower"
+        }
+      ],
+      "prose": {
+        "en": "Providers MUST supply an Initial Incident Report within {param:iir-deadline} of identifying an incident."
+      }
+    }
+  ],
+  "relations": [
+    {
+      "type": "uses-term",
+      "ref": "https://ns.fedramp.gov/cr26/term/incident"
+    }
+  ],
+  "annotations": {
+    "web_name": "initial-incident-report"
+  }
+}

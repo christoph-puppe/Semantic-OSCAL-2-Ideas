@@ -1,0 +1,18 @@
+{
+  "id": "https://maps.example.org/map/2026-1/konf-14-1--ism-1234",
+  "version": "2026-1",
+  "lifecycle": "active",
+  "source-ref": "https://ns.bsi.bund.de/gspp/req/KONF.14.1",
+  "source-scope": [
+    "statement:s1"
+  ],
+  "target-ref": "https://ns.cyber.gov.au/ism/req/ISM-1234",
+  "relationship": "supports",
+  "direction": "source-to-target",
+  "confidence": "reviewed",
+  "rationale": "Transport encryption contributes to, but does not by itself satisfy, the access-limitation objective.",
+  "provenance": {
+    "author-ref": "https://maps.example.org/party/crosswalk-team",
+    "date": "2026-07-01"
+  }
+}

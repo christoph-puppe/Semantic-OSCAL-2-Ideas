@@ -1,0 +1,29 @@
+{
+  "id": "https://cso.example/impl/acme--konf-14-1",
+  "version": "2026-07",
+  "lifecycle": "active",
+  "component-ref": "https://cso.example/component/acme-saas",
+  "requirement-ref": "https://ns.bsi.bund.de/gspp/req/KONF.14.1",
+  "statement-refs": [
+    "s1"
+  ],
+  "responsibility": "shared",
+  "satisfied-by": [
+    {
+      "capability-ref": "https://cso.example/component/acme-saas#cap-encrypt-transit"
+    },
+    {
+      "inherited-from": {
+        "component-ref": "https://paas.example/component/platform",
+        "basis-ref": "https://paas.example/auth/jab-moderate-2026"
+      }
+    }
+  ],
+  "parameter-bindings": {
+    "transport-crypto": "tls13"
+  },
+  "status": "implemented",
+  "evidence-refs": [
+    "render/authorization-summary.md"
+  ]
+}

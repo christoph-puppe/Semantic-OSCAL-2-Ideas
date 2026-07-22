@@ -1,0 +1,620 @@
+# OSCAL Semantic Core (working name) — "Kernel + Registered Facets"
+## v0.5 — Corrected Specification with Decision Register and Normative Shapes
+### 2026-07-18
+
+**Status.** A **well-supported architecture hypothesis** with a corrected,
+internally consistent specification. Five adversarial review passes and one
+validating pass have been adjudicated (changelog IV.6). The executable proof
+gate — full-corpus converters, schemas, measured complexity — moves honestly
+to **v0.6** (IV.5): the passes showed the specification had holes that had to
+close *before* code, and pretending otherwise would violate this project's
+own evidence-tier rule. Comparison baseline throughout: **OSCAL 1.2.2**
+(current NIST line, eight models including the Control Mapping Model
+introduced March 2026 with v1.2.1) — verified against NIST reference pages;
+an earlier reviewer claim that no 1.2.x line exists was a knowledge-cutoff
+artifact.
+
+**North star (session directive, governs every verdict):** *more simple ·
+closer to the needs of the customers · no more props · less need for custom
+Metaschema extensions or bespoke JSON.* Every decision below cites at least
+one measured customer need; the companion **Decision Rationale Register**
+scores each decision explicitly against customer / simplicity / reduced
+complexity.
+
+**Lineage.** v0.1 → pass 1 → v0.2 → pass 2 + census r1/r2 → v0.3 → passes
+3 (SOL) + 4 (H) → v0.4 → passes 5 (Grok, validating), 6 (P6-F1…4),
+7 (P7-B1…4, gaps, mapping), 8 (P8-E1…4, gaps) → **v0.5**.
+
+---
+
+# Part I — The Evidence Base
+
+## 1. Method
+
+Admitted sources of design authority — every normative element traces to at
+least one: (1) **measured 1.x failures** (F1–F10); (2) **adjudicated
+adversarial findings** (G, SOL/H, P6/P7/P8 — rejections documented);
+(3) **the three-authority census** (ISM v2026.06.18 · BSI GS++/MS-TLS
+2026-07 · FedRAMP CR26 v2026.07.14.01).
+
+Principles: **failures unrepresentable, not forbidden** (the 216
+pseudo-placeholders inside schema-valid BSI documents remain the standing
+proof); **complexity-budget reallocation** (1.x spent the budget on
+infrastructure — RFC-0024 records the verdict: 100+ Rev5 authorizations in
+2025, zero OSCAL); **claims follow evidence tier** (measured / designed-for /
+hypothesized, always labeled).
+
+## 2. Corpus and adopter scope (corrected per P7/P8)
+
+Authoritative machine-readable publications are one category; conversions
+and mappings are another. The defensible scope statement:
+
+> The design targets official machine-readable publications from **NIST**
+> (800-53, 800-171, CSF 2.0 in OSCAL 1.2.2), **BSI** (Stand-der-Technik /
+> Grundschutz++ catalogs — not the entire traditional Kompendium), **ASD**
+> (ISM OSCAL releases), **CSA** (CCM v4 OSCAL bundle — a conversion
+> artifact, version to be re-checked at corpus time), **SCF** (official
+> OSCAL JSON — pinned to OSCAL **1.0.4**, itself a data point for version
+> fragmentation), and **FedRAMP CR26** (bespoke JSON, not OSCAL); plus the
+> **CIS** OSCAL corpus (repository status disputed between passes —
+> archived vs. maintained v8.1 — verification item, treated as test corpus
+> either way); plus **licensed or independently modeled targets** for
+> ISO/IEC 27001/27002 and PCI DSS, which have **no official OSCAL
+> publications** and must never be attributed as such.
+
+The census proof gate (v0.6) covers the three measured corpora: ISM, BSI,
+CR26. Everything beyond is *designed-for*.
+
+## 3. The convergence table
+
+Decision rule: **3-way convergence → kernel; real but framework-shaped →
+stdlib facet; workaround for a missing kernel mechanism → structurally
+dead.** (Unchanged from v0.4 except the rows noted; full table retained for
+self-containment.)
+
+| Concept | ISM | BSI | FedRAMP CR26 | v0.5 home |
+|---|---|---|---|---|
+| Modality | prose (style-guide) | `modal_verb` ×1,006 | `force` ×328 (MUST 189/SHOULD 84/MAY 39/MUST NOT 11/SHOULD NOT 5) | Kernel `statements[].modality` + **normative partial order** (D9) |
+| Clause granularity | 1 statement/control | **347 nested pseudo-controls** | class variants + info bullets | Kernel `statements[]` (D9) |
+| Obligated party | implicit | `target_object_categories` (distinct concept → grammar facet) | `affects[]` (array) | Kernel `obligated-parties[]` (D9) |
+| Membership / baselines | `applicability` ×5,301 + E8 ×256 | twin catalogs | `subsets` + per-class lists | dead → RequirementSet (D13, D21) |
+| Secondary identifiers | labels + legacy nos. | `alt-identifier` ×1,219 | `alts[]` ×188 | Kernel `label` + `aliases[]` (D2) |
+| Revision history | ×2,202 | silent drift | `updated[]` everywhere | dead → L0 (D2/D3) |
+| Deadlines | — | — | typed timeframes, bizdays | Kernel `duration` **split elapsed/calendar** (D9) |
+| Requirement grammar | — | ×~2,450 | house grammar in prose | stdlib `statement-grammar@1` |
+| Class variants | separate profiles | `sec_level` | `varies_by_class` | dead → Tailoring (D13) |
+| Evidence / key tests | — | `documentation` ×959 | artifacts, key_tests | stdlib `assessment-criteria@1` |
+| Glossary | — | — | FRD 75 terms/188 aliases | stdlib `terminology@1` |
+| Reporting duties | — | — | `notification[]` | stdlib `reporting-obligation@1` |
+| Effectivity | — | — | `info.effective` | stdlib `effectivity@1` |
+| Deviations | — | audit practice | `corrective_actions`; hist. 4× state machine | Kernel `Deviation` (D8) |
+| **Cross-framework mappings** *(new row)* | — | — | KSI→800-53 ×263 | **Kernel `Mapping`** (D20) — external evidence: SCF ×200+ frameworks, CIS/CSA mapping products, NIST OLIR, and NIST's own March-2026 Mapping Model |
+| Rendering hints | — | — | `do_not_link`, `web_name` | Annotations (D10) |
+| Process flows | — | — | `info.flows[]` | out of scope (D17) |
+
+---
+
+# Part II — The Decision Register
+
+Format: **Decision → Evidence → Rationale → Pros → Cons → Rejected.**
+Stable numbering; `(rev. v0.5 — finding)` marks changes since v0.4.
+
+## D1 — One serialization: JSON; prose = CommonMark + GFM tables, no raw HTML.
+Unchanged from v0.4. Evidence: CR26 is JSON-canonical; ISM triple-publishing
+is an agency tax; the fabricated "#2118 wanted tables" justification remains
+documented and discarded — GFM tables stand on the parameter-matrix reality
+of compliance prose. Data-bearing tables belong in typed fields; prose
+tables are narrative. Rejected: normative XML, YAML conformance, raw HTML.
+
+## D2 — Identity: authority URIs, string-compared, never resolved; `label` + `aliases[]`; **alias vs. lineage split.** *(rev. v0.5 — P7-B4)*
+**Decision.** As v0.4, with the supersession mechanism split into two
+relations with different powers:
+
+- `canonical-alias` — **identity equivalence**, authority-asserted, only for
+  rebrands of the *same* content (old URI ⇄ new URI). Validators substitute
+  freely.
+- `replaces[] {ref, relationship: revised | split-from | merged-into |
+  renamed}` — **lineage only**. Never automatic substitution: a revision,
+  split, or merge is a different object with history, and auto-substituting
+  it would silently corrupt implementations, findings, attestations,
+  mappings, and tailorings.
+
+**Evidence.** BSI twin-catalog collisions; the deleted FedRAMP registry
+(locator rot); ×1,219/×188/legacy alias practice across all three; P7's
+demonstration that "supersedes = equivalence" is unsafe for revised content.
+**Rejected.** URN scheme; UUID-primary identity; one conflated supersedes
+relation (v0.4 — corrected).
+
+## D3 — **Content manifest**, sealed mode, two integrity domains, deterministic canonical form. *(rev. v0.5 — P7-B1, P6-F3, P8-E4, P7-G3/G5)*
+**Decision.**
+
+1. The **content manifest** lists all substantive objects and renderings
+   with **both digests each** (`package-digest` over delivered bytes,
+   annotations included; `semantic-digest` = SHA-256 over JCS of the object
+   minus `annotations`). **Attestations and signature envelopes are
+   excluded from the content manifest by definition** — they live beside
+   it (a transport manifest MAY list both but is never the signed
+   structure). This dissolves the manifest↔attestation hash cycle P7-B1
+   proved: nothing signed contains its own signature.
+2. **Sealed mode** remains a Core conformance requirement: full validation
+   with zero network access, resolution via the manifest only.
+3. **JCS pre-normalization (P6-F3):** before JCS serialization, all
+   structurally optional arrays/objects containing zero elements MUST be
+   omitted. Normative test vectors cover this and the permitted number
+   domain.
+4. **`decimal` is a canonical decimal string** (lexically defined scale/
+   precision), never an IEEE-754 number — two tools MUST derive identical
+   digests and values (P7-G on decimals).
+5. **Facet pinning and bundle composition (P8-E4/P7-G5):** manifests pin
+   exact facet versions + digests; objects may cite the major line. Registry
+   semver policy makes minor versions backward-compatible **normatively**;
+   composing two bundles pinning different minors of one major line
+   resolves deterministically to the highest pinned minor with both
+   payload sets re-validated — incompatibility is a reported error, never a
+   silent pick.
+
+**Evidence.** Air-gapped estates; registry link-rot; P7's fixed-point proof;
+P6's omitted-vs-empty hash fragmentation; the two-digest necessity
+established in v0.4 (H1/SOL-9) now made cycle-free.
+**Rejected.** Attestation inside the signed manifest (no fixed point);
+single digest domain (either breaks stripping or enables the H1 forgery);
+IEEE decimals (canonicalization hazard).
+
+## D4 — Nine shallow kernel types; documents are renderings.
+*(count updated by D20)* Requirement, RequirementSet, Tailoring, Component,
+Implementation, Assessment, Finding, Attestation, **Mapping** — shallow,
+typed, referenced; no parts, no document tree, no positional semantics.
+Documents are L4 renderings. Evidence unchanged (the #2118/#2112 class; 998
+flat BSI controls as fossil record; **CR26 is documents-as-views in
+production**). The type-count dogma is formally retired (P7's closing
+argument accepted): **semantic completeness beats winning the type-count
+argument** — and the ledger claim becomes *nine shallow types replace eight
+deep document models* (1.2.2's, including its March-2026 Mapping Model).
+
+## D5 — Component (absorbs System); **identified authorization contexts**; edge-local inductive boundary rule. *(rev. v0.5 — P7-G on authorization scoping)*
+**Decision.** As v0.4, with authorization contexts made addressable:
+
+```json
+"authorizations": [
+  { "id": "https://cso.example/auth/fedramp-high",
+    "authority-ref": "https://ns.fedramp.gov/party/jab",
+    "scope-label": "FedRAMP High P-ATO",
+    "includes": [ {"component-ref": "…"}, {"component-ref": "…"} ] } ]
+```
+
+`includes[]` scopes which members belong to this context (default: the
+component's full members graph). Absence of `authorizations` remains
+**structurally silent** — never a negative assertion. The boundary rule is
+unchanged and edge-local: every `inherited-from` edge whose target declares
+any authorization MUST carry `basis-ref` — which now points at a specific
+**authorization id**, so a service holding both a JAB P-ATO and an agency
+ATO can be inherited against the right one. Multi-hop chains remain covered
+by induction; D14's one-hop budget intact.
+**Rejected (recorded).** Boolean flag (v0.3), defaulted boolean (v0.4 →
+dead), separate System type, multi-hop traversal.
+
+## D6 — One `Implementation` edge (comp-def + SSP implemented-requirements unified).
+Unchanged: `{component-ref, requirement-ref, statement-refs[]?,
+satisfied-by[] (capability-ref | inherited-from{component-ref, basis-ref →
+authorization id}), responsibility: provider|customer|shared,
+parameter-bindings, status, evidence-refs[], deviations[]}`. Evidence: the
+public PR #8 retreat; historical Rev4 enums mapping 1:1. Per-clause
+responsibility via `statement-refs` is how shared responsibility actually
+works.
+
+## D7 — Attestation: content-manifest binding, **bi-modal verification**, verification contract, provenance map. *(rev. v0.5 — P7-B1 + P6-F1 merged)*
+**Decision.**
+`{subject-semantic-digests[], content-manifest-digest, rendering
+{artifact-digest, media-type, template-ref (pinned), renderer}, signer,
+timestamp, envelope-ref, provenance-map-ref?}` — the attestation binds the
+**content-manifest digest** (which covers every object's package- and
+semantic-digest at signing time) and is itself outside that manifest (D3).
+Verification is a **normative two-state machine**:
+
+1. **Full Match** — signature valid, content-manifest digest matches the
+   delivered bundle: exact packaging and presentation state proven.
+2. **Semantic Match** — signature valid, all `subject-semantic-digests`
+   match, but the content-manifest digest does not (e.g., annotations
+   legitimately stripped, bundle re-packaged): **compliance content proven;
+   packaging altered in transit** — reported as such, never as failure and
+   never as Full.
+
+The stdlib DSSE profile remains normative about envelope location, exact
+signed digest set, signer identity, trust roots, timestamps,
+expiry/revocation, and subjects-in-bundle completeness. Template rule
+unchanged: annotations may influence only non-normative chrome. Optional
+provenance map: statement-id/object-id → rendering anchor.
+**Rejected.** Hashing annotation-inclusive semantic payloads; P6's binary as
+originally posed — the manifest split plus bi-modal states preserves *both*
+the anti-tamper guarantee and the stripping right.
+
+## D8 — `Deviation` sub-object.
+Unchanged: `{type (code system), state (investigating → pending → approved |
+withdrawn), rationale, approver-ref, opened, refs[]}` on Implementation,
+Finding, Tailoring. Evidence: four identical historical state machines; CR26
+`corrective_actions`; BSI Abweichungspraxis. Its role widens in D13: it is
+the audited channel for *every* recognized weakening, not only modality.
+
+## D9 — Statements: identified collection; **normative modality order**; obligated-parties; **elapsed vs. calendar durations**; parameter algebra. *(rev. v0.5 — P8-E2, P7-G on calendars/decimal)*
+**Decision.** As v0.4 (`statements[] {id, modality, obligated-parties[],
+parameters[], prose{lang}}`), completed where the passes proved it
+unevaluatable:
+
+**Modality partial order (normative — the lattice `modality-monotonic`
+evaluates against):**
+
+```
+obligation axis:   unspecified < may < should < must
+prohibition axis:  unspecified < should-not < must-not
+restriction:       may < may-only          (a permission narrowed is stronger)
+incomparable:      {may-only vs should/must} · {any obligation vs any prohibition}
+```
+
+`set-modality` without a Deviation is permitted **iff** new ≥ old in this
+partial order. Axis reversals (e.g., may → must-not) and all incomparable
+moves are never monotone ⇒ Deviation. Design note recorded for the German
+customer: **DARF NUR** (may-only) is a restriction — stronger than may,
+incomparable with must — exactly as BSI Verbindlichkeitssprache treats it;
+the lattice is the first machine-checkable encoding of that distinction.
+
+**Durations split (calendar honesty):**
+
+- `elapsed-duration {num, unit ∈ seconds|minutes|hours}` — computable
+  everywhere.
+- `calendar-period {num, unit ∈ days|bizdays|months|years, calendar-ref?,
+  timezone?, cutoff?}` — **representable without context, computable only
+  with it**: deadline arithmetic over a calendar-period without a resolvable
+  calendar context MUST fail closed with an explained error. CR26's
+  `bizdays` is the customer evidence; two conformant tools must never
+  compute different deadlines from one value (P7's exact objection).
+
+Scalar algebra otherwise unchanged (`string | integer | decimal(canonical
+string, D3) | boolean | date | datetime | uri | code`, containers
+`choice | list | range`), with the standing escape: what the algebra cannot
+type is a `string` plus a facet — never a schema-in-parameter.
+
+## D10 — Facets: registered, federated, capability-declared, fail-closed; **private: defined harmless; undeclared registered = dangerous.** *(rev. v0.5 — P6-F4 + P7-G4 merged)*
+**Decision.** As v0.4 (Portable/Computable split, `modifies-semantics` ⊆
+{assessment, tailoring, selection, rendering}, capability declarations,
+normative fail-closed), with the two open edges closed in one consistent
+rule pair:
+
+1. **`private:` facets carry `modifies-semantics: []` by definition.** They
+   are preserved, never validated, and **ignored by every compliance
+   computation** — exactly the annotations discipline with structure.
+   Smuggling compliance math into `private:` is self-defeating: conformant
+   tools are *required* to look away. No fail-closed abort on sight
+   (P6-F4's paradox dissolved); the artifact remains capped below Portable.
+2. **A registered facet whose descriptor omits the declaration is treated
+   as modifying all four classes** — dangerous-by-default, fail-closed
+   everywhere (P7-G4's direction adopted for the registered space). The
+   burden is on the publisher to declare harmlessness, not on consumers to
+   assume it.
+
+`.well-known` stays discovery-only; identity and trust are manifest pins
+(D3). Annotations unchanged.
+**Rejected.** Uniform fail-closed including `private:` (kills the valve);
+uniform trust-the-publisher default (props with extra steps).
+
+## D11 — SP 800-53 as Canonical Reference Facet; `oscal-stdlib`.
+Unchanged. The stdlib now also carries the **IR 8477 / OLIR relationship
+code system** for D20 and the calendar code systems for D9.
+
+## D12 — The extension surface, complete.
+Unchanged in structure (eight stdlib facets high/medium confidence;
+`privacy-assessment@1` parked pending Rev5-era verification; framework
+facets as an open sanctioned category; annotations; ISM = zero facets). One
+addition: **`mapping` is *not* here** — mappings are kernel objects (D20),
+precisely so that they cannot regress into relation-string props.
+
+## D13 — Tailoring: bounded selection; identity-addressed operations; **weakening rules per operation**; deterministic resolution. *(rev. v0.5 — P6-F2, P7-B2, P8-E3, P7-U)*
+**Decision.** As v0.4 (set-ref or the three bounded predicates; closed
+op vocabulary addressed by requirement-ref + statement-id + name), completed:
+
+**Operation-level weakening rules (replacing the overbroad v0.4 claim
+"weakening ⇒ Deviation", which P7-B2 correctly showed was only enforced for
+modality):**
+
+| Operation | Rule |
+|---|---|
+| `set-modality` | monotone per the D9 order, else Deviation |
+| `set-parameter` | MUST validate against the parameter's declared type / cardinality / choices / range (P6-F2); out-of-bounds only via Deviation. Additionally, an authority MAY declare per parameter `tightening: lower | higher | none`; a change against the declared direction ⇒ Deviation (CR26 deadlines would declare `lower`) |
+| `detach-facet` | Deviation when the facet's `modifies-semantics` ≠ [] |
+| `replace-prose` | carries `intent: editorial | substantive`; substantive ⇒ Deviation |
+| `add-relation` / `remove-relation` | free (relations are informative; normative cross-framework claims are Mapping objects, D20, with their own lifecycle) |
+| `excludes` | **selection, never weakening — no Deviation** |
+
+The last row is a documented **rejection of P7-B2's "exclude always
+requires Deviation"**: excludes define scope — ISM's five classification
+baselines and FedRAMP's classes are *made of* excludes; requiring a
+Deviation per exclusion would drown every baseline in thousands of
+pseudo-deviations and kill the mechanism that absorbs 5,900+ membership
+props. Weakening means softening a *selected* obligation; selection is not
+softening. (P7 itself conceded a universal weakening detector is
+infeasible; this table is the honest bounded substitute.)
+
+**Deterministic resolution (normative algorithm, Appendix B):** operations
+are an **ordered list**, applied sequentially after selection; **two
+operations addressing the same target within one Tailoring = validation
+error** (overrides happen auditable via Tailoring-of-Tailoring chaining,
+never silently); independent Tailorings over one catalog are separate
+artifacts — there is **no auto-merge**, by design and by history (1.x
+merge semantics are the corpse in the basement). Hop budget harmonized with
+D14 (P8-E3): one shared predicate vocabulary, one budget — at most one
+reference hop, everywhere.
+
+## D14 — Rules: eight primitives, one bounded conditional, **no general-purpose expression language.** *(rev. v0.5 — wording P8; tier P8-E1)*
+Unchanged in substance. `attestation-binds` evaluation moves to **Portable**
+(Core treats Attestation objects as schema-valid data) — resolving P8-E1's
+Core/JCS contradiction. The ledger phrase is corrected to the defensible
+form: primitives + ops + predicates are a small closed DSL; what the design
+excludes is a *general-purpose* expression language — the distinction that
+matters for complexity re-inflation.
+
+## D15 — Conformance: **Core is the passive tier**; normative feature × tier matrix. *(rev. v0.5 — P7-B3 + P8-E1)*
+**Decision.** Core is redefined as **passive**: validate kernel structure,
+verify package digests, resolve references locally, **preserve everything
+unknown** — and perform **no semantic computation whatsoever**. All
+computations of the four classes (tailoring resolution, assessment,
+selection, normative rendering) plus JCS/semantic digests and
+`attestation-binds` begin at **Portable**. A Core processor encountering
+facets preserves them and refuses semantic computation over affected
+objects — the silent-ignore state P7-B3 exposed is unrepresentable.
+
+| Feature | Core | Portable | Authority |
+|---|---:|---:|---:|
+| Kernel schemas incl. statements[], all nine types | Required | Required | Required |
+| Local (manifest) resolution · sealed mode · package-digest verification | Required | Required | Required |
+| Structural primitives (`references-resolve`, `digest-verified`, `unique-within`, `code-from`, `prose-params-resolve`) | Required | Required | Required |
+| Preservation of unknown registered facets & annotations | Required | Required | Required |
+| **Any semantic computation** (tailoring, assessment, selection, normative rendering) | **Forbidden** | Required (fail-closed rules apply) | Required |
+| Registered-facet schema validation · capability declarations · fail-closed | — | Required | Required |
+| Semantic digests (JCS) · `attestation-binds` · `modality-monotonic` · `conditional-apply` | — | Required | Required |
+| Exact facet version+digest pinning; bundle-composition resolution | — | Required | Required |
+| Publication duties (stable ids, alias/lineage records, both digests, `.well-known`, deprecation lifecycle, calendar refs for calendar-periods) | — | — | Required |
+
+RFC-0024's approved-format slot maps to **Portable**.
+
+## D16 — Migration: three guarantee levels; "information-preserving for the supported corpus."
+Unchanged (native / compatibility-facet / opaque-preservation; kernel→1.x
+export exists for the transition with kernel-native concepts flattening to
+props/links — syntactically valid, semantically reduced; round-trip corpus
+with published equivalence). New note: the 1.2.2 Mapping Model becomes a
+native-mapping source/target for D20 objects.
+
+## D17 — Declared non-goals.
+Unchanged (flows as linked resources; template accreditation open (R6);
+narrative grammar optional; executable proof deferred to the gate) — plus:
+**PCI's customized approach and ISO's management-system clauses are named
+extension targets, not covered claims** (P7/P8 coverage verdicts adopted
+verbatim into the coverage table).
+
+## D18 — XML transit projection, strictly fenced.
+Unchanged: kernel+stdlib authored in a transit-safe schema subset with
+guaranteed strict XSD; third-party facets opaque unless publisher-mapped;
+one-way, never authoring; consequence documented (R11).
+
+## D19 — Positioning.
+Unchanged: engine that compiles to 1.x during transition; sunset trigger;
+name avoids "2.0"/"profile"/"kernel" — leading candidate **OSCAL Semantic
+Core**; on-ramps stated accurately (#58 and #2050 live; #2115/#2116 closed
+design positions); RFC-0024's five-CSP clause recorded without endorsement.
+
+## D20 — **`Mapping` as the ninth kernel type.** *(new, v0.5 — P7 mapping analysis accepted over P8's facet alternative)*
+**Decision.** A shallow first-class object:
+
+```json
+{ "id": "https://scf.example/map/nist-ac2--iso-a5.16",
+  "version": "2026.2",
+  "lifecycle": "active",
+  "source-ref": "https://ns.nist.gov/sp800-53/req/AC-2",
+  "source-scope": ["statement:a"],
+  "target-ref": "https://ns.iso.example/27002/req/5.16",
+  "relationship": "subset-of",        // IR 8477 / OLIR code system (stdlib):
+                                       // equal | subset-of | superset-of |
+                                       // intersects | supports | conflicts
+  "direction": "source-to-target",
+  "confidence": "reviewed",
+  "rationale": "…",
+  "provenance": { "author-ref": "…", "date": "…" },
+  "evidence-refs": ["…"] }
+```
+
+Many-to-many is many objects; statement-level scoping via `source-scope`/
+`target-scope`; version pinning via normal L0 references; contradictory
+mappings from different authorities coexist as distinct objects with
+distinct provenance — consumers choose by authority, exactly as they do
+with catalogs.
+
+**Evidence.** SCF's raison d'être is mapping 1,500+ controls to 200+
+frameworks; CIS and CSA ship mapping documents as core products; NIST
+publishes OLIR; CR26 itself carries 263 KSI→800-53 mappings; and NIST just
+shipped an **entire eighth document model** for mappings (March 2026) —
+proof of demand, and proof of the 1.x pattern (a deep document tree with
+uuid/metadata/revisions and props throughout) this kernel exists to
+replace.
+
+**Rationale (north star applied).** *Customer:* the mapping graph **is** the
+product for SCF/CSA/CIS and the multi-framework reality of every regulated
+enterprise. *Simplicity:* one nine-field shallow object replaces a full
+document model. *No props / no bespoke:* without a first-class home,
+mappings regress into `relations`-type strings (props by another name) and
+SCF stays on bespoke Excel/JSON — the two exact failure modes the north
+star forbids. **Rejected:** P8's stdlib-facet variant — facets attach *to*
+objects, but a third-party crosswalk (SCF mapping NIST↔ISO) belongs to
+neither endpoint and needs its own identity, lifecycle, and provenance;
+the type-count argument (retired in D4).
+
+## D21 — **Hierarchy and ordering, normatively.** *(new, v0.5 — P8 hierarchy gap)*
+**Decision.** RequirementSets nest: `members[]` entries are
+`{ref (requirement **or set**), sequence}`; `sequence` is a defined kernel
+field (ascending integer, unique within one members list, presentation
+order — no normative semantics beyond order). Taxonomies are nested sets:
+CSF Functions → Categories → Subcategories, SCF's 34 domains, ISO 27002
+themes, CIS Controls → Safeguards — all sets-of-sets with sequence; ISM's
+`sort-id` ×1,150 absorption is thereby *specified*, not just asserted.
+**Rejected.** Reintroducing group/part nesting on Requirements (the #2118
+attractor); order-as-annotation (props by another name).
+
+---
+
+# Part III — Worked examples
+
+III.1 (BSI KONF.14.1), III.2 (CR26 IEC rule + class Tailoring), III.3
+(ISM, zero facets) carry over from v0.4 unchanged in substance, with two
+corrections: III.2's effectivity dates differentiated
+(`optional-adoption: 2025-11-01`, `must-obtain-by: 2026-07-04`,
+`grace-until: 2027-01-01` — illustrative), and the class Tailoring now
+demonstrates the parameter-bounds rule (setting `iir-deadline` to a value
+outside a declared range would fail without a Deviation). New:
+
+## III.4 — A cross-framework mapping (SCF-shaped)
+
+```json
+{ "id": "https://ns.scf.example/map/2026-2/ac-2--iso-5.16",
+  "version": "2026.2", "lifecycle": "active",
+  "source-ref": "https://ns.nist.gov/sp800-53/req/AC-2",
+  "target-ref": "https://ns.iso.example/27002/req/5.16",
+  "relationship": "intersects", "direction": "source-to-target",
+  "confidence": "reviewed",
+  "provenance": {"author-ref": "https://ns.scf.example/party/scf", "date": "2026-05-01"} }
+```
+
+Props: 0. Bespoke spreadsheet columns: 0. The SCF corpus becomes a package
+of such objects plus its framework facet.
+
+---
+
+# Part IV — Ledger, risks, gate, changelog
+
+## IV.1 Complexity ledger
+
+**Removed vs. OSCAL 1.2.2:** eight deep document models (incl. the
+March-2026 Mapping Model) · Metaschema · profile-resolution algebra + merge
+strategies · XML/YAML conformance + serialization mapping · Schematron ·
+anonymous inline constraints · comp-def/SSP duplication · general JSON
+Patch. **Kernel:** 9 shallow types · 2 sub-objects · 1 serialization · JSON
+Schema 2020-12 · 8 primitives + a closed op vocabulary + 3 predicates ·
+**no general-purpose expression language** · 0 document conventions. The
+six retained subsystems (kernel schemas; content-manifest protocol; facet
+system; rule interpreter; tailoring resolver; attestation protocol) are
+each narrower and more boring than what they replace — a claim scheduled
+for **measurement at the v0.6 gate**, not asserted.
+
+## IV.2 Risk register (delta)
+
+R1–R12 carry over with status updates (R4 softened by pinning+composition
+rule). New: **R13** — IR 8477/OLIR relationship code-system governance
+(stdlib ownership); **R14** — calendar-context dependency: calendar-periods
+are honest but push a real-world dependency (holiday calendars) into
+Authority publication duties; **R15** — CIS corpus status unverified
+(scope-statement item).
+
+## IV.3 Prior art (delta)
+Add: **NIST OSCAL 1.2.2 Control Mapping Model** — as demand evidence *and*
+as the negative pattern (deep document model, props throughout) D20
+replaces; NIST IR 8477 / OLIR (relationship semantics).
+
+## IV.4 Coverage table (P7/P8 verdicts adopted)
+
+| User | Verdict | Basis |
+|---|---|---|
+| BSI, ASD, FedRAMP CR26 | Designed-for, **measured corpora**, proof at gate | census |
+| NIST 800-53 / 800-171 | Designed-for (D11 + sets/tailoring) | catalog layer |
+| NIST CSF 2.0 | Designed-for after **D21** (hierarchy) + prose-only statements | |
+| NIST full lifecycle (SSP/AP/AR/POA&M/Mapping round-trip) | **Not yet demonstrated** — gate corpus item | |
+| CIS | Catalog + IGs via sets; mappings via D20; corpus status R15 | |
+| SCF | Catalog + **D20 mappings** (its central use case now first-class) | |
+| CSA CCM | Controls + CAIQ→assessment-criteria plausible; mappings via D20; full STAR package not claimed | |
+| ISO 27001/27002 | Structurally adaptable (attributes → framework facet; sealed manifests help licensed distribution); **management-system clauses not covered** — named target | |
+| PCI DSS | Testing procedures → assessment-criteria; compensating controls → Deviation; **customized approach encoding undefined** — named target | |
+
+## IV.5 The v0.6 gate (executable; renamed from v0.5 — reasons on title page)
+
+1. Full-corpus converters + computed coverage for ISM, BSI, CR26 — zero
+   unexplained fields.
+2. Executable kernel + stdlib JSON Schemas; conformance corpus incl. JCS
+   vectors (with empty-omission cases), modality-lattice cases,
+   parameter-bounds cases, tailoring-conflict cases, bi-modal attestation
+   cases.
+3. **Lifecycle corpus** beyond catalogs: NIST SSP/AP/AR/POA&M + 1.2.2
+   Mapping examples; FedRAMP implementation/assessment data; CSA CAIQ;
+   SCF mappings; representative PCI customized-approach cases.
+4. Measured complexity comparison vs. an OSCAL 1.2.2 validator + resolver
+   (two languages, LoC, contributor-hours) — the weekend-validator
+   acceptance test.
+
+## IV.6 Changelog v0.4 → v0.5
+
+| Finding | Verdict | Change |
+|---|---|---|
+| P7-B1 (manifest↔attestation hash cycle) + P6-F1 (strip breaks signature) | **Accept (merged)** | D3 content-manifest excludes attestations; D7 bi-modal verification (Full/Semantic) |
+| P6-F2 (tailoring parameter evasion) + P7-B2 (weakening invariant incomplete) | **Accept, bounded** | D13 per-operation rules incl. parameter-bounds, tightening direction, detach/prose rules; invariant honestly narrowed. **Rejected in part:** "exclude ⇒ Deviation" (selection ≠ weakening; would drown baselines) |
+| P6-F3 (JCS empty/omitted ambiguity) | **Accept** | D3 pre-JCS omission rule + vectors |
+| P6-F4 (`private:` fail-closed paradox) + P7-G4 (publisher-honesty default) | **Accept (merged)** | D10: `private:` ≡ modifies-semantics [] (preserve+ignore); undeclared registered ≡ all four classes (fail-closed) |
+| P7-B3 (Core silently ignores facets) + P8-E1 (Core/attestation-binds/JCS) | **Accept (merged)** | D15 Core = passive tier; semantic computation forbidden at Core; attestation-binds → Portable |
+| P7-B4 (supersedes ≠ equivalence) | **Accept** | D2 canonical-alias vs. replaces{relationship} |
+| P8-E2 (modality order undefined) | **Accept** | D9 normative partial order incl. may-only/DARF NUR |
+| P8-E3 (hop budget mismatch) | **Accept** | one predicate vocabulary, one ≤1-hop budget |
+| P8-E4 + P7-G5 (bundle composition of pins) | **Accept** | D3 semver-normative composition rule |
+| P7 mapping gap (ninth type) vs. P8 (stdlib facet) | **Accept P7, reject P8 variant** | **D20 Mapping kernel type**; type-count dogma retired (D4) |
+| P8 hierarchy gap | **Accept** | **D21** nested sets + normative `sequence` |
+| P7-G (authorization scoping) | **Accept** | D5 identified authorizations + includes[] |
+| P7-G (bizdays/calendar, decimal) | **Accept** | D9 elapsed vs. calendar-period (fail-closed computation); D3 decimal-as-string |
+| P7-U (undefined elements; resolution order) | **Accept** | Appendices A/B; D13 ordered ops, same-target = error, chaining for overrides, no auto-merge |
+| P7/P8 adopter-list & baseline corrections | **Accept; conflict resolved by search** | Part I §2 scope statement; baseline = **1.2.2** (P8's "no 1.2.x" was a cutoff artifact — verified against NIST pages); CIS status → R15 |
+| P8 minor (ledger wording; III.2 dates) | **Accept** | "no general-purpose expression language"; dates differentiated |
+| Pass 5 (Grok) | Validating; no blockers | v0.6 gate emphasis adopted |
+
+---
+
+# Appendix A — Normative kernel shapes (summary; JSON Schemas at the v0.6 gate)
+
+Common to all nine types: `id (URI) · version · label? · aliases[]? ·
+lifecycle (draft | active | deprecated | withdrawn) · canonical-alias[]? ·
+replaces[]? · facets{}? · annotations{}? · relations[]? {type (open token;
+normative cross-framework claims use Mapping), ref}`.
+
+- **Requirement:** `title · statements[] (D9) · deviations[]?` —
+  statements: `{id · modality · obligated-parties[] · parameters[] ·
+  prose{lang}}`.
+- **RequirementSet:** `title? · members[] {ref (requirement|set) ·
+  sequence}` (D21).
+- **Tailoring:** `selects[] {set-ref | predicate} · excludes[] {ref} ·
+  operations[] (ordered; D13 vocabulary)`.
+- **Component:** `kind · members[] {component-ref · context (free token)} ·
+  capabilities[] {id · requirement-ref? · description · parameter-
+  bindings?} · authorizations[] (D5)`.
+- **Implementation:** D6 field list.
+- **Assessment:** `subject-refs[] · method (facet-typed) · performer-ref ·
+  time · result (code) · evidence-refs[] · deviations[]?`.
+- **Finding:** `assessment-ref · requirement-ref · statement-ref? · state
+  (code) · risk (facet) · actions[] {description · due
+  (date|calendar-period) · status} · deviations[]?`.
+- **Attestation:** D7 field list (outside content manifests by
+  definition).
+- **Mapping:** D20 field list.
+- **Deviation (sub-object):** D8 field list.
+- **Content manifest:** `manifest-version · objects[] {id · version ·
+  package-digest · semantic-digest · path} · facet-schemas[] {id ·
+  exact-version · digest · path} · renderings[]?` — attestations/envelopes
+  excluded (D3).
+
+Code systems (stdlib): modality (with the D9 order), lifecycle, deviation
+types/states, responsibility, assessment results, mapping relationships
+(IR 8477/OLIR), duration units (elapsed/calendar), confidence.
+
+# Appendix B — Tailoring resolution (normative algorithm)
+
+1. Resolve `selects` (set-refs expanded via D21 nesting; predicates
+   evaluated with the shared ≤1-hop vocabulary) → candidate set;
+   apply `excludes`.
+2. Validate `operations[]`: addressing resolves (else fail closed);
+   no two operations share a target within this Tailoring (else error).
+3. Apply operations **in list order** to deep-copied objects; enforce D13
+   rules (parameter bounds, tightening, modality order, detach/prose) —
+   violations without an attached Deviation fail closed with rationale.
+4. Emit a resolved package with a fresh content manifest; provenance
+   records the Tailoring id+version. Tailoring-of-Tailoring = run again on
+   the emitted package (chaining is the only override path). Independent
+   Tailorings never auto-merge.
