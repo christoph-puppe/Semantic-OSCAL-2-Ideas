@@ -380,6 +380,57 @@ channel by which cores grow until they need a metaschema.
 in a facet for a second authority — the kernel lags evidence, never leads
 taste.
 
+### D22 (rev, same cycle) — The anticipated-convergence path
+**Decision.** Promotion is also permitted at 1-of-3 when a major census
+authority ships and depends on the semantic, general use is credibly
+anticipated (argued here, in the register), and the absorption clause
+holds. Such promotions carry evidence tier **anticipated**, are re-verified
+at every corpus addition, and demote back to facet space after two gate
+cycles without materialized convergence.
+**Customer.** The census population is three; treating its consensus as a
+ceiling would make the kernel hostage to the historical accident of which
+three authorities published first. FedRAMP wanting a thing, plus a credible
+argument everyone else will too, is customer evidence — one tier below
+measured, and labeled as exactly that.
+**Simplicity.** One extra clause, same three-question shape, plus a clock.
+**Complexity ↓.** Without the path, anticipated-general semantics ship as
+facets, harden in tooling, and cost a migration when convergence arrives.
+**Trade-off.** The kernel can now be wrong in a new way — which is why the
+tier label and the demotion clock are not optional.
+
+### The anticipated-path re-audit of the facet space (2026-07-21)
+
+Every stdlib facet re-checked under the amended rule:
+
+| Facet | Today | Anticipation case | Verdict |
+|---|---|---|---|
+| `terminology@1` | 1-of-3 (CR26 FRD: 75 terms, 188 aliases; alias-resolution computation measured, 264/264) | every national framework publishes terminology | **Kernel candidate** — the strongest anticipated case; final shape (carrier object vs. root-Set hosting) decides with the gate-2 schemas → backlog #6 re-scoped |
+| `reporting-obligation@1` | 1-of-3 (CR26 `notification[]`) | NIS2 / DORA / CRA are notification-duty regimes — the incoming EU wave is *made of* reporting deadlines | **Anticipated candidate** — revisit at gate 2 with the declaration promotion (backlog #8) in place; promote when an EU corpus lands |
+| `effectivity@1` | 1-of-3 (CR26 `info.effective`) | every regulation has effective dates and transition periods | Absorption check first: lifecycle + L0 versioning cover part of it; what remains is a gate-2 question, not a promotion yet |
+| `security-objectives@1` | 1-of-3 (BSI C/I/A/Auth) | C/I/A is universal in theory | Stays facet — fails test 3 measured: values ("1"/"0") share no scale with anyone; anticipation cannot cure a vocabulary that already flattens |
+| `statement-grammar@1` | 1-of-3 encoded (BSI ×1,006) | grammar is universal in theory | Stays facet — the rejected-alternatives table already names the corpse: kernel grammar replaces NIST's bias with BSI's |
+| `assessment-criteria@1` | 2-of-3 (BSI `documentation` ×959 + CR26 artifacts/key_tests) | — | Stays facet — passes test 1, fails test 3: free-text document names vs. per-class artifact lists vs. KSI tests are irreconcilable shapes |
+
+## D10 (rev 2) — Declaration-audit promotions *(backlog #8)*
+**Decision.** The three under-declared stdlib facets promote their
+`modifies-semantics` declarations: `security-objectives@1` → `[selection]`,
+`effectivity@1` → `[selection]`, `reporting-obligation@1` → `[assessment]`.
+`cr26/scope@1` remains the exemplar that already declares `[selection]`.
+The normative schemas at gate 2 ship these declarations; bundle stubs
+update at the next converter run.
+**Customer.** The user directive states the principle plainly: **a tool
+that cannot handle a facet must stop working on that data.** Fail-closed
+only engages when the declaration is honest — a facet declaring `[]` while
+actually carrying selection or assessment semantics is the silent-ignore
+corpse (P7-B3) wearing a conformance badge.
+**Simplicity.** The declaration says what the payload does; no consumer
+guesses.
+**Complexity ↓.** Under-declaration is the cheap lie that reintroduces
+props semantics (meaning invisible to the contract); this closes it for
+the shipped stdlib.
+**Trade-off.** Real fail-closed stops in tools that ignored these facets —
+deliberate, and exactly the stops the user directive demands.
+
 ## D9 (closure note) — No duration union; unit-class boundary stays strict *(backlog #3)*
 **Decision.** Closed without change. The elapsed-duration vs.
 calendar-period split keeps its strict unit-class boundary; no union type

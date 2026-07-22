@@ -305,6 +305,17 @@ rule pair:
 `.well-known` stays discovery-only; identity and trust are manifest pins
 (D3). Annotations unchanged.
 
+**Declaration-audit promotions (rev. v0.6 cycle — R1 #8).** Three stdlib
+facets promote their `modifies-semantics` declarations to what the corpora
+show they actually do: `security-objectives@1` → `[selection]`,
+`effectivity@1` → `[selection]`, `reporting-obligation@1` → `[assessment]`
+(`cr26/scope@1` already declares `[selection]`). The governing directive:
+a tool that cannot handle a facet must stop working on that data —
+fail-closed only engages when declarations are honest, and a
+semantics-bearing facet declaring `[]` is the silent-ignore corpse
+(P7-B3) wearing a conformance badge. Gate-2 schemas ship these
+declarations; bundle stubs update at the next converter run.
+
 **Per-clause payload keying (rev. v0.6 cycle — R1 #7).** A facet payload
 that addresses individual statements of its host Requirement MUST key those
 entries as `by-statement: { <statement-id>: <payload> }`, using ids from
@@ -540,6 +551,23 @@ vocabularies stay in `assurance-levels@1`. Future "why isn't X kernel"
 disputes cite this rule; a promotion PR that cannot show its three passes
 is rejected without further argument — the anti-#2118 discipline applied
 to the kernel itself.
+
+**The anticipated-convergence path (second clause, same cycle).** The
+census population is three; a consensus of the *current* customers is a
+floor, not a ceiling. Promotion is therefore also permitted when (1) a
+major authority in the census ships the semantic and depends on it, (2)
+general use by other frameworks is credibly anticipated, with the
+anticipation argued in the register, and (3) the absorption clause above
+still holds. The discipline that keeps this honest: such a promotion
+carries evidence tier **anticipated** — below measured, explicitly
+labeled — and is re-verified against every corpus addition; an
+anticipation that fails to materialize after two gate cycles demotes the
+semantic back to a facet, the backlog standing rule applied to the kernel.
+The motivating example: a glossary is 1-of-3 today (CR26's FRD — 75
+terms, 188 aliases, 264 references resolving), yet every national
+framework publishes terminology; the computation (alias-aware term
+resolution) is already measured. The re-audit of the facet space under
+this clause is recorded in the register amendment.
 **Customer.** Every authority pays for every kernel field forever (a tax on
 each Core validator); the census is the only party that may levy it.
 **Simplicity.** The bar is three questions with countable answers.
@@ -633,7 +661,12 @@ replaces; NIST IR 8477 / OLIR (relationship semantics).
    cases.
 3. **Lifecycle corpus** beyond catalogs: NIST SSP/AP/AR/POA&M + 1.2.2
    Mapping examples; FedRAMP implementation/assessment data; CSA CAIQ;
-   SCF mappings; representative PCI customized-approach cases.
+   SCF mappings; representative PCI customized-approach cases. In scope
+   here (folded from the backlog, v0.6 cycle): confirm or extend the
+   seed code sets for finding states and assessment results from counted
+   lifecycle evidence (was backlog #9), and resolve CTL/ODP
+   statement-level addressing via the NIST catalog conversion (backlog
+   #10).
 4. Measured complexity comparison vs. an OSCAL 1.2.2 validator + resolver
    (two languages, LoC, contributor-hours) — the weekend-validator
    acceptance test.
@@ -673,6 +706,11 @@ out); rows leave `oscal-semantic-core-v0.6-spec-feedback-backlog.md`:
 | #1 | **Accept** | D9: optional `label` + `default` on parameter declarations; defaults advisory, never silently substituted; empties the ×179 `param-extras` L2 residue (drains at next converter run) |
 | #2 | **Accept (Tailoring liturgy blessed for authorities)** | D13: Deviation duties bind at consumption tier; Authority-tier Tailorings exempt (weakening classification still computed). **Rejected:** `variants` carrier on Requirement — fails the D22 bar (1-of-3; mechanism exists) |
 | #3 | **Close, no change** | Duration union rejected for lack of evidence: 0 true unit-class crossings measured (the 51 first-pass flags were base-absent variants, resolved under #2); elapsed/calendar unit-class boundary stays strict. Re-enters only with a counted crossing |
+| — | **D22 rev (user directive)** | Anticipated-convergence path added: 1-of-3 promotion permitted for a major customer's semantic with credibly anticipated general use; evidence tier `anticipated`, re-verified per corpus, demotes after two dry gate cycles. Facet-space re-audit recorded in the register (terminology = strongest candidate; reporting-obligation = candidate pending an EU corpus) |
+| #6 | **Re-scoped** | Terminology: kernel home now permitted under the D22 anticipated path; final shape (carrier object vs. root-Set hosting) decides with the gate-2 schemas |
+| #8 | **Accept (promote all three)** | D10 rev 2: `security-objectives@1` → `[selection]`, `effectivity@1` → `[selection]`, `reporting-obligation@1` → `[assessment]`; principle: a tool that cannot handle a facet must stop working on that data. Stubs update at next converter run |
+| #9 | **Close, folded into gate 3** | Seed code sets stay as shipped; confirmation/extension from counted lifecycle evidence is now part of the gate-3 scope statement (IV.5) — no standing backlog row needed |
+| #11 | **Close, delivered** | Source-QA finding (9 MUSS-in-prose clauses without `modal_verb`, grammar coverage 99.1 %) reported to the BSI authors by the project; companion to the 216/issue #58; never was a spec change |
 
 ---
 
