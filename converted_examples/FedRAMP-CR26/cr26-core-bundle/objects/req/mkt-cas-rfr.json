@@ -24,11 +24,13 @@
  ],
  "facets": {
   "https://ns.fedramp.gov/cr26/facet/narrative@1": {
-   "corrective-actions": [
-    "If an advisor fails to respond to a request within 5 business days, FedRAMP will send a follow-up email.",
-    "If an advisor fails to respond to the follow-up email within 5 business days, FedRAMP will remove their listing from the Marketplace.",
-    "Advisors removed from the Marketplace for failure to respond to FedRAMP will not be eligible for listing for at least 6 months unless there are extenuating circumstances."
-   ]
+   "corrective-actions": {
+    "en": [
+     "If an advisor fails to respond to a request within 5 business days, FedRAMP will send a follow-up email.",
+     "If an advisor fails to respond to the follow-up email within 5 business days, FedRAMP will remove their listing from the Marketplace.",
+     "Advisors removed from the Marketplace for failure to respond to FedRAMP will not be eligible for listing for at least 6 months unless there are extenuating circumstances."
+    ]
+   }
   }
  }
 }

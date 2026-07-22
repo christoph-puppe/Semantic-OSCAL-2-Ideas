@@ -59,7 +59,9 @@
      "party": "All Necessary Parties",
      "method": "update",
      "target": "FedRAMP Certification Data",
-     "name": "FedRAMP Certification Data"
+     "name": {
+      "en": "FedRAMP Certification Data"
+     }
     }
    ],
    "following-information": [
@@ -89,10 +91,12 @@
    ]
   },
   "https://ns.fedramp.gov/cr26/facet/narrative@1": {
-   "notes": [
-    "Activities that match the adaptive significant change type are a frequent and normal part of iteratively improving a service by deploying new functionality or modifying existing functionality in a way that is typically transparent to customers and does not introduce significant new security risks.",
-    "In general, most changes that do not happen regularly will be adaptive changes. This change type deliberately covers a wide range of activities in a way that requires assessment and consideration."
-   ]
+   "notes": {
+    "en": [
+     "Activities that match the adaptive significant change type are a frequent and normal part of iteratively improving a service by deploying new functionality or modifying existing functionality in a way that is typically transparent to customers and does not introduce significant new security risks.",
+     "In general, most changes that do not happen regularly will be adaptive changes. This change type deliberately covers a wide range of activities in a way that requires assessment and consideration."
+    ]
+   }
   }
  }
 }

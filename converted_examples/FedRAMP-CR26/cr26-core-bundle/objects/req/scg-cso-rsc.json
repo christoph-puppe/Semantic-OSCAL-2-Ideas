@@ -19,10 +19,12 @@
  "facets": {
   "https://ns.fedramp.gov/cr26/facet/narrative@1": {
    "schema-name": "FedRAMP Certification Package Overview (FRC-CSO-PKG)",
-   "notes": [
-    "These rules refer to this guidance as a Secure Configuration Guide but cloud service providers may make this guidance available in various appropriate forms that provide the best customer experience.",
-    "This guidance should explain how top-level administrative accounts and privileged accounts are named and referred to in the cloud service offering."
-   ]
+   "notes": {
+    "en": [
+     "These rules refer to this guidance as a Secure Configuration Guide but cloud service providers may make this guidance available in various appropriate forms that provide the best customer experience.",
+     "This guidance should explain how top-level administrative accounts and privileged accounts are named and referred to in the cloud service offering."
+    ]
+   }
   },
   "https://ns.oscal.org/stdlib/facet/reporting-obligation@1": {
    "following-information": [

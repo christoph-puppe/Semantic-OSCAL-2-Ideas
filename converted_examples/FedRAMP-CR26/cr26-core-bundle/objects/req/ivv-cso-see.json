@@ -44,7 +44,9 @@
  ],
  "facets": {
   "https://ns.fedramp.gov/cr26/facet/narrative@1": {
-   "note": "For example, after verifying that firewalls are configured to block traffic following IVV-CSO-SEI (Supply Evidence of Implementation), the provider would validate that traffic is actually being blocked and supply evidence of that validation to assessors (such as by allowing them to see metrics on the traffic that is blocked vs not)."
+   "note": {
+    "en": "For example, after verifying that firewalls are configured to block traffic following IVV-CSO-SEI (Supply Evidence of Implementation), the provider would validate that traffic is actually being blocked and supply evidence of that validation to assessors (such as by allowing them to see metrics on the traffic that is blocked vs not)."
+   }
   }
  }
 }

@@ -26,19 +26,25 @@
      "party": "FedRAMP",
      "method": "email",
      "target": "fedramp_security@fedramp.gov",
-     "name": "fedramp_security@fedramp.gov"
+     "name": {
+      "en": "fedramp_security@fedramp.gov"
+     }
     },
     {
      "party": "Agency Customers",
      "method": "varies",
      "target": "varies by agency",
-     "name": "Follow agency-specific incident reporting procedures"
+     "name": {
+      "en": "Follow agency-specific incident reporting procedures"
+     }
     },
     {
      "party": "All Necessary Parties",
      "method": "update",
      "target": "trust center",
-     "name": "Provider's Trust Center or USDA Connect"
+     "name": {
+      "en": "Provider's Trust Center or USDA Connect"
+     }
     }
    ]
   },

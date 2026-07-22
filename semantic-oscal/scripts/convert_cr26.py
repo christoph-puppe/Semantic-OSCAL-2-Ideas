@@ -6,8 +6,11 @@ deltas) + L2 class-variants payloads (full fidelity); FRD -> terminology;
 CTL Rev5 overlay -> parked L2 (resolves at gate item 3). Coverage target: 0."""
 import json, hashlib, os, re, copy, collections, shutil
 
-SRC="/home/claude/cr_fedramp-consolidated-rules.json"
-OUT="/home/claude/cr26-core-bundle"; RMD="/home/claude/cr26-coverage-report.md"; RJS="/home/claude/cr26-coverage-report.json"
+ROOT=os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),"..",".."))
+SRC=os.path.join(ROOT,"sources","cr_fedramp-consolidated-rules.json")
+OUT=os.path.join(ROOT,"converted_examples","FedRAMP-CR26","cr26-core-bundle")
+RMD=os.path.join(ROOT,"converted_examples","FedRAMP-CR26","cr26-coverage-report.md")
+RJS=os.path.join(ROOT,"converted_examples","FedRAMP-CR26","cr26-coverage-report.json")
 NS="https://ns.fedramp.gov/cr26"; NIST="https://ns.nist.gov/sp800-53/req"
 F_TERM="https://ns.oscal.org/stdlib/facet/terminology@1"
 F_REP="https://ns.oscal.org/stdlib/facet/reporting-obligation@1"
@@ -29,6 +32,15 @@ def sdig(o):
     o=copy.deepcopy(o); o.pop("annotations",None)
     return "sha256:"+hashlib.sha256(json.dumps(o,sort_keys=True,separators=(",",":"),ensure_ascii=False).encode()).hexdigest()
 def slug(s): return re.sub(r"[^a-z0-9]+","-",(s or "").lower()).strip("-")[:60] or "x"
+
+LANG="en"   # corpus language: payload free text is language-tagged {LANG: value}
+lang_wraps=collections.Counter()
+def T(v,field=None):
+    """Wrap payload free text (str or list of str) in the corpus language
+    (backlog #12 harmonization). Identifiers/labels are never passed here."""
+    if v is None: return v
+    lang_wraps[field or "?"]+=1
+    return {LANG:v}
 
 d=json.load(open(SRC,encoding="utf-8"))
 VER=d["info"]["version"]
@@ -161,7 +173,9 @@ def convert_rule(fam,subk,rid,r):
     if r.get("reference_url"): rels.append({"type":"reference","ref":r["reference_url"]})
     if rels: req["relations"]=rels
     rep={}
-    if r.get("notification"): rep["notification"]=r["notification"]
+    if r.get("notification"):
+        rep["notification"]=[{**n,**({"name":T(n["name"],"notification-name")} if n.get("name") else {})}
+                             for n in copy.deepcopy(r["notification"])]
     if r.get("following_information"): rep["following-information"]=r["following_information"]
     if r.get("following_information_bullets"): rep["following-information-bullets"]=r["following_information_bullets"]
     if rep: req.setdefault("facets",{})[F_REP]=rep
@@ -174,7 +188,7 @@ def convert_rule(fam,subk,rid,r):
     if ac: req.setdefault("facets",{})[F_ACRIT]=ac
     for k,fld in [("note","note"),("notes","notes"),("danger","danger"),
                   ("corrective_actions","corrective-actions")]:
-        if r.get(k): add_narr(req,fld,r[k])
+        if r.get(k): add_narr(req,fld,T(r[k],fld))
     if r.get("reference"): add_narr(req,"reference",r["reference"])
     counters["updated-entries"]+=len(r.get("updated",[]) or [])
     # class variance
@@ -183,7 +197,7 @@ def convert_rule(fam,subk,rid,r):
         req.setdefault("facets",{})[F_COMPAT]={"class-variants":var}
         counters["class-variant-rules"]+=1
         for cls,v in var.items():
-            T=class_tailorings[cls]["operations"]
+            OPS=class_tailorings[cls]["operations"]
             vf=FORCE.get(v.get("force"))
             if vf and vf!=mod:
                 op={"op":"set-modality","requirement-ref":uri,"statement-id":"s1","modality":vf}
@@ -194,13 +208,13 @@ def convert_rule(fam,subk,rid,r):
                         "rationale":"Authority-published class variant (CR26 varies_by_class).",
                         "approver-ref":f"{NS}/party/fedramp","opened":d["info"]["last_updated"]}
                     dev_records+=1
-                T.append(op); ops_emitted["set-modality"]+=1
+                OPS.append(op); ops_emitted["set-modality"]+=1
             if "timeframe_num" in v:
                 _,vt=tf_param(v["timeframe_num"],v["timeframe_type"])
                 if base_tf is None:
                     counters["timeframe-variant-only"]+=1
                 elif base_tf==vt:
-                    T.append({"op":"set-parameter","requirement-ref":uri,"statement-id":"s1",
+                    OPS.append({"op":"set-parameter","requirement-ref":uri,"statement-id":"s1",
                               "parameter":"timeframe",
                               "value":{"type":vt,"num":v["timeframe_num"],"unit":v["timeframe_type"]}})
                     ops_emitted["set-parameter"]+=1
@@ -273,7 +287,7 @@ for fk,f in d["FRR"].items():
                 "members":tmem}
             tap=tinfo.get("applicability",{})
             if tinfo.get("description"):
-                tset.setdefault("facets",{}).setdefault(F_NARR,{})["description"]=tinfo["description"]
+                tset.setdefault("facets",{}).setdefault(F_NARR,{})["description"]=T(tinfo["description"],"description")
             if tap: tset.setdefault("facets",{})[F_SCOPE]=dict(tap)
             objects[f"objects/set/subset-{slug(fk)}-{slug(sk)}-{trk}.json"]=tset
             track_set_uris.append(turi)
@@ -294,7 +308,7 @@ for fk,f in d["FRR"].items():
         sobj={"id":suri,"version":VER,"lifecycle":"active",
               "title":sinfo.get("name",sk),"label":sk,"members":members}
         ap=sinfo.get("applicability",{})
-        if sinfo.get("description"): sobj.setdefault("facets",{}).setdefault(F_NARR,{})["description"]=sinfo["description"]
+        if sinfo.get("description"): sobj.setdefault("facets",{}).setdefault(F_NARR,{})["description"]=T(sinfo["description"],"description")
         if ap: sobj.setdefault("facets",{})[F_SCOPE]=dict(ap)
         objects[f"objects/set/subset-{slug(fk)}-{slug(sk)}.json"]=sobj
         sub_entries.append({"ref":suri,"sequence":nseq()})
@@ -304,7 +318,7 @@ for fk,f in d["FRR"].items():
     fobj={"id":furi,"version":VER,"lifecycle":"active",
           "title":fi.get("name",fk),"label":fi.get("short_name",fk),
           "members":sub_entries,"annotations":{"web_name":fi.get("web_name","")}}
-    narr={"description":fi.get("purpose","")}
+    narr={"description":T(fi.get("purpose",""),"description")}
     fobj["facets"]={F_NARR:narr,F_SCOPE:{"tag":fi.get("tag")}}
     eff={}
     if fi.get("effective"): eff["default"]=fi["effective"]
@@ -334,29 +348,40 @@ for ck,cat in d["KSI"].items():
 # terminology container
 terms_payload={}
 for tid,t in d["FRD"]["data"]["all"].items():
-    e={"term":t["term"],"definition":t["definition"]}
-    for k,dk in [("tag","tag"),("alts","aliases"),("note","note"),("notes","notes"),
+    e={"term":t["term"],"definition":T(t["definition"],"definition")}
+    for k,dk in [("tag","tag"),("alts","aliases"),
                  ("do_not_link","do-not-link"),("reference","reference"),
                  ("reference_url","reference-url")]:
         if t.get(k) is not None: e[dk]=t[k]
+    for k,dk in [("note","note"),("notes","notes")]:
+        if t.get(k) is not None: e[dk]=T(t[k],dk)
     counters["updated-entries"]+=len(t.get("updated",[]) or [])
     counters["term-alts"]+=len(t.get("alts",[]) or [])
     terms_payload[tid]=e
 frd_i=d["FRD"]["info"]
 glossary={"terms":terms_payload,
     "glossary-info":{k:frd_i[k] for k in ("name","short_name","web_name","purpose","status","effective") if frd_i.get(k) is not None}}
-# CTL parked
+# CTL parked (guidance free text language-tagged; structure otherwise verbatim)
+ctl_payload=copy.deepcopy(d["CTL"])
+def _wrap_ctl_guidance(n):
+    if isinstance(n,dict):
+        for k,v in list(n.items()):
+            if k=="guidance" and isinstance(v,(str,list)): n[k]=T(v,"guidance")
+            else: _wrap_ctl_guidance(v)
+    elif isinstance(n,list):
+        for x in n: _wrap_ctl_guidance(x)
+_wrap_ctl_guidance(ctl_payload)
 objects["objects/set/ctl-overlay.json"]={"id":f"{NS}/set/ctl-overlay","version":VER,
     "lifecycle":"active","title":"Rev5 control overlay (parked L2)",
     "members":[{"ref":f"{NS}/set/type/rev5","sequence":10}],
-    "facets":{F_COMPAT:{"ctl":d["CTL"]}}}
+    "facets":{F_COMPAT:{"ctl":ctl_payload}}}
 counters["ctl-overlays"]=sum(len(v) for v in d["CTL"].values())
 # roots + tailorings
 objects["objects/set/root.json"]={"id":f"{NS}/set/root","version":VER,"lifecycle":"active",
     "title":d["info"]["title"],
     "members":fam_entries+ksi_cat_entries+[
         {"ref":f"{NS}/set/ctl-overlay","sequence":nseq()}],
-    "facets":{F_NARR:{"description":d["info"]["description"]},
+    "facets":{F_NARR:{"description":T(d["info"]["description"],"description")},
               F_ACRIT:{"default-artifacts":d["info"]["default_artifacts"]},
               F_TERM:glossary}}
 for c,t in class_tailorings.items():
@@ -371,7 +396,8 @@ stub("schemas/reporting-obligation-stub.json",F_REP.split("@")[0],[],{"notificat
 stub("schemas/effectivity-stub.json",F_EFF.split("@")[0],[],{"default":{"type":"object"}})
 stub("schemas/assessment-criteria-stub.json",F_ACRIT.split("@")[0],["assessment"],{"required-artifacts":{"type":"array"}})
 stub("schemas/cr26-scope-stub.json",F_SCOPE.split("@")[0],["selection"],{"classes":{"type":"array"}})
-stub("schemas/cr26-narrative-stub.json",F_NARR.split("@")[0],[],{"description":{"type":"string"}})
+stub("schemas/cr26-narrative-stub.json",F_NARR.split("@")[0],[],
+     {"description":{"type":"object","additionalProperties":{"type":"string"}}})
 stub("schemas/oscal-1x-compat-stub.json",F_COMPAT.split("@")[0],[],{"class-variants":{"type":"object"},"ctl":{"type":"object"}})
 
 for rel,o in objects.items(): w(rel,o)
@@ -403,7 +429,8 @@ j={"source":d["info"]["title"],"version":VER,
               "tailorings":ntail,"total":len(objects)},
    "modality(rule-level)":dict(mod_hist),
    "tailoring-ops":dict(ops_emitted),"converter-deviations(easings)":dev_records,
-   "counters":dict(counters),"synthesized-prose(variant-only-rules)":synth_prose,
+   "counters":dict(counters),"lang-wraps":dict(lang_wraps),
+   "synthesized-prose(variant-only-rules)":synth_prose,
    "dangling-related":dangling_related,
    "unmapped":[{"path":p,"count":n} for p,n in unmapped],
    "path-map":[{"path":p,"count":n,"level":l,"destination":t} for p,n,l,t in rows]}
@@ -439,7 +466,15 @@ md=[f"# CR26 -> Semantic Core: Coverage Report (computed)\n",
  f"- **updated[] -> L0** (entries counted: {counters.get('updated-entries',0)}; values not object-carried).",
  f"- **CTL Rev5 overlay ({counters.get('ctl-overlays',0)} entries) parked L2** on /set/ctl-overlay: external-catalog "
  f"ODP assignments need the NIST catalog's statement map - resolves at gate item 3.",
- f"- **flows dropped-declared** x{counters.get('flows-dropped',0)} (D17); dangling related refs x{dangling_related}.\n",
+ f"- **flows dropped-declared** x{counters.get('flows-dropped',0)} (D17); dangling related refs x{dangling_related}.",
+ f"- **Payload free text language-tagged** per corpus language (`{{en: ...}}`), harmonized 2026-07-21 (backlog #12): "
+ +", ".join(f"{k} x{v}" for k,v in sorted(lang_wraps.items()))+". "
+ f"Left bare by the label/identifier rule: term headwords x{len(terms_payload)}, glossary-info block metadata, "
+ f"reference/schema-name citation labels, following-information sentence lists (kernel `text` decision pending, backlog #12). "
+ f"Left as-source by the verbatim rule: free text quoted inside L2 `class-variants` payloads (per-class "
+ f"descriptions/notes, e.g. pain_timeframes[].fir.description) - preserved-in-full waiting rooms are quotations, "
+ f"not authored payload (the 216 discipline: report, never repair); they drain with the payloads themselves. "
+ f"Stub-file `note` annotations are schema metadata, not corpus content.\n",
  "## Findings (computed)\n",
  f"- **Census, layered:** rules = **246** = 225 track-independent (data.all) + 12 rev5-only + 9 20x-only. "
  f"Rule-level force totals {dict(mod_hist)}; the census's 328 merged rule-level and class-variant forces.",

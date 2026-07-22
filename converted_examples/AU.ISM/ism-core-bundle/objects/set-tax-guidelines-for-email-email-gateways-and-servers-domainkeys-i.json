@@ -23,7 +23,9 @@
     {
      "group": "DomainKeys Identified Mail",
      "name": "overview",
-     "prose": "DKIM enables the detection of spoofed email contents. This is achieved by DKIM records specifying the public key used to verify the digital signature in an email. Specifically, if the signed digest in an email header does not match the signed contents of the email, verification will not pass."
+     "prose": {
+      "en": "DKIM enables the detection of spoofed email contents. This is achieved by DKIM records specifying the public key used to verify the digital signature in an email. Specifically, if the signed digest in an email header does not match the signed contents of the email, verification will not pass."
+     }
     }
    ]
   }

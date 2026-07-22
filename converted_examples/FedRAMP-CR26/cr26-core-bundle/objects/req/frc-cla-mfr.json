@@ -215,11 +215,13 @@
    ]
   },
   "https://ns.fedramp.gov/cr26/facet/narrative@1": {
-   "notes": [
-    "Some of these specific FedRAMP rules may not have similar counterparts in external frameworks and providers will need to implement new processes to follow these rules.",
-    "In general, for each of these FedRAMP requirements, providers should include a sufficiently detailed summary that reviewers will not need to dig into the related security framework materials to understand the related decisions - just saying \"see SOC 2 report\" is not particularly helpful.",
-    "Information about how the provider addresses the included Key Security Indicators are required to receive a class A certification even if the provider intends to pursue a Rev 5 Program Certification path in the future."
-   ]
+   "notes": {
+    "en": [
+     "Some of these specific FedRAMP rules may not have similar counterparts in external frameworks and providers will need to implement new processes to follow these rules.",
+     "In general, for each of these FedRAMP requirements, providers should include a sufficiently detailed summary that reviewers will not need to dig into the related security framework materials to understand the related decisions - just saying \"see SOC 2 report\" is not particularly helpful.",
+     "Information about how the provider addresses the included Key Security Indicators are required to receive a class A certification even if the provider intends to pursue a Rev 5 Program Certification path in the future."
+    ]
+   }
   }
  }
 }

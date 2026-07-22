@@ -15,7 +15,9 @@
     {
      "group": "Non-volatile electrically erasable programmable read-only memory media sanitisation",
      "name": "overview",
-     "prose": "A single overwrite with a random pattern, followed by a read back for verification, is considered suitable for sanitising non-volatile electrically erasable programmable read-only memory (EEPROM) media."
+     "prose": {
+      "en": "A single overwrite with a random pattern, followed by a read back for verification, is considered suitable for sanitising non-volatile electrically erasable programmable read-only memory (EEPROM) media."
+     }
     }
    ]
   }

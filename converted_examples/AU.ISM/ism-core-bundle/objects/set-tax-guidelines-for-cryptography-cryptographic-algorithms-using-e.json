@@ -23,7 +23,9 @@
     {
      "group": "Using Elliptic Curve Diffie-Hellman",
      "name": "overview",
-     "prose": "When identifying a suitable curve from NIST SP 800-186, a base point order and key size of at least 224 bits for correctly implemented ECDH provides 112 bits of effective security strength, with larger key sizes providing more bits of effective security strength. Security of a curve selected from another source cannot be assumed to have the same security using base point order and key size alone.\n\nTaking into account projected technological advances in quantum computing, ECDH will not be approved beyond 2030."
+     "prose": {
+      "en": "When identifying a suitable curve from NIST SP 800-186, a base point order and key size of at least 224 bits for correctly implemented ECDH provides 112 bits of effective security strength, with larger key sizes providing more bits of effective security strength. Security of a curve selected from another source cannot be assumed to have the same security using base point order and key size alone.\n\nTaking into account projected technological advances in quantum computing, ECDH will not be approved beyond 2030."
+     }
     }
    ]
   }

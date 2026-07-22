@@ -19,7 +19,9 @@
     {
      "group": "System administration of gateways",
      "name": "overview",
-     "prose": "In performing administrative activities for gateways, it is important that they are conducted via a secure path isolated from all connected networks. In doing so, this will minimise threats should a connected network be compromised by malicious actors. Furthermore, where gateways exist between networks belonging to different security domains, any shared components should be managed by system administrators for the higher security domain, alternatively, it may be more appropriate to use system administrators from a mutually agreed upon third party."
+     "prose": {
+      "en": "In performing administrative activities for gateways, it is important that they are conducted via a secure path isolated from all connected networks. In doing so, this will minimise threats should a connected network be compromised by malicious actors. Furthermore, where gateways exist between networks belonging to different security domains, any shared components should be managed by system administrators for the higher security domain, alternatively, it may be more appropriate to use system administrators from a mutually agreed upon third party."
+     }
     }
    ]
   }

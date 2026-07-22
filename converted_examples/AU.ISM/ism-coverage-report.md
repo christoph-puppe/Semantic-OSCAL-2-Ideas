@@ -21,6 +21,7 @@ Source: ACSC ISM OSCAL catalog v2026.06.18 (oscal-version 1.1.2) - 1,150 control
 - **revision/updated** (x1,101 each): history -> L0 (catalog version on every object; per-release notes belong to manifests) - values not object-carried.
 - **Guideline narrative** (`overview` parts on groups, x539): **Level 2** compat facet `oscal-1x@1` on the nearest emitted Set - the declared waiting room with a clock (handbook 14.6); residue KPI starts at 539.
 - **Empty narrative groups skipped** (no transitive controls, no parts): 2 (front-matter chapters; declared drop).
+- **Payload free text language-tagged** per corpus language (`{en: ...}` on compat `group-parts[].prose`, x539); statement prose was already tagged. Harmonized 2026-07-21 (backlog #12).
 
 ### Corpus finding (new vs. census)
 
@@ -57,12 +58,12 @@ ISM statement prose is **declarative present tense** ('The board ... defines', '
 | `catalog.groups[].groups[].groups[].controls[].props[].value` | 8,958 | L1 | dispatch (see per-prop rows) |
 | `catalog.groups[].groups[].groups[].controls[].title` | 1,150 | L1 | Requirement title |
 | `catalog.groups[].groups[].groups[].parts[].name` | 470 | L2 | compat facet oscal-1x@1: guideline overview narrative on the Set |
-| `catalog.groups[].groups[].groups[].parts[].prose` | 470 | L2 | compat facet oscal-1x@1: guideline overview narrative on the Set |
+| `catalog.groups[].groups[].groups[].parts[].prose` | 470 | L2 | compat facet oscal-1x@1: guideline overview narrative on the Set (language-tagged {en}) |
 | `catalog.groups[].groups[].groups[].props[].name` | 470 | L1 | group sort-id: absorbed by document order -> sequence |
 | `catalog.groups[].groups[].groups[].props[].value` | 470 | L1 | group sort-id: absorbed by document order -> sequence |
 | `catalog.groups[].groups[].groups[].title` | 470 | L1 | Set title |
 | `catalog.groups[].groups[].parts[].name` | 69 | L2 | compat facet oscal-1x@1: guideline overview narrative on the Set |
-| `catalog.groups[].groups[].parts[].prose` | 69 | L2 | compat facet oscal-1x@1: guideline overview narrative on the Set |
+| `catalog.groups[].groups[].parts[].prose` | 69 | L2 | compat facet oscal-1x@1: guideline overview narrative on the Set (language-tagged {en}) |
 | `catalog.groups[].groups[].props[].name` | 75 | L1 | group sort-id: absorbed by document order -> sequence |
 | `catalog.groups[].groups[].props[].value` | 75 | L1 | group sort-id: absorbed by document order -> sequence |
 | `catalog.groups[].groups[].title` | 75 | L1 | Set title |

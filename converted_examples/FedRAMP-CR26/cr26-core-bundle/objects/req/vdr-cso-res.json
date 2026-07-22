@@ -60,11 +60,13 @@
  ],
  "facets": {
   "https://ns.fedramp.gov/cr26/facet/narrative@1": {
-   "notes": [
-    "If it is not possible to fully mitigate vulnerabilities or remediate vulnerabilities, providers SHOULD instead partially mitigate vulnerabilities promptly, progressively, and persistently.",
-    "FedRAMP does not use the terms \"mitigation\" and \"remediation\" interchangeably. Mitigation is the process of reducing the risk and impact of a vulnerability through partial mitigation and even full mitigation; remediation is the process of entirely eliminating the vulnerability. A fully mitigated vulnerability will still exist (with negligible risk) until it has been remediated. This separation is based on the plain language definitions of these words.",
-    "Please refer to FedRAMP Definitions for strict interpretation in the FedRAMP context."
-   ]
+   "notes": {
+    "en": [
+     "If it is not possible to fully mitigate vulnerabilities or remediate vulnerabilities, providers SHOULD instead partially mitigate vulnerabilities promptly, progressively, and persistently.",
+     "FedRAMP does not use the terms \"mitigation\" and \"remediation\" interchangeably. Mitigation is the process of reducing the risk and impact of a vulnerability through partial mitigation and even full mitigation; remediation is the process of entirely eliminating the vulnerability. A fully mitigated vulnerability will still exist (with negligible risk) until it has been remediated. This separation is based on the plain language definitions of these words.",
+     "Please refer to FedRAMP Definitions for strict interpretation in the FedRAMP context."
+    ]
+   }
   }
  }
 }

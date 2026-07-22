@@ -15,7 +15,9 @@
     {
      "group": "Segregation of development, testing, staging and production database servers",
      "name": "overview",
-     "prose": "Using database servers across different environments, such as development, testing, staging and production environments, could result in accidental damage to their integrity or exposure of their hosted database contents."
+     "prose": {
+      "en": "Using database servers across different environments, such as development, testing, staging and production environments, could result in accidental damage to their integrity or exposure of their hosted database contents."
+     }
     }
    ]
   }

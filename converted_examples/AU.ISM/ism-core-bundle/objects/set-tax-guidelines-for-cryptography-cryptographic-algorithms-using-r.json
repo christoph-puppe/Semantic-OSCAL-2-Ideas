@@ -23,7 +23,9 @@
     {
      "group": "Using Rivest-Shamir-Adleman",
      "name": "overview",
-     "prose": "A modulus of 2048 bits for correctly implemented RSA provides 112 bits of effective security strength, with larger modulus sizes providing more bits of effective security strength.\n\nTaking into account projected technological advances in quantum computing, RSA will not be approved beyond 2030."
+     "prose": {
+      "en": "A modulus of 2048 bits for correctly implemented RSA provides 112 bits of effective security strength, with larger modulus sizes providing more bits of effective security strength.\n\nTaking into account projected technological advances in quantum computing, RSA will not be approved beyond 2030."
+     }
     }
    ]
   }

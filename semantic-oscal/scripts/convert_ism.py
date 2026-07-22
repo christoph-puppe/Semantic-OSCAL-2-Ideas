@@ -5,11 +5,17 @@ Every source field path is inventoried and must have a declared destination;
 UNMAPPED paths are the gate's failure signal (target: zero)."""
 import json, hashlib, os, re, copy, sys, collections
 
-SRC = "/home/claude/ism.json"
-OUT = "/home/claude/ism-core-bundle"
-REPORT_MD = "/home/claude/ism-coverage-report.md"
-REPORT_JSON = "/home/claude/ism-coverage-report.json"
+ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
+SRC = os.path.join(ROOT, "sources", "ism.json")
+OUT = os.path.join(ROOT, "converted_examples", "AU.ISM", "ism-core-bundle")
+REPORT_MD = os.path.join(ROOT, "converted_examples", "AU.ISM", "ism-coverage-report.md")
+REPORT_JSON = os.path.join(ROOT, "converted_examples", "AU.ISM", "ism-coverage-report.json")
 NS = "https://ns.cyber.gov.au/ism"
+LANG = "en"   # corpus language: payload free text is language-tagged {LANG: value}
+
+def T(v):
+    """Wrap payload free text in the corpus language (backlog #12 harmonization)."""
+    return {LANG: v} if v or v == "" else v
 
 # ---------- helpers ----------
 def w(path, obj):
@@ -73,7 +79,7 @@ for depth in ["", ".groups[]", ".groups[].groups[]"]:
         (".props[].name", "L1", "group sort-id: absorbed by document order -> sequence"),
         (".props[].value", "L1", "group sort-id: absorbed by document order -> sequence"),
         (".parts[].name", "L2", "compat facet oscal-1x@1: guideline overview narrative on the Set"),
-        (".parts[].prose", "L2", "compat facet oscal-1x@1: guideline overview narrative on the Set"),
+        (".parts[].prose", "L2", "compat facet oscal-1x@1: guideline overview narrative on the Set (language-tagged {en})"),
     ]:
         dest(base + suf, lvl, tgt)
 # controls -> Requirements (controls appear at group depth 1 and 2)
@@ -158,7 +164,7 @@ COMPAT = "https://ns.oscal.org/compat/oscal-1x@1"
 compat_payloads = 0
 
 def own_parts(g):
-    return [{"group": g.get("title", ""), "name": p.get("name"), "prose": p.get("prose", "")}
+    return [{"group": g.get("title", ""), "name": p.get("name"), "prose": T(p.get("prose", ""))}
             for p in (g.get("parts", []) or [])]
 
 def convert_group(g, path_ids):
@@ -230,7 +236,8 @@ w("schemas/oscal-1x-compat-1.0.0-stub.json", {
                    "type": "object", "additionalProperties": False,
                    "properties": {"group": {"type": "string"},
                                   "name": {"type": "string"},
-                                  "prose": {"type": "string"}}}}}}})
+                                  "prose": {"type": "object",
+                                            "additionalProperties": {"type": "string"}}}}}}}})
 manifest = {"manifest-version": "1",
             "provenance": {"source": "ACSC ISM OSCAL catalog",
                            "source-version": version,
@@ -314,7 +321,10 @@ md.append(f"- **Guideline narrative** (`overview` parts on groups, x{compat_payl
           f"**Level 2** compat facet `oscal-1x@1` on the nearest emitted Set - the declared "
           f"waiting room with a clock (handbook 14.6); residue KPI starts at {compat_payloads}.")
 md.append(f"- **Empty narrative groups skipped** (no transitive controls, no parts): {empty_groups} "
-          f"(front-matter chapters; declared drop).\n")
+          f"(front-matter chapters; declared drop).")
+md.append(f"- **Payload free text language-tagged** per corpus language (`{{en: ...}}` on compat "
+          f"`group-parts[].prose`, x{compat_payloads}); statement prose was already tagged. "
+          f"Harmonized 2026-07-21 (backlog #12).\n")
 md.append("### Corpus finding (new vs. census)\n")
 md.append("ISM statement prose is **declarative present tense** ('The board ... defines', "
           "'Passphrases are ...'): modal verbs are structurally absent, not merely unencoded. "

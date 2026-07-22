@@ -55,7 +55,9 @@
     {
      "group": "Password strength",
      "name": "overview",
-     "prose": "When implementing passwords as an authentication factor, it is important that suitably robust and secure passwords are used. In doing so, the degree of password security required will depend on the sensitivity or classification of the system involved and whether passwords are implemented as part of multi-factor authentication or single-factor authentication."
+     "prose": {
+      "en": "When implementing passwords as an authentication factor, it is important that suitably robust and secure passwords are used. In doing so, the degree of password security required will depend on the sensitivity or classification of the system involved and whether passwords are implemented as part of multi-factor authentication or single-factor authentication."
+     }
     }
    ]
   }

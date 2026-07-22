@@ -19,7 +19,9 @@
  "facets": {
   "https://ns.fedramp.gov/cr26/facet/narrative@1": {
    "schema-name": "FedRAMP Certification Package Overview (FRC-CSO-PKG)",
-   "note": "Generally, this information should be available on a public webpage or publicly shared in a FedRAMP-compatible trust center."
+   "note": {
+    "en": "Generally, this information should be available on a public webpage or publicly shared in a FedRAMP-compatible trust center."
+   }
   },
   "https://ns.oscal.org/stdlib/facet/reporting-obligation@1": {
    "following-information": [

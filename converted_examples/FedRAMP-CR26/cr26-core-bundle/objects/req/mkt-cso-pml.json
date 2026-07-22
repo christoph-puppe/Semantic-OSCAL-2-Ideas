@@ -29,12 +29,16 @@
      "party": "FedRAMP",
      "method": "form",
      "target": "https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=50939227168027",
-     "name": "FedRAMP Marketplace Provider Listing Request Form"
+     "name": {
+      "en": "FedRAMP Marketplace Provider Listing Request Form"
+     }
     }
    ]
   },
   "https://ns.fedramp.gov/cr26/facet/narrative@1": {
-   "note": "FedRAMP does not accept applications for a FedRAMP Marketplace Listing via email!"
+   "note": {
+    "en": "FedRAMP does not accept applications for a FedRAMP Marketplace Listing via email!"
+   }
   }
  }
 }

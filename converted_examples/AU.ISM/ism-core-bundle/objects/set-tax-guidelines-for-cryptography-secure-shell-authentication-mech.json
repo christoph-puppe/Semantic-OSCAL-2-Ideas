@@ -19,7 +19,9 @@
     {
      "group": "Authentication mechanisms",
      "name": "overview",
-     "prose": "As public key-based authentication schemes offer stronger authentication than password-based authentication schemes, due to being much less susceptible to brute-force attacks, they should be used for SSH connections. Furthermore, to protect SSH private keys, access to such keys should be protected via the use of passwords or key encryption keys."
+     "prose": {
+      "en": "As public key-based authentication schemes offer stronger authentication than password-based authentication schemes, due to being much less susceptible to brute-force attacks, they should be used for SSH connections. Furthermore, to protect SSH private keys, access to such keys should be protected via the use of passwords or key encryption keys."
+     }
     }
    ]
   }

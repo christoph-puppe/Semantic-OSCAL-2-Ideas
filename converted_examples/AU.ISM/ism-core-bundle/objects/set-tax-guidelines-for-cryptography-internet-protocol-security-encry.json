@@ -15,7 +15,9 @@
     {
      "group": "Encryption algorithms",
      "name": "overview",
-     "prose": "The only approved encryption algorithm for IPsec connections is AES. IKE version 2 supports the use of AES with Cipher Block Chaining, Counter Mode, Counter with Cipher Block Chaining Message Authentication Code, and Galois/Counter Mode. However, supported modes may vary between different cryptographic equipment, applications and libraries."
+     "prose": {
+      "en": "The only approved encryption algorithm for IPsec connections is AES. IKE version 2 supports the use of AES with Cipher Block Chaining, Counter Mode, Counter with Cipher Block Chaining Message Authentication Code, and Galois/Counter Mode. However, supported modes may vary between different cryptographic equipment, applications and libraries."
+     }
     }
    ]
   }

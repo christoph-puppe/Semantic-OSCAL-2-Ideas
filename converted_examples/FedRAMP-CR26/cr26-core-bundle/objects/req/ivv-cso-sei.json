@@ -40,7 +40,9 @@
  ],
  "facets": {
   "https://ns.fedramp.gov/cr26/facet/narrative@1": {
-   "note": "For example, if the documentation says that firewall rules are used to block traffic then the cloud service provider would verify that firewall rules are in place to block traffic and supply that evidence to assessors (preferably by allowing them to see how firewall configurations are deployed from a source of truth)."
+   "note": {
+    "en": "For example, if the documentation says that firewall rules are used to block traffic then the cloud service provider would verify that firewall rules are in place to block traffic and supply that evidence to assessors (preferably by allowing them to see how firewall configurations are deployed from a source of truth)."
+   }
   }
  }
 }

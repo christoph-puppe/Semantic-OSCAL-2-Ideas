@@ -27,7 +27,9 @@
     {
      "group": "Using diodes",
      "name": "overview",
-     "prose": "Diodes enforce one-way data flows, making it more difficult for malicious actors to use the same network path to launch an intrusion and exfiltrate data afterwards. As such, diodes should be used for controlling the data flow of unidirectional gateways."
+     "prose": {
+      "en": "Diodes enforce one-way data flows, making it more difficult for malicious actors to use the same network path to launch an intrusion and exfiltrate data afterwards. As such, diodes should be used for controlling the data flow of unidirectional gateways."
+     }
     }
    ]
   }
