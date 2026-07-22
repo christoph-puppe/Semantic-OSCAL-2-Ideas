@@ -431,6 +431,47 @@ from the host Set — a carrier would reimplement all four.
 Set (a one-member Set is legal and cheap) — accepted; re-opens only if a
 measured multi-corpus glossary corpus arrives (D22 clock discipline).
 
+## P9-applied — Reference taxonomy: closure vs. landmark *(backlog #16, closed 2026-07-21)*
+**Decision.** Two reference classes, normative: **closure-required**
+references MUST resolve in-bundle (Set `members[].ref`; Tailoring
+`selects[].set-ref`, `excludes[].ref`, operation `requirement-ref` +
+statement existence; Implementation `component-ref`/`requirement-ref` +
+the D5 `basis-ref` against the component's authorizations; Finding
+`assessment-ref`/`requirement-ref`; Mapping `source/target-scope`
+statement ids WHEN the endpoint is in-bundle). **Landmark** references
+resolve outside the bundle by design (Mapping endpoints, party/authority
+URIs, evidence refs, external schema/reference URLs, attestation
+subjects — self-verifying via their digests). Parties get no kernel
+type: the D22 test scores 0-of-3 (no census corpus publishes party
+objects; CR26 `affects[]` are strings).
+**Customer.** P9b-1 measured the contradiction: 1,008 Mapping endpoints
++ every party URI in the shipped corpus resolve to nothing, under a
+primitive whose text said "a bundle that doesn't close doesn't
+validate." Crosswalks own neither endpoint — external endpoints are the
+normal case, not a defect.
+**Simplicity.** One question per reference: does the bundle promise it?
+**Complexity ↓.** No party plumbing; no forced vendoring of foreign
+catalogs into every bundle that maps to them.
+**Trade-off.** A consumer resolving a landmark ref needs the other
+bundle — exactly what Mapping provenance and pinning are for.
+
+## P9-applied — Facet enforcement executable *(backlog #17, closed 2026-07-21)*
+**Decision.** The Portable-tier rule runs: stdlib facet payloads
+validate against the normative descriptors; non-stdlib facets validate
+against the bundle-pinned schemas (the manifest pin is the registry);
+`private:` is ignored by definition; anything else is unregistered ⇒
+error. Pinned facet-schema files are themselves existence- and
+digest-verified.
+**Customer.** P9-1's probe: a corrupt payload plus
+`unregistered-dangerous-facet@99` validated green — the 1.x
+valid-and-meaningless pathology reborn. Now both are vectors, both fail.
+**Simplicity.** The manifest already carried the registry; enforcement
+is a lookup plus a schema check.
+**Complexity ↓.** No warning tier, no guessing tool: the three legal
+states (validated, pinned-validated, ignored-private) are exhaustive.
+**Trade-off.** Publishing a facet now genuinely requires publishing its
+schema — which was always the contract.
+
 ## D10 (rev 2) — Declaration-audit promotions *(backlog #8)*
 **Decision.** The three under-declared stdlib facets promote their
 `modifies-semantics` declarations: `security-objectives@1` → `[selection]`,

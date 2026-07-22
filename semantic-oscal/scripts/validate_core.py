@@ -31,6 +31,81 @@ REGISTRY = jsonschema.validators.Draft202012Validator
 VALIDATORS = {t: REGISTRY({"$ref": f"#/$defs/{t}", "$defs": SCHEMA["$defs"]}) for t in TYPES}
 VALIDATORS["contentManifest"] = REGISTRY({"$ref": "#/$defs/contentManifest", "$defs": SCHEMA["$defs"]})
 
+# normative stdlib facet descriptors (gate 2); payload validation per backlog #17
+STDLIB = {}
+for _fn in sorted(os.listdir(os.path.join(SKILL, "schemas", "stdlib"))):
+    if _fn.endswith(".json"):
+        _d = json.load(open(os.path.join(SKILL, "schemas", "stdlib", _fn), encoding="utf-8"))
+        STDLIB[_d["id"]] = REGISTRY(_d["schema"])
+
+# reference taxonomy (backlog #16): closure-required refs MUST land in-bundle;
+# landmark refs (Mapping endpoints, party/authority URIs, evidence, external
+# schema/reference URLs, attestation subjects — self-verifying via digest)
+# resolve outside the bundle by design.
+def closure_errors(objs):
+    """objs: id -> (type, obj). Returns list of error strings."""
+    errs = []
+    def need(oid, ref, what):
+        if ref not in objs:
+            errs.append(f"{oid}: closure-required {what} does not resolve in-bundle: {ref}")
+    for oid, (t, o) in objs.items():
+        if t == "requirementSet":
+            for m in o.get("members", []): need(oid, m["ref"], "member ref")
+        elif t == "tailoring":
+            for s in o.get("selects", []):
+                if "set-ref" in s: need(oid, s["set-ref"], "selects set-ref")
+            for e in o.get("excludes", []): need(oid, e["ref"], "excludes ref")
+            for op in o.get("operations", []):
+                need(oid, op["requirement-ref"], "operation requirement-ref")
+                tgt = objs.get(op["requirement-ref"])
+                if tgt and op.get("statement-id") and tgt[0] == "requirement":
+                    if op["statement-id"] not in {s["id"] for s in tgt[1]["statements"]}:
+                        errs.append(f"{oid}: operation statement-id '{op['statement-id']}' names no statement of {op['requirement-ref']}")
+        elif t == "implementation":
+            need(oid, o["component-ref"], "component-ref")
+            need(oid, o["requirement-ref"], "requirement-ref")
+            for sb in o.get("satisfied-by", []):
+                inh = sb.get("inherited-from")
+                if inh:
+                    comp = objs.get(inh["component-ref"])
+                    if not comp:
+                        errs.append(f"{oid}: inherited-from component does not resolve in-bundle: {inh['component-ref']}")
+                    elif inh["basis-ref"] not in {a["id"] for a in comp[1].get("authorizations", [])}:
+                        errs.append(f"{oid}: basis-ref '{inh['basis-ref']}' names no authorization of {inh['component-ref']} (D5 edge-local rule)")
+        elif t == "finding":
+            need(oid, o["assessment-ref"], "assessment-ref")
+            need(oid, o["requirement-ref"], "requirement-ref")
+        elif t == "mapping":
+            for side in ("source", "target"):   # endpoints are landmark; scopes bind IF the endpoint is present
+                ep = objs.get(o.get(f"{side}-ref"))
+                if ep and ep[0] == "requirement":
+                    sids = {s["id"] for s in ep[1]["statements"]}
+                    for sc in o.get(f"{side}-scope", []):
+                        sid = sc.split(":", 1)[1]
+                        if sid not in sids:
+                            errs.append(f"{oid}: {side}-scope '{sc}' names no statement of the in-bundle endpoint")
+    return errs
+
+def facet_errors(objs_or_obj, pinned, path="?"):
+    """Validate facet payloads (backlog #17): stdlib facets against the
+    normative descriptors, others against the bundle-pinned schemas;
+    private: is ignored by definition; anything else is unregistered."""
+    errs = []
+    items = objs_or_obj if isinstance(objs_or_obj, list) else [(path, objs_or_obj)]
+    for pth, obj in items:
+        for key, payload in (obj.get("facets") or {}).items():
+            base = key.rsplit("@", 1)[0]
+            if key.startswith("private:") or base.startswith("private:"):
+                continue   # modifies-semantics [] by definition (D10)
+            v = STDLIB.get(base) or pinned.get(base)
+            if v is None:
+                errs.append(f"{pth}: unregistered facet '{key}' — not stdlib, not pinned in the manifest, not private: (dangerous-by-default, D10)")
+                continue
+            err = next(iter(v.iter_errors(payload)), None)
+            if err:
+                errs.append(f"{pth}: facet '{key}' payload violates its schema: {err.message[:110]} @ {'/'.join(map(str, err.absolute_path))}")
+    return errs
+
 # per-type optional array/object fields (D3.3: optional empties MUST be absent;
 # required fields stay even when empty)
 OPTIONAL_CONTAINERS = {"aliases", "canonical-alias", "replaces", "relations", "facets",
@@ -198,6 +273,90 @@ def run_attestation():
         if got == case["expected"]: ok("attestation")
         else: fail("attestation", f"{case['name']}: expected {case['expected']}, got {got}")
 
+def run_facets():
+    v = json.load(open(os.path.join(CONF, "facet-vectors.json"), encoding="utf-8"))
+    for case in v["vectors"]:
+        pinned = {k: REGISTRY(s) for k, s in (case.get("pinned") or {}).items()}
+        errs = facet_errors(case["object"], pinned, case["name"])
+        got = "invalid" if errs else "valid"
+        if got == case["expected"]: ok("facet")
+        else: fail("facet", f"{case['name']}: expected {case['expected']}, got {got} ({errs[:1]})")
+
+def run_references():
+    v = json.load(open(os.path.join(CONF, "reference-vectors.json"), encoding="utf-8"))
+    for case in v["vectors"]:
+        objs = {}
+        for o in case["objects"]:
+            t = inferType_single(o)
+            if t: objs[o["id"]] = (t, o)
+        errs = closure_errors(objs)
+        if len(errs) == case["expected-errors"]: ok("reference")
+        else: fail("reference", f"{case['name']}: expected {case['expected-errors']} errors, got {len(errs)} ({errs[:2]})")
+
+def inferType_single(o):
+    m = [t for t in TYPES if VALIDATORS[t].is_valid(o)]
+    return m[0] if len(m) == 1 else None
+
+DEV_NEXT = {"investigating": {"pending", "withdrawn"}, "pending": {"approved", "withdrawn"},
+            "approved": set(), "withdrawn": set()}
+FIND_NEXT = {"open": {"in-remediation", "closed"}, "in-remediation": {"closed"}, "closed": set()}
+def run_lifecycle():
+    v = json.load(open(os.path.join(CONF, "lifecycle-vectors.json"), encoding="utf-8"))
+    for case in v["deviation-transitions"]:
+        got = case["to"] in DEV_NEXT[case["from"]]
+        if got == case["valid"]: ok("lifecycle")
+        else: fail("lifecycle", f"deviation {case['from']}->{case['to']}: expected valid={case['valid']}")
+    for case in v["finding-transitions"]:
+        got = case["to"] in FIND_NEXT[case["from"]]
+        if got == case["valid"]: ok("lifecycle")
+        else: fail("lifecycle", f"finding {case['from']}->{case['to']}: expected valid={case['valid']}")
+    for case in v["identity-events"]:
+        allowed = case["record"] == "canonical-alias"
+        want = case["substitution"] == "allowed"
+        if allowed == want: ok("lifecycle")
+        else: fail("lifecycle", f"identity {case['record']}: substitution rule mismatch")
+    def compose(a, b):
+        if "supplements" in (a, b): return None
+        if a == b == "equal": return "equal"
+        if a == "equal": return b
+        if b == "equal" and a != "equal": return a if a == "supports" else "supports"
+        return "supports"
+    for case in v["relationship-composition"]:
+        got = compose(case["a"], case["b"])
+        # floor semantics: composed claim must never be STRONGER than expected
+        okv = got == case["composed"] or (case["composed"] == "supports" and got in ("supports", "intersects"))
+        if okv: ok("lifecycle")
+        else: fail("lifecycle", f"compose({case['a']},{case['b']}): expected {case['composed']}, got {got}")
+    # shape disjointness: nine canonical minimal objects -> exactly one match each; garbage -> zero
+    P = "https://ex.org"
+    MINIMAL = {
+        "requirement": {"id": P+"/r", "version": "1", "lifecycle": "active",
+            "statements": [{"id": "s1", "modality": "must", "obligated-parties": [P+"/p"], "prose": {"en": "X."}}]},
+        "requirementSet": {"id": P+"/s", "version": "1", "lifecycle": "active", "members": [{"ref": P+"/r", "sequence": 10}]},
+        "tailoring": {"id": P+"/t", "version": "1", "lifecycle": "active", "selects": [{"set-ref": P+"/s"}]},
+        "mapping": {"id": P+"/m", "version": "1", "lifecycle": "active", "source-ref": P+"/r", "target-ref": P+"/r2",
+            "relationship": "supports", "direction": "source-to-target", "confidence": "draft",
+            "provenance": {"author-ref": P+"/p", "date": "2026-07-21"}},
+        "component": {"id": P+"/c", "version": "1", "lifecycle": "active", "kind": "service"},
+        "implementation": {"id": P+"/i", "version": "1", "lifecycle": "active", "component-ref": P+"/c",
+            "requirement-ref": P+"/r", "responsibility": "provider",
+            "satisfied-by": [{"capability-ref": "cap"}], "status": "implemented"},
+        "assessment": {"id": P+"/a", "version": "1", "lifecycle": "active", "subject-refs": [P+"/r"],
+            "method": {"kind": "review"}, "performer-ref": P+"/p", "time": "2026-07-21", "result": "satisfied"},
+        "finding": {"id": P+"/f", "version": "1", "lifecycle": "active", "assessment-ref": P+"/a",
+            "requirement-ref": P+"/r", "state": "open"},
+        "attestation": {"id": P+"/at", "version": "1", "lifecycle": "active",
+            "subject-semantic-digests": ["sha256:" + "0"*64], "content-manifest-digest": "sha256:" + "0"*64,
+            "signer": P+"/p", "timestamp": "2026-07-21"},
+    }
+    for want, o in MINIMAL.items():
+        m = [t for t in TYPES if VALIDATORS[t].is_valid(o)]
+        if m == [want]: ok("lifecycle")
+        else: fail("lifecycle", f"disjointness: minimal {want} matches {m}")
+    if [t for t in TYPES if VALIDATORS[t].is_valid({"id": P+"/x", "version": "1", "lifecycle": "active"})]:
+        fail("lifecycle", "disjointness: field-free object matches a type")
+    else: ok("lifecycle")
+
 # ---------------- 2) bundle validation ----------------
 PARAM_TOKEN = re.compile(r"\{param:([^}]+)\}")
 
@@ -271,14 +430,26 @@ def validate_bundle(bdir):
             fail(section, f"{rel}: object id already used by {seen_ids[obj['id']]} (unique-within — the twin-catalog corpse)")
         seen_ids[obj.get("id")] = rel
         if t: bundle_objs[obj["id"]] = (t, obj)
-    # closure-required refs: Set members MUST land in the bundle (B.1.1;
-    # mapping endpoints and party URIs are landmark refs — normative
-    # taxonomy is backlog #16)
-    for oid, (t, obj) in bundle_objs.items():
-        if t == "requirementSet":
-            for m in obj.get("members", []):
-                if m["ref"] not in bundle_objs:
-                    fail(section, f"{oid}: member ref does not close in bundle: {m['ref']}")
+    # pinned facet schemas: files must exist, digests must verify, and they
+    # form the registry for non-stdlib facet payload validation (#17)
+    pinned = {}
+    for fe in manifest.get("facet-schemas", []):
+        fp = os.path.join(bdir, fe["path"])
+        if not os.path.exists(fp):
+            fail(section, f"{fe['path']}: pinned facet schema listed but missing"); continue
+        raw = open(fp, "rb").read()
+        if "sha256:" + hashlib.sha256(raw).hexdigest() != fe["digest"]:
+            fail(section, f"{fe['path']}: pinned facet schema digest mismatch")
+        try:
+            sd = json.loads(raw.decode("utf-8"))
+            pinned[sd["id"]] = REGISTRY(sd.get("schema", {"type": "object"}))
+        except Exception as e:
+            fail(section, f"{fe['path']}: pinned facet schema unreadable: {e}")
+    # reference taxonomy (#16) + facet payloads (#17)
+    for e in closure_errors(bundle_objs):
+        fail(section, e)
+    for e in facet_errors([(oid, o) for oid, (t, o) in bundle_objs.items()], pinned):
+        fail(section, e)
     on_disk = set()
     for base, _, files in os.walk(bdir):
         for fn in files:
@@ -302,8 +473,8 @@ def validate_examples():
 
 # ---------------- run ----------------
 print("== conformance corpus ==")
-run_jcs(); run_modality(); run_parameters(); run_tailoring(); run_attestation()
-for k in ("jcs", "modality", "parameter", "tailoring", "attestation"):
+run_jcs(); run_modality(); run_parameters(); run_tailoring(); run_attestation(); run_facets(); run_references(); run_lifecycle()
+for k in ("jcs", "modality", "parameter", "tailoring", "attestation", "facet", "reference", "lifecycle"):
     print(f"  {k}: {counts[k]} pass, {counts[k + ':FAIL']} fail")
 
 print("== bundles ==")
