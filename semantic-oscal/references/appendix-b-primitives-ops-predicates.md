@@ -139,7 +139,10 @@ specifying is always monotone. Tier scope (v0.6 cycle, D13 rev): the
 Deviation duty binds consumer-tier Tailorings; an Authority-tier
 Tailoring is normative source and owes no Deviation — the
 classification (monotone | easing | axis-change) still computes and
-reports for both.
+reports for both. The tier itself is DERIVED (layered anchor, #19):
+id-origin match = claimed, authority Attestation over the Tailoring =
+proven, else consumer — `tier-vectors.json` derives all three from
+data alone.
 **Rationale:** weakening must be *possible* (real programs ease with
 justification — four FedRAMP prop-workflows existed to do it) but
 never *silent*. Measured bonus: CR26's 111 published class-variant

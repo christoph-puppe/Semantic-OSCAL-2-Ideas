@@ -201,7 +201,7 @@ svg text{font-family:'JetBrains Mono',monospace}
     <div class="pill" id="pill-bundle">no bundle loaded</div>
     <div class="pill hidden" id="pill-verify"></div>
     <div style="flex:1"></div>
-    <div class="pill">v1.4.0 · build 2026-07-21</div>
+    <div class="pill">v1.4.1 · build 2026-07-21</div>
   </div>
 
   <div id="mid">
@@ -1007,6 +1007,12 @@ function renderStageAuthor() {
      </div>`;
 }
 
+function uriOrigin(u){const p=String(u).split("/");return String(u).startsWith("http")&&p.length>=3?p.slice(0,3).join("/"):String(u);}
+function deriveTier(tObj){   // layered anchor (#19): claimed via id-origin; proof requires signature verification (not evaluated in-app)
+  const origins=new Set((tObj.selects||[]).map(s=>s["set-ref"]?uriOrigin(s["set-ref"]):"<predicate>"));
+  if(origins.size!==1||origins.has("<predicate>"))return "consumer";
+  return uriOrigin(tObj.id)===[...origins][0]?"authority-claimed":"consumer";
+}
 /* S2 · Tailor: run the Appendix-B resolution */
 function renderStageTailor() {
   const ts = [...state.objects.values()].filter(r => r.type === "tailoring");
@@ -1053,8 +1059,10 @@ function renderStageTailor() {
     const stmt = state.objects.get(op["requirement-ref"])?.obj.statements?.find(s => s.id === op["statement-id"]);
     return stmt && modalityVerdict(stmt.modality, op.modality) !== "monotone";
   }).length;
+  const tier=deriveTier(o);
   return stageHead("tailor") + wbTailorHtml() + picker +
     `<div style="margin:6px 0 10px">
+      <div class="chip" title="layered anchor (#19): id-origin match = authority-claimed; the authority's Attestation over this Tailoring would prove it (signature not evaluated in-app); mixed/predicate selection = consumer">tier: <b style="color:${tier==="consumer"?"var(--amber)":"var(--green)"}">${tier}</b></div>
       <div class="chip"><b>${selected.size}</b> requirements selected${predN ? ` <span class="hint">(+${predN} predicate selects, not evaluated here)</span>` : ""}</div>
       <div class="chip"><b>${(o.excludes || []).length}</b> excluded <span class="hint">— selection, never weakening</span></div>
       <div class="chip"><b>${(o.operations || []).length}</b> operations</div>
@@ -2161,7 +2169,7 @@ renderLattice();
 restoreWorkspaceObjects();
 renderStages();
 setView("overview");
-l.info("Semantic Core Bundle Reader v1.4.0 · build 2026-07-21 — everything runs locally, nothing leaves this page");
+l.info("Semantic Core Bundle Reader v1.4.1 · build 2026-07-21 — everything runs locally, nothing leaves this page");
 l.info("open a bundle folder (contains content-manifest.json + objects/) or drop it here");
 if (!crypto.subtle) l.warn("crypto.subtle unavailable in this context — digest verification uses the JS fallback (slower)");
 </script>

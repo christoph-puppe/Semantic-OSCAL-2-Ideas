@@ -173,7 +173,11 @@ ceremony without a wronged party. The weakening classification still
 computes, so any consumer can ask "which classes ease the base?"
 (CR26's measured answer across 111 class-variant modality moves:
 zero); what disappears is only the obligation to mint a record where
-nothing was departed from.
+nothing was departed from. And "whose Tailoring is it" is derived, not
+declared (the layered anchor, v0.6 cycle): id origin matching the
+selected content's origin claims authority; the authority's own
+Attestation over the Tailoring proves it — proof beats prefix; mixed
+or predicate selection is consumer work by definition.
 
 ## 6.4 Resolution you can memorize
 

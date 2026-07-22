@@ -1,5 +1,5 @@
 {
-  "description": "Tailoring resolution laws (D13 / spec Appendix B): ordered application; two operations addressing the same target within one Tailoring = validation error (chaining is the only override); weakening ops need an attached Deviation at CONSUMER tier; Authority-tier Tailorings are normative source and owe none (D13 rev, backlog #2); excludes are selection, never weakening. Target key = requirement-ref + statement-id + (parameter | field | facet where applicable).",
+  "description": "NOTE: the `tier` field in these vectors is STIPULATED to isolate the op-laws under test; tier DERIVATION from data is the tier-vectors.json family (backlog #19, layered anchor). Tailoring resolution laws (D13 / spec Appendix B): ordered application; two operations addressing the same target within one Tailoring = validation error (chaining is the only override); weakening ops need an attached Deviation at CONSUMER tier; Authority-tier Tailorings are normative source and owe none (D13 rev, backlog #2); excludes are selection, never weakening. Target key = requirement-ref + statement-id + (parameter | field | facet where applicable).",
   "vectors": [
     { "name": "same-target-conflict",
       "tier": "consumer",
