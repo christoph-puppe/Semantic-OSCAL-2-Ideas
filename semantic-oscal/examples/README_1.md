@@ -10,20 +10,20 @@ consistent package — the same running story the Handbook tells
 
 | # | Type | File | Demonstrates |
 |---|---|---|---|
-| 1 | Requirement | `objects/req-konf-14-1.json` | multi-statement clause split (s1 provider / s2 customer), choice parameter + bound `{param:}` token, aliases, framework facet, annotations |
-| 1b | Requirement (pure kernel) | `objects/req-ism-1234.json` | the zero-facet minimum |
-| 1c | Requirement (deadline) | `objects/req-iec-cso-iir.json` | `calendar-period` parameter with `tightening: lower`, relations, annotations |
-| 2 | RequirementSet | `objects/set-crypto.json`, `objects/set-baseline.json` | nesting (set-in-set), `sequence`, **multi-authority membership** (safe under global identity) |
-| 3 | Tailoring | `objects/tailoring-elevated.json` | set selection; identity-addressed ops: monotone `set-modality` (KANN→MUSS, no Deviation needed) and in-bounds `set-parameter` |
-| 4 | Mapping | `objects/mapping-konf-ism.json` | third-party crosswalk with statement scope, honest `supports`, provenance |
-| 5 | Component | `objects/component-paas.json`, `objects/component-acme-saas.json` | identified `authorizations[]`; members + capabilities |
-| 6 | Implementation | `objects/implementation-acme-konf.json` | per-clause `statement-refs`, shared responsibility, capability + `inherited-from` with **basis-ref → authorization id** |
-| 7 | Assessment | `objects/assessment-2026q3.json` | facet-typed method (stdlib stub), subjects, result |
-| 8 | Finding | `objects/finding-017.json` | statement-scoped finding, calendar-aware action, **Deviation sub-object** (false-positive, approved) |
+| 1 | Requirement | `req-konf-14-1.json` | multi-statement clause split (s1 provider / s2 customer), choice parameter + bound `{param:}` token, aliases, framework facet, annotations |
+| 1b | Requirement (pure kernel) | `req-ism-1234.json` | the zero-facet minimum |
+| 1c | Requirement (deadline) | `req-iec-cso-iir.json` | `calendar-period` parameter with `tightening: lower`, relations, annotations |
+| 2 | RequirementSet | `set-crypto.json`, `set-baseline.json` | nesting (set-in-set), `sequence`, **multi-authority membership** (safe under global identity) |
+| 3 | Tailoring | `tailoring-elevated.json` | set selection; identity-addressed ops: monotone `set-modality` (KANN→MUSS, no Deviation needed) and in-bounds `set-parameter` |
+| 4 | Mapping | `mapping-konf-ism.json` | third-party crosswalk with statement scope, honest `supports`, provenance |
+| 5 | Component | `component-paas.json`, `component-acme-saas.json` | identified `authorizations[]`; members + capabilities |
+| 6 | Implementation | `implementation-acme-konf.json` | per-clause `statement-refs`, shared responsibility, capability + `inherited-from` with **basis-ref → authorization id** |
+| 7 | Assessment | `assessment-2026q3.json` | facet-typed method (stdlib stub), subjects, result |
+| 8 | Finding | `finding-017.json` | statement-scoped finding, calendar-aware action, **Deviation sub-object** (false-positive, approved) |
 | 9 | Attestation | `attestation-acme-2026.json` | subject **semantic** digests, content-manifest binding, rendering block — *beside* the manifest, never inside |
 | — | Content manifest | `content-manifest.json` | both digests per object, exact-pinned facet schemas, rendering digest |
-| — | Facet descriptors | `schemas/*.json` | `gspp-taxonomy` (real, from Handbook Ch. 7) + `assessment-criteria` **stub** |
-| — | Rendering (L4) | `render/authorization-summary.md` | the "document as view", digest-bound by the attestation |
+| — | Facet descriptors | `gspp-taxonomy-1.0.0.json`, `assessment-criteria-1.0.0-stub.json` | custom facet descriptors and stubs |
+| — | Rendering (L4) | `authorization-summary.md` | the "document as view", digest-bound by the attestation |
 
 ## Self-consistency properties (deliberate)
 
