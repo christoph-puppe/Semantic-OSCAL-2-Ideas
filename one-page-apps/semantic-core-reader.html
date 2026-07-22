@@ -201,7 +201,7 @@ svg text{font-family:'JetBrains Mono',monospace}
     <div class="pill" id="pill-bundle">no bundle loaded</div>
     <div class="pill hidden" id="pill-verify"></div>
     <div style="flex:1"></div>
-    <div class="pill">v1.4.1 · build 2026-07-21</div>
+    <div class="pill">v1.5.0 · build 2026-07-21</div>
   </div>
 
   <div id="mid">
@@ -213,7 +213,8 @@ svg text{font-family:'JetBrains Mono',monospace}
         <input type="file" id="filepick" accept=".json" multiple class="hidden">
         <button id="btn-files">◇ Open JSON file(s)…</button>
         <button id="btn-paste">✎ Paste an object…</button>
-        <div class="hint" style="margin-top:6px">or drop a bundle folder / JSON files anywhere on this page</div>
+        <button id="btn-url">⇩ Load from URL…</button>
+        <div class="hint" style="margin-top:6px">or drop a bundle folder / JSON files anywhere on this page. Served over http? Deep-link a bundle: <span class="mono">#load=&lt;bundle-url&gt;&amp;view=stage:tailor</span></div>
       </div>
       <div class="railgroup">
         <div class="nano">Views</div>
@@ -500,6 +501,53 @@ function sha256Fallback(bytes) {
 }
 
 /* ---------- loading ---------- */
+const READER_ID = "semantic-core-reader.html v1.5.0";
+/* URL loading — works when this page and the bundle are served over http(s)
+   (e.g. `python -m http.server` from the repo root); file:// blocks fetch by design. */
+async function loadFromUrl(input) {
+  let base;
+  try { base = new URL(String(input).trim().replace(/content-manifest\.json$/, ""), location.href); }
+  catch { l.err("not a URL: " + input); return false; }
+  if (!base.pathname.endsWith("/")) base = new URL(base.href + "/");
+  const t0 = performance.now();
+  l.info("fetching bundle from " + base.href + " …");
+  let manifest, manBytes;
+  try {
+    const res = await fetch(new URL("content-manifest.json", base));
+    if (!res.ok) throw new Error("HTTP " + res.status);
+    manBytes = new Uint8Array(await res.arrayBuffer());
+    manifest = JSON.parse(new TextDecoder().decode(manBytes));
+  } catch (e) {
+    l.err("could not fetch content-manifest.json from " + base.href + " — " + e.message);
+    if (location.protocol === "file:")
+      l.warn("this page runs from file:// where fetch is blocked — serve the repo instead: python -m http.server, then open http://localhost:8000/one-page-apps/semantic-core-reader.html");
+    return false;
+  }
+  const paths = [...(manifest.objects || []).map(o => o.path),
+                 ...(manifest["facet-schemas"] || []).map(s => s.path)].filter(Boolean);
+  l.info(`manifest ok — fetching ${paths.length} files…`);
+  state.files.clear();
+  state.files.set("content-manifest.json", { text: new TextDecoder().decode(manBytes), bytes: manBytes });
+  let done = 0, failed = 0, next = 0;
+  const workers = Array.from({ length: Math.min(16, paths.length) }, async () => {
+    while (next < paths.length) {
+      const p = paths[next++];
+      try {
+        const r = await fetch(new URL(p, base));
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        const bytes = new Uint8Array(await r.arrayBuffer());
+        state.files.set(p, { text: new TextDecoder().decode(bytes), bytes });
+      } catch (e) { failed++; l.err(`fetch ${p}: ${e.message}`); }
+      done++;
+      if (done % 200 === 0 || done === paths.length) l.debug(`fetched ${done}/${paths.length}`);
+    }
+  });
+  await Promise.all(workers);
+  if (failed) l.warn(`${failed} file(s) failed to fetch — loading what arrived`);
+  l.ok(`bundle fetched in ${Math.round(performance.now() - t0)} ms`);
+  indexBundle();
+  return true;
+}
 async function loadFileList(fileList) {
   const files = [...fileList].filter(f => f.name.endsWith(".json"));
   if (!files.length) { l.warn("no .json files in selection"); return; }
@@ -1318,7 +1366,7 @@ async function exportWorkspaceBundle() {
   if (!objs.length) { l.warn("workspace is empty — use 'Add to graph' in a workbench first"); return; }
   const files = await buildWorkspaceBundleFiles(objs, {
     source: "Semantic Core Bundle Reader workbench",
-    converter: "semantic-core-reader.html v1.4.0",
+    converter: READER_ID,
     created: new Date().toISOString() });
   const zip = buildZip(files.map(f => ({ name: "workspace-bundle/" + f.name, bytes: f.bytes })));
   const a = document.createElement("a");
@@ -2018,7 +2066,7 @@ async function exportResolved(tObj) {
     .map(o => JSON.parse(JSON.stringify(o)));
   const files = await buildWorkspaceBundleFiles(objs, {
     source: "resolved package", tailoring: tObj.id, "tailoring-version": tObj.version,
-    converter: "semantic-core-reader.html v1.4.0", created: new Date().toISOString() });
+    converter: READER_ID, created: new Date().toISOString() });
   const zip = buildZip(files.map(f => ({ name: "resolved-bundle/" + f.name, bytes: f.bytes })));
   const a = document.createElement("a");
   a.href = URL.createObjectURL(new Blob([zip], { type: "application/zip" }));
@@ -2098,6 +2146,10 @@ $("folderpick").onchange = e => loadFileList(e.target.files);
 $("filepick").onchange = e => loadFileList(e.target.files);
 $("btn-verify").onclick = verifyAll;
 $("search").oninput = e => { state.search = e.target.value; renderList(); };
+$("btn-url").onclick = () => {
+  const u = prompt("Bundle URL — a folder containing content-manifest.json (absolute, or relative to this page):", "../converted_examples/");
+  if (u) loadFromUrl(u);
+};
 $("btn-paste").onclick = () => {
   const txt = prompt("Paste one Semantic Core object (JSON):");
   if (!txt) return;
@@ -2169,8 +2221,20 @@ renderLattice();
 restoreWorkspaceObjects();
 renderStages();
 setView("overview");
-l.info("Semantic Core Bundle Reader v1.4.1 · build 2026-07-21 — everything runs locally, nothing leaves this page");
-l.info("open a bundle folder (contains content-manifest.json + objects/) or drop it here");
+l.info("Semantic Core Bundle Reader v1.5.0 · build 2026-07-21 — everything runs locally, nothing leaves this page");
+l.info("open a bundle folder (contains content-manifest.json + objects/) or drop it here — or serve the repo over http and deep-link: #load=<bundle-url>&view=stage:tailor");
+
+/* deep links: #load=<bundle-url>&view=<view> — shareable when served over http(s) */
+(() => {
+  const frag = new URLSearchParams(location.hash.slice(1));
+  const wantView = frag.get("view");
+  const applyView = () => {
+    if (wantView && document.querySelector(`.navitem[data-view="${CSS.escape(wantView)}"]`)) setView(wantView);
+    else if (wantView) l.warn("unknown view in #fragment: " + wantView);
+  };
+  if (frag.get("load")) loadFromUrl(frag.get("load")).then(applyView);
+  else applyView();
+})();
 if (!crypto.subtle) l.warn("crypto.subtle unavailable in this context — digest verification uses the JS fallback (slower)");
 </script>
 </body>
