@@ -1,4 +1,4 @@
-# OSCAL Semantic Core — Concept · Files · Workflow
+# JASCON — Concept · Files · Workflow
 ## The one-file explainer (with Mermaid)
 ### Companion to Spec v0.5, the Handbook, and `semantic-core-example-bundle/` · 2026-07-18
 

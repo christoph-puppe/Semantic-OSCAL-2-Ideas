@@ -1,4 +1,4 @@
-# The OSCAL Semantic Core Handbook
+# The JASCON Handbook
 ## Part Three — Implementation and Assurance
 # Chapter 9 — Systems, Components, and Inheritance
 
@@ -51,7 +51,7 @@ props whose enum (sp-corporate, sp-system, customer-configured,
 customer-provided, inherited) maps one-to-one onto the typed fields you
 are about to meet — ten years of props standing in for fields.
 
-So the Semantic Core has one type:
+So JASCON has one type:
 
 ```json
 { "id": "https://cso.example/component/acme-saas",
@@ -160,7 +160,7 @@ record, visible where it applies.
 
 ## 9.4 The boundary rule: edge-local, inductive, one hop
 
-Here is the entire inheritance law of the Semantic Core, and it fits in
+Here is the entire inheritance law of JASCON, and it fits in
 one sentence:
 
 > **Every `inherited-from` edge whose target component declares any

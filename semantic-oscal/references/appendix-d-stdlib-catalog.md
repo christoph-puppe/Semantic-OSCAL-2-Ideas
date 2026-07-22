@@ -1,4 +1,4 @@
-# The OSCAL Semantic Core Handbook
+# The JASCON Handbook
 # Appendix D — stdlib Facet Catalog
 
 **Purpose:** the standard library's facets — what each is for, what it

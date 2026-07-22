@@ -1,10 +1,10 @@
 # OSCAL Artifact Landscape — an Overview
-## 1.x document models · Semantic Core objects · how they relate
+## 1.x document models · JASCON objects · how they relate
 ### Companion to Handbook Ch. 2 (translation table) and Ch. 11 (bundles) · 2026-07-18
 
 Two worlds, two answers to "what files are there." In **OSCAL 1.x
 (1.2.2)** the unit is the *document model* — eight fixed document
-types that import each other. In the **Semantic Core** the unit is the
+types that import each other. In the **JASCON** the unit is the
 *object* — nine shallow types packaged in bundles; "documents" are
 renderings. This overview shows both landscapes and the mapping
 between them, with Mermaid sources you can reuse.
@@ -173,7 +173,7 @@ graph LR
     PM1["POA&M"]
     M1["Mapping Collection"]
   end
-  subgraph K["Semantic Core"]
+  subgraph K["JASCON"]
     RQ["Requirements + Sets
 (+ grammar / framework facets)"]
     T2["Tailoring
@@ -224,5 +224,5 @@ Notes that keep the picture honest:
   bonded by an Attestation.
 
 *Sources: OSCAL 1.2.2 model set (incl. the Mapping Collection added
-with v1.2.1, March 2026); Semantic Core Specification v0.5 (D4, D13,
+with v1.2.1, March 2026); JASCON Specification v0.5 (D4, D13,
 D20, Appendix A); Handbook Chapters 2, 9, 11, 14.*

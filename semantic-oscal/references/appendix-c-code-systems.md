@@ -1,4 +1,4 @@
-# The OSCAL Semantic Core Handbook
+# The JASCON Handbook
 # Appendix C — Code Systems
 
 **Purpose:** every enumerated vocabulary the kernel validates against —
@@ -106,7 +106,7 @@ links — all `supports` per the §8.6 import rule, because flattering
 an untyped link into `equal` is how crosswalk trust dies.
 
 **`supplements`** *(v0.6 cycle, 2026-07-21)* — the one code beyond the
-adopted IR 8477 set, clearly marked as a Semantic Core stdlib
+adopted IR 8477 set, clearly marked as a JASCON stdlib
 extension: source attaches additional normative content to target,
 the clause-precision edge of the supplement pattern (§6.A). It is not
 a crosswalk claim: it does **not** chain in Chapter 8's composition

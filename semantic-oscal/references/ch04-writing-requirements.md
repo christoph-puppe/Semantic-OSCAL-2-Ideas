@@ -1,4 +1,4 @@
-# The OSCAL Semantic Core Handbook
+# The JASCON Handbook
 ## Part Two — Authoring Content
 # Chapter 4 — Writing Requirements: Statements, Modality, Parameters
 
@@ -14,7 +14,7 @@ Appendix A; stdlib code systems (Appendix C of this book, when it lands).
 On your desk is one real requirement — say the German KONF.14.1,
 "Verschlüsselung beim Transport" — currently existing as a paragraph of
 prose plus seven namespace-qualified props. Your job is to re-author it
-as a Semantic Core Requirement, and doing that means answering, in order,
+as a JASCON Requirement, and doing that means answering, in order,
 the only four questions statement authoring ever asks:
 
 **How many statements?** — one clause or several. **Which modality?** —

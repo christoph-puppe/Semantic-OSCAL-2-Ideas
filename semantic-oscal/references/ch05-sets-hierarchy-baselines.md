@@ -1,4 +1,4 @@
-# The OSCAL Semantic Core Handbook
+# The JASCON Handbook
 ## Part Two — Authoring Content
 # Chapter 5 — Sets, Hierarchy, and Baselines
 

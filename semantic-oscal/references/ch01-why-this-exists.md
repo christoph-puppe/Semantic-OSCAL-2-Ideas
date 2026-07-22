@@ -1,4 +1,4 @@
-# The OSCAL Semantic Core Handbook
+# The JASCON Handbook
 ## Part One — Orientation
 # Chapter 1 — Why This Exists
 
@@ -196,7 +196,7 @@ standard is strict about the one thing frameworks genuinely need freedom
 in (their document and requirement structure) and permissive about the
 one thing that must be disciplined for interoperability to exist (the
 semantics of extensions). Both settings are exactly backwards — and, as
-Chapter 2 will show, the entire Semantic Core architecture is little more
+Chapter 2 will show, the entire JASCON architecture is little more
 than flipping both switches and then removing everything that existed
 only to compensate for their being backwards.
 

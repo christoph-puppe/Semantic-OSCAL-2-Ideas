@@ -1,4 +1,4 @@
-# The OSCAL Semantic Core Handbook
+# The JASCON Handbook
 ## Part Two — Authoring Content
 # Chapter 7 — Facets: Extending Without Fracturing
 

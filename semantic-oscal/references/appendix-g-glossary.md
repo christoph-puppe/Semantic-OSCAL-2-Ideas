@@ -1,4 +1,4 @@
-# The OSCAL Semantic Core Handbook
+# The JASCON Handbook
 # Appendix G — Glossary
 
 **Convention:** term — definition, with pointers (Ch. = chapter,

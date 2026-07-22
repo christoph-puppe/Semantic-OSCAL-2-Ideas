@@ -1,11 +1,18 @@
-# OSCAL Semantic Core — "Kernel + Registered Facets"
+# JASCON — "Kernel + Registered Facets"
 ## Specification 1.0.0-rc.1 (release candidate)
 ### 2026-07-22 · consolidated from the v0.5 draft + the v0.6-cycle amendment journal
 
-> **Name note.** "OSCAL Semantic Core" is the working title; the final
-> name is under review and will be fixed before the 1.0.0 tag. Nothing
-> here is endorsed by NIST, BSI, ACSC, CCB, CIS, or FedRAMP; the
-> project is maintained in personal capacity.
+> **Name.** **JASCON** — **J**SON **A**ttestable **S**emantic **C**ompliance
+> **O**bject-graph **N**otation; *one notation for every standard, in every
+> language*. Renamed from the working title "OSCAL Semantic Core" on
+> 2026-07-22 (decision recorded in the rationale register; uniqueness
+> verified by collision scan the same day). Machine identifiers — namespace
+> URIs, the attestation media type
+> `application/vnd.oscal-semantic-core.attestation+json`, schema filenames —
+> deliberately retain the `oscal-semantic-core` string for digest stability;
+> their migration is decided with the `v1.0.0` tag. Nothing here is endorsed
+> by NIST, BSI, ACSC, CCB, CIS, or FedRAMP; the project is maintained in
+> personal capacity.
 
 **Status.** A **measured architecture**: every claim in this document has
 survived contact with real catalogs or is explicitly tiered below
@@ -514,7 +521,7 @@ one-way, never authoring; consequence documented (R11).
 ## D19 — Positioning.
 Unchanged: engine that compiles to 1.x during transition; sunset trigger;
 name avoids "2.0"/"profile" — **final name under review for 1.0.0**
-(the working title "OSCAL Semantic Core" carries a trademark-optics
+(the working title "JASCON" carries a trademark-optics
 question that deserves a conscious decision); on-ramps stated accurately (#58 and #2050 live; #2115/#2116 closed
 design positions); RFC-0024's five-CSP clause recorded without endorsement.
 
@@ -531,7 +538,7 @@ design positions); RFC-0024's five-CSP clause recorded without endorsement.
   "relationship": "subset-of",        // stdlib code system: IR 8477 / OLIR
                                        // equal | subset-of | superset-of |
                                        // intersects | supports | conflicts
-                                       // + supplements (Semantic Core
+                                       // + supplements (JASCON
                                        //   extension code, v0.6 cycle)
   "direction": "source-to-target",
   "confidence": "reviewed",
@@ -547,7 +554,7 @@ distinct provenance — consumers choose by authority, exactly as they do
 with catalogs.
 
 **`supplements` (rev. v0.6 cycle — R1 #5).** One relationship code added
-beyond the adopted IR 8477 set, clearly marked as a Semantic Core stdlib
+beyond the adopted IR 8477 set, clearly marked as a JASCON stdlib
 extension: *source attaches additional normative content to target* — the
 clause-precision attachment of the supplement pattern (D21), e.g.
 `target-scope: ["statement:s2"]` on the upstream anchor. It is not a
@@ -832,7 +839,7 @@ rc.1 commit:
   manifest-listed objects, both SHA-256 digests re-verified per object,
   each with a computed coverage report (UNMAPPED = 0) that declares
   every rule and reports source defects rather than repairing them.
-- **The reader** (`one-page-apps/semantic-core-reader.html`, v1.6.1) —
+- **The reader** (`one-page-apps/jascon-reader.html`, v1.7.0) —
   a zero-dependency single-file browser, authoring workbench, and
   digest verifier.
 

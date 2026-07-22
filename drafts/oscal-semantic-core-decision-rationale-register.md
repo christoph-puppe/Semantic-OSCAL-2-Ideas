@@ -1063,5 +1063,38 @@ landed via the absorption clause). Post-1.0, kernel promotion requires
 measured 2-of-3 and a major version under D3.5 governance. Recorded in
 the rc.1 spec text (D22, closing clause).
 
+## Naming — JASCON (2026-07-22)
+**Decision.** The project is named **JASCON** — **J**SON **A**ttestable
+**S**emantic **C**ompliance **O**bject-graph **N**otation; strapline *one
+notation for every standard, in every language*. Author's call, from a
+collision-scanned shortlist; supersedes the candidate list in the rc.1
+consolidation entry above (KERN, SCON, CANON, CRUX — none both scanned
+clean and letter-true to the architecture).
+**Why.** (1) Every letter is load-bearing: JSON (the encoding, RFC 8785
+canonical form), Attestable (two digests, DSSE envelopes), Semantic
+(meaning as the contract), Compliance (the domain), Object-graph (nine
+shallow objects — documents are renderings), Notation (the honest
+heritage of "object notation"). (2) Uniqueness, measured (web collision
+scan 2026-07-22): clean in the software/standards/compliance space; known
+distant homonyms are an Australian construction firm and a Qatari
+engineering company; the nearest software brand is Jasc (Paint Shop Pro,
+absorbed by Corel 2004, one letter off). Rejected on measured collisions:
+SEMBLE (healthcare EHR), CRAG (Meta's RAG benchmark), GRAPHEME (iChrome
+data-viz product), KERNWERK (fitness app, DE ®), GraphSON (Apache
+TinkerPop's JSON graph format), COGS (cost of goods sold); the working
+title "Semantic Core" is itself established SEO jargon for keyword
+clusters — it pointed searchers at the wrong literature. (3) The
+strapline's claims are measured, not aspirational: eleven corpora
+converted at 100 % coverage; every prose field a language map.
+**Scope.** Brand rename across the living documents and the reader
+(file renamed `jascon-reader.html`, v1.7.0). Superseded drafts, dated
+register entries, review records, and census files retain the working
+title as history. **Machine identifiers keep the `oscal-semantic-core`
+string** — namespace URIs, the attestation media type, schema
+filenames — for digest stability; their migration is decided with the
+`v1.0.0` tag. Trademark screen (DPMA/EUIPO/USPTO) and domain
+registration remain on the author's pre-tag checklist.
+
 ## Next (IV.8 of the rc.1 spec)
-Name → P10 adversarial review of the CONSOLIDATED text → `v1.0.0` tag.
+Name ✓ **JASCON** (entry above) → P10 adversarial review of the
+CONSOLIDATED text → `v1.0.0` tag.

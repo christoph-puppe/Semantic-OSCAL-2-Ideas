@@ -1,4 +1,4 @@
-# The OSCAL Semantic Core Handbook
+# The JASCON Handbook
 ## Part One — Orientation
 # Chapter 2 — The Core in One Hour
 
@@ -13,7 +13,7 @@ define.
 ## 2.0 The task
 
 You have one hour. At the end of it you should be able to open any
-Semantic Core artifact and know what you are looking at — and, for your
+JASCON artifact and know what you are looking at — and, for your
 own material, know where each piece of it belongs: kernel field, set,
 tailoring, facet, annotation, or (most often, as Chapter 1's census
 showed) nowhere, because the mechanism it was imitating now exists.

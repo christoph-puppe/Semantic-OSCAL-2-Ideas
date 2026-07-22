@@ -1,4 +1,4 @@
-# The OSCAL Semantic Core Handbook
+# The JASCON Handbook
 ## Part Two — Authoring Content
 # Chapter 3 — Identity, Versions, and the Life of an Object
 
@@ -127,7 +127,7 @@ instances** — with the dates encoded as strings like `"Jun-26"`: no day,
 no timezone, no machine meaning, hand-maintained beside the very
 `version` metadata that should own the job. The American corpus does the
 richer version of the same thing, an `updated[]{date, comment}` array on
-every object. In the Semantic Core, both patterns collapse into the
+every object. In JASCON, both patterns collapse into the
 identity layer: each change is a new addressable version; the bundle's
 content manifest carries the release-notes narrative; `replaces` records
 (§3.5) carry structural lineage. Your authoring pipeline generates all of

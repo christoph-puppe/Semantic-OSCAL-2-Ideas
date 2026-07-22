@@ -1,4 +1,4 @@
-# OSCAL Semantic Core — v0.6 Spec-Feedback Backlog
+# JASCON — v0.6 Spec-Feedback Backlog
 ### Consolidated open design questions from gate item 1 and the first review round · 2026-07-19
 
 Every item carries its evidence (measured where possible), its
