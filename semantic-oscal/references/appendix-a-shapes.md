@@ -22,7 +22,7 @@ prose here is explanatory, the conformance corpus is definitive.
 | `aliases` | ○ | [{scheme, value}] | Other names, with provenance. Absorbs `alt-identifier` (BSI ×1,219 incl. params), FRD `alts` (×188, in-payload). |
 | `lifecycle` | ● | code (A → C.2) | draft · active · deprecated · withdrawn. |
 | `title` | ○ | string | Display title. |
-| `relations` | ○ | [{type, ref}] | Typed outbound links: `related`, `required`, `uses-term`, `reference`, `schema`, `supersedes`… (open-ish code list, C.8). Evidence: BSI links ×197+67; CR26 `related` ×23, `schema` ×24, `terms` ×222. |
+| `relations` | ○ | [{type, ref}] | Typed outbound links: base codes `related`, `required`, `uses-term`, `reference`, `schema` (C.8; `supersedes` removed v0.6 — backlog #20); extension types SHOULD be namespaced URIs (schema constraint pending the converter rerun that migrates the corpus's bare-word `sharpens` ×28). Evidence: BSI links ×197+67; CR26 `related` ×23, `schema` ×24, `terms` ×222. |
 | `facets` | ○ | {facet-uri@major: payload} | Registered extensions; schema-pinned via manifest; semantics per declaration (D10). |
 | `annotations` | ○ | {string: any} | Chrome. Compliance-invisible, digest-excluded, strippable. Evidence: `web_name`, `do_not_link` (CR26). |
 

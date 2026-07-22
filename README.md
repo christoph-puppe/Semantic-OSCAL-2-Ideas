@@ -6,7 +6,7 @@ contact with real catalogs before it may stay.**
 
 This repository is a working design study, not a slide deck. It contains a
 draft specification with a public decision register, an **executable kernel
-schema** with a **115-vector conformance corpus** and a reference validator,
+schema** with a **125-vector conformance corpus** and a reference validator,
 **eight national and industry frameworks converted losslessly** (130,350
 source leaf values, coverage computed rather than asserted), and a
 zero-dependency **single-file reader & authoring studio** that turns the whole
@@ -90,7 +90,7 @@ The project moves through evidence gates; nothing advances on narrative.
   architecture was drawn: the kernel is what all three were measured to need.
 - **Gate 2 — executable (done).** The normative JSON Schema, seven stdlib
   facet descriptors (including a DSSE attestation envelope profile), a
-  **115-vector conformance corpus** in nine suites (canonicalization,
+  **125-vector conformance corpus** in nine suites (canonicalization,
   modality lattice, parameters, tailoring law, attestation, facet
   enforcement, reference closure, lifecycle, authority tiers), and
   [`validate_core.py`](semantic-oscal/scripts/validate_core.py) — which

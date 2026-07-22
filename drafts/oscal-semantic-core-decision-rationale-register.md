@@ -580,3 +580,181 @@ Tailoring, adding is authorship.
 artifacts with tool-run lineage.
 **Trade-off.** One code added to an adopted external vocabulary — fenced
 by the extension marking and the down-translation rule.
+
+---
+
+# Amendments — v0.6 cycle, round 2 (2026-07-22)
+
+Backlog items decided per the standing rule (counts in, register entries
+out). Round 2 acts on the P9c re-review (which found the P9-cycle
+enforcement narrower than the register's prose) plus the deep-research
+open items. Normative text lands in the specification's D3/D9/D13, the
+schema, Appendices A–C, and the validator; conformance grew 115 → **125
+vectors** (jcs 8 · modality 21 · parameter 14 · tailoring 15 · attestation
+5 · facet 7 · reference 11 · lifecycle 36 · tier 8).
+
+## D13 (rev 3) — Op-law completed: `set-parameter` bounds + `remove-relation` *(backlog #25)*
+**Decision.** Bundle-level op-duty enforcement now covers the full D13
+table, not three of its rows: a `set-parameter` whose value fails the
+declared type is a hard error at any tier; out-of-bounds / against-
+tightening is a consumer-tier Deviation duty; `remove-relation` of a
+`required` edge is a consumer-tier Deviation duty (B.3). The
+`param_check` verdict function is now called on real Tailoring ops, not
+only on abstract vectors.
+**Customer.** P6-F2's "evasion backdoor" was accepted-to-close at v0.5
+but shipped unenforced on the workhorse operation — a consumer could
+loosen a `tightening:lower` deadline 6h→24h with no Deviation and
+validate green (P9c-2, demonstrated). The audited-weakening channel now
+holds for every weakening op.
+**Simplicity.** One verdict function, called everywhere a duty can arise.
+**Complexity ↓.** Closes the gap between "op-duty enforcement live"
+(#19's claim) and what shipped. **Trade-off.** None — the machinery
+already existed; it was one branch short. Six negative/positive
+tailoring vectors added.
+
+## D13 (rev 3) — Tier reported distinctly; signature verification is gate-4 *(backlog #24, partial)*
+**Decision.** The reference validator now emits each Tailoring's derived
+tier — `authority-claimed [prefix — UNPROVEN]`, `authority-proven`, or
+`consumer` — honoring spec:399's "report claimed and proven distinctly."
+The residual: `authority-proven` still digest-matches an attestation
+without verifying its signature (`derive_tier`), so both authority tiers
+remain forgeable by a party minting under the content origin. **Full
+resolution — signature verification of the proven tier — is deferred to
+the gate-4 DSSE engine** and stays open as the crypto half of #24.
+**Customer.** P9c-1: a prefix claim is an honest-publisher signal, not
+proof; a tool that never surfaces the distinction lets a consumer-tier
+easing escape the Deviation duty by string choice with no signal. The
+report is the mandated interim mitigation.
+**Trade-off.** Reporting without enforcement is half a loaf — labeled as
+such, with the enforcement gated where the crypto lives.
+
+## D3 (rev) — Canonical decimal string: no leading zeros; scale is significant *(backlog #27)*
+**Decision.** `decimalString` = `^-?(0|[1-9][0-9]*)(\.[0-9]+)?$`. Leading
+zeros are rejected (a non-canonical spelling of one value). Trailing
+zeros are **scale-significant by design** ("lexically defined scale/
+precision", D3.4): `1.5` and `1.50` are DISTINCT values and their
+differing digests are correct, not the divergence P9c-4 first framed.
+Re-scaling a value is forbidden.
+**Customer.** Two Authority tools must derive identical digests for one
+authored decimal (D3.4 MUST); the leading-zero hole let `01.5` and `1.5`
+diverge for identical meaning. Latent (decimals not yet corpus-
+exercised), fixed before it bites. **Trade-off.** Converters must
+preserve the source's exact decimal spelling (scale), never re-scale.
+Two decimal vectors added.
+
+## D2 (rev) — `canonical-alias` is self-policing *(backlog #14)*
+**Decision.** A validator holding both objects MUST verify a
+`canonical-alias` same-content claim: compare content digests modulo the
+identity fields (`id`, `version`, `label`, `canonical-alias`,
+`replaces`); a mismatch is a reported error — the rebrand should have
+been `replaces`. Implemented in `closure_errors`; two reference vectors.
+**Customer.** D2's v0.5 trade-off ("authorities must govern stable URIs")
+left a mis-issued alias for a changed-meaning revision to silently
+misalign every consumer; the check costs one digest comparison and makes
+the assertion self-policing instead of trusted. **Trade-off.** The check
+needs both objects in hand; cross-bundle aliases verify when the other
+bundle is present (exactly what pinning is for).
+
+## C.8 (rev) — Relations channel aligned; `supersedes` removed *(backlog #20, partial)*
+**Decision.** The D13 table row now states the computed semantics B.3
+already carried (`remove-relation(required) ⇒ Deviation`), ending the
+three-way spec/handbook contradiction P9b-4 measured. C.8 base code
+`supersedes` is **deleted** — D2 split that concept into
+`canonical-alias`/`replaces` after P7-B4 proved it unsafe; a second
+un-split lineage carrier would resurrect the hazard (0 corpus
+instances). **Remaining (open):** constraining extension relation types
+to a namespaced-URI shape in the schema is **blocked on the converter
+rerun** — the corpus carries `sharpens` ×28, a bare-word extension
+(exactly P9b-4's "typo'd base code silently becomes a carried
+extension" corpse); migrating it to a URI code rides the rerun, then the
+schema constraint lands.
+**Trade-off.** One measured corpse (`sharpens`) stays live until the
+rerun; noted, not hidden.
+
+## D21 (rev) — Sets are unaddressable by operations; `sequence` struck *(backlog #21)*
+**Decision.** Operations address `requirement-ref` (+ statement-id);
+Sets are **not** operation targets in v0.6 — Set membership and order
+are *authorship* (publish a new Set / shadow Set), never *tailoring*.
+`sequence` is therefore struck from the `set-field` whitelist (it lives
+on Set members, which operations cannot reach; 0 corpus uses). Target
+version-pinning rides the `requirement-ref` URI as `id@version` (D3), so
+no new operation field is needed and ch06's SHOULD is satisfiable as
+written.
+**Customer.** P9b-5: an unreachable whitelist entry is a promise the
+mechanism can't keep. **Complexity ↓.** No Set-addressing sublanguage
+enters the op vocabulary (no corpus demands member reordering via
+tailoring). **Trade-off.** Reordering a Set's members is a new
+publication, not an operation — deliberate, matching the
+authorship-vs-tailoring line (D13/D21).
+
+## D22 (rev 2) — The anticipated-convergence path is scoped pre-1.0 *(backlog #22)*
+**Decision.** The anticipated-convergence promotion path (1-of-3 with
+credible general use, tier `anticipated`, demote after two dry cycles)
+is **available only pre-1.0.** Rationale: demotion would make content
+authored during the anticipation window schema-invalid against the
+closed kernel shapes (`unevaluatedProperties:false`) with no migration
+rule (P9b-10). Pre-1.0 there is no compatibility promise to break;
+at 1.0 the path closes (a post-1.0 anticipated promotion would need the
+compat-facet-on-demotion machinery, deferred until a real candidate
+demands it). Latent today — zero anticipated promotions shipped
+(terminology landed via the absorption clause, not this path).
+**Trade-off.** The kernel's "lag evidence, never lead taste" discipline
+keeps a one-cycle window; after 1.0 it must wait for measured 2-of-3.
+
+## D22-applied (rev) — `uses-term` nearest-Set = fewest membership hops *(backlog #23)*
+**Decision.** "Nearest hosting Set" is defined: the hosting Set reachable
+in the **fewest membership hops** from the Requirement; a tie (a
+Requirement that is a direct member of two glossary-hosting Sets — the
+supplement-pattern collision) is a **Portable-tier validation error**,
+not a silent pick. An authority avoids the tie by hosting its glossary
+on a single dominating Set or by explicit precedence in the payload.
+**Customer.** P9b-11: two conformant tools resolving one term to two
+definitions is the implementation-defined-behavior pattern D15 abolishes.
+**Trade-off.** Multi-glossary corpora must structure hosting to avoid
+ties — cheap, and the error makes the ambiguity loud.
+
+## R6-applied — Renderer-template accreditation is a declared non-goal *(backlog #15)*
+**Decision.** The kernel makes render-tampering **detectable** (templates
+named, version+digest-pinned, attestation-bound; D7) but does not
+**accredit** templates. Accreditation is an **authority-local governance
+choice**, recorded as an explicit non-goal (ch15's "one governance seat
+left deliberately empty" made normative): an authority MAY accredit
+templates for its own corpora and list accredited digests in its
+registry; the core neither blesses nor requires it.
+**Customer.** Deep-research vuln 4: the rendering TCB is pinned but
+unowned. Naming a single ecosystem accreditor would be a gate (the
+registry corpse); making it authority-local keeps federation intact.
+**Trade-off.** No portable "this template is faithful" claim — detection
+plus publisher reputation is the interim, stated not hidden.
+
+## D26 — Facet enforcement: stdlib strict, pin-honoring; delivery on the rerun *(backlog #26, partial)*
+**Decision recorded.** stdlib facet payloads validate against the
+normative descriptors (`additionalProperties:false`); non-stdlib against
+the bundle-pinned schema. The **real** pinned schemas (with
+`additionalProperties:false`) and the pin-vs-descriptor precedence rule
+ship with the **converter rerun** — today the bundles pin permissive
+illustrative stubs, so framework/compat payloads are under-validated
+(P9c-3, demonstrated smuggle). Until the rerun, the reference validator's
+use of the hard-coded strict stdlib descriptors is the interim (stricter
+than the pinned stub, and divergent from a pin-honoring sealed tool —
+the gap #26 tracks). **Open**, tied to the rerun.
+
+## Round-2 backlog dispositions
+
+| Backlog | Disposition |
+|---|---|
+| #13 | **Close** — `calendar-context@1` stdlib code system seeded (C.9): us-federal/de-bund/eu-target2; `calendar-ref` SHOULD cite it; CR26 ad-hoc migrates at rerun |
+| #14 | **Close** — canonical-alias same-content check implemented + 2 vectors (D2 rev) |
+| #15 | **Close** — template accreditation = declared non-goal (authority-local); R6-applied |
+| #20 | **Partial** — D13 row aligned, `supersedes` deleted; **stays open** for the schema URI-shape constraint (blocked on the `sharpens` migration at converter rerun) |
+| #21 | **Close** — Sets unaddressable; `sequence` struck from the set-field whitelist (D21 rev) |
+| #22 | **Close** — anticipated path scoped pre-1.0 (D22 rev 2) |
+| #23 | **Close** — nearest-Set = fewest membership hops; ties ⇒ Portable error (D22-applied rev) |
+| #24 | **Partial** — tier reported distinctly (done); **stays open** for signature verification of the proven tier (gate-4 DSSE) |
+| #25 | **Close** — op-law completed for set-parameter + remove-relation (D13 rev 3) + 6 vectors |
+| #26 | **Partial** — decision recorded; real pinned schemas + pin-honoring **stay open** on the converter rerun |
+| #27 | **Close** — decimal no-leading-zeros + scale-significance (D3 rev) + 2 vectors |
+| #28 | **Close** — count erratum applied (README/spec → 125; recompute via validate_core.py) |
+| #12 | **Open — needs author decision.** The kernel `text` primitive `{BCP-47: string}` for human-text fields is a NEW kernel primitive touching every human-text field + all converters (blast radius across the schema and 8 converters). Not decided unilaterally; recommendation: adopt it (the field inventory + payload harmonization already shipped for ISM/CR26, backlog #12 evidence), but the go-ahead and the BSI-rerun sequencing are the author's call. |
+| #10 | **Open** — gate 3 (NIST catalog); see `drafts/gate-3-plan.md` |
+| #18 | **Open** — gate 4 (engines: bundle-composition semver + conditional-apply vectors) |

@@ -133,9 +133,14 @@ for the mapping's *owner-of-record*.
 ## C.8 Relation types — the one extensible surface
 
 Stdlib base codes: `related · required · uses-term · reference ·
-schema · supersedes`. Semantics that compute: removal of a `required`
+schema`. Semantics that compute: removal of a `required`
 edge in a Tailoring ⇒ Deviation (B.3); `uses-term` resolves into
 terminology payloads; the rest are typed navigation.
+**Removed (v0.6 cycle, backlog #20):** `supersedes` — D2 split that
+conflated concept into `canonical-alias` (identity) and `replaces`
+(lineage) after P7-B4 proved "supersedes = equivalence" unsafe; a
+second, un-split lineage carrier on the relations channel would
+resurrect exactly that hazard. No corpus used it (0 instances).
 **Extension rule:** this is deliberately the *one* open-ish code
 surface — authorities may mint additional, namespaced relation types
 (URI-typed), which conformant tools **carry and display but do not
@@ -162,6 +167,19 @@ ceremony question, not a D9 union question; the correction is itself
 on the record). `tightening ∈ lower · higher · none` declares per parameter
 which direction is stricter (deadlines: lower); bounds moves against
 the declared direction ⇒ Deviation.
+
+**Calendar contexts — `calendar-context@1` (stdlib code system, seed;
+v0.6 cycle, backlog #13).** `calendar-ref` values SHOULD cite a stdlib
+calendar-context code rather than a minted URL, so two jurisdictions'
+tools resolve one `bizdays` value identically. Seed set:
+`us-federal` (US federal holidays, Mon–Fri week), `de-bund` (German
+federal holidays, Bundesland-neutral), `eu-target2` (TARGET2 banking
+calendar). Each code pins holiday list + working-week + cutoff
+semantics; the fail-closed rule is unchanged (no resolvable context ⇒
+explained error, never a guess). The CR26 converter's ad-hoc
+`…/cr26/calendar/us-federal` migrates to the `us-federal` code at the
+next converter run (16 objects). Seed status: additions ship the Ch.15
+way — an EU reporting corpus (NIS2/DORA) is the first expected extender.
 
 ## C.10 Small sets
 

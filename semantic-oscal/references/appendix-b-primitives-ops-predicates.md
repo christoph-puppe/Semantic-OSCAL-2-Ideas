@@ -266,9 +266,10 @@ on easing/axis-change. Failure: as B.1.6, prefixed with the op
 address. Measured: 111 emitted, zero easings.
 
 **`set-field`** — law: whitelisted non-normative fields only (title,
-label, sequence, annotations); normative fields have their own ops
-precisely so this one stays harmless. Failure names the field and the
-whitelist.
+label, annotations); normative fields have their own ops precisely so
+this one stays harmless (`sequence` struck v0.6 — it lives on Set
+members, unaddressable by operations; backlog #21). Failure names the
+field and the whitelist.
 
 **`replace-prose`** — law: `intent` ∈ editorial | substantive is
 mandatory; substantive ⇒ Deviation. Misdeclared intent is forgery

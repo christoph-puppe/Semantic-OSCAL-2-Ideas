@@ -43,6 +43,14 @@
     { "name": "default-is-advisory-never-binds",
       "parameter": { "name": "freq", "type": "string", "label": "Häufigkeit", "default": "regelmäßig" },
       "value": null, "verdict": "invalid",
-      "note": "an unset parameter stays unset - resolution never substitutes the default silently (D9 rev); binding is set-parameter-only, and null is not a binding" }
+      "note": "an unset parameter stays unset - resolution never substitutes the default silently (D9 rev); binding is set-parameter-only, and null is not a binding" },
+    { "name": "decimal-leading-zero-rejected",
+      "parameter": { "name": "uptime", "type": "decimal", "min": 0, "max": 100 },
+      "value": "007.5", "verdict": "invalid",
+      "note": "leading zeros are a non-canonical spelling of one value+scale - two forms would diverge digests for identical meaning (backlog #27)" },
+    { "name": "decimal-trailing-zero-is-distinct-scale",
+      "parameter": { "name": "uptime", "type": "decimal", "min": 0, "max": 100 },
+      "value": "99.950", "verdict": "valid",
+      "note": "trailing zeros are scale-significant by design (D3.4 'lexically defined scale/precision'): '99.95' and '99.950' are DISTINCT canonical values, not a divergence bug" }
   ]
 }
