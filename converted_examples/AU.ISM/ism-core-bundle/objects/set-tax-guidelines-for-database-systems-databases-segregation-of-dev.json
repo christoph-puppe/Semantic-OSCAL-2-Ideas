@@ -15,7 +15,9 @@
     {
      "group": "Segregation of development, testing, staging and production databases",
      "name": "overview",
-     "prose": "Using database contents from production environments in non-production environments, such as development, testing or staging environments, could result in inadequate protection being applied to the database contents."
+     "prose": {
+      "en": "Using database contents from production environments in non-production environments, such as development, testing or staging environments, could result in inadequate protection being applied to the database contents."
+     }
     }
    ]
   }

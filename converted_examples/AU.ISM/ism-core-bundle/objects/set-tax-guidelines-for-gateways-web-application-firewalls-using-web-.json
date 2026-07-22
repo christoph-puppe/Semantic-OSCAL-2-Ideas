@@ -15,7 +15,9 @@
     {
      "group": "Using web application firewalls",
      "name": "overview",
-     "prose": "When using a web application firewall (WAF), care should be taken with their configuration to ensure that the IP addresses of an organisation’s web servers (referred to as origin servers) are not identifiable by malicious actors, as knowledge of origin server IP addresses could allow for protections provided by a WAF to be bypassed. Additionally, appropriate controls should be applied to only enable communication between origin servers, the WAF and authorised management networks."
+     "prose": {
+      "en": "When using a web application firewall (WAF), care should be taken with their configuration to ensure that the IP addresses of an organisation’s web servers (referred to as origin servers) are not identifiable by malicious actors, as knowledge of origin server IP addresses could allow for protections provided by a WAF to be bypassed. Additionally, appropriate controls should be applied to only enable communication between origin servers, the WAF and authorised management networks."
+     }
     }
    ]
   }

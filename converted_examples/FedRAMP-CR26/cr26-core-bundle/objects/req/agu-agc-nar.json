@@ -41,12 +41,16 @@
      "party": "FedRAMP",
      "method": "email",
      "target": "info@fedramp.gov",
-     "name": "info@fedramp.gov"
+     "name": {
+      "en": "info@fedramp.gov"
+     }
     }
    ]
   },
   "https://ns.fedramp.gov/cr26/facet/narrative@1": {
-   "note": "This is related to the Presumption of Adequacy for a FedRAMP Certification and notification is mandated by OMB Memorandum M-24-15 section IV (a)."
+   "note": {
+    "en": "This is related to the Presumption of Adequacy for a FedRAMP Certification and notification is mandated by OMB Memorandum M-24-15 section IV (a)."
+   }
   }
  }
 }

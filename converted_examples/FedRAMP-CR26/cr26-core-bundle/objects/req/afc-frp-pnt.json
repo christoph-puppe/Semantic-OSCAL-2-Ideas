@@ -39,15 +39,19 @@
      "party": "Everyone",
      "method": "web",
      "target": "https://www.fedramp.gov/notices",
-     "name": "FedRAMP Public Notices"
+     "name": {
+      "en": "FedRAMP Public Notices"
+     }
     }
    ]
   },
   "https://ns.fedramp.gov/cr26/facet/narrative@1": {
-   "notes": [
-    "Public notice may include blog posts, social media posts, announcements during Community Updates, or e-blasts.",
-    "As this process matures, additional confirmed options may become available."
-   ]
+   "notes": {
+    "en": [
+     "Public notice may include blog posts, social media posts, announcements during Community Updates, or e-blasts.",
+     "As this process matures, additional confirmed options may become available."
+    ]
+   }
   }
  }
 }

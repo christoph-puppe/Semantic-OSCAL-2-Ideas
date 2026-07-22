@@ -15,7 +15,9 @@
     {
      "group": "Integrity algorithms",
      "name": "overview",
-     "prose": "The approved integrity algorithms for IPsec connections are HMAC-SHA256, HMAC-SHA384 and HMAC-SHA512. However, if using AES with Galois/Counter Mode as the encryption algorithm, it can also be used for authentication purposes. In such cases, the integrity algorithm should be configured as NONE.\n\nFor interoperability and maintainability reasons, HMAC-SHA256 will not be approved beyond 2030."
+     "prose": {
+      "en": "The approved integrity algorithms for IPsec connections are HMAC-SHA256, HMAC-SHA384 and HMAC-SHA512. However, if using AES with Galois/Counter Mode as the encryption algorithm, it can also be used for authentication purposes. In such cases, the integrity algorithm should be configured as NONE.\n\nFor interoperability and maintainability reasons, HMAC-SHA256 will not be approved beyond 2030."
+     }
     }
    ]
   }

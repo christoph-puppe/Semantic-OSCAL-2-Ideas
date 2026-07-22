@@ -15,7 +15,9 @@
     {
      "group": "Communications between database servers and web servers",
      "name": "overview",
-     "prose": "Data communicated between database servers and web servers, especially over the internet, is susceptible to capture by malicious actors. As such, it is important that all data communicated between database servers and web servers is suitably encrypted using Australian Signals Directorate-approved cryptography."
+     "prose": {
+      "en": "Data communicated between database servers and web servers, especially over the internet, is susceptible to capture by malicious actors. As such, it is important that all data communicated between database servers and web servers is suitably encrypted using Australian Signals Directorate-approved cryptography."
+     }
     }
    ]
   }

@@ -15,7 +15,9 @@
     {
      "group": "Functional separation between database servers and web servers",
      "name": "overview",
-     "prose": "Due to the higher threat environment that web servers are typically exposed to, hosting database servers and web servers within the same operating environment increases the likelihood of database servers being compromised by malicious actors. This security risk can be mitigated by ensuring that database servers are functionally separated from web servers."
+     "prose": {
+      "en": "Due to the higher threat environment that web servers are typically exposed to, hosting database servers and web servers within the same operating environment increases the likelihood of database servers being compromised by malicious actors. This security risk can be mitigated by ensuring that database servers are functionally separated from web servers."
+     }
     }
    ]
   }

@@ -37,11 +37,15 @@
    ]
   },
   "https://ns.fedramp.gov/cr26/facet/narrative@1": {
-   "notes": [
-    "Unless otherwise notified, FedRAMP will use the listed Security Email on the Marketplace for these notifications.",
-    "If a provider establishes a new inbox in reaction to this guidance that is different from the Security Email then they must follow the AFC-CSO-NOC (Notification of Changes) rules to notify FedRAMP."
-   ],
-   "danger": "Be careful using a personal email tied to an individual for this inbox due to the significant risk to future communications after a change in personnel!"
+   "notes": {
+    "en": [
+     "Unless otherwise notified, FedRAMP will use the listed Security Email on the Marketplace for these notifications.",
+     "If a provider establishes a new inbox in reaction to this guidance that is different from the Security Email then they must follow the AFC-CSO-NOC (Notification of Changes) rules to notify FedRAMP."
+    ]
+   },
+   "danger": {
+    "en": "Be careful using a personal email tied to an individual for this inbox due to the significant risk to future communications after a change in personnel!"
+   }
   }
  }
 }

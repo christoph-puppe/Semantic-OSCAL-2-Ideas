@@ -15,7 +15,9 @@
     {
      "group": "Transport Layer Security filtering",
      "name": "overview",
-     "prose": "As encrypted Hypertext Transfer Protocol Secure connections can bypass traditional web content filtering techniques, an organisation should implement Transport Layer Security (TLS) inspection. However, an organisation may choose to allow some web traffic, such as that for internet banking, to go uninspected to protect the privacy of users."
+     "prose": {
+      "en": "As encrypted Hypertext Transfer Protocol Secure connections can bypass traditional web content filtering techniques, an organisation should implement Transport Layer Security (TLS) inspection. However, an organisation may choose to allow some web traffic, such as that for internet banking, to go uninspected to protect the privacy of users."
+     }
     }
    ]
   }

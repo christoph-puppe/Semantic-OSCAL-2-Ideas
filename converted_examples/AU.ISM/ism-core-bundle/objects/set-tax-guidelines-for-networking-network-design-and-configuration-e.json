@@ -15,7 +15,9 @@
     {
      "group": "Encrypted Domain Name System Services",
      "name": "overview",
-     "prose": "Domain Name System (DNS) is a hierarchical naming system built on a distributed database for resources connected to the internet. In performing this service, DNS maps human-readable domain names to their associated IP addresses. Unfortunately, malicious actors can surveil standard DNS requests for intelligence gathering. As such, it is important that DNS traffic is suitably encrypted by clients and servers using ASD-approved cryptography, such as via DNS over Hypertext Transfer Protocol Secure or DNS over Transport Layer Security."
+     "prose": {
+      "en": "Domain Name System (DNS) is a hierarchical naming system built on a distributed database for resources connected to the internet. In performing this service, DNS maps human-readable domain names to their associated IP addresses. Unfortunately, malicious actors can surveil standard DNS requests for intelligence gathering. As such, it is important that DNS traffic is suitably encrypted by clients and servers using ASD-approved cryptography, such as via DNS over Hypertext Transfer Protocol Secure or DNS over Transport Layer Security."
+     }
     }
    ]
   }

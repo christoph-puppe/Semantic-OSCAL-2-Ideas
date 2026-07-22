@@ -32,10 +32,12 @@
  ],
  "facets": {
   "https://ns.fedramp.gov/cr26/facet/narrative@1": {
-   "notes": [
-    "The FedRAMP ID is supplied by FedRAMP after a cloud service offering is registered to be listed on the FedRAMP Marketplace - providers will need to use a placeholder until the FedRAMP ID is assigned.",
-    "Many providers have multiple cloud service offerings or use internal names that don't align to public materials; using the FedRAMP ID ensures we can easily align the communication with a specific cloud service offering."
-   ]
+   "notes": {
+    "en": [
+     "The FedRAMP ID is supplied by FedRAMP after a cloud service offering is registered to be listed on the FedRAMP Marketplace - providers will need to use a placeholder until the FedRAMP ID is assigned.",
+     "Many providers have multiple cloud service offerings or use internal names that don't align to public materials; using the FedRAMP ID ensures we can easily align the communication with a specific cloud service offering."
+    ]
+   }
   }
  }
 }

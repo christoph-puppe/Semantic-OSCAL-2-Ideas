@@ -37,12 +37,16 @@
      "party": "FedRAMP",
      "method": "form",
      "target": "https://help.fedramp.gov/hc/en-us/requests/new?ticket_form_id=51822364715035",
-     "name": "[For Agencies] Additional Information, Security Requirements, or Certification Change, or After Request Form"
+     "name": {
+      "en": "[For Agencies] Additional Information, Security Requirements, or Certification Change, or After Request Form"
+     }
     }
    ]
   },
   "https://ns.fedramp.gov/cr26/facet/narrative@1": {
-   "note": "Agencies are expected to notify FedRAMP under OMB Memorandum M-24-15 section IV (a)."
+   "note": {
+    "en": "Agencies are expected to notify FedRAMP under OMB Memorandum M-24-15 section IV (a)."
+   }
   }
  }
 }

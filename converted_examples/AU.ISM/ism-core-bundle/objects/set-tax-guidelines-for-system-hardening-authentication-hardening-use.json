@@ -15,7 +15,9 @@
     {
      "group": "User account lockouts",
      "name": "overview",
-     "prose": "Locking user accounts after a specified number of repeated failed logon attempts reduces the likelihood of successful forms of credential brute-force attacks by malicious actors, such as credential guessing attacks, credential spraying attacks and credential stuffing attacks. However, care should be taken when implementing indefinite account lockouts in response to repeated failed logon attempts as this can increase the likelihood of a denial of service. Alternatively, some systems can be configured with risk-based lockout mechanisms in combination with automated lockout durations to slow down repeated failed logon attempts. Implementing multi-factor authentication is also an effective way of reducing the likelihood of successful credential brute-force attacks."
+     "prose": {
+      "en": "Locking user accounts after a specified number of repeated failed logon attempts reduces the likelihood of successful forms of credential brute-force attacks by malicious actors, such as credential guessing attacks, credential spraying attacks and credential stuffing attacks. However, care should be taken when implementing indefinite account lockouts in response to repeated failed logon attempts as this can increase the likelihood of a denial of service. Alternatively, some systems can be configured with risk-based lockout mechanisms in combination with automated lockout durations to slow down repeated failed logon attempts. Implementing multi-factor authentication is also an effective way of reducing the likelihood of successful credential brute-force attacks."
+     }
     }
    ]
   }

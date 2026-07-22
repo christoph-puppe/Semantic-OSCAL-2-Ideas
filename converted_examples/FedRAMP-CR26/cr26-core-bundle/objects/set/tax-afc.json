@@ -19,7 +19,9 @@
  },
  "facets": {
   "https://ns.fedramp.gov/cr26/facet/narrative@1": {
-   "description": "The Addressing FedRAMP Communication rules (formerly FedRAMP Security Inbox) ensure FedRAMP can reliably contact the security and compliance staff responsible for every FedRAMP-authorized cloud service offering. These rules also set expectations for urgent communications, response time testing, and routing important messages separately from general support or customer service channels."
+   "description": {
+    "en": "The Addressing FedRAMP Communication rules (formerly FedRAMP Security Inbox) ensure FedRAMP can reliably contact the security and compliance staff responsible for every FedRAMP-authorized cloud service offering. These rules also set expectations for urgent communications, response time testing, and routing important messages separately from general support or customer service channels."
+   }
   },
   "https://ns.fedramp.gov/cr26/facet/scope@1": {
    "tag": "assurance"

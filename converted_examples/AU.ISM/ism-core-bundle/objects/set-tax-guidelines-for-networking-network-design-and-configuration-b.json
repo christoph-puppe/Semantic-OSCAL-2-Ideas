@@ -19,7 +19,9 @@
     {
      "group": "Blocking anonymity network traffic",
      "name": "overview",
-     "prose": "Inbound network connections from anonymity networks, such as the Tor network, can be used by malicious actors for reconnaissance and malicious code delivery purposes with minimal risk of detection and attribution. As such, this network traffic should be blocked. However, an organisation might choose to support anonymous connections to their websites to cater for individuals who want to remain anonymous for privacy reasons. In such cases, it is suggested that network traffic from anonymity networks be logged and monitored instead. Additionally, outbound network connections to anonymity networks can be used by malicious code for command and control or data exfiltration purposes and should be blocked."
+     "prose": {
+      "en": "Inbound network connections from anonymity networks, such as the Tor network, can be used by malicious actors for reconnaissance and malicious code delivery purposes with minimal risk of detection and attribution. As such, this network traffic should be blocked. However, an organisation might choose to support anonymous connections to their websites to cater for individuals who want to remain anonymous for privacy reasons. In such cases, it is suggested that network traffic from anonymity networks be logged and monitored instead. Additionally, outbound network connections to anonymity networks can be used by malicious code for command and control or data exfiltration purposes and should be blocked."
+     }
     }
    ]
   }

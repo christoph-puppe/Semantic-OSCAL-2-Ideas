@@ -38,11 +38,15 @@
  ],
  "facets": {
   "https://ns.fedramp.gov/cr26/facet/narrative@1": {
-   "note": "For a newly FedRAMP Recognized Assessor, this rule applies beginning on the initial date of FedRAMP Recognition if that date is later than 2026-06-01.",
-   "corrective-actions": [
-    "FedRAMP will notify assessors when they are within 6 months of losing FedRAMP Recognition under this rule and request a corrective action plan.",
-    "Assessors whose corrective action plan is not accepted will lose FedRAMP Recognition and must supply an alternative corrective action plan to move toward renewed FedRAMP Recognition."
-   ]
+   "note": {
+    "en": "For a newly FedRAMP Recognized Assessor, this rule applies beginning on the initial date of FedRAMP Recognition if that date is later than 2026-06-01."
+   },
+   "corrective-actions": {
+    "en": [
+     "FedRAMP will notify assessors when they are within 6 months of losing FedRAMP Recognition under this rule and request a corrective action plan.",
+     "Assessors whose corrective action plan is not accepted will lose FedRAMP Recognition and must supply an alternative corrective action plan to move toward renewed FedRAMP Recognition."
+    ]
+   }
   }
  }
 }

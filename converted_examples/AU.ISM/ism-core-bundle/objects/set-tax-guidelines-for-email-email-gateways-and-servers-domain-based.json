@@ -19,7 +19,9 @@
     {
      "group": "Domain-based Message Authentication, Reporting and Conformance",
      "name": "overview",
-     "prose": "DMARC enables a domain owner to specify what action receiving email servers should take as a result of domain alignment, SPF and DKIM checks. For emails that do not pass DMARC checks, this includes ‘reject’ (emails are rejected), ‘quarantine’ (emails are marked as spam) or ‘none’ (no action is taken).\n\nDMARC also provides a reporting feature that enables a domain owner to receive reports on the actions taken by receiving email servers. While this feature does not mitigate malicious emails sent to the domain owner’s organisation, it can give the domain owner some visibility of attempts by malicious actors to spoof their organisation’s domains."
+     "prose": {
+      "en": "DMARC enables a domain owner to specify what action receiving email servers should take as a result of domain alignment, SPF and DKIM checks. For emails that do not pass DMARC checks, this includes ‘reject’ (emails are rejected), ‘quarantine’ (emails are marked as spam) or ‘none’ (no action is taken).\n\nDMARC also provides a reporting feature that enables a domain owner to receive reports on the actions taken by receiving email servers. While this feature does not mitigate malicious emails sent to the domain owner’s organisation, it can give the domain owner some visibility of attempts by malicious actors to spoof their organisation’s domains."
+     }
     }
    ]
   }

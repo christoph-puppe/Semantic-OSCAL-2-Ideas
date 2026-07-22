@@ -19,10 +19,12 @@
  "facets": {
   "https://ns.fedramp.gov/cr26/facet/narrative@1": {
    "schema-name": "FedRAMP Certification Package Overview Schema",
-   "notes": [
-    "For FedRAMP Rev5, the Certification Package Overview replaces the historically required System Security Plan (not including appendices).",
-    "This list of rules may not apply to all FedRAMP Certification Classes or Types - if a rule does not apply then the information is not required."
-   ]
+   "notes": {
+    "en": [
+     "For FedRAMP Rev5, the Certification Package Overview replaces the historically required System Security Plan (not including appendices).",
+     "This list of rules may not apply to all FedRAMP Certification Classes or Types - if a rule does not apply then the information is not required."
+    ]
+   }
   },
   "https://ns.oscal.org/stdlib/facet/reporting-obligation@1": {
    "following-information": [

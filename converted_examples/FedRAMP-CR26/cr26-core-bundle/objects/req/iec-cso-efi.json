@@ -19,7 +19,9 @@
  "facets": {
   "https://ns.fedramp.gov/cr26/facet/narrative@1": {
    "schema-name": "FedRAMP Incident Report (IEC-CSO-IIR / IEC-CSO-OIR / IEC-CSO-FIR)",
-   "note": "All incidents must be assigned a default PAIN-5 as required by IEC-CSO-DPR (Default PAIN Rating) if this step is not completed."
+   "note": {
+    "en": "All incidents must be assigned a default PAIN-5 as required by IEC-CSO-DPR (Default PAIN Rating) if this step is not completed."
+   }
   },
   "https://ns.oscal.org/stdlib/facet/reporting-obligation@1": {
    "following-information-bullets": [

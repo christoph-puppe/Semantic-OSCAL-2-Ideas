@@ -32,10 +32,12 @@
  ],
  "facets": {
   "https://ns.fedramp.gov/cr26/facet/narrative@1": {
-   "notes": [
-    "Providers are expected to maintain their FedRAMP Certification Package using automation as changes occur to ensure they are never out of date.",
-    "This rule does not require or expect persistent human review of all materials in this cadence."
-   ]
+   "notes": {
+    "en": [
+     "Providers are expected to maintain their FedRAMP Certification Package using automation as changes occur to ensure they are never out of date.",
+     "This rule does not require or expect persistent human review of all materials in this cadence."
+    ]
+   }
   },
   "https://ns.oscal.org/compat/oscal-1x@1": {
    "class-variants": {
