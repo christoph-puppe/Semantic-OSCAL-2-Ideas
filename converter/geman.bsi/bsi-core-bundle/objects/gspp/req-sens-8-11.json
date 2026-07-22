@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.8.11",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.8.11",
+ "lifecycle": "active",
+ "title": "Verwendung von Brandschutmitteln",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Mitarbeitende SOLLTE zur korrekten Verwendung bereitgestellter Brandschutz-Hilfsmittel sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "zur korrekten Verwendung bereitgestellter Brandschutz-Hilfsmittel",
+     "target-object-categories": [
+      "Mitarbeitende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Hierzu zählt z.B. die Einweisung in die korrekte Verwendung von Handfeuerlöschern, welche in Serverräumen oder Rechenzentren bereitgestellt werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "37823d46-59ad-487b-bba1-5917c017c625"
+  }
+ ]
+}

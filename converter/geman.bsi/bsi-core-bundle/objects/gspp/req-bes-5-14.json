@@ -1,0 +1,87 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.5.14",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.5.14",
+ "lifecycle": "active",
+ "title": "Löschregeln",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Outsourcing SOLLTE die Löschung von Daten während der Vertragslaufzeit im Einklang mit den Compliance-Verpflichtungen der Institution vereinbaren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "vereinbaren",
+     "result": "die Löschung von Daten während der Vertragslaufzeit im Einklang mit den Compliance-Verpflichtungen der Institution",
+     "target-object-categories": [
+      "Outsourcing"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Beschaffungskriterien"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.20"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Lieferketten"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Compliance-Verpflichtungen werden in der Praktik GC ermittelt. Die Umsetzung kann z.B. durch individuelle vertragliche Festlegung oder durch die Auswahl eines Dienstleisters, dessen Löschregelungen im Einklang mit den Compliance-Verpflichtungen stehen, erfolgen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "b75b1a85-9a93-4f76-a9c4-846a0409490e"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/BES.6.2"
+  }
+ ]
+}

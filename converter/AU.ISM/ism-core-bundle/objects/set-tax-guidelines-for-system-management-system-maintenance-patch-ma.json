@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-management-system-maintenance-patch-ma",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Patch management processes and procedures",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1143",
+   "sequence": 10290
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0298",
+   "sequence": 10300
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Patch management processes and procedures",
+     "name": "overview",
+     "prose": "Applying patches or updates is critical to ensuring the ongoing security of applications, drivers, operating systems and firmware. In doing so, it is important that patches or updates are applied consistently and in a secure manner. For example, by using a centralised and managed approach that maintains the integrity of patches or updates and confirms that they have been applied successfully."
+    }
+   ]
+  }
+ }
+}

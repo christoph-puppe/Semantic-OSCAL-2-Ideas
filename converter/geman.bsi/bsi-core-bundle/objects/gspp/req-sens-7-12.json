@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.7.12",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.7.12",
+ "lifecycle": "active",
+ "title": "Öffentliche WLANs",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende von Endgeräten SOLLTE gegen die Risiken der Nutzung öffentlicher WLANs sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "gegen die Risiken der Nutzung öffentlicher WLANs",
+     "target-object-categories": [
+      "Nutzende",
+      "Endgeräte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "„Öffentliches WLAN“ meint frei zugängliche oder nur schwach kontrollierte Funknetze, deren Betreiber, Konfiguration und Schutzmechanismen unbekannt sind. In öffentlichen WLANs übertragenen Datenverkehr könnte von Dritten abgefangen werden. Angriffe wie Man-in-the-Middle, gefälschte Hotspots (Evil Twins), Session-Hijacking oder Phishing über Captive Portals könnten zu Kontoübernahmen, Datenabfluss oder Schadsoftware führen. Dies gilt auch dann, wenn das WLAN verschlüsselt ist."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "172adca9-01ae-4e68-815d-eff8157dab27"
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.10.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.10.4",
+ "lifecycle": "active",
+ "title": "Systemadministration - Strukturierte Verkabelung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Administrierende von Netzen SOLLTE zur strukturierten Verkabelung sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "zur strukturierten Verkabelung",
+     "target-object-categories": [
+      "Administrierende",
+      "Netze"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.31",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Eine strukturierte Verkabelung kann die Übersichtlichkeit, Fehlertoleranz und Betriebssicherheit von Netzwerken erheblich verbessern. Sie dient dazu, Kabelwege und -anschlüsse einheitlich zu planen, zu dokumentieren und physisch so zu gestalten, dass Fehlverkabelungen, Kabelschäden oder unbefugte Eingriffe erschwert werden. Ohne solche Maßnahmen kann es zu chaotischen Verkabelungen kommen, die Fehlerdiagnosen erschweren, längere Ausfallzeiten verursachen oder im schlimmsten Fall unbemerkt unautorisierte Geräte ins Netz einschleusen lassen. So könnte etwa ein unbeschriftetes Patchkabel versehentlich abgezogen werden, wodurch kritische Systeme offline gehen, oder ein Kabelbündel könnte bei einer unachtsamen Bewegung beschädigt werden, was zu intermittierenden Netzwerkausfällen führt.  Im konkreten Kontext bezeichnet „strukturierte Verkabelung“ ein einheitlich aufgebautes und dokumentiertes System von Kabeln, Anschlüssen und Patchfeldern, das nach anerkannten Standards (z. B. nach DIN EN 50173 und 50174) geplant und umgesetzt wird. Dazu gehören die Auswahl geeigneter Kabel, normgerechte Verlegungswege unter Berücksichtigung von EN 50310 sowie die Einhaltung von Mindestbiegeradien und Trennungsabständen zu elektrischen Leitungen. Administrierende können durch klare Kabelführung, Farbcodierungen, eindeutige Beschriftungen und eine nachvollziehbare Dokumentation ihre Arbeitsumgebung übersichtlicher und sicherer gestalten."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "fd852545-bf6f-4e5b-adc0-e169cc0548fa"
+  }
+ ]
+}

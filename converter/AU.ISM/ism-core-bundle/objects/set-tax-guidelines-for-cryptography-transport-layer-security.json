@@ -1,0 +1,23 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-transport-layer-security",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Transport Layer Security",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-transport-layer-security-configu",
+   "sequence": 15370
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Transport Layer Security",
+     "name": "overview",
+     "prose": "# Using Transport Layer Security\n\nWhen using IT equipment or applications that implement TLS, controls for using AACAs and AACPs in the ‘Cryptographic algorithms’ and ‘Cryptographic protocols’ sections of these guidelines will also need to be consulted.\n\n# Further information\n\nFurther information on implementing TLS can be found in ASD’s [Implementing certificates, TLS, HTTPS and opportunistic TLS](#b8cdbf18-31cb-4e10-bb43-e8488ee8c2f6) publication.\n\nFurther information on TLS filtering in gateways can be found in the ‘Web content filters’ section of the [Guidelines for gateways](#e8bde527-526c-4a6a-b66f-05228f09dd7b)."
+    }
+   ]
+  }
+ }
+}

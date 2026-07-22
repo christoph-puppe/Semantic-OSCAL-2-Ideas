@@ -1,0 +1,76 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/TEST.5.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "TEST.5.3",
+ "lifecycle": "active",
+ "title": "Schrittweiser Rollout",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Änderungen und Tests KANN die Inbetriebnahme stufenweise ausführen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "ausführen",
+     "result": "die Inbetriebnahme",
+     "result-specification": "stufenweise"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Inbetriebnahme (engl. deployment oder rollout) meint hier die technische und organisatorische Überführung einer Änderung oder Neuerung – etwa an IT-Systemen, Anwendungen oder Konfigurationen – vom Test- in den Produktivbetrieb. Eine stufenweise Inbetriebnahme (auch phased deployment, gradual rollout oder staged release) meint dabei das gezielte Ausrollen von Änderungen in mehreren kontrollierten Schritten, etwa nach Rollen, geografischen Standorten oder Systemkomponenten gruppiert, anstatt in einem einzigen vollständigen Übergang. Diese Methode kann gezielt dazu genutzt werden, Probleme frühzeitig zu erkennen und zu verhindern, dass diese sich flächendeckend auf die gesamte Infrastruktur auswirken. Ziel ist insbesondere, mögliche Risiken aus unzureichend getesteten Änderungen zu reduzieren – etwa wenn fehlerhafte Updates zu Systemausfällen, Datenverlusten oder Funktionseinschränkungen führen könnten. Auch unbeabsichtigte Interaktionen mit bestehenden Komponenten, die im Testsystem nicht abgebildet waren, könnten auftreten. Ein simples Rolling-Release-Modell, bei dem kleinschrittige Änderungen allen betroffenen Geräte gleichzeitig bereitgestellt werden, genügt NICHT um die Anforderung zu erfüllen. Ein schrittweiser Rollout ist in verschiedenen Varianten möglich: (1) der Einsatz von sogenannten Canary Releases, bei denen Änderungen zuerst auf ein kleines, repräsentatives Nutzersegment ausgerollt werden, (2) der automatisierte Rollout nach dem One-Some-All-Prinzip, (3) das gezielte Aktivieren neuer Funktionen über Feature Toggles, die zentrale Steuerung ermöglichen, oder (4) das parallele Führen alter und neuer Systemversionen in einer Blue-Green Deployment-Struktur."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "e692fdfc-02b4-48f9-8645-11ea5662b695"
+  }
+ ]
+}

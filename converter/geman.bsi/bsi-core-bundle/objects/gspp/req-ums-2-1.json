@@ -1,0 +1,63 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/UMS.2.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "UMS.2.1",
+ "lifecycle": "active",
+ "title": "Umsetzungsplanung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Umsetzung MUSS Maßnahmen für die Umsetzung der bisher nicht umgesetzten Anforderungen des Anforderungspakets gemäß einer strukturierten Vorgehensweise festlegen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "festlegen",
+     "result": "Maßnahmen für die Umsetzung der bisher nicht umgesetzten Anforderungen des Anforderungspakets",
+     "result-specification": "gemäß einer strukturierten Vorgehensweise"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Umsetzungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Je nach Organisation ist eine strukturierte Vorgehensweise festzulegen. Dabei empfiehlt es sich zu prüfen, ob Maßnahmen etabliert sind, die mehrere Anforderungen zugleich abdecken. Ebenso werden Synergieeffekte  erschlossen, indem ähnliche Defizite in anderen Bereichen identifiziert und mit gemeinsamen Lösungen adressiert werden. Das Ergebnis dieser Anforderung ist die Überführung des unstrukturierten Anforderungspakets hin zu einem strukturierten Umsetzungsplans."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "c179a2e9-4e6e-4115-a85e-d66ac93b00e8"
+  }
+ ]
+}

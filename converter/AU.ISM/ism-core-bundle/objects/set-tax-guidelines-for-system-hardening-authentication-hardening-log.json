@@ -1,0 +1,23 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-authentication-hardening-log",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Logon banner",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0408",
+   "sequence": 9960
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Logon banner",
+     "name": "overview",
+     "prose": "Displaying a logon banner to users each time they logon to systems can act as a way of reminding users of their security responsibilities. Logon banners may cover topics such as:\n\n- the sensitivity or classification of the system\n- access requirements for the system\n- usage policies for the system and its resources\n- details of any monitoring activities for the system."
+    }
+   ]
+  }
+ }
+}

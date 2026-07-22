@@ -1,0 +1,68 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/UMS.6.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "UMS.6.1",
+ "lifecycle": "active",
+ "title": "Nachverfolgung des Umsetzungsfortschritts",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Umsetzung MUSS ein Verfahren für die Nachverfolgung der Umsetzung von Maßnahmen verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "ein Verfahren für die Nachverfolgung der Umsetzung von Maßnahmen"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Umsetzungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Es wird empfohlen, dass der Prozess zur Fortschrittsverfolgung der Umsetzung von Anforderungen bzw. Sicherheitsmaßnahmen folgende Aspekte umfasst: Planung und Definition (Zielsetzung, KPI-Definition und detaillierte Umsetzungsplanung), Implementierung (Start der Umsetzung mit klarer Verantwortlichkeit und initialer Bestandsaufnahme), Überwachung (Regelmäßiges Status-Reporting, Soll-Ist-Vergleiche und KPI-Messungen), Bewertung und Anpassung (Ursachenanalyse, Korrekturmaßnahmen und regelmäßige Kommunikation an Stakeholder), Dokumentation und Lessons Learned (Abschlussdokumentation und kontinuierliche Verbesserung mittels PDCA-Zyklus). Eine strukturierte Vorgehensweise gewährleistet, dass Fortschritte transparent nachvollzogen werden, Abweichungen frühzeitig erkannt und der Sicherheitsstatus stetig verbessert werden kann."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "5ebbee40-3069-4d3e-a708-69f50c017059"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/UMS.2.1"
+  }
+ ]
+}

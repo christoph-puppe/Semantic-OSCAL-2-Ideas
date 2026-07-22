@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.3.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.3.1",
+ "lifecycle": "active",
+ "title": "Klassifizierung von Lieferantenbeziehungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Einkäufe SOLLTE Lieferantenbeziehungen einer Klasse zuweisen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "zuweisen",
+     "result": "Lieferantenbeziehungen einer Klasse",
+     "target-object-categories": [
+      "Einkäufe"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Prozess Beschaffung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Lieferketten"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Klasse meint hier eine Einstufung der Lieferantenbeziehung aus dem Blickwinkel der Informationssicherheit. Dies ermöglicht den Mitarbeitern der Institution eine schnelle und korrekte Abschätzung, welche Informationen dem Lieferanten gegenüber preisgegeben werden dürfen. Die Klassen können sowohl anhand einer Einstufung der Daten (z.B. Preisgabe von Verschlussachen oder nicht), als auch anhand der Funktion aus Sicht der Institution (z.B. Finanzdienstleister, Versorgungseinrichtungen, Cloud, Logistik, Lieferant von IT-Produkten) gewählt werden. Es empfiehlt sich auch das Herkunftsland oder nachrichtendienstliche Erkenntnisse über den Lieferanten mit in die Bewertung einfließen zu lassen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "5d268fc9-f0f7-4d5d-ade2-68b6910070db"
+  }
+ ]
+}

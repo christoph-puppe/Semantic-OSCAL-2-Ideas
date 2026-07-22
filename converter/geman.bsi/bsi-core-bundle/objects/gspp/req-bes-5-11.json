@@ -1,0 +1,85 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.5.11",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.5.11",
+ "lifecycle": "active",
+ "title": "Recht auf Audit",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Outsourcing SOLLTE ein Recht des Auftraggebers zur Überprüfung der Sicherheitsprozesse und -maßnahmen, die im Zusammenhang mit dem Vertrag stehen, vereinbaren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "vereinbaren",
+     "result": "ein Recht des Auftraggebers zur Überprüfung der Sicherheitsprozesse und -maßnahmen,",
+     "result-specification": "die im Zusammenhang mit dem Vertrag stehen,",
+     "target-object-categories": [
+      "Outsourcing"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Beschaffungskriterien"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.29",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.20",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.37"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4,
+     "tags": [
+      "Lieferketten"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Je nach Vereinbarung kann die Umsetzung durch ein vom Auftraggeber durchgeführtes Audit, eine Revision (Second Party Audit) oder eine Auditierung durch Dritte (Third Party Audit), z.B. im Rahmen einer Zertifizierung, erfolgen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "4725e406-7802-4a0a-98a5-2195ba2d26d1"
+  }
+ ]
+}

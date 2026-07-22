@@ -1,0 +1,75 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/NOT.3.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "NOT.3.2",
+ "lifecycle": "active",
+ "title": "Geschäftsfortführungsplan",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Notfallplanung KANN einen Geschäftsfortführungsplan für zeitkritische Geschäftsprozesse dokumentieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "dokumentieren",
+     "result": "einen Geschäftsfortführungsplan für zeitkritische Geschäftsprozesse"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Notfallhandbuch"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein Geschäftsfortführungsplan (GFP) legt fest, wie ein Geschäftsprozess in einem Notfall in einem Notbetrieb durchgeführt wird. Der Notbetrieb weicht in der Regel vom Normalbetrieb ab, z.B. indem ein geringes Geschäftsniveau (Notbetriebsniveau) angesetzt wird und/oder abweichende Ressourcen eingesetzt werden. Abweichende Ressourcen könnten darin bestehen, dass ein zuvor digital unterstützter Prozess wieder analog durchgeführt wird. Geschäftsfortführungspläne liegen in der grundlegenden Verantwortung eines BCMS und sind daher im Rahmen des ISMS nur optional. Die Ausgestaltung, Planung und näheren Anforderungen der Geschäftsfortführung werden in der Regel im Rahmen des BCMS durchgeführt. Nähere Informationen können dem BSI-Standard 200-4 Kapitel 11 Geschäftsfortführungsplanung (R+AS) entnommen werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "8bc54377-0002-4533-bbdd-44777e4f5d2f"
+  }
+ ]
+}

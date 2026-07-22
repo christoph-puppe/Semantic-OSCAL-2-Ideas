@@ -1,0 +1,56 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/set/subset/ver-tfr",
+ "version": "2026.07.14.01",
+ "lifecycle": "active",
+ "title": "Timeframes",
+ "label": "TFR",
+ "members": [
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/VER-TFR-MHR",
+   "sequence": 3000
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/VER-TFR-MAV",
+   "sequence": 3010
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/VER-TFR-MRH",
+   "sequence": 3020
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/VER-TFR-EVU",
+   "sequence": 3030
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/VER-TFR-IRI",
+   "sequence": 3040
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/VER-TFR-NRI",
+   "sequence": 3050
+  }
+ ],
+ "facets": {
+  "https://ns.fedramp.gov/cr26/facet/narrative@1": {
+   "description": "These rules apply to timeframes for vulnerability detection and response."
+  },
+  "https://ns.fedramp.gov/cr26/facet/scope@1": {
+   "types": [
+    "20x",
+    "Rev5"
+   ],
+   "paths": [
+    "Program",
+    "Agency"
+   ],
+   "classes": [
+    "B",
+    "C",
+    "D"
+   ],
+   "affects": [
+    "Providers"
+   ]
+  }
+ }
+}

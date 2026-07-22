@@ -1,0 +1,65 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/req/AGU-USE-NPC",
+ "version": "2026.07.14.01",
+ "label": "AGU-USE-NPC",
+ "lifecycle": "active",
+ "title": "Notify Provider of Concerns",
+ "statements": [
+  {
+   "id": "s1",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.fedramp.gov/cr26/party/agencies"
+   ],
+   "prose": {
+    "en": "Agencies SHOULD formally notify the cloud service provider if information presented in an Ongoing Certification Report, Quarterly Review, or other FedRAMP Certification Data causes significant concerns for the authorizing official that would likely result in rescission of their Authorization to Operate."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Agency"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Certification Data"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/FedRAMP Certification Report"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Likely"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Ongoing Certification"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Ongoing Certification Report (OCR)"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Provider"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Quarterly Review"
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/reporting-obligation@1": {
+   "notification": [
+    {
+     "party": "Provider",
+     "method": "varies",
+     "target": "varies by provider",
+     "name": "The provider's security contact email or form."
+    }
+   ]
+  }
+ }
+}

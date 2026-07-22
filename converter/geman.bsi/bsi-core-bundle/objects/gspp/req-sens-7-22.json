@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.7.22",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.7.22",
+ "lifecycle": "active",
+ "title": "Unverschlüsselte Faxleitungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende von Faxen SOLLTE gegen die Risiken der unauthentisierten und unverschlüsselten Faxnutzung sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "gegen die Risiken der unauthentisierten und unverschlüsselten Faxnutzung",
+     "target-object-categories": [
+      "Nutzende",
+      "Faxe"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Da Faxverbindungen in der Regel weder eine Authentifikation des Empfängers noch eine Transportverschlüsselung vornehmen, können diese leicht abgefangen oder manipuliert werden. Dem kann durch eine Ankündigung sowie eine Sende- und Empfangsbestätigung entgegengewirkt werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "6de76a23-9301-4203-9561-c56f459b8a1f"
+  }
+ ]
+}

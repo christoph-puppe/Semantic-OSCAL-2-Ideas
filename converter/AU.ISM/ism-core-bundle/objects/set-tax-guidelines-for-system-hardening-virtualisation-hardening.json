@@ -1,0 +1,23 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-virtualisation-hardening",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Virtualisation hardening",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-virtualisation-hardening-fun",
+   "sequence": 10060
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Virtualisation hardening",
+     "name": "overview",
+     "prose": "# Hypervisors\n\nThis section is applicable to Type 1 hypervisors (those that run on bare metal) and Type 2 hypervisors (those that run on top of a general-purpose operating system). In doing so, Type 1 hypervisors should be treated as operating systems while Type 2 hypervisors should be treated as applications. As Type 1 hypervisors are themselves lightweight operating systems, they can be treated as a combination of a software-based isolation mechanism and an underlying operating system. Conversely, Type 2 hypervisors will run on top of a general-purpose operating system that may be provided by a different vendor to that of the software-based isolation mechanism.\n\n# Containerisation\n\nContainers enable versatile deployment of systems and, in doing so, should be treated the same as any other system. However, controls in a containerised environment may take a different form when compared to other types of systems. For example, patching the operating system of a workstation may be performed differently to ensuring that a patched image is used for a container, however, the principle is the same. In general, the same security risks that apply to non-containerised systems will likely apply to containerised systems.\n\n# Further information\n\nFurther information on container security can be found in National Institute of Standards and Technology Special Publication 800-190, [Application Container Security Guide](#887c65c3-c853-41c6-89d5-3f297108889e).\n\nFurther information on cyber supply chain risk management can be found in the ‘Cyber supply chain risk management’ section of the [Guidelines for procurement and outsourcing](#f37a4848-0791-4870-b316-5536c2681c28).\n\nFurther information on vendors that have made a pledge to implement Secure by Design and Secure by Default principles and practices can be found on the United States’ Cybersecurity \\& Infrastructure Security Agency’s [Secure by Design Pledge](#4974639a-f41a-4280-ae06-33d1f13d6083) website.\n\nFurther information on the use of cloud services can be found in the ‘Managed services and cloud services’ section of the [Guidelines for procurement and outsourcing](#f37a4848-0791-4870-b316-5536c2681c28).\n\nFurther information on hardening operating systems can be found in the ‘Operating system hardening’ section of these guidelines.\n\nFurther information on patching or updating operating systems and applications can be found in the ‘System maintenance’ section of the [Guidelines for system management](#c6ca6620-ccd5-4c5d-b97c-9d92f1162948).\n\nFurther information on event logging can be found in the ‘Security monitoring’ section of the [Guidelines for security assurance](#ef60c0e4-acfb-4a8b-b5ed-25675c6e117c).\n\nFurther information on hypervisor security can be found in National Institute of Standards and Technology Special Publication 800-125A Rev. 1, [Security Recommendations for Server-based Hypervisor Platforms](#33d26cdd-51fc-45d3-a026-0814d51a4c7e)."
+    }
+   ]
+  }
+ }
+}

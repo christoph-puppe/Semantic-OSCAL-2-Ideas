@@ -1,0 +1,34 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/req/REC-IAS-ACC",
+ "version": "2026.07.14.01",
+ "label": "REC-IAS-ACC",
+ "lifecycle": "active",
+ "title": "A2LA Accreditation",
+ "statements": [
+  {
+   "id": "s1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.fedramp.gov/cr26/party/assessors"
+   ],
+   "prose": {
+    "en": "Assessors MUST obtain and maintain accreditation through the American Association for Laboratory Accreditation (A2LA) Cybersecurity Inspection Body Program to qualify for FedRAMP Recognition."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Assessor"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/FedRAMP Recognized"
+  }
+ ],
+ "facets": {
+  "https://ns.fedramp.gov/cr26/facet/narrative@1": {
+   "note": "FedRAMP will remove FedRAMP Recognition immediately after the American Association for Laboratory Accreditation notifies FedRAMP that an assessor's accreditation has lapsed."
+  }
+ }
+}

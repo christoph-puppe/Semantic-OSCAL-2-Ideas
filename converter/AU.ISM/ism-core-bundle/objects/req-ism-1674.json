@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-1674",
+ "version": "2026.06.18",
+ "label": "ISM-1674",
+ "lifecycle": "active",
+ "title": "Control: ism-1674",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Only Microsoft Office macros running from within a sandboxed environment, a Trusted Location or that are digitally signed by a trusted publisher are allowed to execute."
+   }
+  }
+ ]
+}

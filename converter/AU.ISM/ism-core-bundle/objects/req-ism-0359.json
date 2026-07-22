@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-0359",
+ "version": "2026.06.18",
+ "label": "ISM-0359",
+ "lifecycle": "active",
+ "title": "Control: ism-0359",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Non-volatile flash memory media is sanitised by overwriting it at least twice in its entirety with a random pattern followed by a read back for verification."
+   }
+  }
+ ]
+}

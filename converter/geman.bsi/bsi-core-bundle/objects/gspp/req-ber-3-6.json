@@ -1,0 +1,77 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BER.3.6",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BER.3.6",
+ "lifecycle": "active",
+ "title": "Zentrales Management",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Berechtigung SOLLTE ein zentrales Managementsystem für Zugangskonten installieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "installieren",
+     "result": "ein zentrales Managementsystem für Zugangskonten"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.36",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Wenn Zugangskonten lokal auf jedem Gerät einzeln verwaltet werden, könnte es zu inkonsistenten und veralteten Zugängen und Berechtigungen kommen. Ein zentrales System steuert Benutzeridentitäten und Zugriffsrechte übergreifend – oft als Identity and Access Management (IAM) oder bei sensiblen Konten als Privileged Access Management (PAM) bezeichnet. Es kann die Nachvollziehbarkeit erhöhen, Audits erleichtern und gerade in komplexen IT-Umgebungen Transparenz schaffen. Umsetzbar ist dies etwa über Verzeichnisdienste wie LDAP oder Active Directory, ergänzt durch rollenbasierte Zugriffsmodelle (RBAC). Praktische Maßnahmen zum Management können Self-Service-Portale, automatische Genehmigungsworkflows und regelmäßige Rechteüberprüfungen umfassen. Für den Einstieg kann eine Institution kritische Systeme priorisieren und Prozesse schrittweise zentralisieren."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "0aec1964-0172-4194-836b-90fa6d8002ba"
+  }
+ ]
+}

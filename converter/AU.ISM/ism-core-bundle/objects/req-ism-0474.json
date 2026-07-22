@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-0474",
+ "version": "2026.06.18",
+ "label": "ISM-0474",
+ "lifecycle": "active",
+ "title": "Control: ism-0474",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "When using ECDH for agreeing on encryption session keys, a base point order and key size of at least 224 bits is used, preferably the NIST P-384 curve."
+   }
+  }
+ ]
+}

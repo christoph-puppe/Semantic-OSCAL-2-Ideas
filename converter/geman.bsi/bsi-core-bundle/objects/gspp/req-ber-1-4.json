@@ -1,0 +1,76 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BER.1.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BER.1.4",
+ "lifecycle": "active",
+ "title": "Inventar der Berechtigungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Berechtigung SOLLTE ein Inventar der Berechtigungen mit Personen, Identitäten, Zugangskonten, Berechtigungen und deren jeweiliger Zuordnung dokumentieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "dokumentieren",
+     "result": "ein Inventar der Berechtigungen",
+     "result-specification": "mit Personen, Identitäten, Zugangskonten, Berechtigungen und deren jeweiliger Zuordnung"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Inventar Berechtigungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein Inventar der Berechtigungen kann helfen, Zugriffsrechte innerhalb einer Institution transparent zu machen und unnötige oder riskante Berechtigungen zu erkennen. Es dokumentiert, welche Identitäten – also digitale Repräsentationen von Personen oder Systemen – über welche Konten und Berechtigungen verfügen. So können potenzielle Risiken wie verwaiste Konten oder unautorisierte Privilegien sichtbar werden. Beispielsweise könnte ein ehemaliger Mitarbeitender noch aktive Zugänge besitzen, oder ein Dienstkonto könnte über weitreichende Rechte verfügen, obwohl der Einsatz längst beendet ist – beides kann ein Einfallstor für Missbrauch sein. Relevant sind neben den Berechtigungen von Personen auch Dienstekonten, Cloud-Zugänge und physische Zugangsberechtigungen wie Schlüssel-Schließpläne.  Berechtigungen bezeichnen konkrete Zugriffsrechte auf Ressourcen (z. B. Lesen oder Administrieren). Eine Institution kann dies etwa durch einen Verzeichnisdienst, ein zentrales Berechtigungsmanagement oder gepflegte Berechtigungsverzeichnisse abbilden. Die Benennung von Zuständigen je Fachbereich, regelmäßige Überprüfungen und der Einsatz von klaren Rollenkennzeichnungen (z. B. „temporär“, „Admin“) können helfen, das Inventar aktuell und verständlich zu halten. Auch eine strukturierte Offboarding-Checkliste kann sicherstellen, dass veraltete Zugänge rechtzeitig entfernt werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "c18f2b2d-fb62-42d5-bf73-ec3966ed0fb4"
+  }
+ ]
+}

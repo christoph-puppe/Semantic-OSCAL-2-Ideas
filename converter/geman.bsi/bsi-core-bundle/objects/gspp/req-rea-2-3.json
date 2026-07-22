@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/REA.2.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "REA.2.3",
+ "lifecycle": "active",
+ "title": "Dokumentation von Vorfällen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sicherheitsvorfallsbehandlung SOLLTE den Vorfall dokumentieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "dokumentieren",
+     "result": "den Vorfall"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Behandlung von Sicherheitsvorfällen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.39",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.47",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.37",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Dokumentation des Vorfalls meint hier die nachvollziehbare, strukturierte und revisionssichere Aufzeichnung aller für eine spätere Auswertung relevanten Informationen zu einem Sicherheitsvorfall („security incident“). Dazu gehören insbesondere Zeitpunkt, Art, Ausmaß, betroffene Systeme oder Daten sowie eingeleitete Sofortmaßnahmen. Sie dient nicht allein der internen Nachvollziehbarkeit, sondern potenziell auch der rechtlichen Beweissicherung („evidence preservation“) und Verbesserung des Sicherheitsmanagements. Eine lückenhafte oder unvollständige Dokumentation könnte dazu führen, dass Ursachenanalysen fehlschlagen, Wiederholungen nicht verhindert werden oder rechtliche Nachweispflichten – etwa im Rahmen von Datenschutzvorfällen – nicht erfüllt werden könnten. Eine sorgfältig geführte Aufzeichnung kann dagegen die Transparenz im Incident-Handling erhöhen, interne Lernprozesse fördern und Verantwortlichkeiten eindeutig nachvollziehbar machen. Sinnvolle Varianten der Umsetzung können in Form von (1) standardisierten Incident-Report-Templates, (2) elektronischen Ticket- oder Case-Management-Systemen zur Vorfallserfassung oder (3) forensischen Protokollen mit Zeitstempeln und Beweismitteln erfolgen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "484b2d34-72ad-4472-b5c9-bf0643f7afd7"
+  }
+ ]
+}

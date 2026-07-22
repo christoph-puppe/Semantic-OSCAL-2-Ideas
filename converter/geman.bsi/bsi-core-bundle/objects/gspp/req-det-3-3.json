@@ -1,0 +1,99 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DET.3.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DET.3.3",
+ "lifecycle": "active",
+ "title": "Filterung nicht benötigter Inhalte",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Detektion KANN die Protokollierung nicht benötigter Inhalte anhand von {param:det.3.3-prm1} einschränken."
+   },
+   "parameters": [
+    {
+     "name": "det.3.3-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "einschränken",
+     "result": "die Protokollierung nicht benötigter Inhalte",
+     "result-specification": "anhand von {{Kriterien}}"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Detektions-Konzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.37",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.26",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.46"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Je nach Anwendung und Konfigurationeinstellungen könnten Protokolle auch Daten enthalten, die dort nicht benötigt werden, z.B. um die Vertraulichkeit der Daten zu wahren oder aufgrund von Compliance-Anforderungen. Dem kommt eine noch höhere Bedeutung zu, wenn die Protokolle zwischen Institutionen ausgetauscht, oder bei Cloud-Dienstleistern gespeichert oder analysiert werden. Maßnahmen können z.B. Anonymisierung von IP-Adressen oder anderen personenbezogenen Daten oder Geschäftsgeheimnissen, sowie enge Löschfristen sein. Für Verkehrsdaten kann der BfDI Leitfaden Speicherung Verkehrsdaten als Grundlage genutzt werden. Soweit möglich, ist es sinnvoll, die Filterung minimalinvasiv zu gestalten, d.h. nur diejenigen Daten auszufiltern, deren Speicherung nicht rechtlich oder tatsächlich möglich ist, die restlichen Angaben zum Ergebnis jedoch zu protokollieren."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "det.3.3-prm1": {
+     "label": "Kriterien",
+     "alt-identifier": "fa239d57-3934-4664-bc2d-53aca634eaef"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "fa239d57-3934-4664-bc2d-53aca634eaef"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/ASST.3.2"
+  }
+ ]
+}

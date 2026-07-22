@@ -1,0 +1,88 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.7.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.7.4",
+ "lifecycle": "active",
+ "title": "SPAM - Löschen oder Melden",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende von Interpersoneller Kommunikation SOLLTE zum Löschen oder Melden von SPAM sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "zum Löschen oder Melden von SPAM",
+     "target-object-categories": [
+      "Nutzende",
+      "Interpersonelle Kommunikation"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Advanced Persistent Threats (APT)"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Spam – also unerwünschte, oft massenhaft versendete Nachrichten – könnte nicht nur den Posteingang überfluten und Arbeitszeit binden, sondern häufig auch Schadsoftware, Phishing-Links oder betrügerische Inhalte enthalten. Werden solche Nachrichten unbeachtet geöffnet oder beantwortet, könnte dies beispielsweise zu einer unbemerkten Offenlegung vertraulicher Informationen, zur Infektion von Endgeräten oder zur Kompromittierung von Benutzerkonten führen. Spam in E-Mails, Chat-Apps oder SMS kann oft an einer Kombination auffälliger Merkmale erkannt werden: (1) unerwartete oder anonyme Absender, (2) untypische Schreibweisen des Namens oder der Adresse, (3) drängender oder alarmierender Tonfall („sofort handeln“), (4) Links mit ungewöhnlichen oder verkürzten Domains, (5) fehlerhafte oder maschinell wirkende Sprache, (6) unpassende Dateianhänge oder Bilddateien sowie (7) Inhalte, die nicht zum bisherigen Kontext der Kommunikation passen. In Chat-Apps und SMS können zudem (8) fremdsprachige Nachrichten ohne Bezug, (9) Einladungen zu unbekannten Gruppen oder (10) Aufforderungen, auf externe Links zu klicken, verdächtig wirken. Das bewusste Hinterfragen solcher Signale kann helfen, Spam frühzeitig zu erkennen und unschädlich zu machen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "93be24dd-88cd-4b1a-b86a-45febc987a4c"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/SENS.2.2"
+  }
+ ]
+}

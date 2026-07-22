@@ -1,0 +1,46 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/req/IVV-CSO-SEI",
+ "version": "2026.07.14.01",
+ "label": "IVV-CSO-SEI",
+ "lifecycle": "active",
+ "title": "Supply Evidence of Implementation",
+ "statements": [
+  {
+   "id": "s1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.fedramp.gov/cr26/party/providers"
+   ],
+   "prose": {
+    "en": "Providers MUST supply evidence to all necessary assessors of the implementation of the measures that have been documented to meet FedRAMP Practices; this evidence is the result of verification."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/All Necessary Assessors"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Assessor"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/FedRAMP Practices"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Provider"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Verification"
+  }
+ ],
+ "facets": {
+  "https://ns.fedramp.gov/cr26/facet/narrative@1": {
+   "note": "For example, if the documentation says that firewall rules are used to block traffic then the cloud service provider would verify that firewall rules are in place to block traffic and supply that evidence to assessors (preferably by allowing them to see how firewall configurations are deployed from a source of truth)."
+  }
+ }
+}

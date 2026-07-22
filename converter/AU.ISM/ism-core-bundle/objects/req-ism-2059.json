@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-2059",
+ "version": "2026.06.18",
+ "label": "ISM-2059",
+ "lifecycle": "active",
+ "title": "Control: ism-2059",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "File uploads or input are restricted to specific file types, with malicious content scanning occurring prior to file access, file execution or file storage."
+   }
+  }
+ ]
+}

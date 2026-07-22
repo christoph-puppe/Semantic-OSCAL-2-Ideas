@@ -1,0 +1,83 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.3.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.3.3",
+ "lifecycle": "active",
+ "title": "SIM-PIN",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für IT-Systeme SOLLTE bei Mobilfunkanschluss eine SIM-PIN aktivieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "aktivieren",
+     "result": "bei Mobilfunkanschluss eine SIM-PIN",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.16",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.17"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Produktbeschreibung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Eine SIM-PIN ist eine persönliche Identifikationsnummer, die direkt auf der SIM-Karte gespeichert wird und beim Starten oder Einlegen der Karte abgefragt wird. Sie dient nicht der Benutzeranmeldung am Endgerät selbst, sondern schützt den Mobilfunkanschluss auf Netzebene. Ohne aktivierte SIM-PIN könnte ein Angreifer bei Verlust oder Diebstahl einer SIM-Karte unmittelbar den Mobilfunkanschluss verwenden, etwa für kostenpflichtige Anrufe oder zum Abfangen von SMS-TANs. Die Aktivierung einer SIM-PIN kann somit eine missbräuchliche Nutzung deutlich erschweren, indem ein zusätzliches Hindernis für den unbefugten Zugriff auf Mobilfunkdienste geschaffen wird. Gilt auch für stationäre Systeme mit SIM oder Systeme die eine eSIM verwenden, da eine PIN je nach Diensteanbieter SIM-Swapping vorbeugen kann. Falls das System keine SIM-Karte verwendet, ist die Anforderung entbehrlich."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "f2184ae3-ca55-4b77-9727-46deb4b9d0ff"
+  }
+ ]
+}

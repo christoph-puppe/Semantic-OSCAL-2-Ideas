@@ -1,0 +1,39 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-enterprise-mobility-enterprise-mobility-priva",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Privately owned mobile devices and desktop computers",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1297",
+   "sequence": 4930
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1400",
+   "sequence": 4940
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1866",
+   "sequence": 4950
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2095",
+   "sequence": 4960
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0694",
+   "sequence": 4970
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Privately owned mobile devices and desktop computers",
+     "name": "overview",
+     "prose": "Allowing privately owned mobile devices and desktop computers to access an organisation’s systems or data can increase liability risk. As such, an organisation should seek legal advice to ascertain whether this scenario affects compliance with relevant legislation, such as the [Privacy Act 1988](#6fac5a84-b86e-405f-b2b3-8c13ecee4a02) and the [Archives Act 1983](#e0d3b5ea-6a5a-400c-8daa-8a8059816a06). Furthermore, if an organisation chooses to allow personnel to use privately owned mobile devices or desktop computers to access their organisation’s classified systems or data, they should ensure that it does not present an unacceptable security risk. This can be achieved in part through the enforced separation of classified data and personal data, preventing the storage of classified data on privately owned mobile devices and desktop computers, and disallowing the use of unapproved artificial intelligence agents."
+    }
+   ]
+  }
+ }
+}

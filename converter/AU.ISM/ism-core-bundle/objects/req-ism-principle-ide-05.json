@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-principle-ide-05",
+ "version": "2026.06.18",
+ "label": "IDE-05",
+ "lifecycle": "active",
+ "title": "Asset interdependencies",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Interdependencies between systems (infrastructure, operating systems, applications and data) are continually and centrally identified and documented, including how the compromise of one system could affect the security or business operations of other dependent systems."
+   }
+  }
+ ]
+}

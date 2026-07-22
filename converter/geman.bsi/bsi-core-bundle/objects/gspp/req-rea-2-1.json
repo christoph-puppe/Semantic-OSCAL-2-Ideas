@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/REA.2.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "REA.2.1",
+ "lifecycle": "active",
+ "title": "Triage und Erstreaktion",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sicherheitsvorfallsbehandlung SOLLTE Meldungen einer Priorität zuweisen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "zuweisen",
+     "result": "Meldungen einer Priorität"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Behandlung von Sicherheitsvorfällen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.39",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.47",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.40"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Triage ist ein strukturiertes Vorgehen zur Priorisierung und Ersteinschätzung von Sicherheitsvorfällen, mit dem Ziel, rasch und effizient auf Bedrohungen zu reagieren, Ressourcen gezielt einzusetzen und weitere Schäden zu minimieren. Dabei wird festgestellt, welche Vorfälle sofortige Aufmerksamkeit benötigen, welche weiter analysiert oder beobachtet werden oder irrelevante Fehlalarme sind. Kritische Vorfälle können z.B. ein Virenfund auf einem Server, Ransomwarevorfälle oder Spionage durch professionelle Täter sein. Die Umsetzung kann auch automatisiert durch EDR/SOAR geschehen.   Eine Erstreaktion ist eine schnelle Handlung, die dazu dient, weitere Schäden wie eine Ausbreitung von Angriffen oder Störungen in Geschäftsprozessen zu vermeiden. Sie kann z.B. in der Abschaltung betroffener Systeme, der Deaktivierung eines Zugangskonto, der Information Nutzender über eine Störung oder der Aktivierung eines Ausweichrechenzentrums bestehen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "988a898a-f7c3-4e6c-9746-8b20e2e85ecd"
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GEB.9.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GEB.9.4",
+ "lifecycle": "active",
+ "title": "Überspannungsschutz",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Gebäudemanagement für Standorte KANN Überspannungsschutzeinrichtungen installieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "installieren",
+     "result": "Überspannungsschutzeinrichtungen",
+     "target-object-categories": [
+      "Standorte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Gebäudedokumentation"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "0",
+     "integrity": "0",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 4
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Überspannungsschutzeinrichtungen sind technische Komponenten, die elektrische und elektronische Systeme vor plötzlich auftretenden Spannungsspitzen im Stromnetz oder in Datenleitungen schützen. Sie wirken, indem sie kurzzeitig auftretende Energie in sichere Bahnen ableiten oder begrenzen, sodass angeschlossene Geräte nicht beschädigt werden. Der Sinn und Zweck liegt darin, sensible IT- und Kommunikationssysteme sowie die Infrastruktur der Institution vor Schäden zu bewahren. Ohne Schutz könnte ein Spannungssprung aus dem Stromnetz eine zentrale Serveranlage zerstören oder den Ausfall von Brandmelde- und Zutrittskontrollsystemen verursachen, wohingegen ein korrekt eingesetzter Überspannungsschutz kann die Betriebsfähigkeit und Datenintegrität sicherstellen. Diese Anforderung bezieht sich ausschließlich auf Überspannungen aus dem Netzbetrieb oder aus benachbarten Stromkreisen; für den äußeren Blitzschutz gilt eine verwandte Anforderung. Zur Umsetzung können an kritischen Punkten Überspannungsschutzeinrichtungen installiert werden: (1) in zentralen Verteilungen, um das gesamte Gebäude gegen Netzstörungen abzusichern, (2) in Unterverteilungen oder einzelnen Stromkreisen, die besonders sensible IT-Systeme versorgen, und (3) an Kommunikations- oder Datenleitungen, etwa für Netzwerk- oder Telefonverkabelungen. Eine Institution kann durch gestufte Schutzkonzepte („Grobschutz“ im Hauptverteiler, „Feinschutz“ in Nähe der Endgeräte) eine höhere Wirksamkeit erreichen. Es kann sinnvoll sein, bei Neubauten Steckdosen mit integriertem Feinschutz vorzusehen oder bei Bestandsanlagen nachträglich modulare Schutzgeräte in die Verteilungen einzusetzen. Prozessual kann regelmäßige Prüfung der eingebauten Schutzmodule helfen, da viele Modelle nach einem Ereignis verbraucht sind und ausgetauscht werden müssen. Auch eine Dokumentation der Einbauorte kann den Überblick erleichtern und gewährleisten, dass keine kritischen Systeme ungeschützt bleiben."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "dc956422-730a-46c3-987b-3f2cb5ea22f3"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/GEB.10.4"
+  }
+ ]
+}

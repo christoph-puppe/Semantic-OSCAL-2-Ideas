@@ -1,0 +1,77 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BER.2.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BER.2.1",
+ "lifecycle": "active",
+ "title": "Person-Identität",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Berechtigung SOLLTE eine eindeutige Identität zu genau einer natürlichen Person oder einem IT-System zuweisen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "zuweisen",
+     "result": "eine eindeutige Identität zu genau einer natürlichen Person oder einem IT-System"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Inventar Berechtigungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "2",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.36",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Hier wird eine Identität (\"muellera\") genau einer natürlichen Person (\"Andrea Müller\") zugewiesen, oder einem IT-System (\"pc02348\" zu \"pc02348.our.domain\")."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "f8cb577c-7999-4837-b983-f96e4f33b1b2"
+  }
+ ]
+}

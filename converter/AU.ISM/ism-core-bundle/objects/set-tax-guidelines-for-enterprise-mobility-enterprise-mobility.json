@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-enterprise-mobility-enterprise-mobility",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Enterprise mobility",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-enterprise-mobility-enterprise-mobility-priva",
+   "sequence": 4980
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-enterprise-mobility-enterprise-mobility-organ",
+   "sequence": 5000
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-enterprise-mobility-enterprise-mobility-mobil",
+   "sequence": 5030
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Enterprise mobility",
+     "name": "overview",
+     "prose": "# Introduction to enterprise mobility\n\nEnterprise mobility generally refers to situations in which personnel work in a mobile manner, such as part of office hot-desking arrangements, when working from home, when travelling or simply when outside the office environment during normal business hours. While enterprise mobility has traditionally been used to refer to the use of mobile devices, such as smartphones, tablets and laptop computers, it is increasingly being applied to the use of desktop computers as part of working from home arrangements.\n\nThis section applies to privately owned and organisation-owned mobile devices and desktop computers that use either a mobile operating system or a desktop operating system.\n\n# Further information\n\nFurther information on allowing the use of privately owned mobile devices and desktop computers by personnel to access their organisation’s systems or data can be found in the Australian Signals Directorate’s (ASD) [Bring Your Own Device for executives](#0e982561-93dc-4cf7-9a98-e91411e99ca6) publication.\n\nFurther information and specific guidance on enterprise mobility can be found in ASD’s [Risk management of enterprise mobility (including Bring Your Own Device)](#e8ec7a1f-775d-4b79-a164-0752278177fa) publication.\n\nFurther information on cyber supply chain risk management can be found in the ‘Cyber supply chain risk management’ section of the [Guidelines for procurement and outsourcing](#f37a4848-0791-4870-b316-5536c2681c28).\n\nFurther information on the procurement and use of online services can be found in the ‘Managed services and cloud services’ section of the [Guidelines for procurement and outsourcing](#f37a4848-0791-4870-b316-5536c2681c28)."
+    }
+   ]
+  }
+ }
+}

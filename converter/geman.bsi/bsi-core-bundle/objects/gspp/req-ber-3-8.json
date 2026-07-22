@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BER.3.8",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BER.3.8",
+ "lifecycle": "active",
+ "title": "Einschränkung des Managements",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Berechtigung SOLLTE das Management von Zugangskonten auf Administrierende einschränken."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "einschränken",
+     "result": "das Management von Zugangskonten",
+     "result-specification": "auf Administrierende"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.36",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Change Management"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Management meint hier Aktionen wie z.B. das Erstellen oder Ändern von Metadaten oder Berechtigungen oder die Löschung des Zugangskontos."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "6b065020-06dc-4be4-86f7-12371499a6c0"
+  }
+ ]
+}

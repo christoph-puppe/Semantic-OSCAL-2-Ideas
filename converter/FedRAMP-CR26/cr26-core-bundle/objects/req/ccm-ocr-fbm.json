@@ -1,0 +1,51 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/req/CCM-OCR-FBM",
+ "version": "2026.07.14.01",
+ "label": "CCM-OCR-FBM",
+ "lifecycle": "active",
+ "title": "Feedback Mechanism",
+ "statements": [
+  {
+   "id": "s1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.fedramp.gov/cr26/party/providers"
+   ],
+   "prose": {
+    "en": "Providers MUST supply an asynchronous mechanism for all necessary parties to provide feedback or ask questions about each Ongoing Certification Report."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/All Necessary Parties"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/FedRAMP Certification Report"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Ongoing Certification"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Ongoing Certification Report (OCR)"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Provider"
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "required-artifacts": [
+    "How to access the feedback mechanism."
+   ]
+  },
+  "https://ns.fedramp.gov/cr26/facet/narrative@1": {
+   "note": "This could be email by default but providers are encouraged to consider something more interactive as appropriate."
+  }
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/NOT.4.15",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "NOT.4.15",
+ "lifecycle": "active",
+ "title": "Vorgehen zur Wiederherstellung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Notfallplanung SOLLTE die Vorgehensweise zur Wiederherstellung dokumentieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "dokumentieren",
+     "result": "die Vorgehensweise zur Wiederherstellung"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Datensicherungskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.45",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.39",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Dokumentation der Vorgehensweise zur Wiederherstellung dient dazu, im Notfall eine schnelle und geordnete Wiederinbetriebnahme von IT-Systemen und Daten zu ermöglichen. Ohne eine klare Beschreibung der Abläufe kann es zu Verzögerungen, Fehlern oder widersprüchlichen Handlungen kommen, was die Wiederherstellung erheblich erschwert. In einer solchen Dokumentation werden beispielsweise die Reihenfolge der Wiederherstellung kritischer Systeme, die benötigten Datensicherungen und Speicherorte, die erforderlichen Werkzeuge sowie die zuständigen Rollen und Kontaktwege beschrieben. Ergänzend kann auch festgehalten werden, wie die Funktionsfähigkeit nach der Wiederherstellung überprüft wird. Einfache Beispiele sind Schritt-für-Schritt-Anleitungen für die Rücksicherung bestimmter Anwendungen oder Checklisten, die während des Wiederherstellungsprozesses abgearbeitet werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "895e5e39-01ca-4da0-86aa-d7c2594f7270"
+  }
+ ]
+}

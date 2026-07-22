@@ -1,0 +1,96 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.5.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.5.3",
+ "lifecycle": "active",
+ "title": "Autorisierung von Wartungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets für IT-Systeme KANN Wartungen durch {param:asst.5.3-prm1} autorisieren."
+   },
+   "parameters": [
+    {
+     "name": "asst.5.3-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "autorisieren",
+     "result": "Wartungen",
+     "result-specification": "durch {{eine zuständige Person oder Rolle}}",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.31",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.21",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.28"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 4
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Wartung ist die planbare oder anlassbezogene Änderung an Komponenten (z. B. Patches, Konfigurationsänderungen, Hardwaretausch, Firmware-Updates). Dies betrifft auch den Transfers des Systems oder von Komponenten für Reparatur oder Austausch an einem anderen Ort. Unklare oder fehlende Freigaben für Wartungen könnten zu unkoordinierten Änderungen, ungeplanten Ausfällen, Datenverlust oder der Einschleusung von Schadcode durch interne wie externe Dienstleister führen; außerdem könnten unpassende Zeitfenster oder inkompatible Firmwarestände Vertraulichkeit, Integrität und Verfügbarkeit beeinträchtigen. Zur Umsetzung kann die Institution ein schlankes Freigabeverfahren gestalten, z.B. (1) ein standardisiertes Wartungs-Ticket mit Pflichtangaben (Asset-ID, Maßnahme, Risiko-Einschätzung, Zeitfenster, Back-out-Plan, Ansprechpartner), das über CMDB-Bezüge (Konfigurationsdatenbank) automatisch an Asset-/Service-Owner geroutet und dort freigegeben werden kann; (2) technische Gates, sodass produktive Änderungen erst im Status „autorisiert“ durch CI/CD-Pipelines (Build-/Deployment-Kette), Change-Flags oder Just-in-Time-Privilegien mit zeitlich begrenzten Admin-Konten ausgeführt werden können; (3) ein Katalog vordefinierter, niedrig-riskanter Standardwartungen (z. B. Signatur-Updates, agentenlose Log-Rotation), die vorab genehmigt und ohne Einzelfallprüfung ausgelöst werden können."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "asst.5.3-prm1": {
+     "label": "eine zuständige Person oder Rolle",
+     "alt-identifier": "59a96eb8-75ad-420d-aab5-4d448f5c12ae"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "59a96eb8-75ad-420d-aab5-4d448f5c12ae"
+  }
+ ]
+}

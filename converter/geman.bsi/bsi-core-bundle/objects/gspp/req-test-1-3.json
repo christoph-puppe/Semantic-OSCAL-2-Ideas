@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/TEST.1.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "TEST.1.3",
+ "lifecycle": "active",
+ "title": "Einschränkung von Änderungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Änderungen und Tests SOLLTE die Durchführung von Änderungen auf Administrierende einschränken."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "einschränken",
+     "result": "die Durchführung von Änderungen",
+     "result-specification": "auf Administrierende"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ziel ist es, zu verhindern, dass unautorisierte Personen Eingriffe in produktive Systeme vornehmen. Ohne diese Einschränkung könnte Schadcode eingeschleust werden, Konfigurationen unbeabsichtigt verändert oder sensible Daten offengelegt werden. Die klare Zuweisung an Administrierende kann gleichzeitig sicherstellen, dass Änderungen nachvollziehbar und fachgerecht durchgeführt werden, wodurch die Stabilität und Verfügbarkeit von Systemen geschützt werden kann. Eine Institution kann die Anforderung beispielsweise durch folgende Maßnahmen umsetzen: (1) Verwendung von Rollenkonzepten, bei denen nur Administrierende Schreibrechte in produktiven Systemen besitzen, während anderen Rollen lediglich Leserechte eingeräumt werden können, (2) Einsatz von Testumgebungen oder Sandbox-Systemen, in denen auch Nicht-Administrierende Änderungen gefahrlos vorbereiten und dokumentieren können, (3) Einführung von Change-Management-Workflows mit Genehmigungsschritten, so dass Administrierende Änderungen erst nach dokumentierter Prüfung umsetzen können, und (4) Einsatz von technischen Kontrollmechanismen wie „Just-in-Time“-Privilegien oder Protokollierung von administrativen Sitzungen, wodurch die Nachvollziehbarkeit und Integrität der Änderungen verbessert werden kann."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "85d5939d-b2e4-419f-9205-ad1e2a61cb7c"
+  }
+ ]
+}

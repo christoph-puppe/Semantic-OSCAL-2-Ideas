@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-1491",
+ "version": "2026.06.18",
+ "label": "ISM-1491",
+ "lifecycle": "active",
+ "title": "Control: ism-1491",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Unprivileged users are prevented from running script execution engines, including:\n\n- Windows Script Host (cscript.exe and wscript.exe)\n- PowerShell (powershell.exe, powershell_ise.exe and pwsh.exe)\n- Command Prompt (cmd.exe)\n- Windows Management Instrumentation (wmic.exe)\n- Microsoft Hypertext Markup Language (HTML) Application Host (mshta.exe)."
+   }
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GEB.6.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GEB.6.3",
+ "lifecycle": "active",
+ "title": "Netzkomponenten",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Gebäudemanagement für Netze SOLLTE für die Funktionsfähigkeit des Netzes erforderliche Systeme ausschließlich in Räumen für technische Infrastruktur platzieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "platzieren",
+     "result": "für die Funktionsfähigkeit des Netzes erforderliche Systeme ausschließlich in Räumen für technische Infrastruktur",
+     "target-object-categories": [
+      "Netze"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Gebäudedokumentation"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "„Für die Funktionsfähigkeit des Netzes erforderliche Systeme“ sind in diesem Kontext alle physischen und logischen Komponenten, deren Betrieb direkt die Verfügbarkeit, Integrität oder Steuerbarkeit von Netzwerken beeinflusst — etwa aktive Netzwerkkomponenten (engl. network devices) wie Router, Switches, Firewalls oder Netzwerkmanagementsysteme (engl. Network Management Systems, NMS). Die Definition von „Räumen für technische Infrastruktur“ ist in den Definitionen für Zielobjekte zu finden. Diese Räume sind typischerweise mit einer kontrollierten physischen Zugangsbeschränkung, Klimatisierung, Brandfrüherkennung und einer stabilen Stromversorgung (z. B. über USV-Anlagen) ausgestattet. Die Anforderung gewährleistet somit, dass netzkritische Systeme räumlich von allgemeinen Arbeits- oder Aufenthaltsbereichen getrennt sind, um deren Sicherheit und Stabilität zu gewährleisten."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "525d2727-f932-4f27-bffc-7a8104194bc8"
+  }
+ ]
+}

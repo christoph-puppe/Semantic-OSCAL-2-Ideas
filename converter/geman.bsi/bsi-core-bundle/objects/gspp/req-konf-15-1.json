@@ -1,0 +1,107 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.15.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.15.1",
+ "lifecycle": "active",
+ "title": "Begrenzung des Speicherplatzes",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für Anwendungen von Hostsystemen KANN in der Anwendung zur Verfügung stehenden Speicherplatz pro {param:konf.15.1-prm1} anhand von {param:konf.15.1-prm2} einschränken."
+   },
+   "parameters": [
+    {
+     "name": "konf.15.1-prm1",
+     "type": "string"
+    },
+    {
+     "name": "konf.15.1-prm2",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "einschränken",
+     "result": "in der Anwendung zur Verfügung stehenden Speicherplatz pro {{Zugangskonto oder Mandant}}",
+     "result-specification": "anhand von {{Schwellwerten}}",
+     "target-object-categories": [
+      "Anwendungen",
+      "Hostsysteme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "0",
+     "integrity": "0",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.27",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.40"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5,
+     "tags": [
+      "Produktbeschreibung",
+      "Denial of Service"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Dies ist besonders in Multi-Tenant-Architekturen relevant, wie sie häufig bei Cloud-Diensten oder SaaS-Anwendungen (Software as a Service) zum Einsatz kommen. Ein solcher maximaler Schwellwert (engl. threshold) könnte beispielsweise 5 GB oder 10 GB betragen und stellt die Obergrenze für den Speicherplatz dar, der einem einzelnen Konto oder Mandanten zugewiesen wird. Die Beschränkung des verfügbaren Speicherplatzes kann verhindern, dass ein einzelnes Konto oder ein Mandant die gesamten Ressourcen des Hostsystems belegt und so die Leistung für andere Nutzer negativ beeinflusst, was zu einer Denial-of-Service-Situation (DoS) führen könnte. Bei der Umsetzung ist es sinnvoll auch ein Benachrichtigungssystem zu etablieren, das Nutzer oder Administratoren informiert, wenn ein Schwellenwert kurz vor der Überschreitung steht. Zudem können automatisierte Prozesse zur Datenbereinigung (data lifecycle management) in Betracht gezogen werden, die ältere oder nicht mehr benötigte Dateien in solchen Fällen archivieren oder löschen, um den Speicherplatz effizient zu nutzen. Die Institution kann auch verschiedene Schwellenwerte für unterschiedliche Kontotypen oder Mandanten festlegen, basierend auf deren spezifischen Bedürfnissen."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "konf.15.1-prm1": {
+     "label": "Zugangskonto oder Mandant",
+     "alt-identifier": "15596e08-6978-4e61-bf6c-63e24575788f"
+    },
+    "konf.15.1-prm2": {
+     "label": "Schwellwerten",
+     "alt-identifier": "15596e08-6978-4e61-bf6c-63e24575788f"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "15596e08-6978-4e61-bf6c-63e24575788f"
+  }
+ ]
+}

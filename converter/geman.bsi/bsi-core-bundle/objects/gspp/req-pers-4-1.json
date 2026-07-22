@@ -1,0 +1,96 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/PERS.4.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "PERS.4.1",
+ "lifecycle": "active",
+ "title": "Qualifikationsbedarf",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Personal für Mitarbeitende SOLLTE den Bedarf an Qualifikationsmaßnahmen anhand der Aufgaben {param:pers.4.1-prm1} überprüfen."
+   },
+   "parameters": [
+    {
+     "name": "pers.4.1-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überprüfen",
+     "result": "den Bedarf an Qualifikationsmaßnahmen anhand der Aufgaben",
+     "result-specification": "{{regelmäßig}}",
+     "target-object-categories": [
+      "Mitarbeitende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Kompetenzmanagement"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Qualifikationsmaßnahmen sind z.B. Zertifizierte Weiterbildungen, interne Schulungen oder universitäre Kurse. Prüfen Sie den Bedarf anhand der Aufgaben der Mitarbeitenden und berücksichtigen Sie dabei die in den Geschäftsprozessen verwendeten IT-Produkte. Zweckmäßig ist es hierzu in jedem Team einen Jahresplan zur Teilnahme an Qualifikationsmaßnahmen zu erstellen."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "pers.4.1-prm1": {
+     "label": "regelmäßig",
+     "alt-identifier": "9c551357-437f-4662-a8b5-0fac98831755"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "9c551357-437f-4662-a8b5-0fac98831755"
+  }
+ ]
+}

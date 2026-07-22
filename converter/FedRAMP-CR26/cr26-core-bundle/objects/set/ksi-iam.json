@@ -1,0 +1,36 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/set/ksi/iam",
+ "version": "2026.07.14.01",
+ "lifecycle": "active",
+ "title": "Identity and Access Management",
+ "label": "IAM",
+ "annotations": {
+  "web_name": "identity-and-access-management"
+ },
+ "members": [
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-IAM-AAM",
+   "sequence": 3240
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-IAM-APM",
+   "sequence": 3250
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-IAM-ELP",
+   "sequence": 3260
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-IAM-JIT",
+   "sequence": 3270
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-IAM-SNU",
+   "sequence": 3280
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-IAM-SUS",
+   "sequence": 3290
+  }
+ ]
+}

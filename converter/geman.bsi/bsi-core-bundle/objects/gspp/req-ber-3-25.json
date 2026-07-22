@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BER.3.25",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BER.3.25",
+ "lifecycle": "active",
+ "title": "Gruppenkonten - Passwortwechsel bei Weggang",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Berechtigung SOLLTE für Gruppenkonten die Änderung von Zugangsdaten bei Weggang von Nutzenden ausführen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "ausführen",
+     "result": "für Gruppenkonten die Änderung von Zugangsdaten",
+     "result-specification": "bei Weggang von Nutzenden"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.36",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Password Policy"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Gruppenkonten werden von mehreren Nutzenden (z.B. Schichtdienst) verwendet. Verlassen Nutzende die Institution oder Wechseln das Tätigkeitsfeld und das Passwort des Gruppenkontos wird nicht gewechselt, so besteht die Gefahr, dass das Gruppenkonto unberechtigt verwendet wird."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "08b7177e-98ce-435f-b9bb-44eade12366b"
+  }
+ ]
+}

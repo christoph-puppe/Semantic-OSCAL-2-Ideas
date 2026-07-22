@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-principle-pro-08",
+ "version": "2026.06.18",
+ "label": "PRO-08",
+ "lifecycle": "active",
+ "title": "Cryptographic protection",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Data is encrypted and authenticated at rest and in transit using ASD-approved cryptography to protect its confidentiality and integrity."
+   }
+  }
+ ]
+}

@@ -1,0 +1,96 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/NOT.4.14",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "NOT.4.14",
+ "lifecycle": "active",
+ "title": "Offline-Kopie",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Notfallplanung für Daten SOLLTE eine Offline-Kopie {param:not.4.14-prm1} ausführen."
+   },
+   "parameters": [
+    {
+     "name": "not.4.14-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "ausführen",
+     "result": "eine Offline-Kopie",
+     "result-specification": "{{regelmäßig}}",
+     "target-object-categories": [
+      "Daten"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Datensicherungskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.45",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.39",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.1"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Eine Offline-Kopie ist eine Datensicherung, die physisch oder logisch von produktiven Systemen und dem laufenden Netzwerk getrennt ist („offline backup“ oder „air-gapped backup“). „Regelmäßig“ bedeutet, dass die Institution in Abhängigkeit von Verfügbarkeit und Kritikalität ihrer Daten feste Intervalle definiert, beispielsweise täglich, wöchentlich oder monatlich. Der Sinn und Zweck dieser Vorgabe liegt darin, sicherzustellen, dass im Falle von Schadsoftwarebefall oder gezielten Angriffen keine gleichzeitige Kompromittierung aller Sicherungskopien stattfinden kann; ein Angriff könnte sonst auch Backups verschlüsseln oder löschen. Eine Offline-Kopie kann dagegen die Wiederherstellung kritischer Systeme nach einem Ransomware-Angriff oder auch nach einem physischen Ausfall, etwa durch Stromschaden oder Brand, unterstützen. Eine Institution kann dies umsetzen, indem sie (1) Kopien in Papierform oder auf wechselbaren Medien wie externen Festplatten, RDX-Kassetten oder Bändern erstellt, die nach dem Backup-Vorgang vom Netzwerk getrennt und geschützt aufbewahrt werden, (2) Cloud-Backups so konfiguriert, dass sie durch Write-Once-Read-Many-(WORM)-Speicher geschützt und logisch von aktiven Systemen isoliert sind, oder (3) eine Rotation von Datenträgern einführt, bei der Kopien an einem separaten, physischen Standort verwahrt werden."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "not.4.14-prm1": {
+     "label": "regelmäßig",
+     "alt-identifier": "3772a701-e5d0-4aee-a393-ad539482eb72"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "3772a701-e5d0-4aee-a393-ad539482eb72"
+  }
+ ]
+}

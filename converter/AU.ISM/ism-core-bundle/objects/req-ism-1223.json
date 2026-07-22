@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-1223",
+ "version": "2026.06.18",
+ "label": "ISM-1223",
+ "lifecycle": "active",
+ "title": "Control: ism-1223",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Memory in network devices is sanitised using the following processes, in order of preference:\n\n- following device-specific guidance provided in evaluation documentation\n- following vendor sanitisation guidance\n- loading a dummy configuration file, performing a factory reset and then reinstalling firmware."
+   }
+  }
+ ]
+}

@@ -1,0 +1,82 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.12.7",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.12.7",
+ "lifecycle": "active",
+ "title": "Erweiterte Attribute",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für Dateiserver SOLLTE erweiterte Attribute aktivieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "aktivieren",
+     "result": "erweiterte Attribute",
+     "target-object-categories": [
+      "Dateiserver"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "2",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.22"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 1,
+     "tags": [
+      "Produktbeschreibung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Erweiterte Attribute ermöglichen die Speicherung von Metadaten zu Dateien zur Speicherung von Zugriffsrechten und Statusindikatoren. Kann unter Linux durch Samba mit Extended Attributes und unter Windows durch Nutzung des NTFS-Dateisystems umgesetzt werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "7ec374a6-4efc-45a4-b596-4e8fc1402daf"
+  }
+ ]
+}

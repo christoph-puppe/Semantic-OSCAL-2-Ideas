@@ -1,0 +1,98 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DLS.3.6",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DLS.3.6",
+ "lifecycle": "active",
+ "title": "Portabilität",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Dienstleistersteuerung für Outsourcing KANN die Portabilität des ausgelagerten Prozesses {param:dls.3.6-prm1} überprüfen."
+   },
+   "parameters": [
+    {
+     "name": "dls.3.6-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überprüfen",
+     "result": "die Portabilität des ausgelagerten Prozesses",
+     "result-specification": "{{regelmäßig}}",
+     "target-object-categories": [
+      "Outsourcing"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Übungs- und Prüfplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.11",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.20"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5,
+     "tags": [
+      "Lieferketten",
+      "Exit-Strategie"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Hierunter ist zu verstehen, dass regelmäßig ein Test durchgeführt wird, bei dem die Funktionsfähigkeit des ausgelagerten (Teil-) Prozesses in einer Umgebung, die nicht bei diesem Dienstleister liegt, überprüft wird. Ziel ist es sicherzustellen, dass der Prozess bei einem Ausfall des Dienstleisters an anderer Stelle zeitnah gestartet werden kann."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "dls.3.6-prm1": {
+     "label": "regelmäßig",
+     "alt-identifier": "2563b59c-b3da-4bdd-99cd-3eedb94c0abb"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "2563b59c-b3da-4bdd-99cd-3eedb94c0abb"
+  }
+ ]
+}

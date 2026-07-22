@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.8.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.8.4",
+ "lifecycle": "active",
+ "title": "Individuelle Implementierung kritischer Komponenten",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für IT-Produkte KANN eine eigens für die Institution entwickelte Implementierung kritischer Komponenten vereinbaren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "vereinbaren",
+     "result": "eine eigens für die Institution entwickelte Implementierung kritischer Komponenten",
+     "target-object-categories": [
+      "IT-Produkte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Beschaffungskriterien"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5,
+     "tags": [
+      "Lieferketten"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Dient dazu das Risiko zu mindern, dass sicherheitsrelevante Funktionen oder Integrationspunkte ungeeignet, unvollständig oder von Drittanbietern unzureichend abgesichert bereitgestellt werden. Kritische Komponenten sind dabei jene Hardware- oder Software-Bestandteile, deren Ausfall, Kompromittierung oder Fehlfunktion wesentliche Geschäftsprozesse beeinträchtigen oder sensible Daten gefährden könnte – etwa Kryptomodule, Authentifizierungsmechanismen, Schnittstellen zur Anbindung an interne Systeme oder sicherheitsrelevante Konfigurationsbausteine. Ohne gezielte Einflussnahme bei der Beschaffung könnte es beispielsweise vorkommen, dass ein Standardprodukt mit unsicheren Voreinstellungen geliefert wird, ein Modul nicht die für den Einsatzzweck erforderliche Verschlüsselung unterstützt oder herstellerseitige Updates nicht zeitnah bereitgestellt werden. Andererseits bergen selbst entwickelte Komponenten gegenüber Standardbeschaffungen das Risiko, dass die Eigenentwicklungen unzureichend getestet oder im Einsatz erprobt wurden. Daher ist vor einer Eigenentwicklung eine Risikoabschätzung sinnvoll. Typischerweise lohnt eine Eigenentwicklung sich nur wenn erhebliche Ressourcen für deren Absicherung vorhanden sind und der Vertraulichkeit oder Integrität eine stark erhöhte Bedeutung im Vergleich zu Standardprodukten zukommt. Eine Institution kann bei der Umsetzung dieser Anforderung gezielt in den Beschaffungsvertrag aufnehmen, dass bestimmte Komponenten nach definierten Vorgaben angepasst, gehärtet oder erweitert werden – beispielsweise eine erweiterte Protokollierungsfunktion in einer Verwaltungssoftware, eine abgesicherte Firmware-Konfiguration bei Netzwerkgeräten oder die Integration zusätzlicher Prüfmechanismen in eine Schnittstellen-API."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "c3ef1d10-5c10-4411-9a02-bb352211bc88"
+  }
+ ]
+}

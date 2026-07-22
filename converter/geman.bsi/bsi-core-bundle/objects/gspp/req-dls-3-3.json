@@ -1,0 +1,89 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DLS.3.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DLS.3.3",
+ "lifecycle": "active",
+ "title": "Strategie-Check",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Dienstleistersteuerung für Outsourcing KANN die Strategie auf Vollständigkeit und Korrektheit in Bezug auf die betrachteten Geschäftsprozesse bei Änderungen der Geschäftsprozessprofile überprüfen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überprüfen",
+     "result": "die Strategie auf Vollständigkeit und Korrektheit in Bezug auf die betrachteten Geschäftsprozesse",
+     "result-specification": "bei Änderungen der Geschäftsprozessprofile",
+     "target-object-categories": [
+      "Outsourcing"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Übungs- und Prüfplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.11",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.20"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 4,
+     "tags": [
+      "Lieferketten"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Vollständigkeit bedeutet hier, dass die Gesamtheit der ausgelagerten Prozesse erfasst, beschrieben und in ihrer Abhängigkeit zu internen Prozessen berücksichtigt ist. Korrektheit meint, dass die Beschreibungen, Schnittstellen und Verantwortlichkeiten zwischen Institution und Dienstleister sachlich richtig, aktuell und belastbar dokumentiert sind. Zur Umsetzung kann eine Institution strukturierte Verfahren einführen, die bei Änderungen in den Prozessprofilen automatisch eine Prüfung des Outsourcing-Setups auslösen. Dies kann z. B. durch Abgleich der aktuellen Servicebeschreibungen mit Prozesslandkarten erfolgen, sodass fehlende oder doppelt definierte Zuständigkeiten sichtbar werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "cc89b4a1-02a9-48b6-aac9-2b6c2e0d7062"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/BES.1.4"
+  }
+ ]
+}

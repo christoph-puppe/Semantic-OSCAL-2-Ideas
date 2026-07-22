@@ -1,0 +1,96 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.2.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.2.2",
+ "lifecycle": "active",
+ "title": "Dokumentation des Rechtsraums und der Datenlokation",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Cloud-Dienste SOLLTE Rechtsraum und Datenlokation dokumentieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "dokumentieren",
+     "result": "Rechtsraum und Datenlokation",
+     "target-object-categories": [
+      "Cloud-Dienste"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Geschäftsprozesse"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.37"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4,
+     "tags": [
+      "Lieferketten"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Beispielsweise könnte die Datenlokation auf europäische Standorte eingeschränkt sein, während der Anbieter seinen Hauptsitz im außereuropäischen Rechtsraum hat und daher nicht der DSGVO unterliegt. Werden keine Daten aus dem Informationsverbund verarbeitet, so ist die Anforderung entbehrlich."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "d4001ad1-3cac-4b4c-b075-dae3a8678a65"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/BES.2.1.2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/BES.5.5.1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/ASST.3.10"
+  }
+ ]
+}

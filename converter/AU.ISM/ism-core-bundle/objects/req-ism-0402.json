@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-0402",
+ "version": "2026.06.18",
+ "label": "ISM-0402",
+ "lifecycle": "active",
+ "title": "Control: ism-0402",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Software is comprehensively tested for vulnerabilities using SAST, DAST and SCA prior to its initial release, any subsequent release, and periodically to help identify any previously unidentified vulnerabilities."
+   }
+  }
+ ]
+}

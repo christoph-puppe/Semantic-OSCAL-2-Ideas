@@ -1,0 +1,97 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DLS.3.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DLS.3.2",
+ "lifecycle": "active",
+ "title": "Checkup",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Dienstleistersteuerung für Outsourcing KANN die risikoorientierte Entscheidung über Outsourcing auf Grundlage der Geschäftsprozessprofile auf Änderungen der Gefährdungslage oder Prozessinhalte {param:dls.3.2-prm1} überprüfen."
+   },
+   "parameters": [
+    {
+     "name": "dls.3.2-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überprüfen",
+     "result": "die risikoorientierte Entscheidung über Outsourcing auf Grundlage der Geschäftsprozessprofile",
+     "result-specification": "auf Änderungen der Gefährdungslage oder Prozessinhalte {{regelmäßig}}",
+     "target-object-categories": [
+      "Outsourcing"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Übungs- und Prüfplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.11",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.20"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 4,
+     "tags": [
+      "Lieferketten"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die risikoorientierte Entscheidung über Outsourcing kann in diesem Kontext als wiederkehrende Bewertung der Abhängigkeiten und Gefahren verstanden werden, die durch externe Dienstleister in den Geschäftsprozessen einer Institution entstehen. Der Parameter regelmäßig kann je nach Kritikalität der ausgelagerten Prozesse sinnvoll mit Werten wie halbjährlich, jährlich oder nach definierten Ereignissen (z. B. Einführung neuer regulatorischer Vorgaben oder Sicherheitsvorfälle) ausgefüllt werden. Änderungen der Gefährdungslage beziehen sich auf die dynamische Entwicklung von Bedrohungen wie Cyberangriffe, Lieferkettenstörungen oder neue regulatorische Anforderungen, während Änderungen der Prozessinhalte vor allem die Anpassung oder Erweiterung der durch Dienstleister erbrachten Leistungen umfassen. Der Zweck dieser Vorschrift liegt darin, frühzeitig sicherzustellen, dass die bisherigen Risikoeinschätzungen und Dienstleistervereinbarungen weiterhin tragfähig sind und nicht durch externe Veränderungen entwertet werden. Ohne eine solche Überprüfung könnte beispielsweise ein Dienstleister aufgrund verschärfter Bedrohungen unzureichenden Schutz bieten oder durch eine stillschweigende Ausweitung von Leistungen in Bereiche gelangen, die ursprünglich nicht risikobewertet wurden. Eine regelmäßige Kontrolle kann dagegen dafür sorgen, dass Risiken durch Outsourcing transparent bleiben und rechtzeitig nachjustiert werden. Zur praktischen Umsetzung kann eine Institution beispielsweise (1) eine Checkliste führen, die bei jeder Neubewertung konkrete Aspekte wie Datenlokation, technische Sicherheitsmaßnahmen oder Zertifikatsgültigkeiten abfragt und (2) ein automatisiertes Monitoring nutzen, das öffentliche Sicherheitsnachweise wie Testate nach BSI C5 oder SOC-Reports erfasst und in die Bewertung einbindet. Auch die Nutzung von Incident-Datenbanken oder branchenspezifischen Threat-Feeds kann helfen, Gefährdungslagen aktuell einzuschätzen. Ein bewährter Tipp ist es, nicht nur formale Unterlagen zu prüfen, sondern auch technische Stichproben durchzuführen, etwa in Form von Konfigurationsprüfungen oder Penetrationstests, sofern dies durch den Dienstleister gestattet wird. Damit kann die Institution sicherstellen, dass die theoretische Risikoabwägung durch reale Prüfungen gestützt wird und sich an tatsächlichen Veränderungen orientiert."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "dls.3.2-prm1": {
+     "label": "regelmäßig",
+     "alt-identifier": "ca07f3db-7a2f-4156-b1de-4fa648393557"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "ca07f3db-7a2f-4156-b1de-4fa648393557"
+  }
+ ]
+}

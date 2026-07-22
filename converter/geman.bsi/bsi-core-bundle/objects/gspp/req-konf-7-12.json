@@ -1,0 +1,82 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.7.12",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.7.12",
+ "lifecycle": "active",
+ "title": "Einschränkung von Skripten",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für IT-Systeme KANN die Ausführung nicht autorisierter Skripte einschränken."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "einschränken",
+     "result": "die Ausführung nicht autorisierter Skripte",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "2",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.39"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5,
+     "tags": [
+      "Produktbeschreibung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Skripte könnten Schadcode enthalten oder zu Fehlerzuständen auf dem System führen. Die Auswirkungen schädlicher Skripte können eingeschränkt werden, indem nur bestimmte Systemfunktionen für Skripte erlaubt werden. Die Umsetzung ist mit Funktionen wie dem Windows PowerShell Constrained Language Mode oder Linux Secure Computing Mode möglich. Verfügt das System über keine Möglichkeit zur Ausführung von Skripten, so ist die Anforderung entbehrlich."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "f835dc6a-5af1-424d-994a-219141d268d7"
+  }
+ ]
+}

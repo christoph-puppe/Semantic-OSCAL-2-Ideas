@@ -1,0 +1,83 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/TEST.4.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "TEST.4.4",
+ "lifecycle": "active",
+ "title": "Geregelte Notfalländerungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Änderungen und Tests SOLLTE Regelungen für Notfalländerungen einschließlich Vorgehensweise, Zuständigkeiten, erforderlicher Ressourcen und minimaler Prüfschritte verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "Regelungen für Notfalländerungen",
+     "result-specification": "einschließlich Vorgehensweise, Zuständigkeiten, erforderlicher Ressourcen und minimaler Prüfschritte"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.27"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein Notfall-Deployment-Prozess ermöglicht eine schnelle Reaktion auf akute Bedrohungen. Als Notfall-Ereignisse kommen z.B. Zero-Day-Exploits, kritische Sicherheitslücken mit aktiver Ausnutzung, schwerwiegende Produktionsfehler mit Geschäftsauswirkungen oder koordinierte Cyberangriffe in Frage. Zu einer strukturierten Vorgehensweise können z.B. gehören: (1) Ein Eskalationsverfahren mit definierten Kommunikationswegen, z.B. zum ISB und Administrierenden, welche über Rufbereitschaftspläne und automatisierte Alarmierungssysteme erreichbar sind und Zugriffsrechte auf isolierte Notfall-Deployment-Umgebungen, vorkonfigurierte Rollback-Mechanismen sowie dedizierte Notfall-Builds mit minimalen Abhängigkeiten besitzen.  (2) Minimale Prüfschritte können z.B. eine beschleunigte Sicherheitsvalidierung kritischer Codeänderungen, automatisierte Sicherheitsscans zur Identifikation offensichtlicher Schwachstellen, die Verifizierung der Code-Integrität durch mindestens zwei autorisierte Personen nach dem Vier-Augen-Prinzip sowie ein dokumentierter Genehmigungsprozess mit expliziter Abzeichnung durch den CISO oder einen designierten Stellvertreter sein.  (3) Eine Nachbereitung mit Post-Incident-Analyse zur Dokumentation der getroffenen Maßnahmen, identifizierten Verbesserungspotenzialen und notwendigen Nacharbeiten."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "fe2a551e-4660-4796-92bf-2304adb70a61"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/NOT.1.1"
+  }
+ ]
+}

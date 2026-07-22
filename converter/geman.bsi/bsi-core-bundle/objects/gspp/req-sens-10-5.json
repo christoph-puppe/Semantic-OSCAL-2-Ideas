@@ -1,0 +1,91 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.10.5",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.10.5",
+ "lifecycle": "active",
+ "title": "Systemadministration - Internetnutzung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Administrierende SOLLTE gegen den Internetzugriff über ein Administrationskonto sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "gegen den Internetzugriff über ein Administrationskonto",
+     "target-object-categories": [
+      "Administrierende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.31",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Privilege Escalation",
+      "Insider Threat",
+      "Privilegierte Rechte"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Administrationskonten sind im konkreten Kontext privilegierte Benutzerkonten, die erweiterte Rechte für Konfigurations-, Installations- oder Wartungsaufgaben besitzen. Internetzugriff bezeichnet dabei das Herstellen von Verbindungen zu externen Diensten oder Webseiten außerhalb der institutionseigenen Netze. Ein solcher Zugriff mit einem Administrationskonto stellt ein erhebliches Risiko dar: Schadsoftware könnte mit denselben hohen Rechten ausgeführt werden oder Anmeldedaten könnten über unsichere Webseiten abgegriffen werden. Hiervon können Zugriffe ausgenommen werden, die zur Administration des Systems mit diesen Rechten erforderlich sind, z.B. Download von Sicherheitsupdates durch Applikationen, die zur Ausführung administrative Rechte benötigen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "888c76ab-d8f0-42ff-a791-8a31f17f6ad0"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/BER.3.11"
+  }
+ ]
+}

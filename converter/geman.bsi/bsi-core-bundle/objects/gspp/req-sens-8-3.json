@@ -1,0 +1,85 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.8.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.8.3",
+ "lifecycle": "active",
+ "title": "Risiken der Nutzung von mobilen Endgeräten",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende von Endgeräten SOLLTE gegen Risiken der Nutzung von mobilen Endgeräten sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "gegen Risiken der Nutzung von mobilen Endgeräten",
+     "target-object-categories": [
+      "Nutzende",
+      "Endgeräte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 1
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Bei der Nutzung mobiler Endgeräte wie Smartphones, Tablets und Laptops ist Vorsicht geboten, da diese Geräte häufig außerhalb gesicherter Umgebungen betrieben werden und dort typischerweise einer höheren Gefährdungslage ausgesetzt sind. Beispiele sind z.B. Abhandenkommen von Geräten oder Zugang von Unbefugten zu Informationen im öffentlichen Verkehr. Durch den konsequenten Einsatz von Gerätesperren, Verschlüsselung, vertrauenswürdigen Netzwerken sowie der geschützten Verwahrung von Geräten kann das Risiko einer unbefugten Nutzung erheblich reduziert werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "d3d8d31b-bbc8-4e63-9f09-4dc19897323c"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/ASST.6.1"
+  }
+ ]
+}

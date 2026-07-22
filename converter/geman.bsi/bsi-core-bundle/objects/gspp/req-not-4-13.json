@@ -1,0 +1,103 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/NOT.4.13",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "NOT.4.13",
+ "lifecycle": "active",
+ "title": "Datensouveränität",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Notfallplanung für Outsourcing SOLLTE die Datensicherung von Daten, die bei einem Dienstleister verarbeitet werden, nach {param:not.4.13-prm1} {param:not.4.13-prm2} ausführen."
+   },
+   "parameters": [
+    {
+     "name": "not.4.13-prm1",
+     "type": "string"
+    },
+    {
+     "name": "not.4.13-prm2",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "ausführen",
+     "result": "die Datensicherung von Daten, die bei einem Dienstleister verarbeitet werden,",
+     "result-specification": "nach {{einem anerkannten Standard}} {{regelmäßig}}",
+     "target-object-categories": [
+      "Outsourcing"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Datensicherungskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.45",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.39",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Dies dient dazu bei einem Ausfall des Dienstleisters die Daten schnell bei einem anderen Dienstleister oder intern weiterverwenden zu können (Interoperabilität in der Exitstrategie). Anerkannt ist hier ein Format, welches auch bei einem anderen Dienstleister verwendet werden kann. Mögliche anerkannte Standards zum Datenaustausch sind z.B. XML, JSON, YAML, CSV, ODF. Eine Sicherungskopie ist unter eigener Hoheit, wenn sie auf Datenträgern im Besitz der Institution aufbewahrt wird, über die dieser Dienstleister keine Kontrolle hat. Relevant sind dabei auch Konfigurationsdateien, Programmcode und Dokumentationen, die zur Verwendung der Daten erforderlich sind."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "not.4.13-prm1": {
+     "label": "einem anerkannten Standard",
+     "alt-identifier": "13789041-edcf-4270-a8d1-49bdd0d54ab4"
+    },
+    "not.4.13-prm2": {
+     "label": "regelmäßig",
+     "alt-identifier": "13789041-edcf-4270-a8d1-49bdd0d54ab4"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "13789041-edcf-4270-a8d1-49bdd0d54ab4"
+  }
+ ]
+}

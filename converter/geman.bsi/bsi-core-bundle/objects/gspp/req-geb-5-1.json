@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GEB.5.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GEB.5.1",
+ "lifecycle": "active",
+ "title": "Lieferzugang",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Gebäudemanagement für Standorte SOLLTE einen Zugang für die Abwicklung von Lieferungen ohne unbefugten Zugang zum restlichen Standort installieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "installieren",
+     "result": "einen Zugang für die Abwicklung von Lieferungen",
+     "result-specification": "ohne unbefugten Zugang zum restlichen Standort",
+     "target-object-categories": [
+      "Standorte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Gebäudedokumentation"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.44",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.21"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein Zugang für die Abwicklung von Lieferungen ist ein baulich abgegrenzter Bereich (engl. delivery access point), der es ermöglicht, Waren, Material oder technische Geräte geschützt vor sonstigen äußeren Einflüssen anzunehmen bzw. abzugeben, ohne dass Lieferpersonal oder externe Dienstleister unkontrollierten Zutritt zu sicherheitsrelevanten Bereichen in der Institution erhalten. Unbefugter Zugang meint hierbei jeden Zutritt durch Personen, die für den betroffenen Standort oder bestimmte Schutzbereiche keine Zutrittsberechtigung besitzen (engl. unauthorized access). Der Sinn dieser Vorgabe liegt darin, Risiken durch unkontrollierte physische Zugänge zu minimieren: Ein Lieferant könnte etwa versehentlich oder absichtlich in interne Büro- oder Technikbereiche gelangen und dadurch vertrauliche Informationen, IT-Geräte oder Zugangsdaten einsehen oder entwenden. Eine bauliche und organisatorische Trennung kann dagegen gewährleisten, dass Lieferungen gesteuert angenommen, geprüft und weiterverarbeitet werden, ohne sicherheitskritische Bereiche zu gefährden. Beispielsweise kann es je nach Standort sinnvoll sein: (1) separate Schleusen- oder Annahmebereiche mit kontrollierter Türverriegelung, (2) Gegensprechanlagen oder Kameraeinrichtungen zur Identifikation von Lieferanten, (3) zeitlich begrenzte oder zonenbeschränkte Zutrittsberechtigungen über elektronische Zugangssysteme, sowie (4) baulich getrennte Lieferzonen mit Sichtschutz und gesichertem Übergabepunkt einzurichten."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "bf559e67-d53f-4ef3-928b-5d9774e7b87c"
+  }
+ ]
+}

@@ -1,0 +1,74 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/VRB.2.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "VRB.2.2",
+ "lifecycle": "active",
+ "title": "Anpassung des ISMS",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Verbesserung MUSS die Notwendigkeit zur Anpassung des ISMS hinsichtlich der Nicht-Konformitäten {param:vrb.2.2-prm1} überprüfen."
+   },
+   "parameters": [
+    {
+     "name": "vrb.2.2-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überprüfen",
+     "result": "die Notwendigkeit zur Anpassung des ISMS hinsichtlich der Nicht-Konformitäten",
+     "result-specification": "{{regelmäßig}}"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Hier erfolgt eine Bewertung der Wahrscheinlichkeit des Wiederauftretens von Nicht-Konformitäten und der potenziellen  Auswirkungen bei erneutem Auftreten, eine Überprüfung, ob ähnliche Nicht-Konformitäten in anderen Bereichen der Institution bestehen oder auftreten könnten und eine Analyse, inwieweit die Nicht-Konformität auf systemische Schwächen im ISMS hinweist und ob grundlegende Anpassungen des ISMS erforderlich sind.  Bei wiederholten oder systematischen Nicht-Konformitäten werden jedoch die zugrundeliegenden Prozesse, Richtlinien oder Verantwortlichkeiten überprüft und bei Bedarf angepasst."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "vrb.2.2-prm1": {
+     "label": "regelmäßig",
+     "alt-identifier": "b2be1d91-1744-467f-abd1-7bcde818fd65"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "b2be1d91-1744-467f-abd1-7bcde818fd65"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/VRB.2.1"
+  }
+ ]
+}

@@ -1,0 +1,99 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DET.5.5",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DET.5.5",
+ "lifecycle": "active",
+ "title": "Red Teaming",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Detektion für IT-Systeme KANN die tatsächliche Abwehrfähigkeit {param:det.5.5-prm1} durch unabhängig agierende Sicherheitsexperten überprüfen."
+   },
+   "parameters": [
+    {
+     "name": "det.5.5-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überprüfen",
+     "result": "die tatsächliche Abwehrfähigkeit",
+     "result-specification": "{{regelmäßig}} durch unabhängig agierende Sicherheitsexperten",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Detektions-Konzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.39",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.28"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5,
+     "tags": [
+      "Pentest",
+      "Advanced Persistent Threats (APT)"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Red Teaming ist ein strukturierter, realitätsnaher Sicherheitstest, bei dem ein sogenanntes Red Team – also ein unabhängiges, offensiv agierendes Expertenteam – versucht, unter realen Bedingungen in IT-Systeme, Netzwerke oder Anwendungen einzudringen, um Schwachstellen und Reaktionslücken aufzudecken. Dadurch wird nicht nur die technische Abwehr getestet, sondern auch organisatorische und menschliche Faktoren, etwa die Wirksamkeit von Incident-Response-Prozessen, Alarmierungsketten oder die Reaktion des Security Operations Center (SOC). Solche regelmäßigen Überprüfungen durch unabhängige Red Teams ermöglichen einen objektiven und unvoreingenommenen Blick auf die aktuellen Stärken und Schwächen der Sicherheitsmaßnahmen, wodurch Schwachstellen frühzeitig erkannt werden können. Unabhängig ist ein Red Team dabei, wenn es organisatorisch und personell getrennt vom Betriebspersonal und dessen Weisungshierarchie (Blue Team) agiert, sodass keine Interessenkonflikte die objektive Bewertung gefährden."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "det.5.5-prm1": {
+     "label": "regelmäßig",
+     "alt-identifier": "ea34243d-adc3-4208-ab4e-25247aa8c009"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "ea34243d-adc3-4208-ab4e-25247aa8c009"
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.7.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.7.1",
+ "lifecycle": "active",
+ "title": "Nicht mehr benötigte Anwendungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets für Anwendungen SOLLTE eine Deinstallation nicht mehr benötigter Anwendungsinstanzen verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "eine Deinstallation nicht mehr benötigter Anwendungsinstanzen",
+     "target-object-categories": [
+      "Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "0",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.45",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.16",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.38"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "„Nicht mehr benötigte Anwendungsinstanzen“ sind installierte, aber aktuell nicht mehr genutzte Softwarekomponenten, Applikationen oder Dienste (engl. application instances), die auf Servern, Endgeräten oder virtuellen Umgebungen verbleiben, obwohl ihre betriebliche Funktion entfallen ist. Diese können produktiv, testweise oder temporär eingerichtet gewesen sein. Eine Deinstallation ist hier als geregelter Prozess der vollständigen und nachvollziehbaren Entfernung solcher Komponenten zu verstehen, einschließlich ihrer Konfigurationen, temporären Daten und zugehörigen Zugriffsrechte. Der Zweck liegt in der Vermeidung von Sicherheits- und Integritätsrisiken, die durch ungenutzte oder veraltete Software entstehen könnten – etwa weil diese weiterhin Angriffsflächen bietet, unbemerkte Schwachstellen enthält oder unbeabsichtigte Datenabflüsse begünstigen könnte. Die Entfernung kann somit die Systemhärtung und Transparenz über tatsächlich aktive Anwendungen fördern. Dies kann durch Systeme automatisiert geschehen, die bei der Zuordnung von Anwendungen zu Personen eine automatische Installation oder Deinstallation erledigt. Wenn Anwendungen nicht länger benötigt werden, dann sind auch die für die Anwendung erforderlichen Berechtigungen nicht länger erforderlich. Hierzu gehören sowohl lokale als auch Cloud-Zugänge. Steht die Anwendungsinstanz in der Cloud nicht unter der Kontrolle der Institution, so sind stattdessen soweit möglich alle Daten in der Cloud zu löschen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "dd5c811a-37c3-450f-b391-029bbe503afa"
+  }
+ ]
+}

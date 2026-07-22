@@ -1,0 +1,41 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/req/CCM-QTR-SCR",
+ "version": "2026.07.14.01",
+ "label": "CCM-QTR-SCR",
+ "lifecycle": "active",
+ "title": "Share Content Responsibly",
+ "statements": [
+  {
+   "id": "s1",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.fedramp.gov/cr26/party/providers"
+   ],
+   "prose": {
+    "en": "Providers MAY responsibly supply content prepared for a Quarterly Review to the public or other parties if the provider determines doing so will NOT likely have an adverse effect on the cloud service offering."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Cloud Service Offering"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Likely"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Provider"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Quarterly Review"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Responsibly"
+  }
+ ]
+}

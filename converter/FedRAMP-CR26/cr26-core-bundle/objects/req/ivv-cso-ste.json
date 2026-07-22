@@ -1,0 +1,41 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/req/IVV-CSO-STE",
+ "version": "2026.07.14.01",
+ "label": "IVV-CSO-STE",
+ "lifecycle": "active",
+ "title": "Supply Technical Explanations",
+ "statements": [
+  {
+   "id": "s1",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.fedramp.gov/cr26/party/providers"
+   ],
+   "prose": {
+    "en": "Providers SHOULD supply all necessary assessors with technical explanations, demonstrations, and other relevant supporting information about the technical capabilities they employ to address FedRAMP rules; this SHOULD be supplied as necessary to ensure the assessor can effectively complete verification and validation."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/All Necessary Assessors"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Assessor"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Provider"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Validation"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Verification"
+  }
+ ]
+}

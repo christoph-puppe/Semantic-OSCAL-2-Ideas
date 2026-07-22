@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.7.5",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.7.5",
+ "lifecycle": "active",
+ "title": "SPAM - Nichtbeantwortung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende von Interpersoneller Kommunikation SOLLTE zum Nichtbeantworten von SPAM sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "zum Nichtbeantworten von SPAM",
+     "target-object-categories": [
+      "Nutzende",
+      "Interpersonelle Kommunikation"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 1
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Das Nichtbeantworten von Spam kann  dazu beitragen, die eigene Angriffsfläche zu verringern und das Risiko von Folgeschäden zu minimieren. Spam – im Kontext hier als unerwünschte, massenhaft versendete elektronische Nachrichten verstanden, die oft mit betrügerischen oder schädigenden Absichten einhergehen – kann als Einfallstor für Phishing, Schadsoftware oder Betrugsversuche dienen. Eine Antwort, selbst in Form einer scheinbar harmlosen Rückfrage, kann Angreifenden bestätigen, dass die Adresse aktiv genutzt wird, was zu einer Zunahme der Spam-Flut oder gezielten Social-Engineering-Angriffen führen könnte. Spammer erraten Zieladressen oft nur und erhalten durch die Antwort weitere Hinweise auf Angriffsmöglichkeiten (z.B. Schema gültiger Mailadressen, E-Mail-Signaturen, aktive Server)."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "0711ec2e-61da-4448-bcc8-464b41154ff1"
+  }
+ ]
+}

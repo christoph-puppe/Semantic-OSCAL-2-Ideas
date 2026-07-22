@@ -1,0 +1,86 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ARCH.7.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ARCH.7.3",
+ "lifecycle": "active",
+ "title": "Entwicklungs- und Testumgebungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Architektur für Virtualisierungslösungen SOLLTE Entwicklungs- und Testumgebungen nicht auf produktiven Hostsystemen platzieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "platzieren",
+     "result": "Entwicklungs- und Testumgebungen nicht auf produktiven Hostsystemen",
+     "target-object-categories": [
+      "Virtualisierungslösungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.46",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Entwicklungs- und Testumgebungen sind dabei Umgebungen, in denen Software noch nicht ausgereift ist, sondern aktiv entwickelt, angepasst oder erprobt wird. Der Sinn der Vorgabe liegt darin, dass instabile oder absichtlich manipulierbare Testsysteme nicht auf denselben Hostsystemen betrieben werden sollten, auf denen produktive Anwendungen laufen. Andernfalls könnte ein Fehler in experimenteller Software dazu führen, dass der Hypervisor oder das Host-Betriebssystem beeinträchtigt wird und produktive Daten oder Dienste in Mitleidenschaft gezogen werden. Ebenso könnte Schadcode, der in einer Testumgebung eingebracht wird, unerwartet in produktive Netze durchgreifen. Durch die Trennung kann sichergestellt werden, dass ein Ausfall oder eine Kompromittierung in Entwicklungsumgebungen nicht die Stabilität und Vertraulichkeit produktiver Systeme gefährdet. Zur praktischen Umsetzung kann eine Institution Entwicklungs- und Testumgebungen auf dedizierte Virtualisierungshosts auslagern, die physisch oder logisch getrennt von den produktiven Hosts betrieben werden. Zusätzlich kann eine Institution Richtlinien zur Lifecycle-Kennzeichnung von VMs einführen (z. B. „dev“, „test“, „prod“ im Namen oder Tagging), um die klare Trennung auch in größeren Umgebungen praktikabel zu machen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "15bdb341-c907-4daa-9e39-1dc3777ef9bc"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/TEST.3.1.4"
+  }
+ ]
+}

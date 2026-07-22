@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-gateways-and-servers-email-server",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Email server transport encryption",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0572",
+   "sequence": 13180
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1589",
+   "sequence": 13190
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Email server transport encryption",
+     "name": "overview",
+     "prose": "Emails can be intercepted anywhere between originating email servers and destination email servers. Implementing opportunistic Transport Layer Security (TLS) encryption can mitigate this security risk. However, opportunistic TLS encryption is susceptible to downgrade attacks. To mitigate this security risk, Mail Transfer Agent Strict Transport Security (MTA-STS) allows domain owners to indicate that email transfers should only occur if satisfactory TLS encryption is negotiated beforehand.\n\nIn support of MTA-STS implementations, TLS Reporting provides a mechanism for a domain owner to publish a location where reports can be submitted regarding the success or failure of attempts to initiate encrypted connections when sending emails to a specified domain."
+    }
+   ]
+  }
+ }
+}

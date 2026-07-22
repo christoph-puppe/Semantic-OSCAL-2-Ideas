@@ -1,0 +1,25 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/ksi/KSI-CNA-ULN",
+ "version": "2026.07.14.01",
+ "label": "KSI-CNA-ULN",
+ "lifecycle": "active",
+ "title": "Using Logical Networking",
+ "statements": [
+  {
+   "id": "s1",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.fedramp.gov/cr26/party/provider"
+   ],
+   "prose": {
+    "en": "Logical networking and related capabilities are used and persistently reviewed to enforce traffic flow controls."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Persistently"
+  }
+ ]
+}

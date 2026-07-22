@@ -1,0 +1,75 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BER.3.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BER.3.2",
+ "lifecycle": "active",
+ "title": "Vorgehensweise zur Zurücksetzung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Berechtigung SOLLTE eine Vorgehensweise zur Zurücksetzung von Authentifizierungsmitteln verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "eine Vorgehensweise zur Zurücksetzung von Authentifizierungsmitteln"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "0",
+     "authenticity": "2",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.36"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Zurücksetzung meint hier die geregelte Wiederherstellung, Erneuerung, Sperrung und Neuvergabe solcher Mittel, wenn sie vergessen, verloren, kompromittiert, technisch unbrauchbar oder aus anderen nachvollziehbaren Gründen nicht mehr sicher verwendbar sind; sie umfasst insbesondere die Prüfung der Identität der berechtigten Person, die Verhinderung unberechtigter Übernahmeversuche und die nachvollziehbare Durchführung des Vorgangs. Eine verankerte Vorgehensweise kann verhindern, dass der Reset selbst zum Einfallstor wird: Ohne klare Regeln könnte ein Angreifer über Social Engineering, manipulierte Helpdesk-Anfragen, abgefangene Wiederherstellungslinks oder missbrauchte Sicherheitsfragen Zugriff auf fremde Konten erhalten. Ebenso könnte eine uneinheitliche Behandlung verlorener Token, vergessener Passwörter oder kompromittierter Zertifikate dazu führen, dass alte Authentifizierungsmittel weiterverwendet werden oder neue Mittel an die falsche Person gelangen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "ae227c3a-d871-45ae-bec4-d0ecad83f73b"
+  }
+ ]
+}

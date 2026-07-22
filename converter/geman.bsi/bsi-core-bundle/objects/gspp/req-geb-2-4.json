@@ -1,0 +1,80 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GEB.2.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GEB.2.4",
+ "lifecycle": "active",
+ "title": "Elektromagnetische Abschirmung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Gebäudemanagement für Standorte KANN die Elektromagnetische Abschirmung testen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "testen",
+     "result": "die Elektromagnetische Abschirmung",
+     "target-object-categories": [
+      "Standorte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Abnahmeprotokoll"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.13",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.12"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die elektromagnetische Abschirmung von Standorten dient dem Schutz vertraulicher Informationen vor unbefugter Erfassung durch elektromagnetische Abstrahlung. Computersysteme, Netzwerkgeräte und andere elektronische Ausrüstungen senden elektromagnetische Signale aus, die außerhalb des Gebäudes abgefangen werden könnten. Dies könnte zur ungewollten Offenlegung sensibler Daten führen, wie etwa bei Van-Eck-Phreaking, bei dem Bildschirminhalte aus der Ferne rekonstruiert werden können. Ein Angreifer könnte beispielsweise mit speziellem Equipment die ausgesendeten Signale eines Monitors oder Netzwerkkabels abfangen und daraus Passwörter, Finanzdaten oder Geschäftsgeheimnisse extrahieren, ohne physischen Zugang zum Gebäude zu benötigen.  Bei der Umsetzung kann eine mehrstufige Strategie verfolgt werden. Die Räumlichkeiten können mit speziellen abschirmenden Materialien wie metallischen Geweben, leitfähigen Farben oder Folienbeschichtungen ausgekleidet werden, die als \"Faradayscher Käfig\" wirken. Fenster können mit metallbeschichteten Gläsern oder speziellen Folien versehen werden, die elektromagnetische Strahlung blockieren. Sicherheitsbereiche können nach Sensitivität der dort verarbeiteten Daten in verschiedene Zonen eingeteilt werden, wobei nur die kritischsten Bereiche vollständig abgeschirmt werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "9835ce0d-94a4-4acc-96cf-489f20750808"
+  }
+ ]
+}

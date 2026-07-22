@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.5.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.5.3",
+ "lifecycle": "active",
+ "title": "Compliance-Verpflichtungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Einkäufe SOLLTE die Übereinstimmung mit Compliance-Verpflichtungen vereinbaren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "vereinbaren",
+     "result": "die Übereinstimmung mit Compliance-Verpflichtungen",
+     "target-object-categories": [
+      "Einkäufe"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Beschaffungskriterien"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.20"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Lieferketten"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Hierzu gehören beispielsweise der Schutz personenbezogener Daten, geistige Eigentumsrechte von interessierten Parteien oder Dritten. Aufgrund unterschiedlicher Rechtssetzung und -durchsetzung sind dabei insbesondere Verarbeitungsstandorte zwischen Inland, EU und außereuropäischem Ausland zu unterscheiden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "9c0e2a1c-59f9-4390-9d1c-6ec3417892a8"
+  }
+ ]
+}

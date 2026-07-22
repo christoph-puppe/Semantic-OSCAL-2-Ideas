@@ -1,0 +1,82 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.6.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.6.2",
+ "lifecycle": "active",
+ "title": "Gemeinsam genutzte Verzeichnisse",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für Endgeräte SOLLTE die Zugriffsrechte gemeinsam verwendeter Verzeichnisse einschränken."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "einschränken",
+     "result": "die Zugriffsrechte gemeinsam verwendeter Verzeichnisse",
+     "target-object-categories": [
+      "Endgeräte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Produktbeschreibung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Relevant sind hierbei sowohl speziell eingerichtete Verzeichnisse für die gemeinsame Bearbeitung von Dateien als auch Verzeichnisse, die vom System für gemeinsame Dateien verwendet werden, z.B. /tmp. Unter Linux kann das Sticky-Bit verwendet werden, um den Zugriff auf die Dateien in diesem Verzeichnis einzuschränken, so dass nur noch der Eigentümer einer Datei (oder der Eigentümer des Verzeichnisses) diese Datei löschen oder umbenennen darf."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "ec10cb70-9101-4293-ab4c-92d57f84af77"
+  }
+ ]
+}

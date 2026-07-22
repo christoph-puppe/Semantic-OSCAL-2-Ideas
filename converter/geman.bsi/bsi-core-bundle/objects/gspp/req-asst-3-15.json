@@ -1,0 +1,75 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.3.15",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.3.15",
+ "lifecycle": "active",
+ "title": "Ausleihe physischer Assets",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets KANN einen ausreichenden Ausleihbestand verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "einen ausreichenden Ausleihbestand"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Wenn bei bestimmten Ereignissen wie Auslandsreisen, Veranstaltungen oder Sicherheitsvorfällen die regulären Endgeräte nicht verwendet werden können (z.B. aufgrund der Regelungen zu Datenlokationen oder der Vorfallsbehandlung), dann ist es sinnvoll Endgeräte bereitzuhalten, die nur mit den für die Ereignisse notwendigen Anwendungen und Daten ausgestattet sind. Die Menge der Ausleihgeräte ist ausreichend, wenn sie den Bedarf deckt. Der Bedarf kann anhand einer Prognose ermittelt werden, die sich wiederum auf bekannte Statistiken (z.B. Anzahl der Nutzenden, Anzahl der Teilnehmer von Schulungsveranstaltungen, Anzahl Auslandsreisen pro Jahr) stützen kann."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "04f05ed2-ec82-4abd-80b3-1669ea62976a"
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/set/ksi/svc",
+ "version": "2026.07.14.01",
+ "lifecycle": "active",
+ "title": "Service Configuration",
+ "label": "SVC",
+ "annotations": {
+  "web_name": "service-configuration"
+ },
+ "members": [
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-SVC-ACM",
+   "sequence": 3550
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-SVC-ASM",
+   "sequence": 3560
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-SVC-EIS",
+   "sequence": 3570
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-SVC-PRR",
+   "sequence": 3580
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-SVC-RUD",
+   "sequence": 3590
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-SVC-SIN",
+   "sequence": 3600
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-SVC-VCM",
+   "sequence": 3610
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-SVC-VRI",
+   "sequence": 3620
+  }
+ ]
+}

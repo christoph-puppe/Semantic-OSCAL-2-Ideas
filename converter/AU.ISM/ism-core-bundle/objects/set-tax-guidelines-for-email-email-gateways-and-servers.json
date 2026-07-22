@@ -1,0 +1,59 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-gateways-and-servers",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Email gateways and servers",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-gateways-and-servers-centralised-",
+   "sequence": 13130
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-gateways-and-servers-email-gatewa",
+   "sequence": 13150
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-gateways-and-servers-open-relay-e",
+   "sequence": 13170
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-gateways-and-servers-email-server",
+   "sequence": 13200
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-gateways-and-servers-sender-polic",
+   "sequence": 13240
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-gateways-and-servers-domainkeys-i",
+   "sequence": 13280
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-gateways-and-servers-domain-based",
+   "sequence": 13310
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-gateways-and-servers-email-conten",
+   "sequence": 13330
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-gateways-and-servers-blocking-sus",
+   "sequence": 13350
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-gateways-and-servers-notification",
+   "sequence": 13370
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Email gateways and servers",
+     "name": "overview",
+     "prose": "# Further information\n\nFurther information on implementing opportunistic TLS encryption for email servers can be found in the Australian Signals Directorate’s (ASD) [Implementing certificates, TLS, HTTPS and opportunistic TLS](#b8cdbf18-31cb-4e10-bb43-e8488ee8c2f6) publication.\n\nFurther information on implementing SPF, DKIM and DMARC can be found in ASD’s [How to combat fake emails](#d3572f80-d9d6-4023-b6e6-23720bb0d618) publication.\n\nFurther information on engaging the services of email service providers for marketing or filtering purposes can be found in ASD’s [Marketing and filtering email service providers](#e4eee462-f6e5-4921-a8fe-26f3de6c6f45) publication.\n\nFurther information on email content filtering can be found in the ‘Content filtering’ section of the [Guidelines for gateways](#e8bde527-526c-4a6a-b66f-05228f09dd7b).\n\nFurther information on email content filtering can be found in ASD’s [Malicious email mitigation strategies](#6136b137-0cc9-4d21-94ee-0abfac2b4e18) publication.\n\nFurther information on email security can be found in the following National Institute of Standards and Technology (NIST) publications:\n\n- NIST Special Publication (SP) 800-45 Version 2, [Guidelines on Electronic Mail Security](#b383a647-7627-4450-99b6-640ae554c2f1)\n- NIST SP 800-177 Rev. 1, [Trustworthy Email](#4b0f2fa7-f9d6-48d8-b14c-527939808882)\n- NIST SP 1800-6, [Domain Name System-Based Electronic Mail Security](#55038d94-7587-4234-a18c-fb459fcdb295)."
+    }
+   ]
+  }
+ }
+}

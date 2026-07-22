@@ -1,0 +1,83 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DEV.4.10",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DEV.4.10",
+ "lifecycle": "active",
+ "title": "Protokollierung von Codeänderungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Entwicklung für Anwendungen SOLLTE Änderungen am Quellcode einschließlich Zeitpunkt, Inhalt der Änderung, ändernder Person und der Begründung der Änderung protokollieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "protokollieren",
+     "result": "Änderungen am Quellcode",
+     "result-specification": "einschließlich Zeitpunkt, Inhalt der Änderung, ändernder Person und der Begründung der Änderung",
+     "target-object-categories": [
+      "Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Codehistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "0",
+     "authenticity": "2",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.37",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.22"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 1,
+     "tags": [
+      "Change Management"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Im Kontext dieser Anforderung bezeichnet Quellcode den in einer Programmiersprache geschriebenen, von Menschen lesbaren Anteil einer Anwendung, während eine Änderung jede Anpassung, Ergänzung oder Entfernung dieses Codes umfasst. Unter Begründung ist die dokumentierte fachliche oder technische Motivation zu verstehen, die erläutert, warum eine Änderung notwendig war, beispielsweise zur Fehlerbehebung, Funktionserweiterung oder Verbesserung der Sicherheit. Der Zeitpunkt entspricht dabei einem präzisen Zeitstempel, der eine eindeutige zeitliche Nachvollziehbarkeit erlaubt, und die ändernde Person ist diejenige, die die Modifikation fachlich veranlasst oder technisch durchgeführt hat – nicht zwingend dieselbe Rolle wie ein Freigebender oder Reviewer. Die Protokollierung kann verhindern, dass unautorisierte oder fehlerhafte Anpassungen unentdeckt bleiben, und sie kann im Streitfall eine klare Nachvollziehbarkeit bieten. Ohne diese Nachweise könnte es zu unklaren Verantwortlichkeiten, erhöhtem Manipulationsrisiko oder schwer nachvollziehbaren Fehlfunktionen kommen. Eine Institution kann diese Anforderung durch Nutzung von Versionsverwaltungssystemen wie Git oder Subversion umsetzen, indem sie für jede Änderung standardisierte Commit-Meldungen mit Zeitstempel, Autor und Begründung erzwingt. Ergänzend kann ein Workflow etabliert werden, bei dem Änderungen erst nach einem Merge- oder Pull-Request mit dokumentierter Beschreibung in den Hauptzweig gelangen. Sinnvoll ist es zudem, einfache Vorlagen oder Textbausteine für Begründungen bereitzustellen, sodass Änderungen einheitlich und vollständig erklärt werden können. Für Transparenz kann zusätzlich ein automatisches Änderungsprotokoll generiert werden, das regelmäßig exportiert oder archiviert wird, um auch ohne Zugriff auf das Versionsverwaltungssystem auswertbar zu bleiben."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "e2458854-ad5a-433f-896c-e3eef23b6952"
+  }
+ ]
+}

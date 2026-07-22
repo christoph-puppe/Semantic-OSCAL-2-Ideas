@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/TEST.5.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "TEST.5.2",
+ "lifecycle": "active",
+ "title": "Verschlüsselte Bereitstellung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Änderungen und Tests SOLLTE die Bereitstellung verschlüsseln."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verschlüsseln",
+     "result": "die Bereitstellung"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.14",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.41",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.21"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Cryptography"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Das Konzept der Bereitstellung (engl. Deployment oder Provisioning) bezieht sich hier auf den Vorgang des Übertragens, Installierens oder Aktivierens von Software-Artefakten, Konfigurationen, Skripten oder anderen digitalen Gütern von einer gesicherten Umgebung (z.B. Test- oder Staging-Umgebung) in die Ziel- oder Produktionsumgebung. Die Verschlüsselung dieser Bereitstellung meint dabei die kryptografische Sicherung des Datenstroms oder der übertragenen Daten während des Transports, sodass diese für unbefugte Dritte unlesbar sind. Diese Vorschrift dient primär dem Schutz vor der Offenlegung sensibler Daten oder der Manipulation der ausgelieferten Artefakte: Ein Angreifer, der den Übertragungsweg abhört, könnte ohne Verschlüsselung leicht auf vertrauliche Informationen zugreifen, etwa proprietären Quellcode oder sensible Konfigurationsparameter (wie Passwörter oder API-Schlüssel), was zur Geheimhaltung (Confidentiality) in der Institution im Widerspruch stünde. Außerdem könnte ein Man-in-the-Middle-Angriff die übertragenen Daten manipulieren und so bösartigen Code in die Produktionsumgebung einschleusen, bevor die Integrity-Checks greifen, was die Integrität der bereitgestellten Lösungen gefährden könnte. Technisch kann die Institution dies gewährleisten, indem alle Deployment-Pipelines ausschließlich gesicherte Kommunikationsprotokolle nutzen. Zusätzlich ist es sinnvoll die Bereitstellungs-Artefakte digital zu signieren und diese Signatur erst nach erfolgreicher End-zu-End-Integritätsprüfung (z.B. durch Prüfsummen wie SHA-256) auf dem Zielsystem zur Installation freigeben, was einen Manipulationsversuch im Transit erschwert."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "1a332c02-bbc6-49f5-a123-ad41532409ac"
+  }
+ ]
+}

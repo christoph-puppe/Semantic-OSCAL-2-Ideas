@@ -1,0 +1,82 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.12.13",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.12.13",
+ "lifecycle": "active",
+ "title": "Sendebericht",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für Faxe SOLLTE einen Sendebericht protokollieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "protokollieren",
+     "result": "einen Sendebericht",
+     "target-object-categories": [
+      "Faxe"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.37"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Produktbeschreibung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein Sendebericht ermöglicht es bei der Verwendung von Faxen nachzuweisen, dass das Fax tatsächlich an die Gegenstelle versendet wurde. Für einen rechtssicheren Nachweis ist es sinnvoll, wenn der Sendebericht außerdem weitere Angaben wie die versendete Seitenzahl, eine Vorschau der ersten Seite odes des gesamten Inhaltes, sowie den Status mit dem die Verbindung beendet wurde (z.B. OK) beinhaltet."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "0ef855ab-834e-405e-99f4-a1bca3f09d15"
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/req/CPO-CSF-CPM",
+ "version": "2026.07.14.01",
+ "label": "CPO-CSF-CPM",
+ "lifecycle": "active",
+ "title": "Certification Package Maintenance for Rev5",
+ "statements": [
+  {
+   "id": "s1",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.fedramp.gov/cr26/party/providers"
+   ],
+   "prose": {
+    "en": "Certification Package Maintenance for Rev5 (requirement varies by certification class; see class tailorings and the class-variants payload)."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Certification Package"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Persistently"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Provider"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Significant Change"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Transformative Change"
+  }
+ ],
+ "facets": {
+  "https://ns.fedramp.gov/cr26/facet/narrative@1": {
+   "notes": [
+    "This maximum timeframe for Rev5 is the absolutely poorest worst case for horrible customer experience and is based on legacy FedRAMP Rev5 allowing providers to leave their packages unmaintained for up to a year. Rev5 providers should maintain their packages far more frequently than this requirement to ensure potential customers have access to up-to-date information, updating it at least after every transformative significant change.",
+    "FedRAMP 20x Certifications expect providers to maintain their FedRAMP Certification Packages as changes occur to ensure they are never out of date."
+   ]
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "class-variants": {
+    "b": {
+     "statement": "Providers with Rev5 Class B Certifications MUST persistently maintain their FedRAMP Certification Package to ensure it is up to date and complete at least once every year.",
+     "force": "MUST",
+     "timeframe_type": "years",
+     "timeframe_num": 1
+    },
+    "c": {
+     "statement": "Providers with Rev5 Class C Certifications MUST persistently maintain their FedRAMP Certification Package to ensure it is up to date and complete at least once every year.",
+     "force": "MUST",
+     "timeframe_type": "years",
+     "timeframe_num": 1
+    },
+    "d": {
+     "statement": "Providers with Rev5 Class D Certifications MUST persistently maintain their FedRAMP Certification Package to ensure it is up to date and complete at least once every six months.",
+     "force": "MUST",
+     "timeframe_type": "months",
+     "timeframe_num": 6
+    }
+   }
+  }
+ }
+}

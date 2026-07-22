@@ -1,0 +1,82 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.7.15",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.7.15",
+ "lifecycle": "active",
+ "title": "Social Engineering Anrufe",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende von TK-Anwendungen SOLLTE gegen Social Engineering Anrufe sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "gegen Social Engineering Anrufe",
+     "target-object-categories": [
+      "Nutzende",
+      "TK-Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.42"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 1,
+     "tags": [
+      "Advanced Persistent Threats (APT)"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Social Engineering bezeichnet in diesem Zusammenhang die bewusste Täuschung oder Beeinflussung einer Person, um sie zu Handlungen zu bewegen, die im Interesse des Angreifenden liegen, beispielsweise das Preisgeben von Passwörtern, internen Abläufen oder technischen Zugangsdaten. Ein Angriff könnte sich etwa darin äußern, dass sich eine Person am Telefon glaubhaft als IT-Support, Vorgesetzte oder externe Partnerin ausgibt, um den Eindruck einer legitimen Anfrage zu erwecken. Solche Vorfälle könnten zu unbefugtem Zugriff auf interne Systeme, zum Auslösen von Störungen oder zur Vorbereitung weiterer Angriffe führen. Typischerweise sind solche Anrufe daran zu erkennen, dass von unbekannten Personen zu unüberlegten Handlungen gedrängt wird. Hiergegen hilft es, den Gesprächspartner zunächst zu authentifizieren, bevor über Vertrauliches gesprochen oder Handlungen angestoßen werden. Angezeigte Rufnummern oder Nutzernamen könnten dagegen manipuliert sein (Caller ID Spoofing) - sie sind zur Authentifizierung des Gesprächspartners eher nicht geeignet. Das Mithören Dritter ist hier insbesondere im öffentlichen Raum zu bedenken, kann aber auch bei unverschlüsselten Verbindungen auftreten oder beim Gesprächspartner."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "6f6dcfa4-7c22-4e39-a1a2-c88ed0e9ee74"
+  }
+ ]
+}

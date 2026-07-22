@@ -1,0 +1,95 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ARCH.6.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ARCH.6.2",
+ "lifecycle": "active",
+ "title": "Verschlüsselung von Weiterverkehrsverbindungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Architektur für Externe Netzanschlüsse SOLLTE Verbindungen ins Weitverkehrsnetz nach {param:arch.6.2-prm1} verschlüsseln."
+   },
+   "parameters": [
+    {
+     "name": "arch.6.2-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verschlüsseln",
+     "result": "Verbindungen ins Weitverkehrsnetz",
+     "result-specification": "nach {{einem anerkannten Standard}}",
+     "target-object-categories": [
+      "Externe Netzanschlüsse"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.15",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.14",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ohne ein etabliertes Verschlüsselungsverfahren könnte sensible Kommunikation im Klartext übertragen werden, was Angreifern ein einfaches Mitlesen ermöglichen könnte – etwa durch Abhören in einem öffentlichen WLAN, durch kompromittierte Router eines Providers oder durch staatliche Massenüberwachung. Auch die unbemerkte Manipulation von Datenpaketen auf dem Weg zwischen Institution und Gegenstelle könnte die Integrität der übermittelten Inhalte gefährden und beispielsweise zu manipulierten Geschäftsdaten oder Schadcode-Einschleusungen führen. Der Einsatz von anerkannten Standards zur Verschlüsselung kann Vertraulichkeit und Integrität wahren, indem die Inhalte für Unbefugte unlesbar bleiben und Kommunikationspartner einander zuverlässig identifizieren können. So kann beispielsweise sichergestellt werden, dass eine entfernte Niederlassung tatsächlich mit der Zentrale verbunden ist und nicht mit einem Angreifer, der den Datenverkehr umleitet. Im Kontext externer Netzanschlüsse bezeichnet „Weitverkehrsnetz“ typischerweise öffentliche Netze wie das Internet oder auch gemietete WAN-Verbindungen über Telekommunikationsanbieter, die institutionsextern betrieben und potenziell unsicher sind. Anerkannte Standards sind z.B. TLS, IPsec oder WireGuard, die regelmäßig überprüft und weit verbreitet eingesetzt werden. Eine Institution kann diese Anforderung durch konkrete Maßnahmen umsetzen, z. B. indem sie Site-to-Site-VPNs zwischen Standorten einrichtet, Remote-Zugriffe von Mitarbeitenden ausschließlich über VPN-Gateways mit Zwei-Faktor-Authentisierung ermöglicht und auch Cloud-Dienste konsequent über gesicherte Verbindungen anbindet."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "arch.6.2-prm1": {
+     "label": "einem anerkannten Standard",
+     "alt-identifier": "1999335e-7d66-4dc5-8960-8115234e8e23"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "1999335e-7d66-4dc5-8960-8115234e8e23"
+  }
+ ]
+}

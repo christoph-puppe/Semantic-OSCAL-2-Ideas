@@ -1,0 +1,84 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DEV.3.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DEV.3.4",
+ "lifecycle": "active",
+ "title": "Passwort-Hashing",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Entwicklung für Anwendungen SOLLTE das Hashing von Passwörtern, die zur Authentifizierung an der Anwendung verwendet werden vor der Verarbeitung oder Speicherung aktivieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "aktivieren",
+     "result": "das Hashing von Passwörtern, die zur Authentifizierung an der Anwendung verwendet werden",
+     "result-specification": "vor der Verarbeitung oder Speicherung",
+     "target-object-categories": [
+      "Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Freigabeplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.28",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 1,
+     "tags": [
+      "Produktbeschreibung",
+      "Cryptography"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ziel ist der Schutz vor Angriffen, welche Passwörter beim Transport oder aus dem Speicher auslesen und sich hiermit anmelden. Dies kann durch Hash und Salt gemäß BSI TR-02102 vermieden werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "6b7d5613-a32c-4a47-8a4f-766053da0e74"
+  }
+ ]
+}

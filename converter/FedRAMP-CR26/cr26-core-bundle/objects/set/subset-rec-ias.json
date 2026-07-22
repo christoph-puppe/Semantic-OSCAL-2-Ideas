@@ -1,0 +1,74 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/set/subset/rec-ias",
+ "version": "2026.07.14.01",
+ "lifecycle": "active",
+ "title": "General Independent Assessor Responsibilities",
+ "label": "IAS",
+ "members": [
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/REC-IAS-ACC",
+   "sequence": 2000
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/REC-IAS-ADA",
+   "sequence": 2010
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/REC-IAS-PSC",
+   "sequence": 2020
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/REC-IAS-ANR",
+   "sequence": 2030
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/REC-IAS-RAS",
+   "sequence": 2040
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/REC-IAS-RAR",
+   "sequence": 2050
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/REC-IAS-RQU",
+   "sequence": 2060
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/REC-IAS-AFI",
+   "sequence": 2070
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/REC-IAS-CFI",
+   "sequence": 2080
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/REC-IAS-PST",
+   "sequence": 2090
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/REC-IAS-CAP",
+   "sequence": 2100
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/REC-IAS-INV",
+   "sequence": 2110
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/REC-IAS-SEP",
+   "sequence": 2120
+  }
+ ],
+ "facets": {
+  "https://ns.fedramp.gov/cr26/facet/narrative@1": {
+   "description": "These rules apply to independent assessment services seeking to obtain or maintain FedRAMP Recognition."
+  },
+  "https://ns.fedramp.gov/cr26/facet/scope@1": {
+   "types": [],
+   "paths": [],
+   "classes": [],
+   "affects": [
+    "Assessors"
+   ]
+  }
+ }
+}

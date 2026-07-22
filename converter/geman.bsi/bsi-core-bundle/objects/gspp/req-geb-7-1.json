@@ -1,0 +1,93 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GEB.7.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GEB.7.1",
+ "lifecycle": "active",
+ "title": "Schlüsselbeauftragte",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Gebäudemanagement für Standorte SOLLTE die Verwaltung von Schlüsseln {param:geb.7.1-prm1} zuweisen."
+   },
+   "parameters": [
+    {
+     "name": "geb.7.1-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "zuweisen",
+     "result": "die Verwaltung von Schlüsseln",
+     "result-specification": "{{zuständigen Personen oder Rollen}}",
+     "target-object-categories": [
+      "Standorte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Geschäftsverteilungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Bei der Verwaltung von Schlüsseln werden physische Schlüssel und digitale Zugangsmittel wie RFIDs für Gebäude, Räume oder Schränke ausgegeben, zurückgenommen und deren Nutzung dokumentiert. Mögliche Ausprägungen für zuständige Personen oder Rollen können (1) Facility-Management, (2) IT-Sicherheitsbeauftragte, (3) Empfangs- oder Pförtnerdienste oder (4) ein zentrales Schlüsselmanagement-Team sein. Der Zweck der Vorschrift liegt darin, Risiken durch unkontrollierte Schlüsselvergabe zu reduzieren. Ohne klare Zuweisung könnte es zu unbefugtem Zutritt, Diebstahl oder Manipulation an kritischen Bereichen kommen. Durch eine geregelte Schlüsselverwaltung kann hingegen nachvollziehbar und kontrolliert gesteuert werden, wer physischen Zugang zu sicherheitsrelevanten Bereichen erhält. Zur Umsetzung können Institutionen (1) Schlüssellisten auf Papier oder in Form einer Berechtigungsmatrix führen, die regelmäßig gepflegt und abgeglichen wird, (2) Reserveschlüssel zentral und sicher verwahren, damit im Verlustfall ein geregelter Ersatz möglich ist, und (3) sicherstellen, dass nicht mehr benötigte Schlüssel zeitnah zurückgenommen und dokumentiert werden. Technisch kann die Verwaltung durch nummerierte Schlüsselanhänger oder anonymisierte Kennzeichnungen unterstützt werden, sodass keine Rückschlüsse auf den Einsatzort möglich sind. Auch ein einfaches Verfahren, bei dem die Rücknahme von Schlüsseln mit Datum und Unterschrift bestätigt wird, kann Transparenz schaffen und spätere Unklarheiten verhindern."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "geb.7.1-prm1": {
+     "label": "zuständigen Personen oder Rollen",
+     "alt-identifier": "989b0846-7561-4d14-99d0-ce46a749cde0"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "989b0846-7561-4d14-99d0-ce46a749cde0"
+  }
+ ]
+}

@@ -1,0 +1,87 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.5.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.5.1",
+ "lifecycle": "active",
+ "title": "Wartungsbedarf dokumentieren",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets für IT-Systeme SOLLTE den Wartungsbedarf für Systemkomponenten und die zum Betrieb erforderliche Infrastruktur dokumentieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "dokumentieren",
+     "result": "den Wartungsbedarf",
+     "result-specification": "für Systemkomponenten und die zum Betrieb erforderliche Infrastruktur",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Betriebshandbuch"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.31",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.21",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.28"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Wartungsbedarf meint die regelmäßig oder anlassbezogen erforderlichen Maßnahmen zur Instandhaltung, Aktualisierung und Funktionssicherung von Systemkomponenten und der Betriebsinfrastruktur eines IT-Systems. Unter Systemkomponenten sind hier sowohl Hardware-Elemente (Server, Netzwerkkomponenten, Speichergeräte) als auch Software-Elemente (Betriebssysteme, Middleware, Anwendungen) zu verstehen; die Infrastruktur umfasst unterstützende Einrichtungen wie Stromversorgung, Klimatisierung, Kommunikationsschnittstellen oder Brandabschottungen für Kabel- und Rohrdurchführungen. Ziel der Dokumentation ist es, einen strukturierten Überblick über alle Abhängigkeiten, Wartungszyklen und Zuständigkeiten zu schaffen, um sicherzustellen, dass Betrieb und Sicherheit des Systems über den gesamten Lebenszyklus hinweg gewährleistet bleiben. Die Dokumentation des Wartungsbedarfs kann verhindern, dass kritische Komponenten ungeplant ausfallen oder Sicherheitslücken durch versäumte Updates bestehen bleiben. Ohne klare Wartungsinformationen könnte beispielsweise ein Firmware-Update bei einer Netzkomponente übersehen werden, was Angreifern das Eindringen über bekannte Schwachstellen erleichtern könnte. Umgekehrt kann eine dokumentierte Wartungsplanung dazu beitragen, Systemverfügbarkeit und Integrität zu sichern, indem sie planbare Wartungsfenster und Zuständigkeiten ermöglicht. Durch das Zusammenführen der Herstellerangaben mit den vor Ort bekannten Rahmenbedingungen kann frühzeitig erkennbar werden, wann Eingriffe nötig sind, welche Abhängigkeiten bestehen und welche Fachkenntnisse oder Werkzeuge erforderlich sein können. Zum Ressourcenbedarf kann ebenso gehören, dass ein Testsystem bereitgestellt wird, dass administrative Zugänge vorbereitet werden oder dass ein Wartungsdienstleister während der Arbeiten abgesichert fernzugreifen kann. Für die praktische Umsetzung kann es hilfreich sein, einen zentralen Wartungskalender mit Ampel‑Logik zu führen, der sich aus dem Konfigurations‑ oder Asset‑Management speist. Eine Ticket‑ oder Change‑Management‑Lösung kann automatisch Termine auslösen, Erinnerungen versenden und Reports erzeugen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "432cc626-f971-493b-b983-9bad32ed84e0"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/BES.7.4"
+  }
+ ]
+}

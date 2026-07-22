@@ -1,0 +1,63 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GC.12.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GC.12.1",
+ "lifecycle": "active",
+ "title": "Methodik für das Risikomanagement",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Governance und Compliance MUSS eine einheitliche Methodik für das Informationssicherheitsrisikomanagement unter Berücksichtigungen von Kontext, Geschäftsprozessanalyse und interessierten Parteien verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "eine einheitliche Methodik für das Informationssicherheitsrisikomanagement",
+     "result-specification": "unter Berücksichtigungen von Kontext, Geschäftsprozessanalyse und interessierten Parteien"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Risikobewertung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Das Risikomanagement stellt sicher, dass Risiken systematisch identifiziert, bewertet und behandelt werden. Die Festlegung einheitlicher Kriterien für Risikoidentifizierung, Risikobewertung und Risikobehandlung sowie die Rolle des Risikoeigentümers sorgen für Transparenz und Verbindlichkeit.  Die Risikomanagementmethodik kann frei gewählt werden, sollte aber anerkannte Standards erfüllen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "0567f921-f474-4060-9a64-11e5148ebe09"
+  }
+ ]
+}

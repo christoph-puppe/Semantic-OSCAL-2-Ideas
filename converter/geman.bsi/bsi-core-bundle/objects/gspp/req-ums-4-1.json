@@ -1,0 +1,68 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/UMS.4.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "UMS.4.1",
+ "lifecycle": "active",
+ "title": "Festlegung von Umsetzungsfristen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Umsetzung MUSS ein realistisches Zieldatum für die Umsetzung der bisher nicht umgesetzten Anforderungen festlegen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "festlegen",
+     "result": "ein realistisches Zieldatum für die Umsetzung der bisher nicht umgesetzten Anforderungen"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Umsetzungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Für jede umzusetzende Maßnahme muss ein realistisches Zieldatum festgelegt werden, das den Umfang, die verfügbaren Ressourcen und mögliche Abhängigkeiten berücksichtigt. Die Einhaltung dieser Fristen muss nachgehalten werden. Bei Überschreitung der Fristen sind geeignete Maßnahmen einzuleiten."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "3c10793d-1a2d-490c-9c7d-479f8f2c102b"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/UMS.2.1"
+  }
+ ]
+}

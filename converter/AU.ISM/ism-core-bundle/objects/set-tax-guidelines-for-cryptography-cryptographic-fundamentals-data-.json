@@ -1,0 +1,23 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-cryptographic-fundamentals-data-",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Data recovery",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0455",
+   "sequence": 14670
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Data recovery",
+     "name": "overview",
+     "prose": "To ensure that access to encrypted data is not lost due to the loss, damage or failure of an encryption key, it is important that where practical cryptographic equipment, applications and libraries provide a means of data recovery."
+    }
+   ]
+  }
+ }
+}

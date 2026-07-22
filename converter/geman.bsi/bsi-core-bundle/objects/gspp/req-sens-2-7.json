@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.2.7",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.2.7",
+ "lifecycle": "active",
+ "title": "Änderung von Konfigurationen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende SOLLTE gegen die unautorisierte Änderung sicherheitsrelevanter Konfigurationen sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "gegen die unautorisierte Änderung sicherheitsrelevanter Konfigurationen",
+     "target-object-categories": [
+      "Nutzende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.31",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.42"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 1
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Sicherheitsrelevante Konfigurationen umfassen dabei alle Einstellungen, die direkten Einfluss auf die Sicherheit haben, wie Firewall-Regeln, Benutzerrechte, Verschlüsselungsparameter, Netzwerkkonfigurationen oder Sicherheitssoftware-Einstellungen. Besteht ein Bedarf zur Änderung (z.B. Einschalten bislang deaktivierter Funktionen, Akzeptanz von Verschlüsselungszertifikaten) so ist stattdessen ein Gespräch mit den für Informationssicherheit zuständigen Stellen in der Institution sinnvoll um einen sicheren Betrieb zu ermöglichen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "e849100d-2282-4c6a-b1c6-c6ec3999f9dc"
+  }
+ ]
+}

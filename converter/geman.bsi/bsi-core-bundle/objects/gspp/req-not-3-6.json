@@ -1,0 +1,76 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/NOT.3.6",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "NOT.3.6",
+ "lifecycle": "active",
+ "title": "Sicherheitsmechanismen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Notfallplanung SOLLTE alternative Sicherheitsmechanismen , die in Notfällen greifen, verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "alternative Sicherheitsmechanismen",
+     "result-specification": ", die in Notfällen greifen,"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Notfallhandbuch"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "In Notfällen besteht das Risiko, dass manche Sicherheitsvorkehrungen nicht zur Verfügung stehen. Alternative oder ergänzende Sicherheitsvorkehrungen können in Notfällen helfen die Balance zwischen Vertraulichkeit, Integrität und Verfügbarkeit aufrechtzuerhalten (z.B. Einmalpasswörter, die in einem Safe hinterlegt werden). Hierbei ist insbesondere daran zu denken, dass alternative Sicherheitsvorkehrungen nicht die im Normalbetrieb verwendeten Sicherheitsvorkehrungen untergraben."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "f0645a33-62db-46f5-9153-1ee8833eba34"
+  }
+ ]
+}

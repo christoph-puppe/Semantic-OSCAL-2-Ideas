@@ -1,0 +1,84 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DEV.7.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DEV.7.1",
+ "lifecycle": "active",
+ "title": "Sichere Bereitstellung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Entwicklung SOLLTE die Bereitstellung im Einklang mit den entsprechenden Verfahren und Regelungen für Änderungen und Tests verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "die Bereitstellung",
+     "result-specification": "im Einklang mit den entsprechenden Verfahren und Regelungen für Änderungen und Tests"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Entwicklungsdokumentation"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.26"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Bereitstellung ist der Prozessschritt, durch den eine neu entwickelte oder geänderte Softwareversion, ein Dienst oder ein System in die Produktionsumgebung überführt und dort aktiv für die Endnutzer oder Geschäftsprozesse zugänglich gemacht wird. Die Anforderungen aus der Praktik Änderungen und Tests (also zum Change Management) betreffen auch die Bereitstellung. Eine geordnete Bereitstellung minimiert das Risiko, dass ungetestete oder nicht genehmigte Änderungen in Betrieb gehen, was sonst zu Dienstunterbrechungen, Datenverlust oder der Ausnutzung von Sicherheitslücken führen könnte."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "8a9a1a39-1ead-4c8a-bcda-5bf14c970df1"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/TEST.1.1"
+  }
+ ]
+}

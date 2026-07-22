@@ -1,0 +1,82 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.2.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.2.4",
+ "lifecycle": "active",
+ "title": "Anhörung Nutzender",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Einkäufe SOLLTE Nutzende bei der Bedarfserfassung anhören."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "anhören",
+     "result": "Nutzende",
+     "result-specification": "bei der Bedarfserfassung",
+     "target-object-categories": [
+      "Einkäufe"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Prozess Beschaffung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Lieferketten"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Werden IT-Produkte oder Dienstleistungen für eine Zielgruppe beschafft, so ist es zweckmäßig, Vertreter dieser Zielgruppe in die Erhebung der Beschaffungskriterien mit einzubeziehen. Dies kann durch die Anhörung aller potenziellen Nutzer, z.B. durch eine Umfrage, oder durch die Anhörung bestimmter Personen oder Rollen aus dem Kreis der Nutzenden (z.B. Fachverantwortliche, Testgruppen oder Stichproben) erfolgen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "d61dea6e-ac0f-42a9-8801-857fed920d50"
+  }
+ ]
+}

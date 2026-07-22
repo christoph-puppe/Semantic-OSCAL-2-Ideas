@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DET.5.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DET.5.2",
+ "lifecycle": "active",
+ "title": "Schwachstellenregister",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Detektion SOLLTE Schwachstellen bei Entdeckung inklusive betroffener Komponenten, Kritikalität und Status dokumentieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "dokumentieren",
+     "result": "Schwachstellen bei Entdeckung",
+     "result-specification": "inklusive betroffener Komponenten, Kritikalität und Status"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schwachstellenregister"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.28",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Da die Aktualität des Schwachstellenregisters von großer Bedeutung ist, ist die manuelle Pflege von Schwachstellen in einem Dokument nicht empfehlenswert. Stattdessen können automatisiert gepflegte Datenbanken oder spezielle Schwachstellenmanagement-Tools genutzt werden. Das Schwachstellenregister kann auch als verteiltes Register gepflegt werden (z.B. in Schwachstellenscannern, Patchmanagement-Servern, etc.), allerdings ist hierbei eine einheitliche Beurteilung und Priorisierung aufwändiger."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "f7550d0a-cf51-4586-a4e8-0c3831a10a79"
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BER.2.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BER.2.2",
+ "lifecycle": "active",
+ "title": "Einschränkung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Berechtigung SOLLTE die Einrichtung, Änderung oder Löschung einer Identität einschränken."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "einschränken",
+     "result": "die Einrichtung, Änderung oder Löschung einer Identität"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Prozess Identitäts- und Berechtigungsmanagement"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "2",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.36",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Das Identitäts- und Berechtigungsmanagement ist entscheidend für die sichere Authentifizierung vor Zugang zu Informationen. Identitäten sind die Grundlage hierfür. Je nach Organisationsstruktur benötigen z.B. das Personalmanagement oder Administrierende schreibenden Zugang zu Identitäten."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "e83e80c1-6725-4812-82be-f86dce11d07e"
+  }
+ ]
+}

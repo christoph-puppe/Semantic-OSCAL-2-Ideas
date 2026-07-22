@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/PERS.5.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "PERS.5.2",
+ "lifecycle": "active",
+ "title": "Innentäter",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Personal SOLLTE ein interdisziplinäres Verfahren zum Umgang mit potenziellen Innentätern verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "ein interdisziplinäres Verfahren zum Umgang mit potenziellen Innentätern"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Prozess Personalmanagement"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 5,
+     "tags": [
+      "Insider Threat"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein interdisziplinäres Verfahren zum Umgang mit potenziellen Innentätern integriert technische Aspekte und organisatorische Aspekte um zielgerichtete Verstöße durch Innentäter so früh wie möglich aufzuspüren und umfassend zu behandeln. Hierzu können beispielsweise die Analyse von Protokollen sowie der Einsatz technischer Detektionssysteme zur Identifikation unerlaubter Nutzung herangezogen werden. Ergänzend dazu dienen organisatorische Meldewege dazu, frühzeitig auf Anzeichen einer länger andauernden systemischen Unzufriedenheit bei Mitarbeitenden reagieren zu können. Maßnahmen bei Aufdeckung können von Mitarbeitergesprächen über den Entzug der Berechtigung zum Zugriff auf vertrauliche Daten bis hin zu Abmahnungen oder Kündigungen reichen. Berücksichtigen Sie bei der Festlegung die Persönlichkeitsrechte der Mitarbeitenden, insbesondere hinsichtlich Arbeitsüberwachung. Aufgrund des engen Bezugs zum Arbeitsrecht ist im Zweifel eine Rechtsberatung empfehlenswert."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "096b2653-f7f6-45db-8a29-088f1bc40ceb"
+  }
+ ]
+}

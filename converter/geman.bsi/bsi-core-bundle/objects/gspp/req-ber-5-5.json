@@ -1,0 +1,94 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BER.5.5",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BER.5.5",
+ "lifecycle": "active",
+ "title": "Mehr-Faktor-Authentisierung für weitreichende Berechtigungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Berechtigung SOLLTE Mehr-Faktor-Authentisierung für weitreichende Berechtigungen aktivieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "aktivieren",
+     "result": "Mehr-Faktor-Authentisierung",
+     "result-specification": "für weitreichende Berechtigungen"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.36",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "MFA",
+      "Living off the land",
+      "Privilege Escalation",
+      "Credential Stuffing",
+      "Brute-Force-Attacke"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Eine Mehr-Faktor-Authentifizierung bei Zugängen mit weitreichenden Berechtigungen, z.B. Administrationskonten, die Zugriff auf wichtige Server wie den Verzeichnisdienst, das MDM, EDR oder DNS haben, erschwert den unberechtigten Zugang zu diesen Zugängen. Auch der Zugriff auch besonders sensible Daten kann eine weitreichende Berechtigung sein."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "55b70084-f446-42af-908b-0f514a72f380"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/BER.3.11"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/BER.5.4"
+  }
+ ]
+}

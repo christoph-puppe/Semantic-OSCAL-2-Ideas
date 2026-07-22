@@ -1,0 +1,60 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GC.4.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GC.4.2",
+ "lifecycle": "active",
+ "title": "Analyse der internen interessierten Parteien",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Governance und Compliance MUSS alle internen interessierten Parteien sowie ihre Bedürfnisse und Erwartungen an das Informationssicherheitsmanagement der Institution analysieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "analysieren",
+     "result": "alle internen interessierten Parteien sowie ihre Bedürfnisse und Erwartungen",
+     "result-specification": "an das Informationssicherheitsmanagement der Institution"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Alle relevanten externen interessierten Parteien werden ermittelt. Die internen interessierten Parteien umfassen beispielsweise: Geschäftsführung, ISB, DSB, Mitarbeiter, Führungskräfte, Betriebsrat/Personalrat."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "491ec81c-443b-4792-83f3-c9f4363c64ce"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/GC.4.1"
+  }
+ ]
+}

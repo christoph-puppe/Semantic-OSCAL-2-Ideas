@@ -1,0 +1,68 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/UMS.1.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "UMS.1.1",
+ "lifecycle": "active",
+ "title": "Ermittlung des Umsetzungsstatus",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Umsetzung MUSS den Umsetzungsstatus der Anforderungen im Anforderungspaket vollständig {param:ums.1.1-prm1} überprüfen."
+   },
+   "parameters": [
+    {
+     "name": "ums.1.1-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überprüfen",
+     "result": "den Umsetzungsstatus der Anforderungen",
+     "result-specification": "im Anforderungspaket vollständig {{regelmäßig}}"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Der Umsetzungsstatus einer Anforderung kann grundsätzlich nur „umgesetzt“ („ja“) oder „nicht umgesetzt“ („nein“) sein. Eine Anforderung gilt nur dann als umgesetzt, wenn sie selbst sowie alle in Abhängigkeit stehenden Anforderungen umgesetzt sind."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "ums.1.1-prm1": {
+     "label": "regelmäßig",
+     "alt-identifier": "e2c90fc0-e6e5-4a89-8099-39360b6e8eb9"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "e2c90fc0-e6e5-4a89-8099-39360b6e8eb9"
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-2082",
+ "version": "2026.06.18",
+ "label": "ISM-2082",
+ "lifecycle": "active",
+ "title": "Control: ism-2082",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "If a cryptographic bill of materials is available for imported third-party software components, it is used during software development to ensure such software components provide support for standardised implementations of ASD-Approved Cryptographic Algorithms."
+   }
+  }
+ ]
+}

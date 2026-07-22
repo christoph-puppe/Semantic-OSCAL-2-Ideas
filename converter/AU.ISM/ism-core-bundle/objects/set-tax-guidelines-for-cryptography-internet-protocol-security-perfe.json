@@ -1,0 +1,23 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-internet-protocol-security-perfe",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Perfect Forward Secrecy",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1000",
+   "sequence": 15700
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Perfect Forward Secrecy",
+     "name": "overview",
+     "prose": "Using PFS reduces the impact of the compromise of a security association."
+    }
+   ]
+  }
+ }
+}

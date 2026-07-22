@@ -1,0 +1,93 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DET.2.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DET.2.2",
+ "lifecycle": "active",
+ "title": "Security Operations Center",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Detektion KANN die Erkennung, Beurteilung und initiale Behandlung von Vorfällen {param:det.2.2-prm1} zuweisen."
+   },
+   "parameters": [
+    {
+     "name": "det.2.2-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "zuweisen",
+     "result": "die Erkennung, Beurteilung und initiale Behandlung von Vorfällen",
+     "result-specification": "{{dediziertem Personal}}"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Detektions-Konzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.29",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.33",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.20"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 4
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein Security Operations Center (SOC) ist eine organisatorische Einheit, deren dedizierte Aufgabe die Überwachung von sicherheitskritischen Ereignissen, sowie die Reaktion auf Sicherheitsvorfälle ist. Für die Definition eines sicherheitskritischen Ereignisses, siehe Glossar (Namensräume des Grundschutz++). Aufgrund der Komplexität und besonderen Bedeutung der Aufgabe leisten Spezialisten für Detektion und Reaktion auf Sicherheitsvorfälle einen wichtigen Beitrag zur effektiven Informationssicherheit einer Institution. Werden diese Aufgaben von speziell hierfür geschultem Personal übernommen und nicht „nebenbei“ von Betriebspersonal, so werden Zielkonflikte zwischen Informationssicherheit und reibungslosem Betrieb vermieden und die Qualität der Sicherheitsbeurteilungen steigt. Kann durch ein selbst betriebenes SOC oder einen Dienstleister realisiert werden."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "det.2.2-prm1": {
+     "label": "dediziertem Personal",
+     "alt-identifier": "1af88c3b-a13c-4d74-a099-f230c9f71f55"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "1af88c3b-a13c-4d74-a099-f230c9f71f55"
+  }
+ ]
+}

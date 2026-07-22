@@ -1,0 +1,69 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/UMS.3.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "UMS.3.1",
+ "lifecycle": "active",
+ "title": "Benennung von Umsetzungszuständigen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Umsetzung MUSS Zuständige für die Umsetzung der bisher nicht erfüllten Anforderungen eindeutig zuweisen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "zuweisen",
+     "result": "Zuständige für die Umsetzung der bisher nicht erfüllten Anforderungen",
+     "result-specification": "eindeutig"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Umsetzungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Zuständigen für die Umsetzung der Priorisierungen müssen eindeutig zugewiesen werden, wobei die zugewiesenen Personen oder Teams über die erforderlichen Kompetenzen und Ressourcen verfügen sollten. Die Zuweisung von Zuständigkeiten sollte in Abstimmung mit den betroffenen Bereichen erfolgen, um Akzeptanz und Commitment zu fördern. Insbesondere bei komplexeren Maßnahmen kann es sinnvoll sein, sowohl eine fachliche als auch eine operative Verantwortung zu definieren und bei Bedarf Teilaufgaben mit eigenen Verantwortlichkeiten zu bilden"
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "0ea195d5-64a3-4c83-84a4-7acb976a0f26"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/UMS.2.1"
+  }
+ ]
+}

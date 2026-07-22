@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-1274",
+ "version": "2026.06.18",
+ "label": "ISM-1274",
+ "lifecycle": "active",
+ "title": "Control: ism-1274",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Database contents from production environments are not used in non-production environments unless the non-production environment is secured to at least the same level as the production environment."
+   }
+  }
+ ]
+}

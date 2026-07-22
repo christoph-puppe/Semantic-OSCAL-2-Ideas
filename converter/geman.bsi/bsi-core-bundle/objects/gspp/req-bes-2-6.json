@@ -1,0 +1,88 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.2.6",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.2.6",
+ "lifecycle": "active",
+ "title": "Outsourcing auf Grundlage der Geschäftsprozessprofile",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Outsourcing KANN Outsourcingverträge auf Grundlage der Geschäftsprozessprofile durch die Leitung autorisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "autorisieren",
+     "result": "Outsourcingverträge auf Grundlage der Geschäftsprozessprofile",
+     "result-specification": "durch die Leitung",
+     "target-object-categories": [
+      "Outsourcing"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Geschäftsprozesse"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 4,
+     "tags": [
+      "Lieferketten"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Das Outsourcing eigener (Teil-)Prozesse ist eine bewusste und häufig folgenreiche Entscheidung - auch für die die eigene Kontrolle der Informationssicherheit. Die Entscheidung kann sich am festgestellten Schutzbedarf oder Risikoprofil der Institution und der betroffenen Geschäftsprozesse orientieren. Die Entscheidung durch die Leitung bezieht sich hier auf die Frage, ob Outsourcing von der Institution grundsätzlich gewollt ist und welche (Teil-)Prozesse ausgelagert werden können oder in der Institution verbleiben. Diese kann konkrete Geschäftsprozesse benennen, aber auch anhand allgemeiner Kriterien getroffen werden (z.B. Keine Auslagerung von Geschäftsprozessen mit hohem Schutzbedarf)."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "5b865e92-14ed-47a0-ae5f-219e5ef7b09b"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/BES.2.1.2"
+  }
+ ]
+}

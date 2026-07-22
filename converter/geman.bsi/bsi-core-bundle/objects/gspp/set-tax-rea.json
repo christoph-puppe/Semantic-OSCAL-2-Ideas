@@ -1,0 +1,34 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/set/tax/rea",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "lifecycle": "active",
+ "title": "Sicherheitsvorfallsbehandlung",
+ "members": [
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/rea-1",
+   "sequence": 6340
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/rea-2",
+   "sequence": 6410
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/rea-3",
+   "sequence": 6430
+  }
+ ],
+ "label": "REA",
+ "facets": {
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "description": {
+    "de": "Die Praktik Sicherheitsvorfallsbehandlung sorgt dafür, dass Informationssicherheitsvorfälle effizient erkannt, gemeldet, analysiert und behoben werden, um Schäden zu minimieren und den Normalbetrieb so schnell wie möglich wiederherzustellen.  Diese Praktik ist reaktiv und konzentriert sich darauf, die Auswirkungen von Sicherheitsvorfällen zu minimieren. Sie stellt sicher, dass bei einem Sicherheitsvorfall schnell und effizient gehandelt wird, um den Schaden zu begrenzen.  Andere Praktiken, wie z.B. Architektur, Personal, Sensibilisierung wirken proaktiv und versuchen, Sicherheitsvorfälle durch präventive Maßnahmen zu verhindern oder deren Häufigkeit zu reduzieren."
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "28b2c88b-1a2a-4f9f-81c0-5d46b50c8f04"
+  }
+ ]
+}

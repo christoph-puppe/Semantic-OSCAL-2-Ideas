@@ -1,0 +1,74 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/PERF.4.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "PERF.4.2",
+ "lifecycle": "active",
+ "title": "Bericht an die Institutionsleitung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Monitoring-Evaluation MUSS die Institutionsleitung über den Stand des Managementsystems {param:perf.4.2-prm1} anhand des Managementberichtes informieren."
+   },
+   "parameters": [
+    {
+     "name": "perf.4.2-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "informieren",
+     "result": "die Institutionsleitung über den Stand des Managementsystems",
+     "result-specification": "{{regelmäßig}} anhand des Managementberichtes"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Sinn und Zweck der Anforderung liegt darin, die Leitungsebene regelmäßig und nachvollziehbar über den Sicherheitsstatus sowie über wesentliche Entwicklungen zu informieren. Damit kann die Leitung faktenbasiert Entscheidungen treffen, Prioritäten setzen und Ressourcen zielgerichtet bereitstellen. Ohne einen solchen Bericht könnte ein kritisches Risiko unbemerkt bleiben oder verspätet adressiert werden, etwa wenn wiederholt unbefugte Zugriffe auf sensible Daten auftreten. Ein gut aufbereiteter Bericht kann hingegen Transparenz schaffen, Verantwortlichkeiten verdeutlichen und Vertrauen in die Steuerung der Institution fördern. Zur Umsetzung ist ein fester Rhythmus für die Erstellung des Managementberichts zu etablieren, etwa quartalsweise oder anlassbezogen nach einem schweren Vorfall. Der Bericht kann eine verdichtete Darstellung enthalten, zum Beispiel in Form von übersichtlichen Kennzahlen (Anzahl relevanter Vorfälle, Zeit bis zur Entdeckung, Erfüllungsgrad definierter Sicherheitsmaßnahmen) und Trendanalysen. Ergänzend kann eine einheitliche Vorlage genutzt werden, die eine klare Struktur vorgibt, sodass die Leitungsebene schnell die entscheidenden Punkte erkennt. Technisch kann dies durch den Einsatz gängiger Office-Tools unterstützt werden, etwa durch die Visualisierung von Trends in Diagrammen. Prozessual können Rückfragen und Diskussionen in einer kurzen Managementrunde eingeplant werden, um den reinen Informationsfluss zu einem aktiven Austausch zu machen."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "perf.4.2-prm1": {
+     "label": "regelmäßig",
+     "alt-identifier": "5d8dccb2-5fea-43c1-a804-0b49f481a1ca"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "5d8dccb2-5fea-43c1-a804-0b49f481a1ca"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/PERF.4.1"
+  }
+ ]
+}

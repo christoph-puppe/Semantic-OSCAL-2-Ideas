@@ -1,0 +1,93 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.7.6",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.7.6",
+ "lifecycle": "active",
+ "title": "Autorisierung von Veräußerungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets SOLLTE Veräußerungen von Assets durch {param:asst.7.6-prm1} autorisieren."
+   },
+   "parameters": [
+    {
+     "name": "asst.7.6-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "autorisieren",
+     "result": "Veräußerungen von Assets",
+     "result-specification": "durch {{eine zuständige Person oder Rolle}}"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "0",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.45",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.16",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.38"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Veräußerung bezeichnet in diesem Kontext jede endgültige Abgabe oder Eigentumsübertragung (Verkauf, Spende, Rückgabe an Leasing, Recycling) eines Assets. Die Autorisierung kann verhindern, dass schutzbedürftige Informationen unkontrolliert den Besitz wechseln, Compliance-Vorgaben übersehen werden und Verantwortlichkeiten verwischen. Ohne geregelte Freigabe könnte ein ausgemusterter Laptop mit Restdaten verkauft, ein Speicherarray mit verbleibenden Schlüsseln weitergegeben oder eine nicht übertragbare Softwarelizenz abgegeben werden, was zu Datenabfluss, Vertragsverletzungen und Reputationsschäden führen könnte. Zur Umsetzung kann die Institution einen schlanken, nachvollziehbaren Freigabe-Workflow etablieren: Ein Veräußerungsantrag kann Asset-ID/Inventarnummer, Asset-Owner, Schutzbedarf/Klassifizierung, Datenträgerart, vorgesehenes Verwertungsverfahren, gewählte Datenlösch-/Vernichtungsmethode, Lizenz-/Vertragsrestriktionen, Übergabedatum und Empfänger erfassen; die Freigabe kann vor Übergabe erfolgen und revisionssicher protokolliert werden. Eine Entscheidungsmatrix kann die Genehmigungstiefe nach Schutzbedarf steuern, z. B. (1) „öffentlich“: fachliche Freigabe, (2) „intern“: Asset Owner + IT-Freigabe, (3) „vertraulich/streng“: Vier-Augen-Prinzip aus zuständige Person oder Rolle und Informationssicherheitsbeauftragte/r."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "asst.7.6-prm1": {
+     "label": "eine zuständige Person oder Rolle",
+     "alt-identifier": "28fe533e-5e43-496d-abca-0a7ada987143"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "28fe533e-5e43-496d-abca-0a7ada987143"
+  }
+ ]
+}

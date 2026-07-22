@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-usage",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Email usage",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-usage-email-usage-policy",
+   "sequence": 12960
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-usage-webmail-services",
+   "sequence": 12980
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-usage-protective-markings-for-ema",
+   "sequence": 13000
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-usage-protective-marking-tools",
+   "sequence": 13040
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-usage-handling-emails-with-inappr",
+   "sequence": 13070
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-usage-email-distribution-lists",
+   "sequence": 13090
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Email usage",
+     "name": "overview",
+     "prose": "# Further information\n\nFurther information on protective markings for emails, where applicable, can be found in the Department of Home Affairs’ [Protective Security Policy Framework](#92679127-f61d-486a-a93e-df2a26dfb07a) and its associated [Australian Government Email Protective Marking Standard](#11372646-3106-42c6-b3e1-444b3f630462)."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,58 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/set/tax/arch",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "lifecycle": "active",
+ "title": "Architektur",
+ "members": [
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/arch-1",
+   "sequence": 4290
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/arch-2",
+   "sequence": 4360
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/arch-3",
+   "sequence": 4410
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/arch-4",
+   "sequence": 4450
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/arch-5",
+   "sequence": 4480
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/arch-6",
+   "sequence": 4510
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/arch-7",
+   "sequence": 4550
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/arch-8",
+   "sequence": 4590
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/arch-9",
+   "sequence": 4650
+  }
+ ],
+ "label": "ARCH",
+ "facets": {
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "description": {
+    "de": "Die Praktik Architektur definiert die grundlegende Struktur sowie die Sicherheitsprinzipien der IT-Infrastruktur und leitet daraus Anforderungen für einzelne IT-Komponenten ab – etwa für Anwendungen oder IT-Systeme. Ziel ist es, eine sichere und skalierbare Basis zu schaffen.  Im Rahmen dieser Praktik werden Sicherheitsanforderungen systematisch in die Gesamtarchitektur eingebettet. Dazu gehören die Gestaltung der Netzarchitektur sowie die Entwicklung übergreifender Konzepte, beispielsweise für Kryptografie oder den Schutz vor Schadsoftware."
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "6710c63e-bb40-4742-9bae-1779ba21f2a9"
+  }
+ ]
+}

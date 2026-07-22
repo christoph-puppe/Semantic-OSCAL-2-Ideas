@@ -1,0 +1,59 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GC.2.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GC.2.1",
+ "lifecycle": "active",
+ "title": "Festlegung des externen Kontextes der Institution",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Governance und Compliance MUSS alle für das Informationssicherheitsmanagement relevanten externen Rahmenbedingungen analysieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "analysieren",
+     "result": "alle für das Informationssicherheitsmanagement relevanten externen Rahmenbedingungen"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Alle externen Faktoren, die einen Einfluss auf die Informationssicherheitsziele und -strategie der Institution haben, werden systematisch analysiert und dokumentiert. Dazu zählen insbesondere Faktoren, die von außen auf die Institution einwirken wie z.B. gesellschaftliche und kulturelle Faktoren, die die Erwartungen an die Institution prägen; rechtliche und regulatorische Rahmenbedingungen auf nationaler und internationaler Ebene; technologische Entwicklungen und deren Auswirkungen auf die Informationssicherheit; wirtschaftliche Bedingungen im relevanten Marktumfeld und ökologische und physische Umweltbedingungen am Standort der Institution."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "7adcac0b-cc2c-43d4-8528-28d78beed631"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/GC.2.2"
+  }
+ ]
+}

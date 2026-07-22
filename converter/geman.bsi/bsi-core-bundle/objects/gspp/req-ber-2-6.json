@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BER.2.6",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BER.2.6",
+ "lifecycle": "active",
+ "title": "Löschen nach Fristablauf",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Berechtigung SOLLTE nicht mehr benötigte Identitäten nach Ablauf der Löschfristen löschen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "löschen",
+     "result": "nicht mehr benötigte Identitäten",
+     "result-specification": "nach Ablauf der Löschfristen"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.36",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Gesetzliche Aufbewahrungs- und Löschfristen ergeben sich aus dem Compliance-Management, z.B. aus Regelungen der DSGVO oder dem Handels- und Steuerrecht. Sicheres Löschen bedeutet, Daten so zu entfernen, dass sie mit vertretbarem Aufwand (auch forensisch) nicht mehr rekonstruierbar sind. Je nach Medium geschieht das z. B. durch verifizierbares Überschreiben, kryptografisches Löschen (Schlüsselvernichtung) oder physische Zerstörung (inklusive zugehöriger Metadaten, Caches und Datensicherungen)."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "f7541c92-ff46-4d17-9232-2998a41c6613"
+  }
+ ]
+}

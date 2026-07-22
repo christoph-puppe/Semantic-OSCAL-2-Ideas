@@ -1,0 +1,361 @@
+{
+ "source": "/home/claude/ism.json",
+ "source-version": "2026.06.18",
+ "totals": {
+  "leaf-values": 36161,
+  "mapped": 36161,
+  "unmapped": 0,
+  "coverage-pct": 100.0
+ },
+ "objects-emitted": {
+  "requirements": 1150,
+  "sets": 322,
+  "total-objects": 1472
+ },
+ "modality-word-rule": {
+  "unspecified": 1149,
+  "may": 1
+ },
+ "labels": {
+  "from-label-prop": 49,
+  "derived-from-id": 1101
+ },
+ "baseline-sets": {
+  "NC": 1024,
+  "OS": 1035,
+  "P": 1035,
+  "S": 1099,
+  "TS": 1108
+ },
+ "e8-sets": {
+  "ML1": 46,
+  "ML2": 87,
+  "ML3": 123
+ },
+ "class-sets": {
+  "ISM-control": 1101,
+  "ISM-principle": 49
+ },
+ "empty-narrative-groups-skipped": 2,
+ "unmapped-paths": [],
+ "path-map": [
+  {
+   "path": "catalog.back-matter.resources[].props[].name",
+   "count": 2,
+   "level": "declared-drop",
+   "destination": "source-document references (guideline PDFs/links) - not requirement data"
+  },
+  {
+   "path": "catalog.back-matter.resources[].props[].value",
+   "count": 2,
+   "level": "declared-drop",
+   "destination": "source-document references (guideline PDFs/links) - not requirement data"
+  },
+  {
+   "path": "catalog.back-matter.resources[].rlinks[].href",
+   "count": 254,
+   "level": "declared-drop",
+   "destination": "source-document references (guideline PDFs/links) - not requirement data"
+  },
+  {
+   "path": "catalog.back-matter.resources[].rlinks[].media-type",
+   "count": 13,
+   "level": "declared-drop",
+   "destination": "source-document references (guideline PDFs/links) - not requirement data"
+  },
+  {
+   "path": "catalog.back-matter.resources[].title",
+   "count": 246,
+   "level": "declared-drop",
+   "destination": "source-document references (guideline PDFs/links) - not requirement data"
+  },
+  {
+   "path": "catalog.back-matter.resources[].uuid",
+   "count": 246,
+   "level": "declared-drop",
+   "destination": "source-document references (guideline PDFs/links) - not requirement data"
+  },
+  {
+   "path": "catalog.groups[].groups[].groups[].controls[].class",
+   "count": 1150,
+   "level": "L1",
+   "destination": "category Sets: set/tax/principles | set/tax/controls"
+  },
+  {
+   "path": "catalog.groups[].groups[].groups[].controls[].id",
+   "count": 1150,
+   "level": "L1",
+   "destination": "Requirement id (URI mint) + label derivation"
+  },
+  {
+   "path": "catalog.groups[].groups[].groups[].controls[].parts[].id",
+   "count": 1150,
+   "level": "L1",
+   "destination": "statement id (part-id suffix)"
+  },
+  {
+   "path": "catalog.groups[].groups[].groups[].controls[].parts[].name",
+   "count": 1150,
+   "level": "L1",
+   "destination": "statement (the one part kind present)"
+  },
+  {
+   "path": "catalog.groups[].groups[].groups[].controls[].parts[].prose",
+   "count": 1150,
+   "level": "L1",
+   "destination": "statements[].prose.en (+ modality word-rule, documented)"
+  },
+  {
+   "path": "catalog.groups[].groups[].groups[].controls[].props[].name",
+   "count": 8958,
+   "level": "L1",
+   "destination": "dispatch (see per-prop rows)"
+  },
+  {
+   "path": "catalog.groups[].groups[].groups[].controls[].props[].ns",
+   "count": 7759,
+   "level": "L1",
+   "destination": "prop namespace: absorbed (kernel fields need none)"
+  },
+  {
+   "path": "catalog.groups[].groups[].groups[].controls[].props[].value",
+   "count": 8958,
+   "level": "L1",
+   "destination": "dispatch (see per-prop rows)"
+  },
+  {
+   "path": "catalog.groups[].groups[].groups[].controls[].title",
+   "count": 1150,
+   "level": "L1",
+   "destination": "Requirement title"
+  },
+  {
+   "path": "catalog.groups[].groups[].groups[].parts[].name",
+   "count": 470,
+   "level": "L2",
+   "destination": "compat facet oscal-1x@1: guideline overview narrative on the Set"
+  },
+  {
+   "path": "catalog.groups[].groups[].groups[].parts[].prose",
+   "count": 470,
+   "level": "L2",
+   "destination": "compat facet oscal-1x@1: guideline overview narrative on the Set"
+  },
+  {
+   "path": "catalog.groups[].groups[].groups[].props[].name",
+   "count": 470,
+   "level": "L1",
+   "destination": "group sort-id: absorbed by document order -> sequence"
+  },
+  {
+   "path": "catalog.groups[].groups[].groups[].props[].value",
+   "count": 470,
+   "level": "L1",
+   "destination": "group sort-id: absorbed by document order -> sequence"
+  },
+  {
+   "path": "catalog.groups[].groups[].groups[].title",
+   "count": 470,
+   "level": "L1",
+   "destination": "Set title"
+  },
+  {
+   "path": "catalog.groups[].groups[].parts[].name",
+   "count": 69,
+   "level": "L2",
+   "destination": "compat facet oscal-1x@1: guideline overview narrative on the Set"
+  },
+  {
+   "path": "catalog.groups[].groups[].parts[].prose",
+   "count": 69,
+   "level": "L2",
+   "destination": "compat facet oscal-1x@1: guideline overview narrative on the Set"
+  },
+  {
+   "path": "catalog.groups[].groups[].props[].name",
+   "count": 75,
+   "level": "L1",
+   "destination": "group sort-id: absorbed by document order -> sequence"
+  },
+  {
+   "path": "catalog.groups[].groups[].props[].value",
+   "count": 75,
+   "level": "L1",
+   "destination": "group sort-id: absorbed by document order -> sequence"
+  },
+  {
+   "path": "catalog.groups[].groups[].title",
+   "count": 75,
+   "level": "L1",
+   "destination": "Set title"
+  },
+  {
+   "path": "catalog.groups[].props[].name",
+   "count": 25,
+   "level": "L1",
+   "destination": "group sort-id: absorbed by document order -> sequence"
+  },
+  {
+   "path": "catalog.groups[].props[].value",
+   "count": 25,
+   "level": "L1",
+   "destination": "group sort-id: absorbed by document order -> sequence"
+  },
+  {
+   "path": "catalog.groups[].title",
+   "count": 25,
+   "level": "L1",
+   "destination": "Set title"
+  },
+  {
+   "path": "catalog.metadata.last-modified",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.links[].href",
+   "count": 5,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (publisher identity)"
+  },
+  {
+   "path": "catalog.metadata.links[].rel",
+   "count": 5,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (publisher identity)"
+  },
+  {
+   "path": "catalog.metadata.oscal-version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.parties[].addresses[].addr-lines[]",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (publisher identity)"
+  },
+  {
+   "path": "catalog.metadata.parties[].addresses[].city",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (publisher identity)"
+  },
+  {
+   "path": "catalog.metadata.parties[].addresses[].country",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (publisher identity)"
+  },
+  {
+   "path": "catalog.metadata.parties[].addresses[].postal-code",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (publisher identity)"
+  },
+  {
+   "path": "catalog.metadata.parties[].addresses[].state",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (publisher identity)"
+  },
+  {
+   "path": "catalog.metadata.parties[].addresses[].type",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (publisher identity)"
+  },
+  {
+   "path": "catalog.metadata.parties[].email-addresses[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (publisher identity)"
+  },
+  {
+   "path": "catalog.metadata.parties[].links[].href",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (publisher identity)"
+  },
+  {
+   "path": "catalog.metadata.parties[].links[].rel",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (publisher identity)"
+  },
+  {
+   "path": "catalog.metadata.parties[].name",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (publisher identity)"
+  },
+  {
+   "path": "catalog.metadata.parties[].short-name",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (publisher identity)"
+  },
+  {
+   "path": "catalog.metadata.parties[].type",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (publisher identity)"
+  },
+  {
+   "path": "catalog.metadata.parties[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (publisher identity)"
+  },
+  {
+   "path": "catalog.metadata.published",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.responsible-parties[].party-uuids[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (publisher identity)"
+  },
+  {
+   "path": "catalog.metadata.responsible-parties[].role-id",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (publisher identity)"
+  },
+  {
+   "path": "catalog.metadata.roles[].id",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (publisher identity)"
+  },
+  {
+   "path": "catalog.metadata.roles[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (publisher identity)"
+  },
+  {
+   "path": "catalog.metadata.title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  }
+ ]
+}

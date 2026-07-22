@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-media-media-destruction-degaussing-magnetic-m",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Degaussing magnetic media",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0361",
+   "sequence": 7120
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0362",
+   "sequence": 7130
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1641",
+   "sequence": 7140
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Degaussing magnetic media",
+     "name": "overview",
+     "prose": "Degaussing magnetic media changes its magnetic properties, permanently corrupting data. When degaussing magnetic media, care needs to be taken as a degausser of insufficient magnetic field strength will not be effective. In addition, since 2006 perpendicular magnetic media has progressively replaced longitudinal magnetic media. As some older degaussers are only capable of destroying longitudinal magnetic media, care needs to be taken to ensure that a degausser with a suitable magnetic orientation is also used. Furthermore, to ensure that degaussers are being used in the correct manner to effectively destroy magnetic media, product-specific directions provided by degausser manufacturers should be followed. Finally, to provide an additional level of assurance following the use of a degausser, magnetic media should be physically damaged by deforming any internal platters."
+    }
+   ]
+  }
+ }
+}

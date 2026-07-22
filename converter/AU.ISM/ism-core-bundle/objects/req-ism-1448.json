@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-1448",
+ "version": "2026.06.18",
+ "label": "ISM-1448",
+ "lifecycle": "active",
+ "title": "Control: ism-1448",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "When using DH or ECDH for key establishment of TLS connections, the ephemeral variant is used."
+   }
+  }
+ ]
+}

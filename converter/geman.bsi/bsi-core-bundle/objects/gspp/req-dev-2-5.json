@@ -1,0 +1,84 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DEV.2.5",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DEV.2.5",
+ "lifecycle": "active",
+ "title": "Einschränkung des Zugriffs auf Zugangsdaten",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Entwicklung für Anwendungen SOLLTE den lesenden und schreibenden Zugriff auf Zugangsdaten einschränken."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "einschränken",
+     "result": "den lesenden und schreibenden Zugriff auf Zugangsdaten",
+     "target-object-categories": [
+      "Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Inventar Berechtigungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "2",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.28",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.21",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.22",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Security by Design"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Von der Anwendung verwendete Zugangsdaten können z.B. API-Schlüssel oder Datenbankanmeldeinformationen sein. Statt diese im Quellcode zu hinterlegen ist es besser, sie in Umgebungsvariablen oder sogenannten Vaults zu speichern. Hierbei hilft es auch, solche Daten mit .gitignore-Regeln aus der Versionskontrolle auszuschließen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "3a2e18f2-8f77-4f7d-9fc9-cfadbf576c04"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-database-systems-databases-database-event-log",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Database event logging",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1537",
+   "sequence": 12910
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Database event logging",
+     "name": "overview",
+     "prose": "Centrally logging and analysing security-relevant events, including configuration changes, for databases can assist in monitoring the security posture of databases, detecting malicious behaviour and contributing to investigations following cyber security incidents."
+    }
+   ]
+  }
+ }
+}

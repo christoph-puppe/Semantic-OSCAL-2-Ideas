@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.5.12",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.5.12",
+ "lifecycle": "active",
+ "title": "Informationspflichten",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Dienstleistungen SOLLTE eine Pflicht des Lieferanten, den Auftraggeber regelmäßig über die Wirksamkeit der Sicherheitsmaßnahmen zu informieren, vereinbaren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "vereinbaren",
+     "result": "eine Pflicht des Lieferanten, den Auftraggeber regelmäßig über die Wirksamkeit der Sicherheitsmaßnahmen zu informieren,",
+     "target-object-categories": [
+      "Dienstleistungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Beschaffungskriterien"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.20"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Lieferketten"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Im konkreten Kontext bedeutet Wirksamkeit, dass die vereinbarten Sicherheitsmaßnahmen des Lieferanten nicht nur formal existieren, sondern nachweislich den angestrebten Schutzzweck erfüllen – beispielsweise durch messbare Ergebnisse, dokumentierte Prüfberichte oder Nachweise aus internen Kontrollen. Der Auftraggeber ist hierbei die Institution, die eine Dienstleistung einkauft und deren Informationswerte geschützt werden sollen, während der Lieferant der erbringende externe Dienstleister ist, dessen Sicherheitspraktiken Einfluss auf diese Informationswerte haben. Regelmäßige Informationen können etwa Statusberichte, Prüfprotokolle oder Kennzahlen zu Sicherheitsvorfällen und deren Behandlung umfassen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "24f08281-8abf-4a70-8502-72b86f1ca02a"
+  }
+ ]
+}

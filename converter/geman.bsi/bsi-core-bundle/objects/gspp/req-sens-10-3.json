@@ -1,0 +1,86 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.10.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.10.3",
+ "lifecycle": "active",
+ "title": "Systemadministration - Sicherheitsvorfälle",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Administrierende SOLLTE zu Verfahren und Regelungen bei Sicherheitsvorfällen sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "zu Verfahren und Regelungen bei Sicherheitsvorfällen",
+     "target-object-categories": [
+      "Administrierende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.31",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Für die Behandlung und Nachsorge bei Sicherheitsvorfällen sind die festgelegten Verfahren und Regelungen einzuhalten. Hierzu gehört etwa das Erkennen auffälliger Logeinträge, der Umgang mit kompromittierten Administratorpasswörtern oder das strukturierte Sammeln erster Fakten, bevor ein Incident-Response-Team übernimmt. Effektiv kann auch ein klar dokumentiertes Ablaufdiagramm sein, das den Meldeweg und zulässige Sofortmaßnahmen visuell darstellt und in Administrationshandbüchern oder direkt im Ticket-System hinterlegt ist."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "019ea9a4-70dd-4e10-adfa-37467144aca3"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/REA.1.1"
+  }
+ ]
+}

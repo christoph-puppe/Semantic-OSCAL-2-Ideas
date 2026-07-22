@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ARCH.2.5",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ARCH.2.5",
+ "lifecycle": "active",
+ "title": "Netzplan",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Architektur für Netze SOLLTE einen Netzplan dokumentieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "dokumentieren",
+     "result": "einen Netzplan",
+     "target-object-categories": [
+      "Netze"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Netzplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.37"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein Netzplan (engl. network diagram) stellt eine schematische Darstellung der logischen und physischen Struktur von Kommunikationsnetzen dar und bildet die Grundlage für Transparenz im Betrieb. Er kann einen zentralen Beitrag zur Informationssicherheit leisten, da er Transparenz über die Struktur, Verbindungen und Schutzbedarfe einer Netzwerkumgebung schafft. Ein aktueller Netzplan, aus dem sich gut die Netzstruktur erkennen lässt, ermöglicht es Anschlüssen mit hohem Risiko oder von einzelnen Ausfallstellen (Single Points of Failure) auf einen Blick zu erkennen. Für die Umsetzung ist es nicht erforderlich, jedes Subnetz einzeln in einer Grafik zu visualisieren. Vielmehr kann es hilfreich sein, Netzpläne auf einem abstrahierten Level zu halten, z. B. als logische Übersicht mit Domänen, Segmenten und Übergängen (bereinigter Netzplan). Eine Visualisierung als Layer-Modell (z. B. Infrastruktur-, Kommunikations- und Applikationsebene) kann zusätzliche Einblicke schaffen. Auch eine einfache Pflege als visuelle Skizze kann sinnvoll sein – entscheidend ist die Klarheit und Aktualität."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "7630e7d2-883b-4697-9b7a-b212dfa5666d"
+  }
+ ]
+}

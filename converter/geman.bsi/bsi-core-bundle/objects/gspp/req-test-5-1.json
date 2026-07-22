@@ -1,0 +1,82 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/TEST.5.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "TEST.5.1",
+ "lifecycle": "active",
+ "title": "Information betroffener Kreise",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Änderungen und Tests SOLLTE von der Änderung betroffene Kreise informieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "informieren",
+     "result": "von der Änderung betroffene Kreise"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Betroffene Kreise können je nach Vorhaben z.B. interne oder externe Nutzende, IT-Betrieb, das Monitoring-Team, die Öffentlichkeitsarbeit oder ISB sein. Erforderliche Informationen können z.B. zu erwartende Ausfallzeiten oder Beginn und Ende des Wartungsfensters, die Vorgehensweise zum Bezug von Sicherheitsupdates oder anzupassende Sicherheitseinstellungen sein, die Nutzende selbst vornehmen können."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "1532f91b-d1a5-405f-ada6-11e4b53ae436"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/ASST.5.5"
+  }
+ ]
+}

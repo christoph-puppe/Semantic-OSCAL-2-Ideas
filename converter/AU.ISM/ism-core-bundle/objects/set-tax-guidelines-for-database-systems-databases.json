@@ -1,0 +1,39 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-database-systems-databases",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Databases",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-database-systems-databases-database-register",
+   "sequence": 12820
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-database-systems-databases-protecting-databas",
+   "sequence": 12840
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-database-systems-databases-protecting-databas",
+   "sequence": 12880
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-database-systems-databases-segregation-of-dev",
+   "sequence": 12900
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-database-systems-databases-database-event-log",
+   "sequence": 12920
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Databases",
+     "name": "overview",
+     "prose": "# Further information\n\nFurther information on event logging can be found in the ‘Security monitoring’ section of the [Guidelines for security assurance](#ef60c0e4-acfb-4a8b-b5ed-25675c6e117c)."
+    }
+   ]
+  }
+ }
+}

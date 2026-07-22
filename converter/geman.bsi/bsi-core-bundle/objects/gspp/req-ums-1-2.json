@@ -1,0 +1,53 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/UMS.1.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "UMS.1.2",
+ "lifecycle": "active",
+ "title": "Bewertung des Restrisikos",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Umsetzung SOLLTE das bestehende Restrisiko durch die nicht umgesetzten Anforderungen festlegen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "festlegen",
+     "result": "das bestehende Restrisiko durch die nicht umgesetzten Anforderungen"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Risiken der Nichtumsetzung von Anforderungen können auch konsolidiert werden, um diese für die Institutionsleitung nachvollziehbarer zu machen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "8b7626ab-3fcf-45bd-a7ba-45705436c909"
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/TEST.5.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "TEST.5.4",
+ "lifecycle": "active",
+ "title": "Persistenz",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Änderungen und Tests SOLLTE die Persistenz nach wesentlichen Änderungen testen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "testen",
+     "result": "die Persistenz",
+     "result-specification": "nach wesentlichen Änderungen"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.22",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.43",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Persistenz bedeutet hier, dass eine wesentliche Änderung nach ihrer Einführung dauerhaft wirksam bleibt, also auch nach einem Neustart, einem System-Update oder einem Rückspielen von Konfigurations-Backups nicht unbeabsichtigt verloren geht. Dies könnte beispielsweise dazu führen, dass eine sicherheitsrelevante Konfiguration nach einem Reboot verschwindet oder eine Migration zu einem neuen Anbieter scheitert, weil Daten oder Regeln nicht portabel waren. Eine Institution kann die Anforderung praktisch umsetzen, indem Änderungen nach Abschluss nicht nur funktional, sondern auch über System- und Lebenszyklusereignisse hinweg überprüft werden. Dazu kann es hilfreich sein, Änderungen gezielt mit simulierten Neustarts, Failover-Tests oder dem erneuten Einspielen von Standard-Backups zu validieren. Um den laufenden Betrieb hierdurch nicht zu beeinträchtigen können Systeme oder Anwendungsinstanzen nacheinander oder zu unkritischen Zeiten neu gestartet werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "09606d16-376b-44be-b12e-35829f10d4e4"
+  }
+ ]
+}

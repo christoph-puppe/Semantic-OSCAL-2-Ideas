@@ -1,0 +1,55 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-user-application-hardening",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "User application hardening",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-user-application-hardening-u",
+   "sequence": 7990
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-user-application-hardening-u",
+   "sequence": 8010
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-user-application-hardening-h",
+   "sequence": 8080
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-user-application-hardening-a",
+   "sequence": 8120
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-user-application-hardening-e",
+   "sequence": 8140
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-user-application-hardening-o",
+   "sequence": 8320
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-user-application-hardening-p",
+   "sequence": 8360
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-user-application-hardening-s",
+   "sequence": 8380
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-user-application-hardening-w",
+   "sequence": 8430
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "User application hardening",
+     "name": "overview",
+     "prose": "# User applications\n\nThis section is applicable to user applications typically installed on user workstations, such as artificial intelligence (AI) applications, email clients, office productivity suites, Portable Document Format (PDF) applications, security products (e.g. antivirus applications, device access control applications, HIPS and software firewalls) and web browsers, including their extensions. Additional information on cloud-based versions of user applications can be found in the ‘Managed services and cloud services’ section of the [Guidelines for procurement and outsourcing](#f37a4848-0791-4870-b316-5536c2681c28). Information on server applications can be found in the ‘Server application hardening’ section of these guidelines.\n\n# Further information\n\nFurther information on cyber supply chain risk management can be found in the ‘Cyber supply chain risk management’ section of the [Guidelines for procurement and outsourcing](#f37a4848-0791-4870-b316-5536c2681c28).\n\nFurther information on vendors that have made a pledge to implement Secure by Design and Secure by Default principles and practices can be found on the United States’ Cybersecurity \\& Infrastructure Security Agency’s [Secure by Design Pledge](#4974639a-f41a-4280-ae06-33d1f13d6083) website.\n\nFurther information on patching or updating user applications can be found in the ‘System maintenance’ section of the [Guidelines for system management](#c6ca6620-ccd5-4c5d-b97c-9d92f1162948).\n\nFurther information on the use of AI applications can be found in ASD’s [Careful adoption of agentic AI services](#388c3570-58ed-40be-be5e-bdfba9cfee1d) publication.\n\nFurther information on hardening AI applications can be found in the United States’ National Security Agency’s [Deploying AI Systems Securely: Best Practices for Deploying Secure and Resilient AI Systems](#c5ca2027-161e-4322-9367-7ec736b4846f) publication.\n\nFurther information on hardening Microsoft Office can be found in ASD’s [Hardening Microsoft 365, Office 2021, Office 2019 and Office 2016](#58c9abfb-58fe-416e-a279-dfbfe123c99f) and [Restricting Microsoft Office macros](#dfb52998-0e7e-420d-97e1-d1313c8f919a) publications.\n\nFurther information on hardening Microsoft Office can also be found on the [Microsoft Security Baselines Blog](#0bf3a1ef-031a-419b-80c3-08a08b1cee9d) website.\n\nFurther information on hardening Adobe Reader and Adobe Acrobat can be found in Adobe’s [Security Configuration Guide for Acrobat](#9ad09461-7b3d-4faf-bdcd-61df9952cf49) publication.\n\nFurther information on the implementation and configuration of security products can be found in the ‘Operating system hardening’ section of these guidelines.\n\nFurther information on hardening Microsoft Edge can be found on the [Microsoft Security Baselines Blog](#0bf3a1ef-031a-419b-80c3-08a08b1cee9d) website.\n\nFurther information on hardening Google Chrome can be found in Google’s [Chrome Browser Enterprise Security Configuration Guide (Windows)](#741ab440-5759-4571-894d-e499dea3a54c)."
+    }
+   ]
+  }
+ }
+}

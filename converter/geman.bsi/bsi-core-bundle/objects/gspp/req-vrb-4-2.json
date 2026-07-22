@@ -1,0 +1,60 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/VRB.4.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "VRB.4.2",
+ "lifecycle": "active",
+ "title": "Verbesserungsmaßnahmen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Verbesserung MUSS angemessene Maßnahmen zur Nutzung von Verbesserungspotentialen unter Berücksichtigung der damit verbundenen Vor- und Nachteile festlegen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "festlegen",
+     "result": "angemessene Maßnahmen zur Nutzung von Verbesserungspotentialen",
+     "result-specification": "unter Berücksichtigung der damit verbundenen Vor- und Nachteile"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Verbesserungen zielen nicht primär auf die Behebung von Problemen, sondern auf die proaktive Weiterentwicklung des ISMS ab. Sie können beispielsweise folgende Bereiche adressieren: Optimierung von Prozessen und Abläufen im ISMS; Einführung neuer oder verbesserter Technologien und Methoden; Stärkung der Sicherheitskultur und des Sicherheitsbewusstseins; Erweiterung des Anwendungsbereiches des ISMS; Verbesserung der Integration des ISMS in andere Managementsysteme und Geschäftsprozesse."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "72bd4983-953e-42ec-9870-113fb0d8c079"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/VRB.3.1"
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-gateways-and-servers-domain-based",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Domain-based Message Authentication, Reporting and Conformance",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1540",
+   "sequence": 13290
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1799",
+   "sequence": 13300
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Domain-based Message Authentication, Reporting and Conformance",
+     "name": "overview",
+     "prose": "DMARC enables a domain owner to specify what action receiving email servers should take as a result of domain alignment, SPF and DKIM checks. For emails that do not pass DMARC checks, this includes ‘reject’ (emails are rejected), ‘quarantine’ (emails are marked as spam) or ‘none’ (no action is taken).\n\nDMARC also provides a reporting feature that enables a domain owner to receive reports on the actions taken by receiving email servers. While this feature does not mitigate malicious emails sent to the domain owner’s organisation, it can give the domain owner some visibility of attempts by malicious actors to spoof their organisation’s domains."
+    }
+   ]
+  }
+ }
+}

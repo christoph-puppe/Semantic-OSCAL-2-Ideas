@@ -1,0 +1,37 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/req/CCM-QTR-NID",
+ "version": "2026.07.14.01",
+ "label": "CCM-QTR-NID",
+ "lifecycle": "active",
+ "title": "No Irresponsible Disclosure",
+ "statements": [
+  {
+   "id": "s1",
+   "modality": "must-not",
+   "obligated-parties": [
+    "https://ns.fedramp.gov/cr26/party/providers"
+   ],
+   "prose": {
+    "en": "Providers MUST NOT irresponsibly disclose sensitive information in a Quarterly Review that would likely have an adverse effect on the cloud service offering."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Cloud Service Offering"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Likely"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Provider"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Quarterly Review"
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DEV.3.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DEV.3.1",
+ "lifecycle": "active",
+ "title": "Replay-Angriffe",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Entwicklung für Anwendungen SOLLTE Replay-Angriffe blockieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "blockieren",
+     "result": "Replay-Angriffe",
+     "target-object-categories": [
+      "Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Freigabeplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "0",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.43"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Authentication and Authorization",
+      "Replay Attacks",
+      "Session Hijacking",
+      "Produktbeschreibung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Wenn die Anwendung Anfragen von anderen Anwendungen oder IT-Systemen entgegennimmt (z.B. per API), dann besteht die Gefahr, dass Angreifer eine vorherige Anfrage erneut verwenden um unbefugt Zugang zu erhalten. Maßnahmen können sein: (1) Identifikatoren, die nur einmal gültig sind (Nonce, Sequenznummern), (2) kryptographische Mechanismen wie MAC und Digitale Signaturen, Challenge-Response-Authentifizierung, OTP."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "2eeb41fa-2354-4ea3-a641-c7e5a33a3087"
+  }
+ ]
+}

@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.7.7",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.7.7",
+ "lifecycle": "active",
+ "title": "Beschriftungen entfernen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets SOLLTE alle der Institution zuzuordnenden Beschriftungen vor der Veräußerung von Assets löschen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "löschen",
+     "result": "alle der Institution zuzuordnenden Beschriftungen",
+     "result-specification": "vor der Veräußerung von Assets"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "0",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.45",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.16",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.38"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die „Beschriftung“ eines Assets ist jede physische oder digitale Kennzeichnung, die eine eindeutige Zuordnung des Gegenstands oder Datenträgers zu Werten der Institution ermöglicht. Darunter fallen unter anderem Eigentumskennzeichnungen (engl. asset tags), Seriennummern, Barcodes, Gravuren, Aufkleber mit Logo, aber auch digitale Metadaten wie Gerätebezeichnungen, E-Mail-Konten, Hostnamen oder eingebettete Wasserzeichen. Das Löschen dieser Beschriftungen vor der Veräußerung stellt sicher, dass Dritte nicht unmittelbar auf den ursprünglichen Eigentümer schließen oder unautorisierte Rückschlüsse auf interne Strukturen, Sicherheitsarchitekturen oder Verantwortlichkeiten ziehen. Ohne diese Bereinigung könnte ein weiterveräußertes Gerät durch verbleibende Markierungen auf die Institution hinweisen und so gezielt für Social-Engineering-Angriffe oder Reputationsschäden genutzt werden. Eine solche Zuordnung könnte zudem dazu führen, dass vertrauliche Informationen über Inventar, Sicherheitsstandards oder IT-Bestände unbeabsichtigt offengelegt werden. Zudem könnte eine verbleibende Beschriftung zu Missverständnissen über Eigentumsverhältnisse oder Haftung führen, falls das Asset in einen Vorfall verwickelt wird. Konkret können unter den zu entfernenden Beschriftungen beispielsweise Eigentumsaufkleber mit der Inventarnummer, Etiketten mit Standort- oder Abteilungsbezeichnungen, Markierungen für interne Verwendungszwecke (z.B. \"Testgerät\", \"intern\"), aber auch digital eingebettete Informationen wie institutionelle Metadaten in Office-Dokumenten oder gespeicherte WLAN-Profile auf mobilen Geräten verstanden werden. Auch optische Hinweise wie eingravierte Logos auf Gehäusen oder institutionelle Startbildschirme bei Laptops können darunterfallen. Zur Umsetzung kann es hilfreich sein, vor der Veräußerung eine Sichtprüfung durchzuführen und standardisierte Checklisten zu nutzen, um typische Beschriftungen systematisch zu identifizieren. Je nach Beschaffenheit des Assets kann der Einsatz von Reinigungsmitteln, Etikettenentfernern oder speziellen Werkzeugen in Betracht gezogen werden. Auch softwaregestützte Verfahren, etwa das Zurücksetzen auf Werkseinstellungen und das Prüfen auf verbleibende Metadaten, sind relevant. Nicht zuletzt kann die Einbindung von ISB oder des Datenschutzbeauftragten in Zweifelsfällen Klarheit darüber schaffen, ob eine bestimmte Kennzeichnung potenziell sicherheitsrelevant ist."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "15560885-fab0-4b10-91ac-b1db78ada82b"
+  }
+ ]
+}

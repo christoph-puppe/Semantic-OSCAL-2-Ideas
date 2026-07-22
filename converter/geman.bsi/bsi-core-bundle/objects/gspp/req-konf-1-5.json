@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.1.5",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.1.5",
+ "lifecycle": "active",
+ "title": "Verschlüsselung von Konfigurationsgeheimnissen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration SOLLTE Konfigurationsgeheimnisse verschlüsseln."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verschlüsseln",
+     "result": "Konfigurationsgeheimnisse"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "0",
+     "availability": "0",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Cryptography"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Konfigurationsgeheimnissen sind sensitive, nicht-öffentliche Daten, die von Systemen, Applikationen oder Diensten zur Laufzeit benötigt werden, um auf andere Ressourcen zuzugreifen oder ihre eigene Funktionalität sicherzustellen. Bekannte Beispiele sind Anmeldeinformationen wie Passwörter, Datenbank-Verbindungszeichenfolgen (Connection Strings), API-Schlüssel oder private Schlüssel von Zertifikaten; im Englischen wird hierfür übergreifend der Fachbegriff Secrets verwendet. Der Zweck dieser Vorschrift ist die Sicherstellung der Vertraulichkeit dieser hochsensiblen Informationen. Ungeschützt im Klartext hinterlegt, könnte ein Angreifer bei einem unautorisierten Zugriff auf Konfigurationsdateien, Quellcode-Verzeichnisse oder Backups diese Geheimnisse direkt auslesen und damit weitreichenden Zugriff auf angebundene Systeme oder Daten erlangen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "195fff6c-f5c2-466c-8a28-81b3167dad8d"
+  }
+ ]
+}

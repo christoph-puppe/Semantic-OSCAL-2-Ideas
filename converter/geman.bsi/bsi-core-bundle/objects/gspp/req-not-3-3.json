@@ -1,0 +1,83 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/NOT.3.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "NOT.3.3",
+ "lifecycle": "active",
+ "title": "Sensibilisierung zum Vorgehen im Notfall",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Notfallplanung für Nutzende SOLLTE zur Vorgehensweise in Notfällen und Krisen sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "zur Vorgehensweise in Notfällen und Krisen",
+     "target-object-categories": [
+      "Nutzende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "0",
+     "integrity": "0",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.27",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.40"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4,
+     "tags": [
+      "Kompetenzmanagement"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Eine Sensibilisierung für die Vorgehensweise in Notfällen und Krisen (Contingency Training) stellt sicher, dass alle zuständigen Stellen ihre Aufgaben bei einem Schadensereignis kennen. Zweckmäßig ist es, die Detailtiefe der Sensibilisierung auf die unterschiedlichen Aufgaben bei einem Schadensereignis zuzuschneiden. Beispielsweise genügt es für manche Mitarbeitenden zu wissen, welche Erreichbarkeit bei einem Schadensereignis von ihnen erwartet wird."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "eaee617b-d2db-48b3-8042-67098ad56bc5"
+  }
+ ]
+}

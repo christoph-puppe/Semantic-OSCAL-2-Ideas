@@ -1,0 +1,80 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.8.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.8.2",
+ "lifecycle": "active",
+ "title": "Clean Desk",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende SOLLTE zum Aufräumen von vertraulichen Dokumenten und Datenträgern vor dem Verlassen des Arbeitsplatzes anweisen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "anweisen",
+     "result": "zum Aufräumen von vertraulichen Dokumenten und Datenträgern",
+     "result-specification": "vor dem Verlassen des Arbeitsplatzes",
+     "target-object-categories": [
+      "Nutzende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.29"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein aufgeräumter Arbeitplatz („Clean Desk Policy“) kann dazu beitragen, Informationssicherheit und Datenschutz am Arbeitsplatz zu stärken, indem sie verhindert, dass vertrauliche Unterlagen, Datenträger oder elektronische Geräte unbefugt eingesehen oder entwendet werden. Durch konsequentes Aufräumen am Ende des Arbeitstages oder bei längeren Abwesenheiten kann das Risiko von Datenlecks, Industriespionage oder versehentlicher Offenlegung sensibler Informationen minimiert werden. Gleichzeitig kann eine aufgeräumte Arbeitsumgebung die Konzentration und Effizienz der Mitarbeitenden fördern, da unnötige Ablenkungen reduziert werden und das Wiederfinden wichtiger Unterlagen beschleunigt wird.  Hierzu gehören sowohl physische Unterlagen wie Akten, Notizzettel oder Ausdrucke mit personenbezogenen oder geschäftskritischen Daten, als auch elektronische Datenträger oder Bildschirminhalte."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "b5fcf9c6-b6e5-4018-bb9b-64344a2e0a4e"
+  }
+ ]
+}

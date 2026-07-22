@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-data-transfers-data-transfers",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Data transfers",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-data-transfers-data-transfers-data-transfer-p",
+   "sequence": 16810
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-data-transfers-data-transfers-user-responsibi",
+   "sequence": 16830
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-data-transfers-data-transfers-manual-import-o",
+   "sequence": 16860
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-data-transfers-data-transfers-authorising-exp",
+   "sequence": 16900
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-data-transfers-data-transfers-manual-export-o",
+   "sequence": 16940
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-data-transfers-data-transfers-monitoring-data",
+   "sequence": 16980
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Data transfers",
+     "name": "overview",
+     "prose": "# Performing data transfers\n\nThis section describes controls applicable to manual data transfers and data transfers using gateways or Cross Domain Solutions (CDSs). For data transfers using gateways or CDSs, the ‘Content filtering’ section of the [Guidelines for gateways](#e8bde527-526c-4a6a-b66f-05228f09dd7b) is also applicable.\n\n# Further information\n\nFurther information on manual data transfers using removable media can be found in the ‘Media usage’ section of the [Guidelines for media](#b594c9c0-b42f-4f06-b643-38023275a5c7).\n\nFurther information on data transfers using gateways or CDSs can be found in the ‘Content filtering’ section of the [Guidelines for gateways](#e8bde527-526c-4a6a-b66f-05228f09dd7b)."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,85 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.7.14",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.7.14",
+ "lifecycle": "active",
+ "title": "Unautorisierte WLANs",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende von Endgeräten KANN die Nutzung unautorisierter WLANs untersagen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "untersagen",
+     "result": "die Nutzung unautorisierter WLANs",
+     "target-object-categories": [
+      "Nutzende",
+      "Endgeräte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Zwar sind immer mehr Verbindungen automatisch verschlüsselt, dennoch bergen WLAN-Verbindungen außerhalb der Institution das Risiko, dass Verbindungsdaten abgefangen oder IT-Systeme angegriffen werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "007d7888-bcc0-4595-b448-f178962c609f"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/ASST.4.1"
+  }
+ ]
+}

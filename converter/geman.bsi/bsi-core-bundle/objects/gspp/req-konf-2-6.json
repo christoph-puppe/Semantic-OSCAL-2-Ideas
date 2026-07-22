@@ -1,0 +1,80 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.2.6",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.2.6",
+ "lifecycle": "active",
+ "title": "Automatische Konfigurationsverwaltung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für Endgeräte SOLLTE die Verwaltung durch ein Mobile Device Management (MDM) aktivieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "aktivieren",
+     "result": "die Verwaltung durch ein Mobile Device Management (MDM)",
+     "target-object-categories": [
+      "Endgeräte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "2",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.31",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Konfigurationsanforderungen für Mobile Device Management (MDM) sind im BSI-Mindeststandard für MDM umfassend beschrieben. Es ist empfehlenswert, diese Mindestanforderungen heranzuziehen. Ergänzend wird empfohlen, sicherheitsrelevante Kriterien bereits bei der Produktauswahl zu berücksichtigen, vertrauenswürdige Apps durch Reputationsdienste zu prüfen, kompromittierte Geräte (z. B. durch Jailbreak oder Root) automatisiert zu erkennen und Geofencing zur kontextbezogenen Richtliniendurchsetzung einzusetzen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "c209d678-2ee3-48f9-8fce-016b4f49481c"
+  }
+ ]
+}

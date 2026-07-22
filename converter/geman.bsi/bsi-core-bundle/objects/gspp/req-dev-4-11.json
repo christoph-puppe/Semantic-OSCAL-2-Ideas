@@ -1,0 +1,89 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DEV.4.11",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DEV.4.11",
+ "lifecycle": "active",
+ "title": "Test bei Änderungen am Quellcode",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Entwicklung für Anwendungen SOLLTE Änderungen am Quellcode im Einklang mit den Verfahren und Regelungen für Änderungen und Tests testen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "testen",
+     "result": "Änderungen am Quellcode",
+     "result-specification": "im Einklang mit den Verfahren und Regelungen für Änderungen und Tests",
+     "target-object-categories": [
+      "Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Freigabeplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.28",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4,
+     "tags": [
+      "Change Management"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "„Änderungen am Quellcode“ (engl. source code changes) bezeichnet im gegebenen Kontext sämtliche Modifikationen, die an den Programmbestandteilen einer Anwendung vorgenommen werden, also etwa neue Funktionen, Fehlerkorrekturen oder Anpassungen an Schnittstellen. Fehlerhafte oder ungetestete Anpassungen könnten etwa zu Sicherheitslücken, Datenverlust oder Instabilitäten im Betrieb führen, wohingegen eine strukturierte Prüfung verhindern kann, dass bekannte Schwachstellen erneut auftreten oder unbeabsichtigte Seiteneffekte entstehen. Solche Änderungen sind daher als Teil des Change Managements zu betrachten, dessen Anforderungen im Einzelnen in der Praktik Änderungen und Tests zu finden sind. Zur praktischen Umsetzung kann eine Institution jede Änderung automatisiert durch Static Application Security Testing (SAST) prüfen, wodurch potenzielle Schwachstellen direkt im Quellcode erkannt werden können. Ergänzend ist es sinnvoll Dynamic Application Security Testing (DAST) einzusetzen, um die lauffähige Anwendung in einer Testumgebung gegen typische Angriffe wie SQL-Injection oder Cross-Site-Scripting zu überprüfen. Sinnvolle Maßnahmen können dabei sein: (1) Aufbau einer Continuous-Integration-Pipeline, die automatisierte Unit-, Integrations- und Sicherheitstests einbindet und Ergebnisse konsolidiert darstellt, (2) Durchführung von manuellen explorativen Tests in einer isolierten Testumgebung, um auch unerwartete Nutzungsmuster zu prüfen, (3) Einsatz von Regressionstests, die sicherstellen können, dass neue Änderungen keine bestehenden Funktionen beeinträchtigen. Eine Institution kann damit die Qualitätssicherung stärken und gleichzeitig Angriffsflächen durch fehlerhafte Änderungen reduzieren."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "080fdbcd-0a91-4374-9d1a-c7a1eb078e97"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/TEST.1.1"
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GC.11.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GC.11.1",
+ "lifecycle": "active",
+ "title": "Dokumentenlenkung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Governance und Compliance MUSS ein Verfahren zur Lenkung der Dokumente im Rahmen des ISMS über ihren kompletten Lebenszyklus hinweg verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "ein Verfahren zur Lenkung der Dokumente im Rahmen des ISMS",
+     "result-specification": "über ihren kompletten Lebenszyklus hinweg"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Richtlinie zur Lenkung von Dokumenten und Aufzeichnungen"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ziel eines Verfahrens zur Dokumentenlenkung ist die Sicherstellung der Nachvollziehbarkeit von Dokumenten. Das Verfahren stellt hierbei die Nachvollziehbarkeit über den gesamten Lebenszyklus des Dokuments sicher. Dies beinhaltet die Erstellung bzw. Übernahme (z. B. aus \"Alt-Dokumenten\" oder externen Dokumenten) der Dokumente mit Titel, Autor, Dokumenteneigentümer, Sicherheitsklassifikation, Erstelldatum sowie einheitlicher Formate. Des Weiteren beinhaltet dies die Steuerung mit einem Änderungsmanagement (Versionierung), einer einheitlichen Veröffentlichung, einer angemessen geschützten Ablage und ggf. auch Archivierung sowie einer Rücknahme."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "9cc14941-253d-4bfa-89f6-8902370cc509"
+  }
+ ]
+}

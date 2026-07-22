@@ -1,0 +1,94 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DEV.4.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DEV.4.3",
+ "lifecycle": "active",
+ "title": "Softwarebestandteile (SBOM)",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Entwicklung für Anwendungen SOLLTE die Bestandteile mit Hilfe einer Software Bill of Materials (SBOM) vor dem Release dokumentieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "dokumentieren",
+     "result": "die Bestandteile mit Hilfe einer Software Bill of Materials (SBOM)",
+     "result-specification": "vor dem Release",
+     "target-object-categories": [
+      "Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Entwicklungsdokumentation"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.28"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Produktbeschreibung",
+      "Lieferketten"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Details siehe BSI TR-03183-2. Anwendungen zur Modulverwaltung und Software Composition Analysis (SCA) können dabei unterstützen SBOMs als Teil eines CI/CD Prozesses automatisiert zu sammeln."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "5b695087-3a35-441a-b8c9-9937a681a996"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/BES.7.4.4.1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/TEST.3.1.7"
+  }
+ ]
+}

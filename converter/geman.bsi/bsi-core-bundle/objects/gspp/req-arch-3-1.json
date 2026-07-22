@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ARCH.3.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ARCH.3.1",
+ "lifecycle": "active",
+ "title": "Netzabdeckung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Architektur für WLANs SOLLTE die Netzabdeckung testen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "testen",
+     "result": "die Netzabdeckung",
+     "target-object-categories": [
+      "WLANs"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Netzplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.43"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Drahtlose Netzanbindungen sind schwerer zu schützen als kabelgebundene Netze, da der Perimeter des Netzes schwerer zu erkennen ist. Das erschwert es, die Netzverfügbarkeit zu gewährleisten und gleichzeitig den Zugang zum Netz vor unbefugtem Zugriff oder Störungen zwischen Netzen zu schützen. Zudem können Wände und andere strahlende Geräte wie Mikrowellen-Geräte oder Bluetooth-Sender den Empfang beeinträchtigen. Ein Test des Empfangs an wichtigen Standorten unter realen Bedingungen hilft, die WLAN-Qualität zu gewährleisten.  Der Empfang in den verschiedenen Frequenzbändern kann dabei unterschiedlich ausfallen. Für weitere Informationen, siehe Allgemeinzuteilungen von Frequenzen für Mobilfunkanwendungen, DECT, WLAN, CB-Funk und ähnliche Anwendungen der Bundesnetzagentur. Abdeckungsbereich ist der Bereich, in dem das WLAN mit gewöhnlichen Endgeräten genutzt werden kann. Relevant ist dabei auch die Abdeckung aller Orte, an denen sich Gäste aufhalten, sowie an Orte an denen gerade kein Empfang gewünscht ist, z.B. Serverräume oder abhörsichere Räume."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "57639fa6-7898-4ad8-91c5-cc77106e0d02"
+  }
+ ]
+}

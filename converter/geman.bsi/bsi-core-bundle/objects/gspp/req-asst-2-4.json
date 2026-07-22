@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.2.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.2.4",
+ "lifecycle": "active",
+ "title": "Klassifizierung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets für Daten SOLLTE diese einer Schutzbedarfsklasse zuweisen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "zuweisen",
+     "result": "diese einer Schutzbedarfsklasse",
+     "target-object-categories": [
+      "Daten"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Inventar Informationen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.16",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.17"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Klassifizierung dient dazu, Daten entsprechend ihrer Schutzbedürftigkeit systematisch zu ordnen, um angemessene Schutzmaßnahmen zielgerichtet umzusetzen und Risiken effektiv zu reduzieren. Unter Klassifizierung versteht man dabei die Einteilung von Daten in Kategorien, etwa \"öffentlich\", \"intern\", \"vertraulich\" oder \"Verschlussache - Nur für den Dienstgebrauch\". Beispielsweise ist eine öffentlich zugängliche Marketingbroschüre weniger sensibel als personenbezogene Kundendaten, Betriebs- und Geschäftsgeheimnisse oder staatliche Verschlusssachen. Anzahl der Klassen und Umfang der Beschreibungen können sich an den ermittelten Risiken und der Menge der verarbeiteten Informationen orientieren. Die Kriterien zur Klassifizierung können sich daran orientieren, mit welchen Schäden eine Kompromittierung der Vertraulichkeit, Integrität oder Verfügbarkeit verbunden wäre, z.B. geschätzte Umsatzverluste, Gefahr für die Allgemeinheit, Schädigung der Rechte und Freiheiten betroffener Personen. Für Assets ist es sinnvoll, diese im Einklang mit der Klassifikation der Informationen ebenfalls in Klassen zu unterteilen, für deren Verarbeitung sie gebraucht werden. Je nach Aufgaben der Institution und Arten von verarbeiteten Informationen bietet es sich an, ein bestehendes Klassifikationsschema 1:1 zu verwenden - etwa das Schema der Verschlusssachenanweisung (VSA) - oder ein eigenes Schema zu erstellen, in dem mehrere bestehende Schemata auf die eigenentwickelten Klassen abgebildet werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "41530972-ff04-4df0-a2b5-8bab6859becb"
+  }
+ ]
+}

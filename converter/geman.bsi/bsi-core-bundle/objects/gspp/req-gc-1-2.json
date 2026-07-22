@@ -1,0 +1,63 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GC.1.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GC.1.2",
+ "lifecycle": "active",
+ "title": "Freigabe des ISMS",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Governance und Compliance MUSS alle festgelegten Verfahren für das ISMS durch die Institutionsleitung autorisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "autorisieren",
+     "result": "alle festgelegten Verfahren für das ISMS",
+     "result-specification": "durch die Institutionsleitung"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Managementbericht"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Freigabe des Prozesses der ISMS-Verfahren erfolgt durch die Institutionsleitung. Diese Freigabe sollte dokumentiert werden, um Verbindlichkeit und Nachvollziehbarkeit sicherzustellen. Beispielsweise kann diese Freigabe durch die Vorlage eines Managementberichts eingeholt werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "d6d44aa6-9010-40f0-9c3b-cc568b951410"
+  }
+ ]
+}

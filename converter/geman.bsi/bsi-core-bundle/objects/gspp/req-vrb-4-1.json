@@ -1,0 +1,53 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/VRB.4.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "VRB.4.1",
+ "lifecycle": "active",
+ "title": "Korrekturmaßnahmen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Verbesserung MUSS angemessene Korrekturmaßnahmen zur Beseitigung der Ursachen von Fehlern festlegen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "festlegen",
+     "result": "angemessene Korrekturmaßnahmen zur Beseitigung der Ursachen von Fehlern"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Bei der Entwicklung von Korrekturvorschlägen zur Beseitigung von Fehlerursachen sollten folgende Aspekte berücksichtigt werden: Die vorgeschlagenen Korrekturen müssen die identifizierten Grundursachen adressieren und nicht nur die Symptome beheben. Die Korrekturen sollten angemessen und verhältnismäßig sein, also in einem sinnvollen Verhältnis zum Risiko oder zur Bedeutung der Nicht-Konformität stehen. Die Korrekturen sollten nachhaltig wirken und wiederkehrende Probleme verhindern. Je nach Ursache können unterschiedliche Arten von Korrekturen erforderlich sein bspw. organisatorische Anpassungen wie die Überarbeitung von Prozessen, Richtlinien oder Zuständigkeiten; personelle oder disziplinarische Maßnahmen; infrastrukturelle Änderungen wie bauliche Anpassungen oder Verbesserungen der physischen Sicherheit; technische Anpassungen an Hardware, Software oder Netzwerkinfrastruktur; strategische Maßnahmen, die eine Entscheidung oder Unterstützung der Institutionsleitung erfordern."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "6bfdeefe-8025-4e28-8496-f78fd19f5f7d"
+  }
+ ]
+}

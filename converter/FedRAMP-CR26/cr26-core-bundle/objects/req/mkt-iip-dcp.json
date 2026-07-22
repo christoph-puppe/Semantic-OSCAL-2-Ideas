@@ -1,0 +1,34 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/req/MKT-IIP-DCP",
+ "version": "2026.07.14.01",
+ "label": "MKT-IIP-DCP",
+ "lifecycle": "active",
+ "title": "Demonstrating Continuous Progress",
+ "statements": [
+  {
+   "id": "s1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.fedramp.gov/cr26/party/providers"
+   ],
+   "prose": {
+    "en": "Providers MUST demonstrate continuous progress towards a FedRAMP Certification, documented in their Trust Center or website and updated at least quarterly; progress is measured by the provider against documented goals and milestones."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Provider"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Trust Center"
+  }
+ ],
+ "facets": {
+  "https://ns.fedramp.gov/cr26/facet/narrative@1": {
+   "note": "This is an opportunity for a business to showcase its goals and progress, and should be seen as a marketing and customer experience challenge instead of a compliance challenge."
+  }
+ }
+}

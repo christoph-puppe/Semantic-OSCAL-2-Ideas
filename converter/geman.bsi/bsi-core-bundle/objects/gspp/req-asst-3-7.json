@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.3.7",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.3.7",
+ "lifecycle": "active",
+ "title": "Pseudonymisierung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets für Informationen KANN die Pseudonymisierung vor der Weitergabe verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "die Pseudonymisierung",
+     "result-specification": "vor der Weitergabe",
+     "target-object-categories": [
+      "Informationen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Bei der Pseudonymisierung werden Informationen so verändert, dass sie für den Empfänger nicht mehr dem ursprünglichen Informationswert oder Datensatz zugeordnet werden können, ohne zusätzliche Informationen hinzuzuziehen. Die Weitergabe meint hier jegliche Form des Teilens von Informationen über die Grenzen des Informationsverbundes hinaus – etwa an externe Dienstleister, Behörden oder Partnerinstitutionen – unabhängig davon, ob dies elektronisch, schriftlich oder mündlich geschieht. Anwendungsbeispiele sind personenbezogene Daten oder institutionsinterne IP-Adressbereiche, die zu Diagnosezwecken herausgegeben oder zum Zugriff auf Cloud-Dienste von der Institution verwendet werden. Problematisch ist hierbei oft die funktionsenthaltende Pseudonymisierung, d.h. die Pseudonymisierung derart, dass es bei der beabsichtigten Verwendung zu keinen Problemen durch die Pseudonymisierung kommt. Typische Umsetzungsmaßnahmen können beinhalten: (1) den Einsatz technischer Pseudonymisierungsverfahren wie Hashing oder Tokenisierung, (2) die getrennte, zugriffsbeschränkte Speicherung von Zuordnungstabellen („mapping tables“) in gesicherten Datenräumen oder Datenbanken, und (3) den Einsatz kontrollierter Schlüsselverwaltung, die nur autorisierten Personen eine Re-Identifizierung erlaubt. Auch kann eine Pseudonymisierung in Prozessen oder Schnittstellen fest verankert werden, etwa durch automatisierte Filtermechanismen bei Exporten oder vor externen Übertragungen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "6c943ac9-6cd1-4fd2-98b0-6bef3f492022"
+  }
+ ]
+}

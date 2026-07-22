@@ -1,0 +1,95 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GEB.3.7",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GEB.3.7",
+ "lifecycle": "active",
+ "title": "Kontrolle der Zutrittskontrolle",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Gebäudemanagement für Standorte SOLLTE die angewendeten Zutrittskontrollmaßnahmen {param:geb.3.7-prm1} überprüfen."
+   },
+   "parameters": [
+    {
+     "name": "geb.3.7-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überprüfen",
+     "result": "die angewendeten Zutrittskontrollmaßnahmen",
+     "result-specification": "{{regelmäßig}}",
+     "target-object-categories": [
+      "Standorte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Übungs- und Prüfplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.44",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.16",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.24"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Funktionsfähigkeit von Zugangkontrollen wie Wachdiensten und Schließanlagen ist essenziell,  um den Zutritt Unbefugter wirksam verhindern zu können. Regelmäßige Überprüfungen können beispielsweise durch angekündigte oder unangekündigte Rundgänge, die stichprobenartige Auswertung von Kameraaufzeichnungen und Logbüchern oder die Analyse verschiedener Kennzahlen erfolgen."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "geb.3.7-prm1": {
+     "label": "regelmäßig",
+     "alt-identifier": "407e3436-9719-4c45-a009-183c7818d376"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "407e3436-9719-4c45-a009-183c7818d376"
+  }
+ ]
+}

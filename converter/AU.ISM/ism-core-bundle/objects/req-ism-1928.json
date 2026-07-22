@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-1928",
+ "version": "2026.06.18",
+ "label": "ISM-1928",
+ "lifecycle": "active",
+ "title": "Control: ism-1928",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Backups of Microsoft AD DS domain controllers, Microsoft AD CS CA servers, Microsoft AD FS servers and Microsoft Entra Connect servers are encrypted using ASD-approved cryptography, stored securely and only accessible to backup administrator accounts."
+   }
+  }
+ ]
+}

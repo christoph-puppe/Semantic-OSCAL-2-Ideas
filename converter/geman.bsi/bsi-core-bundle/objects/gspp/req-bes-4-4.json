@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.4.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.4.4",
+ "lifecycle": "active",
+ "title": "Vertragsvorlage für Outsourcing",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Outsourcing SOLLTE Kriterien für Outsourcing-Dienstleistungen in einer standardisierten Richtlinie für Verträge dokumentieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "dokumentieren",
+     "result": "Kriterien für Outsourcing-Dienstleistungen in einer standardisierten Richtlinie für Verträge",
+     "target-object-categories": [
+      "Outsourcing"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Beschaffungskriterien"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.20"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Lieferketten"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Eine standardisierte Richtlinie für Verträge enthält klare grundlegende Kriterien für Verträge mit Anbietenden von Outsourcing , etwa zu Datenlokationen, Test- und Freigabeverfahren, Compliance-Risiken bei Anbietenden von Outsourcing sowie bei Sub-Dienstleistenden, sowie weiteren Aspekte der Informationssicherheit für Outsourcing-Vorhaben. Der besondere Fokus auf Outsourcing ergibt sich daraus, dass hierbei nicht nur Werk- oder Dienstleistungen zugekauft werden, sondern sensible Prozesse oder Daten langfristig aus der direkten Kontrolle der Institution herausgegeben werden. Ohne standardisierte Kriterien könnte ein eigenhändisch formulierter Vertrag z. B. unpräzise Datenschutzregelungen enthalten, was im Vorfallfall dazu führen könnte, dass vertrauliche Daten in ein unsicheres Drittland gelangen oder dass bei Ausfällen keine klaren Eskalationswege bestehen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "5e9bc675-aaa4-48eb-a7c2-5ab27fff09c4"
+  }
+ ]
+}

@@ -1,0 +1,94 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/NOT.4.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "NOT.4.4",
+ "lifecycle": "active",
+ "title": "Automatische Datensicherung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Notfallplanung für Daten SOLLTE die Datensicherung durch {param:not.4.4-prm1} ausführen."
+   },
+   "parameters": [
+    {
+     "name": "not.4.4-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "ausführen",
+     "result": "die Datensicherung",
+     "result-specification": "durch {{einen automatisierten Mechanismus}}",
+     "target-object-categories": [
+      "Daten"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Datensicherungskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.45",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.39"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein automatisierter Mechanismus (engl. automated mechanism) ist hier ein technisches Verfahren, das ohne manuelles Zutun in festgelegten Intervallen oder bei bestimmten Ereignissen Sicherungskopien von Daten erstellt und dokumentiert. Er kann z. B. über Skripte, Backup-Software oder systemeigene Dienste umgesetzt werden, die regelmäßig und zuverlässig ausgeführt werden. Der Zweck solcher Mechanismen liegt darin, menschliche Fehlerquellen und Auslassungen zu vermeiden, denn eine manuelle Sicherung könnte in Stresssituationen übersehen werden oder unvollständig sein. Die Vorgabe kann so verhindern, dass im Falle von Schadsoftwarebefall oder Hardwareausfall kritische Daten unwiederbringlich verloren gehen, und sie kann eine schnelle Wiederherstellung der Arbeitsfähigkeit nach einem Vorfall ermöglichen. Ohne Automatisierung könnte eine Institution etwa nach einem Ransomware-Angriff feststellen, dass keine aktuelle Sicherung vorliegt. Die Anforderung ist auch dann erfüllt, wenn zusätzlich manuelle Datensicherungen durchgeführt werden."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "not.4.4-prm1": {
+     "label": "einen automatisierten Mechanismus",
+     "alt-identifier": "20fa9557-7db9-4367-9592-35ca5d8e8be7"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "20fa9557-7db9-4367-9592-35ca5d8e8be7"
+  }
+ ]
+}

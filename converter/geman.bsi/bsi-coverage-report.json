@@ -1,0 +1,2229 @@
+{
+ "sources": [
+  {
+   "key": "gspp",
+   "title": "Anwenderkatalog Grundschutz++",
+   "version": "2026-07-03T09:11:21.450351+00:00"
+  },
+  {
+   "key": "mstls",
+   "title": "Entwurf Mindeststandard Bund TLS",
+   "version": "2026-04-23T13:28:32.097584+00:00"
+  }
+ ],
+ "totals": {
+  "leaf-values": 49804,
+  "mapped": 49804,
+  "unmapped": 0,
+  "coverage-pct": 100.0
+ },
+ "objects": {
+  "requirements": 658,
+  "statements": 1015,
+  "sets": 167,
+  "total": 825
+ },
+ "modality": {
+  "must": 155,
+  "should": 626,
+  "may": 225,
+  "unspecified": 9
+ },
+ "unknown-modal-verbs": {},
+ "defective-prop-values": 216,
+ "defects": [
+  {
+   "control": "GC.1.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{einem anerkannten Standard}}"
+  },
+  {
+   "control": "GC.9.1.1",
+   "part": "statement",
+   "prop": "result",
+   "value": "die {{Rollen und Zuständigkeiten}} im Rahmen des ISMS"
+  },
+  {
+   "control": "GC.9.1.1.1",
+   "part": "statement",
+   "prop": "result",
+   "value": "die Zuständigkeit für Informationssicherheit {{einer unabhängigen Person}}"
+  },
+  {
+   "control": "GC.10.1.2",
+   "part": "statement",
+   "prop": "result",
+   "value": "bei sicherheitsrelevanten Projekten die Beteiligung {{der relevanten Sicherheitsorgane}}"
+  },
+  {
+   "control": "UMS.1.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "im Anforderungspaket vollständig {{regelmäßig}}"
+  },
+  {
+   "control": "UMS.5.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{eine zuständige Person oder Rolle}}"
+  },
+  {
+   "control": "VRB.2.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "VRB.6.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "PERF.1.2",
+   "part": "statement",
+   "prop": "result",
+   "value": "die {{regelmäßige}} Überprüfung und Fortschreibung des Umsetzungsplans"
+  },
+  {
+   "control": "PERF.1.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "PERF.2.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} sowie anlassbezogen"
+  },
+  {
+   "control": "PERF.4.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} sowie anlassbezogen in einem Managementbericht"
+  },
+  {
+   "control": "PERF.4.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} anhand des Managementberichtes"
+  },
+  {
+   "control": "PERF.5.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "zur {{regelmäßigen}} Überwachung der Informationssicherheit"
+  },
+  {
+   "control": "RISK.1.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{einem anerkannten Standard}}"
+  },
+  {
+   "control": "ASST.1.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{zuständigen Personen oder Rollen}}"
+  },
+  {
+   "control": "ASST.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} und anlassbezogen auf Aktualität"
+  },
+  {
+   "control": "ASST.2.1.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{einer zuständigen Person oder Rolle}}"
+  },
+  {
+   "control": "ASST.2.3.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{eine zuständige Person oder Rolle}}"
+  },
+  {
+   "control": "ASST.2.3.2.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig oder bei Änderungen}}"
+  },
+  {
+   "control": "ASST.3.10",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{eine zuständige Person oder Rolle}}"
+  },
+  {
+   "control": "ASST.3.11",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{eine zuständige Person oder Rolle}}"
+  },
+  {
+   "control": "ASST.4.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{eine zuständige Person oder Rolle}}"
+  },
+  {
+   "control": "ASST.4.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{eine zuständige Person oder Rolle}}"
+  },
+  {
+   "control": "ASST.5.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig oder prädiktiv}}"
+  },
+  {
+   "control": "ASST.5.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{eine zuständige Person oder Rolle}}"
+  },
+  {
+   "control": "ASST.7.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "für {{eine bestimmte Frist}}"
+  },
+  {
+   "control": "ASST.7.2.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "mindestens für {{eine bestimmte Frist}}"
+  },
+  {
+   "control": "ASST.7.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{kryptografisches löschen, überschreiben oder vernichten des Speichermediums}}"
+  },
+  {
+   "control": "ASST.7.3.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{einem anerkannten Standard}} gemäß {{einer Sicherheitsstufe}}"
+  },
+  {
+   "control": "ASST.7.3.3",
+   "part": "statement",
+   "prop": "result",
+   "value": "die Daten durch {{eine vom BSI zugelassene Löschanwendung}}"
+  },
+  {
+   "control": "ASST.7.6",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{eine zuständige Person oder Rolle}}"
+  },
+  {
+   "control": "PERS.1.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{zuständigen Personen oder Rollen}}"
+  },
+  {
+   "control": "PERS.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} und anlassbezogen auf Aktualität"
+  },
+  {
+   "control": "PERS.4.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "PERS.4.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "im Einklang mit den Anforderungen der Praktik Sensibilisierung bei Neuzugang und {{regelmäßig}}"
+  },
+  {
+   "control": "PERS.5.3",
+   "part": "statement",
+   "prop": "result",
+   "value": "die Vertrauenswürdigkeit für {{definierte sicherheitskritische Rollen}}"
+  },
+  {
+   "control": "PERS.5.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} und anlassbezogen"
+  },
+  {
+   "control": "BES.1.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{zuständigen Personen oder Rollen}}"
+  },
+  {
+   "control": "BES.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} und anlassbezogen auf Aktualität"
+  },
+  {
+   "control": "BES.1.5",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{eine zuständige Person oder Rolle}}"
+  },
+  {
+   "control": "BES.4.2",
+   "part": "statement",
+   "prop": "result",
+   "value": "{{Kriterien}} für die Beschaffung"
+  },
+  {
+   "control": "BES.4.8.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{einem passenden Sicherheitsstandard}}"
+  },
+  {
+   "control": "BES.5.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Kriterien}}"
+  },
+  {
+   "control": "BES.5.5.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Kriterien}}"
+  },
+  {
+   "control": "BES.5.6.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "für {{kritische Komponenten}}"
+  },
+  {
+   "control": "BES.5.10.3.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{einem anerkannten Standard}}"
+  },
+  {
+   "control": "BES.7.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Kriterien zur Akzeptanz}} vor der ersten Verwendung"
+  },
+  {
+   "control": "BES.7.4.4.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{einem anerkannten Standard}}"
+  },
+  {
+   "control": "BES.7.4.12",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{einem anerkannten Standard}}"
+  },
+  {
+   "control": "DLS.1.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{zuständigen Personen oder Rollen}}"
+  },
+  {
+   "control": "DLS.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} und anlassbezogen auf Aktualität"
+  },
+  {
+   "control": "DLS.2.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "bei der Übertragung zum Anbieter nach {{einem anerkannten Standard}}"
+  },
+  {
+   "control": "DLS.3.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "DLS.3.1.1",
+   "part": "statement",
+   "prop": "result",
+   "value": "die Einhaltung der Sicherheitsvorgaben anhand eines {{Audits, Zertifikates oder vergleichbaren Sicherheitsnachweises}}"
+  },
+  {
+   "control": "DLS.3.1.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "DLS.3.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "auf Änderungen der Gefährdungslage oder Prozessinhalte {{regelmäßig}}"
+  },
+  {
+   "control": "DLS.3.6",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "TEST.1.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{für den Informationsverbund, pro Geschäftsprozess oder pro IT-System}}"
+  },
+  {
+   "control": "TEST.1.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{zuständigen Personen oder Rollen}}"
+  },
+  {
+   "control": "TEST.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} und anlassbezogen auf Aktualität"
+  },
+  {
+   "control": "TEST.3.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "TEST.5.5",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "GEB.1.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{zuständigen Personen oder Rollen}}"
+  },
+  {
+   "control": "GEB.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} und anlassbezogen auf Aktualität"
+  },
+  {
+   "control": "GEB.1.3.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "vor Autorisierung anhand von {{Kriterien}}"
+  },
+  {
+   "control": "GEB.3.3.1",
+   "part": "statement",
+   "prop": "result",
+   "value": "Zutritte durch {{einen automatiserten Mechanismus}}"
+  },
+  {
+   "control": "GEB.3.3.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{eine zuständige Person oder Rolle}}"
+  },
+  {
+   "control": "GEB.3.5",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{einer entsprechenden Norm}}"
+  },
+  {
+   "control": "GEB.3.6",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{einer entsprechenden Norm}}"
+  },
+  {
+   "control": "GEB.3.7",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "GEB.4.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{eine zuständige Person oder Rolle}}"
+  },
+  {
+   "control": "GEB.6.4",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{einer anerkannten Norm}}"
+  },
+  {
+   "control": "GEB.7.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{zuständigen Personen oder Rollen}}"
+  },
+  {
+   "control": "GEB.7.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "GEB.8.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{einem anerkannten Standard}}"
+  },
+  {
+   "control": "GEB.8.4",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Schwellwerten}}"
+  },
+  {
+   "control": "GEB.9.1.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} vorausschauend"
+  },
+  {
+   "control": "GEB.9.1.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "für {{eine Stützzeit}}"
+  },
+  {
+   "control": "GEB.9.1.4",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "für {{eine längere Stützzeit}}"
+  },
+  {
+   "control": "GEB.9.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "GEB.9.6",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "auf {{für den Betrieb zuständige Personen oder Rollen}}"
+  },
+  {
+   "control": "GEB.10.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Schwellwerten}}"
+  },
+  {
+   "control": "GEB.10.1.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "GEB.10.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Schwellwerten}}"
+  },
+  {
+   "control": "GEB.10.2.4",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": ", sodass sie Feuern für {{eine bestimmte Frist}} standhalten,"
+  },
+  {
+   "control": "GEB.10.2.7",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "GEB.10.4",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{einem anerkannten Standard}}"
+  },
+  {
+   "control": "GEB.10.4.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}  auf Niederohmigkeit"
+  },
+  {
+   "control": "SENS.1.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{zuständigen Personen oder Rollen}}"
+  },
+  {
+   "control": "SENS.1.2",
+   "part": "statement",
+   "prop": "result",
+   "value": "den Erfolg der Sensibilisierung anhand {{objektivierter Kriterien}}"
+  },
+  {
+   "control": "SENS.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "ARCH.1.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{zuständigen Personen oder Rollen}}"
+  },
+  {
+   "control": "ARCH.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} und anlassbezogen auf Aktualität"
+  },
+  {
+   "control": "ARCH.2.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Kriterien}}"
+  },
+  {
+   "control": "ARCH.2.6",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "ARCH.3.4",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{nach einem anerkannten Standard}}"
+  },
+  {
+   "control": "ARCH.4.1.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand {{dynamischer Kriterien}} im Einklang mit den zugehörigen Anforderungen des Identitäts- und Berechtigungsmanagements"
+  },
+  {
+   "control": "ARCH.4.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{eine zuständige Person oder Rolle}}"
+  },
+  {
+   "control": "ARCH.5.1.10",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Kriterien}}"
+  },
+  {
+   "control": "ARCH.6.1",
+   "part": "statement",
+   "prop": "result",
+   "value": "eine  {{physisch oder logisch}} kontrollierte Verbindungsführung"
+  },
+  {
+   "control": "ARCH.6.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{einem anerkannten Standard}}"
+  },
+  {
+   "control": "ARCH.7.1",
+   "part": "statement",
+   "prop": "result",
+   "value": "Serverdienste ausschließlich auf für die Anwendung dedizierten {{virtuellen oder physischen}} Hostsystemen"
+  },
+  {
+   "control": "ARCH.9.2",
+   "part": "statement",
+   "prop": "result",
+   "value": "eine {{netzbasierte oder serverbasierte}} automatische Lastverteilung"
+  },
+  {
+   "control": "ARCH.9.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Schwellwerten}}"
+  },
+  {
+   "control": "BER.1.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{zuständigen Personen oder Rollen}}"
+  },
+  {
+   "control": "BER.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} und anlassbezogen auf Aktualität"
+  },
+  {
+   "control": "BER.2.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "BER.3.7",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{bestimmte Personen oder Rollen}}"
+  },
+  {
+   "control": "BER.3.15",
+   "part": "statement",
+   "prop": "result",
+   "value": "weitere Anmeldeversuche nach Erreichen von {{einem maximalen Schwellwert an}} fehlgeschlagenen Versuchen"
+  },
+  {
+   "control": "BER.3.16",
+   "part": "statement",
+   "prop": "result",
+   "value": "weitere Anmeldeversuche nach Erreichen von {{einem maximalen Schwellwert an}} fehlgeschlagenen Versuchen"
+  },
+  {
+   "control": "BER.3.17",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{einer Frist}}"
+  },
+  {
+   "control": "BER.3.18",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{einer Frist}}"
+  },
+  {
+   "control": "BER.3.19",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "für {{einen bestimmten Zeitraum}}"
+  },
+  {
+   "control": "BER.4.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "für {{besonders kritische Ressourcen oder Zugänge}}"
+  },
+  {
+   "control": "BER.4.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{bestimmte Personen oder Rollen}}"
+  },
+  {
+   "control": "BER.4.4",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} auf Erforderlichkeit"
+  },
+  {
+   "control": "BER.4.4.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} auf Übereinstimmung"
+  },
+  {
+   "control": "BER.5.10",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{einen automatisierten Mechanismus}}"
+  },
+  {
+   "control": "BER.6.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "bei der Schlüsselerzeugung nach {{einem anerkannten Standard}}"
+  },
+  {
+   "control": "BER.6.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{einem anerkannten Standard}} bei der Schlüsselerzeugung"
+  },
+  {
+   "control": "BER.6.5",
+   "part": "statement",
+   "prop": "result",
+   "value": "{{Kriterien}} für die Qualität von Zufallszahlen"
+  },
+  {
+   "control": "BER.6.7",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{eine zuständige Person oder Rolle}}"
+  },
+  {
+   "control": "BER.6.14",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "BER.6.16.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{einer zuständigen Person oder Rolle}}"
+  },
+  {
+   "control": "NOT.1.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{zuständigen Personen oder Rollen}}"
+  },
+  {
+   "control": "NOT.1.1.4",
+   "part": "statement",
+   "prop": "result",
+   "value": "ein {{Reaktiv-, Aufbau- oder Standard-}}BCMS nach {{einem anerkannten BCM-Standard}}"
+  },
+  {
+   "control": "NOT.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} und anlassbezogen auf Aktualität"
+  },
+  {
+   "control": "NOT.2.1.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "einschließlich BAO-Stab und Notfallteams {{zuständigen Personen oder Rollen}}"
+  },
+  {
+   "control": "NOT.2.1.4",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}  durch Stabsübungen"
+  },
+  {
+   "control": "NOT.3.4",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "NOT.4.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "NOT.4.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "NOT.4.4",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{einen automatisierten Mechanismus}}"
+  },
+  {
+   "control": "NOT.4.5",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "NOT.4.5.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "NOT.4.5.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "NOT.4.8",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{einen anerkannten kryptographischen Algorithmus}}"
+  },
+  {
+   "control": "NOT.4.13",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{einem anerkannten Standard}} {{regelmäßig}}"
+  },
+  {
+   "control": "NOT.4.14",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "NOT.4.16",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "NOT.4.16.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "mindestens anhand von repräsentativen Stichproben {{regelmäßig}}"
+  },
+  {
+   "control": "NOT.4.17",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "DET.1.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{zuständigen Personen oder Rollen}}"
+  },
+  {
+   "control": "DET.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} und anlassbezogen auf Aktualität"
+  },
+  {
+   "control": "DET.2.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{dediziertem Personal}}"
+  },
+  {
+   "control": "DET.3.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "mindestens für {{eine bestimmte Frist}}"
+  },
+  {
+   "control": "DET.3.1.6",
+   "part": "statement",
+   "prop": "result",
+   "value": "{{bestimmte systemspezifische Ereignisse}}"
+  },
+  {
+   "control": "DET.3.1.11",
+   "part": "statement",
+   "prop": "result",
+   "value": "{{bestimmte anwendungsspezifische Ereignisse}}"
+  },
+  {
+   "control": "DET.3.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Kriterien}}"
+  },
+  {
+   "control": "DET.3.4",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{bei Erreichen eines bestimmten Schwellwertes oder regelmäßig}}"
+  },
+  {
+   "control": "DET.3.6",
+   "part": "statement",
+   "prop": "result",
+   "value": "Nachweise für den Zusammenhang {{bestimter Ereignisse}} mit {{einer bestimmten Person oder Rolle}}"
+  },
+  {
+   "control": "DET.4.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{einen automatisierten Mechanismus}}"
+  },
+  {
+   "control": "DET.4.9",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "DET.4.11.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "DET.4.11.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Kriterien}}"
+  },
+  {
+   "control": "DET.4.12",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Schwellwerten}}"
+  },
+  {
+   "control": "DET.4.12.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Schwellwerten}}"
+  },
+  {
+   "control": "DET.4.13",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Schwellwerten}}"
+  },
+  {
+   "control": "DET.4.14",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Schwellwerten}}"
+  },
+  {
+   "control": "DET.4.15",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Schwellwerten}}"
+  },
+  {
+   "control": "DET.4.16",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Schwellwerten}}"
+  },
+  {
+   "control": "DET.4.17",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Schwellwerten}}"
+  },
+  {
+   "control": "DET.4.18",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "DET.4.19",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{einen automatisierten Mechanismus}}"
+  },
+  {
+   "control": "DET.5.1.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{risikobasierten Kriterien}} innerhalb {{einer Frist}}"
+  },
+  {
+   "control": "DET.5.3.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{zuständige Personen oder Rollen}}"
+  },
+  {
+   "control": "DET.5.4",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{einer anerkannten Vorgehensweise}} {{regelmäßig}}"
+  },
+  {
+   "control": "DET.5.5",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} durch unabhängig agierende Sicherheitsexperten"
+  },
+  {
+   "control": "DET.5.6",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "DET.5.7",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{bei Sicherheitsvorfällen mit verdeckten Kanälen und regelmäßig}}"
+  },
+  {
+   "control": "DET.5.8",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "DET.5.8.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Kriterien zur Suche}} {{regelmäßig}}"
+  },
+  {
+   "control": "DET.5.10.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{einen automatisierten Mechanismus}}"
+  },
+  {
+   "control": "DET.5.10.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{einen automatisierten Mechanismus}}"
+  },
+  {
+   "control": "DET.6.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Kriterien}}"
+  },
+  {
+   "control": "DET.6.1.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Kriterien}} durch {{einen automatisierten Mechanismus}}"
+  },
+  {
+   "control": "DET.6.1.2",
+   "part": "statement",
+   "prop": "result",
+   "value": "bei sicherheitskritischen Ereignissen eine Alarmierung von {{für die Vorfallsbehandlung zuständigen Personen oder Rollen}}"
+  },
+  {
+   "control": "DET.6.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{einen automatisierten Mechanismus}}"
+  },
+  {
+   "control": "REA.1.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{zuständigen Personen oder Rollen}}"
+  },
+  {
+   "control": "REA.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} und anlassbezogen auf Aktualität"
+  },
+  {
+   "control": "REA.1.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "REA.2.5",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "bei Vorfällen, die {{bestimmte Kriterien}} erfüllen,"
+  },
+  {
+   "control": "REA.2.5.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "binnen {{einer Frist}}"
+  },
+  {
+   "control": "REA.3.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "KONF.1.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{zuständigen Personen oder Rollen}}"
+  },
+  {
+   "control": "KONF.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} und anlassbezogen auf Aktualität"
+  },
+  {
+   "control": "KONF.2.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{anerkannten Standards}} im Einklang mit den zugehörigen Anforderungen zum Identitäts- und Berechtigungsmanagement"
+  },
+  {
+   "control": "KONF.2.5",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "KONF.2.5.1",
+   "part": "statement",
+   "prop": "result",
+   "value": "die Überprüfung der Konfiguration durch {{einen automatisierten Mechanismus}}"
+  },
+  {
+   "control": "KONF.3.5",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{durch einen automatisierten Mechanismus}}"
+  },
+  {
+   "control": "KONF.3.6.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "bei Inaktivität nach {{einer längeren Frist}}"
+  },
+  {
+   "control": "KONF.4.2.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{einen anerkannten kryptographischen Algorithmus}}"
+  },
+  {
+   "control": "KONF.6.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "von {{bestimmten Anwendungen}}"
+  },
+  {
+   "control": "KONF.7.7",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "KONF.9.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Schwellwerten}}"
+  },
+  {
+   "control": "KONF.9.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "für {{bestimmte kritische Funktionen}}"
+  },
+  {
+   "control": "KONF.10.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{anerkannten Standards}} im Einklang mit den zugehörigen Anforderungen zum Identitäts- und Berechtigungsmanagement"
+  },
+  {
+   "control": "KONF.10.5",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "KONF.10.5.1",
+   "part": "statement",
+   "prop": "result",
+   "value": "die Überprüfung der Konfiguration durch {{einen automatisierten Mechanismus}}"
+  },
+  {
+   "control": "KONF.11.3",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Kriterien}}"
+  },
+  {
+   "control": "KONF.11.4",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{einen automatisierten Mechanismus}}"
+  },
+  {
+   "control": "KONF.12.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "durch {{einen automatisierten Mechanismus}}"
+  },
+  {
+   "control": "KONF.12.4",
+   "part": "statement",
+   "prop": "result",
+   "value": "die Speicherung von Zugangsdaten {{in einem dedizierten Passwort-Manager mit Browser-Integration oder direkt im Browser durch ein Master-Passwort geschützt}}"
+  },
+  {
+   "control": "KONF.12.11",
+   "part": "statement",
+   "prop": "result",
+   "value": "die Übermittlung {{eines Pseudonyms oder gar keiner Anzeigekennung}}"
+  },
+  {
+   "control": "KONF.13.7",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}}"
+  },
+  {
+   "control": "KONF.13.8",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig oder bei Eingang}}"
+  },
+  {
+   "control": "KONF.14.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "über Netze nach {{einem anerkannten Standard}}"
+  },
+  {
+   "control": "KONF.15.1",
+   "part": "statement",
+   "prop": "result",
+   "value": "in der Anwendung zur Verfügung stehenden Speicherplatz pro {{Zugangskonto oder Mandant}}"
+  },
+  {
+   "control": "KONF.15.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "anhand von {{Schwellwerten}}"
+  },
+  {
+   "control": "DEV.1.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{zuständigen Personen oder Rollen}}"
+  },
+  {
+   "control": "DEV.1.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "{{regelmäßig}} und anlassbezogen auf Aktualität"
+  },
+  {
+   "control": "DEV.5.1",
+   "part": "statement",
+   "prop": "result",
+   "value": "die Bereitstellung von Sicherheitsupdates mindestens für {{einen bestimmten Zeitraum}}"
+  },
+  {
+   "control": "KONF.2.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{anerkannten Standards}} im Einklang mit den zugehörigen Anforderungen zum Identitäts- und Berechtigungsmanagement"
+  },
+  {
+   "control": "KONF.14.1",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "über Netze nach {{einem anerkannten Standard}}"
+  },
+  {
+   "control": "KONF.10.2",
+   "part": "statement",
+   "prop": "result_specification",
+   "value": "nach {{anerkannten Standards}} im Einklang mit den zugehörigen Anforderungen zum Identitäts- und Berechtigungsmanagement"
+  }
+ ],
+ "shared-ids": [
+  {
+   "id": "BES.2.1.4",
+   "identical-prose": false
+  },
+  {
+   "id": "BES.2.1.4.1",
+   "identical-prose": false
+  },
+  {
+   "id": "BES.2.1.4.2",
+   "identical-prose": false
+  },
+  {
+   "id": "BES.4.3",
+   "identical-prose": true
+  },
+  {
+   "id": "GC.11.1",
+   "identical-prose": false
+  },
+  {
+   "id": "KONF.10.2",
+   "identical-prose": false
+  },
+  {
+   "id": "KONF.14.1",
+   "identical-prose": false
+  },
+  {
+   "id": "KONF.14.1.1",
+   "identical-prose": false
+  },
+  {
+   "id": "KONF.14.1.2",
+   "identical-prose": false
+  },
+  {
+   "id": "KONF.2.2",
+   "identical-prose": false
+  },
+  {
+   "id": "UMS.5.1",
+   "identical-prose": false
+  }
+ ],
+ "baselines": {
+  "gspp:erhöht": 134,
+  "gspp:normal-SdT": 517,
+  "mstls:normal-SdT": 7
+ },
+ "tag-value-inconsistencies": {
+  "Compliance Management": 6
+ },
+ "unmapped-paths": [],
+ "path-map": [
+  {
+   "path": "catalog.back-matter.resources[].rlinks[].hashes[].algorithm",
+   "count": 2,
+   "level": "L1",
+   "destination": "source-document reference (title/rlink) -> resolved into relations / dropped-declared"
+  },
+  {
+   "path": "catalog.back-matter.resources[].rlinks[].hashes[].value",
+   "count": 2,
+   "level": "L1",
+   "destination": "source-document reference (title/rlink) -> resolved into relations / dropped-declared"
+  },
+  {
+   "path": "catalog.back-matter.resources[].rlinks[].href",
+   "count": 2,
+   "level": "L1",
+   "destination": "source-document reference (title/rlink) -> resolved into relations / dropped-declared"
+  },
+  {
+   "path": "catalog.back-matter.resources[].title",
+   "count": 2,
+   "level": "L1",
+   "destination": "source-document reference (title/rlink) -> resolved into relations / dropped-declared"
+  },
+  {
+   "path": "catalog.back-matter.resources[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "resolution key for #uuid links -> external URL"
+  },
+  {
+   "path": "catalog.groups[].controls[].class",
+   "count": 7,
+   "level": "L1",
+   "destination": "gspp-taxonomy: class (by-statement)"
+  },
+  {
+   "path": "catalog.groups[].controls[].controls[].class",
+   "count": 6,
+   "level": "L1",
+   "destination": "gspp-taxonomy: class (by-statement)"
+  },
+  {
+   "path": "catalog.groups[].controls[].controls[].controls[].class",
+   "count": 4,
+   "level": "L1",
+   "destination": "gspp-taxonomy: class (by-statement)"
+  },
+  {
+   "path": "catalog.groups[].controls[].controls[].controls[].id",
+   "count": 4,
+   "level": "L1",
+   "destination": "Requirement id (top) / statement id (nested)"
+  },
+  {
+   "path": "catalog.groups[].controls[].controls[].controls[].parts[].name",
+   "count": 4,
+   "level": "L1",
+   "destination": "statement/guidance part identity -> statement id / narrative key"
+  },
+  {
+   "path": "catalog.groups[].controls[].controls[].controls[].parts[].prose",
+   "count": 4,
+   "level": "L1",
+   "destination": "statements[].prose.de ({{insert}} -> {param:}) / gspp-narrative guidance"
+  },
+  {
+   "path": "catalog.groups[].controls[].controls[].controls[].props[].name",
+   "count": 8,
+   "level": "L1",
+   "destination": "dispatch by prop name (see per-prop table)"
+  },
+  {
+   "path": "catalog.groups[].controls[].controls[].controls[].props[].value",
+   "count": 8,
+   "level": "L1",
+   "destination": "dispatch by prop name (see per-prop table)"
+  },
+  {
+   "path": "catalog.groups[].controls[].controls[].controls[].title",
+   "count": 4,
+   "level": "L1",
+   "destination": "Requirement title (top) / kept in taxonomy by-statement (nested)"
+  },
+  {
+   "path": "catalog.groups[].controls[].controls[].id",
+   "count": 6,
+   "level": "L1",
+   "destination": "Requirement id (top) / statement id (nested)"
+  },
+  {
+   "path": "catalog.groups[].controls[].controls[].parts[].id",
+   "count": 2,
+   "level": "L1",
+   "destination": "statement/guidance part identity -> statement id / narrative key"
+  },
+  {
+   "path": "catalog.groups[].controls[].controls[].parts[].name",
+   "count": 7,
+   "level": "L1",
+   "destination": "statement/guidance part identity -> statement id / narrative key"
+  },
+  {
+   "path": "catalog.groups[].controls[].controls[].parts[].props[].name",
+   "count": 7,
+   "level": "L1",
+   "destination": "dispatch by part-prop name (grammar/objectives/criteria; defects reported)"
+  },
+  {
+   "path": "catalog.groups[].controls[].controls[].parts[].props[].ns",
+   "count": 7,
+   "level": "L1",
+   "destination": "absorbed: CSV-link namespaces replaced by pinned facet schemas"
+  },
+  {
+   "path": "catalog.groups[].controls[].controls[].parts[].props[].value",
+   "count": 7,
+   "level": "L1",
+   "destination": "dispatch by part-prop name (grammar/objectives/criteria; defects reported)"
+  },
+  {
+   "path": "catalog.groups[].controls[].controls[].parts[].prose",
+   "count": 7,
+   "level": "L1",
+   "destination": "statements[].prose.de ({{insert}} -> {param:}) / gspp-narrative guidance"
+  },
+  {
+   "path": "catalog.groups[].controls[].controls[].props[].name",
+   "count": 15,
+   "level": "L1",
+   "destination": "dispatch by prop name (see per-prop table)"
+  },
+  {
+   "path": "catalog.groups[].controls[].controls[].props[].ns",
+   "count": 3,
+   "level": "L1",
+   "destination": "absorbed: CSV-link namespaces replaced by pinned facet schemas"
+  },
+  {
+   "path": "catalog.groups[].controls[].controls[].props[].value",
+   "count": 15,
+   "level": "L1",
+   "destination": "dispatch by prop name (see per-prop table)"
+  },
+  {
+   "path": "catalog.groups[].controls[].controls[].title",
+   "count": 6,
+   "level": "L1",
+   "destination": "Requirement title (top) / kept in taxonomy by-statement (nested)"
+  },
+  {
+   "path": "catalog.groups[].controls[].id",
+   "count": 7,
+   "level": "L1",
+   "destination": "Requirement id (top) / statement id (nested)"
+  },
+  {
+   "path": "catalog.groups[].controls[].links[].href",
+   "count": 1,
+   "level": "L1",
+   "destination": "relations[] {type=rel, ref} (#control -> req URI; #uuid -> back-matter URL)"
+  },
+  {
+   "path": "catalog.groups[].controls[].links[].rel",
+   "count": 1,
+   "level": "L1",
+   "destination": "relations[] {type=rel, ref} (#control -> req URI; #uuid -> back-matter URL)"
+  },
+  {
+   "path": "catalog.groups[].controls[].params[].id",
+   "count": 3,
+   "level": "L1",
+   "destination": "statement parameter name (type string)"
+  },
+  {
+   "path": "catalog.groups[].controls[].params[].label",
+   "count": 3,
+   "level": "L2",
+   "destination": "compat oscal-1x: param-extras (default/display value - candidate D9 addition)"
+  },
+  {
+   "path": "catalog.groups[].controls[].params[].props[].name",
+   "count": 3,
+   "level": "L2",
+   "destination": "compat oscal-1x: param-extras (param alt-identifier)"
+  },
+  {
+   "path": "catalog.groups[].controls[].params[].props[].value",
+   "count": 3,
+   "level": "L2",
+   "destination": "compat oscal-1x: param-extras (param alt-identifier)"
+  },
+  {
+   "path": "catalog.groups[].controls[].params[].values[]",
+   "count": 1,
+   "level": "L2",
+   "destination": "compat oscal-1x: param-extras (default/display value - candidate D9 addition)"
+  },
+  {
+   "path": "catalog.groups[].controls[].parts[].id",
+   "count": 14,
+   "level": "L1",
+   "destination": "statement/guidance part identity -> statement id / narrative key"
+  },
+  {
+   "path": "catalog.groups[].controls[].parts[].name",
+   "count": 14,
+   "level": "L1",
+   "destination": "statement/guidance part identity -> statement id / narrative key"
+  },
+  {
+   "path": "catalog.groups[].controls[].parts[].props[].name",
+   "count": 45,
+   "level": "L1",
+   "destination": "dispatch by part-prop name (grammar/objectives/criteria; defects reported)"
+  },
+  {
+   "path": "catalog.groups[].controls[].parts[].props[].ns",
+   "count": 45,
+   "level": "L1",
+   "destination": "absorbed: CSV-link namespaces replaced by pinned facet schemas"
+  },
+  {
+   "path": "catalog.groups[].controls[].parts[].props[].value",
+   "count": 45,
+   "level": "L1",
+   "destination": "dispatch by part-prop name (grammar/objectives/criteria; defects reported)"
+  },
+  {
+   "path": "catalog.groups[].controls[].parts[].prose",
+   "count": 14,
+   "level": "L1",
+   "destination": "statements[].prose.de ({{insert}} -> {param:}) / gspp-narrative guidance"
+  },
+  {
+   "path": "catalog.groups[].controls[].props[].name",
+   "count": 33,
+   "level": "L1",
+   "destination": "dispatch by prop name (see per-prop table)"
+  },
+  {
+   "path": "catalog.groups[].controls[].props[].ns",
+   "count": 19,
+   "level": "L1",
+   "destination": "absorbed: CSV-link namespaces replaced by pinned facet schemas"
+  },
+  {
+   "path": "catalog.groups[].controls[].props[].value",
+   "count": 33,
+   "level": "L1",
+   "destination": "dispatch by prop name (see per-prop table)"
+  },
+  {
+   "path": "catalog.groups[].controls[].title",
+   "count": 7,
+   "level": "L1",
+   "destination": "Requirement title (top) / kept in taxonomy by-statement (nested)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].class",
+   "count": 651,
+   "level": "L1",
+   "destination": "gspp-taxonomy: class (by-statement)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].class",
+   "count": 326,
+   "level": "L1",
+   "destination": "gspp-taxonomy: class (by-statement)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].class",
+   "count": 19,
+   "level": "L1",
+   "destination": "gspp-taxonomy: class (by-statement)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].controls[].class",
+   "count": 2,
+   "level": "L1",
+   "destination": "gspp-taxonomy: class (by-statement)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].controls[].id",
+   "count": 2,
+   "level": "L1",
+   "destination": "Requirement id (top) / statement id (nested)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].controls[].parts[].id",
+   "count": 4,
+   "level": "L1",
+   "destination": "statement/guidance part identity -> statement id / narrative key"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].controls[].parts[].name",
+   "count": 4,
+   "level": "L1",
+   "destination": "statement/guidance part identity -> statement id / narrative key"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].controls[].parts[].props[].name",
+   "count": 7,
+   "level": "L1",
+   "destination": "dispatch by part-prop name (grammar/objectives/criteria; defects reported)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].controls[].parts[].props[].ns",
+   "count": 7,
+   "level": "L1",
+   "destination": "absorbed: CSV-link namespaces replaced by pinned facet schemas"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].controls[].parts[].props[].value",
+   "count": 7,
+   "level": "L1",
+   "destination": "dispatch by part-prop name (grammar/objectives/criteria; defects reported)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].controls[].parts[].prose",
+   "count": 4,
+   "level": "L1",
+   "destination": "statements[].prose.de ({{insert}} -> {param:}) / gspp-narrative guidance"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].controls[].props[].name",
+   "count": 6,
+   "level": "L1",
+   "destination": "dispatch by prop name (see per-prop table)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].controls[].props[].ns",
+   "count": 4,
+   "level": "L1",
+   "destination": "absorbed: CSV-link namespaces replaced by pinned facet schemas"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].controls[].props[].value",
+   "count": 6,
+   "level": "L1",
+   "destination": "dispatch by prop name (see per-prop table)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].controls[].title",
+   "count": 2,
+   "level": "L1",
+   "destination": "Requirement title (top) / kept in taxonomy by-statement (nested)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].id",
+   "count": 19,
+   "level": "L1",
+   "destination": "Requirement id (top) / statement id (nested)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].links[].href",
+   "count": 8,
+   "level": "L1",
+   "destination": "relations[] {type=rel, ref} (#control -> req URI; #uuid -> back-matter URL)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].links[].rel",
+   "count": 8,
+   "level": "L1",
+   "destination": "relations[] {type=rel, ref} (#control -> req URI; #uuid -> back-matter URL)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].params[].id",
+   "count": 4,
+   "level": "L1",
+   "destination": "statement parameter name (type string)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].params[].label",
+   "count": 4,
+   "level": "L2",
+   "destination": "compat oscal-1x: param-extras (default/display value - candidate D9 addition)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].params[].props[].name",
+   "count": 4,
+   "level": "L2",
+   "destination": "compat oscal-1x: param-extras (param alt-identifier)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].params[].props[].value",
+   "count": 4,
+   "level": "L2",
+   "destination": "compat oscal-1x: param-extras (param alt-identifier)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].parts[].id",
+   "count": 37,
+   "level": "L1",
+   "destination": "statement/guidance part identity -> statement id / narrative key"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].parts[].name",
+   "count": 37,
+   "level": "L1",
+   "destination": "statement/guidance part identity -> statement id / narrative key"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].parts[].props[].name",
+   "count": 95,
+   "level": "L1",
+   "destination": "dispatch by part-prop name (grammar/objectives/criteria; defects reported)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].parts[].props[].ns",
+   "count": 95,
+   "level": "L1",
+   "destination": "absorbed: CSV-link namespaces replaced by pinned facet schemas"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].parts[].props[].value",
+   "count": 95,
+   "level": "L1",
+   "destination": "dispatch by part-prop name (grammar/objectives/criteria; defects reported)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].parts[].prose",
+   "count": 37,
+   "level": "L1",
+   "destination": "statements[].prose.de ({{insert}} -> {param:}) / gspp-narrative guidance"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].props[].name",
+   "count": 131,
+   "level": "L1",
+   "destination": "dispatch by prop name (see per-prop table)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].props[].ns",
+   "count": 112,
+   "level": "L1",
+   "destination": "absorbed: CSV-link namespaces replaced by pinned facet schemas"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].props[].value",
+   "count": 131,
+   "level": "L1",
+   "destination": "dispatch by prop name (see per-prop table)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].controls[].title",
+   "count": 19,
+   "level": "L1",
+   "destination": "Requirement title (top) / kept in taxonomy by-statement (nested)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].id",
+   "count": 326,
+   "level": "L1",
+   "destination": "Requirement id (top) / statement id (nested)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].links[].href",
+   "count": 66,
+   "level": "L1",
+   "destination": "relations[] {type=rel, ref} (#control -> req URI; #uuid -> back-matter URL)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].links[].rel",
+   "count": 66,
+   "level": "L1",
+   "destination": "relations[] {type=rel, ref} (#control -> req URI; #uuid -> back-matter URL)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].params[].id",
+   "count": 73,
+   "level": "L1",
+   "destination": "statement parameter name (type string)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].params[].label",
+   "count": 73,
+   "level": "L2",
+   "destination": "compat oscal-1x: param-extras (default/display value - candidate D9 addition)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].params[].props[].name",
+   "count": 73,
+   "level": "L2",
+   "destination": "compat oscal-1x: param-extras (param alt-identifier)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].params[].props[].value",
+   "count": 73,
+   "level": "L2",
+   "destination": "compat oscal-1x: param-extras (param alt-identifier)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].params[].values[]",
+   "count": 1,
+   "level": "L2",
+   "destination": "compat oscal-1x: param-extras (default/display value - candidate D9 addition)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].parts[].id",
+   "count": 651,
+   "level": "L1",
+   "destination": "statement/guidance part identity -> statement id / narrative key"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].parts[].name",
+   "count": 651,
+   "level": "L1",
+   "destination": "statement/guidance part identity -> statement id / narrative key"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].parts[].props[].name",
+   "count": 1622,
+   "level": "L1",
+   "destination": "dispatch by part-prop name (grammar/objectives/criteria; defects reported)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].parts[].props[].ns",
+   "count": 1622,
+   "level": "L1",
+   "destination": "absorbed: CSV-link namespaces replaced by pinned facet schemas"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].parts[].props[].value",
+   "count": 1622,
+   "level": "L1",
+   "destination": "dispatch by part-prop name (grammar/objectives/criteria; defects reported)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].parts[].prose",
+   "count": 651,
+   "level": "L1",
+   "destination": "statements[].prose.de ({{insert}} -> {param:}) / gspp-narrative guidance"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].props[].name",
+   "count": 2579,
+   "level": "L1",
+   "destination": "dispatch by prop name (see per-prop table)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].props[].ns",
+   "count": 2253,
+   "level": "L1",
+   "destination": "absorbed: CSV-link namespaces replaced by pinned facet schemas"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].props[].value",
+   "count": 2579,
+   "level": "L1",
+   "destination": "dispatch by prop name (see per-prop table)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].controls[].title",
+   "count": 326,
+   "level": "L1",
+   "destination": "Requirement title (top) / kept in taxonomy by-statement (nested)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].id",
+   "count": 651,
+   "level": "L1",
+   "destination": "Requirement id (top) / statement id (nested)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].links[].href",
+   "count": 189,
+   "level": "L1",
+   "destination": "relations[] {type=rel, ref} (#control -> req URI; #uuid -> back-matter URL)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].links[].rel",
+   "count": 189,
+   "level": "L1",
+   "destination": "relations[] {type=rel, ref} (#control -> req URI; #uuid -> back-matter URL)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].params[].id",
+   "count": 144,
+   "level": "L1",
+   "destination": "statement parameter name (type string)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].params[].label",
+   "count": 144,
+   "level": "L2",
+   "destination": "compat oscal-1x: param-extras (default/display value - candidate D9 addition)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].params[].props[].name",
+   "count": 144,
+   "level": "L2",
+   "destination": "compat oscal-1x: param-extras (param alt-identifier)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].params[].props[].value",
+   "count": 144,
+   "level": "L2",
+   "destination": "compat oscal-1x: param-extras (param alt-identifier)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].params[].values[]",
+   "count": 1,
+   "level": "L2",
+   "destination": "compat oscal-1x: param-extras (default/display value - candidate D9 addition)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].parts[].id",
+   "count": 1302,
+   "level": "L1",
+   "destination": "statement/guidance part identity -> statement id / narrative key"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].parts[].name",
+   "count": 1302,
+   "level": "L1",
+   "destination": "statement/guidance part identity -> statement id / narrative key"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].parts[].props[].name",
+   "count": 3303,
+   "level": "L1",
+   "destination": "dispatch by part-prop name (grammar/objectives/criteria; defects reported)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].parts[].props[].ns",
+   "count": 3303,
+   "level": "L1",
+   "destination": "absorbed: CSV-link namespaces replaced by pinned facet schemas"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].parts[].props[].value",
+   "count": 3303,
+   "level": "L1",
+   "destination": "dispatch by part-prop name (grammar/objectives/criteria; defects reported)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].parts[].prose",
+   "count": 1302,
+   "level": "L1",
+   "destination": "statements[].prose.de ({{insert}} -> {param:}) / gspp-narrative guidance"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].props[].name",
+   "count": 5240,
+   "level": "L1",
+   "destination": "dispatch by prop name (see per-prop table)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].props[].ns",
+   "count": 4589,
+   "level": "L1",
+   "destination": "absorbed: CSV-link namespaces replaced by pinned facet schemas"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].props[].value",
+   "count": 5240,
+   "level": "L1",
+   "destination": "dispatch by prop name (see per-prop table)"
+  },
+  {
+   "path": "catalog.groups[].groups[].controls[].title",
+   "count": 651,
+   "level": "L1",
+   "destination": "Requirement title (top) / kept in taxonomy by-statement (nested)"
+  },
+  {
+   "path": "catalog.groups[].groups[].id",
+   "count": 139,
+   "level": "L1",
+   "destination": "taxonomy Set id/title (per-catalog subtree)"
+  },
+  {
+   "path": "catalog.groups[].groups[].props[].name",
+   "count": 278,
+   "level": "L1",
+   "destination": "Set.label / Set.aliases (bsi-uuid)"
+  },
+  {
+   "path": "catalog.groups[].groups[].props[].value",
+   "count": 278,
+   "level": "L1",
+   "destination": "Set.label / Set.aliases (bsi-uuid)"
+  },
+  {
+   "path": "catalog.groups[].groups[].title",
+   "count": 139,
+   "level": "L1",
+   "destination": "taxonomy Set id/title (per-catalog subtree)"
+  },
+  {
+   "path": "catalog.groups[].id",
+   "count": 23,
+   "level": "L1",
+   "destination": "taxonomy Set id/title (per-catalog subtree)"
+  },
+  {
+   "path": "catalog.groups[].props[].name",
+   "count": 43,
+   "level": "L1",
+   "destination": "Set.label / Set.aliases (bsi-uuid)"
+  },
+  {
+   "path": "catalog.groups[].props[].remarks",
+   "count": 20,
+   "level": "L1",
+   "destination": "gspp-narrative on the Set: layer/Praktik description"
+  },
+  {
+   "path": "catalog.groups[].props[].value",
+   "count": 43,
+   "level": "L1",
+   "destination": "Set.label / Set.aliases (bsi-uuid)"
+  },
+  {
+   "path": "catalog.groups[].title",
+   "count": 23,
+   "level": "L1",
+   "destination": "taxonomy Set id/title (per-catalog subtree)"
+  },
+  {
+   "path": "catalog.metadata.last-modified",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.links[].href",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.links[].rel",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.links[].text",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.oscal-version",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.parties[].email-addresses[]",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.parties[].name",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.parties[].type",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.parties[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.props[].name",
+   "count": 5,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.props[].ns",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.props[].value",
+   "count": 5,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.remarks",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.responsible-parties[].party-uuids[]",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.responsible-parties[].role-id",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.roles[].id",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.roles[].title",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.title",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.metadata.version",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "catalog.uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  }
+ ]
+}

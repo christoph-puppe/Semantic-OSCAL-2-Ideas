@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-1958",
+ "version": "2026.06.18",
+ "label": "ISM-1958",
+ "lifecycle": "active",
+ "title": "Control: ism-1958",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "User accounts with DCSync permissions cannot logon to unprivileged operating environments."
+   }
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GC.1.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GC.1.1",
+ "lifecycle": "active",
+ "title": "Errichtung und Aufrechterhaltung eines ISMS",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Governance und Compliance MUSS Verfahren und Regelungen zur Errichtung und Aufrechterhaltung eines ISMS nach {param:gc.1.1-prm1} verankern."
+   },
+   "parameters": [
+    {
+     "name": "gc.1.1-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "Verfahren und Regelungen zur Errichtung und Aufrechterhaltung eines ISMS",
+     "result-specification": "nach {{einem anerkannten Standard}}"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "ISMS-Regelwerk"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Diese Anforderung ist der Ausgangs- und Endpunkt für ein Informationssicherheitsmanagementsystem (ISMS). Ein ISMS besteht aus Verfahren (d.h. bestimmten Abläufen, die mit Zuständigkeiten und Ressourcen versehen sind) und Regelungen (also festgelegten Regeln, die von allen Mitarbeitenden und sonstigen Verpflichteten einzuhalten oder technisch umgesetzt sind). Die Anforderung ist erst dann als erfüllt anzusehen, wenn die komplette Vorgehensweise mindestens einmal vollständig durchlaufen wurde. Unter „etabliert“ bzw. „errichtet“ ist hier zu verstehen, dass die Anforderungen an das ISMS standardkonform umgesetzt wurden. Unter \"aufrechterhalten\" ist hier zu verstehen, dass die Einhaltung der Anforderungen kontinuierlich überprüft wird und bei Bedarf Gegenmaßnahmen eingeleitet werden. Die bei der Festlegung der Verfahren und Regelungen im Einzelnen zu berücksichtigenden Inhalte ergeben sich aus den weiteren Anforderungen dieses Anwenderkataloges."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "gc.1.1-prm1": {
+     "label": "BSI Grundschutz++",
+     "values": [
+      "BSI Grundschutz++"
+     ],
+     "alt-identifier": "80351189-6ffc-495e-a995-6219b9704724"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "80351189-6ffc-495e-a995-6219b9704724"
+  }
+ ]
+}

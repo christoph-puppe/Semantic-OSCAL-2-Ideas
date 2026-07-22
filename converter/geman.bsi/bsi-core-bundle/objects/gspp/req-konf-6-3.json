@@ -1,0 +1,83 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.6.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.6.3",
+ "lifecycle": "active",
+ "title": "Kiosk-Modus",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für Endgeräte KANN das automatische Zurücksetzen auf einen definierten Zustand nach der Nutzung aktivieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "aktivieren",
+     "result": "das automatische Zurücksetzen auf einen definierten Zustand",
+     "result-specification": "nach der Nutzung",
+     "target-object-categories": [
+      "Endgeräte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "0",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.46"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5,
+     "tags": [
+      "Produktbeschreibung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein Kiosk‑Modus (auch als Gast-Zugang bezeichnet) kann dazu dienen, die Integrität und den definierten Ausgangszustand eines Systems dauerhaft sicherzustellen, indem nach jeder Sitzung oder in regelmäßigen Abständen ein vollständiger Rücksetzvorgang angestoßen wird. Damit soll verhindert werden, dass ungewollte Änderungen – etwa durch Malware, böswillige Manipulation oder versehentlich abgelegte Nutzerdaten – dauerhaft auf dem System verbleiben. Gleichzeitig kann so gewährleistet werden, dass jede neue Nutzer­session in einer standardisierten, getesteten Umgebung beginnt, was sowohl den Support‑Aufwand reduziert als auch Datenschutzaspekte stärkt, da keine personenbezogenen Daten auf dem Gerät zurückbleiben können. Typische Anwendungsfälle können öffentliche Terminals in Bibliotheken oder Behörden, digitale Informations­stelen in Museen und Einkaufszentren sowie Schulungs‑ oder Präsentationsrechner in Unternehmen sein. In solchen Szenarien kann das System beim Ausloggen oder nach einer festgelegten Zeit (z. B. nachts) automatisch auf ein sauberes Basis-Image zurückgesetzt werden. Denkbar ist auch ein Einsatz in Fabrikumgebungen, um Versuchs‑ und Prüfsysteme immer wieder in einen definierten Ausgangszustand zu bringen, oder in Testlaboren für Software, wo nach jedem Testlauf eine reine Umgebung erforderlich ist.  Für die produktneutrale Umsetzung kann man beispielsweise mit Virtualisierungs­technologien arbeiten, die mittels Snapshot‑Rollback beim Neustart eine saubere VM‑Instanz bereitstellen. Alternativ kann ein Live‑Betriebssystem vollständig im Arbeitsspeicher laufen oder das Dateisystem über Overlay‑Techniken (z. B. OverlayFS, AUFS) nur virtuell überschrieben werden – alle Änderungen verwerfen sich beim Neustart automatisch. Auch der Einsatz von read‑only‑Partitionen kombiniert mit einem Schreibbereich in RAM kann eine einfache Lösung sein. Skript­basierte Cron‑Jobs oder Systemd‑Timer können den Rücksetz­prozess zu definierten Zeiten anstoßen. Externes Logging und Konfigurations­management (etwa über Ansible oder Puppet) kann dabei helfen, wichtige Ereignisse und Konfigurations­änderungen zu protokollieren, ohne den Kiosk‑Modus zu beeinträchtigen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "1b90a130-be97-42bf-8d30-8458a1d743ee"
+  }
+ ]
+}

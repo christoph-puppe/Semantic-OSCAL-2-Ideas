@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-secure-shell-authentication-mech",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Authentication mechanisms",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0485",
+   "sequence": 15420
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1449",
+   "sequence": 15430
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Authentication mechanisms",
+     "name": "overview",
+     "prose": "As public key-based authentication schemes offer stronger authentication than password-based authentication schemes, due to being much less susceptible to brute-force attacks, they should be used for SSH connections. Furthermore, to protect SSH private keys, access to such keys should be protected via the use of passwords or key encryption keys."
+    }
+   ]
+  }
+ }
+}

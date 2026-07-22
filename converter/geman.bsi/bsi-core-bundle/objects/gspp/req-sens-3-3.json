@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.3.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.3.3",
+ "lifecycle": "active",
+ "title": "Umwandeln verdächtiger Dateien",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende KANN zum Umwandeln verdächtiger Dateien in ein nicht-ausführbares Format vor der weiteren Verwendung sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "zum Umwandeln verdächtiger Dateien in ein nicht-ausführbares Format",
+     "result-specification": "vor der weiteren Verwendung",
+     "target-object-categories": [
+      "Nutzende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Das gezielte Umwandeln potenziell schadhafter Dateien in ein nicht-ausführbares Format (engl. defanging) kann helfen, die Ausnutzung von Sicherheitslücken zu verhindern, bevor schädlicher Code aktiv werden kann. Eine Datei gilt dabei als verdächtig, wenn sie aus einer unbekannten oder unzuverlässigen Quelle stammt. Im Kontext dieser Anforderung bedeutet nicht-ausführbares Format (non-executable format), dass die Datei zwar geöffnet oder betrachtet, jedoch nicht direkt ausgeführt werden kann – Beispiele sind PDF ohne eingebettete aktive Inhalte, reines Textformat (.txt) oder Bildformate wie .png/.jpg. Die Umwandlung kann auf unterschiedliche Weise erfolgen, ohne dass dabei möglicher schadhafter Code in der Originaldatei ausgeführt wird. Verdächtige Office-Dokumente können automatisiert in ein PDF umgewandelt oder als Screenshot exportiert werden, bevor der Inhalt zur Ansicht freigegeben wird. Auch das Verwenden von sicheren Cloud-Vorschau-Ansichten, die keine direkte Ausführung erlauben, kann eingesetzt werden. Weitere praktikable Möglichkeiten sind das Umwandeln von ausführbaren Anhängen in komprimierte Archive mit deaktivierter automatischer Entpackung, oder die Nutzung spezieller Konverter-Tools, die potenziell gefährliche Dateiinhalte in ein sicheres Anzeigeformat übertragen. Hilfreich kann auch ein einfaches, intern bereitgestelltes Kurztutorial sein, das typische Umwandlungsschritte für verschiedene Dateitypen erklärt und aufzeigt, woran Nutzende potenzielle Risiken erkennen können."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "8b0d3acb-43d2-460d-bd40-adeb68400c2f"
+  }
+ ]
+}

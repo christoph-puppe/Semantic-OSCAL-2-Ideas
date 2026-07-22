@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.3.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.3.4",
+ "lifecycle": "active",
+ "title": "Kennzeichnung ohne vertrauliche Daten",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets für IT-Systeme SOLLTE Kennzeichnung ohne vertrauliche Daten verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "Kennzeichnung ohne vertrauliche Daten",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Enthalten Kennzeichnungen vertrauliche Daten wie den Namen des zugeordneten Mitarbeiters, des Standortes, der Netzstruktur oder der Abteilung, so könnten diese Angaben von Angreifern ausgelesen werden, z.B. über das Netz, per Bluetooth oder durch physisches Ablesen. Die so abgeflossenen Daten könnten Angreifer zur weiteren Ausforschung der Institution oder des Zugangs zu Daten missbrauchen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "e6bdfec9-97ef-405a-a90f-e5b63f900e21"
+  }
+ ]
+}

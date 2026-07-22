@@ -1,0 +1,23 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-systems-telephone-systems-spea",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Speakerphones",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0235",
+   "sequence": 4440
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Speakerphones",
+     "name": "overview",
+     "prose": "As speakerphones are designed to pick up and transmit nearby conversations, using speakerphones in TOP SECRET areas presents several security risks and they should not be used. However, if personnel reduce security risks by using an audio secure room that is secure during any conversations, they may be used."
+    }
+   ]
+  }
+ }
+}

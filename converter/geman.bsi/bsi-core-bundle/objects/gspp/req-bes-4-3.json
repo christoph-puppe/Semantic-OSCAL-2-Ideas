@@ -1,0 +1,88 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.4.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.4.3",
+ "lifecycle": "active",
+ "title": "Beschaffung anhand der Kriterien",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Einkäufe SOLLTE die Beschaffung anhand der festgelegten Kriterien verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "die Beschaffung",
+     "result-specification": "anhand der festgelegten Kriterien",
+     "target-object-categories": [
+      "Einkäufe"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Prozess Beschaffung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.20"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Lieferketten"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Werden Waren, Systeme oder Dienstleistungen ohne überprüfbare Kriterien beschafft, kann dies zu Sicherheitslücken, finanziellen Schäden oder Abhängigkeiten führen. Beispielsweise könnte eine Institution Hardware von einem unbekannten Anbieter erwerben, deren Firmware Schadcode enthält, oder Cloud-Dienste nutzen, die ihre Datenhaltung in unsicheren Rechtsräumen vornehmen. Ebenso könnte ein IT-Dienstleister beauftragt werden, ohne dass geprüft wurde, ob er über angemessene Qualifikationen oder Referenzen verfügt, was im Ernstfall zu Ausfällen oder Datenverlust führen könnte."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "f8089693-7d13-4f0e-b9a0-98102f685d74"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/BES.4.2"
+  }
+ ]
+}

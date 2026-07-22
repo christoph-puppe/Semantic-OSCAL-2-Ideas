@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.6.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.6.3",
+ "lifecycle": "active",
+ "title": "Konformitätsprüfung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets für IT-Systeme KANN bei Rücknahme die Konformität mit den einschlägigen Anforderungen testen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "testen",
+     "result": "bei Rücknahme die Konformität mit den einschlägigen Anforderungen",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Assets sind nicht konform, wenn Sie die für sie geltenden Anforderungen nicht oder nicht mehr erfüllen, z.B. weil die Hardware manipuliert wurde oder keine Sicherheitsupdates mehr bereitgestellt werden. Die Prüfung kann durch automatische Prüfsysteme oder mit manuellen Verfahren, z.B. Sichtkontrolle von Siegeln, gewährleistet werden. Auch die Nutzung von Stichprobenkontrollen ist möglich. Zur Behandlung kann entweder die Ursache der Nichtkonformität beseitigt werden, oder alternative Lösungen können angewendet werden, z.B. kann das Gerät auf Werkszustand zurückgesetzt und neu installiert werden. Ist dies nicht möglich so bleibt keine andere Behandlungsmöglichkeit als das Assets nicht weiter zu verwenden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "f3ccc5ee-2b5d-47a0-80cb-3ad5b510b50d"
+  }
+ ]
+}

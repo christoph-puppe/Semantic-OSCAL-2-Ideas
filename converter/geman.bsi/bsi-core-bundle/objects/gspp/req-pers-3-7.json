@@ -1,0 +1,85 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/PERS.3.7",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "PERS.3.7",
+ "lifecycle": "active",
+ "title": "Einarbeitung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Personal für Mitarbeitende SOLLTE eine Einarbeitung bei Neuzugang ausführen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "ausführen",
+     "result": "eine Einarbeitung",
+     "result-specification": "bei Neuzugang",
+     "target-object-categories": [
+      "Mitarbeitende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Prozess Personalmanagement"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.31",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.33",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.35"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Kompetenzmanagement"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Eine Einarbeitung ist eine strukturierte Vorgehensweise, bei der neue Mitarbeitende mit den relevanten Aufgaben, Zuständigkeiten, Systemen und Sicherheitsanforderungen ihrer Tätigkeit vertraut gemacht werden. Ziel ist es, ihnen nicht nur fachliche Grundlagen, sondern auch die spezifischen Abläufe und Schutzmaßnahmen der Institution zu vermitteln, sodass sie von Beginn an korrekt und sicher arbeiten können. Ohne eine solche Einarbeitung könnte es zu Fehlbedienungen von IT-Systemen kommen, die Sicherheitsvorfälle begünstigen, oder zu Verzögerungen bei der Umsetzung von Aufgaben, die die Verfügbarkeit kritischer Prozesse beeinträchtigen. Eine sorgfältige Einführung kann dagegen das Verständnis für Sicherheitsregeln fördern, den verantwortungsvollen Umgang mit sensiblen Informationen stärken und die Bindung der Mitarbeitenden an die Institution erhöhen. Um die Anforderung umzusetzen, kann die Institution verschiedene Maßnahmen kombinieren: (1) ein strukturiertes Onboarding-Dokument, das die wichtigsten Systeme, Zugriffsrechte und Sicherheitsrichtlinien erklärt, (2) eine begleitende Einführung durch erfahrene Kolleginnen und Kollegen, die praxisnahes Wissen vermitteln, (3) die direkte Integration sicherheitsrelevanter Hinweise in den Arbeitsalltag, etwa durch kurze Erläuterungen beim erstmaligen Zugriff auf sensible Anwendungen oder beim Anlegen von Berechtigungen. Ergänzend kann eine Checkliste genutzt werden, um sicherzustellen, dass alle relevanten Schritte nachvollziehbar abgeschlossen werden. Auch ein „Paten-System“ kann eingesetzt werden, bei dem neue Mitarbeitende für die ersten Wochen eine feste Ansprechperson haben, die Fragen klärt und auf mögliche sicherheitsrelevante Stolperfallen hinweist."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "5c23386c-7f57-436a-9906-9b34d4f94462"
+  }
+ ]
+}

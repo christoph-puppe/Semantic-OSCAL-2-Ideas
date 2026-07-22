@@ -1,0 +1,38 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/set/tax/not",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "lifecycle": "active",
+ "title": "Notfallplanung",
+ "members": [
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/not-1",
+   "sequence": 5530
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/not-2",
+   "sequence": 5550
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/not-3",
+   "sequence": 5620
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/not-4",
+   "sequence": 5800
+  }
+ ],
+ "label": "NOT",
+ "facets": {
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "description": {
+    "de": "Die Notfallplanung stellt sicher, dass bei schwerwiegenden Störungen oder Krisen schnell und koordiniert reagiert wird, um den Fortbestand kritischer Geschäftsprozesse und die Wiederherstellung der betroffenen Systeme zu gewährleisten.  Notfallplanung adressiert umfassende Notfälle und Krisensituationen, während die Sicherheitsvorfallbehandlung spezifisch auf Informationssicherheitsvorfälle fokussiert ist. Notfallmanagement ist strategisch und organisatorisch umfassender, während die Vorfallbehandlung auf operative Sicherheitsprobleme eingeht."
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "723219b0-d58a-432d-bce2-2bf16c5874ae"
+  }
+ ]
+}

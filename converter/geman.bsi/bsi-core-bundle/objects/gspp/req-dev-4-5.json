@@ -1,0 +1,83 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DEV.4.5",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DEV.4.5",
+ "lifecycle": "active",
+ "title": "Updates externer Softwarebibliotheken",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Entwicklung für Anwendungen SOLLTE externe Softwarebibliotheken auf Sicherheitsupdates vor dem Release testen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "testen",
+     "result": "externe Softwarebibliotheken auf Sicherheitsupdates",
+     "result-specification": "vor dem Release",
+     "target-object-categories": [
+      "Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Freigabeplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.28"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Lieferketten",
+      "Secure Compiling Practices"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Werden veraltete Softwarebibliotheken in eine veröffentlichte Software eingebunden, so können diese Sicherheitslücken oder Fehler enthalten, die in den aktuellen Versionen bereits behoben sind. Prüfen Sie daher vor einer Freigabe der Software ob eingebundene Bibliotheken aktualisiert wurden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "3d451248-af76-44a4-87b9-8a86cdff4c28"
+  }
+ ]
+}

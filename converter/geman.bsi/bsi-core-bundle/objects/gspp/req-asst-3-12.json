@@ -1,0 +1,86 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.3.12",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.3.12",
+ "lifecycle": "active",
+ "title": "Autorisierung von Personen oder Institutionen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets für Daten SOLLTE den Zugriff von Personen oder Institutionen im Einklang mit den zugehörigen Anforderungen zum Identitäts- und Berechtigungsmanagement autorisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "autorisieren",
+     "result": "den Zugriff von Personen oder Institutionen",
+     "result-specification": "im Einklang mit den zugehörigen Anforderungen zum Identitäts- und Berechtigungsmanagement",
+     "target-object-categories": [
+      "Daten"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ziel dieser Regelung ist es, sicherzustellen, dass nur berechtigte Stellen auf sensible Werte zugreifen, wodurch unautorisierte Einsichtnahme, Manipulation oder Missbrauch verhindert werden kann. Ohne eine klare Kopplung an Identitäts- und Berechtigungsmanagement könnte es zu unkontrollierten Datenabflüssen, Einsicht durch Dritte oder langfristigen Abhängigkeiten von bestimmten Dienstleistern kommen, die den Zugriff einseitig steuern könnten. Eine korrekte Umsetzung kann hingegen Transparenz schaffen und den Zugriff auf Informationen nachvollziehbar, reversibel und sicher gestalten. Umfasst sowohl die Autorisierung eigenen Personals, als auch die Autorisierung externer Dienstleister oder Partner. Die Formulierung \"im Einklang mit den zugehörigen Anforderungen zum Identitäts- und Berechtigungsmanagement\" bedeutet, dass die Autorisierung so erfolgt, wie in der Praktik Berechtigung (BER) festgelegt."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "523f8482-4664-41ac-b131-6525c5cfa255"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/BER.1.1"
+  }
+ ]
+}

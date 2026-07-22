@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.5.8",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.5.8",
+ "lifecycle": "active",
+ "title": "Rechte für geistges Eigentum",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Dienstleistungen SOLLTE für geistiges Eigentum, das während der Vertragslaufzeit entwickelt wird,  die Eigentumsrechte vereinbaren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "vereinbaren",
+     "result": "für geistiges Eigentum, das während der Vertragslaufzeit entwickelt wird,  die Eigentumsrechte",
+     "target-object-categories": [
+      "Dienstleistungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Beschaffungskriterien"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.20"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Lieferketten"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Geistiges Eigentum meint hier alle während der Vertragslaufzeit entstehenden immateriellen Schutzgüter wie Softwarecode, Datenmodelle, Konzepte, technische Dokumentationen oder urheberrechtlich geschützte Inhalte, die im Rahmen der Dienstleistungserbringung entwickelt oder verbessert werden. Der Sinn und Zweck einer vertraglichen Regelung der Eigentumsrechte liegt darin, sicherzustellen, dass die Institution dauerhaft Kontrolle und Nutzungsrechte über Ergebnisse behält, die für ihren Betrieb oder ihre Weiterentwicklung relevant sind. Ohne klare Festlegung könnte es zu Konflikten kommen, wenn ein Dienstleister etwa nach Projektende die weitere Nutzung einer entwickelten Lösung untersagt oder hohe Lizenzgebühren verlangt; eine vertragliche Klarheit kann dagegen rechtliche Auseinandersetzungen und Abhängigkeiten verhindern. Eine Umsetzung kann über konkrete Vertragsklauseln erfolgen, die präzise definieren, welche Partei Eigentum oder Nutzungsrechte an entwickelten Ergebnissen erhält und ob bestimmte Elemente (z. B. Standardbibliotheken des Dienstleisters) ausgenommen sind. Dazu kann die Institution (1) standardisierte Vertragsvorlagen mit abgestuften Rechtemodellen nutzen, (2) ein internes Prüfschema für alle externen Verträge etablieren, das die Einbindung der Rechtsabteilung vorsieht, und (3) bei komplexen Entwicklungsleistungen technische Dokumentationspflichten verankern, damit Eigentums- und Nutzungsrechte nachvollziehbar abgesichert sind. Praktisch kann es helfen, im Vertrag eine Übergabepflicht sämtlicher Quelltexte, Dokumentationen oder Zugangsdaten vorzusehen und diese an definierte Projektmeilensteine zu koppeln."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "fbf79e86-d03e-44bb-9fec-87ad6ade595c"
+  }
+ ]
+}

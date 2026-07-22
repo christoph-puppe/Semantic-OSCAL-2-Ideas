@@ -1,0 +1,23 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-d",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Disabling unused physical ports on network devices",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0534",
+   "sequence": 13930
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Disabling unused physical ports on network devices",
+     "name": "overview",
+     "prose": "Disabling unused physical ports on network devices reduces the opportunity for malicious actors to connect to networks if they can gain physical access to network devices."
+    }
+   ]
+  }
+ }
+}

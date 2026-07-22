@@ -1,0 +1,96 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DEV.5.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DEV.5.1",
+ "lifecycle": "active",
+ "title": "Verankerung des Zeitraums für Updates",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Entwicklung für Anwendungen SOLLTE die Bereitstellung von Sicherheitsupdates mindestens für {param:dev.5.1-prm1} verankern."
+   },
+   "parameters": [
+    {
+     "name": "dev.5.1-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "die Bereitstellung von Sicherheitsupdates mindestens für {{einen bestimmten Zeitraum}}",
+     "target-object-categories": [
+      "Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Entwicklungsdokumentation"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.28",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Produktbeschreibung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Hierbei wird festgelegt, für welchen konkreten Zeitraum Sicherheitsaktualisierungen (Patches) für das Produkt mindestens bereitgestellt werden. Dazu gehört auch eine Definition von welchem Zeitpunkt aus der Zeitraum berechnet wird, z.B. Erstveröffentlichung des Produkts. Denken Sie dabei daran, ob ggf. Compliance-Verpflichtungen einzuhalten sind, z.B. § 475b Abs. 3 Nr. 2 BGB für Verbraucherverträge."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "dev.5.1-prm1": {
+     "label": "einen bestimmten Zeitraum",
+     "alt-identifier": "649b5b3b-fd58-4bec-84bb-71c93b264f94"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "649b5b3b-fd58-4bec-84bb-71c93b264f94"
+  }
+ ]
+}

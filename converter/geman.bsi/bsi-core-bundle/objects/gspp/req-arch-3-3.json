@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ARCH.3.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ARCH.3.3",
+ "lifecycle": "active",
+ "title": "SSIDs",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Architektur für WLANs SOLLTE institutionsspezifische SSIDs aktivieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "aktivieren",
+     "result": "institutionsspezifische SSIDs",
+     "target-object-categories": [
+      "WLANs"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Netzplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Viele WLAN-Geräte bringen ab Werk eingestellte Netznamen (Default SSID) mit, aus denen sich häufig Rückschlüsse auf eingesetzte Geräte oder sogar Zugangsdaten ziehen lassen. Eigene SSIDs können Nutzenden die Zuordnung der Netze zur Institution oder deren Unterscheidung erleichtern, wenn hierfür sprechende Namen konfiguriert werden (z.B. \"Institutionsname-Gastnetz\")."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "06d3eb79-4326-4bd8-87c0-9808909d29c7"
+  }
+ ]
+}

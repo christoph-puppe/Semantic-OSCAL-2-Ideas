@@ -1,0 +1,103 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Network design and configuration",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-n",
+   "sequence": 13440
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-n",
+   "sequence": 13470
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-u",
+   "sequence": 13530
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-f",
+   "sequence": 13550
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-n",
+   "sequence": 13570
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-f",
+   "sequence": 13600
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-n",
+   "sequence": 13620
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-u",
+   "sequence": 13680
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-n",
+   "sequence": 13710
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-n",
+   "sequence": 13730
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-u",
+   "sequence": 13750
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-u",
+   "sequence": 13780
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-u",
+   "sequence": 13810
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-b",
+   "sequence": 13840
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-e",
+   "sequence": 13860
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-p",
+   "sequence": 13880
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-f",
+   "sequence": 13900
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-d",
+   "sequence": 13920
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-d",
+   "sequence": 13940
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-r",
+   "sequence": 13960
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configuration-n",
+   "sequence": 13990
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Network design and configuration",
+     "name": "overview",
+     "prose": "# Further information\n\nFurther information on secure network design can be found in ASD’s [Foundations for modern defensible architecture](#8a67ffd7-61a4-4773-a1e7-e6b146f51d62) publication.\n\nFurther information on wireless networks can be found in the ‘Wireless networks’ section of these guidelines.\n\nFurther information on gateways can be found in the ‘Gateways’ section of the [Guidelines for gateways](#e8bde527-526c-4a6a-b66f-05228f09dd7b).\n\nFurther information on encrypting communications can be found in the ‘Cryptographic fundamentals’ section of the [Guidelines for cryptography](#195abe87-bb1e-4006-8b42-eaecca4d51f1).\n\nFurther information on network segmentation and segregation can be found in ASD’s [Implementing network segmentation and segregation](#23d977b2-e64e-4ebc-a59f-cd95212045c5) publication.\n\nFurther information on network security zones can be found in Canada’s Canadian Centre for Cyber Security’s [Baseline security requirements for network security zones (version 2.0)](#b43b0377-c2e4-4cdc-acec-a9ece7371e36) publication.\n\nFurther information on implementing network segmentation and segregation for system administration purposes can be found in the ‘System administration’ section of the [Guidelines for system management](#c6ca6620-ccd5-4c5d-b97c-9d92f1162948).\n\nFurther information on functional separation of servers using virtualisation can be found in the ‘Virtualisation hardening’ section of the [Guidelines for system hardening](#de7525f3-a466-40a5-abdd-3ae24a6d1b44).\n\nFurther information on blocking anonymity network traffic can be found in ASD’s [Defending against the malicious use of the Tor network](#ded13757-3c76-40cb-b46e-f84e46a1c1c7) publication.\n\nFurther information on DNS services can be found in ASD’s [Domain Name System security for domain owners](#b66f8d23-4209-4775-a1fd-bd4dc299a027) and [Domain Name System security for domain resolvers](#b13cb68a-a94a-4a69-b094-b1b68d10239e) publications.\n\nFurther information on implementing encrypted DNS can be can be found in the United States’ National Security Agency’s [Adopting Encrypted DNS in Enterprise Environments](#e2205e57-2bf0-4696-8bd8-94a5a5d5c4f2) publication and the Cybersecurity \\& Infrastructure Security Agency’s [Encrypted DNS Implementation Guidance](#fba4bdb9-82be-47a4-8198-3d47d5786932) publication.\n\nFurther information on selecting a protective DNS service can be found in the United States’ National Security Agency and Cybersecurity \\& Infrastructure Security Agency’s [Selecting a Protective DNS Service](#63b0d043-b6b3-4e2b-bca8-99b42cfd9904) publication.\n\nFurther information on cyber supply chain risk management can be found in the ‘Cyber supply chain risk management’ section of the [Guidelines for procurement and outsourcing](#f37a4848-0791-4870-b316-5536c2681c28).\n\nFurther information on network device hardening, particularly for edge devices, can be found in the following publications:\n\n- ASD’s [Mitigation strategies for edge devices: Executive guidance](#b79c4fe8-4541-401f-a32e-87fd83021c98)\n- ASD’s [Mitigation strategies for edge devices: Practitioner guidance](#0cae2aee-3762-482f-8ffe-850e98d7d605)\n- Canada’s Canadian Centre for Cyber Security’s [Security considerations for edge devices](#c47ab307-e25d-43e7-9700-7b26d9c229c3)\n- United Kingdom’s National Cyber Security Centre’s [Guidance on digital forensics and protective monitoring specifications for producers of network devices and appliances](#53d281fa-1f25-4d33-9d6b-a5831851df50).\n\nFurther information on network device hardening can also be found in the United States’ National Security Agency’s [Network Infrastructure Security Guide](#1ecfc41e-f6a8-4c96-ac41-1587718ca459) publication.\n\nFurther information on event logging can be found in the ‘Security monitoring’ section of the [Guidelines for security assurance](#ef60c0e4-acfb-4a8b-b5ed-25675c6e117c).\n\nFurther information on event logging for network devices can also be found in ASD’s [Priority logs for SIEM ingestion: Practitioner guidance](#1dbda98a-4e8b-4a52-b4f7-9d1a895fd324) publication."
+    }
+   ]
+  }
+ }
+}

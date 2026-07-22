@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-2030",
+ "version": "2026.06.18",
+ "label": "ISM-2030",
+ "lifecycle": "active",
+ "title": "Control: ism-2030",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Scanning is used during commits to identify plain text or encoded secrets and keys, which are then blocked from being stored in the authoritative source for software."
+   }
+  }
+ ]
+}

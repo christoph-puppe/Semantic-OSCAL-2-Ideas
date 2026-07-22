@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.5.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.5.3",
+ "lifecycle": "active",
+ "title": "Weitergabe von Erreichbarkeiten",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende KANN die Veröffentlichung oder Weitergabe von Erreichbarkeiten an unbefugte Dritte untersagen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "untersagen",
+     "result": "die Veröffentlichung oder Weitergabe von Erreichbarkeiten an unbefugte Dritte",
+     "target-object-categories": [
+      "Nutzende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.38",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.22",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.42"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Dient dem Schutz vor Social Engineering-Angriffen und der Minimierung von Angriffsflächen durch Informationspreisgabe. Erreichbarkeiten umfassen dabei alle Kontaktinformationen wie Telefonnummern, E-Mail-Adressen, Instant-Messaging-Handles, interne Durchwahlen oder physische Standortangaben von Mitarbeitenden, die Angreifer für gezielte Phishing-Kampagnen, Vishing-Anrufe oder physische Infiltrationsversuche nutzen könnten. Ein Vorfall könnte z.B. entstehen, wenn eine Direktwahl des IT-Betriebs in sozialen Netzwerken preisgegeben wird und Angreifer diese für Pretexting nutzen, um sich als IT-Support auszugeben und Zugangsdaten zu erschleichen, oder wenn durch die Veröffentlichung von Abteilungsstrukturen mit einzelnen Kontaktdaten Angreifer gezielt Führungskräfte für CEO-Fraud identifizieren könnten."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "8469fae0-3bd3-41d2-a323-af26619e62d2"
+  }
+ ]
+}

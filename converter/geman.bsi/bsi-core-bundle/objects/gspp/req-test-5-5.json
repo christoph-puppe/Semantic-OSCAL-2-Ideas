@@ -1,0 +1,96 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/TEST.5.5",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "TEST.5.5",
+ "lifecycle": "active",
+ "title": "Rückblick",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Änderungen und Tests SOLLTE die Erreichung der Bereitstellungsziele {param:test.5.5-prm1} überprüfen."
+   },
+   "parameters": [
+    {
+     "name": "test.5.5-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überprüfen",
+     "result": "die Erreichung der Bereitstellungsziele",
+     "result-specification": "{{regelmäßig}}"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Übungs- und Prüfplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein effektiver Änderungsmanagementprozess profitiert von systematischen Überprüfungen nach der Implementierung. Dabei wird bewertet, ob die definierten Bereitstellungsziele tatsächlich erreicht wurden und ob Änderungen unbeabsichtigte Auswirkungen auf Sicherheit, Stabilität oder Verfügbarkeit hatten. Die gewonnenen Erkenntnisse können genutzt werden, um zukünftige Änderungen gezielter zu planen und Risiken zu reduzieren."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "test.5.5-prm1": {
+     "label": "regelmäßig",
+     "alt-identifier": "3e647e0e-ec8e-4ca5-8474-c511b25e53af"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "3e647e0e-ec8e-4ca5-8474-c511b25e53af"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/REA.3.1"
+  }
+ ]
+}

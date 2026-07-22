@@ -1,0 +1,87 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.4.9",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.4.9",
+ "lifecycle": "active",
+ "title": "Sicherheitsüberprüfung (extern)",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Einkäufe KANN Sicherheitsüberprüfungen für Personen, die vom Lieferanten mit der Vertragsdurchführung beauftragt werden, vereinbaren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "vereinbaren",
+     "result": "Sicherheitsüberprüfungen für Personen, die vom Lieferanten mit der Vertragsdurchführung beauftragt werden,",
+     "target-object-categories": [
+      "Einkäufe"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Beschaffungskriterien"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.20"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5,
+     "tags": [
+      "Lieferketten"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Eine Sicherheitsüberprüfung meint die Verifikation von Identität, beruflicher Qualifikation und Verlässlichkeit von allen Personen mit Zugriff auf schützenswerte Informationen, hier konkret des beauftragten Personal des Lieferanten. Die Sicherheitsüberprüfung kann je nach Vereinbarung vom Lieferanten oder dem Auftraggeber ausgeführt werden. Die Verlässlichkeit kann z.B. anhand eines polizeilichen Führungszeugnisses und einer OSINT-Recherche verifiziert werden. Hierbei besteht ein enger Bezug zum Persönlichkeits- und Datenschutzrecht der Betroffenen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "ec083939-6e37-46be-978e-7b0c894ab768"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/PERS.3.6.1"
+  }
+ ]
+}

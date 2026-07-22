@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-1027",
+ "version": "2026.06.18",
+ "label": "ISM-1027",
+ "lifecycle": "active",
+ "title": "Control: ism-1027",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Email distribution list applications used by external senders is configured such that it does not break the validity of the sender’s DKIM signature."
+   }
+  }
+ ]
+}

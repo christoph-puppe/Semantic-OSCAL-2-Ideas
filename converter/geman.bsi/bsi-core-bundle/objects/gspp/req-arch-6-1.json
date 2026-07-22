@@ -1,0 +1,94 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ARCH.6.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ARCH.6.1",
+ "lifecycle": "active",
+ "title": "Kontrollierte Verbindungsführung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Architektur für Externe Netzanschlüsse KANN eine  {param:arch.6.1-prm1} kontrollierte Verbindungsführung für Weitverkehrsverbindungen aktivieren."
+   },
+   "parameters": [
+    {
+     "name": "arch.6.1-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "aktivieren",
+     "result": "eine  {{physisch oder logisch}} kontrollierte Verbindungsführung",
+     "result-specification": "für Weitverkehrsverbindungen",
+     "target-object-categories": [
+      "Externe Netzanschlüsse"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.14"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Unter einer physisch kontrollierten Verbindungsführung kann in diesem Kontext die Verwendung dedizierter Leitungswege (Dark Fiber), sowie Hardware-Komponenten wie Router, Firewalls oder Trennstellen verstanden werden, die den Zugriff auf Leitungen oder Ports unmittelbar begrenzen. Eine logisch kontrollierte Verbindungsführung kann durch softwarebasierte Mechanismen wie VLANs, VPN-Tunnel oder Routing-Regeln erfolgen, die den Datenverkehr unabhängig von der physischen Leitung steuern. Ohne eine kontrollierte Verbindungsführung könnte ein Angreifer über eine ungeschützte oder direkt angebundene Leitung in interne Systeme eindringen und dort Schadsoftware platzieren, Daten manipulieren oder vertrauliche Informationen abziehen. Ebenso könnte durch eine unzureichend kontrollierte Verbindung ein Ausfall der Netzstabilität eintreten, etwa wenn über eine falsch konfigurierte Schnittstelle großflächiger Datenverkehr einbricht und produktive Systeme beeinträchtigt. Eine kontrollierte Architektur kann dagegen Angriffsflächen reduzieren, Datenströme nachvollziehbar machen und die Sicherheit der Informationsflüsse zwischen Institution und externen Partnern oder Netzanbietern erhöhen. Die Umsetzung kann beispielsweise durch klar definierte Übergabepunkte zum externen Netz erfolgen, an denen sämtliche eingehenden und ausgehenden Verbindungen zentral zusammenlaufen und durch Filter- oder Segmentierungsmechanismen geprüft werden."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "arch.6.1-prm1": {
+     "label": "physisch oder logisch",
+     "alt-identifier": "acd884af-7aad-470c-bfcf-216cff90e9be"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "acd884af-7aad-470c-bfcf-216cff90e9be"
+  }
+ ]
+}

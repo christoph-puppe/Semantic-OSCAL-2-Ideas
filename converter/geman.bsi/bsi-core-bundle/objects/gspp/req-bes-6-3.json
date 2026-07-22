@@ -1,0 +1,89 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.6.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.6.3",
+ "lifecycle": "active",
+ "title": "Übertragbarkeit von Daten",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Dienstleistungen SOLLTE die Übertragbarkeit von Daten, Konfigurationen und der Funktionalität für den Fall einer Kündigung vereinbaren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "vereinbaren",
+     "result": "die Übertragbarkeit von Daten, Konfigurationen und der Funktionalität",
+     "result-specification": "für den Fall einer Kündigung",
+     "target-object-categories": [
+      "Dienstleistungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Beschaffungskriterien"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.20"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Lieferketten",
+      "Exit-Strategie"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ohne eine solche Regelung kann es zu erheblichen Betriebsstörungen kommen, etwa wenn ein Dienstleister im Streitfall Daten nur in proprietären Formaten bereitstellt oder deren Übergabe verzögert. Dies könnte dazu führen, dass eine Institution den Betrieb nicht nahtlos mit einem neuen Anbieter fortsetzen kann, etwa bei Cloud-Diensten, Hosting oder SaaS-Lösungen. Auch kann der Verlust von Metadaten, Zugriffshistorien oder Konfigurationsdateien eintreten, was die Nachvollziehbarkeit und Funktionsfähigkeit stark einschränken könnte. Unter „Übertragbarkeit von Daten“ (Data Portability) versteht man in diesem Kontext die technische und organisatorische Fähigkeit, alle relevanten Daten in einem vollständigen, strukturierten und maschinenlesbaren Format an die Institution oder einen Nachfolger zu übertragen. Es geht dabei nicht nur um die Rohdaten, sondern auch um begleitende Informationen, die für die Wiederaufnahme des Betriebs an anderer Stelle erforderlich sind (Metadaten). Die Angemessenheit dieser Maßnahme bemisst sich daran, wie stark die Tätigkeit der Institution von den ausgelagerten Prozessen abhängt und wie groß die Auswirkungen einer verzögerten oder unvollständigen Rückgabe wären."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "4e0fd86f-d5b5-41a8-a25d-0a61630fc37c"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/BES.5.13.1"
+  }
+ ]
+}

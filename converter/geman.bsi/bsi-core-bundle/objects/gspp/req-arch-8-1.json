@@ -1,0 +1,85 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ARCH.8.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ARCH.8.1",
+ "lifecycle": "active",
+ "title": "Redundanz im Kernnetz",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Architektur für Netze SOLLTE für das Kernnetz redundante Netzkomponenten installieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "installieren",
+     "result": "für das Kernnetz redundante Netzkomponenten",
+     "target-object-categories": [
+      "Netze"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.11",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.9",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4,
+     "tags": [
+      "Hochverfügbarkeit",
+      "Failover"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ziel hierbei ist es, dass beim Ausfall eines Systems oder einer Systemkomponente die Netzanbindung stets weiterhin funktionsfähig bleibt (Single-Point-of-Failure)."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "37f932b2-e132-4bf0-b8c3-eed73eadc680"
+  }
+ ]
+}

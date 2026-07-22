@@ -1,0 +1,76 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/TEST.4.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "TEST.4.2",
+ "lifecycle": "active",
+ "title": "Signatur",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Änderungen und Tests KANN eine Signatur der Freigabeerklärung ausführen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "ausführen",
+     "result": "eine Signatur der Freigabeerklärung"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.26",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Signatur der Freigabeerklärung ist hier als eine digitale oder handschriftliche Unterschrift zu verstehen, die dokumentiert, dass eine geplante Änderung oder ein Test geprüft, bewertet und zur Umsetzung freigegeben wurde. Die Signatur kann damit sowohl eine elektronische Signatur nach gängigen Standards (z. B. qualifizierte elektronische Signatur im Ticketsystem) als auch eine händische Unterschrift sein. Sie stellt nicht nur eine rechtliche, sondern vor allem eine technische und organisatorische Nachvollziehbarkeit sicher, indem eindeutig erkennbar wird, wer eine Entscheidung zur Durchführung von Änderungen verantwortet hat. Die Freigabe durch eine Signatur kann dazu beitragen, dass unbeabsichtigte oder fehlerhafte Änderungen nicht unkontrolliert in den Betrieb gelangen. Ein fehlender Nachweis könnte im Vorfallfall zu Streitigkeiten über Verantwortlichkeiten führen oder die forensische Nachvollziehbarkeit erschweren. Ebenso könnte ohne dokumentierte Freigabe eine ungetestete Änderung produktive Systeme beeinträchtigen und Ausfälle oder Datenverlust verursachen. Durch eine dokumentierte Signatur kann hingegen nachvollziehbar gemacht werden, dass fachliche, technische und sicherheitsrelevante Prüfungen stattgefunden haben und die Entscheidung zur Umsetzung bewusst und überprüfbar getroffen wurde."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "9a713453-4359-4383-a94d-5cfeeae045b8"
+  }
+ ]
+}

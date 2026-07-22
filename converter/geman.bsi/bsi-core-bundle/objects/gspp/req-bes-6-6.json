@@ -1,0 +1,89 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.6.6",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.6.6",
+ "lifecycle": "active",
+ "title": "Rückgewähr von Assets",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Dienstleistungen SOLLTE die Rückgewähr von Assets für den Fall einer Kündigung vereinbaren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "vereinbaren",
+     "result": "die Rückgewähr von Assets",
+     "result-specification": "für den Fall einer Kündigung",
+     "target-object-categories": [
+      "Dienstleistungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Beschaffungskriterien"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.20"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Lieferketten",
+      "Exit-Strategie"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Rückgewähr bedeutet hier, dass sämtliche von der Institution bereitgestellte Werte – wie etwa IT-Systeme, Datenträger oder Papierkopien – bei Beendigung des Vertragsverhältnisses an die Institution zurückgegeben werden. Der Zweck liegt darin, unkontrollierten Weitergebrauch oder Missbrauch von Informationen und Ressourcen zu verhindern. So könnte etwa ein externer Dienstleister nach einer Kündigung weiterhin Zugriff auf sensible Daten behalten oder unbeabsichtigt alte Backup-Medien in seinem Besitz behalten, was zu Datenabflüssen oder unautorisierten Offenlegungen führen könnte. Eine klare Regelung kann dagegen sicherstellen, dass sämtliche Ressourcen nachvollziehbar wieder unter die alleinige Kontrolle der Institution gelangen und Vertraulichkeit sowie Integrität gewahrt bleiben. Für die Umsetzung kann es hilfreich sein, die Rückgabepflicht vertraglich zu konkretisieren und präzise Abläufe zu definieren. So kann die Institution (1) Inventarlisten führen, in denen alle übergebenen physischen Geräte, Datenträger oder Zutrittsmedien eindeutig aufgeführt werden, (2) Checklisten für die geordnete Rückführung bei Vertragsende einsetzen und (3) eine Rückgabequittung oder Übergabebestätigung durch den Dienstleister einfordern, die den ordnungsgemäßen Erhalt dokumentiert. Ergänzend kann die Institution Rückgabefristen und Verantwortlichkeiten im Vertrag festlegen sowie technische Maßnahmen wie die Sperrung von verlorenen oder nicht zurückgegebenen Zutrittskarten einplanen. Auch kann eine Abnahmeprüfung der zurückgegebenen Assets durch die Institution erfolgen, um sicherzustellen, dass diese vollständig und funktionsfähig übergeben wurden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "005f0ce7-9372-49b6-b78b-c09a5e2f56f0"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/DLS.4.1"
+  }
+ ]
+}

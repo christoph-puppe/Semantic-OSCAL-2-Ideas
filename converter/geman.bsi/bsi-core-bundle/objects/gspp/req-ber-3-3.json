@@ -1,0 +1,75 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BER.3.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BER.3.3",
+ "lifecycle": "active",
+ "title": "Vorgehensweise zum Widerruf",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Berechtigung SOLLTE eine Vorgehensweise zum Widerruf von Authentifizierungsmitteln verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "eine Vorgehensweise zum Widerruf von Authentifizierungsmitteln"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "0",
+     "authenticity": "2",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.36"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Der Widerruf meint hier die gezielte Ungültigsetzung, Sperrung, Deaktivierung oder Rücknahme solcher Mittel, sodass sie nicht mehr zur Anmeldung, Signatur, Schnittstellennutzung oder sonstigen Authentisierung verwendet werden können; er unterscheidet sich von einer bloßen Änderung der Berechtigung, weil nicht nur der Zugriffsumfang, sondern das Authentifizierungsmittel selbst unwirksam gemacht wird; umfasst sein können auch Sperrung, Deaktivierung, Löschung, Ersetzung, Zurücksetzung, Entzug aus Vertrauenslisten oder das Ungültigmachen noch aktiver Sitzungen, soweit dies für das jeweilige Verfahren technisch einschlägig ist. Eine Vorgehensweise ist dabei als beschriebener, wiederholbarer Ablauf zu verstehen, der Auslöser, Zuständigkeiten, Prüfschritte, technische Durchführung, Dokumentation und erforderliche Folgemaßnahmen so konkretisiert, dass der Widerruf auch bei Zeitdruck, außerhalb regulärer Arbeitszeiten oder bei unvollständiger Informationslage verlässlich angestoßen werden kann.  Sinn und Zweck der Vorschrift ist, die Nutzbarkeit kompromittierter, verlorener, fehlgeleiteter oder missbräuchlich verwendeter Authentifizierungsmittel zeitnah zu beenden und dadurch unbefugte Zugriffe, fortgesetzte Sitzungen oder die Ausweitung eines Vorfalls zu begrenzen. Ohne geregelten Widerruf könnte ein verlorener Hardware-Token weiter für Remote-Zugriffe genutzt werden, ein offengelegtes Passwort könnte nach einem Phishing-Vorfall erneut eingesetzt werden, oder ein kompromittiertes Zertifikat könnte weiterhin Dienste, Geräte oder Benutzeridentitäten legitimieren; eine klare Vorgehensweise kann die Reaktionszeit verkürzen, Fehlentscheidungen reduzieren und die Nachvollziehbarkeit der Maßnahme verbessern."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "8e1e032f-18ff-4a33-b314-cca882ffa878"
+  }
+ ]
+}

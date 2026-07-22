@@ -1,0 +1,83 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.12.9",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.12.9",
+ "lifecycle": "active",
+ "title": "Information über Aufzeichnung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für VK-Anwendungen SOLLTE eine Anzeige laufender Aufzeichnungen für alle Teilnehmenden aktivieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "aktivieren",
+     "result": "eine Anzeige laufender Aufzeichnungen",
+     "result-specification": "für alle Teilnehmenden",
+     "target-object-categories": [
+      "VK-Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.29"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 1,
+     "tags": [
+      "Produktbeschreibung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Heimliche Aufzeichnungen verletzen die Vertraulichkeit der Kommunikation. Eine Aufzeichnung von Wort und Bild ohne den Willen der Aufgezeichneten kann zudem eine Persönlichkeitsrechtsverletzung bis hin zur Straftat (§ 201 StGB) darstellen. Dies gilt auch für Aufzeichnungen, die KI-gestützt ausgewertet werden. Falls die Möglichkeit zur Aufzeichnung deaktiviert ist, so ist diese Anforderung ebenfalls erfüllt."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "46dd3e73-e1d5-4dee-9312-d52e9bb5c631"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-usage-webmail-services",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Webmail services",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0267",
+   "sequence": 12970
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Webmail services",
+     "name": "overview",
+     "prose": "When users access non-approved webmail services, they often bypass controls that have been implemented by an organisation, such as email content filtering. To mitigate this security risk, access to non-approved webmail services should be blocked."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-roles-system-owners",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "System owners",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-roles-system-owners-system-own",
+   "sequence": 1060
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-roles-system-owners-protecting",
+   "sequence": 1180
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-roles-system-owners-annual-rep",
+   "sequence": 1200
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "System owners",
+     "name": "overview",
+     "prose": "# Further information\n\nFurther information on using the [Information security manual](#e7ce6e23-4bbb-45c1-a657-7e563c0837ed)’s six-step risk management framework can be found in the ‘Applying a risk-based approach to cyber security’ section of [Using the Information security manual](#8a965432-7e2e-4020-86e4-b38837f9be60).\n\nFurther information on [the purpose of IRAP](#84d3cbab-ab84-4981-a4f7-2bd469c8deaf) is available from ASD.\n\nFurther information on conducting security assessment activities as part of continuously monitoring the security of systems can be found in the ‘Security assessments’ section of the [Guidelines for security assurance](#ef60c0e4-acfb-4a8b-b5ed-25675c6e117c)."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,87 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ARCH.8.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ARCH.8.2",
+ "lifecycle": "active",
+ "title": "Redundante TK-Anbindung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Architektur für Externe Netzanschlüsse KANN redundante TK-Anbindungen für eingehende und ausgehende Verbindungen installieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "installieren",
+     "result": "redundante TK-Anbindungen",
+     "result-specification": "für eingehende und ausgehende Verbindungen",
+     "target-object-categories": [
+      "Externe Netzanschlüsse"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.9",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.27",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.11"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 4,
+     "tags": [
+      "Hochverfügbarkeit",
+      "Failover",
+      "PSTN"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Telekommunikationsanbindungen sind z.B. SIP-Trunks zum öffentlichen Telefonnetz (PSTN). Für weitere Details siehe „Kompendium für organisationsinterne Telekommunikationssysteme mit erhöhtem Schutzbedarf\"."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "11904e1d-22f5-4855-b2b4-5b82a423c2d7"
+  }
+ ]
+}

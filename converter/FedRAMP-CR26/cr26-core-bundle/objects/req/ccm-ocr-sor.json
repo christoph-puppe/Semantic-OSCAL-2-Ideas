@@ -1,0 +1,42 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/req/CCM-OCR-SOR",
+ "version": "2026.07.14.01",
+ "label": "CCM-OCR-SOR",
+ "lifecycle": "active",
+ "title": "Spread Out Reports",
+ "statements": [
+  {
+   "id": "s1",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.fedramp.gov/cr26/party/providers"
+   ],
+   "prose": {
+    "en": "Providers SHOULD establish a regular 3 month cycle for Ongoing Certification Reports that is spread out from the beginning, middle, or end of each quarter."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Agency"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Ongoing Certification"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Provider"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Regularly"
+  }
+ ],
+ "facets": {
+  "https://ns.fedramp.gov/cr26/facet/narrative@1": {
+   "note": "This recommendation is intended to discourage hundreds of cloud service providers from releasing their Ongoing Certification Reports during the first or last week of each quarter because that is the easiest way for a single provider to track this deliverable; the result would overwhelm agencies with many cloud services. Widely used cloud service providers are encouraged to work with their customers to identify ideal timeframes for this cycle."
+  }
+ }
+}

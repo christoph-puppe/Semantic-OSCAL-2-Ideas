@@ -1,0 +1,100 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DET.5.7",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DET.5.7",
+ "lifecycle": "active",
+ "title": "Analyse verdeckter Kanäle",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Detektion KANN den Informationsverbund auf verdeckte Kommunikationskanäle {param:det.5.7-prm1} überprüfen."
+   },
+   "parameters": [
+    {
+     "name": "det.5.7-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überprüfen",
+     "result": "den Informationsverbund auf verdeckte Kommunikationskanäle",
+     "result-specification": "{{bei Sicherheitsvorfällen mit verdeckten Kanälen und regelmäßig}}"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Detektions-Konzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.39"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5,
+     "tags": [
+      "Pentest",
+      "Advanced Persistent Threats (APT)"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein verdeckter Kanal (Covert Channel) ist ein heimlicher Kommunikationskanal, mit dem Angreifer legitime Verbindungen ausnutzen, um verdeckt Daten zu übertragen. Die Analyse verdeckter Kanäle ist insbesondere dann sinnvoll, wenn die Gefahr eines unbefugten Informationsflusses über Sicherheitsdomänen hinweg besteht, beispielsweise bei Anwendungen an externen Netzanschlüssen oder bei IT-Systemen, auf denen Daten mit hoher Sicherheitseinstufung neben anderen Daten verarbeitet werden. Relevant sind dabei sowohl Speicherkanäle (Storage Channel) als auch Zeitkanäle (Timing Channel). Um potenzielle verdeckte Kanäle zu identifizieren bietet es sich an, auf Bedrohungsmodellierungen (Threat Modelling) oder die Sicherheitsarchitektur der betrachteten IT-Produkte zurückzugreifen. Entwickler oder erfahrene Penetrationstester sind am besten in der Lage, potenzielle Schwachstellen in IT-Systemen zu identifizieren, die zu verdeckten Kanälen führen könnten. Einige verdeckte Kanäle können durch darauf spezialisierte Erkennungswerkzeuge (sog. Warden) erkannt werden. Aufgrund der Vielzahl denkbarer verdeckter Kommunikationswege können solche Kanäle jedoch kaum vollständig verhindert werden. Daher ist es zweckmäßig, sich bei der Analyse auf diejenigen potenziellen verdeckte Kanäle zu konzentrieren, die eine bestimmte Bandbreitenschwelle überschreiten. Hierbei bietet sich ein gegenseitiger Abgleich mit existierenden Bedrohungsmodellierungen oder Risikoanalysen an. Auch ergänzende Maßnahmen wie Traffic Normalization können sinnvoll sein - dadurch kann verdeckte Kommunikation zwar nicht erkannt werden, jedoch kann man sie so ausbremsen oder unerkannt eliminieren."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "det.5.7-prm1": {
+     "label": "bei Sicherheitsvorfällen mit verdeckten Kanälen und regelmäßig",
+     "alt-identifier": "8f64e735-9870-4a8d-8b7b-220b93baddba"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "8f64e735-9870-4a8d-8b7b-220b93baddba"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/DET.5.6"
+  }
+ ]
+}

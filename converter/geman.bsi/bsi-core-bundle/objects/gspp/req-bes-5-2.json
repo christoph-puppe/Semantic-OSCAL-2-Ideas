@@ -1,0 +1,96 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.5.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.5.2",
+ "lifecycle": "active",
+ "title": "Service Level Agreement",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Outsourcing SOLLTE die Einhaltung einer bestimmten Dienstgüte anhand von {param:bes.5.2-prm1} vereinbaren."
+   },
+   "parameters": [
+    {
+     "name": "bes.5.2-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "vereinbaren",
+     "result": "die Einhaltung einer bestimmten Dienstgüte",
+     "result-specification": "anhand von {{Kriterien}}",
+     "target-object-categories": [
+      "Outsourcing"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Beschaffungskriterien"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.20"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4,
+     "tags": [
+      "Lieferketten"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Dienstgüte (engl. Service Quality oder Service Level) beschreibt das messbare Leistungsniveau, das ein externer Anbieter dauerhaft erbringen soll. Sie wird üblicherweise in Service Level Agreements (SLA) festgelegt und kann Aspekte wie Reaktionszeiten, Verfügbarkeiten, Fehlerraten oder Sicherheitsstandards betreffen. Die Kriterien können z. B. Verfügbarkeit (in %), maximale Wiederherstellungszeiten (Recovery Time Objective, RTO), Datensicherheitsmaßnahmen, Supportzeiten oder Nachweisintervalle für Penetrationstests sein. Der Zweck dieser Vorgabe liegt darin, Risiken unklarer Leistungs- oder Sicherheitsverantwortung zu vermeiden, die im Falle unpräziser oder fehlender Dienstgütezusagen zu Ausfällen, Datenverlusten oder unzureichenden Sicherheitsreaktionen führen könnten. Eine klar definierte und überprüfbare Dienstgüte kann dagegen Transparenz schaffen, die Vergleichbarkeit von Anbietern erleichtern und die Resilienz ausgelagerter Prozesse erhöhen. Dabei sind möglichst objektivierte, quantitative Kriterien deutlich nachvollziehbarer und eindeutiger als einfache Beschreibungen wie \"gut\". Ein Beipiel ist eine Mindestverfügbarkeit von 99% für einen Server, auf dem hochverfügbare Daten gespeichert werden. Neben einzuhaltenden Mindestkriterien bietet es sich hier auch an optionale Qualitätskriterien festzulegen, bei deren Erfüllung höhere Preise akzeptiert werden, um ein \"Race to the bottom\" im Wettbewerb der Anbieter um die Institution zu vermeiden, da ein rein preisorientierter Wettlauf auf Kosten der Sicherheit gehen könnte."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "bes.5.2-prm1": {
+     "label": "Kriterien",
+     "alt-identifier": "31fea405-1180-4c99-b080-a90a2ee6f574"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "31fea405-1180-4c99-b080-a90a2ee6f574"
+  }
+ ]
+}

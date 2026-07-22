@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.7.13",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.7.13",
+ "lifecycle": "active",
+ "title": "Unverschlüsselte WLANs",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende von Endgeräten SOLLTE gegen die Risiken der Nutzung unverschlüsselter WLANs sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "gegen die Risiken der Nutzung unverschlüsselter WLANs",
+     "target-object-categories": [
+      "Nutzende",
+      "Endgeräte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ohne Verschlüsselung könnten die über WLAN übertragenen Daten abgehört werden, z.B. Zugangsdaten, Session-Hijacking, Umleitungen durch DNS-Spoofing oder „Evil-Twins“. Ebenso könnte Schadcode über manipulierte Update-Kanäle oder Portalseiten eingeschleust werden. Im Kontext dieser Anforderung bedeutet „unverschlüsseltes WLAN“ offene Wi-Fi-Netze ohne WPA2/WPA3-Schutz, bei denen ein Captive Portal allein keine Funkstreckenverschlüsselung bereitstellt."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "b0c8ba84-b24f-4209-a739-ea13c2aea349"
+  }
+ ]
+}

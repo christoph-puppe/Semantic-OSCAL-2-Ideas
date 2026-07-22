@@ -1,0 +1,85 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.15.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.15.3",
+ "lifecycle": "active",
+ "title": "Denial of Service",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für Anwendungen von Hostsystemen KANN Schutzmaßnahmen gegen Denial of Service aktivieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "aktivieren",
+     "result": "Schutzmaßnahmen gegen Denial of Service",
+     "target-object-categories": [
+      "Anwendungen",
+      "Hostsysteme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "0",
+     "integrity": "0",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.27",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.40"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5,
+     "tags": [
+      "Produktbeschreibung",
+      "Phishing",
+      "Denial of Service"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Denial-of-Service-Angriffe zielen darauf ab, die Webanwendung für legitime Nutzende nicht mehr erreichbar zu machen. Webanwendungen im öffentlichen Interesse sind häufig Ziel derartiger Angriffe. Mechanismen wie Content Delivery Network und Load Balancer können die Lastfähigkeit der Anwendung erhöhen, während Filterfunktionen Angriffsmuster erkennen und aus den Anfragen herausfiltern können."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "51947077-3600-48fc-83b0-5d5ff343d706"
+  }
+ ]
+}

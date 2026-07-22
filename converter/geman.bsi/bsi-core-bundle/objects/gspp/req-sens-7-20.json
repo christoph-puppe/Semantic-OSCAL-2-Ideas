@@ -1,0 +1,83 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.7.20",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.7.20",
+ "lifecycle": "active",
+ "title": "Authentifzierung von Gesprächspartnern",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende von Informationen SOLLTE zur Authentifizierung von Gesprächspartnern vor der Weitergabe von Informationen sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "zur Authentifizierung von Gesprächspartnern vor der Weitergabe von Informationen",
+     "target-object-categories": [
+      "Nutzende",
+      "Informationen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.42",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.36"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 1,
+     "tags": [
+      "Advanced Persistent Threats (APT)"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Authentifizierung von Gesprächspartnern ist die verlässliche Verifikation der Identität einer Person, bevor vertrauliche oder schützenswerte Informationen mündlich, telefonisch oder über andere elektronische Kommunikationsmittel weitergegeben werden. Dazu gehört es insbesondere sicherzustellen, dass die anfragende Person tatsächlich diejenige ist, für die sie sich ausgibt („authentication of interlocutors“). Ziel ist es zu verhindern, dass unberechtigte Dritte durch Täuschung an vertrauliche Inhalte gelangen. Ohne diese Überprüfung könnten Angriffe wie Social Engineering, CEO-Fraud oder Phishing erfolgreich sein – ein Angreifer könnte sich z. B. am Telefon als interner Kollege, vertrauter Dienstleister oder sogar als Behördenvertreter ausgeben, um Zugang zu Kundenlisten, Zugangsdaten oder Projektplänen zu erhalten. Dies gilt insbesondere am Telefon, aber auch in persönlichen Gesprächen mit Unbekannten. Sinnvoll ist es, hierzu ein einheitliches Verfahren zu etablieren, bei dem vor Auskunftserteilung anfragende Personen durch gezielte Rückfragen oder Vergleich mit bekannten Kontaktdaten überprüft werden. Beispiele können sein: (1) Rückruf unter der im internen Verzeichnis hinterlegten Telefonnummer, (2) Abgleich spezifischer interner Referenzen oder Codes, (3) Nachfrage nach Details, die nur legitim Berechtigte kennen können (z.B. Aktenzeichen), oder (4) die Nutzung anderer sicherer Kommunikationskanäle, die bereits für die jeweilige Person verifiziert wurden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "820687b2-4447-455d-9c9f-236c7333db82"
+  }
+ ]
+}

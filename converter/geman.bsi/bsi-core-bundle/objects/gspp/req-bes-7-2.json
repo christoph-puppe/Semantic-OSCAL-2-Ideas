@@ -1,0 +1,90 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.7.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.7.2",
+ "lifecycle": "active",
+ "title": "Prozesse vor Netzanbindung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Outsourcing SOLLTE vor Anbindung des Datennetzes der Nutzenden an das Datennetz der Anbietenden alle sicherheitsrelevanten Maßnahmen im Einklang mit den Regelungen und Verfahren des Managementsystems verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "vor Anbindung des Datennetzes der Nutzenden an das Datennetz der Anbietenden alle sicherheitsrelevanten Maßnahmen",
+     "result-specification": "im Einklang mit den Regelungen und Verfahren des Managementsystems",
+     "target-object-categories": [
+      "Outsourcing"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Abnahmeprotokoll"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.26",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.28"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Lieferketten"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Der Sinn der Vorschrift liegt darin, Risiken durch unkontrollierte Netzwerkanbindungen zu minimieren, die bei Outsourcing deutlich höher sind als bei Standard-Dienstleistungsverträgen. Ohne vorherige Verankerung von Prozessen und technischen Lösungen, die für die sichere Anbindung zum Outsourcing-Dienstleiser erforderlich sind, könnte etwa Schadsoftware aus dem Anbietenden-Netz ungehindert in das Netz der Institution gelangen oder unbefugte Zugriffe könnten entstehen, wenn Authentifizierungsverfahren nicht abgestimmt sind. Umgekehrt kann eine klare Festlegung vorab bewirken, dass nur geprüfte, verschlüsselte und überwachte Schnittstellen genutzt werden, was eine vertrauenswürdige Zusammenarbeit ermöglicht. Da Outsourcing regelmäßig mit tiefen technischen Integrationen verbunden ist, unterscheidet es sich von herkömmlichen Lieferantenbeziehungen, bei denen keine direkte Netzwerkkopplung erfolgt. Eine Institution kann diese Anforderung praktisch umsetzen, indem sie vor der Anbindung (1) eine technische Schnittstellenbeschreibung einfordert, die Protokolle, Ports und Authentifizierungsmechanismen dokumentiert, (2) die Kommunikation auf gesicherte Kanäle wie VPN oder verschlüsselte Direktleitungen beschränkt, und (3) Verfahren zur Netzsegmentierung etabliert, sodass der Zugriff nur auf explizit freigegebene Systeme möglich ist. Ergänzend kann eine Checkliste für Dienstleisterprüfung genutzt werden, in der Sicherheitszertifikate, Protokolle zur Patch-Pflege oder geplante Monitoring-Mechanismen abgefragt werden. Ein prozessualer Tipp kann darin bestehen, die Netzfreigabe erst nach einem gemeinsamen Test der Sicherheitsmechanismen freizuschalten und dies in einem Freigabeprotokoll zu dokumentieren. So kann eine Institution sicherstellen, dass Outsourcing-Verbindungen kontrolliert, nachvollziehbar und mit einem definierten Sicherheitsniveau umgesetzt werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "1421e376-1f13-4381-a30f-597ec113d205"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/TEST.1.1"
+  }
+ ]
+}

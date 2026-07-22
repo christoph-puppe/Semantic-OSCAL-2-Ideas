@@ -1,0 +1,95 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ARCH.3.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ARCH.3.4",
+ "lifecycle": "active",
+ "title": "Verschlüsselte Netzanbindung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Architektur für WLANs SOLLTE die Netzanbindung {param:arch.3.4-prm1} verschlüsseln."
+   },
+   "parameters": [
+    {
+     "name": "arch.3.4-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verschlüsseln",
+     "result": "die Netzanbindung",
+     "result-specification": "{{nach einem anerkannten Standard}}",
+     "target-object-categories": [
+      "WLANs"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.15",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.43"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ohne eine sichere Verschlüsselung könnte ein Angreifer durch „Sniffing“ sensible Inhalte wie Passwörter, E-Mails oder Geschäftsdaten abfangen oder sogar schadhaften Datenverkehr in die Kommunikation einschleusen. Ebenso könnte ein schwacher oder veralteter Standard wie WEP einem Angreifer ermöglichen, das WLAN-Passwort innerhalb weniger Minuten zu knacken und damit vollständigen Netzzugang zu erlangen. Eine zeitgemäße und wirksame Verschlüsselung kann dagegen die Vertraulichkeit und Integrität der Kommunikation sicherstellen und bietet Schutz vor Angriffen wie „Man-in-the-Middle“-Manipulationen oder unerwünschtem Zugriff über „Rogue Clients“. Netzanbindung bedeutet hier, dass nicht nur die über das Netz transportierten Daten verschlüsselt werden, sondern auch die Kommunikation selbst, z.B. die Adressen kommunizierender Geräte. Anerkannten Standards meint z.B. WPA3-Enterprise mit 802.1X und EAP-TLS. Für Details siehe IEEE 80211, WPA3."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "arch.3.4-prm1": {
+     "label": "nach einem anerkannten Standard",
+     "alt-identifier": "45bb11ba-1018-430e-be4f-7cae54407f3c"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "45bb11ba-1018-430e-be4f-7cae54407f3c"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-gateways-content-filtering-content-conversion",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Content conversion",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1286",
+   "sequence": 16660
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Content conversion",
+     "name": "overview",
+     "prose": "Content conversion can be an effective method to render malicious code harmless by converting one file type to another file type. However, some file types will not benefit from content conversion. Examples of content conversion include:\n\n- converting Microsoft Word documents to PDF files\n- converting Microsoft PowerPoint presentations to image files\n- converting Microsoft Excel spreadsheets to comma-separated values files\n- converting PDF documents to plain text files."
+    }
+   ]
+  }
+ }
+}

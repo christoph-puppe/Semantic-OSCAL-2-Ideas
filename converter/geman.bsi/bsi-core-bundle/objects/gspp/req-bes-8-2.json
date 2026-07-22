@@ -1,0 +1,83 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.8.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.8.2",
+ "lifecycle": "active",
+ "title": "Verfahren zur Übertragung von Geschäftsprozessen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Outsourcing KANN Verfahren zur Übertragung von Geschäftsprozessen für den Fall einer geplanten oder ungeplanten Beendigung des Vertrages verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "Verfahren zur Übertragung von Geschäftsprozessen",
+     "result-specification": "für den Fall einer geplanten oder ungeplanten Beendigung des Vertrages",
+     "target-object-categories": [
+      "Outsourcing"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Geschäftsprozesse"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5,
+     "tags": [
+      "Lieferketten",
+      "Exit-Strategie"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Es empfiehlt sich diese Alternativen in einem Maßnahmenkatalog zu dokumentieren. Darin können z.B. alternative Dienstleister festgehalten werden, welche über das notwendige Niveau an Informationssicherheit verfügen, um den Prozess, welcher an den bisherigen Dienstleister ausgelagert wird, in gleichem Maße umzusetzen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "e69b2846-6b36-4b3e-8fbc-e1ccd17f4f48"
+  }
+ ]
+}

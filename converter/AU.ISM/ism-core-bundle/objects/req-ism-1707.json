@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-1707",
+ "version": "2026.06.18",
+ "label": "ISM-1707",
+ "lifecycle": "active",
+ "title": "Control: ism-1707",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Privileged user accounts (excluding backup administrator accounts) are prevented from modifying and deleting backups."
+   }
+  }
+ ]
+}

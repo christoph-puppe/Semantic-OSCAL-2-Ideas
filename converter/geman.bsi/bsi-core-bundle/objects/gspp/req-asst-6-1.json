@@ -1,0 +1,89 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.6.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.6.1",
+ "lifecycle": "active",
+ "title": "Abhandenkommen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets SOLLTE eine Vorgehensweise beim Abhandenkommen von Assets verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "eine Vorgehensweise beim Abhandenkommen von Assets"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Eine Vorgehensweise beim Abhandenkommen von Assets ist ein strukturierter, dokumentierten Reaktionsprozess, der alle notwendigen Schritte und Verantwortlichkeiten für den Umgang mit verloren gegangenen, gestohlenen oder anderweitig außer Kontrolle geratenen Informationswerten nach Eintritt des Verlustereignisses festlegt. Ohne strukturierte Prozesse könnte ein verlorenes Laptop mit Kundendaten zu anhaltenden Datenschutzverletzungen führen, ein gestohlenes Smartphone könnte dauerhaft unbefugten Zugang zu Unternehmensressourcen ermöglichen, oder vergessene Dokumente könnten unkontrolliert Geschäftsgeheimnisse preisgeben. Eine etablierte Vorgehensweise kann durch schnelle Reaktionszeiten und koordinierte Sofortmaßnahmen das bereits eingetretene Schadenspotential begrenzen und die Wiederherstellung der Informationssicherheit beschleunigen. Die Vorgehensweise zur Behandlung kann z.B. die Ortung, Sperrung oder Löschung per Fernzugriff, das Melden bei Ermittlungsbehörden oder lokalen Fundbüros, die Änderung aller betroffenen Zugangsdaten, sowie die Sperre von Authentisierungsmitteln und der enthaltenen SIM-Karte beim Provider beinhalten."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "7dba0afd-96c5-4484-8b48-12fc45294247"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/DET.2.1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/REA.1.1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/SENS.8.3"
+  }
+ ]
+}

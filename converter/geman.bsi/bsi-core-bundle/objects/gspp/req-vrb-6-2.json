@@ -1,0 +1,54 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/VRB.6.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "VRB.6.2",
+ "lifecycle": "active",
+ "title": "Bewertung der erreichten Verbesserung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Verbesserung SOLLTE ein Verfahren zur Bewertung der erreichten Verbesserung unter Berücksichtigung der damit verbundenen Vor- und Nachteile verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "ein Verfahren zur Bewertung der erreichten Verbesserung",
+     "result-specification": "unter Berücksichtigung der damit verbundenen Vor- und Nachteile"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Bewertung kann beispielsweise durch interne Audits, die Messung von Key Performance Indicators (KPIs) vor und nach der Maßnahmenumsetzung oder durch technische Überprüfungen erfolgen. Im Ergebnis ist das Sicherheitsniveau der Institution transparent dargestellt und Trends der Verbesserung des Sicherheitsniveaus, insbesondere auch durch die Vergleichbarkeit mit vorigen Bewertungen, ableitbar."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "148975f6-1a20-4fe6-9d3b-b6e69ec80ec5"
+  }
+ ]
+}

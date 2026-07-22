@@ -1,0 +1,53 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/VRB.1.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "VRB.1.1",
+ "lifecycle": "active",
+ "title": "Verfahren zur kontinuierlichen Verbesserung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Verbesserung MUSS ein Verfahren zur kontinuierlichen Verbesserung des ISMS verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "ein Verfahren zur kontinuierlichen Verbesserung des ISMS"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Im Verfahren zur Verbesserung werden Erkenntnisse aus der Überwachung in konkrete Verbesserungsmaßnahmen umgesetzt. Die kontinuierliche Verbesserung schließt den PDCA-Zyklus der Methodik ab und stellt sicher, dass die Informationssicherheit stetig weiterentwickelt und verbessert wird.  Hierbei erfolgen Änderungen im ISMS geplant und strukturiert und werden systematisch dokumentiert, um die Vergleichbarkeit und Nachvollziehbarkeit sowie die kohärente Managementbewertung sicherzustellen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "af4befb6-3550-4461-bd46-78af23a02817"
+  }
+ ]
+}
