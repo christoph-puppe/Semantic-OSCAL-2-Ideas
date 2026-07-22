@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.oscal.org/stdlib/facet/assessment-criteria",
+ "version": "1.0.0",
+ "modifies-semantics": [
+  "assessment"
+ ],
+ "note": "ILLUSTRATIVE STUB - normative schemas ship with the gate-2 deliverable",
+ "schema": {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+   "audit": {
+    "type": "object"
+   },
+   "remediation": {
+    "type": "object"
+   },
+   "method": {
+    "type": "string",
+    "enum": [
+     "automated",
+     "manual"
+    ]
+   }
+  }
+ }
+}

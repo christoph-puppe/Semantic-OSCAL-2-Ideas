@@ -1,0 +1,28 @@
+{
+ "id": "https://ns.bsi.bund.de/c5/req/dev-14-01b",
+ "version": "C5:2026",
+ "label": "DEV-14-01B",
+ "lifecycle": "active",
+ "title": "DEV-14 Basic 01B",
+ "statements": [
+  {
+   "id": "stmt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/c5/party/cloud-service-provider"
+   ],
+   "prose": {
+    "en": "Policies and procedures for the use of third party and open source software are documented, communicated and provided in accordance with SP-01."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.bsi.bund.de/c5/facet/narrative@1": {
+   "guidance": [
+    {
+     "en": "The policy should consider, where applicable, the same aspects as the policy for the proper and secure use of assets (cf. AM-05)."
+    }
+   ]
+  }
+ }
+}

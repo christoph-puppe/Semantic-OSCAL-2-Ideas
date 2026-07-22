@@ -1,0 +1,312 @@
+{
+ "manifest-version": "1",
+ "provenance": {
+  "source": "BSI C3A Criteria enabling Cloud Computing Autonomy",
+  "source-version": "1.0",
+  "source-oscal-version": "1.2.2",
+  "published": "2026-05-03T00:00:00+02:00",
+  "converter": "convert_c3a.py v0.1",
+  "namespace-note": "authority namespace minted by converter pending a BSI-published URI"
+ },
+ "objects": [
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-1-01",
+   "version": "1.0",
+   "package-digest": "sha256:87d0a29e3129f3c22c5bb6fc9789e56060be27d74b86f64274cf470b3d61e33b",
+   "semantic-digest": "sha256:f1ee10648f43be24ba13a73eb04be1f188bd2f016c2e749cb79974ad866ec2a0",
+   "path": "objects/req/sov-1-01.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-1-02",
+   "version": "1.0",
+   "package-digest": "sha256:683161fd7fa7cb9b5e2898d75176d6870a8cfedbea8b98c73f1fa5f828e3bff7",
+   "semantic-digest": "sha256:39a440adc0c17fe43c787f1fceb429f14f2987a167fcf59f51ed1f7ecb051227",
+   "path": "objects/req/sov-1-02.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-1-03",
+   "version": "1.0",
+   "package-digest": "sha256:8b9dd7b27f60750d89a3e67558f7b30ca6fe7ac654d42ca002bd7992c00d30fe",
+   "semantic-digest": "sha256:9301c636a493b0e4f00ea20ee77d0c3d84ccfb5c4b6e9e6bac2441f3a3b476f0",
+   "path": "objects/req/sov-1-03.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-1-04",
+   "version": "1.0",
+   "package-digest": "sha256:8f884a442d141682a6edf78e969f5a31ff1224b2ec0b1058f6df986b615ec0bb",
+   "semantic-digest": "sha256:bd97b8af4d11b42d9518d45dd917fc1d4118eaf4f5745f9961e025981831485c",
+   "path": "objects/req/sov-1-04.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-2-01",
+   "version": "1.0",
+   "package-digest": "sha256:ef4f2fa32802c95fd79fe3d6a43d23e265c565e29d59bff5674daade03bed67e",
+   "semantic-digest": "sha256:b2f4720bf1c1dc559890600e20ee3d07128566790ff259251482601304d785a7",
+   "path": "objects/req/sov-2-01.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-2-02",
+   "version": "1.0",
+   "package-digest": "sha256:35c91c4848b223c5149c26f3c0fac2530befa1c7c974bd34d247219be35880e8",
+   "semantic-digest": "sha256:09967bf24658b81fc9a8864cbac63a93b035ee867495c96e8e75ca6775c3a055",
+   "path": "objects/req/sov-2-02.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-2-03",
+   "version": "1.0",
+   "package-digest": "sha256:9fd89eb8b581fc88c3b84be4aac520777510dcd2e80690e76ecaf425e48f718e",
+   "semantic-digest": "sha256:6ef6c3903ae4354eb1ac2fe39cf8d690bf7019b38535f9d78e4cedd1eaf35ec8",
+   "path": "objects/req/sov-2-03.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-3-01",
+   "version": "1.0",
+   "package-digest": "sha256:78e1cb0cc93ab77658af925572b602150ade44b2cc69ba6345623409304880b1",
+   "semantic-digest": "sha256:c7a822b87bc0702ac708c591a09c59ab9ac3d0db908779507da459a6f8184613",
+   "path": "objects/req/sov-3-01.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-3-02",
+   "version": "1.0",
+   "package-digest": "sha256:08ec73cbdfa989c8b6c54781032738ea473d3caeb7e7bc9df9768d40934e4a6e",
+   "semantic-digest": "sha256:72577c00de2c9bd308863dab0e4a5cec9d920ac3a72933e04120ea18f7e49c4a",
+   "path": "objects/req/sov-3-02.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-3-03",
+   "version": "1.0",
+   "package-digest": "sha256:2ee0329d80d92febc266e1651c8cd46042daf7dd0e7b617d4b72c9d537461283",
+   "semantic-digest": "sha256:3cacfc02b257c67ec9d5b9c215f350d2ec44e2959a5db09de0686c2571e77de1",
+   "path": "objects/req/sov-3-03.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-3-04",
+   "version": "1.0",
+   "package-digest": "sha256:7aa7644ba78dede4b25b33ee036372bd6b46910e1066467dbd5cdf05cce23aa7",
+   "semantic-digest": "sha256:8ad8b9b3abddad71c708645012678f4f54cc262e2981db2c6c73bdaaea2d6316",
+   "path": "objects/req/sov-3-04.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-3-05",
+   "version": "1.0",
+   "package-digest": "sha256:ab072d8158b974182d31a5a6855894d70003ee3e8f098676b2ac443b7e599ae4",
+   "semantic-digest": "sha256:7c2e304478796d1276a2f1311ee07091458a6d790310a507d41a5010e877c630",
+   "path": "objects/req/sov-3-05.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-4-01",
+   "version": "1.0",
+   "package-digest": "sha256:51828face329bf1938f365ed9041eb8f38ae58a5f5a0523ebc728dfda3674086",
+   "semantic-digest": "sha256:d1ad8c3a8f6140c461aaa653a4e479bcd8462e9479c4e0b511eabbcd93d68038",
+   "path": "objects/req/sov-4-01.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-4-02",
+   "version": "1.0",
+   "package-digest": "sha256:5c21f1e71fed9bbf1e708d591f0e127c5bec72c33de463983fbfc2271754f20f",
+   "semantic-digest": "sha256:5a1d3e3574086990539a65efd5e305203e6338159ca10c39060744ad517e9b9d",
+   "path": "objects/req/sov-4-02.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-4-03",
+   "version": "1.0",
+   "package-digest": "sha256:1235f339185a1766ed1b0aa9f9f62c4b3e3cdd1c59bbb297dacbf63f3aa39e25",
+   "semantic-digest": "sha256:9b371371250ad70d94a92e4ed3443b534e973af66faa7c15983d94e2b82bb3f8",
+   "path": "objects/req/sov-4-03.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-4-04",
+   "version": "1.0",
+   "package-digest": "sha256:8385fa84aa2d331429811284d742fb986d31009f415deda3773cd5880efb90df",
+   "semantic-digest": "sha256:de988ab71cb788d94da2ac4bc8d49935d3710fe648e9368e2ac7d048c0c4b4a8",
+   "path": "objects/req/sov-4-04.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-4-05",
+   "version": "1.0",
+   "package-digest": "sha256:6fb4721cab75bb72aeb8e03166dc40157fdb7752cb8621cf6fff2dbcc8e6d2e8",
+   "semantic-digest": "sha256:2dd52cbfbaa0ff17378d5e2fa95238ea3a4ae541d31cedc83cd5dff63bab7a2f",
+   "path": "objects/req/sov-4-05.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-4-06",
+   "version": "1.0",
+   "package-digest": "sha256:33b9b04cec28489c08a672b41dd3aa0820f79aba70552c9d88ebf896752401ea",
+   "semantic-digest": "sha256:4cc9da9c62e7b481215cda279c4de52ded224291975adc2181f6d5fd79cda58c",
+   "path": "objects/req/sov-4-06.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-4-07",
+   "version": "1.0",
+   "package-digest": "sha256:be78dfd1b82580fa177421a09557ab94d482a6b69bba9bcd6f5734d66a358f6d",
+   "semantic-digest": "sha256:ca452f30afe6f5ed226b304d4080aad534cac6fcb8f5bc0611d353a4dd72f39d",
+   "path": "objects/req/sov-4-07.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-4-08",
+   "version": "1.0",
+   "package-digest": "sha256:4727ac194a06f9124d96109ea2c6af9a5052b1fed441e9385f298b24e1a60088",
+   "semantic-digest": "sha256:4381f4493b80d47ed4645f7698cd2f418e66e5bbacad41cfa37a4477440c3366",
+   "path": "objects/req/sov-4-08.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-4-09",
+   "version": "1.0",
+   "package-digest": "sha256:196b27328b4affc38ba4d65ea9ce55f0d86f2c9a120497171d7b3f4f38092171",
+   "semantic-digest": "sha256:5c3b6af040dd9b0b0c5819228cc64091745f15cafcd66403b68400cdfafff782",
+   "path": "objects/req/sov-4-09.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-4-10",
+   "version": "1.0",
+   "package-digest": "sha256:d171ca3df6809670105596d05cc6f387b83dac0f86ac2e1a33939c8c93ec1241",
+   "semantic-digest": "sha256:a3404d85fe408cbf13750c882d7ab3f7eb30e7ad7b22b583501169b7851237a5",
+   "path": "objects/req/sov-4-10.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-5-01",
+   "version": "1.0",
+   "package-digest": "sha256:230c0c49a4e51822efbe5b73663e4b43664e29c2e652bc9f0ac2acb37944cbda",
+   "semantic-digest": "sha256:f955cc97ddb26c208193bc3162da22c6f749ade95d5074231a3d0500ad8d5ca9",
+   "path": "objects/req/sov-5-01.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-5-02",
+   "version": "1.0",
+   "package-digest": "sha256:568d2af790c6eb3023a11eb96dfb78a7080ef9d92ac1e051dd45f0eeedd3e999",
+   "semantic-digest": "sha256:a387f7a2c069d793416271106377ea77f4d2c67ed975502942e82b5860280ba4",
+   "path": "objects/req/sov-5-02.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-5-03",
+   "version": "1.0",
+   "package-digest": "sha256:e8a0b02f87e0e2fca0c4c78fc20cb9e64458c11618d50e450cf0aaafa48155d6",
+   "semantic-digest": "sha256:cfa9c1d38ea172c9460cbba75a507d792a77bca8e35b84f29b6a641607caf403",
+   "path": "objects/req/sov-5-03.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-5-04",
+   "version": "1.0",
+   "package-digest": "sha256:7e08af41cb844a5e46df6b411fab7310c04382ea41362aebf5b970b9da52b879",
+   "semantic-digest": "sha256:c0df435a5f8aef85d3767d3b54fe23ab2db32c5a7c6e943f05362466e5320047",
+   "path": "objects/req/sov-5-04.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-5-05",
+   "version": "1.0",
+   "package-digest": "sha256:29fc6d4f97b6c056a839ebff6af146a3f3ee3150d7a226b3a89fde6b7932fdf3",
+   "semantic-digest": "sha256:56d40cf888a9abb4c5bbdd25b5bdf13c2d414f4df0d0e8fad992fa0897f20764",
+   "path": "objects/req/sov-5-05.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-6-01",
+   "version": "1.0",
+   "package-digest": "sha256:6ae3a6ef217afd2313335e7554c178199dda75f51c54e8cadc241116ca52376f",
+   "semantic-digest": "sha256:ab8591a0b0eabf414521d9fc9d44ae038e478be5b59b20ff3e66ad822ca946c7",
+   "path": "objects/req/sov-6-01.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-6-02",
+   "version": "1.0",
+   "package-digest": "sha256:6f47bfa6c71a84e5d1b0e7fb066c90e054573c66c06ae12647933b2d696407f2",
+   "semantic-digest": "sha256:0cd4ce24bec2bc0eac32b791d269bcb2b1cda90666535ac959fe3f8ec9920cdc",
+   "path": "objects/req/sov-6-02.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/req/SOV-6-03",
+   "version": "1.0",
+   "package-digest": "sha256:1f6e077d9d3db511c843add43eb96fb502cb5dafabcdb64bec89177a5d7ac18f",
+   "semantic-digest": "sha256:522199fb543535ac68f6c74883343ec69adf40bffbbd4e6b0f2a75051e2684bc",
+   "path": "objects/req/sov-6-03.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/set/baseline/normal-sdt",
+   "version": "1.0",
+   "package-digest": "sha256:f7117f524a375e2f101448e11e1bf0e438aa32def86a2338bab099cd7001a84b",
+   "semantic-digest": "sha256:15a4792bddc20b5595b6a3e4ef846133154148f583339ec2586bde4f59358003",
+   "path": "objects/set/baseline-normal-sdt.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/set/tax/class-c3a-catalog",
+   "version": "1.0",
+   "package-digest": "sha256:63c512c6ae2ed49efcac7fa277503fa0bee1d8cdbaf1ed2bf523a42098f65d4e",
+   "semantic-digest": "sha256:7f74ef0c468eabdef95f2f1c64b44bbb9f83daacd3cd41e2d4b3393622b6f2ab",
+   "path": "objects/set/class-c3a-catalog.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/set/domain/sov-1",
+   "version": "1.0",
+   "package-digest": "sha256:707719f52e97939c39f1c2cf40f06566d92c37613b76f20cda72e34225ae1749",
+   "semantic-digest": "sha256:ceb23e42120b2f41ee9bc3c22c95809f9b50131f51715ac53655265a4935d60c",
+   "path": "objects/set/domain-sov-1.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/set/domain/sov-2",
+   "version": "1.0",
+   "package-digest": "sha256:697b456e7b7446387470fc3de3e107c8f51d4f495284af35c56d50226132d5d9",
+   "semantic-digest": "sha256:c6f2a6a9987a8da64533fdd90180d31dcf51925df80c90d625dbf28017f6af95",
+   "path": "objects/set/domain-sov-2.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/set/domain/sov-3",
+   "version": "1.0",
+   "package-digest": "sha256:65603396b7b6864e9454cf91d1d452b7d9b94b02e6cfb39d97b26a763f9730ac",
+   "semantic-digest": "sha256:d4109023b1fbd406b5947b21024641cfe249cfac118bc6f89f0c61315aa62d1f",
+   "path": "objects/set/domain-sov-3.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/set/domain/sov-4",
+   "version": "1.0",
+   "package-digest": "sha256:b1fef99c882f247bdcf8564d91379c9d878aef8bf50d10a26af052d4793c89dd",
+   "semantic-digest": "sha256:28ded4b185d3266974d0d8711118bf57ac4e48dbff05331eeed9a335e16b28cc",
+   "path": "objects/set/domain-sov-4.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/set/domain/sov-5",
+   "version": "1.0",
+   "package-digest": "sha256:eaaf4c3b952edf0fc2d49c1a8ffe1c00ce7763524d0585541e1d7ac80d47d595",
+   "semantic-digest": "sha256:938fa37d25fa075e4df332d4ff0d43fdc360c5c1b083dc53c4be58790f5b6161",
+   "path": "objects/set/domain-sov-5.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/set/domain/sov-6",
+   "version": "1.0",
+   "package-digest": "sha256:70f9b538a4d1da3cc0ff016a278561b52a060c85823b7f99cabef0d363b66ee2",
+   "semantic-digest": "sha256:e00de4417710ee3f6de1546c125d03afdb8c6571ce0ae4994221ff168be5d483",
+   "path": "objects/set/domain-sov-6.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/set/root",
+   "version": "1.0",
+   "package-digest": "sha256:25b5e645553604632ace5f9c1b67577b254ed21bbbe64d494199c6fddf38e1f0",
+   "semantic-digest": "sha256:3ec0175ec6dbe6acc8cd13475cd46827f4f45d8c101746121677413b2aa70f16",
+   "path": "objects/set/root.json"
+  }
+ ],
+ "facet-schemas": [
+  {
+   "id": "https://ns.bsi.bund.de/c3a/facet/narrative",
+   "exact-version": "1.0.0",
+   "digest": "sha256:c03145681e822f0cd45a784a54da6a2dfd08a21b2d8866bd9513f064a892f20a",
+   "path": "schemas/c3a-narrative-stub.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/c3a/facet/taxonomy",
+   "exact-version": "1.0.0",
+   "digest": "sha256:2a6c9db01b5f12a77d22f3f6044e809db685ac56601b9ce6f48bd4300e12652f",
+   "path": "schemas/c3a-taxonomy-stub.json"
+  },
+  {
+   "id": "https://ns.oscal.org/compat/oscal-1x",
+   "exact-version": "1.0.0",
+   "digest": "sha256:db9801054ef3078c76df6e7bbb545cce0c9500a404a4eb659233a8f77747837e",
+   "path": "schemas/oscal-1x-compat-stub.json"
+  },
+  {
+   "id": "https://ns.oscal.org/stdlib/facet/statement-grammar",
+   "exact-version": "1.0.0",
+   "digest": "sha256:8e4450ec3a19cf14b3d4b74b6736ccfddc6b8fec2258e0fe49082e6181ebfa18",
+   "path": "schemas/statement-grammar-stub.json"
+  }
+ ]
+}

@@ -1,0 +1,321 @@
+{
+ "totals": {
+  "leaf-values": 5493,
+  "mapped": 5493,
+  "unmapped": 0,
+  "coverage-pct": 100.0
+ },
+ "unmapped-paths": [],
+ "path-map": [
+  {
+   "path": "cisc.catalog.back-matter.resources[].rlinks[].href",
+   "count": 40,
+   "level": "L1",
+   "destination": "reference resolution table: uuid -> title/URL for relations reference"
+  },
+  {
+   "path": "cisc.catalog.back-matter.resources[].title",
+   "count": 40,
+   "level": "L1",
+   "destination": "reference resolution table: uuid -> title/URL for relations reference"
+  },
+  {
+   "path": "cisc.catalog.back-matter.resources[].uuid",
+   "count": 40,
+   "level": "L1",
+   "destination": "reference resolution table: uuid -> title/URL for relations reference"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].controls[].id",
+   "count": 153,
+   "level": "L1",
+   "destination": "Requirement id (URI mint) + per-control taxonomy Set id"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].controls[].links[].href",
+   "count": 257,
+   "level": "L1",
+   "destination": "rel=required -> relations required (safeguard URIs); rel=reference -> relations reference (resolved via back-matter)"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].controls[].links[].rel",
+   "count": 257,
+   "level": "L1",
+   "destination": "rel=required -> relations required (safeguard URIs); rel=reference -> relations reference (resolved via back-matter)"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].controls[].parts[].id",
+   "count": 356,
+   "level": "L1",
+   "destination": "part dispatch: statement -> statements[0]; assessment-objective (incl. nested sub-objectives) -> assessment-criteria@1 objectives[]; example/guidance -> narrative@1"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].controls[].parts[].links[].href",
+   "count": 153,
+   "level": "L1",
+   "destination": "rel=assessment-for -> assessment-criteria@1 objectives[].assessment-for (resolved to Requirement URI)"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].controls[].parts[].links[].rel",
+   "count": 153,
+   "level": "L1",
+   "destination": "rel=assessment-for -> assessment-criteria@1 objectives[].assessment-for (resolved to Requirement URI)"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].controls[].parts[].name",
+   "count": 356,
+   "level": "L1",
+   "destination": "part dispatch: statement -> statements[0]; assessment-objective (incl. nested sub-objectives) -> assessment-criteria@1 objectives[]; example/guidance -> narrative@1"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].controls[].parts[].parts[].id",
+   "count": 217,
+   "level": "L1",
+   "destination": "part dispatch: statement -> statements[0]; assessment-objective (incl. nested sub-objectives) -> assessment-criteria@1 objectives[]; example/guidance -> narrative@1"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].controls[].parts[].parts[].name",
+   "count": 217,
+   "level": "L1",
+   "destination": "part dispatch: statement -> statements[0]; assessment-objective (incl. nested sub-objectives) -> assessment-criteria@1 objectives[]; example/guidance -> narrative@1"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].controls[].parts[].parts[].prose",
+   "count": 217,
+   "level": "L1",
+   "destination": "statement -> statements[0].prose.en; objectives/example/guidance -> facet payloads (language-tagged)"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].controls[].parts[].prose",
+   "count": 269,
+   "level": "L1",
+   "destination": "statement -> statements[0].prose.en; objectives/example/guidance -> facet payloads (language-tagged)"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].controls[].props[].name",
+   "count": 851,
+   "level": "L1",
+   "destination": "dispatch: label -> Requirement.label; implementation-group -> baseline Sets ig1/ig2/ig3; asset-class/security-function -> category Sets; frequency -> statement parameter (code); ns absorbed"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].controls[].props[].ns",
+   "count": 698,
+   "level": "L1",
+   "destination": "dispatch: label -> Requirement.label; implementation-group -> baseline Sets ig1/ig2/ig3; asset-class/security-function -> category Sets; frequency -> statement parameter (code); ns absorbed"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].controls[].props[].value",
+   "count": 851,
+   "level": "L1",
+   "destination": "dispatch: label -> Requirement.label; implementation-group -> baseline Sets ig1/ig2/ig3; asset-class/security-function -> category Sets; frequency -> statement parameter (code); ns absorbed"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].controls[].title",
+   "count": 153,
+   "level": "L1",
+   "destination": "Requirement title"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].id",
+   "count": 18,
+   "level": "L1",
+   "destination": "Requirement id (URI mint) + per-control taxonomy Set id"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].links[].href",
+   "count": 36,
+   "level": "L1",
+   "destination": "rel=required -> relations required (safeguard URIs); rel=reference -> relations reference (resolved via back-matter)"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].links[].rel",
+   "count": 36,
+   "level": "L1",
+   "destination": "rel=required -> relations required (safeguard URIs); rel=reference -> relations reference (resolved via back-matter)"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].parts[].id",
+   "count": 18,
+   "level": "L1",
+   "destination": "part dispatch: statement -> statements[0]; assessment-objective (incl. nested sub-objectives) -> assessment-criteria@1 objectives[]; example/guidance -> narrative@1"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].parts[].name",
+   "count": 18,
+   "level": "L1",
+   "destination": "part dispatch: statement -> statements[0]; assessment-objective (incl. nested sub-objectives) -> assessment-criteria@1 objectives[]; example/guidance -> narrative@1"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].parts[].prose",
+   "count": 18,
+   "level": "L1",
+   "destination": "statement -> statements[0].prose.en; objectives/example/guidance -> facet payloads (language-tagged)"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].props[].name",
+   "count": 18,
+   "level": "L1",
+   "destination": "dispatch: label -> Requirement.label; implementation-group -> baseline Sets ig1/ig2/ig3; asset-class/security-function -> category Sets; frequency -> statement parameter (code); ns absorbed"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].props[].value",
+   "count": 18,
+   "level": "L1",
+   "destination": "dispatch: label -> Requirement.label; implementation-group -> baseline Sets ig1/ig2/ig3; asset-class/security-function -> category Sets; frequency -> statement parameter (code); ns absorbed"
+  },
+  {
+   "path": "cisc.catalog.groups[].controls[].title",
+   "count": 18,
+   "level": "L1",
+   "destination": "Requirement title"
+  },
+  {
+   "path": "cisc.catalog.groups[].id",
+   "count": 1,
+   "level": "L1",
+   "destination": "root Set id/title"
+  },
+  {
+   "path": "cisc.catalog.groups[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "root Set id/title"
+  },
+  {
+   "path": "cisc.catalog.metadata.document-ids[].identifier",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisc.catalog.metadata.document-ids[].scheme",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisc.catalog.metadata.last-modified",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisc.catalog.metadata.links[].href",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisc.catalog.metadata.links[].rel",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisc.catalog.metadata.oscal-version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisc.catalog.metadata.props[].name",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisc.catalog.metadata.props[].value",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisc.catalog.metadata.title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisc.catalog.metadata.version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "cisc.catalog.uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  }
+ ],
+ "source": "CIS Controls",
+ "source-version": "8.1",
+ "objects-emitted": {
+  "requirements": 171,
+  "sets": 34
+ },
+ "modality-word-rule": {
+  "unspecified": 148,
+  "may": 10,
+  "must": 8,
+  "should": 4,
+  "must-not": 1
+ },
+ "ig-baselines": {
+  "1": 56,
+  "2": 130,
+  "3": 153
+ },
+ "ig-cumulative": true,
+ "asset-classes": {
+  "devices": 25,
+  "software": 24,
+  "data": 32,
+  "documentation": 20,
+  "users": 29,
+  "network": 23
+ },
+ "security-functions": {
+  "identify": 14,
+  "respond": 6,
+  "detect": 24,
+  "protect": 78,
+  "govern": 25,
+  "recover": 6
+ },
+ "frequency": {
+  "bi-annually": 5,
+  "weekly": 5,
+  "daily": 1,
+  "monthly": 8,
+  "annually": 30,
+  "quarterly": 4
+ },
+ "parents-without-ig": [
+  "cisc-001",
+  "cisc-002",
+  "cisc-003",
+  "cisc-004",
+  "cisc-005",
+  "cisc-006",
+  "cisc-007",
+  "cisc-008",
+  "cisc-009",
+  "cisc-010",
+  "cisc-011",
+  "cisc-012",
+  "cisc-013",
+  "cisc-014",
+  "cisc-015",
+  "cisc-016",
+  "cisc-017",
+  "cisc-018"
+ ],
+ "dangling-required": [],
+ "unresolved-references": 0,
+ "lang-wraps": {
+  "objective": 370,
+  "example": 38,
+  "guidance": 12
+ }
+}

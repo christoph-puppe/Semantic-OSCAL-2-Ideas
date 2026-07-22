@@ -1,0 +1,305 @@
+{
+ "totals": {
+  "leaf-values": 5868,
+  "mapped": 5868,
+  "unmapped": 0,
+  "coverage-pct": 100.0
+ },
+ "unmapped-paths": [],
+ "path-map": [
+  {
+   "path": "c5.catalog.groups[].controls[].controls[].class",
+   "count": 623,
+   "level": "L1",
+   "destination": "class -> membership Sets: baseline/basic | tax/additional-sharpen | tax/additional-complement"
+  },
+  {
+   "path": "c5.catalog.groups[].controls[].controls[].id",
+   "count": 623,
+   "level": "L1",
+   "destination": "Requirement id (URI mint) + label derivation + title"
+  },
+  {
+   "path": "c5.catalog.groups[].controls[].controls[].parts[].id",
+   "count": 1097,
+   "level": "L1",
+   "destination": "statement -> statements[0].prose.en; guidance(-N) -> narrative@1 guidance[] (language-tagged)"
+  },
+  {
+   "path": "c5.catalog.groups[].controls[].controls[].parts[].name",
+   "count": 1097,
+   "level": "L1",
+   "destination": "statement -> statements[0].prose.en; guidance(-N) -> narrative@1 guidance[] (language-tagged)"
+  },
+  {
+   "path": "c5.catalog.groups[].controls[].controls[].parts[].prose",
+   "count": 1097,
+   "level": "L1",
+   "destination": "statement -> statements[0].prose.en; guidance(-N) -> narrative@1 guidance[] (language-tagged)"
+  },
+  {
+   "path": "c5.catalog.groups[].controls[].controls[].props[].name",
+   "count": 28,
+   "level": "L1",
+   "destination": "sharpened-basic-criterion -> typed relation `sharpens` -> sibling basic criterion URI"
+  },
+  {
+   "path": "c5.catalog.groups[].controls[].controls[].props[].value",
+   "count": 28,
+   "level": "L1",
+   "destination": "sharpened-basic-criterion -> typed relation `sharpens` -> sibling basic criterion URI"
+  },
+  {
+   "path": "c5.catalog.groups[].controls[].controls[].title",
+   "count": 623,
+   "level": "L1",
+   "destination": "Requirement id (URI mint) + label derivation + title"
+  },
+  {
+   "path": "c5.catalog.groups[].controls[].id",
+   "count": 174,
+   "level": "L1",
+   "destination": "criterion Set id/title (parents) | parked-L2 stub titles (gc-undefined defect class)"
+  },
+  {
+   "path": "c5.catalog.groups[].controls[].parts[].id",
+   "count": 60,
+   "level": "L1",
+   "destination": "corresponding parts -> c5/corresponding@1 on the criterion Set (customer-side duties; CRM evidence; language-tagged)"
+  },
+  {
+   "path": "c5.catalog.groups[].controls[].parts[].name",
+   "count": 60,
+   "level": "L1",
+   "destination": "corresponding parts -> c5/corresponding@1 on the criterion Set (customer-side duties; CRM evidence; language-tagged)"
+  },
+  {
+   "path": "c5.catalog.groups[].controls[].parts[].prose",
+   "count": 60,
+   "level": "L1",
+   "destination": "corresponding parts -> c5/corresponding@1 on the criterion Set (customer-side duties; CRM evidence; language-tagged)"
+  },
+  {
+   "path": "c5.catalog.groups[].controls[].parts[].title",
+   "count": 60,
+   "level": "L1",
+   "destination": "corresponding parts -> c5/corresponding@1 on the criterion Set (customer-side duties; CRM evidence; language-tagged)"
+  },
+  {
+   "path": "c5.catalog.groups[].controls[].title",
+   "count": 174,
+   "level": "L1",
+   "destination": "criterion Set id/title (parents) | parked-L2 stub titles (gc-undefined defect class)"
+  },
+  {
+   "path": "c5.catalog.groups[].id",
+   "count": 18,
+   "level": "L1",
+   "destination": "domain Set id/title"
+  },
+  {
+   "path": "c5.catalog.groups[].title",
+   "count": 18,
+   "level": "L1",
+   "destination": "domain Set id/title"
+  },
+  {
+   "path": "c5.catalog.metadata.last-modified",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.oscal-version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.parties[].addresses[].addr-lines[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.parties[].addresses[].city",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.parties[].addresses[].country",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.parties[].addresses[].postal-code",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.parties[].links[].href",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.parties[].links[].rel",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.parties[].links[].text",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.parties[].name",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.parties[].short-name",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.parties[].type",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.parties[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.props[].name",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.props[].value",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.published",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.responsible-parties[].party-uuids[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.responsible-parties[].role-id",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.roles[].id",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.roles[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.metadata.version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  },
+  {
+   "path": "c5.catalog.uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance"
+  }
+ ],
+ "source": "Cloud Computing Compliance Criteria Catalogue (C5:2026)",
+ "source-version": "C5:2026",
+ "objects-emitted": {
+  "requirements": 623,
+  "sets": 190
+ },
+ "modality-word-rule": {
+  "unspecified": 593,
+  "should": 4,
+  "may": 17,
+  "must": 9
+ },
+ "class-sets": {
+  "basic": 462,
+  "additional-sharpen": 29,
+  "additional-complement": 132
+ },
+ "sharpens": {
+  "resolved": 28,
+  "broken": [],
+  "missing-prop": [
+   "am-10-01as"
+  ]
+ },
+ "gc-undefined-stubs": [
+  {
+   "group": "gc",
+   "id": "gc-undefined",
+   "title": "Information on applicable law, jurisdiction, countries, partitions, regions, zones and locations"
+  },
+  {
+   "group": "gc",
+   "id": "gc-undefined",
+   "title": "Information on availability and incident handling during regular operation"
+  },
+  {
+   "group": "gc",
+   "id": "gc-undefined",
+   "title": "Information on recovery parameters in emergency operation"
+  },
+  {
+   "group": "gc",
+   "id": "gc-undefined",
+   "title": "Information on the approach to ensuring service availability"
+  },
+  {
+   "group": "gc",
+   "id": "gc-undefined",
+   "title": "Information on how investigation requests from government agencies are handled"
+  },
+  {
+   "group": "gc",
+   "id": "gc-undefined",
+   "title": "Information on certifications or attestations"
+  }
+ ],
+ "lang-wraps": {
+  "guidance": 474,
+  "corresponding": 60
+ }
+}

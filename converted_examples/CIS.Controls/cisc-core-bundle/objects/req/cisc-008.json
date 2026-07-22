@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cisecurity.org/controls/v8/req/cisc-008",
+ "version": "8.1",
+ "label": "CIS Control 8",
+ "lifecycle": "active",
+ "title": "Audit Log Management",
+ "statements": [
+  {
+   "id": "stmt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cisecurity.org/controls/v8/party/enterprise"
+   ],
+   "prose": {
+    "en": "Collect, alert, review, and retain audit logs of events that could help detect, understand, or recover from an attack."
+   }
+  }
+ ]
+}

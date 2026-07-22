@@ -1,0 +1,1461 @@
+{
+ "manifest-version": "1",
+ "provenance": {
+  "source": "CIS Controls",
+  "source-version": "8.1",
+  "source-oscal-version": "1.1.3",
+  "converter": "convert_cis_controls.py v0.1",
+  "namespace-note": "authority namespace minted by converter pending a CIS-published URI"
+ },
+ "objects": [
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-001.001",
+   "version": "8.1",
+   "package-digest": "sha256:986c568f7a57218dd8f3de527ea49126150bc50568366c33f3af28e4f6d3d850",
+   "semantic-digest": "sha256:4b33dcdee9c956353c74bd2df5ccc5f1ef87700c104ac2a582e235b580afaac3",
+   "path": "objects/req/cisc-001-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-001.002",
+   "version": "8.1",
+   "package-digest": "sha256:f3cb62dbdddc130117caa456a56b495681dd931e573b1f8d8ffd9f6d586b2bc0",
+   "semantic-digest": "sha256:d1e0a39daf22003c8d36a5d3a06710ce98186f63936c518d5bb6315faa058d92",
+   "path": "objects/req/cisc-001-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-001.003",
+   "version": "8.1",
+   "package-digest": "sha256:1e75cf1e8979cdd33a0de2beb79d34425144ccd1f94982050596e0a0f1e2fd05",
+   "semantic-digest": "sha256:b63a0f25332a16d473bb0a965768c51ec8197e56d115a6bcddb92b8ce3cc184e",
+   "path": "objects/req/cisc-001-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-001.004",
+   "version": "8.1",
+   "package-digest": "sha256:e988e75456296b614c06a87aa7eff22f6e3645b2316738b2bf719bcefe275277",
+   "semantic-digest": "sha256:f076d98d2d913d16ad76d2695471fd960de8366a28e71a6328a3045855b9f8a7",
+   "path": "objects/req/cisc-001-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-001.005",
+   "version": "8.1",
+   "package-digest": "sha256:87deef284ce61ce67d8b70068ae72edc2d55d32f53f0c55c34d64365b5ca5a98",
+   "semantic-digest": "sha256:ab86294483ffad29570687da52ca7e54d9a5b419d468d33316d7dff3ae8775a4",
+   "path": "objects/req/cisc-001-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-001",
+   "version": "8.1",
+   "package-digest": "sha256:7e5673ab1b0f4d24a5c70178de3ae6378a977f2bca8ca48156837ae5ab8baf50",
+   "semantic-digest": "sha256:d89cdaf661d4e14d7b39d6953935bf94e516d155f75a1ded68edff77ce49a36c",
+   "path": "objects/req/cisc-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-002.001",
+   "version": "8.1",
+   "package-digest": "sha256:b1a4115e3e06e44360e21701e1bc7ec4d95249a1e0f28ff75933917e8df14704",
+   "semantic-digest": "sha256:733276607e17810e01f8ffc18f87b4a9f6b16b2b1458615c877f1ef4eed94443",
+   "path": "objects/req/cisc-002-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-002.002",
+   "version": "8.1",
+   "package-digest": "sha256:405e109582c1a898f8b7be76d6900c5fd31f5356c339770284367031c52a45f2",
+   "semantic-digest": "sha256:ab986c7c8d93e1d5f32ca9bb00c069427215c9e3a09abab70d1cc45e0818e83f",
+   "path": "objects/req/cisc-002-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-002.003",
+   "version": "8.1",
+   "package-digest": "sha256:aa10dcaa08dd53ab92f32729fafa9eb3b8116d86c7c3e08b44a9e29ba60b9df4",
+   "semantic-digest": "sha256:f1db697477fe4c641a5cbe5caac44bc64f23c6fa0a5a13c8a05a3920191dea7f",
+   "path": "objects/req/cisc-002-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-002.004",
+   "version": "8.1",
+   "package-digest": "sha256:bb38ac1aed6343069c38574a184f24c191f582c725200a15ef2093aad7d4cae3",
+   "semantic-digest": "sha256:c9941562e062496aa300577a02b75be2312ea0660e6991d57c0931547f27ac43",
+   "path": "objects/req/cisc-002-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-002.005",
+   "version": "8.1",
+   "package-digest": "sha256:57d60d4430e72f2fd74917ad0ac5b4f83fcad3a2522b110ef258b2785c29e2ee",
+   "semantic-digest": "sha256:394d9a74477cc93ef207fb055a1790530d9c351408206ef96ff6430dda1cefff",
+   "path": "objects/req/cisc-002-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-002.006",
+   "version": "8.1",
+   "package-digest": "sha256:6fc0b61030ed3075bf96a6bb06cd74987a84d897ebdfcabe8823b320eae3258c",
+   "semantic-digest": "sha256:3fc4e2cdc52377b6a6813b8008de6794ae36a699f75faa3caa6259352a26b1cc",
+   "path": "objects/req/cisc-002-006.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-002.007",
+   "version": "8.1",
+   "package-digest": "sha256:ad19e0027f3c98abd78298f4777a4ea6b3a912765430e27a267f09c75eff26fc",
+   "semantic-digest": "sha256:363390df82bc98915733cb0e1cce27ef1a3e0c4bbd8ab117e3930cb1f535ff91",
+   "path": "objects/req/cisc-002-007.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-002",
+   "version": "8.1",
+   "package-digest": "sha256:cffb549bcb55a2894f0e368217490b9c53530f13497e14a391a22fc38378c31e",
+   "semantic-digest": "sha256:29a20445347a7d5c81a4c99dc64b63083b5dd0cd9ed2d28ead9ecbe9894e2cfa",
+   "path": "objects/req/cisc-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-003.001",
+   "version": "8.1",
+   "package-digest": "sha256:7149b771a55c881a55dd9a37c1c1816ab2220ac805ff27de27c7b248932144af",
+   "semantic-digest": "sha256:7bd29142cd213877ddc454d3cf32664702d7955ed07b95963584bc173101a61b",
+   "path": "objects/req/cisc-003-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-003.002",
+   "version": "8.1",
+   "package-digest": "sha256:138de5559613b6d4ccc20da64e789288cc021e2979590a8915a77b7016c895b2",
+   "semantic-digest": "sha256:3583dfed4ec8d8dfd6473364b694bb643813851354d02aefb88105ea45a592f0",
+   "path": "objects/req/cisc-003-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-003.003",
+   "version": "8.1",
+   "package-digest": "sha256:eefd3201ee5934da36a83357923f43fdef4dba2b60358dd13ee7f7a9338f4317",
+   "semantic-digest": "sha256:97364451a1f1ed7c71732c6a4b68bca016473fc85d9f0d8c540ea5cb26d6abc6",
+   "path": "objects/req/cisc-003-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-003.004",
+   "version": "8.1",
+   "package-digest": "sha256:fa35e65ff3d9289c4ef6323f360eaef63d89a13ec2e40fc20aab31d4a5772dc5",
+   "semantic-digest": "sha256:9c7a6064215f7f1da9de0ca09e5b7c7eb1f8f5ea4ca42e2e82ad502566fc94e8",
+   "path": "objects/req/cisc-003-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-003.005",
+   "version": "8.1",
+   "package-digest": "sha256:851ba11ef6cb6ceb64d0b8a00904fabe487eb4853db7c6b940d834c76c36f3ed",
+   "semantic-digest": "sha256:62a3efa5670d0214845dd0cde44231262f6338a86b75d202e65928b0c854a0dc",
+   "path": "objects/req/cisc-003-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-003.006",
+   "version": "8.1",
+   "package-digest": "sha256:bcbcd79ab451a74d2f52a2ebc1ce00f00ef4f920f1ab7b9c9d447ed12cabe0c0",
+   "semantic-digest": "sha256:e324f7001908efa5831df780527f6cb01858ea424c7d00340ac050e311199ffa",
+   "path": "objects/req/cisc-003-006.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-003.007",
+   "version": "8.1",
+   "package-digest": "sha256:08fa320e6ccedc881c99bfb872e7197f9d93b6c48ec5c594ea7199a0e51695db",
+   "semantic-digest": "sha256:423fd632d871865e6ad22afc0d38e5abb5ba4fcc3712473953832f5cd4420cbe",
+   "path": "objects/req/cisc-003-007.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-003.008",
+   "version": "8.1",
+   "package-digest": "sha256:2cf08e134c60d1a53de2baf5df3086376781dea87640ae29decb0a1191a4cf3e",
+   "semantic-digest": "sha256:0a50a05184a15240a83fe098e910cc8259ccb6d6cda17886412fe1f1d1a30a4c",
+   "path": "objects/req/cisc-003-008.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-003.009",
+   "version": "8.1",
+   "package-digest": "sha256:391cbd4fa241097b65c7a1b9e11324e83c4e060bc58f4b6f0d4c06a8a7d7f763",
+   "semantic-digest": "sha256:3be33ec56a8803f4c32dd92b9e9bf2eab879613599317177e3332210d1d45b77",
+   "path": "objects/req/cisc-003-009.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-003.010",
+   "version": "8.1",
+   "package-digest": "sha256:286244badfe565347b94a649f5ed8f62ac9baaab49007ca3514465bd40b56368",
+   "semantic-digest": "sha256:afba396f96371220b38c8caf5393a3cac30c41c91af63c4674c17bc8e2bf155d",
+   "path": "objects/req/cisc-003-010.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-003.011",
+   "version": "8.1",
+   "package-digest": "sha256:59e53d40bb15ed47a0055c35d7b8429e290099d9debe64c3267d4839057556f2",
+   "semantic-digest": "sha256:b224053357430c4a8c9b401ab249bdd0e354a54a86971f98d0d1d55bcdebc8be",
+   "path": "objects/req/cisc-003-011.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-003.012",
+   "version": "8.1",
+   "package-digest": "sha256:4b81c90d7ca4df2cb53f137ca6c2abebc93fc78fb6e2bee88ad87b6d8c3a7bd8",
+   "semantic-digest": "sha256:934e1cdaa6b93823e7b19f3edaea548ee6ff99a8dbbbd7c953dd831da0c35b27",
+   "path": "objects/req/cisc-003-012.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-003.013",
+   "version": "8.1",
+   "package-digest": "sha256:98a7400d862368e3e39b9b4a91ed917ced64a6ef65d6bd6bb7789a1470a6d483",
+   "semantic-digest": "sha256:be0261de3b2170f5ad0b565269de240064c7dde0be02abae9c11f674cf768560",
+   "path": "objects/req/cisc-003-013.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-003.014",
+   "version": "8.1",
+   "package-digest": "sha256:3d0dab66eb9ce6aeef5711b79e9f3c924caec3e3a69691c340550b83e0d68c8c",
+   "semantic-digest": "sha256:df28e3b53eb8848e9242444d185d4d8d182c8ac26a431822c59f84fa87f5d4e0",
+   "path": "objects/req/cisc-003-014.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-003",
+   "version": "8.1",
+   "package-digest": "sha256:2b7de347123cd61fd721e1a54c7977e070e86c9b68022843b7998e7ccc9adc21",
+   "semantic-digest": "sha256:9515000c8791d0d33ef10c987fb1067581d3a06cf184f8d340d04592bc95ef16",
+   "path": "objects/req/cisc-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-004.001",
+   "version": "8.1",
+   "package-digest": "sha256:05b7365e809263869e45af397865548c63d1409efc8ea5c3d09f3b98ea46ba31",
+   "semantic-digest": "sha256:44edde52f2d54c2f12f9809f22ebba766c72374eeff2baf3fdc750168dff0b1e",
+   "path": "objects/req/cisc-004-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-004.002",
+   "version": "8.1",
+   "package-digest": "sha256:b4f281008338939a4d901b4579862c07ec8b6f6ac0e19c4ba41423aafb94ba04",
+   "semantic-digest": "sha256:18b5af5f10a83aa4f620850f8acb65487115019fca8b6bc7dc8cd284d21f8e34",
+   "path": "objects/req/cisc-004-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-004.003",
+   "version": "8.1",
+   "package-digest": "sha256:203d46d740240d3e4738f76669ba391826f3a155c7e075dcbf6861a161bebc42",
+   "semantic-digest": "sha256:13c3ed1f33428e6c8dd9535950fa61a2d950b52f91f3f2a59c8d291192a911d6",
+   "path": "objects/req/cisc-004-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-004.004",
+   "version": "8.1",
+   "package-digest": "sha256:9c1ef18023803c27d5db789fd0de270c8364cb0d33d2f755dfe0ad3433446764",
+   "semantic-digest": "sha256:cafce5ceebe199146cee4a0f3cc0cbcb1a6db06d03ea109deb976b74f7161de6",
+   "path": "objects/req/cisc-004-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-004.005",
+   "version": "8.1",
+   "package-digest": "sha256:c52bd8e3dc8ec853c343b2bba5cc962a02769aca36518340d55d84a1cd8fe92f",
+   "semantic-digest": "sha256:0f756fb66a1d4cee1dac3f32c9e8812d3623db8391035b1ce82752a8b2bb2d78",
+   "path": "objects/req/cisc-004-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-004.006",
+   "version": "8.1",
+   "package-digest": "sha256:e285905acd6786a06cc49ab6568816011d8da5c6e3211e281c5ddd57580d58ae",
+   "semantic-digest": "sha256:bf8fe9e9bdd300a3f58f22865806610bd6d797fa2c570d60f6da1de43e31c166",
+   "path": "objects/req/cisc-004-006.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-004.007",
+   "version": "8.1",
+   "package-digest": "sha256:ffca8e1a0b36e725d44ffbb90370fb8743bd5c966d8ae02ddad71776ab289896",
+   "semantic-digest": "sha256:e652936ee033a1605c4357f612472c6b4fb8e6c5eb3d789edccfb05deb82d246",
+   "path": "objects/req/cisc-004-007.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-004.008",
+   "version": "8.1",
+   "package-digest": "sha256:75576c7617ecf9c236fcbbe9edd099bc17ac9db7f5d254c1fd010260c2db52b7",
+   "semantic-digest": "sha256:924e4b955d1c5935b520ea80bc914eaf62d06ebd4129da5091d1ab27359fbdad",
+   "path": "objects/req/cisc-004-008.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-004.009",
+   "version": "8.1",
+   "package-digest": "sha256:8a44b4e7944caff4d6369f732c8b4e9816cbe73028bdde08d0898125394bcf74",
+   "semantic-digest": "sha256:05d814254649aa9bbf438e81a7ee6f58cf12c9752128bfe93ac26c35a2e2a385",
+   "path": "objects/req/cisc-004-009.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-004.010",
+   "version": "8.1",
+   "package-digest": "sha256:ae73b126d81980820f4cb27aa5d514b01a29f7e58a7b5bb16b3c47281dec41ee",
+   "semantic-digest": "sha256:31500c619445964c164eb7b14fc0bf1f4f184a37495f85e51e6cc01f4dc1e51e",
+   "path": "objects/req/cisc-004-010.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-004.011",
+   "version": "8.1",
+   "package-digest": "sha256:ea4cec9c8953aaa1aca87e421ea15448265f2157fef428f52b8d6edf1d590b7d",
+   "semantic-digest": "sha256:6a27d0309f7e777458efa6150050a98f3bb98a509e2f60c5d3400a01e2753ae0",
+   "path": "objects/req/cisc-004-011.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-004.012",
+   "version": "8.1",
+   "package-digest": "sha256:9edf1abcf9f97ebcc5cc59a7d973c12ce0090a7fe3772e0e865e45b32040e5d3",
+   "semantic-digest": "sha256:2592e45b9c125d554ef3fe16b1480e016684b25b632eef514903e361b28451d5",
+   "path": "objects/req/cisc-004-012.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-004",
+   "version": "8.1",
+   "package-digest": "sha256:4975f8afa716885a2bd84346038ac829ed4813653fd9c23206eba51d937da348",
+   "semantic-digest": "sha256:ca8c97bfef10d3d4b19d97ce8ae5eb31f3f30edaa4f39795a9affc858ba1b2bc",
+   "path": "objects/req/cisc-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-005.001",
+   "version": "8.1",
+   "package-digest": "sha256:84b43f44d5e39b49a24cbb76998181726c6d204907f080e97ceaa0d303e1f323",
+   "semantic-digest": "sha256:020637be49a7aaa7c572574e970927de45e97cb67dfcf169c58dcdb625d5ba38",
+   "path": "objects/req/cisc-005-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-005.002",
+   "version": "8.1",
+   "package-digest": "sha256:109f5e4fda412a090fac2732f9aa6b567dd7e365f5bf0134d04d3bbd790bde27",
+   "semantic-digest": "sha256:989ffa88e97696252c6a8f16a1d816fa762d0610a2c7e927ace34ecd84538092",
+   "path": "objects/req/cisc-005-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-005.003",
+   "version": "8.1",
+   "package-digest": "sha256:3ad7f49b94054d12603f61d5e84e418c81624338085781a245f4d6d87e4aa77a",
+   "semantic-digest": "sha256:2d60889fd7eee7eed13b61f2a7f53e6512f26e53ee57f9f9e4bea7a363d2a4ab",
+   "path": "objects/req/cisc-005-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-005.004",
+   "version": "8.1",
+   "package-digest": "sha256:3d5e4f0dd073f72a70905af01e69bba20f6212233a8c57fc45a1288fb93949f0",
+   "semantic-digest": "sha256:09afa5677a77078a5ffa54e94fbb73df1bf9b1f0cfe80ab1d4896d34e2dc95d4",
+   "path": "objects/req/cisc-005-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-005.005",
+   "version": "8.1",
+   "package-digest": "sha256:40280315a77f30667f439084fb2c8d72bce0f46b4ed6f66ef06d1613f2a80024",
+   "semantic-digest": "sha256:97b15d737b81b38144fce0b0a1baf025ef052a47a8845842f1dac6f7c81269dc",
+   "path": "objects/req/cisc-005-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-005.006",
+   "version": "8.1",
+   "package-digest": "sha256:fac2d8be24d51b2c2192c48d541a6cf39ce56e5298dab8384eb660c396f16a48",
+   "semantic-digest": "sha256:8ecd0a942b17c7a964f906eba30d19450ca31b02f2e263d6ff2568cdeabc0fec",
+   "path": "objects/req/cisc-005-006.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-005",
+   "version": "8.1",
+   "package-digest": "sha256:d0d657abed3c539e588c52279b0f4ff9ef9ec6fb797e3957ab269fc045f6d77f",
+   "semantic-digest": "sha256:faad1c31b89df440df8d995e4c73f25e7da6283702ff835d59226efaf03af6df",
+   "path": "objects/req/cisc-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-006.001",
+   "version": "8.1",
+   "package-digest": "sha256:57d814990d2893da80faa6594c74b5359e643a63bfb07eacf85797cf5e22fe8e",
+   "semantic-digest": "sha256:56f1fb1dcbdf0e66f339972387bb4189374b98fcae0e8c29410ca7ce98ea1ba9",
+   "path": "objects/req/cisc-006-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-006.002",
+   "version": "8.1",
+   "package-digest": "sha256:59aa2bd8245e1ce018f4937fe46051f323748dd169b2bedd3b74ec9a62c57d63",
+   "semantic-digest": "sha256:63a30f72c4bd967c6cdc975ddd15460bada385de6c9c4781519b9017b1e98d57",
+   "path": "objects/req/cisc-006-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-006.003",
+   "version": "8.1",
+   "package-digest": "sha256:b530e803e3b9d3e498d1c2a9cde150e08980f7820e3617b2339fac8a881e2419",
+   "semantic-digest": "sha256:2c6331d608d63160753bbc7fd9caeb8fcb7401b025ba4601c003e4ef4728a4bc",
+   "path": "objects/req/cisc-006-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-006.004",
+   "version": "8.1",
+   "package-digest": "sha256:5411fa0260d88acc5f91577bc2014cd700529fa7e1a7e7809ac0f86bf0b1dfd9",
+   "semantic-digest": "sha256:06391eb752a8b7acabf1800058cb02b7ef03006bb6f4329f7453bfd5ac7f9824",
+   "path": "objects/req/cisc-006-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-006.005",
+   "version": "8.1",
+   "package-digest": "sha256:533c0c6e791444f3684a2fa6a0fc709b547497f993969d927b2eee65f17c9773",
+   "semantic-digest": "sha256:198a476acb9223c487bfeba4694d82af75b33d5d038f811919c0ae7805d572b0",
+   "path": "objects/req/cisc-006-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-006.006",
+   "version": "8.1",
+   "package-digest": "sha256:c9d90a9deb0e76f16fdf5a1ccd2526e72f0e949551df812364991c8be7ff863a",
+   "semantic-digest": "sha256:3a50343d0a00318fa3fdde84e637a77d798215f683a4e2efd8c35108f898878a",
+   "path": "objects/req/cisc-006-006.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-006.007",
+   "version": "8.1",
+   "package-digest": "sha256:fc020d8508061b9334c04fdb4f07957f1207a1f2a80918ae72bf890397f1dbd4",
+   "semantic-digest": "sha256:45989706597b13e8c05521d86b49f3a7f81d330cb1c69d1ed9122bbdb586d92c",
+   "path": "objects/req/cisc-006-007.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-006.008",
+   "version": "8.1",
+   "package-digest": "sha256:167d0e560dce8362f86a1cb89cfab5d40ea8df31f53292bcfc97a16a7fa11dc6",
+   "semantic-digest": "sha256:0560bad32099f05f5aa2bcf7eb5bbae40e6d20c2add5bb73e2931d98dc3ccade",
+   "path": "objects/req/cisc-006-008.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-006",
+   "version": "8.1",
+   "package-digest": "sha256:79f40c6ee3be1c91501cb61141215837f57d2cb59a0d6231436954cb1c53d033",
+   "semantic-digest": "sha256:adcf19856894383c8e748907bbb581894f8fc55add9b4cd77a422b20c3d98cc8",
+   "path": "objects/req/cisc-006.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-007.001",
+   "version": "8.1",
+   "package-digest": "sha256:9d74ddd22dc8c152421114e4d19a297fb91ad29fa98e4033103d0f9075e931a3",
+   "semantic-digest": "sha256:f27029c568f55f42f4bb99beb5a6e4e45028d36d7000dfdea6f9485135b7362c",
+   "path": "objects/req/cisc-007-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-007.002",
+   "version": "8.1",
+   "package-digest": "sha256:398cff9ea47e659b6472eecb592d6ea83e9ddfcc585af6b71f44e6b731fceb41",
+   "semantic-digest": "sha256:1a7945a6c951966a5e93447d075c48fb548d9631570f519e1ded4d888a671e99",
+   "path": "objects/req/cisc-007-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-007.003",
+   "version": "8.1",
+   "package-digest": "sha256:d978a519b3c508b58559b3497bda23b7a611222694e39c1ce0a359e7ee6c48f8",
+   "semantic-digest": "sha256:3263e87f0f0b6a49203061c2fb4326ba2a0419bcb20d5ffa564734b591c75ad6",
+   "path": "objects/req/cisc-007-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-007.004",
+   "version": "8.1",
+   "package-digest": "sha256:6abd4897357a9f2864e512a3f670bd1dd7dd3b40acfa949cedb6a2aff173b04a",
+   "semantic-digest": "sha256:f17690545b998820e9ae49cb05742b41afc8855541078469a30529dbea486d62",
+   "path": "objects/req/cisc-007-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-007.005",
+   "version": "8.1",
+   "package-digest": "sha256:778c8c9a5cc07ba85c55e2fec4d18746d18eb17b1f2a43861d72ae8fa76e64f0",
+   "semantic-digest": "sha256:3892eb2e09ac8b92ce604b74103ddb2f7d58585876bc432568ca9072d6c39804",
+   "path": "objects/req/cisc-007-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-007.006",
+   "version": "8.1",
+   "package-digest": "sha256:c46ccbec499fa2f1ba2f52687ce8960706887241dc9a3910668d49e9893d60bb",
+   "semantic-digest": "sha256:8c8207215d4275012f3a3ca55996197629f79760ff7a6684b836d60652e966ae",
+   "path": "objects/req/cisc-007-006.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-007.007",
+   "version": "8.1",
+   "package-digest": "sha256:0672c66d60188ad6bc891d83075a19bbd2b6ee24620c704b4bb304f0c733556d",
+   "semantic-digest": "sha256:536642d6d8d34fae5f0dad536a40d0b1e76a8b2551478af950b0f5776bb1f11f",
+   "path": "objects/req/cisc-007-007.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-007",
+   "version": "8.1",
+   "package-digest": "sha256:a8c32611e8395442fa0312d37e51df953acb3caef9e8794c3220f05240fde7b4",
+   "semantic-digest": "sha256:4351c85c89c3e69d9d33552db85311fb9b9810bf1d599fd896c0e0b37d51685c",
+   "path": "objects/req/cisc-007.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-008.001",
+   "version": "8.1",
+   "package-digest": "sha256:e03ddbc790630751733178b16f54af9cc02fd8a6e2ae8c26e48185a05bf23e8d",
+   "semantic-digest": "sha256:8740d45be962fc158735327980f0426175d59e2bfc0b7b4d9100e1596f4f63cf",
+   "path": "objects/req/cisc-008-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-008.002",
+   "version": "8.1",
+   "package-digest": "sha256:a001b88f64286546bbc52a02aeaabbd10db18a23e7f276fb056db99d3dc8f8bd",
+   "semantic-digest": "sha256:05e9feb32cb158bffe522419dc1f1563b70ddeda15c3084704e788ad665b2bf1",
+   "path": "objects/req/cisc-008-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-008.003",
+   "version": "8.1",
+   "package-digest": "sha256:fb41d3671d33c06a26f4d3e74506bb0b649c16d9364cc8fd59593f0bcfa0c7b7",
+   "semantic-digest": "sha256:0ac1d2320ce09913489147725b4bf4b611f0fd8a634cd60213c472169d97d137",
+   "path": "objects/req/cisc-008-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-008.004",
+   "version": "8.1",
+   "package-digest": "sha256:88cdffdc979f1a43e5c2ce058eb2f8e0849821842132e2149b273ebcf2be24d2",
+   "semantic-digest": "sha256:56260b18bb40861ffc6ae9ecd473377926779ce0cb1beefd5ee031d1255f55e7",
+   "path": "objects/req/cisc-008-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-008.005",
+   "version": "8.1",
+   "package-digest": "sha256:a858a244338dbbe29cd463df23be9e339576a577efaac325329883db9449e31d",
+   "semantic-digest": "sha256:ec497e8a6f7a7147bd6c954bb9e57c26271a9fa7421c0eabd7d3c05af9c742f6",
+   "path": "objects/req/cisc-008-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-008.006",
+   "version": "8.1",
+   "package-digest": "sha256:ed035d18cf27f73cf90accb129db04dd1568f93cd617bc83414805dc9ccfa29b",
+   "semantic-digest": "sha256:7e12687fce8b34b44b17d9aeaad2ef6aca11ed22b79385f61697e9a4971a03cb",
+   "path": "objects/req/cisc-008-006.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-008.007",
+   "version": "8.1",
+   "package-digest": "sha256:c640262016f4a9149defe6ef57dd30761b97fadd28de715a611dec98464ebf42",
+   "semantic-digest": "sha256:1b236bf3e2872545d686316af9eca7a888e490dcb46c81acb558adacb9c750d4",
+   "path": "objects/req/cisc-008-007.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-008.008",
+   "version": "8.1",
+   "package-digest": "sha256:fe64cb52d89ca4385c6044f0b5066a01da28cc75657adadbec0c34ac3174c174",
+   "semantic-digest": "sha256:fe9ef36ba49209096d2eb427a9ba9cf5017656075a80f19e28b44468acbc580f",
+   "path": "objects/req/cisc-008-008.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-008.009",
+   "version": "8.1",
+   "package-digest": "sha256:674415833ddb4ef4341c8a2970febf738a18180ff9500e55f8e82d153d109a89",
+   "semantic-digest": "sha256:acf43339900b89a797f87341b2d52c7d29ce6254fc2b74a5dd2f299b4704877e",
+   "path": "objects/req/cisc-008-009.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-008.010",
+   "version": "8.1",
+   "package-digest": "sha256:70391ba58a8236199f2645bd4e0443c95ac2be555b3640a1fbf31e047b8d5c08",
+   "semantic-digest": "sha256:8dd98a8155e608b7f33305575b1ddf2d98484acb1a37bb62583b9a05a01647df",
+   "path": "objects/req/cisc-008-010.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-008.011",
+   "version": "8.1",
+   "package-digest": "sha256:abd7841cf0cc8384ef742598d0850b0135b565db7b031316339bb0e94269aaee",
+   "semantic-digest": "sha256:301bcdd39fa24c14d0e97693f2aabb7859a2f37af86ecf0270ee54969249d958",
+   "path": "objects/req/cisc-008-011.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-008.012",
+   "version": "8.1",
+   "package-digest": "sha256:918d413d118ad49bcc2f11447780357c1f92a875bbb1c21e34b0dd4d7127d84e",
+   "semantic-digest": "sha256:127465d19d015932e354d5cb7b6731f23625b16ccab38c6bd22312147da4d8fa",
+   "path": "objects/req/cisc-008-012.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-008",
+   "version": "8.1",
+   "package-digest": "sha256:062c48e51ab8707c57a5d43131718b7c82331acdd1640dd05b427e81a9583d0c",
+   "semantic-digest": "sha256:d4cb4c7788a2781d13eaf999b7fafd286791abed23152a8c312ad87da3e39437",
+   "path": "objects/req/cisc-008.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-009.001",
+   "version": "8.1",
+   "package-digest": "sha256:98828ad47ac9abf42e2e2068ffaf5282b5573024541e998b750c3c7659a588a1",
+   "semantic-digest": "sha256:766a442baad1acca9546de8e72f951c97e3938025b4cd646be80aa10c1c032b9",
+   "path": "objects/req/cisc-009-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-009.002",
+   "version": "8.1",
+   "package-digest": "sha256:c9973a225e4a4e236d45076f15749c7b2fb5c11db43c5748d65e5030fa2fc6bd",
+   "semantic-digest": "sha256:af02c615b393a9c4dfff1cf797f67510dd4d0255c6291ceabd306bd1530dabe5",
+   "path": "objects/req/cisc-009-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-009.003",
+   "version": "8.1",
+   "package-digest": "sha256:c5db826cbb88e8b4bd62691a1ef18a091545e610580b53c80e474d133c57e8f5",
+   "semantic-digest": "sha256:6c666589055ff32a0261822af5b0ed14a7bc631faa575ecfdb2f47b53aae3786",
+   "path": "objects/req/cisc-009-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-009.004",
+   "version": "8.1",
+   "package-digest": "sha256:e01ffa30282dd88f2af08b99f5c9132de346675b97ffc7cb887b94d81e14b6bb",
+   "semantic-digest": "sha256:67b7c49a1a2de8e418d3cfe8d9d36b28cb437ba6b92210c241b10c2fd980534b",
+   "path": "objects/req/cisc-009-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-009.005",
+   "version": "8.1",
+   "package-digest": "sha256:4950d379c8557c5783831716cd5f8a3e8cb6b7622a26da5288c24aac7ecf91a1",
+   "semantic-digest": "sha256:9202509f9dd278522da5bfd5153325446fb58aa328fa47a122810a3da8553cf0",
+   "path": "objects/req/cisc-009-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-009.006",
+   "version": "8.1",
+   "package-digest": "sha256:4e92e909685228b25da7c68745307f10e8eabbcc006a8efb48e66651feec25b5",
+   "semantic-digest": "sha256:c869bc7530e46ed3fdfd45300b723588336d290fc176d7d1ddbbbfe100a9ddd3",
+   "path": "objects/req/cisc-009-006.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-009.007",
+   "version": "8.1",
+   "package-digest": "sha256:bc668d78587f8f378e25241a24db4745847ff20f053998384ea0d8479fb9937c",
+   "semantic-digest": "sha256:7972de462c5cd542d585a4ceeb71c83bce6ad08ee4bd357c848fa6682254cb41",
+   "path": "objects/req/cisc-009-007.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-009",
+   "version": "8.1",
+   "package-digest": "sha256:d6d9030202cfae42558399c3dbac8f16fe9c6468bb3fb8a8b5b8b34412911623",
+   "semantic-digest": "sha256:2a188586bd28808b31d6f6637d8624b34967fe81837a46466973dd67ce852605",
+   "path": "objects/req/cisc-009.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-010.001",
+   "version": "8.1",
+   "package-digest": "sha256:706de3a1c5d9722ced294f43237a51c98dcd98517968ee45a613bf446e40f9ca",
+   "semantic-digest": "sha256:98f8690c711bf39b32017926c5dae99d7eeb00aacbe92b90e4e8bd25d37815b2",
+   "path": "objects/req/cisc-010-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-010.002",
+   "version": "8.1",
+   "package-digest": "sha256:6b19724f91ddd3ac9e31509ee3bba4098bdad15ee19e5f12f1f7713400e29751",
+   "semantic-digest": "sha256:6c222c27773cff356a0c49ea1f3c1d61e4a574b77c1c85fc9037939dba962729",
+   "path": "objects/req/cisc-010-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-010.003",
+   "version": "8.1",
+   "package-digest": "sha256:6f8fa3c13f8c3373f17dc48483008e910c0997c110a293d2327e56d788af974e",
+   "semantic-digest": "sha256:e097d28ff6abcef730f35b08daf7be54b6584de2113123fbdaec1d863d76c9b8",
+   "path": "objects/req/cisc-010-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-010.004",
+   "version": "8.1",
+   "package-digest": "sha256:74ee2a87abaa0ad60c009c46dc802b5c222ad7b2e207ee7f7276bf6244b20363",
+   "semantic-digest": "sha256:4332c5281c9ddc6a56ac5dc850ae4d899dd87147f6203735901c2beb33c7453f",
+   "path": "objects/req/cisc-010-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-010.005",
+   "version": "8.1",
+   "package-digest": "sha256:d99519a57557d6e4e7091e08087da8ce2c55307a23ec2adbf4f3011ef021e828",
+   "semantic-digest": "sha256:321b01cd8526288bc718ef9bbd6434db5d368c1b8ed7ad40e0ce523867f872a7",
+   "path": "objects/req/cisc-010-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-010.006",
+   "version": "8.1",
+   "package-digest": "sha256:a3ec2f7fc07d135e543433ca460676a306d934fbe6b50ac41efe5f0e5968cc77",
+   "semantic-digest": "sha256:19a71afa4b26c09b2b711276f98bfa40b1f30c803f740ab296b6fd911bc4a650",
+   "path": "objects/req/cisc-010-006.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-010.007",
+   "version": "8.1",
+   "package-digest": "sha256:809f19ef0f5364c3e8e78a0b16d05209422ca3d0c8de597cd2518f1f6680d9e6",
+   "semantic-digest": "sha256:a982413cecbeb2a26e10e4ec7c2d3670ceffd48584e16c5180e0c3e6c19c4d0c",
+   "path": "objects/req/cisc-010-007.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-010",
+   "version": "8.1",
+   "package-digest": "sha256:6cca6e775b091fd1772a5bd99b5ccd693a7f156cf3ecb593139cdcfb9aaea6d2",
+   "semantic-digest": "sha256:e6ee8fda629603ffd6a3fc28a2215b5c3bc5fc005b017282b98c493ed3a92d07",
+   "path": "objects/req/cisc-010.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-011.001",
+   "version": "8.1",
+   "package-digest": "sha256:e56c583b967de9d6b3886d4e7dac9c822f16d6601ef880a81eea8f28d895824d",
+   "semantic-digest": "sha256:494d75cdfa0700aae44176e0fff36ff546c170d92fce625600b83ad908bd6087",
+   "path": "objects/req/cisc-011-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-011.002",
+   "version": "8.1",
+   "package-digest": "sha256:c40e434af7d13a5b49e060624834d0bab77f163ddebcd69655c9eb3219ef0e01",
+   "semantic-digest": "sha256:6df75fedb5fedb8d4e207a6799ae8f950029a997ce11ce7ea791965c42a49aa8",
+   "path": "objects/req/cisc-011-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-011.003",
+   "version": "8.1",
+   "package-digest": "sha256:db24c84d49d6d56fd36e7ea862ad85ff63ce12d487b94f8fb7d757c8e0ebf772",
+   "semantic-digest": "sha256:24374ee19af2f928b6eb083baa31bf77230644e1e1514fc07353628cf07ab0f3",
+   "path": "objects/req/cisc-011-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-011.004",
+   "version": "8.1",
+   "package-digest": "sha256:55afdf725f4dd4dd39e54ef0d614a8c942c073b4710f1eea1f6fbe2bbf9317c7",
+   "semantic-digest": "sha256:5f02a62a3947143e0aaf7f9d389b36616d2a0b2d4a8df89ffb0048cff1da7b59",
+   "path": "objects/req/cisc-011-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-011.005",
+   "version": "8.1",
+   "package-digest": "sha256:a14d6f81fcdab5f314fe977ec7d29a8bd230c98f52c87bd0903ba90989082dd3",
+   "semantic-digest": "sha256:19be1af35371ba5214f4ff07421687c146ef7a9af61b3db23f10796a957f327e",
+   "path": "objects/req/cisc-011-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-011",
+   "version": "8.1",
+   "package-digest": "sha256:8d9a48e0ca44b6e8c2380a95aca3b34358917ea028c7eecd1e10c67cb6e38f95",
+   "semantic-digest": "sha256:a8ab76a2c8cec02f86482ac4f334c693ba20ebbaaf187aff2cd7049bbd9c8dc9",
+   "path": "objects/req/cisc-011.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-012.001",
+   "version": "8.1",
+   "package-digest": "sha256:a3b2278386b238e75ae1b22bcde51377dde502604710e2a1d46ff77437914e31",
+   "semantic-digest": "sha256:f6ad9c1eb834d60e161a3fafda5e1d853cc4d3e9fed6eaf9d6349fe9a1c4f451",
+   "path": "objects/req/cisc-012-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-012.002",
+   "version": "8.1",
+   "package-digest": "sha256:aca51d54fff1704d57faed0c4b6a98b95b226863655357e76763a16e584be7b2",
+   "semantic-digest": "sha256:a47441622bcfa8789dbd2c36d674969c595a4b3b82425684c63a09867a746640",
+   "path": "objects/req/cisc-012-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-012.003",
+   "version": "8.1",
+   "package-digest": "sha256:1376652bf02c92c3d47fe296c3ab7158ca319d17f1b1f4fbcc9b5c7048e009b2",
+   "semantic-digest": "sha256:d9625a4fd99c4cb508edaea8338ed2faae28f62d68243ac6cea5057a798b4c04",
+   "path": "objects/req/cisc-012-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-012.004",
+   "version": "8.1",
+   "package-digest": "sha256:aaf8c3107ac542b065f6418686110fe0e5fc8339f6104f566c5a1be2d4898ad1",
+   "semantic-digest": "sha256:afe3ab67ba2d40a3c1eb9327164d8589206a1302fabd09cc7f5d9b0662431251",
+   "path": "objects/req/cisc-012-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-012.005",
+   "version": "8.1",
+   "package-digest": "sha256:ba114dae22bdbe5f058f5168193b541b007790a03f5bb6ded2e853f0371f1205",
+   "semantic-digest": "sha256:b916b476333524bc1426af4529c08eb3dc55c3d95107d948f82d7d385d819426",
+   "path": "objects/req/cisc-012-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-012.006",
+   "version": "8.1",
+   "package-digest": "sha256:eadf2ea95091c59bcda614f54f3afc58423a03ce7922d78b86d2d122d304229c",
+   "semantic-digest": "sha256:e5d702157ac0adb973147909f61fa2aa0a2a9200e4274eaa528217f3de2bc83f",
+   "path": "objects/req/cisc-012-006.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-012.007",
+   "version": "8.1",
+   "package-digest": "sha256:fc11f5971bc10e31c736350e4bad320abc4e12dd617b7078cce6648fe15af5cf",
+   "semantic-digest": "sha256:1d2bff598d47bd4757acef5e16875e6007dbfb95ab5d9cc5ee5946f590f84bec",
+   "path": "objects/req/cisc-012-007.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-012.008",
+   "version": "8.1",
+   "package-digest": "sha256:c8b00306aa31772d5ad3f7da55c365214b9bf02268b8c8ae1ddd19abcccae828",
+   "semantic-digest": "sha256:5e1a2887cbb304e3f8909f91de6636f3c326ad87d805364c5ae834c593fdbb4e",
+   "path": "objects/req/cisc-012-008.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-012",
+   "version": "8.1",
+   "package-digest": "sha256:ede135ff212052ce8713cb71aab354c16534a9b5794ef3833e676308a2ab3e00",
+   "semantic-digest": "sha256:8e3278c06fb833522e09522a5c796cf549860cd9d3bf7d497839164d07043fd1",
+   "path": "objects/req/cisc-012.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-013.001",
+   "version": "8.1",
+   "package-digest": "sha256:f71dbbf606fd034f3dbf7ad63909af0567ebba0c52a067562560ba66fc911d3a",
+   "semantic-digest": "sha256:bf5da1ee85cbc954b94b17f618b24d1eb39d6d57dd941d2390f7a5887c8cb7fc",
+   "path": "objects/req/cisc-013-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-013.002",
+   "version": "8.1",
+   "package-digest": "sha256:fff2a0fc44e72440e5f8394434ca47bf8cf84f9d141527003323e8e85bdfff06",
+   "semantic-digest": "sha256:be128fb54f8cba714066bdd7f20d62a463f264511231908f88fd4886e6b51663",
+   "path": "objects/req/cisc-013-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-013.003",
+   "version": "8.1",
+   "package-digest": "sha256:50e3cf3e5d7969361c2f7d465d41994a368778feae62f76f2d2e5ba6767bbc06",
+   "semantic-digest": "sha256:f5d8d526d529d5b714f1d6186d19071f07dc940628cbe98f6ecf2e705e6e94bc",
+   "path": "objects/req/cisc-013-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-013.004",
+   "version": "8.1",
+   "package-digest": "sha256:83d9ff1eb766c9a7a55de6af1b595c56c209d386097b48c0368fa9281bdf4896",
+   "semantic-digest": "sha256:288e47c63b40fd30fd059671ed78276f5b79ff7aec163e8924932a1fe579e8fe",
+   "path": "objects/req/cisc-013-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-013.005",
+   "version": "8.1",
+   "package-digest": "sha256:83edb50c3bebee689aed906874776775e3a263dd5da13554d56d8794f5b3adf8",
+   "semantic-digest": "sha256:1092c4917a84f87c298d6804624aeaae1a931612c675632e1e59f8eca683889d",
+   "path": "objects/req/cisc-013-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-013.006",
+   "version": "8.1",
+   "package-digest": "sha256:2cf9e156cac64065dfd50d1428e3c6e66a5d71257a4cdfceba3aa993a160d314",
+   "semantic-digest": "sha256:7a9b3d93c570c6f5129dc08bd0419ea719cc611645b80117c7996b9c93938a83",
+   "path": "objects/req/cisc-013-006.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-013.007",
+   "version": "8.1",
+   "package-digest": "sha256:d9a955b0d636cfe56bbb25d6b8da34713474288b4c2c6950eeb07ac722edb944",
+   "semantic-digest": "sha256:f2d10ab4fc0ec67ecad7e3770a6a95c8f313c4feaed92ac55236510ebb461ee5",
+   "path": "objects/req/cisc-013-007.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-013.008",
+   "version": "8.1",
+   "package-digest": "sha256:9f21562a48056ff8a99361b39132d8c3289b6491745413ce6baafb1bec2e5f5c",
+   "semantic-digest": "sha256:2272a9fde1534f28d33dac0ec82a47f2362b80a33a62ab780f0f6b251266d492",
+   "path": "objects/req/cisc-013-008.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-013.009",
+   "version": "8.1",
+   "package-digest": "sha256:e2bb43e497814e078740a3b30255f257df2f0fb2cdd33fe49b1b6367f8f6d47d",
+   "semantic-digest": "sha256:043165bcdc95180723aa3e7ffa192a05b09eab533d2495327709b112529cfc43",
+   "path": "objects/req/cisc-013-009.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-013.010",
+   "version": "8.1",
+   "package-digest": "sha256:310cb0dc0eb76cbaf22d1b62ebd6a0a52fb40ddcd26ba0ea767523e937c776be",
+   "semantic-digest": "sha256:6888feecd4b859ea4927c0f8a5fb9d19c8b94b9e689d650b3eb5550030abc1af",
+   "path": "objects/req/cisc-013-010.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-013.011",
+   "version": "8.1",
+   "package-digest": "sha256:7c8dd77b3f79f8c29af47273701d7053c0fb5dd4145ee921de86212aa55eb19f",
+   "semantic-digest": "sha256:864d7a32af7235b7d5960bb7eff256affa5b6868ec1d1c5926051ef1b176e81f",
+   "path": "objects/req/cisc-013-011.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-013",
+   "version": "8.1",
+   "package-digest": "sha256:120f7bc49fabaf8771aa81685cf98f4d4f49becbd0a3af4bb9ae6613e44c4dad",
+   "semantic-digest": "sha256:f064327235073a680f29194a06f08a2684737d27e5b54e7ec8bab1b690f66e56",
+   "path": "objects/req/cisc-013.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-014.001",
+   "version": "8.1",
+   "package-digest": "sha256:a893bd049ae8979a1a51df2f782d2db1ec7b15d59e6dc4263e372bcf235e657c",
+   "semantic-digest": "sha256:9b08f542ce84db62d4a5febef181840982e3b07839362321e5b6bf22261dec5d",
+   "path": "objects/req/cisc-014-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-014.002",
+   "version": "8.1",
+   "package-digest": "sha256:719a443b65b1385e05b36b2a27a6cc2b3a6525cc9dee0bdfb1ff4ca9aeea31c5",
+   "semantic-digest": "sha256:b810586c8a9cda846be8b1b83cc6b2c616861f7c7a22d6943ee034eaa7774dae",
+   "path": "objects/req/cisc-014-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-014.003",
+   "version": "8.1",
+   "package-digest": "sha256:d905bf13c17db573db1403fef3857296a836d486c060fe0d31412ae17fa01e00",
+   "semantic-digest": "sha256:40266f3e3525bbd92d51f4d2b485d548bdfe017c7ca417bc88eb01a3eb32fa6d",
+   "path": "objects/req/cisc-014-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-014.004",
+   "version": "8.1",
+   "package-digest": "sha256:558345388b2ac02f288b3d59505e287cdf5ea3b878c345c6af78869bd556db08",
+   "semantic-digest": "sha256:6b96c5ad6d8eee7a96e84d1fe910ea362be383651bd82667a4f32340dba741cd",
+   "path": "objects/req/cisc-014-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-014.005",
+   "version": "8.1",
+   "package-digest": "sha256:ee3f43ed3382fbb35b0923e40944f02360a1450ceb73ab93a79930a59f2cf3b0",
+   "semantic-digest": "sha256:5375cc6317fd124d1646d94e3279f09ade90f7ece9d5a9fbe40f323a7cf63591",
+   "path": "objects/req/cisc-014-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-014.006",
+   "version": "8.1",
+   "package-digest": "sha256:915a8e234f78e72fda31b7163093eed5422bf178e95d8fd6cf45828fb08e22ff",
+   "semantic-digest": "sha256:0ed18208d53c05dd0f73a548e97ecc6bb1cdcb94b0b36ea52c6c75073b71a5f9",
+   "path": "objects/req/cisc-014-006.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-014.007",
+   "version": "8.1",
+   "package-digest": "sha256:84c219604fb508f10c7c425ee8207204c419ee290f4d3902e7be68c7542dd858",
+   "semantic-digest": "sha256:5d6aee95564359f7d39db32732c6ab8b5e55d31dff9af3dc1705d9259afd7dc7",
+   "path": "objects/req/cisc-014-007.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-014.008",
+   "version": "8.1",
+   "package-digest": "sha256:bcbec66efbd6c373474521106f6e01e3e3f45685c19c62b97630e68b70b13081",
+   "semantic-digest": "sha256:05b42b49a4f0d490f4021405f9277529842bce87a998449ec2e084d9b934e56e",
+   "path": "objects/req/cisc-014-008.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-014.009",
+   "version": "8.1",
+   "package-digest": "sha256:58595804f59c3409bf9f3619915232cc865664695076e445164907389fe09846",
+   "semantic-digest": "sha256:a51a0de23ca8bde922021eab92c432879d68b6dd3fdf4bbd9063532413286b8c",
+   "path": "objects/req/cisc-014-009.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-014",
+   "version": "8.1",
+   "package-digest": "sha256:f0d15b56c7ad1e0be4cc5648d6d920e92d59ca1867c641a8381fcbdd064a76f1",
+   "semantic-digest": "sha256:7e5e7f748c63d565e7ab2b42c533c484f7718bdf7e5daac06647fd168bb4f385",
+   "path": "objects/req/cisc-014.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-015.001",
+   "version": "8.1",
+   "package-digest": "sha256:bb092b9c62bf8bdf53a30b7ce6ff870f00e34fa7f731e063591736ad6db0f3e9",
+   "semantic-digest": "sha256:3fde316c4637e0aa78608e4f253e5acdd1047ced0b3a22cedbe189803650373d",
+   "path": "objects/req/cisc-015-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-015.002",
+   "version": "8.1",
+   "package-digest": "sha256:dcabaa7831727828ded5a44e85211a9b5d7a4d6feb81da399339271fabb2917d",
+   "semantic-digest": "sha256:09601e565f35f04b46d8908516d44cd78a1b4f6516963d336458c1998cfc1ed4",
+   "path": "objects/req/cisc-015-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-015.003",
+   "version": "8.1",
+   "package-digest": "sha256:af6ac04241d92255f2b056369ac6624fcfb1fb35571362db68e2ab2b6e3ceaf7",
+   "semantic-digest": "sha256:19d895090ab10e3606f732c42e5414f4fe4c93119886acd4f8bb5fd08409a030",
+   "path": "objects/req/cisc-015-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-015.004",
+   "version": "8.1",
+   "package-digest": "sha256:e8241cf4744f2dc9204bee78b5d28b42aae074b50d35d7b245ab034a730848b9",
+   "semantic-digest": "sha256:ae2019c25dd5df56f363cd90d02b0409d66b651502ec28e8fc80593ad938deb5",
+   "path": "objects/req/cisc-015-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-015.005",
+   "version": "8.1",
+   "package-digest": "sha256:bfc1d47fc7afe84b254f95517d7235fd1427893ca5e7338d5c590d77f39ffa59",
+   "semantic-digest": "sha256:b4e42e32d8d714de7b77b2ac43bd081b537a496f75606d22885dc05874897bc3",
+   "path": "objects/req/cisc-015-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-015.006",
+   "version": "8.1",
+   "package-digest": "sha256:0dc7317892a8220ecb2ac3d33180a89a199354e39f7aa65682e5fa92a95194a3",
+   "semantic-digest": "sha256:901cf377a894fef325c090f91026f82355b2c306df9c7d41a82e58fb022abc00",
+   "path": "objects/req/cisc-015-006.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-015.007",
+   "version": "8.1",
+   "package-digest": "sha256:5217d8a0ff54680f0ff171c1cea39ee9c658797b753b97bda08facc3485556d5",
+   "semantic-digest": "sha256:62c3fc60d6490edac9d759ad66efafc00b77b9c8cb774f95b7a7f74c93d1e8ce",
+   "path": "objects/req/cisc-015-007.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-015",
+   "version": "8.1",
+   "package-digest": "sha256:e5e1dbff21a3e728068ce80769d551f62b8e23e816ab4cc22da9e2d234d8b5ee",
+   "semantic-digest": "sha256:0f5f6e12abd56d682cf861d0aa4ebcce74eaabb3ade5166ca575d12f12bbed76",
+   "path": "objects/req/cisc-015.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-016.001",
+   "version": "8.1",
+   "package-digest": "sha256:807a74258b37df75d04d3c0e603a86d93c2ab23f8887b976710c2d81169e04b7",
+   "semantic-digest": "sha256:84e397cf429d630c0683ed6e0885d7d82a6d0dc788236f217078715543968f16",
+   "path": "objects/req/cisc-016-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-016.002",
+   "version": "8.1",
+   "package-digest": "sha256:f23c799bb7bac5e228df08c17149a1e21380c5d7d209d9203627bc3071e719a4",
+   "semantic-digest": "sha256:2bec9618b35d1baf1ee245ae03dbe0a34d3e43506d73839ac825e3ce965187fe",
+   "path": "objects/req/cisc-016-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-016.003",
+   "version": "8.1",
+   "package-digest": "sha256:01dcf2c8b28b7487798adc91e5e0ad2b55a0e9e0d9101b9104f4a749a5e9ebf2",
+   "semantic-digest": "sha256:c1c42a51372dd1e99ba44210fcdf1254cd2f1a8ce22553390fcb4c90faf0c486",
+   "path": "objects/req/cisc-016-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-016.004",
+   "version": "8.1",
+   "package-digest": "sha256:ad8f8e968ca66a147e6b30fb4ddf247bf3db043b8d92d3ab233cc8dd4ce97108",
+   "semantic-digest": "sha256:43a17f494670c90a9b786a59090cc1ab72a6b7f577acf654599ef3a91ae60a55",
+   "path": "objects/req/cisc-016-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-016.005",
+   "version": "8.1",
+   "package-digest": "sha256:2c75d46f0ec12771c8aa6a324d717c14e87b5ffc559f34615e7cb7e2b0f76944",
+   "semantic-digest": "sha256:cf713b55b30724b1fed61d976d097708c11ee8f841b2a5987ba6f9eaa98b99d5",
+   "path": "objects/req/cisc-016-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-016.006",
+   "version": "8.1",
+   "package-digest": "sha256:c36b207c846fa390b5e23f653a330de823d947c3e9e8f238c5ffa725a025ce50",
+   "semantic-digest": "sha256:594202ca3d30223228afe3dcb07685718c58d4dba2e52c200d4d1a6bd46d8cba",
+   "path": "objects/req/cisc-016-006.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-016.007",
+   "version": "8.1",
+   "package-digest": "sha256:fd3c1634187f4af7424b0d16621a48b4128827e717c81373f7bf0a205a2a24ac",
+   "semantic-digest": "sha256:6a0c86f228a4c8fce58aabf116679bba9c92adc989850d09f3d650ac9f49c820",
+   "path": "objects/req/cisc-016-007.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-016.008",
+   "version": "8.1",
+   "package-digest": "sha256:23471651d71a8616e616189e71d83b46de07b428f5a524eb7a97eb61a4430b6c",
+   "semantic-digest": "sha256:c2b5e17c020bc8eee21c6897baab7dcaa8f3ab469a8c9ac5db384c893566b971",
+   "path": "objects/req/cisc-016-008.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-016.009",
+   "version": "8.1",
+   "package-digest": "sha256:6e00fb00d4e09a5a76e7056539714870e4e9d7c56015124c4969a3cf4500d29a",
+   "semantic-digest": "sha256:6408ddeaa8ba6c093c427ebfee21eb578feaf1d0fc46fb1878680c6eda13d396",
+   "path": "objects/req/cisc-016-009.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-016.010",
+   "version": "8.1",
+   "package-digest": "sha256:0fcaa375b9b2ad5c5d1e1184db3c8285caca4ab2ea2a2753b46aeceb7b0f2b24",
+   "semantic-digest": "sha256:19e0134cc4a9ae05a815e9a0a712f282db04f34a85050bf176992a0778cfa2e4",
+   "path": "objects/req/cisc-016-010.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-016.011",
+   "version": "8.1",
+   "package-digest": "sha256:d7961195d1b592b097240d029d86d7939b0d4fc85d6ff8ac06db7d89bcc547fa",
+   "semantic-digest": "sha256:6fbe818ef0868326cd62f7e229eabb392fa62bdb9bb0051349d0483e0bfbe8ab",
+   "path": "objects/req/cisc-016-011.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-016.012",
+   "version": "8.1",
+   "package-digest": "sha256:8acc952f8ffa97483f332e66237574ae744e79dfcdc9b646e9027370d790cb3f",
+   "semantic-digest": "sha256:77e89b4423e1697a14b746a85811fe2fdda2532a59ae27b9b5dda90af5ec8182",
+   "path": "objects/req/cisc-016-012.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-016.013",
+   "version": "8.1",
+   "package-digest": "sha256:c8d8fef7febcae43d7aa35897526546972e38f73ca63db67c282c798f6dc5588",
+   "semantic-digest": "sha256:f3a4c5eeadc46d7c68bd5904aaf5bfa4e5272491b319185c4b360a3eb37cd3a7",
+   "path": "objects/req/cisc-016-013.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-016.014",
+   "version": "8.1",
+   "package-digest": "sha256:32c376486b9156b90189c8cda47bfaaeca7006dd3af9da72b99f685d1bca5a08",
+   "semantic-digest": "sha256:6f50f54e95dcaf59c3a96080b31f7af5b38717e7eed2274f2a89aa3a0383984d",
+   "path": "objects/req/cisc-016-014.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-016",
+   "version": "8.1",
+   "package-digest": "sha256:62f47b945bf70abed3ff8cbf24dba6f3ad14c58e6666918d18f299a2a967f226",
+   "semantic-digest": "sha256:1e7531a7625674d0d02b113cc821cf556d7fa4044d27872d1fcb23848f478e4c",
+   "path": "objects/req/cisc-016.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-017.001",
+   "version": "8.1",
+   "package-digest": "sha256:400a0921ef454b9c2b2d39997b0a37a71fcfe8c65c582e049b10247effb5892e",
+   "semantic-digest": "sha256:92b01e60774b74bd87ec38341655d2602cd8afdd0d01de79829d23a8b06ea78f",
+   "path": "objects/req/cisc-017-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-017.002",
+   "version": "8.1",
+   "package-digest": "sha256:3394f2531bfc44d9f6abd6bb1a53fdb9b004c70abd8fc5f04a95b2f58589a3cb",
+   "semantic-digest": "sha256:a5803febfdb6a85576520cb6f7dab46db87b2f4de9d4968aef966814ba850639",
+   "path": "objects/req/cisc-017-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-017.003",
+   "version": "8.1",
+   "package-digest": "sha256:e8a7659500e646d63bb6fa8d634230fbb18132d6fe875114bf0ef9a9ae9e4838",
+   "semantic-digest": "sha256:0964c3802be762d1550d9b98a6b3b18198757ed3ae563e4f35968d5e57f8954a",
+   "path": "objects/req/cisc-017-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-017.004",
+   "version": "8.1",
+   "package-digest": "sha256:d5776077caeb5356e9e5f8e25719469c9fb3f76c2a40afdeb2154a05c35ba6e9",
+   "semantic-digest": "sha256:7fbfdd38d253f8d98dc4646413764629714d0b7c3ea29cb0c575fec01d1c19a5",
+   "path": "objects/req/cisc-017-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-017.005",
+   "version": "8.1",
+   "package-digest": "sha256:da5ad4badb2f762b70a08e7d4cf8f940c1535b4c23fff590854123a68662780b",
+   "semantic-digest": "sha256:ce94a1d1069066e6ba8edc9bdcf26c8bb2f3767d2d8ec9f5e7d8cceb8f96f5d3",
+   "path": "objects/req/cisc-017-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-017.006",
+   "version": "8.1",
+   "package-digest": "sha256:6855c3d20183586b12321fb04e25ca9e7806c95908427f2d47db60e66a8ebf47",
+   "semantic-digest": "sha256:34910cd0ea605f5c6e32438b0c8971375affbbf5c83f5d44ccf9a91dac8f5f86",
+   "path": "objects/req/cisc-017-006.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-017.007",
+   "version": "8.1",
+   "package-digest": "sha256:175ffa7cc3efb94f9f0bb472a7a060882a7c4b2d5a41645df2d566fefb2cead7",
+   "semantic-digest": "sha256:f7f68cdf21e1ac570377c062f641fd2e076a41ee0b1dfa71b5090da2eea6f12d",
+   "path": "objects/req/cisc-017-007.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-017.008",
+   "version": "8.1",
+   "package-digest": "sha256:3a0ecd2c99860a992ee7ec5f18e97868a7de5d9ddf6c3738fbee881309915155",
+   "semantic-digest": "sha256:5f6737090f4151c8b6ac5f54becbf69465a3f044e13becc36346693b78902c7c",
+   "path": "objects/req/cisc-017-008.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-017.009",
+   "version": "8.1",
+   "package-digest": "sha256:e19c59532aeb610804f8ae18792f078112dada5d68905b709f519fe107b20666",
+   "semantic-digest": "sha256:772a51721d074368742a96dc8096db2d4e9d383a76b42acd360556657f11bc25",
+   "path": "objects/req/cisc-017-009.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-017",
+   "version": "8.1",
+   "package-digest": "sha256:bc6cddfa4032bfab911d24d95fd1f77320c2cff6746026be676684db9cb0494b",
+   "semantic-digest": "sha256:415c7dc01bccde25ac5da64651a0b0e1bb330b03aad48e8fdcc8b87dae6eee9f",
+   "path": "objects/req/cisc-017.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-018.001",
+   "version": "8.1",
+   "package-digest": "sha256:7eb65f829ded4be98899beed2cfeafee6119a143a11ce64471bd99737cbeed75",
+   "semantic-digest": "sha256:ee74d2f18fb2888aeae8c8e6fd40dc61a167a26c6d928c2de3bec39a94501d85",
+   "path": "objects/req/cisc-018-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-018.002",
+   "version": "8.1",
+   "package-digest": "sha256:95496ba478910a6f5de354de1088f446bc48a9bfa7690861bbde319af43b66a1",
+   "semantic-digest": "sha256:fdcde1b300cce5e2db184d32ddf180f7dc47934768b636d89a25c0bf1aca7549",
+   "path": "objects/req/cisc-018-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-018.003",
+   "version": "8.1",
+   "package-digest": "sha256:9388c1e8781b3fed1d97a2bb81e32af23ac3670ca67e682e065bc0437be07c34",
+   "semantic-digest": "sha256:20afa6f8c30ee7f22ef9a7e02994ba594f724ff3ca51c5c65736ef91b4005778",
+   "path": "objects/req/cisc-018-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-018.004",
+   "version": "8.1",
+   "package-digest": "sha256:cfad7b994cb6de63c0f96f386986736aa67be1a0ee1b5c1e3eb9136e060a47d5",
+   "semantic-digest": "sha256:fada76c1afde75f8bb4da83395bc187426d393581f14fbdd5cf2dbe683f7ccc4",
+   "path": "objects/req/cisc-018-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-018.005",
+   "version": "8.1",
+   "package-digest": "sha256:07c2c0b3a795937805de29de14c38f07f527ad160d03b46f5cc4015907a08d99",
+   "semantic-digest": "sha256:4d4fead97e02ea79b3f8c2f73e9b419b25ce13e8210989fd71acf3fd7fcb9ff0",
+   "path": "objects/req/cisc-018-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/req/cisc-018",
+   "version": "8.1",
+   "package-digest": "sha256:025b30942dbfb4ad7749661b4d12a201d9519d5fe27113cacb554fcced54a32b",
+   "semantic-digest": "sha256:80b455ff71dc3806baa7700d8c79067ca95fd386a756716dcc8c818f6c60d42e",
+   "path": "objects/req/cisc-018.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/asset-data",
+   "version": "8.1",
+   "package-digest": "sha256:fc2e8efd4aa6215c01e3e3c76a743958e7b35a2b55082dd3062f3989b41b84ce",
+   "semantic-digest": "sha256:d4b15b6e3f3d45ac6937e599ed6ac90095eeb14b63abf0d79f62992e61c6220e",
+   "path": "objects/set/asset-data.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/asset-devices",
+   "version": "8.1",
+   "package-digest": "sha256:ff8cb64a32e6ebcd56caad136dbd0e184cf003dfefa82944b4a9e814faef41b1",
+   "semantic-digest": "sha256:2419242cb9f8b3dcac9ed495b7d8ef42fb5e7ee632a9e5adb6ed2f85e0ae9610",
+   "path": "objects/set/asset-devices.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/asset-documentation",
+   "version": "8.1",
+   "package-digest": "sha256:c22da684a2f4e6fbf10821657058af7ef916e1cf03551f08f6377530d4734839",
+   "semantic-digest": "sha256:61b6500746ac8b99a5f19a31610a7aac291061eae283b65a1a0079a26212f8d6",
+   "path": "objects/set/asset-documentation.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/asset-network",
+   "version": "8.1",
+   "package-digest": "sha256:410307fc06aa313b11653b4ae76606ea233e70c0d88a9bf32957f4ac9edcd59c",
+   "semantic-digest": "sha256:4e94862c9a4a54c471417174487bd6166f2ecdc09d7a94dc5e71f0d2878bd2dd",
+   "path": "objects/set/asset-network.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/asset-software",
+   "version": "8.1",
+   "package-digest": "sha256:9b66a739bd2cf6564acad58c7ff5061d4596f8a00a6993281be11e13df759282",
+   "semantic-digest": "sha256:2dada5af2c309269f76853b782659c6de30d120e14421f2dc89d2199e916ffe2",
+   "path": "objects/set/asset-software.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/asset-users",
+   "version": "8.1",
+   "package-digest": "sha256:e7e77a00a376be614fda41e157e990a09fa02340319fae980d5bdedab68e43cc",
+   "semantic-digest": "sha256:c4de63c7afec78ef2a10716fc8e005d66773f6b0497d922722e037bb24a6f056",
+   "path": "objects/set/asset-users.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/baseline/ig1",
+   "version": "8.1",
+   "package-digest": "sha256:668ba52b22b891063d4c5ebadfdb2e5fa400222ff688ecacbf7781e68b29b6cb",
+   "semantic-digest": "sha256:d0776dc16e3ee5e66cdc10b6436929b93545ff3d005433368f122306b58d4870",
+   "path": "objects/set/baseline-ig1.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/baseline/ig2",
+   "version": "8.1",
+   "package-digest": "sha256:da635612949594bd04dfcc79a1cd59e6492ff4e049f096c208ad55c2f7eb54bd",
+   "semantic-digest": "sha256:342d1675ce80574ec58d5e68353731cb16b214da9a12ce4198675e989349c97c",
+   "path": "objects/set/baseline-ig2.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/baseline/ig3",
+   "version": "8.1",
+   "package-digest": "sha256:befe6177bf4f39222d0a0b2b244f48d99df623face3929718af9bff40427b54f",
+   "semantic-digest": "sha256:5bb22db34cfb5f836d7561539406799bba2cf007e89de15c7fb1068ca312b23f",
+   "path": "objects/set/baseline-ig3.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/function-detect",
+   "version": "8.1",
+   "package-digest": "sha256:80fcac05c152399e75fadd31a2c06747aa533543b4599700b19dec75cebc602a",
+   "semantic-digest": "sha256:4e1b12673bba73c957f0657b8aae073986c4fe6c16c3bac9aa4a41799f9e00a0",
+   "path": "objects/set/function-detect.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/function-govern",
+   "version": "8.1",
+   "package-digest": "sha256:0988918bfee925eee8fd12801178389c24dc646f5add0dd388bce29ab5420d92",
+   "semantic-digest": "sha256:441088825882fe522c55cce8745b220e1576b885918e4bc87cc3308ab8e2bfdf",
+   "path": "objects/set/function-govern.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/function-identify",
+   "version": "8.1",
+   "package-digest": "sha256:2ae7e46f9f132f4a9aa6881d008c8b7a859dd211815d98e661b9d5c52aa31b1b",
+   "semantic-digest": "sha256:0c75749c41efab81b028b800f8bcd116115d087d848b44fb3f5682df8fcbebe0",
+   "path": "objects/set/function-identify.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/function-protect",
+   "version": "8.1",
+   "package-digest": "sha256:1d4a6341e6a304d15ad7a3b791e615826f5814339433f87dff75aea534bfd451",
+   "semantic-digest": "sha256:05030589163f1896c1d4bde9290b5eda7e90668cbbbe1ca828fe3460420f7004",
+   "path": "objects/set/function-protect.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/function-recover",
+   "version": "8.1",
+   "package-digest": "sha256:1b008767e0765a9138979915e377844657f6b23df829f901d66bc2620330bf0e",
+   "semantic-digest": "sha256:eb4164eb837963c1a9b0ca5ffeddb3bba2b9d034a4daf662aaa87ac02dedec73",
+   "path": "objects/set/function-recover.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/function-respond",
+   "version": "8.1",
+   "package-digest": "sha256:c5723119e60d653e01869164bf1e902d3f336fc840d5d5df50a6bbb2d65be650",
+   "semantic-digest": "sha256:651528871b1c65ffe66d7518147b25b67b9324f6b8c36c34aa139f38ad978f8f",
+   "path": "objects/set/function-respond.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/cisc-001",
+   "version": "8.1",
+   "package-digest": "sha256:3469d67ed015e665abfafb87b665c6774c9790dd2e4b591b47e4d4ae648159ca",
+   "semantic-digest": "sha256:77043a5a8fef179484b32dc684a517748d715a47beb29aedc57e5938f4110ef0",
+   "path": "objects/set/tax-cisc-001.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/cisc-002",
+   "version": "8.1",
+   "package-digest": "sha256:3323ca5001c3083dbb3d1f652316dee9b6e74006b41e325fbf8fb6e2cb8d5599",
+   "semantic-digest": "sha256:836b580b29b4f5e2265a56a974b30d66e66dc8db083f3b3bbcc94b49d4090200",
+   "path": "objects/set/tax-cisc-002.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/cisc-003",
+   "version": "8.1",
+   "package-digest": "sha256:d0ad87240414f298d03fbabb15ee637c3a2fb7ef40f98a8e31e748222cd79341",
+   "semantic-digest": "sha256:9e4db6bbe46df8d2cba5d8c1bb03c8a2a0a43b1c5b00f7c8b3dd2a791d675832",
+   "path": "objects/set/tax-cisc-003.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/cisc-004",
+   "version": "8.1",
+   "package-digest": "sha256:11544608da9987a98334a8a575aae6ef0aaa90826edaea18ae09001534cb8158",
+   "semantic-digest": "sha256:2671ac93d8f496e03eadba85340025f0ba13a1be8ebd6e9cda597b2d09da8c7a",
+   "path": "objects/set/tax-cisc-004.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/cisc-005",
+   "version": "8.1",
+   "package-digest": "sha256:6e41eb23e12c6a891cf99d7a93d72a09b0167c6b140f7497361c08cfd8eb9657",
+   "semantic-digest": "sha256:ba819f61a49528395075810d3878ac0eb66bdc57fbf31cc47c4d6893e7751673",
+   "path": "objects/set/tax-cisc-005.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/cisc-006",
+   "version": "8.1",
+   "package-digest": "sha256:e506b9ab2a33a3d5d4e085b0663ef1d1d4289261b11e1ab17681038f773da76e",
+   "semantic-digest": "sha256:34db6bef21c78b724bdb5196cc51a4577697722321a760f838f0ffdf661504e6",
+   "path": "objects/set/tax-cisc-006.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/cisc-007",
+   "version": "8.1",
+   "package-digest": "sha256:d89828379507c0500787dd690bcb2532bdaa1455600cc0c475bfbbf6a83bc12a",
+   "semantic-digest": "sha256:3dd5953e4c67e4fe009375b8373aca9c548b78736043a0edfa1f70b47bddf14e",
+   "path": "objects/set/tax-cisc-007.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/cisc-008",
+   "version": "8.1",
+   "package-digest": "sha256:2c930b0da3a366baf31994f995f8fa978077a24367dba3cd6443ad70f9b8da37",
+   "semantic-digest": "sha256:58ba08da3c45969846caf8cccda97b13600bf21e27b5dffed5e1acc36aded25c",
+   "path": "objects/set/tax-cisc-008.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/cisc-009",
+   "version": "8.1",
+   "package-digest": "sha256:5d4eb9094b557b33e008e203f4c01ad08cf7358028ba928f1bcd59771f1ad34f",
+   "semantic-digest": "sha256:01f39bfb70823992a8e7cb5e15b80c6879280f61e64a38e059e4285c7ab3bded",
+   "path": "objects/set/tax-cisc-009.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/cisc-010",
+   "version": "8.1",
+   "package-digest": "sha256:057dedb33ca8f4dfa7df76c088c6ba1c284fbef130c1a89e42f8a603d0e6151d",
+   "semantic-digest": "sha256:72bce9050f1a4aa0bba9f24a0400cabae99b11585440b764b98aefdada36d551",
+   "path": "objects/set/tax-cisc-010.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/cisc-011",
+   "version": "8.1",
+   "package-digest": "sha256:eba8c116966177c51a1af10d8061b5ede6e80fa6fd389027a2774d67db3c982e",
+   "semantic-digest": "sha256:0ec9e9e7980449f9b6cb4856dc4345b30afdd423a08860f211468428e69917a1",
+   "path": "objects/set/tax-cisc-011.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/cisc-012",
+   "version": "8.1",
+   "package-digest": "sha256:b3d142ef254c6325838b6fd44a58f7b493ed4e3269b06250f6c80c3164cec57b",
+   "semantic-digest": "sha256:c9a4b2f6e7cb3f16e17507c6f26671549844fcd670a598c40c1406c252163326",
+   "path": "objects/set/tax-cisc-012.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/cisc-013",
+   "version": "8.1",
+   "package-digest": "sha256:e2bab3550e578a4ad1b5b7e9ed634eec87754b3451da2d660c8ee989f6d3f1c2",
+   "semantic-digest": "sha256:ec48ab360971e6d9ccbbf3ded0efe6cf18ee0c5f8024adb8fc1b45316711a86a",
+   "path": "objects/set/tax-cisc-013.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/cisc-014",
+   "version": "8.1",
+   "package-digest": "sha256:3ef603eee7363228a88a20d2012f684034ae3ec07a23c561d5f367709f42ebd3",
+   "semantic-digest": "sha256:bef1e0f53f0e7d9e5865cfc0e5207fae15854d475d00f2fba879b0bf24c2e08b",
+   "path": "objects/set/tax-cisc-014.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/cisc-015",
+   "version": "8.1",
+   "package-digest": "sha256:2263a3b61f2085b6d30deea936ae80b70b9211c68877c66de164d39226b57732",
+   "semantic-digest": "sha256:a30c2054ca4eac1205b22d3a3b367ac9ce724662e19e83cecf31729bf84aa38f",
+   "path": "objects/set/tax-cisc-015.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/cisc-016",
+   "version": "8.1",
+   "package-digest": "sha256:fc7b98156d5c1bfba8746fdd7c8a37b04031818659852dd445a2a24f88453b52",
+   "semantic-digest": "sha256:d751c30b040133806dc21d527d8d511b824a92b18264806c65dfc4b493f655ee",
+   "path": "objects/set/tax-cisc-016.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/cisc-017",
+   "version": "8.1",
+   "package-digest": "sha256:c0d384fcf5d3ec2d908d0eb1bb18dead4ae234121c46bfd61b5e9dae0e4ac2ee",
+   "semantic-digest": "sha256:f96f5cce7e28ecaeb4faf6bb16bf15d78a27746c35793deb45d514e73f8da2d9",
+   "path": "objects/set/tax-cisc-017.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/cisc-018",
+   "version": "8.1",
+   "package-digest": "sha256:50f462c8a73aa1556dca6687c6f41b1c5bb6ff6fe7a1ce525bd975e11f74bc6c",
+   "semantic-digest": "sha256:5c90c54a68b2b4e528bdb1751ba7774dd8e009fc1639ed4939aa35958bcd5ff9",
+   "path": "objects/set/tax-cisc-018.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/set/tax/root",
+   "version": "8.1",
+   "package-digest": "sha256:3b19b88c2cf8273ec34ed7328214609ef326453a3a53e695a47fd394f9df4f4f",
+   "semantic-digest": "sha256:cd1c189c1431531f36e747bf15c3d860337cbe784e58a744b8eeac939c28d376",
+   "path": "objects/set/tax-root.json"
+  }
+ ],
+ "facet-schemas": [
+  {
+   "id": "https://ns.oscal.org/stdlib/facet/assessment-criteria",
+   "exact-version": "1.0.0",
+   "digest": "sha256:19b318677f1274c0fd2d78987ab43a7eaf39f61e4b8be5d41a6581521cc03484",
+   "path": "schemas/assessment-criteria-stub.json"
+  },
+  {
+   "id": "https://ns.cisecurity.org/controls/v8/facet/narrative",
+   "exact-version": "1.0.0",
+   "digest": "sha256:d6bd81d5b2f265982754523e486a535e197fba2973c84deac817336416ad4ebf",
+   "path": "schemas/cis-narrative-stub.json"
+  }
+ ]
+}
