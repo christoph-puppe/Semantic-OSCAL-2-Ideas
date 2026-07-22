@@ -1,0 +1,72 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/STM.4.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "STM.4.1",
+ "lifecycle": "active",
+ "title": "Durchführung der Risikobetrachtung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Strukturmodellierung MUSS eine Risikobetrachtung bei durch die GS++-Methodik festgeleger Notwendigkeit ausführen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "ausführen",
+     "result": "eine Risikobetrachtung",
+     "result-specification": "bei durch die GS++-Methodik festgeleger Notwendigkeit"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Diese Anforderung beschreibt Szenarien, die einen Aussprung in eine separate Risikobetrachtung erfordern. Eine Risikobetrachtung ist insbesondere notwendig bei Geschäftsprozessen oder Assets mit hohem Schutzbedarf, bei Herabstufung des Sicherheitsniveaus (von erhöht auf normal- SdT) oder bei Nicht-Umsetzung von Anforderungen. Zuletzt ist eine Risikobetrachtung zur Ergänzung des Anforderungspakets z.B. bei Assets ohne passende Anforderungen im GS++ erforderlich."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "42cc5d6f-e4f8-4247-a8fa-f90988af02cb"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/STM.2.1.6"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/STM.3.1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/GC.7.2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/UMS.5.1"
+  }
+ ]
+}

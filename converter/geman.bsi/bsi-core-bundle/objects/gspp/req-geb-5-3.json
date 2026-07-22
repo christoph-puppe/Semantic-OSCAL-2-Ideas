@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GEB.5.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GEB.5.3",
+ "lifecycle": "active",
+ "title": "Physische Mikrosegmentierung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Gebäudemanagement für IT-Systeme KANN eine physische Mikrosegmentierung installieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "installieren",
+     "result": "eine physische Mikrosegmentierung",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Gebäudedokumentation"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.44",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.21"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Bei der physischen Mikrosegmentierung in der Sicherheitsarchitektur geht es darum, unterschiedliche physische Grenzen innerhalb gemeinsam genutzter Einrichtungen zu schaffen, um verschiedene Sicherheitsbereiche zu isolieren und zu schützen. Dies ist besonders wichtig für Umgebungen, in denen Assets mit verschiedenen Sicherheitseigenschaften nebeneinander existieren. Bei dieser Strategie werden bauliche Maßnahmen eingesetzt, wie z. B. getrennte Eingänge, dedizierte Versorgungssysteme, Fallen, abgeschottete HLK-Anlagen, physisch getrennte Netzwerkinfrastrukturen und zugangskontrollierte Zonen, um die seitliche Bewegung von Bedrohungen zu verhindern und gleichzeitig die Einhaltung von Vorschriften zu gewährleisten. Zu den üblichen Anwendungen gehören Bürogebäude mit mehreren Mietparteien, in denen verschiedene Institutionen eine Trennung benötigen, Colocation-Rechenzentren mit kundenspezifischer Geräteisolierung, gemeinsam genutzte Regierungseinrichtungen mit unterschiedlichen Klassifizierungsanforderungen und Campus-Umgebungen, in denen miteinander verbundene Gebäude unterschiedliche Sicherheitsperimeter aufrechterhalten müssen - all dies unterstützt ein umfassendes Risikomanagement und die Eindämmung von Vorfällen.  Maßnahmen können z.B. intelligenten Schlössern an Käfigtüren und Sensoren an den Seitenwänden von Serverracks sein."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "ae6ec98f-fe6f-4334-904c-9f17235c45e5"
+  }
+ ]
+}

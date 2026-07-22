@@ -1,0 +1,89 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.9.7",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.9.7",
+ "lifecycle": "active",
+ "title": "Reise- und Sicherheitshinweise",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende SOLLTE zu Reise- und Sicherheitshinweisen des Auswärtigen Amtes bei Auslandsreisen ins außereuropäische Ausland sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "zu Reise- und Sicherheitshinweisen des Auswärtigen Amtes",
+     "result-specification": "bei Auslandsreisen ins außereuropäische Ausland",
+     "target-object-categories": [
+      "Nutzende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4,
+     "tags": [
+      "Auslandsreisen",
+      "Advanced Persistent Threats (APT)"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Dies kann dazu beitragen, frühzeitig potenzielle Gefahren zu erkennen und das Verhalten an die spezifischen Risiken des Ziellandes anzupassen. Dies umfasst unter anderem Hinweise zu politischen Unruhen, Naturkatastrophen, Kriminalitätslagen oder besonderen Einreise- und Sicherheitsbestimmungen. Ohne solche Kenntnisse könnten Reisende unvorbereitet in Situationen geraten, in denen dienstliche Geräte kompromittiert werden, wenn unsichere Netzwerke genutzt werden. Ebenso könnten fehlende Kenntnisse über lokale Gesetze dazu führen, dass mitgeführte elektronische Geräte bei der Einreise beschlagnahmt oder inspiziert werden. Sinnvoll ist es, sich vor der Arbeitsreisen in das außereuropäische Ausland über aktuelle Reise- und Sicherheitshinweise beim [Auswärtigen Amt](https://www.auswaertiges-amt.de/de/reiseundsicherheit/reise-und-sicherheitshinweise) zu informieren. Ist die Nutzung von Informationen oder Assets der Institution im Ausland nicht vorgesehen (vgl. Anforderung Datenlokationen), dann ist die Anforderung entbehrlich."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "3b4e6be6-5648-468f-bc05-89191c9cdd90"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/ASST.3.10"
+  }
+ ]
+}

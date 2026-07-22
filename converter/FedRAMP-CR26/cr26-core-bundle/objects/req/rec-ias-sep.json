@@ -1,0 +1,50 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/req/REC-IAS-SEP",
+ "version": "2026.07.14.01",
+ "label": "REC-IAS-SEP",
+ "lifecycle": "active",
+ "title": "Advisory Separation",
+ "statements": [
+  {
+   "id": "s1",
+   "modality": "must-not",
+   "obligated-parties": [
+    "https://ns.fedramp.gov/cr26/party/assessors"
+   ],
+   "prose": {
+    "en": "Assessors MUST NOT perform a FedRAMP independent assessment of the same cloud service offering within 2 years after supplying advisory or consulting services for that offering, unless FedRAMP publishes a specific exception for a limited pilot or other explicitly scoped process."
+   },
+   "parameters": [
+    {
+     "name": "timeframe",
+     "type": "calendar-period",
+     "num": 2,
+     "unit": "years",
+     "tightening": "lower",
+     "calendar-ref": "https://ns.fedramp.gov/cr26/calendar/us-federal"
+    }
+   ]
+  }
+ ],
+ "relations": [
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Assessor"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Cloud Service Offering"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/FedRAMP Independent Assessment"
+  }
+ ],
+ "facets": {
+  "https://ns.fedramp.gov/cr26/facet/narrative@1": {
+   "corrective-actions": [
+    "FedRAMP may require a consultation meeting, corrective action plan, or revocation for failure to comply."
+   ]
+  }
+ }
+}

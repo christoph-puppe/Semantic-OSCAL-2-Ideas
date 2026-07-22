@@ -1,0 +1,80 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DEV.2.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DEV.2.1",
+ "lifecycle": "active",
+ "title": "Security by Design Architektur",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Entwicklung SOLLTE die Architektur nach dem Prinzip \"Security by Design\" verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "die Architektur nach dem Prinzip \"Security by Design\""
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Entwicklungsdokumentation"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.28",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.46",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Security by Design"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Unter \"Security by Design\" ist zu verstehen, dass Sicherheitsprinzipien und -mechanismen integrale Bestandteile der Architektur sind, anstatt nur nachträglich \"angeflanscht\" zu werden. Hierzu gehören Sicherheitsprinzipien wie Modularisierung, Verschlüsselung und Authentifizierung beim Entwurf der Architektur. Die Umsetzung kann durch Threat Modeling realisiert werden. Für Details siehe BSI TR-03185. Bei der Umsetzung von Security by Design empfiehlt sich auch ein Blick in die Praktik Konfiguration, spezifisch die Anforderungen zu Verschlüsselung, Authentifizierung, etc."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "c16e1dd2-8fa8-43db-83e9-32c6efd86d8e"
+  }
+ ]
+}

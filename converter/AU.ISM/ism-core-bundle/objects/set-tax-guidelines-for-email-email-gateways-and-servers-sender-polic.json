@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-gateways-and-servers-sender-polic",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Sender Policy Framework",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0574",
+   "sequence": 13210
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1183",
+   "sequence": 13220
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1151",
+   "sequence": 13230
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Sender Policy Framework",
+     "name": "overview",
+     "prose": "SPF aids in the detection of spoofed emails by specifying a list of hosts or Internet Protocol (IP) addresses that are allowed to send emails on behalf of a specified domain or subdomain. If an email server is not in the SPF record for a domain or subdomain, SPF verification will not pass. In specifying SPF records, domain owners should ensure that they delegate the minimum necessary set of hosts or IP addresses necessary for sending emails. In addition, extra care should be taken when delegating to hosts or IP addresses not under an organisation’s control."
+    }
+   ]
+  }
+ }
+}

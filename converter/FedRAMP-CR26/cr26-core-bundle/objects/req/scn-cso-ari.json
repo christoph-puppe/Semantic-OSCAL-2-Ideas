@@ -1,0 +1,34 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/req/SCN-CSO-ARI",
+ "version": "2026.07.14.01",
+ "label": "SCN-CSO-ARI",
+ "lifecycle": "active",
+ "title": "Additional Relevant Information",
+ "statements": [
+  {
+   "id": "s1",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.fedramp.gov/cr26/party/providers"
+   ],
+   "prose": {
+    "en": "Providers MAY include additional relevant information in Significant Change Notifications."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Provider"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Significant Change"
+  }
+ ],
+ "facets": {
+  "https://ns.fedramp.gov/cr26/facet/narrative@1": {
+   "note": "This allows providers to convey whatever additional information they think is relevant without worrying about negative consequences from not following an exact template."
+  }
+ }
+}

@@ -1,0 +1,93 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GEB.9.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GEB.9.2",
+ "lifecycle": "active",
+ "title": "Lasttest",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Gebäudemanagement für Standorte KANN die Belastbarkeit der Stromversorgung {param:geb.9.2-prm1} überprüfen."
+   },
+   "parameters": [
+    {
+     "name": "geb.9.2-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überprüfen",
+     "result": "die Belastbarkeit der Stromversorgung",
+     "result-specification": "{{regelmäßig}}",
+     "target-object-categories": [
+      "Standorte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Übungs- und Prüfplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Maßnahmen richten sich nach den geltenden Anforderungen an die Stromversorgung. Beispiele sind ein monatlicher USV-Selbsttest oder ein halbjährlicher Volllastbetrieb des Generators für mindestens 30 Minuten."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "geb.9.2-prm1": {
+     "label": "regelmäßig",
+     "alt-identifier": "56b79b13-09ed-4d7a-adea-bc8cb2cf97dd"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "56b79b13-09ed-4d7a-adea-bc8cb2cf97dd"
+  }
+ ]
+}

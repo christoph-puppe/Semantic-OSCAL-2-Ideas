@@ -1,0 +1,77 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/RISK.1.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "RISK.1.1",
+ "lifecycle": "active",
+ "title": "Methodik für das Risikomanagement",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Risikomanagement MUSS einheitliche Methoden nach {param:risk.1.1-prm1} verankern."
+   },
+   "parameters": [
+    {
+     "name": "risk.1.1-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "einheitliche Methoden",
+     "result-specification": "nach {{einem anerkannten Standard}}"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Richtlinie zur Risikoanalyse"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Anforderungen-zum-Risikomanagement",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Diese Methoden müssen den Kontext der Institution und die Anforderungen interessierter Parteien sowie die hieraus abgeleiteten Ziele berücksichtigen. Die Methoden können frei gewählt werden."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "risk.1.1-prm1": {
+     "label": "einem anerkannten Standard",
+     "alt-identifier": "b6f7870d-6113-4039-974b-df571540c2f3"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "b6f7870d-6113-4039-974b-df571540c2f3"
+  }
+ ]
+}

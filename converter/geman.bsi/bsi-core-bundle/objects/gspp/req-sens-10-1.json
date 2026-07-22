@@ -1,0 +1,83 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.10.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.10.1",
+ "lifecycle": "active",
+ "title": "Grundprinzipien der Systemadministration",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Administrierende SOLLTE zu den Grundprinzipien der sicheren Administration sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "zu den Grundprinzipien der sicheren Administration",
+     "target-object-categories": [
+      "Administrierende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.31",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Advanced Persistent Threats (APT)"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Administriende sind durch ihre weitreichenden Zugangs- und Zugriffsberechtigungen, sowie ihre Verantwortung für die Aufrechterhaltung der Infrastruktur von besonderer Bedeutung für die Informations- und Cybersicherheit. Hier bedeutet „sichere Administration“, dass administrative Tätigkeiten so gestaltet werden, dass Vertraulichkeit, Integrität und Verfügbarkeit der Systeme möglichst gewahrt bleiben. Dazu zählen etwa Zugriffskontrolle und Rechtevergabe nach dem Least-Privilege-Prinzip, Netzwerksegmentierung, Systemhärtung, Loganalyse, Datensicherungen und Monitoring sowie die Vorbereitung für Notfälle. Um dies sicherzustellen ist es wichtig, die festgelegten Regeln (z.B. IT-Betriebskonzept) zu kennen und  auf deren Einhaltung zu achten."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "27a41327-328d-4213-a39b-fe549f241921"
+  }
+ ]
+}

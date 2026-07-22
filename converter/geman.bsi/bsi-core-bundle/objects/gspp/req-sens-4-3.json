@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.4.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.4.3",
+ "lifecycle": "active",
+ "title": "Abmelden nach Nutzung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende SOLLTE zum Abmelden nach Nutzung sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "zum Abmelden",
+     "result-specification": "nach Nutzung",
+     "target-object-categories": [
+      "Nutzende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.36",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Bleibt eine Sitzung unbeaufsichtigt angemeldet, könnte dies ausgenutzt werden, um Daten zu manipulieren, zu kopieren oder unbemerkt schädliche Aktionen auszuführen. Ein solches Risiko könnte z.B. in offenen Büroflächen, gemeinsam genutzten Arbeitsplätzen oder bei externen Einsätzen entstehen, etwa wenn jemand kurz den Platz verlässt und ein Dritter die Gelegenheit nutzt, um sensible Unterlagen herunterzuladen oder interne Kommunikationskanäle zu durchsuchen. Dies beinhaltet auch die Sperrung des genutzten IT-Systems nach Nutzung. „Abmelden“ bedeutet in diesem Kontext das gezielte Beenden einer aktiven Benutzeranmeldung – etwa durch Ausloggen aus einer Anwendung, Sperren des Betriebssystems oder Abmelden von einem Fernzugriff –, sodass keine offenen Berechtigungen mehr genutzt werden können. Technische Hinweise wie Tastenkombinationen zum schnellen Sperren des Bildschirms oder kurze Anleitungen für den Logout-Prozess in wichtigen Fachanwendungen können in der Nähe von Arbeitsplätzen, auf Intranetseiten oder in E-Learning-Modulen platziert werden, um die Erinnerung daran wachzuhalten."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "53963d32-edfa-47d4-99ef-1fcb41f00aa8"
+  }
+ ]
+}

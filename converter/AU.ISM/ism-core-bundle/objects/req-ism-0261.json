@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-0261",
+ "version": "2026.06.18",
+ "label": "ISM-0261",
+ "lifecycle": "active",
+ "title": "Control: ism-0261",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "The following details are centrally logged for websites accessed via web proxies:\n\n- web address\n- date and time\n- user\n- amount of data uploaded and downloaded\n- internal and external IP addresses."
+   }
+  }
+ ]
+}

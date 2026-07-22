@@ -1,0 +1,82 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.6.9",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.6.9",
+ "lifecycle": "active",
+ "title": "Zugriff auf Code",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für Webserver SOLLTE den Zugriff auf Quelldateien einschränken."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "einschränken",
+     "result": "den Zugriff auf Quelldateien",
+     "target-object-categories": [
+      "Webserver"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "0",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.22"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Produktbeschreibung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Quelldateien sind in diesem Zusammenhang alle Dateien, die zur Funktionsweise einer Webanwendung benötigt werden, deren Auslieferung an den Browser von Nutzenden aber nicht erforderlich ist. Dazu gehören Programmier- oder Skriptcode, Konfigurationsdateien, Datenbankverbindungen und sensible Daten wie APIs oder Anmeldeinformationen. Das Verhindern des direkten Zugriffs auf diese Dateien dient der Prävention von Informationslecks und der Minderung des Risikos unautorisierter Offenlegung. Eine nicht restriktive Konfiguration könnte beispielsweise die Offenlegung von Code-Teilen, die Logik der Anwendung oder sogar hartkodierten Passwörtern ermöglichen, was zu einer weitreichenden Kompromittierung des Systems führen könnte. Die Umsetzung kann durch platzieren dieser Dateien außerhalb des WWW-Wurzelverzeichnisses erfolgen. Weiterhin kann der Zugriff auf bestimmte Dateitypen wie .php, .ini, .env oder .sql mittels Webserver-Regeln (z.B. in .htaccess für Apache oder location-Blöcke in Nginx) explizit verweigert werden, wodurch auch versehentlich im öffentlichen Verzeichnis abgelegte Quelldateien geschützt sind. Bei der Wahl eines Content-Management-Systems oder Frameworks kann eine sichere Standardkonfiguration die Umsetzung erleichtern. Zusätzlich können serverseitige Skripte so konfiguriert werden, dass sie nur aus vordefinierten, sicheren Verzeichnissen ausgeführt werden dürfen, was als Secure Execution Path bekannt ist."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "c6624f60-f990-4900-84ef-747d5a6e81c6"
+  }
+ ]
+}

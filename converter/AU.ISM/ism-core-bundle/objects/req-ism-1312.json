@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-1312",
+ "version": "2026.06.18",
+ "label": "ISM-1312",
+ "lifecycle": "active",
+ "title": "Control: ism-1312",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "All default SNMP community strings on network devices are changed and write access is disabled."
+   }
+  }
+ ]
+}

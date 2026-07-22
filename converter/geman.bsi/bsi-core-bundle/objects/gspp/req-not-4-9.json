@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/NOT.4.9",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "NOT.4.9",
+ "lifecycle": "active",
+ "title": "Speichermedien",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Notfallplanung SOLLTE dedizierte Speichermedien, die für den festgelegten Aufbewahrungszeitraum geeignet sind, installieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "installieren",
+     "result": "dedizierte Speichermedien,",
+     "result-specification": "die für den festgelegten Aufbewahrungszeitraum geeignet sind,"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Datensicherungskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.45",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.39",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Dedizierte Speichermedien (engl. dedicated storage media) sind physische oder virtuelle Datenträger, die ausschließlich für Sicherungs- oder Wiederherstellungszwecke genutzt werden und nicht mit produktiven Systemen vermischt sind. Der festgelegte Aufbewahrungszeitraum (engl. retention period) bezeichnet den Zeitraum, in dem gespeicherte Sicherungen oder Kopien revisionssicher und lesbar verfügbar bleiben sollen, beispielsweise mehrere Monate für kurzfristige Recovery-Szenarien oder mehrere Jahre zur Abdeckung regulatorischer Anforderungen. Die Vorschrift zielt darauf ab, dass im Notfall tatsächlich auf funktionierende und vollständige Sicherungen zurückgegriffen werden kann; sie adressiert Risiken wie, dass Daten im Ernstfall durch unzuverlässige oder beschädigte Medien unbrauchbar sein könnten, oder dass durch unzureichende Haltbarkeit von Speichermedien eine Wiederherstellung scheitern könnte. Je nach Zeitraum und Platzbedarf bieten sich z.B. solider Festspeicher, Festplatten, Magnetbänder oder Cloudspeicher an. Bei der Nutzung von Cloudspeichern sind allerdings auch die zusätzlichen Anforderungen an Cloud-Dienste zu berücksichtigen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "10c6fc65-f0f6-4ed2-9f47-65458aeb1e51"
+  }
+ ]
+}

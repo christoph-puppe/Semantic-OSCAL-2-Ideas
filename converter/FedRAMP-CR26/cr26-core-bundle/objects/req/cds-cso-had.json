@@ -1,0 +1,55 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/req/CDS-CSO-HAD",
+ "version": "2026.07.14.01",
+ "label": "CDS-CSO-HAD",
+ "lifecycle": "active",
+ "title": "Historical FedRAMP Certification Data",
+ "statements": [
+  {
+   "id": "s1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.fedramp.gov/cr26/party/providers"
+   ],
+   "prose": {
+    "en": "Providers MUST supply snapshots of FedRAMP Certification Data aligned to Ongoing Certification Reports to all necessary parties; these snapshots MUST be available for the duration of FedRAMP Certification."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/All Necessary Parties"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Certification Data"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/FedRAMP Certification Report"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Ongoing Certification"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Ongoing Certification Report (OCR)"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Provider"
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "required-artifacts": [
+    "Explanation of how to access this information."
+   ]
+  },
+  "https://ns.fedramp.gov/cr26/facet/narrative@1": {
+   "note": "Historical snapshots do not need to be reconstructed for periods before the provider's first Ongoing Certification Report, but should be maintained for all subsequent Ongoing Certification Reports."
+  }
+ }
+}

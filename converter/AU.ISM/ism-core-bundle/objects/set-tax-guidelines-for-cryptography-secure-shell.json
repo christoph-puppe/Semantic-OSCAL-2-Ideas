@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-secure-shell",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Secure Shell",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-secure-shell-configuring-secure-",
+   "sequence": 15410
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-secure-shell-authentication-mech",
+   "sequence": 15440
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-secure-shell-automated-remote-ac",
+   "sequence": 15470
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-secure-shell-ssh-agent",
+   "sequence": 15490
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Secure Shell",
+     "name": "overview",
+     "prose": "# Using Secure Shell\n\nWhen using IT equipment or applications that implement SSH, controls for using AACAs and AACPs in the ‘Cryptographic algorithms’ and ‘Cryptographic protocols’ sections of these guidelines will also need to be consulted.\n\n# Further information\n\nFurther information on [configuring OpenSSH](#f832363c-d81e-4908-afd9-cf45047dd19c) is available from the OpenSSH project."
+    }
+   ]
+  }
+ }
+}

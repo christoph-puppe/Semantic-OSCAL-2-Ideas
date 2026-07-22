@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-management-system-administration-separ",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Separate privileged operating environments",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1898",
+   "sequence": 10120
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1380",
+   "sequence": 10130
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1687",
+   "sequence": 10140
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1688",
+   "sequence": 10150
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1689",
+   "sequence": 10160
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1958",
+   "sequence": 10170
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Separate privileged operating environments",
+     "name": "overview",
+     "prose": "One of the greatest threats to the security of networks is the compromise of privileged user accounts. Providing a separate privileged operating environment for system administrators, in addition to their unprivileged operating environment, makes it much harder for administrative activities and privileged user accounts to be compromised by malicious actors.\n\nUsing different physical workstations, with one being a dedicated Secure Admin Workstation, is the most secure approach to separating privileged and unprivileged operating environments for system administrators. However, a trusted and hardened virtualisation-based solution may be sufficient for separating privileged and unprivileged operating environments on the same Secure Admin Workstation. In such cases, privileged operating environments should not be virtualised within unprivileged operating environments."
+    }
+   ]
+  }
+ }
+}

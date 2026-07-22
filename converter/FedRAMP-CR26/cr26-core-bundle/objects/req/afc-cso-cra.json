@@ -1,0 +1,34 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/req/AFC-CSO-CRA",
+ "version": "2026.07.14.01",
+ "label": "AFC-CSO-CRA",
+ "lifecycle": "active",
+ "title": "Complete Required Actions",
+ "statements": [
+  {
+   "id": "s1",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.fedramp.gov/cr26/party/providers"
+   ],
+   "prose": {
+    "en": "Providers MUST complete the required actions in Emergency or Emergency Test designated messages sent by FedRAMP within the timeframe included in the message."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Certification Class"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Provider"
+  }
+ ],
+ "facets": {
+  "https://ns.fedramp.gov/cr26/facet/narrative@1": {
+   "note": "Timeframes may vary by FedRAMP Certification class."
+  }
+ }
+}

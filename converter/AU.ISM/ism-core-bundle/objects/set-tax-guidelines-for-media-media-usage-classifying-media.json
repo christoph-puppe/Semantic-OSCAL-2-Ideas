@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-media-media-usage-classifying-media",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Classifying media",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0323",
+   "sequence": 6480
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0337",
+   "sequence": 6490
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Classifying media",
+     "name": "overview",
+     "prose": "Media that is not correctly classified could be stored and handled inappropriately, accessed by personnel who do not have an appropriate security clearance or used with systems it is not authorised to be used with."
+    }
+   ]
+  }
+ }
+}

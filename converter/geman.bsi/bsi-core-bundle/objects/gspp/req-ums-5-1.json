@@ -1,0 +1,74 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/UMS.5.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "UMS.5.1",
+ "lifecycle": "active",
+ "title": "Autorisierung von Ausnahmen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Umsetzung MUSS Ausnahmegenehmigungen für Verpflichtungen durch {param:ums.5.1-prm1} autorisieren."
+   },
+   "parameters": [
+    {
+     "name": "ums.5.1-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "autorisieren",
+     "result": "Ausnahmegenehmigungen für Verpflichtungen",
+     "result-specification": "durch {{eine zuständige Person oder Rolle}}"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Bei Zielkonflikten zwischen Verpflichtungen müssen diese gegeneinander abgewogen und falls erforderlich Ausnahmegenehmigungen von der zuständigen Person oder Rolle eingeholt werden. Zur Entscheidungsfindung kann eine Risikobetrachtung vorgenommen werden. Es ist zu prüfen ob die Nicht-Umsetzung von Anforderungen zur Erforderlichkeit einer Risikobetrachtung führt, siehe verwandte Anforderung."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "ums.5.1-prm1": {
+     "label": "eine zuständige Person oder Rolle",
+     "alt-identifier": "c3e9f936-827a-4af2-a750-0777a082477d"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "c3e9f936-827a-4af2-a750-0777a082477d"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/STM.4.1"
+  }
+ ]
+}

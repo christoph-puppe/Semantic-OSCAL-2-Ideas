@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/cyber-security-principles-the-cyber-security-principles",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "The cyber security principles",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/cyber-security-principles-the-cyber-security-principles-gove",
+   "sequence": 150
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/cyber-security-principles-the-cyber-security-principles-iden",
+   "sequence": 220
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/cyber-security-principles-the-cyber-security-principles-prot",
+   "sequence": 400
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/cyber-security-principles-the-cyber-security-principles-dete",
+   "sequence": 460
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/cyber-security-principles-the-cyber-security-principles-resp",
+   "sequence": 520
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/cyber-security-principles-the-cyber-security-principles-reco",
+   "sequence": 550
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "The cyber security principles",
+     "name": "overview",
+     "prose": "# Purpose of the cyber security principles\n\nThe purpose of the cyber security principles is to provide strategic guidance on how an organisation can protect their information technology and operational technology systems from cyber threats. These cyber security principles are grouped into six functions:\n\n- **Govern:** Develop and maintain a strong and resilient cyber security culture.\n- **Identify:** Identify assets and associated security risks.\n- **Protect:** Implement and maintain controls to manage security risks.\n- **Detect:** Detect and analyse cyber security events to identify cyber security incidents.\n- **Respond:** Respond to cyber security incidents.\n- **Recover:** Resume normal business operations following cyber security incidents.\n\n# Implementing the cyber security principles\n\nWithin each function, the cyber security principles are listed in a logical sequence that reflects how they should be considered for implementation. The numbers used for the cyber security principles are identifiers only and do not indicate an implementation order.\n\nWhen implementing the cyber security principles, each cyber security principle should be supported by administrative and technical controls proportionate to an organisation’s size, complexity, operating environment and risk profile. These controls should be subject to ongoing risk-based monitoring and assurance activities. Where the term ‘systems’ is used, the elements listed in brackets define the scope of that cyber security principle.\n\nOverall, the cyber security principles are interdependent and must be implemented collectively to achieve comprehensive cyber security outcomes."
+    }
+   ]
+  }
+ }
+}

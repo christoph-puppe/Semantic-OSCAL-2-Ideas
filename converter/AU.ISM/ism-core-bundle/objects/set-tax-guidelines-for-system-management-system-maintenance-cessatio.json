@@ -1,0 +1,51 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-management-system-maintenance-cessatio",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Cessation of support",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1905",
+   "sequence": 10510
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1704",
+   "sequence": 10520
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0304",
+   "sequence": 10530
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1501",
+   "sequence": 10540
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1753",
+   "sequence": 10550
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1981",
+   "sequence": 10560
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1982",
+   "sequence": 10570
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1809",
+   "sequence": 10580
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Cessation of support",
+     "name": "overview",
+     "prose": "When applications, operating systems, network devices and networked IT equipment reach their cessation date for support, and become legacy IT, an organisation will find it increasingly difficult to protect them against vulnerabilities as patches, updates and other forms of support will no longer be made available by vendors. As such, unsupported applications, operating systems, network devices and networked IT equipment should be removed or replaced.\n\nIn planning for cessation of support, it is important to note that while vendors generally advise the cessation date for support of operating systems well in advance, some applications, network devices and networked IT equipment may cease to receive support immediately after newer versions are released.\n\nFinally, when the immediate removal or replacement of unsupported applications, operating systems, network devices or networked IT equipment is not possible, compensating controls should be implemented until such time that they can be removed or replaced."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-0551",
+ "version": "2026.06.18",
+ "label": "ISM-0551",
+ "lifecycle": "active",
+ "title": "Control: ism-0551",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "IP telephony is configured such that:\n\n- IP phones authenticate themselves to the call controller upon registration\n- auto-registration is disabled and only authorised devices are allowed to access the network\n- unauthorised devices are blocked by default\n- all unused and prohibited functionality is disabled."
+   }
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/set/ksi/cmt",
+ "version": "2026.07.14.01",
+ "lifecycle": "active",
+ "title": "Change Management",
+ "label": "CMT",
+ "annotations": {
+  "web_name": "change-management"
+ },
+ "members": [
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-CMT-LMC",
+   "sequence": 3100
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-CMT-RMV",
+   "sequence": 3110
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-CMT-RVP",
+   "sequence": 3120
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-CMT-VTD",
+   "sequence": 3130
+  }
+ ]
+}

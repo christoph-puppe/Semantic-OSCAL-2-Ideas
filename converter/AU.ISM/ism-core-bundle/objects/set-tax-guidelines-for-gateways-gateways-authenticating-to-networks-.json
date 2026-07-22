@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-gateways-gateways-authenticating-to-networks-",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Authenticating to networks accessed via gateways",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0619",
+   "sequence": 15900
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0622",
+   "sequence": 15910
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Authenticating to networks accessed via gateways",
+     "name": "overview",
+     "prose": "Ensuring users and information technology (IT) equipment are authenticated to other networks accessed via gateways can reduce the likelihood of unauthorised access."
+    }
+   ]
+  }
+ }
+}

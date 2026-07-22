@@ -1,0 +1,97 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.12.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.12.4",
+ "lifecycle": "active",
+ "title": "Speicherung von Zugangsdaten",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für Webbrowser SOLLTE die Speicherung von Zugangsdaten {param:konf.12.4-prm1} aktivieren."
+   },
+   "parameters": [
+    {
+     "name": "konf.12.4-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "aktivieren",
+     "result": "die Speicherung von Zugangsdaten {{in einem dedizierten Passwort-Manager mit Browser-Integration oder direkt im Browser durch ein Master-Passwort geschützt}}",
+     "target-object-categories": [
+      "Webbrowser"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Produktbeschreibung",
+      "Cryptography"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Werden Zugangsdaten gespeichert, so könnten Angreifer diese auslesen und missbrauchen. Daher ist es wichtig, Vertraulichkeit und Integrität sensibler Anmeldedaten zu gewährleisten. Durch die Nutzung einer geprüften Browser‑Extension kann sichergestellt werden, dass Passwörter nur in einem verschlüsselten Vault abgelegt werden, der zentral verwaltet oder versioniert wird. Ein starkes Master‑Passwort kann als Schlüssel dienen, sodass selbst bei Verlust des Geräts oder unautorisiertem Zugriff auf die lokale Datenbank die Daten ohne Kenntnis dieses Passworts nicht lesbar sind. Wird die Funktion komplett deaktiviert, kann das Risiko unkontrollierter Speicherung oder unsicherer Autovervollständigung minimiert werden – der Anwender kann sich stattdessen etwa auf einen externen Manager oder eine Single‑Sign‑On‑Lösung verlassen. Konkret kann dies in der Praxis auf verschiedene Weisen aussehen: So kann eine Institution über Gruppenrichtlinien festlegen, dass nur eine offiziell freigegebene Extension (etwa einer Open‑Source‑Lösung oder eines kommerziellen Anbieters) installiert werden darf. Alternativ lassen sich browserinterne Passwort‑Speicher mit einem Master‑Passwort verschlüsseln – denkbar ist hier sowohl die Nutzung integrierter Funktionen von Browsern mit zuverlässiger Krypto‑Engine als auch externer Tools wie plattformübergreifende Passwort‑Manager, die eine Browser‑Anbindung per Plugin bieten. In Szenarien mit besonders hohen Sicherheitsanforderungen kann die Speicherung ganz deaktiviert werden, etwa indem das entsprechende Feature per Policy abgeschaltet wird und Nutzer gezielt mit einem eigenständigen, von der Institution kontrollierten Tool arbeiten. Für die Umsetzung bietet es sich an, zunächst eine klare Richtlinie zu formulieren, die alle Mitarbeitenden über die zugelassenen Speicherwege informiert und gleichzeitig erklärt, warum unautorisierte Methoden unerwünscht sein können. IT‑Administratoren können über zentrale Management‑Werkzeuge (GPOs, MDM‑Systeme) die Installation autorisierter Extensions automatisieren und unerwünschte Funktionen deaktivieren. Es kann hilfreich sein, standardisierte Vorlagen für sichere Master‑Passwörter zu kommunizieren und regelmäßige Schulungen anzubieten, in denen der Umgang mit dem Passwort‑Manager, das Prüfen der Passwortstärke und das Einspielen von Updates erklärt werden. Schließlich kann eine optionale Passwort‑Auditing‑Funktion im Manager eingesetzt werden, mit der Nutzer Schwachstellen in ihren Passwörtern erkennen und verbessern können – so bleibt die gesamte Passwortlandschaft im Unternehmen übersichtlich und sicher."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "konf.12.4-prm1": {
+     "label": "in einem dedizierten Passwort-Manager mit Browser-Integration oder direkt im Browser durch ein Master-Passwort geschützt",
+     "alt-identifier": "93d5129d-c905-439f-b7cf-2ddcd92fac5a"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "93d5129d-c905-439f-b7cf-2ddcd92fac5a"
+  }
+ ]
+}

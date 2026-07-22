@@ -1,0 +1,95 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.5.5",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.5.5",
+ "lifecycle": "active",
+ "title": "Löschfristen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende SOLLTE zum Löschen oder Vernichten nach Ablauf der festgelegten Löschfristen anweisen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "anweisen",
+     "result": "zum Löschen oder Vernichten",
+     "result-specification": "nach Ablauf der festgelegten Löschfristen",
+     "target-object-categories": [
+      "Nutzende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.38",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.45",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.22"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Password Policy"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Werden sensible Informationen über die erforderliche Dauer hinaus gespeichert, könnte die Institution unnötigen Haftungsrisiken ausgesetzt sein – beispielsweise könnte eine Datenschutzbehörde Bußgelder verhängen, wenn personenbezogene Daten entgegen gesetzlicher Vorgaben zu lange vorgehalten werden. Darüber hinaus könnten nicht rechtzeitig gelöschte Geschäftsgeheimnisse oder Kundendaten bei einem Sicherheitsvorfall in falsche Hände geraten, was zu Reputationsschäden, Vertrauensverlust bei Kunden oder sogar zu Wirtschaftsspionage führen kann. Dies ist insbesondere wichtig bei sensiblen Daten wie Passwörtern im Passwortmanager oder Bankzugangsdaten in einer Kundendatenbank. Relevant ist dabei auch das Verständnis dafür, welche Löschfristen für welche Kategorien von Informationen konkret festgelegt sind und wie die Löschung oder Vernichtung vorzunehmen ist. Zu Details der Vorgehensweise siehe auch Praktik \"Informations- und Assetmanagement\". Dies gilt auch für den Umgang mit physischen Medien und auch an anderen Standorten, wie z.B. am Mobilen Arbeitsplatz."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "7aed1f72-5233-44dd-8531-b23337c89691"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/ASST.7.2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/ASST.7.3"
+  }
+ ]
+}

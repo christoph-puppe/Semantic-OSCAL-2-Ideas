@@ -1,0 +1,88 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.7.5",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.7.5",
+ "lifecycle": "active",
+ "title": "Alarmierung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für IT-Systeme SOLLTE eine Benachrichtigung bei potenziellem Schadcode aktivieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "aktivieren",
+     "result": "eine Benachrichtigung bei potenziellem Schadcode",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.39",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Produktbeschreibung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Durch die Aktivierung einer Benachrichtigung kann eine Institution schnell auf verdächtige Aktivitäten reagieren, noch bevor sich der Schadcode vollständig im System etablieren und erheblichen Schaden anrichten könnte. Eine Möglichkeit zur Umsetzung ist der Einsatz von Endpoint Detection and Response (EDR)-Lösungen, die in der Lage sind, Verhaltensanomalien in Echtzeit zu erkennen und sofortige Benachrichtigungen auszulösen. Eine effektive Umsetzung erfordert, dass die Benachrichtigungen sowohl an die Endnutzer als auch an die zuständigen IT-Sicherheitsteams gesendet werden, um eine umfassende und koordinierte Reaktion zu ermöglichen. Dabei können Automatisierungsregeln im Security Information and Event Management (SIEM) die Benachrichtigungen an die richtigen Personen eskalieren und so die Reaktionszeit verkürzen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "a0afaca3-947c-4b5b-8bc0-c29f623075e0"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/DET.4.2"
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-systems-telephone-systems",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Telephone systems",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-systems-telephone-systems-tele",
+   "sequence": 4350
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-systems-telephone-systems-pers",
+   "sequence": 4390
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-systems-telephone-systems-prot",
+   "sequence": 4410
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-systems-telephone-systems-cord",
+   "sequence": 4430
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-systems-telephone-systems-spea",
+   "sequence": 4450
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-systems-telephone-systems-off-",
+   "sequence": 4480
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Telephone systems",
+     "name": "overview",
+     "prose": "# Further information\n\nFurther information on encrypting communications can be found in the ‘Cryptographic fundamentals’ section of the [Guidelines for cryptography](#195abe87-bb1e-4006-8b42-eaecca4d51f1)."
+    }
+   ]
+  }
+ }
+}

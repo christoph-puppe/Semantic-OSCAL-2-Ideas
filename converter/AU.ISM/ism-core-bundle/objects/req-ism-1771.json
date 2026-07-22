@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-1771",
+ "version": "2026.06.18",
+ "label": "ISM-1771",
+ "lifecycle": "active",
+ "title": "Control: ism-1771",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "AES is used for encrypting IPsec connections, preferably ENCR_AES_GCM_16."
+   }
+  }
+ ]
+}

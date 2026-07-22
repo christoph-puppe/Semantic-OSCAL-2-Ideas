@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.4.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.4.2",
+ "lifecycle": "active",
+ "title": "Vertraulichkeit und Integrität beim Transport",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets für Daten SOLLTE Vertraulichkeit und Integrität beim Transport verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "Vertraulichkeit und Integrität beim Transport",
+     "target-object-categories": [
+      "Daten"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.43",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.15"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Transport meint hier sowohl die Datenübertragung per Netz als auch auf physischen Datenträgern (Sneakernet) oder den physischen Transport ganzer Systeme. Zur Umsetzung kann z.B. in Netzen die Transportverschlüsselung und -signierung von E-Mails, Ende-zu-Ende-Verschlüsselung mit PGP genutzt werden. Beim physischen Transport können die vorherige Verschlüsselung von Speichermedien, die Verwahrung von Assets an der Person, Verwahrungsprotokolle, manipulationssichere Verpackungen, Geolocation Tracking oder vertrauenswürdige Kuriere genutzt werden. Die Auswahl der Maßnahmen richtet sich nach dem Schutzbedarf der ausgetauschten Informationen und der Transportart."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "5ac7299f-708d-4a07-886f-1dd1228526c7"
+  }
+ ]
+}

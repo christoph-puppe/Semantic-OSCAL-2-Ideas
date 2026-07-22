@@ -1,0 +1,84 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.1.6",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.1.6",
+ "lifecycle": "active",
+ "title": "Dokumentation des Bereitstellungsmodells",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Cloud-Dienste SOLLTE für jeden Cloud-Dienst das gewünschte Bereitstellungsmodell mit Ausführung der geteilten Verantwortlichkeiten dokumentieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "dokumentieren",
+     "result": "für jeden Cloud-Dienst das gewünschte Bereitstellungsmodell",
+     "result-specification": "mit Ausführung der geteilten Verantwortlichkeiten",
+     "target-object-categories": [
+      "Cloud-Dienste"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Beschaffungskriterien"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.37"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Lieferketten",
+      "Shared Responsibility Model"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Hiermit ist die bewusste Entscheidung für ein Modell und die konzeptionelle Umsetzung (\"Shared Responsibility\") dieser Entscheidung gemeint. Bereitstellungsmodelle sind z.B.: Public Cloud, Private Cloud, Community Cloud, Hybrid Cloud. Es kann in der Praxis aber zu dadurch nicht abgedeckten Varianten, wie z. B. \"Virtual Private Cloud\" kommen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "43e11ef1-4161-444d-ba0d-0fed61d31dd8"
+  }
+ ]
+}

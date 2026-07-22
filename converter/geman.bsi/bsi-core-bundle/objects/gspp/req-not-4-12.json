@@ -1,0 +1,75 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/NOT.4.12",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "NOT.4.12",
+ "lifecycle": "active",
+ "title": "Georedundanz",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Notfallplanung KANN die georedundante Aufbewahrung mindestens einer Kopie der Datensicherung verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "die georedundante Aufbewahrung mindestens einer Kopie der Datensicherung"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Datensicherungskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.39"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Werden Datensicherungen in der Nähe von Originaldaten aufbewahrt, so könnten beide von Elementaren Gefährdungen wie Überflutungen betroffen sein. Georedundant bedeutet in der Regel 200km Luftlinie oder mehr von den Originaldaten entfernt. Details siehe BSI Kriterien für die Standortwahl von Rechenzentren. Die Anforderung kann auch durch die gegenseitige Aufbewahrung in georedundanten Rechenzentren erfüllt werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "d0538604-ab92-44f7-a018-a1b32195bc22"
+  }
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-1689",
+ "version": "2026.06.18",
+ "label": "ISM-1689",
+ "lifecycle": "active",
+ "title": "Control: ism-1689",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Privileged user accounts (excluding local administrator accounts) cannot logon to unprivileged operating environments."
+   }
+  }
+ ]
+}

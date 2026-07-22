@@ -1,0 +1,96 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GEB.8.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GEB.8.3",
+ "lifecycle": "active",
+ "title": "Schutz der Datenträger vor Brandschäden",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Gebäudemanagement für Standorte KANN feuerfeste Behältnisse nach {param:geb.8.3-prm1} installieren."
+   },
+   "parameters": [
+    {
+     "name": "geb.8.3-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "installieren",
+     "result": "feuerfeste Behältnisse",
+     "result-specification": "nach {{einem anerkannten Standard}}",
+     "target-object-categories": [
+      "Standorte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Gebäudedokumentation"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5,
+     "tags": [
+      "Langzeitarchivierung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Datenträgerarchive sind bei Bränden besonders schützenswert, da hier häufig die langzeitig kritischen Daten gelagert werden. Kann durch Brandschutzschränke oder Datensafes umgesetzt werden, die nach DIN EN 1047-1 oder ISO 11799 zertifiziert sind."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "geb.8.3-prm1": {
+     "label": "einem anerkannten Standard",
+     "alt-identifier": "7fa6a340-5f12-41a3-b9df-a44dfcc6e0be"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "7fa6a340-5f12-41a3-b9df-a44dfcc6e0be"
+  }
+ ]
+}

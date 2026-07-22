@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.11.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.11.3",
+ "lifecycle": "active",
+ "title": "Whaling",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Führungskräfte SOLLTE gegen gezielte Angriffe auf Führungskräfte sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "gegen gezielte Angriffe auf Führungskräfte",
+     "target-object-categories": [
+      "Führungskräfte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "0",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.42"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 1,
+     "tags": [
+      "Advanced Persistent Threats (APT)"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Gezielte Angriffe auf Führungskräfte, auch Whaling genannt, sind eine besondere Form des Social Engineering, bei der Täter sehr spezifisch auf leitende Personen einer Institution abzielen. Im Gegensatz zu herkömmlichem Phishing sind diese Angriffe stark personalisiert, häufig inhaltlich gut recherchiert und auf die Entscheidungsbefugnisse und den Einfluss der Führungsperson zugeschnitten. Die Täter setzen dabei häufig auf die jeweilige Situation zugeschnittene Social Engineering Techniken wie Spear Phishing (z.B. anhand von Angaben in sozialen Netzwerken), CEO-Fraud oder Deepfakes ein. Ein Vorfall könnte z.B. dazu führen, dass ein CFO durch eine täuschend echte E-Mail zur Freigabe von Überweisungen verleitet wird oder Aktivisten sich eine Videokonferenz mit bekannten Persönlichkeiten erschleichen, um diese bloßzustellen. Zur Verringerung des Risikos können konkrete Hinweise im Alltag beachtet werden: (1) Besonders aufmerksam sollte auf Nachrichten reagiert werden, die Dringlichkeit betonen, ungewöhnliche Geldtransfers verlangen oder auf streng vertrauliche Projekte Bezug nehmen. (2) Absenderadressen sollten sorgfältig geprüft werden – bereits kleine Abweichungen in Domainnamen können Manipulation anzeigen. (3) Zur Bestätigung verdächtiger Anfragen kann ein zweiter, unabhängiger Kommunikationskanal wie ein Rückruf unter offiziell bekannter Nummer genutzt werden. Zusätzlich kann darauf geachtet werden, keine sensiblen Informationen über öffentliche Plattformen preiszugeben, da solche Details als Grundlage für Angriffe dienen könnten. Auch eine feste Routine – etwa keine Zahlungen ausschließlich aufgrund einer E-Mail freizugeben – kann dazu beitragen, auch unter Zeitdruck resilient zu bleiben."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "e8b12560-18b1-4e31-955a-68804003008b"
+  }
+ ]
+}

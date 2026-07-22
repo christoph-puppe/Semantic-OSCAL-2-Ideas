@@ -1,0 +1,96 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GEB.3.6",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GEB.3.6",
+ "lifecycle": "active",
+ "title": "Einbruchmeldeanlagen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Gebäudemanagement für Standorte KANN Einbrüche nach {param:geb.3.6-prm1} überwachen."
+   },
+   "parameters": [
+    {
+     "name": "geb.3.6-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überwachen",
+     "result": "Einbrüche",
+     "result-specification": "nach {{einer entsprechenden Norm}}",
+     "target-object-categories": [
+      "Standorte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Prozess Gebäudemanagement"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.44",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.16",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.24",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Für Standorte mit erhöhtem Schutzbedarf ist eine Einbruchmeldeanlage sinnvoll. Die Anforderung gilt erst dann als umgesetzt, wenn alle vorhandenen Türen, Fenster und sonstige geschützte Öffnungen über die Einbruchmeldeanlage auf Verschluss, Verriegelung und Durchbruch überwacht werden."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "geb.3.6-prm1": {
+     "label": "einer entsprechenden Norm",
+     "alt-identifier": "01193c74-a4fc-4669-816c-651fcdca362e"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "01193c74-a4fc-4669-816c-651fcdca362e"
+  }
+ ]
+}

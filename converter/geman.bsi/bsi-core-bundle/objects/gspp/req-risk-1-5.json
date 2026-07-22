@@ -1,0 +1,63 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/RISK.1.5",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "RISK.1.5",
+ "lifecycle": "active",
+ "title": "Freigabe des Risikomanagements",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Risikomanagement MUSS Verfahren, Rollendefinitionen und Kriterien durch die Institutionsleitung autorisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "autorisieren",
+     "result": "Verfahren, Rollendefinitionen und Kriterien",
+     "result-specification": "durch die Institutionsleitung"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Richtlinie zur Risikoanalyse"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Anforderungen-zum-Risikomanagement",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Diese Dokumentation der Autorisierung dient der Nachvollziehbarkeit und Verbindlichkeit."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "75cea6b4-d254-462e-9d20-09085e81f1dc"
+  }
+ ]
+}

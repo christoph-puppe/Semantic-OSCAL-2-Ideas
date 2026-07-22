@@ -1,0 +1,23 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-wireless-networks-fast-basic-servi",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Fast Basic Service Set Transition",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1712",
+   "sequence": 14290
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Fast Basic Service Set Transition",
+     "name": "overview",
+     "prose": "The WPA3 standard specifies support for Fast Basic Service Set Transition (FT) (802.11r). FT is a feature designed to improve user mobility and combat lag introduced by the need to authenticate to each wireless access point. However, FT requires authenticators to request and send keys to other authenticators within a security domain. If any of these keys are intercepted, all security properties are lost. Therefore, it is imperative that communications are appropriately secured. As such, FT should be disabled unless it can be confirmed that authenticator-to-authenticator communications are secured by a suitable ASD-Approved Cryptographic Protocol that provides confidentiality, integrity and mutual authentication."
+    }
+   ]
+  }
+ }
+}

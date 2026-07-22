@@ -1,0 +1,23 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-wireless-networks-administrative-i",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Administrative interfaces for wireless access points",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1315",
+   "sequence": 14050
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Administrative interfaces for wireless access points",
+     "name": "overview",
+     "prose": "Administrative interfaces allow users to modify the configuration and security settings of wireless access points. Often, by default, wireless access points allow users to access administrative interfaces over fixed network connections or wireless network connections. To assist in reducing the attack surface for wireless access points, the administrative interface should be disabled for wireless network connections."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,75 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/UMS.7.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "UMS.7.1",
+ "lifecycle": "active",
+ "title": "Wahrung von Compliance in der Umsetzung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Umsetzung MUSS ein Verfahren zur Überprüfung von Compliance im Umsetzungsprozess verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "ein Verfahren zur Überprüfung von Compliance im Umsetzungsprozess"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Compliance-Verpflichtungen"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0,
+     "tags": [
+      "Compliance Management"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die regelmäßige Überprüfung und Aktualisierung der Compliance-bezogenen Prozesse und Anweisungen stellt sicher, dass sie aktuell und wirksam bleiben, auch wenn sich die regulatorischen Anforderungen ändern. Diese kontinuierliche Anpassung ist ein wesentlicher Bestandteil eines lebendigen und effektiven Compliance-Managements innerhalb des ISMS. Beispiele für ein geeignetes Verfahren kann der Einsatz von Prüflisten oder Auditierung sein."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "4409672d-fbc3-4126-b87d-fc33c0f3c253"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/PERF.2.1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/GC.3.1"
+  }
+ ]
+}

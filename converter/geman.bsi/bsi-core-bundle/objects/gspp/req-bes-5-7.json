@@ -1,0 +1,82 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.5.7",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.5.7",
+ "lifecycle": "active",
+ "title": "Schulung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Einkäufe KANN eine Schulung zur Nutzung gelieferter Sicherheitsmechanismen vereinbaren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "vereinbaren",
+     "result": "eine Schulung zur Nutzung gelieferter Sicherheitsmechanismen",
+     "target-object-categories": [
+      "Einkäufe"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Beschaffungskriterien"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.20"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5,
+     "tags": [
+      "Lieferketten",
+      "Kompetenzmanagement"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Sicherheitsmechanismen sind in diesem Kontext technische oder organisatorische Schutzfunktionen, die in gelieferten Produkten, Systemen oder Diensten bereits vorgesehen sind, beispielsweise Verschlüsselungsfunktionen, Zugriffskontrollen oder Protokollierungsfunktionen. Ziel der Anforderung ist es, dass diese Schutzfunktionen von den Mitarbeitenden der Institution auch tatsächlich verstanden und korrekt angewandt werden. Ohne entsprechende Schulung könnte es passieren, dass vorhandene Sicherheitsfunktionen ungenutzt bleiben oder falsch bedient werden, wodurch Daten kompromittiert oder unbefugt zugänglich werden könnten. Durch gezielte Unterweisungen kann das Potenzial solcher Mechanismen ausgeschöpft und die Widerstandsfähigkeit gegenüber Angriffen oder Fehlbedienungen erhöht werden. Die Umsetzung kann pragmatisch gestaltet werden: (1) Eine Institution kann bei der Lieferung von IT-Systemen mit dem Hersteller oder Dienstleister eine kurze Einweisung in die sicherheitsrelevanten Funktionen vereinbaren, beispielsweise zur richtigen Konfiguration einer Multifaktor-Authentisierung. (2) Bei komplexeren Produkten kann die Institution Trainingsmaterialien wie Handbücher, Videos oder interaktive Tutorials anfordern, die auf den Einsatz der bereitgestellten Sicherheitsfunktionen zugeschnitten sind. (3) Zusätzlich kann es hilfreich sein, eine kurze Praxisübung im Rahmen der Abnahme durchzuführen, in der Schlüsselmechanismen wie sichere Passwortänderung oder Rechtevergabe ausprobiert werden. Die Schulung kann je nach Bedarf als Vor-Ort-Einweisung, Remote-Sitzung oder durch strukturierte E-Learning-Module erfolgen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "c95ea1ad-f766-43e2-a07d-1eb50cc58907"
+  }
+ ]
+}

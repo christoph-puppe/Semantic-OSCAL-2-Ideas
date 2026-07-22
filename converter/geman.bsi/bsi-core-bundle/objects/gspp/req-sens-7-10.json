@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.7.10",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.7.10",
+ "lifecycle": "active",
+ "title": "Trennen nicht benötigter Anschlüsse",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende von Virtualisierungslösungen SOLLTE zum Trennen nicht benötigter Verbindungen zwischen Host und virtuellem Gast sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "zum Trennen nicht benötigter Verbindungen zwischen Host und virtuellem Gast",
+     "target-object-categories": [
+      "Nutzende",
+      "Virtualisierungslösungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Werden unnötige Verbindungen zwischen Host und Gast nicht getrennt, könnte dies zu unautorisiertem Zugriff auf Daten oder Systeme führen, etwa wenn eine Malware aus dem Gast Zugriff auf Host-Ressourcen erhält oder wenn sensible Dateien versehentlich zwischen beiden Umgebungen ausgetauscht werden. Durch eine saubere Trennung kann das Risiko seitlicher Bewegungen innerhalb der IT-Infrastruktur verringert werden und die Integrität einzelner Arbeitsumgebungen kann erhalten bleiben. Dies betrifft z.B. angeschlossene Geräte und Schnittstellen wie Drucker, USB-Sticks oder auch die Netzanbindung. Auch einfache Checklisten für IT-Personal und Nutzende können helfen, das Bewusstsein zu stärken, dass Komfortfunktionen wie „Drag & Drop“ zwischen Host und Gast zwar praktisch erscheinen, aber potenziell eine unnötige Angriffsfläche eröffnen können."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "2e5be22a-6fc5-49b3-ae53-66dc4105e058"
+  }
+ ]
+}

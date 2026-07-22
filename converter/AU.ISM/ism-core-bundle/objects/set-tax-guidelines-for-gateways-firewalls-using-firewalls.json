@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-gateways-firewalls-using-firewalls",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Using firewalls",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1528",
+   "sequence": 16170
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0639",
+   "sequence": 16180
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Using firewalls",
+     "name": "overview",
+     "prose": "When implementing gateways between an organisation’s networks and public network infrastructure, an organisation should implement firewalls to protect themselves from intrusions that may originate from the public network infrastructure. In addition, when an organisation’s networks connect to another organisation’s networks, both organisations should implement independent firewalls to protect themselves from intrusions that may originate from each other’s networks. This requirement may not be necessary in cases where shared network infrastructure is used only as a transport medium and encryption is applied to all network traffic."
+    }
+   ]
+  }
+ }
+}

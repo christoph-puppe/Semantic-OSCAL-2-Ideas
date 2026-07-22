@@ -1,0 +1,85 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.9.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.9.2",
+ "lifecycle": "active",
+ "title": "Vorsicht vor Mithören",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende SOLLTE gegen das Abhören von Gesprächen beim mobilen Arbeiten sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "gegen das Abhören von Gesprächen",
+     "result-specification": "beim mobilen Arbeiten",
+     "target-object-categories": [
+      "Nutzende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Das Abhören von Gesprächen bezeichnet im Kontext des mobilen Arbeitens das unbefugte Mithören vertraulicher oder sensibler Inhalte durch Dritte, sei es absichtlich (z. B. durch Spionage) oder unbeabsichtigt (z. B. durch zufällige Umstehende). Mobiles Arbeiten ist das Arbeiten an Orten außerhalb der Kontrolle der Institution, wie z. B. im Homeoffice, auf Reisen oder in öffentlichen Bereichen. Ohne entsprechende Vorsicht könnte die Preisgabe geschäftsrelevanter Daten über Produkte, interne Strategien oder persönliche Informationen erfolgen, was im schlimmsten Fall zu wirtschaftlichen Schäden oder Reputationsverlust führen könnte. Das betrifft insbesondere Anrufe und Videokonferenzen. Hierbei hilft es, Gespräche mit vertraulichem Inhalt nach Möglichkeit in geschützte Räume zu verlagern oder, falls dies nicht möglich ist, ihre Sprache bewusst zu kodieren bzw. zu abstrahieren. Technische Hilfsmittel wie Headsets mit Geräuschunterdrückung können die Verständlichkeit für autorisierte Gesprächspartner verbessern, während Umstehende weniger Details wahrnehmen. Auch einfache Verhaltenshinweise wie das Abwenden vom Publikumsverkehr, die Wahl einer Sitzposition mit Abstand zu anderen Personen oder die Nutzung digitaler Chatkanäle anstelle mündlicher Gespräche in unsicheren Umgebungen kann das Risiko verringern."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "bd43cb07-83d9-4105-9039-3dba57a180e9"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/ASST.3.10"
+  }
+ ]
+}

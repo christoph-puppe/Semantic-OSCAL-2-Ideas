@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-media-media-usage-reclassifying-media",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Reclassifying media",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0325",
+   "sequence": 6510
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0330",
+   "sequence": 6520
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Reclassifying media",
+     "name": "overview",
+     "prose": "Some activities may necessitate or allow for a change to the sensitivity or classification of media. For example, when media is connected to a system that lacks a mechanism through which read-only access can be ensured, when media is sanitised or destroyed, or when data stored on media is subject to a sensitivity or classification change."
+    }
+   ]
+  }
+ }
+}

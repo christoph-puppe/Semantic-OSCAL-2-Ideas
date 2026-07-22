@@ -1,0 +1,68 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/PERF.1.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "PERF.1.2",
+ "lifecycle": "active",
+ "title": "Evaluation des Umsetzungsplans",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Monitoring-Evaluation MUSS die {param:perf.1.2-prm1} Überprüfung und Fortschreibung des Umsetzungsplans in Bezug auf Fortschritt,  Fristeinhaltung und inhaltlicher Korrektheit verankern."
+   },
+   "parameters": [
+    {
+     "name": "perf.1.2-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "die {{regelmäßige}} Überprüfung und Fortschreibung des Umsetzungsplans",
+     "result-specification": "in Bezug auf Fortschritt,  Fristeinhaltung und inhaltlicher Korrektheit"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Überprüfung eines Umsetzungsplans beinhaltet, ob Sicherheitsmaßnahmen vollständig, termingerecht und wirksam sowie inhaltlich korrekt umgesetzt wurden und ob sie die angestrebten Schutzziele erreichen. Dabei sind insbesondere der Umsetzungsstand, Abweichungen, Restrisiken und die Wirksamkeit der Maßnahmen systematisch zu überprüfen und für Managemententscheidungen auszuwerten. Umsetzungsdaten umfassen z. B. Fälligkeitsdatum, bis wann eine bestimmte Maßnahme umgesetzt sein muss, Meilensteine im Projektplan oder vereinbarte Endtermine für Kontrollen, Prüfungen oder technische Implementierungen. Auswertungen von Auditergebnissen, sowie von Sicherheitsvorfällen fließen stets in die Fortschreibung mitein. Weiterhin sind Veränderungen in der Bedrohungslage Anlass zur Überarbeitung und Fortschreibung des Umsetzungsplans."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "perf.1.2-prm1": {
+     "label": "regelmäßige",
+     "alt-identifier": "ffabec9a-1a60-4edc-bdbb-adc79c43d7c8"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "ffabec9a-1a60-4edc-bdbb-adc79c43d7c8"
+  }
+ ]
+}

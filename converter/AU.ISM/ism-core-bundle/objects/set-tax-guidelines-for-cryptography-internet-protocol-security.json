@@ -1,0 +1,55 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-internet-protocol-security",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Internet Protocol Security",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-internet-protocol-security-mode-",
+   "sequence": 15550
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-internet-protocol-security-proto",
+   "sequence": 15570
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-internet-protocol-security-key-e",
+   "sequence": 15590
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-internet-protocol-security-encry",
+   "sequence": 15610
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-internet-protocol-security-pseud",
+   "sequence": 15630
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-internet-protocol-security-integ",
+   "sequence": 15650
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-internet-protocol-security-diffi",
+   "sequence": 15670
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-internet-protocol-security-secur",
+   "sequence": 15690
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-internet-protocol-security-perfe",
+   "sequence": 15710
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Internet Protocol Security",
+     "name": "overview",
+     "prose": "# Using Internet Protocol Security\n\nWhen using IT equipment or applications that implement IPsec, controls for using AACAs and AACPs in the ‘Cryptographic algorithms’ and ‘Cryptographic protocols’ sections of these guidelines will also need to be consulted."
+    }
+   ]
+  }
+ }
+}

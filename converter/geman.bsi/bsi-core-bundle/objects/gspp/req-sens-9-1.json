@@ -1,0 +1,89 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.9.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.9.1",
+ "lifecycle": "active",
+ "title": "Verarbeitung in der Öffentlichkeit",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende SOLLTE gegen die Verarbeitung von vertraulichen Informationen in der Öffentlichkeit sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "gegen die Verarbeitung von vertraulichen Informationen in der Öffentlichkeit",
+     "target-object-categories": [
+      "Nutzende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.29"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Physical Access Control",
+      "Shoulder Surfing"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Anforderung zielt darauf ab, das Risiko unbeabsichtigter Informationsabflüsse in öffentlichen Räumen zu reduzieren. Ohne entsprechende Aufmerksamkeit könnte etwa ein unbefugter Dritter vertrauliche Daten über die Schulter mitlesen, Fotos von Bildschirmen aufnehmen oder Gesprächsinhalte mithören, was im schlimmsten Fall zu Identitätsdiebstahl oder geschäftsschädigender Weitergabe von Insiderinformationen führen könnte. Unachtsamkeit könnte dabei z.B. einen Verstoß gegen Arbeitsanweisungen und das Gesetz zum Schutz von Geschäftsgeheimnissen (GeschGehG) darstellen. Im vorliegenden Kontext bedeutet „öffentliche Verarbeitung“ die Nutzung mobiler Geräte wie Laptops, Tablets oder Smartphones in frei zugänglichen Umgebungen, in denen unbekannte Personen mitlesen oder mithören könnten, zum Beispiel in Verkehrsmitteln, Cafés, Flughäfen oder Co-Working-Spaces. Zudem helfen Schutzmaßnahmen wie das Sitzen mit dem Rücken zur Wand oder die Verwendung von Displayschutzfolien und abdeckenden Kopfhörern."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "4d8775fd-52b0-491f-b0ce-7a8ceaba4819"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/ASST.3.10"
+  }
+ ]
+}

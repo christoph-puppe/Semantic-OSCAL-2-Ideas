@@ -1,0 +1,111 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DET.5.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DET.5.4",
+ "lifecycle": "active",
+ "title": "Regelmäßige Penetrationstests",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Detektion für IT-Systeme KANN die tatsächliche Abwehrfähigkeit nach {param:det.5.4-prm1} {param:det.5.4-prm2} überprüfen."
+   },
+   "parameters": [
+    {
+     "name": "det.5.4-prm1",
+     "type": "string"
+    },
+    {
+     "name": "det.5.4-prm2",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überprüfen",
+     "result": "die tatsächliche Abwehrfähigkeit",
+     "result-specification": "nach {{einer anerkannten Vorgehensweise}} {{regelmäßig}}",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Detektions-Konzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "0",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5,
+     "tags": [
+      "Pentest",
+      "Advanced Persistent Threats (APT)"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein Penetrationstest, oft auch als Pentest bezeichnet, ist eine von Sicherheitsexperten simulierte Cyberattacke, um Schwachstellen und Sicherheitslücken aufzudecken. Ziel ist es, komplexe Schwachstellen in konkreten Informationsumgebungen aufzuspüren, bevor sie von echten Angreifern ausgenutzt werden könnten. Dabei werden verschiedene Methoden und Techniken eingesetzt, die auch von Angreifern verwendet werden könnten, z.B. Informationssammlung, Scan und Ausnutzen von Schwachstellen, seitliches Ausbreiten über das Netz, sowie Versuche, durch Täuschung und Manipulation von Personen an Informationen oder Zugriff zu gelangen. Anerkannte Vorgehensweisen, die für Penetrationstests angewendet werden können, sind z.B. der BSI Praxis-Leitfaden für IS-Penetrationstests, OSSTMM, NIST SP 800-115, PTES (Penetration Testing Execution Standard), OWASP für Webanwendungen oder der Leitfaden für Penetrationstests von Large-Language-Modellen des Expertenkreises KI-Sicherheit. Pentests können von externen Dienstleistern oder internem Personal vorgenommen werden. Entscheidend für ein gutes Ergebnis ist hierbei neben einer standardisierten, strukturierten Vorgehensweise die Qualifikation der ausführenden Personen, da Penetrationstests die Ausforschung komplexer Angriffsmöglickeiten erfordern, die weit über den isolierten Einsatz einzelner Werkzeuge hinausgehen können. Pentesting von Außen enthält sowohl die Suche nach angreifbaren Schwachstellen aus dem Internet, als auch die vorhergehende Recherche, um angreifbare Informationen aufzuspüren (Open Source Intelligence). Zur konsequenten Überprüfung gehört auch, dass deren gefundene Schwachstellen im Rahmen des Schwachstellenmanagements zeitnah behandelt werden. Zweckmäßig ist es daher, gefundene Schwachstellen bestimmten zuständigen Personen oder Rollen zur Behebung zuzuweisen und diese innerhalb der Fristen des Schwachstellenmanagements zu schließen."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "det.5.4-prm1": {
+     "label": "einer anerkannten Vorgehensweise",
+     "alt-identifier": "622f98fa-a211-4c1e-b655-5e9dd6c0d507"
+    },
+    "det.5.4-prm2": {
+     "label": "regelmäßig",
+     "alt-identifier": "622f98fa-a211-4c1e-b655-5e9dd6c0d507"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "622f98fa-a211-4c1e-b655-5e9dd6c0d507"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/TEST.3.1.10"
+  }
+ ]
+}

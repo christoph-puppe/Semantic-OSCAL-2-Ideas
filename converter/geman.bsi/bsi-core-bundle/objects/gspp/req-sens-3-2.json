@@ -1,0 +1,84 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.3.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.3.2",
+ "lifecycle": "active",
+ "title": "Öffnen in der Sandbox",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende KANN zum Öffnen verdächtiger Dateien ausschließlich auf einem isolierten IT-System (Sandbox) sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "zum Öffnen verdächtiger Dateien ausschließlich auf einem isolierten IT-System (Sandbox)",
+     "target-object-categories": [
+      "Nutzende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Eine Sandbox ist ein isoliertes IT-System, das bewusst so gestaltet ist, dass Dateien oder Programme in einer abgeschotteten Umgebung geöffnet und ausgeführt werden, ohne die produktive IT-Infrastruktur zu gefährden. Damit wird ein geschützter Bereich geschaffen, in dem verdächtige Dateien getestet und beobachtet werden, ohne dass Schadsoftware unkontrolliert in interne Systeme gelangt. Der Sinn dieser Anforderung liegt darin, das Risiko unbewusster Schadcode-Ausführung zu reduzieren: Ein unbedachtes Öffnen von E-Mail-Anhängen könnte beispielsweise zu Verschlüsselung durch Ransomware führen, oder ein manipuliertes Office-Dokument könnte eine unbemerkte Datenabflussschleuse öffnen. Als Sandbox kann auch ein virtuelles System auf dem Endgerät genutzt werden, wenn dieses von der Betriebssystemumgebung des Endgerätes isoliert ausgeführt wird."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "fbe194d0-d93c-4fdd-ab18-33df5558e8db"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/DET.6.2.2"
+  }
+ ]
+}

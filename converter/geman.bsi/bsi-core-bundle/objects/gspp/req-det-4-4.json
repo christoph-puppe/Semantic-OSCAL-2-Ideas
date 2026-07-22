@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DET.4.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DET.4.4",
+ "lifecycle": "active",
+ "title": "Änderungen an Sicherheitsrichtlinien",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Detektion SOLLTE Änderungen an Sicherheitsrichtlinien einschließlich deren Aktivierung oder Deaktivierung überwachen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überwachen",
+     "result": "Änderungen an Sicherheitsrichtlinien",
+     "result-specification": "einschließlich deren Aktivierung oder Deaktivierung"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Detektions-Konzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.39",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.28"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Wird die Aktivität von automatisierten Sicherheitswerkzeugen nicht überwacht, so könnten Angreifer diese Schutzmechanismen unbemerkt deaktivieren und die Person so in falscher Sicherheit wiegen. Zudem installieren Angreifer gerne permanente Hintertüren über neue Konten oder Gruppenwechsel.  Automatisierte Sicherheitsrichtlinien sind z.B. Ausnahmelisten von Antivirus- oder EDR, über den Verzeichnisdienst hinzugefügte Gruppenzugehörigkeiten zu sicherheitsrelevanten Gruppen (z.B. Admin), NAC oder Firewallregeln."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "a71bbf22-4b3a-41d0-8ec8-6de7a9790040"
+  }
+ ]
+}

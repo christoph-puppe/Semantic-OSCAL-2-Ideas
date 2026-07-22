@@ -1,0 +1,96 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ARCH.2.6",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ARCH.2.6",
+ "lifecycle": "active",
+ "title": "Topologieüberwachung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Architektur für Netze SOLLTE die Einhaltung der Netzarchitektur {param:arch.2.6-prm1} überprüfen."
+   },
+   "parameters": [
+    {
+     "name": "arch.2.6-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überprüfen",
+     "result": "die Einhaltung der Netzarchitektur",
+     "result-specification": "{{regelmäßig}}",
+     "target-object-categories": [
+      "Netze"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.22",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.41"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Unbeabsichtigte Netzverbindungen können z.B. über falsch gesteckte Kabel, WLAN auf Clients oder Modems im öffentlichen Telefonnetz (PSTN) an einer TK-Anlage entstehen. Die Anforderung kann durch Netzscans, Software zur Topologieüberwachung oder Protokollanalyse umgesetzt werden. Hierbei sind auch virtualisierte Systeme auf VM-Hosts zu berücksichtigen."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "arch.2.6-prm1": {
+     "label": "regelmäßig",
+     "alt-identifier": "f97736f7-f2c7-4366-a996-7e28512972de"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "f97736f7-f2c7-4366-a996-7e28512972de"
+  }
+ ]
+}

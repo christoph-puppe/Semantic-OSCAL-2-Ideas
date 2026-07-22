@@ -1,0 +1,82 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.12.12",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.12.12",
+ "lifecycle": "active",
+ "title": "Verbindungsprotokoll",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für TK-Anwendungen SOLLTE ein für Nutzende verfügbares Verbindungsprotokoll protokollieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "protokollieren",
+     "result": "ein für Nutzende verfügbares Verbindungsprotokoll",
+     "target-object-categories": [
+      "TK-Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "0",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.37",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Produktbeschreibung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein solches Protokoll, oft auch als Call Detail Record (CDR) oder Connection Log bezeichnet, dokumentiert für Nutzende nachvollziehbar die Kommunikationsverbindungen, die sie über die Anwendung herstellen. Das Protokoll könnte dabei erfassen, wann eine Verbindung aufgebaut wurde, wie lange sie bestand, mit wem sie stattfand (z.B. die Rufnummer oder der Benutzername der Gegenstelle) und aus welcher Richtung (ein- oder ausgehend) sie kam. In der klassischen Telefonie ist dies die Auflistung der zuletzt ein- oder ausgehenden Anrufe. Eine solche Protokollierung kann als wichtige Maßnahme der Rechenschaftspflicht oder Accountability dienen. Durch die lückenlose Protokollierung der Aktivitäten der Nutzenden kann transparent nachvollzogen werden, welche Verbindungen zu welchem Zeitpunkt hergestellt wurden. Dies kann dabei helfen, ungewöhnliche oder nicht autorisierte Kommunikationsversuche zu erkennen und die Integrität der genutzten Systeme zu wahren. Ohne ein solches Protokoll könnte eine unberechtigte Nutzung oder ein Datenabfluss aus dem internen Netzwerk unentdeckt bleiben. Hierbei besteht ein enger Zusammenhang mit Compliance-Verpflichtungen zur Aufbewahrung und Löschung von Telekommunikationsdaten."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "31191a30-d1fd-4adf-a407-35e4fc782e79"
+  }
+ ]
+}

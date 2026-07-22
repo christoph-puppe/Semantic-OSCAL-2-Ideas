@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-gateways-content-filtering-archive-files",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Archive files",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1289",
+   "sequence": 16530
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1290",
+   "sequence": 16540
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Archive files",
+     "name": "overview",
+     "prose": "Archive files can be used to bypass content filtering checks if content filters do not handle such files correctly. Ensuring content filters recognise archive files will ensure the embedded files they contain are subject to the same content filtering checks as un-archived files.\n\nArchive files can be constructed in a manner that can result in a denial of service to content filters due to processor, memory or disk space exhaustion. To limit the likelihood of such situations, content filters can specify resource constraints while unpacking archive files. If these constraints are exceeded, content filtering checks should be terminated."
+    }
+   ]
+  }
+ }
+}

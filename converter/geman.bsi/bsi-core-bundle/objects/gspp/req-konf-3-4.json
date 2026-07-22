@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.3.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.3.4",
+ "lifecycle": "active",
+ "title": "Physischer Diebstahlschutz",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für Endgeräte KANN einen physischen Diebstahlschutz installieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "installieren",
+     "result": "einen physischen Diebstahlschutz",
+     "target-object-categories": [
+      "Endgeräte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Betriebshandbuch"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "0",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.16"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5,
+     "tags": [
+      "Produktbeschreibung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein physischer Diebstahlschutz bezeichnet im vorliegenden Kontext sämtliche Vorrichtungen oder Maßnahmen, die ein Entwenden von Endgeräten wie Laptops, Tablets oder Arbeitsplatzrechnern erschweren. Hierzu gehören insbesondere physische Schlösser, die mithilfe eines Stahlkabels mit einer dafür vorgesehenen Öffnung am Endgerät verbunden werden können, sodass das Endgerät an einem festen Gegenstand fixiert bleibt. Der Sinn dieser Vorgabe liegt darin, das Risiko zu reduzieren, dass ein Gerät durch unbefugte Dritte entwendet und dadurch der Zugriff auf gespeicherte Informationen oder Zugangsdaten ermöglicht wird. Ein Vorfall könnte entstehen, wenn ein Angreifer ein ungesichertes Notebook während einer Konferenz oder in einem Büro mitnimmt und darüber unverschlüsselte Daten ausliest. Ein angemessen eingesetzter Diebstahlschutz kann die Gelegenheit zum Zugriff verringern, den Aufwand für einen Angreifer erhöhen und so die Wahrscheinlichkeit für den Verlust sensibler Informationen deutlich reduzieren. Zur praktischen Umsetzung kann eine Institution unterschiedliche Maßnahmen wählen. So kann ein Laptop-Kabelschloss genutzt werden, um mobile Geräte temporär an Arbeitsplätzen zu sichern, oder ein Schließfachschrank kann für Aufbewahrung außerhalb der Nutzungszeiten vorgesehen sein. Für stationäre Systeme kann eine feste Verschraubung mit dem Schreibtisch oder die Unterbringung in abschließbaren Möbeln erfolgen. Ergänzend kann eine Institution darauf achten, Geräte mit serienmäßig integrierten Vorrichtungen (z. B. Verriegelungsöffnungen für Kabelschlösser) zu beschaffen, um eine flexible Sicherung zu ermöglichen. Auch das Kennzeichnen von Geräten durch gravierte Inventarnummern oder gut sichtbare Eigentumsaufkleber kann eine zusätzliche Abschreckungswirkung entfalten."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "0984599f-2227-4f74-befe-5a1e11b656b0"
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.9.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.9.3",
+ "lifecycle": "active",
+ "title": "Verwahrung außer Haus",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende SOLLTE zur Verwahrung von IT-Systemen und Datenträgern beim mobilen Arbeiten anweisen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "anweisen",
+     "result": "zur Verwahrung von IT-Systemen und Datenträgern",
+     "result-specification": "beim mobilen Arbeiten",
+     "target-object-categories": [
+      "Nutzende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Physical Access Control"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Verwahrung von IT-Systemen und Datenträgern bedeutet, diese so zu sichern, dass sie nicht unbeabsichtigt verloren gehen, beschädigt oder unbefugt eingesehen werden können. An mobilen Arbeitsplätzen ist das Risiko eines Zugriffs Unbefugter oder Verlustes typischerweise höher als in Bürogebäuden. Dagegen hilft es, alle Hardware und Dokumente so aufzubewahren, dass unbefugter Zugang und unberechtigter Zugriff verhindert wird. Hierzu können z.B. Koffer mit Schloss oder Hotelsafes genutzt werden. Eine regelmäßige Überprüfung dieser Maßnahmen wird empfohlen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "65a6dd9c-baab-49b8-8d28-ee4cab5b52a9"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/ASST.3.10"
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GEB.1.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GEB.1.4",
+ "lifecycle": "active",
+ "title": "Exponierte Bereiche",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Gebäudemanagement für Standorte SOLLTE schützenswerte Assets oder zugehörige Infrastrukturen nur außerhalb exponierter oder besonders gefährdeter Bereiche platzieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "platzieren",
+     "result": "schützenswerte Assets oder zugehörige Infrastrukturen nur außerhalb exponierter oder besonders gefährdeter Bereiche",
+     "target-object-categories": [
+      "Standorte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Gebäudedokumentation"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Wenn schützenswerte Räume wie Datenträgerarchive, Hostsysteme oder zentrale Infrastrukturen wie die Strom- und Netzversorgung in besonders exponierten Gebäudeteilen oder unter freiem Himmel lokalisiert werden, erhöht dies das Risiko für Ausfälle. Beispiele für gefährdete Bereiche sind ein überflutungsgefährdeter Keller, an der Gebäudekante direkt neben einer Bundesstraße oder an einer von Außen leicht einsehbaren Stelle. Welche Bereiche gefährdet sind kann oft von lokalen oder nationalen staatlichen Stellen bezogen werden.  Wenn der gesamte Standort besonders exponiert oder gefährdet ist, kann dies nur durch die Nutzung anderer Standorte umgesetzt werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "d5806bcc-a072-4a2e-8fd1-2ff0d30e96d6"
+  }
+ ]
+}

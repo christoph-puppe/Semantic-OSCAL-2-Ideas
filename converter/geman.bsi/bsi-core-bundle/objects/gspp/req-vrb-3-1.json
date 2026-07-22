@@ -1,0 +1,54 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/VRB.3.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "VRB.3.1",
+ "lifecycle": "active",
+ "title": "Identifikation von Verbesserungspotenzialen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Verbesserung MUSS eine Methode zur Überprüfung und Bewertung von Verbesserungspotentialen unter Berücksichtigung der damit verbundenen Vor- und Nachteile festlegen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "festlegen",
+     "result": "eine Methode zur Überprüfung und Bewertung von Verbesserungspotentialen",
+     "result-specification": "unter Berücksichtigung der damit verbundenen Vor- und Nachteile"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Im Gegensatz zum reaktiven Umgang mit Nicht-Konformitäten zielt die Identifikation von Verbesserungspotentialen darauf ab, auch ohne vorangegangene Probleme oder Abweichungen Optimierungsmöglichkeiten zu erkennen und zu nutzen.  Für Verbesserungen zur Nutzung identifizierter Potenziale wird ein strukturierter Ansatz verfolgt.  Die Methode beinhaltet beispielsweise die Bewertung des Umfelds der Institution (einschließlich der Bewertung der Gefährdungslage), die Auswertung des Umsetzungsplans, die Auswertung von Auditergebnissen und Sicherheitsvorfällen sowie die Berücksichtigung von Ad hoc-Eingaben (z. B. akute Verbesserungspotentiale). Die Verbesserungspotenziale zielen auf die proaktive Weiterentwicklung des ISMS ab. Sie können beispielsweise den Einsatz neuer oder verbesserter Technologien und Methoden, die  Stärkung der Sicherheitskultur und des Sicherheitsbewusstseins, die Erweiterung des Anwendungsbereiches des ISMS oder die Verbesserung der Integration des ISMS in andere Managementsysteme und Geschäftsprozesse betreffen. Nicht jede Verbesserungsmöglichkeit bietet denselben Mehrwert für die Institution. Die Bewertung sollte das Potenzial zur Risikoreduktion, den erwarteten Ressourcenaufwand, die strategische Bedeutung für die Informationssicherheitsziele, mögliche Synergien mit anderen Verbesserungsmaßnahmen oder Projekten und die Nachhaltigkeit der Verbesserung berücksichtigen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "9e104747-342c-4fae-a76f-0c3ee159aba5"
+  }
+ ]
+}

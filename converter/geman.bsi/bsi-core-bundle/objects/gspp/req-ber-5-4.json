@@ -1,0 +1,86 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BER.5.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BER.5.4",
+ "lifecycle": "active",
+ "title": "Mehr-Faktor-Authentisierung am Perimeter",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Berechtigung für Anwendungen von Externe Netzanschlüssen SOLLTE Phishing-resistente Mehr-Faktor-Authentisierung aktivieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "aktivieren",
+     "result": "Phishing-resistente Mehr-Faktor-Authentisierung",
+     "target-object-categories": [
+      "Anwendungen",
+      "Externe Netzanschlüsse"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.36",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.42"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "MFA",
+      "Credential Stuffing",
+      "Brute-Force-Attacke"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Phishing-resistente Mehr-Faktor-Authentisierung bezeichnet Verfahren zur Anmeldung, bei denen mindestens zwei unterschiedliche Faktoren genutzt werden und bei denen die Authentisierung zusätzlich gegen typische Angriffe wie Credential Phishing, Adversary-in-the-Middle-Angriffe oder die Wiederverwendung abgefangener Sitzungsdaten abgesichert ist. Phishing-resistente Verfahren basieren typischerweise auf kryptographischen Nachweisen zwischen Endgerät und Zielsystem und verhindern dadurch, dass einmal abgefragte Zugangsdaten oder Einmalcodes durch täuschend echte Anmeldeseiten weiterverwendet werden können, beispielsweise FIDO2 Passkeys. Hintergrund ist, dass aus externen Netzen wie dem Internet erreichbare Anwendungen (insbesondere die VPN-Einwahl oder Cloud-Anwendungen) ein beliebtes Ziel für Angreifer sind. Klassische Passwörter oder einfache Einmalcodes könnten durch Social Engineering, gefälschte Login-Portale oder Man-in-the-Browser-Angriffe ausgespäht werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "2b9ddd3e-5233-46f5-abca-1793b89e2809"
+  }
+ ]
+}

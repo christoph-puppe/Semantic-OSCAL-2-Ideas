@@ -1,0 +1,72 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GC.6.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GC.6.1",
+ "lifecycle": "active",
+ "title": "Festlegung des Geltungsbereichs",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Governance und Compliance MUSS den nachvollziehbar abgegrenzten Geltungsbereich nach Freigabe der Institutionsleitung festlegen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "festlegen",
+     "result": "den nachvollziehbar abgegrenzten Geltungsbereich",
+     "result-specification": "nach Freigabe der Institutionsleitung"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Der Geltungsbereich legt den formalen und organisatorischen Umfang (Scope) fest, in dem das ISMS angewendet wird. Es wird festgelegt, welche Institutionsbereiche und Tätigkeiten formell zum Geltungsbereich gehören und infrastrukturell abgegrenzt, welche Standorte und Systeme  innerhalb des Geltungsbereichs liegen; welche externen Partner oder Dienstleister in das ISMS einzubeziehen sind und welche Bereiche bewusst nicht Bestandteil des Geltungsbereichs sind."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "ebff4c7b-77b1-4d08-bc57-37d3ca16242c"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/GC.4.2"
+  },
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/GC.4.1"
+  },
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/GC.2.2"
+  },
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/GC.2.1"
+  }
+ ]
+}

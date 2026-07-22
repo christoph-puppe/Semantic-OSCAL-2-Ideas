@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.2.6",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.2.6",
+ "lifecycle": "active",
+ "title": "Umgehung von Sicherheitsfunktionen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende SOLLTE gegen die Umgehung von Sicherheitsfunktionen sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "gegen die Umgehung von Sicherheitsfunktionen",
+     "target-object-categories": [
+      "Nutzende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.31",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.42"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Selbst die ausgefeiltesten Sicherheitssysteme werden wirkungslos, wenn Anwender diese durch Eigeninitiative oder mangelndes Verständnis umgehen. Umgehungshandlungen könnten beispielsweise dazu führen, dass Schadprogramme durch Deaktivieren des Virenschutzes ins System gelangen, oder Angreifer über unsichere Verbindungen Zugang erhalten, wenn neue Verbindungen eigenmächtig geschaffen werden. Der Begriff \"Umgehung von Sicherheitsfunktionen\" umfasst dabei alle Handlungen, bei denen implementierte technische oder organisatorische Schutzmaßnahmen außer Kraft gesetzt, deaktiviert oder auf andere Weise ihrer Schutzwirkung beraubt werden, z.B. durch Rooting/Jailbreaking oder Verwendung nicht autorisierter Anwendungen oder Geräte. Wenn für eine Tätigkeit Funktionen benötigt werden, die durch Sicherheitsmechanismen verhindert werden, ist stattdessen eine Abstimmung über die festgelegten Meldewege sinnvoll."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "875e5c3d-64e7-403c-bfc7-456200e5e661"
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/TEST.3.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "TEST.3.2",
+ "lifecycle": "active",
+ "title": "Testabdeckung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Änderungen und Tests SOLLTE die Testabdeckung {param:test.3.2-prm1} überprüfen."
+   },
+   "parameters": [
+    {
+     "name": "test.3.2-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überprüfen",
+     "result": "die Testabdeckung",
+     "result-specification": "{{regelmäßig}}"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Übungs- und Prüfplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.28",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.27"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein ungenügendes Testverfahren könnte beispielsweise dazu führen, dass Schwachstellen in kritischen Anwendungen unentdeckt bleiben, was wiederum zu Datenverlust, unbefugtem Zugriff oder Systemausfällen führen könnte. Ein Beispiel hierfür ist der Fall einer industriellen Steuerungsanlage, bei der eine nicht ausreichend getestete Firmware-Aktualisierung zu einem Sicherheitsversagen und anschließendem Produktionsausfall führt. Der Begriff \"Testabdeckung\" (engl. \"test coverage\") bezeichnet hierbei den Umfang, in dem Komponenten, Funktionen und Schnittstellen eines Systems durch strukturierte Tests überprüft werden. Zur Umsetzung kann eine Institution verschiedene Maßnahmen implementieren: Für Software kann ein Code-Coverage-Monitoring etabliert werden, während für Hardware systematische Testmatrizen entwickelt werden können, die alle relevanten Betriebsparameter und Umgebungsbedingungen abdecken. Test-Dashboards können sowohl Software- als auch Hardware-Metriken visualisieren und in Entwicklungs- bzw. Implementierungsprozesse integriert werden. Für Hardware können FMEA-Analysen (Failure Mode and Effects Analysis) die kritischen zu testenden Komponenten identifizieren, während Software durch automatisierte CI/CD-Tests abgesichert werden kann. Bei der Implementierung empfiehlt es sich, einen risikobasierten Ansatz zu verfolgen, bei dem zuerst sicherheitskritische Komponenten umfassend getestet werden. Zudem kann eine systematische Dokumentation aller Testfälle und -ergebnisse, sowohl für Hardware- als auch für Software-Komponenten, die Nachvollziehbarkeit und kontinuierliche Verbesserung der Testabdeckung unterstützen. Zudem kann eine Kombination aus verschiedenen Testebenen (z.B. Stichproben, automatisierte und manuelle Verfahren, Unit-, Integrations- und Systemtests) eine umfassendere Abdeckung gewährleisten."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "test.3.2-prm1": {
+     "label": "regelmäßig",
+     "alt-identifier": "15a34e7f-067f-4f27-92a8-4d32cce4dee6"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "15a34e7f-067f-4f27-92a8-4d32cce4dee6"
+  }
+ ]
+}

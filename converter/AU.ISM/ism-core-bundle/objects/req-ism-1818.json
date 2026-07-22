@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-1818",
+ "version": "2026.06.18",
+ "label": "ISM-1818",
+ "lifecycle": "active",
+ "title": "Control: ism-1818",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Authentication and authorisation of clients is performed when clients call network APIs that facilitate modification of data and are accessible over the internet."
+   }
+  }
+ ]
+}

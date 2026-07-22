@@ -1,0 +1,23 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-security-assurance-security-monitoring-securi",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Security monitoring policy",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0580",
+   "sequence": 10830
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Security monitoring policy",
+     "name": "overview",
+     "prose": "By developing a security monitoring policy, taking into consideration any shared responsibilities between service providers and their customers, an organisation can improve their ability to detect malicious behaviour on their systems. In doing so, the security monitoring policy should cover the types of events to be logged, the event logging facilities to be used, how event logs will be monitored and how long event logs will be retained."
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/set/tax/det",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "lifecycle": "active",
+ "title": "Detektion",
+ "members": [
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/det-1",
+   "sequence": 5840
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/det-2",
+   "sequence": 5880
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/det-3",
+   "sequence": 5950
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/det-4",
+   "sequence": 6150
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/det-5",
+   "sequence": 6260
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/det-6",
+   "sequence": 6290
+  }
+ ],
+ "label": "DET",
+ "facets": {
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "description": {
+    "de": "Die Praktik Detektion sorgt dafür, dass sicherheitsrelevante Ereignisse rechtzeitig erkannt werden. Zu diesem Zweck werden geeignete organisatorische, personelle und technische Maßnahmen im Vorfeld geplant, implementiert und regelmäßig geübt.   Damit die Detektion erfolgreich ist, muss umfassend protokolliert werden. Das Zusammenspiel zwischen den Praktiken Protokollierung und Detektion ist für die erfolgreiche Erkennung sicherheitsrelevanter Ereignisse unerlässlich.  Die Praktik Detektion regelt jedoch nicht den Umgang mit sicherheitsrelevanten Ereignissen nach deren Erkennung. Dies ist Aufgabe der Praktik Sicherheitsvorfallsbehandlung."
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "f479aa5a-6dd9-4b9b-973e-8c4f85b074ed"
+  }
+ ]
+}

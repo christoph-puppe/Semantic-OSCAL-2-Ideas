@@ -1,0 +1,82 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/PERS.3.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "PERS.3.2",
+ "lifecycle": "active",
+ "title": "Verfahrensanweisungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Personal für Mitarbeitende SOLLTE explizit zur Einhaltung von Verfahrensanweisungen bei Neuzugang anweisen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "anweisen",
+     "result": "explizit zur Einhaltung von Verfahrensanweisungen",
+     "result-specification": "bei Neuzugang",
+     "target-object-categories": [
+      "Mitarbeitende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.31",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.33",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.35"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Wenn neue Mitarbeitende keine explizite Anweisung erhalten, dass Sicherheitsanweisungen existieren und einzuhalten sind, könnte es zu verspäteter Kenntnisnahme der Regelungen und dadurch zu Mängeln in der Einhaltung kommen. Das ist insbesondere bei Mitarbeitenden der Fall, die in manche Informationsverarbeitungsprozesse eingebunden sind, aber keinen Zugang zu Plattformen wie dem Intranet erhalten: Werden Verfahrensanweisungen nur im Intranet abgelegt, aber nicht bei Neuzugang explizit bekannt gegeben, so können diese Personen keine Kenntnis davon nehmen. Die Menge der Verfahrensanweisungen ergibt sich aus den für die jeweilige Tätigkeit relevanten gesetzlichen Anforderungen, sowie den Anforderungen zu den Handlungsworten „anweisen“ und „verbieten“."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "2bd3c14a-de1c-436e-9400-3ae619ab9b9a"
+  }
+ ]
+}

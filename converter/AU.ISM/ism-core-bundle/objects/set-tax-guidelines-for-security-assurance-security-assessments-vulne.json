@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-security-assurance-security-assessments-vulne",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Vulnerability assessments and penetration tests",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2118",
+   "sequence": 11230
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2119",
+   "sequence": 11240
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Vulnerability assessments and penetration tests",
+     "name": "overview",
+     "prose": "Measures to monitor and manage vulnerabilities in systems can provide an organisation with a wealth of valuable information about their exposure to cyber threats, as well as assisting them to determine security risks associated with the operation of their systems. Regardless of the security assessment activity performed, they should be conducted by suitably skilled personnel augmented by AI models. In doing so, personnel can be internal to an organisation or from a third party, however, such personnel should be independent of the system being assessed. This ensures that there is no conflict of interest, perceived or otherwise, and that the activities are undertaken in an objective manner."
+    }
+   ]
+  }
+ }
+}

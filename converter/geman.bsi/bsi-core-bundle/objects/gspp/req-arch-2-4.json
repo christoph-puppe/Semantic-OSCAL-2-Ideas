@@ -1,0 +1,87 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ARCH.2.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ARCH.2.4",
+ "lifecycle": "active",
+ "title": "Inventar der Netze",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Architektur SOLLTE ein Inventar der Netze einschließlich interner Segmente, externer Netzanschlüsse und deren Verwendungszweck dokumentieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "dokumentieren",
+     "result": "ein Inventar der Netze",
+     "result-specification": "einschließlich interner Segmente, externer Netzanschlüsse und deren Verwendungszweck"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Netzplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Inventories"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Erfassung externer Netzanschlüsse – etwa zu Partnernetzen, Cloud-Diensten oder dem Internet – hilft, potenzielle Angriffspunkte zu identifizieren und gezielte Schutzmaßnahmen zu planen. Beispiele für interne Netzsegmente können klassische Trennungen wie IT-Office-Netze, SCADA-/Leittechnik-Netze oder DMZs für externe Zugriffe sein. Dabei sollten auch virtuelle Netze und virtuelle Switches berücksichtigt werden, ebenso wie Container-Infrastrukturen. Als externe Netzanschlüsse kommen etwa VPN-Gateways, dedizierte Providerverbindungen, Fernwartungszugänge oder Cloud-Endpunkte in Frage. Dabei sind nicht nur die auf den ersten Blick relevanten Datennetze, sondern auch andere Telekommunikationsanbindungen wie ISDN-Leitungen, Mobilfunkausweichstrecken oder WLAN-Roaming von Clients relevant. Der Verwendungszweck beschreibt, warum ein Segment oder Anschluss existiert – etwa für Produktivsysteme, Entwicklung, Administration oder Gastzugänge. Der Zweck von Netzsegmenten kann durch einen sprechenden Namen dokumentiert werden, z. B. Management-Netz, OT-Netz, Internetanschluss, Netz der Finanzverwaltung. Dies hilft, Zuständigkeiten und Zugriffsrechte klar zuzuordnen, z. B. anhand von Geschäftsprozessen, Organisationseinheiten oder Zielgruppen (z. B. Gäste, Vertrieb, Leitung). Dabei sind, falls vorhanden, auch WLANs/SSIDs, IoT-Geräte wie vernetzte Kühlschränke, Hausleittechnik, operative Technologien oder Industrielle Steuerungssysteme zu berücksichtigen. Informationen können aus Netzwerkmanagementsystemen, Konfigurationsdateien oder Asset-Management-Tools gewonnen werden. Die Pflege kann als wiederkehrende Aufgabe in Prozesse eingebettet oder im Rahmen von Änderungen (z. B. Change Management) angestoßen werden. Auch eine einfache Pflege in Tabellenform kann sinnvoll sein – entscheidend ist die Klarheit und Aktualität."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "7b2381fe-9617-4b2a-a8da-7972b81a3909"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/ASST.2.1"
+  }
+ ]
+}

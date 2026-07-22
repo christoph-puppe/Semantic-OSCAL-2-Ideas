@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-security-assurance-security-monitoring-centra",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Centralised event logging facility",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1405",
+   "sequence": 10850
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1983",
+   "sequence": 10860
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1984",
+   "sequence": 10870
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1985",
+   "sequence": 10880
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1815",
+   "sequence": 10890
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0988",
+   "sequence": 10900
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Centralised event logging facility",
+     "name": "overview",
+     "prose": "A centralised event logging facility can be used to capture, protect and manage event logs from multiple sources in a coordinated manner. This may be achieved by using a Security Information and Event Management (SIEM) platform, a Security Orchestration, Automation and Response (SOAR) platform, or both. Furthermore, in support of a centralised event logging facility, it is important that an accurate and consistent time source is used to assist with identifying connections between events."
+    }
+   ]
+  }
+ }
+}

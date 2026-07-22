@@ -1,0 +1,48 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/set/subset/scg-cso",
+ "version": "2026.07.14.01",
+ "lifecycle": "active",
+ "title": "General Provider Responsibilities",
+ "label": "CSO",
+ "members": [
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/SCG-CSO-RSC",
+   "sequence": 2150
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/SCG-CSO-AUP",
+   "sequence": 2160
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/SCG-CSO-PUB",
+   "sequence": 2170
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/SCG-CSO-SDF",
+   "sequence": 2180
+  }
+ ],
+ "facets": {
+  "https://ns.fedramp.gov/cr26/facet/narrative@1": {
+   "description": "These rules apply to providers with FedRAMP Certifications of any type."
+  },
+  "https://ns.fedramp.gov/cr26/facet/scope@1": {
+   "types": [
+    "20x",
+    "Rev5"
+   ],
+   "paths": [
+    "Program",
+    "Agency"
+   ],
+   "classes": [
+    "B",
+    "C",
+    "D"
+   ],
+   "affects": [
+    "Providers"
+   ]
+  }
+ }
+}

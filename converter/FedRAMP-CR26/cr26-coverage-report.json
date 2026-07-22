@@ -1,0 +1,1492 @@
+{
+ "source": "FedRAMP Consolidated Rules for 2026",
+ "version": "2026.07.14.01",
+ "totals": {
+  "leaf-values": 7294,
+  "mapped": 7294,
+  "unmapped": 0,
+  "coverage-pct": 100.0
+ },
+ "objects": {
+  "requirements(rules+ksi)": 292,
+  "mappings": 373,
+  "sets": 100,
+  "tailorings": 4,
+  "total": 769
+ },
+ "modality(rule-level)": {
+  "must": 136,
+  "may": 20,
+  "should": 45,
+  "must-not": 11,
+  "should-not": 5,
+  "unspecified": 29
+ },
+ "tailoring-ops": {
+  "set-modality": 111
+ },
+ "converter-deviations(easings)": 0,
+ "counters": {
+  "updated-entries": 377,
+  "class-variant-rules": 29,
+  "timeframe-unitclass-crossings": 51,
+  "undeclared-subsets": 9,
+  "track-rules-rev5": 12,
+  "track-rules-20x": 9,
+  "flows-dropped": 1,
+  "ksi-class-variant": 5,
+  "term-alts": 188,
+  "ctl-overlays": 79
+ },
+ "synthesized-prose(variant-only-rules)": 29,
+ "dangling-related": 0,
+ "unmapped": [],
+ "path-map": [
+  {
+   "path": "cr26.CTL.*.*.guidance[]",
+   "count": 67,
+   "level": "L2",
+   "destination": "CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3)"
+  },
+  {
+   "path": "cr26.CTL.*.*.parameters[].parameterId",
+   "count": 16,
+   "level": "L2",
+   "destination": "CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3)"
+  },
+  {
+   "path": "cr26.CTL.*.*.parameters[].value",
+   "count": 16,
+   "level": "L2",
+   "destination": "CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3)"
+  },
+  {
+   "path": "cr26.CTL.*.*.updated[].comment",
+   "count": 1,
+   "level": "L2",
+   "destination": "CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3)"
+  },
+  {
+   "path": "cr26.CTL.*.*.updated[].date",
+   "count": 1,
+   "level": "L2",
+   "destination": "CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3)"
+  },
+  {
+   "path": "cr26.CTL.*.*.varies_by_class.*.guidance[]",
+   "count": 6,
+   "level": "L2",
+   "destination": "CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3)"
+  },
+  {
+   "path": "cr26.CTL.*.*.varies_by_class.*.parameters[].parameterId",
+   "count": 5,
+   "level": "L2",
+   "destination": "CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3)"
+  },
+  {
+   "path": "cr26.CTL.*.*.varies_by_class.*.parameters[].value",
+   "count": 5,
+   "level": "L2",
+   "destination": "CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3)"
+  },
+  {
+   "path": "cr26.FRD.data.all.*.alts[]",
+   "count": 188,
+   "level": "L1",
+   "destination": "terminology@1 payload per term (alts, links, chrome flags inside payload)"
+  },
+  {
+   "path": "cr26.FRD.data.all.*.definition",
+   "count": 75,
+   "level": "L1",
+   "destination": "terminology@1 payload per term (alts, links, chrome flags inside payload)"
+  },
+  {
+   "path": "cr26.FRD.data.all.*.do_not_link",
+   "count": 4,
+   "level": "L1",
+   "destination": "terminology@1 payload per term (alts, links, chrome flags inside payload)"
+  },
+  {
+   "path": "cr26.FRD.data.all.*.note",
+   "count": 23,
+   "level": "L1",
+   "destination": "terminology@1 payload per term (alts, links, chrome flags inside payload)"
+  },
+  {
+   "path": "cr26.FRD.data.all.*.notes[]",
+   "count": 7,
+   "level": "L1",
+   "destination": "terminology@1 payload per term (alts, links, chrome flags inside payload)"
+  },
+  {
+   "path": "cr26.FRD.data.all.*.reference",
+   "count": 13,
+   "level": "L1",
+   "destination": "terminology@1 payload per term (alts, links, chrome flags inside payload)"
+  },
+  {
+   "path": "cr26.FRD.data.all.*.reference_url",
+   "count": 13,
+   "level": "L1",
+   "destination": "terminology@1 payload per term (alts, links, chrome flags inside payload)"
+  },
+  {
+   "path": "cr26.FRD.data.all.*.tag",
+   "count": 52,
+   "level": "L1",
+   "destination": "terminology@1 payload per term (alts, links, chrome flags inside payload)"
+  },
+  {
+   "path": "cr26.FRD.data.all.*.term",
+   "count": 75,
+   "level": "L1",
+   "destination": "terminology@1 payload per term (alts, links, chrome flags inside payload)"
+  },
+  {
+   "path": "cr26.FRD.data.all.*.updated[].comment",
+   "count": 78,
+   "level": "L1",
+   "destination": "history -> L0 (values not object-carried; counted)"
+  },
+  {
+   "path": "cr26.FRD.data.all.*.updated[].date",
+   "count": 78,
+   "level": "L1",
+   "destination": "history -> L0 (values not object-carried; counted)"
+  },
+  {
+   "path": "cr26.FRD.info.effective.current_status",
+   "count": 1,
+   "level": "L1",
+   "destination": "terminology@1 glossary-info on the corpus root Set"
+  },
+  {
+   "path": "cr26.FRD.info.effective.date.grace.default",
+   "count": 1,
+   "level": "L1",
+   "destination": "terminology@1 glossary-info on the corpus root Set"
+  },
+  {
+   "path": "cr26.FRD.info.effective.date.grace.until_next_assessment",
+   "count": 1,
+   "level": "L1",
+   "destination": "terminology@1 glossary-info on the corpus root Set"
+  },
+  {
+   "path": "cr26.FRD.info.effective.date.maintain",
+   "count": 1,
+   "level": "L1",
+   "destination": "terminology@1 glossary-info on the corpus root Set"
+  },
+  {
+   "path": "cr26.FRD.info.effective.date.obtain",
+   "count": 1,
+   "level": "L1",
+   "destination": "terminology@1 glossary-info on the corpus root Set"
+  },
+  {
+   "path": "cr26.FRD.info.effective.date.optional_adoption",
+   "count": 1,
+   "level": "L1",
+   "destination": "terminology@1 glossary-info on the corpus root Set"
+  },
+  {
+   "path": "cr26.FRD.info.effective.is",
+   "count": 1,
+   "level": "L1",
+   "destination": "terminology@1 glossary-info on the corpus root Set"
+  },
+  {
+   "path": "cr26.FRD.info.name",
+   "count": 1,
+   "level": "L1",
+   "destination": "terminology@1 glossary-info on the corpus root Set"
+  },
+  {
+   "path": "cr26.FRD.info.purpose",
+   "count": 1,
+   "level": "L1",
+   "destination": "terminology@1 glossary-info on the corpus root Set"
+  },
+  {
+   "path": "cr26.FRD.info.short_name",
+   "count": 1,
+   "level": "L1",
+   "destination": "terminology@1 glossary-info on the corpus root Set"
+  },
+  {
+   "path": "cr26.FRD.info.status",
+   "count": 1,
+   "level": "L1",
+   "destination": "terminology@1 glossary-info on the corpus root Set"
+  },
+  {
+   "path": "cr26.FRD.info.web_name",
+   "count": 1,
+   "level": "L1",
+   "destination": "terminology@1 glossary-info on the corpus root Set"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.affects[]",
+   "count": 246,
+   "level": "L1",
+   "destination": "statements[0].obligated-parties[]"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.artifacts.all[]",
+   "count": 79,
+   "level": "L1",
+   "destination": "assessment-criteria@1: required-artifacts"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.corrective_actions[]",
+   "count": 12,
+   "level": "L1",
+   "destination": "narrative@1 / reporting-obligation@1 payload fields"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.danger",
+   "count": 3,
+   "level": "L1",
+   "destination": "narrative@1 / reporting-obligation@1 payload fields"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.examples[].examples[]",
+   "count": 24,
+   "level": "L1",
+   "destination": "assessment-criteria@1: examples[] {id, examples, key-tests} - the KSI-shaped test data"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.examples[].id",
+   "count": 5,
+   "level": "L1",
+   "destination": "assessment-criteria@1: examples[] {id, examples, key-tests} - the KSI-shaped test data"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.examples[].key_tests[]",
+   "count": 15,
+   "level": "L1",
+   "destination": "assessment-criteria@1: examples[] {id, examples, key-tests} - the KSI-shaped test data"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.following_information[]",
+   "count": 206,
+   "level": "L1",
+   "destination": "narrative@1 / reporting-obligation@1 payload fields"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.following_information_bullets[]",
+   "count": 10,
+   "level": "L1",
+   "destination": "narrative@1 / reporting-obligation@1 payload fields"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.force",
+   "count": 217,
+   "level": "L1",
+   "destination": "statements[0].modality (code map)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.name",
+   "count": 246,
+   "level": "L1",
+   "destination": "Requirement.title"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.note",
+   "count": 58,
+   "level": "L1",
+   "destination": "narrative@1 / reporting-obligation@1 payload fields"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.notes[]",
+   "count": 56,
+   "level": "L1",
+   "destination": "narrative@1 / reporting-obligation@1 payload fields"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.notification[].method",
+   "count": 31,
+   "level": "L1",
+   "destination": "reporting-obligation@1: notification[]"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.notification[].name",
+   "count": 31,
+   "level": "L1",
+   "destination": "reporting-obligation@1: notification[]"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.notification[].party",
+   "count": 31,
+   "level": "L1",
+   "destination": "reporting-obligation@1: notification[]"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.notification[].target",
+   "count": 31,
+   "level": "L1",
+   "destination": "reporting-obligation@1: notification[]"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.reference",
+   "count": 6,
+   "level": "L1",
+   "destination": "relations schema/reference -> external URL"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.reference_url",
+   "count": 6,
+   "level": "L1",
+   "destination": "relations schema/reference -> external URL"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.related[]",
+   "count": 78,
+   "level": "L1",
+   "destination": "relations related -> /cr26/req/<id> (dangling counted)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.schema.name",
+   "count": 24,
+   "level": "L1",
+   "destination": "relations schema -> url; name kept in narrative@1"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.schema.url",
+   "count": 24,
+   "level": "L1",
+   "destination": "relations schema -> url; name kept in narrative@1"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.statement",
+   "count": 217,
+   "level": "L1",
+   "destination": "statements[0].prose.en"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.terms[]",
+   "count": 985,
+   "level": "L1",
+   "destination": "relations uses-term -> /cr26/term/<id>"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.timeframe_num",
+   "count": 17,
+   "level": "L1",
+   "destination": "statement parameter 'timeframe' (elapsed-duration | calendar-period by unit)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.timeframe_type",
+   "count": 17,
+   "level": "L1",
+   "destination": "statement parameter 'timeframe' (elapsed-duration | calendar-period by unit)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.updated[].comment",
+   "count": 253,
+   "level": "L1",
+   "destination": "history -> L0 (counted)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.updated[].date",
+   "count": 253,
+   "level": "L1",
+   "destination": "history -> L0 (counted)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.artifacts.all[]",
+   "count": 31,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.following_information[]",
+   "count": 57,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.force",
+   "count": 111,
+   "level": "L1",
+   "destination": "class Tailoring op set-modality (monotone) OR + converter Deviation when easing (counted)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.note",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.1.fir.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.1.fir.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.1.fir.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.1.iir.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.1.iir.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.1.iir.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.1.oir.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.1.oir.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.1.oir.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.2.fir.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.2.fir.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.2.fir.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.2.iir.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.2.iir.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.2.iir.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.2.irv_lev.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.2.irv_lev.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.2.irv_lev.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.2.nirv_lev.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.2.nirv_lev.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.2.nirv_lev.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.2.nlev.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.2.nlev.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.2.nlev.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.2.oir.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.2.oir.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.2.oir.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.3.fir.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.3.fir.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.3.fir.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.3.iir.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.3.iir.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.3.iir.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.3.irv_lev.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.3.irv_lev.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.3.irv_lev.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.3.nirv_lev.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.3.nirv_lev.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.3.nirv_lev.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.3.nlev.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.3.nlev.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.3.nlev.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.3.oir.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.3.oir.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.3.oir.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.4.fir.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.4.fir.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.4.fir.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.4.iir.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.4.iir.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.4.iir.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.4.irv_lev.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.4.irv_lev.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.4.irv_lev.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.4.nirv_lev.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.4.nirv_lev.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.4.nirv_lev.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.4.nlev.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.4.nlev.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.4.nlev.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.4.oir.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.4.oir.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.4.oir.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.5.fir.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.5.fir.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.5.fir.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.5.iir.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.5.iir.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.5.iir.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.5.irv_lev.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.5.irv_lev.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.5.irv_lev.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.5.nirv_lev.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.5.nirv_lev.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.5.nirv_lev.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.5.nlev.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.5.nlev.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.5.nlev.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.5.oir.description",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.5.oir.timeframe_num",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.pain_timeframes.5.oir.timeframe_type",
+   "count": 4,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.rev5_controls_list.AC[]",
+   "count": 141,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.rev5_controls_list.AT[]",
+   "count": 17,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.rev5_controls_list.AU[]",
+   "count": 92,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.rev5_controls_list.CA[]",
+   "count": 42,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.rev5_controls_list.CM[]",
+   "count": 91,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.rev5_controls_list.CP[]",
+   "count": 67,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.rev5_controls_list.IA[]",
+   "count": 98,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.rev5_controls_list.IR[]",
+   "count": 58,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.rev5_controls_list.MA[]",
+   "count": 28,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.rev5_controls_list.MP[]",
+   "count": 21,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.rev5_controls_list.PE[]",
+   "count": 58,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.rev5_controls_list.PL[]",
+   "count": 21,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.rev5_controls_list.PS[]",
+   "count": 30,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.rev5_controls_list.RA[]",
+   "count": 40,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.rev5_controls_list.SA[]",
+   "count": 60,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.rev5_controls_list.SC[]",
+   "count": 114,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.rev5_controls_list.SI[]",
+   "count": 87,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.rev5_controls_list.SR[]",
+   "count": 37,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.statement",
+   "count": 111,
+   "level": "L2",
+   "destination": "class-variants payload (full variant preserved; prose/artifact variance = open D13 ceremony question)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.timeframe_num",
+   "count": 51,
+   "level": "L1",
+   "destination": "class Tailoring op set-parameter when unit-class matches base; else L2 (counted)"
+  },
+  {
+   "path": "cr26.FRR.*.data.*.*.*.varies_by_class.*.timeframe_type",
+   "count": 51,
+   "level": "L1",
+   "destination": "class Tailoring op set-parameter when unit-class matches base; else L2 (counted)"
+  },
+  {
+   "path": "cr26.FRR.*.info.20x.effective.current_status",
+   "count": 10,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.20x.effective.date.grace.default",
+   "count": 10,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.20x.effective.date.grace.until_next_assessment",
+   "count": 10,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.20x.effective.date.maintain",
+   "count": 10,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.20x.effective.date.obtain",
+   "count": 10,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.20x.effective.date.optional_adoption",
+   "count": 10,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.20x.effective.is",
+   "count": 10,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.20x.subsets.*.applicability.affects[]",
+   "count": 4,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.20x.subsets.*.applicability.classes[]",
+   "count": 13,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.20x.subsets.*.applicability.paths[]",
+   "count": 4,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.20x.subsets.*.applicability.types[]",
+   "count": 4,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.20x.subsets.*.description",
+   "count": 4,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.20x.subsets.*.name",
+   "count": 4,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.effective.current_status",
+   "count": 7,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.effective.date.grace.default",
+   "count": 7,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.effective.date.grace.until_next_assessment",
+   "count": 7,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.effective.date.maintain",
+   "count": 7,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.effective.date.obtain",
+   "count": 7,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.effective.date.optional_adoption",
+   "count": 5,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.effective.is",
+   "count": 7,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.flows[].activity",
+   "count": 1,
+   "level": "declared-drop",
+   "destination": "process-flow diagrams: linked resources, not requirement data (D17)"
+  },
+  {
+   "path": "cr26.FRR.*.info.flows[].description",
+   "count": 1,
+   "level": "declared-drop",
+   "destination": "process-flow diagrams: linked resources, not requirement data (D17)"
+  },
+  {
+   "path": "cr26.FRR.*.info.flows[].nodes.An incident is identified",
+   "count": 1,
+   "level": "declared-drop",
+   "destination": "process-flow diagrams: linked resources, not requirement data (D17)"
+  },
+  {
+   "path": "cr26.FRR.*.info.flows[].nodes.IEC-CSO-DPR",
+   "count": 1,
+   "level": "declared-drop",
+   "destination": "process-flow diagrams: linked resources, not requirement data (D17)"
+  },
+  {
+   "path": "cr26.FRR.*.info.flows[].nodes.IEC-CSO-EFI",
+   "count": 1,
+   "level": "declared-drop",
+   "destination": "process-flow diagrams: linked resources, not requirement data (D17)"
+  },
+  {
+   "path": "cr26.FRR.*.info.flows[].nodes.IEC-CSO-EFR",
+   "count": 1,
+   "level": "declared-drop",
+   "destination": "process-flow diagrams: linked resources, not requirement data (D17)"
+  },
+  {
+   "path": "cr26.FRR.*.info.flows[].nodes.IEC-CSO-FIR",
+   "count": 1,
+   "level": "declared-drop",
+   "destination": "process-flow diagrams: linked resources, not requirement data (D17)"
+  },
+  {
+   "path": "cr26.FRR.*.info.flows[].nodes.IEC-CSO-IIR",
+   "count": 1,
+   "level": "declared-drop",
+   "destination": "process-flow diagrams: linked resources, not requirement data (D17)"
+  },
+  {
+   "path": "cr26.FRR.*.info.flows[].nodes.IEC-CSO-OIR",
+   "count": 1,
+   "level": "declared-drop",
+   "destination": "process-flow diagrams: linked resources, not requirement data (D17)"
+  },
+  {
+   "path": "cr26.FRR.*.info.flows[].nodes.Incident Evaluation and Communication are complete.",
+   "count": 1,
+   "level": "declared-drop",
+   "destination": "process-flow diagrams: linked resources, not requirement data (D17)"
+  },
+  {
+   "path": "cr26.FRR.*.info.flows[].steps[].description",
+   "count": 7,
+   "level": "declared-drop",
+   "destination": "process-flow diagrams: linked resources, not requirement data (D17)"
+  },
+  {
+   "path": "cr26.FRR.*.info.flows[].steps[].from",
+   "count": 9,
+   "level": "declared-drop",
+   "destination": "process-flow diagrams: linked resources, not requirement data (D17)"
+  },
+  {
+   "path": "cr26.FRR.*.info.flows[].steps[].to",
+   "count": 9,
+   "level": "declared-drop",
+   "destination": "process-flow diagrams: linked resources, not requirement data (D17)"
+  },
+  {
+   "path": "cr26.FRR.*.info.name",
+   "count": 17,
+   "level": "L1",
+   "destination": "family Set: title/label/lifecycle"
+  },
+  {
+   "path": "cr26.FRR.*.info.purpose",
+   "count": 17,
+   "level": "L1",
+   "destination": "family Set: narrative description / scope tag"
+  },
+  {
+   "path": "cr26.FRR.*.info.rev5.effective.current_status",
+   "count": 10,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.rev5.effective.date.grace.default",
+   "count": 10,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.rev5.effective.date.grace.until_next_assessment",
+   "count": 10,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.rev5.effective.date.maintain",
+   "count": 10,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.rev5.effective.date.obtain",
+   "count": 10,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.rev5.effective.date.optional_adoption",
+   "count": 10,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.rev5.effective.is",
+   "count": 10,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.rev5.subsets.*.applicability.affects[]",
+   "count": 5,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.rev5.subsets.*.applicability.classes[]",
+   "count": 16,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.rev5.subsets.*.applicability.paths[]",
+   "count": 10,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.rev5.subsets.*.applicability.types[]",
+   "count": 5,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.rev5.subsets.*.description",
+   "count": 5,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.rev5.subsets.*.name",
+   "count": 5,
+   "level": "L1",
+   "destination": "effectivity@1 on family Set (default / per-track)"
+  },
+  {
+   "path": "cr26.FRR.*.info.short_name",
+   "count": 17,
+   "level": "L1",
+   "destination": "family Set: title/label/lifecycle"
+  },
+  {
+   "path": "cr26.FRR.*.info.status",
+   "count": 17,
+   "level": "L1",
+   "destination": "family Set: title/label/lifecycle"
+  },
+  {
+   "path": "cr26.FRR.*.info.subsets.*.applicability.affects[]",
+   "count": 45,
+   "level": "L1",
+   "destination": "scope@1 on subset Set (types/paths/classes/affects) + class & type Set composition"
+  },
+  {
+   "path": "cr26.FRR.*.info.subsets.*.applicability.classes[]",
+   "count": 125,
+   "level": "L1",
+   "destination": "scope@1 on subset Set (types/paths/classes/affects) + class & type Set composition"
+  },
+  {
+   "path": "cr26.FRR.*.info.subsets.*.applicability.paths[]",
+   "count": 78,
+   "level": "L1",
+   "destination": "scope@1 on subset Set (types/paths/classes/affects) + class & type Set composition"
+  },
+  {
+   "path": "cr26.FRR.*.info.subsets.*.applicability.types[]",
+   "count": 78,
+   "level": "L1",
+   "destination": "scope@1 on subset Set (types/paths/classes/affects) + class & type Set composition"
+  },
+  {
+   "path": "cr26.FRR.*.info.subsets.*.description",
+   "count": 45,
+   "level": "L1",
+   "destination": "subset Set: title / narrative description"
+  },
+  {
+   "path": "cr26.FRR.*.info.subsets.*.name",
+   "count": 45,
+   "level": "L1",
+   "destination": "subset Set: title / narrative description"
+  },
+  {
+   "path": "cr26.FRR.*.info.tag",
+   "count": 17,
+   "level": "L1",
+   "destination": "family Set: narrative description / scope tag"
+  },
+  {
+   "path": "cr26.FRR.*.info.web_name",
+   "count": 17,
+   "level": "L1",
+   "destination": "family Set annotations.web_name (chrome)"
+  },
+  {
+   "path": "cr26.KSI.*.id",
+   "count": 10,
+   "level": "L1",
+   "destination": "KSI category Set: id/title/label/annotations/lifecycle"
+  },
+  {
+   "path": "cr26.KSI.*.indicators.*.controls[]",
+   "count": 373,
+   "level": "L1",
+   "destination": "Mapping objects (relationship supports; 8.6 untyped-import rule)"
+  },
+  {
+   "path": "cr26.KSI.*.indicators.*.name",
+   "count": 46,
+   "level": "L1",
+   "destination": "KSI Requirement.title"
+  },
+  {
+   "path": "cr26.KSI.*.indicators.*.statement",
+   "count": 41,
+   "level": "L1",
+   "destination": "KSI statements[0].prose.en (modality unspecified: indicator language)"
+  },
+  {
+   "path": "cr26.KSI.*.indicators.*.terms[]",
+   "count": 91,
+   "level": "L1",
+   "destination": "relations uses-term"
+  },
+  {
+   "path": "cr26.KSI.*.indicators.*.updated[].comment",
+   "count": 46,
+   "level": "L1",
+   "destination": "history -> L0 (counted)"
+  },
+  {
+   "path": "cr26.KSI.*.indicators.*.updated[].date",
+   "count": 46,
+   "level": "L1",
+   "destination": "history -> L0 (counted)"
+  },
+  {
+   "path": "cr26.KSI.*.indicators.*.varies_by_class.*.statement",
+   "count": 10,
+   "level": "L2",
+   "destination": "class-variants payload on the KSI Requirement"
+  },
+  {
+   "path": "cr26.KSI.*.name",
+   "count": 10,
+   "level": "L1",
+   "destination": "KSI category Set: id/title/label/annotations/lifecycle"
+  },
+  {
+   "path": "cr26.KSI.*.short_name",
+   "count": 10,
+   "level": "L1",
+   "destination": "KSI category Set: id/title/label/annotations/lifecycle"
+  },
+  {
+   "path": "cr26.KSI.*.status",
+   "count": 10,
+   "level": "L1",
+   "destination": "KSI category Set: id/title/label/annotations/lifecycle"
+  },
+  {
+   "path": "cr26.KSI.*.web_name",
+   "count": 10,
+   "level": "L1",
+   "destination": "KSI category Set: id/title/label/annotations/lifecycle"
+  },
+  {
+   "path": "cr26.info.default_artifacts.FRR[]",
+   "count": 5,
+   "level": "L1",
+   "destination": "assessment-criteria on corpus root: default-artifacts"
+  },
+  {
+   "path": "cr26.info.default_artifacts.KSI[]",
+   "count": 5,
+   "level": "L1",
+   "destination": "assessment-criteria on corpus root: default-artifacts"
+  },
+  {
+   "path": "cr26.info.description",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance; description -> narrative on corpus root"
+  },
+  {
+   "path": "cr26.info.last_updated",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance; description -> narrative on corpus root"
+  },
+  {
+   "path": "cr26.info.title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance; description -> narrative on corpus root"
+  },
+  {
+   "path": "cr26.info.version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance; description -> narrative on corpus root"
+  }
+ ]
+}

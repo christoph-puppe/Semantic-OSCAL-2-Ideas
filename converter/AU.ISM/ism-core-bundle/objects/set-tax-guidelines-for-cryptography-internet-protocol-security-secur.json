@@ -1,0 +1,23 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-internet-protocol-security-secur",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Security association lifetimes",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0498",
+   "sequence": 15680
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Security association lifetimes",
+     "name": "overview",
+     "prose": "Using a security association lifetime of less than four hours (14400 seconds) for IKE version 2 can provide a balance between security and usability."
+    }
+   ]
+  }
+ }
+}

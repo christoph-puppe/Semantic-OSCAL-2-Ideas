@@ -1,0 +1,40 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/req/CMU-CSO-CAT",
+ "version": "2026.07.14.01",
+ "label": "CMU-CSO-CAT",
+ "lifecycle": "active",
+ "title": "Configuration of Agency Tenants",
+ "statements": [
+  {
+   "id": "s1",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.fedramp.gov/cr26/party/providers"
+   ],
+   "prose": {
+    "en": "Providers SHOULD configure agency tenants by default to use cryptographic services that use cryptographic modules or update streams of cryptographic modules with active validations under the NIST Cryptographic Module Validation Program when such modules are available."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Agency"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Provider"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Validation"
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "required-artifacts": [
+    "List of cryptographic modules used by default including whether these modules are validated under the NIST Cryptographic Module Validation Program or are update streams of such modules."
+   ]
+  }
+ }
+}

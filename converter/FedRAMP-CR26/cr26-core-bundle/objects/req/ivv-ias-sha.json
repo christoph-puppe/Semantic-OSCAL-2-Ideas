@@ -1,0 +1,41 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/req/IVV-IAS-SHA",
+ "version": "2026.07.14.01",
+ "label": "IVV-IAS-SHA",
+ "lifecycle": "active",
+ "title": "Sharing Advice",
+ "statements": [
+  {
+   "id": "s1",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.fedramp.gov/cr26/party/assessors"
+   ],
+   "prose": {
+    "en": "Assessors MAY share advice with providers they are assessing about techniques and procedures that will improve the provider's security posture or the effectiveness, clarity, and accuracy of their verification, validation and reporting procedures, UNLESS doing so is likely to compromise the objectivity and integrity of the assessment."
+   }
+  }
+ ],
+ "relations": [
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Assessor"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Likely"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Provider"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Validation"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Verification"
+  }
+ ]
+}

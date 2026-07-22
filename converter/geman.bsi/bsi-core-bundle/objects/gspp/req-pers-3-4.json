@@ -1,0 +1,85 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/PERS.3.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "PERS.3.4",
+ "lifecycle": "active",
+ "title": "Stellenbeschreibungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Personal SOLLTE Stellenbeschreibungen vor Ausschreibung zu besetzender Stellen dokumentieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "dokumentieren",
+     "result": "Stellenbeschreibungen",
+     "result-specification": "vor Ausschreibung zu besetzender Stellen"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Prozess Personalmanagement"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.31",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.33",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.35"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Eine Stellenbeschreibung ist hier ein Dokument, das die zentralen Aufgaben, Verantwortlichkeiten, Befugnisse und fachlichen sowie sicherheitsrelevanten Kriterien einer Position vor deren Ausschreibung festhält. Der Zweck dieser Anforderung liegt darin, klare Rollen und Verantwortlichkeiten zu definieren, um sowohl Fehlbesetzungen als auch unklare Zuständigkeiten zu vermeiden. Ohne eine dokumentierte Stellenbeschreibung könnte eine Institution Personen einstellen, deren Qualifikation oder Vertrauenswürdigkeit nicht den tatsächlichen sicherheitsrelevanten Kriterien entsprechen, was zu erhöhtem Missbrauchsrisiko oder unzureichender Aufgabenerfüllung führen könnte. Eine sauber ausgearbeitete Stellenbeschreibung kann dagegen Transparenz schaffen, spätere Konflikte reduzieren und die Sicherheit erhöhen, indem bereits im Auswahlprozess klar wird, welche Fachkenntnisse und Integritätsanforderungen benötigt werden. Beachten Sie dabei auch rechtliche Anforderungen wie das AGG. Zur Umsetzung kann eine Institution zunächst ein standardisiertes Format für Stellenbeschreibungen verwenden, in dem u.a. Aufgabenbereiche, Verantwortlichkeiten, sowie erforderliche fachliche und sicherheitsrelevante Qualifikationen erfasst werden. Eine abgestufte Vorlage kann bei unterschiedlichen Rollenarten (z.B. operative Mitarbeitende, Teamleitungen, Fachspezialisten) helfen, die Konsistenz zu wahren. Prozessual kann eine interne Prüfschleife eingerichtet werden, in der HR und die jeweilige Fachabteilung die Beschreibung autorisieren, bevor eine Stelle öffentlich ausgeschrieben wird. Außerdem kann es hilfreich sein, regelmäßig zu prüfen, ob bestehende Stellenbeschreibungen noch zu aktuellen Prozessen und eingesetzten Technologien passen, sodass keine veralteten oder unvollständigen Kriterien in die Rekrutierung einfließen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "280066e0-d0e8-4b93-88e9-697852b5873f"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/PERS.2.2"
+  }
+ ]
+}

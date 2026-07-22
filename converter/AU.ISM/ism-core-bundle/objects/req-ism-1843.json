@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-1843",
+ "version": "2026.06.18",
+ "label": "ISM-1843",
+ "lifecycle": "active",
+ "title": "Control: ism-1843",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "User accounts with unconstrained delegation are reviewed at least annually, and those without an SPN or demonstrated business requirement are removed."
+   }
+  }
+ ]
+}

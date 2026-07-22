@@ -1,0 +1,103 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.3.10",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.3.10",
+ "lifecycle": "active",
+ "title": "Autorisierung von Datenlokationen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets für Daten SOLLTE Datenlokationen durch {param:asst.3.10-prm1} autorisieren."
+   },
+   "parameters": [
+    {
+     "name": "asst.3.10-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "autorisieren",
+     "result": "Datenlokationen",
+     "result-specification": "durch {{eine zuständige Person oder Rolle}}",
+     "target-object-categories": [
+      "Daten"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Lieferketten",
+      "Shadow IT"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Autorisierte Datenlokationen sind virtuelle oder physische Orte, an denen die Speicherung oder anderweitige Verarbeitung der jeweiligen Datenkategorie durch die Institution erlaubt wird. Physische Orten sind z.B. Serverstandorte in der EU, aber auch die organisatorische Regelung zu Standorten wie dem Mobile Arbeitsplatz oder Auslandsreisen außerhalb der EU gemeint. Regelungen könnten hier z.B. sein: \"Verarbeitung als vertraulich markierter Daten nur innerhalb von Institutsgebäuden\", \"Personenbezogene Daten nur innerhalb der EU\". Je nach Datenart bestehen auch häufig Compliance-Verpflichtungen (z.B. DSGVO, Staatenliste im Sinne von § 13 Abs. 1 Nr. 17 SÜG), durch die erlaubte Datenlokationen beschränkt sind. Virtuelle Datenlokationen (z.B. VoIP-Netz, dom0, Hauptgebäude) sind Verarbeitungssphären."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "asst.3.10-prm1": {
+     "label": "eine zuständige Person oder Rolle",
+     "alt-identifier": "52eee4a3-f5cf-444d-ad0c-9c83c693481b"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "52eee4a3-f5cf-444d-ad0c-9c83c693481b"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/BES.2.2"
+  }
+ ]
+}

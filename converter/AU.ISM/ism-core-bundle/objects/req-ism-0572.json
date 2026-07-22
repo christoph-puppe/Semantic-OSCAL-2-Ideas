@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-0572",
+ "version": "2026.06.18",
+ "label": "ISM-0572",
+ "lifecycle": "active",
+ "title": "Control: ism-0572",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Opportunistic TLS encryption is enabled on email servers that make incoming or outgoing email connections over public network infrastructure."
+   }
+  }
+ ]
+}

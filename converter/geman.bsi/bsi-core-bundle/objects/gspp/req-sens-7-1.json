@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.7.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.7.1",
+ "lifecycle": "active",
+ "title": "Spezifische Sensibilisierung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende SOLLTE zu zielobjektspezifischen Schutzmaßnahmen zielgruppengerecht sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "zu zielobjektspezifischen Schutzmaßnahmen",
+     "result-specification": "zielgruppengerecht",
+     "target-object-categories": [
+      "Nutzende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Kann dazu beitragen, dass Personen Risiken, die mit ihrer konkreten Tätigkeit, ihrem Arbeitsumfeld oder den von ihnen genutzten Systemen verbunden sind, frühzeitig erkennen und angemessen reagieren können. Ziel ist es auf die spezifischen Schutzbedarfe der jeweiligen Zielobjekte – wie z. B. bestimmte IT-Systeme, Produktionsanlagen, Forschungsdaten oder vertrauliche Kundeninformationen – aufmerksam zu machen. Dazu können sowohl technische als auch organisatorischen Schutzmaßnahmen gehören. Der Begriff „zielgruppengerecht“ meint dabei, dass Inhalte in einer Form, Tiefe und Sprache bereitgestellt werden, die für die jeweiligen Nutzenden verständlich, relevant und handlungsnah sind. Für die Zielgruppengerechtigkeit ist eine Zielgruppenanalyse zweckmäßig. Die Schutzmaßnahmen ergeben sich aus der konkreten Implementierung der Anforderungen durch die Institution."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "d988364a-6e20-4f5f-ae5c-dacae6b26cd6"
+  }
+ ]
+}

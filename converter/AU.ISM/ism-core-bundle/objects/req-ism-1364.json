@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-1364",
+ "version": "2026.06.18",
+ "label": "ISM-1364",
+ "lifecycle": "active",
+ "title": "Control: ism-1364",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Network devices managing VLANs terminate VLANs belonging to different security domains on separate physical network interfaces."
+   }
+  }
+ ]
+}

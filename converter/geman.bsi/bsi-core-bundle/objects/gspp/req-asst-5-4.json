@@ -1,0 +1,88 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.5.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.5.4",
+ "lifecycle": "active",
+ "title": "Behandlung als Änderungen und Tests",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets für IT-Systeme SOLLTE zur Wartung erforderliche Änderungen im Einklang mit den Verfahren und Regelungen zum Management von Änderungen verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "zur Wartung erforderliche Änderungen",
+     "result-specification": "im Einklang mit den Verfahren und Regelungen zum Management von Änderungen",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Betriebshandbuch"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.28",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.31",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.26"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Werden bei Wartungsarbeiten Änderungen vorgenommen, so sind die Verfahren und Regelungen zum Management von Änderungen auch hier anzuwenden. Ein nicht abgestimmter oder ungetesteter Eingriff könnte etwa zu Systemausfällen, Datenverlust oder dem Einbringen von Schwachstellen führen, während ein geordnetes Änderungsmanagement solche Risiken deutlich reduzieren kann. Sinnvoll ist oft ein kurzer Wartungsleitfaden, in dem typische Abläufe (z. B. Vorab‑Backup, Rollback‑Option, Dokumentation des Ergebnisses) hinterlegt werden. Auf diese Weise kann jede Wartung reproduzierbar, überprüfbar und ressourcenschonend gestaltet werden, ohne sich auf konkrete Herstellerprodukte festzulegen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "45437d44-0d0c-402f-934a-5cb48552b203"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/TEST.1.1"
+  }
+ ]
+}

@@ -1,0 +1,68 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/set/subset/vdr-tfr",
+ "version": "2026.07.14.01",
+ "lifecycle": "active",
+ "title": "Timeframes",
+ "label": "TFR",
+ "members": [
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/VDR-TFR-NMV",
+   "sequence": 2680
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/VDR-TFR-PDD",
+   "sequence": 2690
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/VDR-TFR-PCD",
+   "sequence": 2700
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/VDR-TFR-PVR",
+   "sequence": 2710
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/VDR-TFR-RMN",
+   "sequence": 2720
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/VDR-TFR-KEV",
+   "sequence": 2730
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/VDR-TFR-PSD",
+   "sequence": 2740
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/set/subset/vdr-tfr-20x",
+   "sequence": 2750
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/set/subset/vdr-tfr-rev5",
+   "sequence": 2760
+  }
+ ],
+ "facets": {
+  "https://ns.fedramp.gov/cr26/facet/narrative@1": {
+   "description": "These rules apply to timeframes for vulnerability detection and response."
+  },
+  "https://ns.fedramp.gov/cr26/facet/scope@1": {
+   "types": [
+    "20x",
+    "Rev5"
+   ],
+   "paths": [
+    "Program",
+    "Agency"
+   ],
+   "classes": [
+    "B",
+    "C",
+    "D"
+   ],
+   "affects": [
+    "Providers"
+   ]
+  }
+ }
+}

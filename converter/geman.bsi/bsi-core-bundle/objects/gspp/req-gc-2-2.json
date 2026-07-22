@@ -1,0 +1,59 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GC.2.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GC.2.2",
+ "lifecycle": "active",
+ "title": "Festlegung des internen Kontextes der Institution",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Governance und Compliance MUSS alle für das Informationssicherheitsmanagement relevanten internen Rahmenbedingungen analysieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "analysieren",
+     "result": "alle für das Informationssicherheitsmanagement relevanten internen Rahmenbedingungen"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Alle internen Faktoren, die einen Einfluss auf die Informationssicherheitsziele und -strategie der Institution haben, werden systematisch analysiert und dokumentiert. Dazu zählen institutionseigene Faktoren wie z.B. vorhandene Institutionsstrategien, Werte und Institutionsziele; die Institutionsstruktur mit Hierarchien, Abteilungen und Zuständigkeitsbereichen; die in Ihrer Institution etablierte Prozesse und Arbeitsabläufe; vorhandene IT-Infrastruktur und Informationssysteme und die  Institutionskultur und Einstellungen zur Sicherheit."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "facd5982-78f3-46d4-ae07-ae1ede72ab46"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/GC.2.1"
+  }
+ ]
+}

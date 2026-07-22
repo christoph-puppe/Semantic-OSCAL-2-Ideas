@@ -1,0 +1,85 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.7.9",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.7.9",
+ "lifecycle": "active",
+ "title": "Aktive Inhalte",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende von Office-Anwendungen SOLLTE zur Überprüfung aktiver Inhalte vor der Aktivierung sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "zur Überprüfung aktiver Inhalte vor der Aktivierung",
+     "target-object-categories": [
+      "Nutzende",
+      "Office-Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Office-Dateien mit aktiven Inhalten (z.B. Makros) können Schadprogramme enthalten. In diesem Kontext bedeutet „aktive Inhalte“ jegliche Funktionen in Office-Dokumenten, die über reine Text- oder Datenanzeige hinaus eigenständig Code ausführen oder externe Ressourcen ansprechen können. Bei unbekannten oder unerwarteten Dokumenten mit solchen Inhalten ist es sinnvoll, zunächst Rücksprache mit der absendenden Person zu halten, um die Echtheit des Dokumentes zu bestätigen und zu klären, ob die aktiven Inhalte für die Kommunikation zwingend erforderlich sind. Werden aktive Inhalte tatsächlich benötigt, so ist eine Prüfung des Quellcodes vor der Ausführung sinnvoll, die über die Meldewege angestoßen werden kann. Wurde für bestimmte aktive Inhalte bereits eine Freigabe erteilt, so kann deren erneute Prüfung bei jedem Öffnen des Dokumenten entfallen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "d4253a3f-ba3b-4446-b6cc-bfbd9285eb27"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/KONF.12.1.11"
+  }
+ ]
+}

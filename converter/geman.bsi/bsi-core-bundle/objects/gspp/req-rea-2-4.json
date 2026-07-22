@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/REA.2.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "REA.2.4",
+ "lifecycle": "active",
+ "title": "Diagnosedaten",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sicherheitsvorfallsbehandlung SOLLTE Diagnosemethoden für den Fall, dass der Vorfall sich mit den standardisiert erfassten Informationen nicht ausreichend analysieren lässt, verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "Diagnosemethoden",
+     "result-specification": "für den Fall, dass der Vorfall sich mit den standardisiert erfassten Informationen nicht ausreichend analysieren lässt,"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Behandlung von Sicherheitsvorfällen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.39",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.47",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.40"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Der Begriff Diagnosemethoden bezeichnet in diesem Kontext strukturierte Verfahren, Werkzeuge oder Analyseansätze, die eingesetzt werden können, um bei Sicherheitsvorfällen zusätzliche Informationen zu gewinnen, wenn die standardisierten Erstinformationen nicht ausreichen. Der Sinn der Vorschrift liegt darin, die Gefahr zu reduzieren, dass ein Vorfall unvollständig verstanden bleibt und dadurch falsche Entscheidungen getroffen werden. Eine Institution kann die Anforderung durch verschiedene technische und prozessuale Maßnahmen abbilden. So kann sie (1) erweiterte Protokollierungsoptionen aktivieren, etwa durch temporäres Erhöhen von Log-Levels in relevanten Systemen, (2) Datensicherungen einzelner betroffener Systeme, Anwendungen oder Netzwerksegmente vornehmen, um die Nachvollziehbarkeit zu gewährleisten, und (3) spezielle Analysewerkzeuge einsetzen, beispielsweise für Speicherabbilder oder Netzwerkanomalien. Ergänzend kann es sinnvoll sein, ein Playbook mit typischen Diagnosepfaden für häufige Vorfallarten bereitzuhalten, sodass Mitarbeitende bei Bedarf gezielt auf tiefergehende Analysen zurückgreifen können."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "b812b0ef-680c-4285-982c-8f0829fd0930"
+  }
+ ]
+}

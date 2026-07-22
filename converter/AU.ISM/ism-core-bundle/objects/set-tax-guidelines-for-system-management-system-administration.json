@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-management-system-administration",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "System administration",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-management-system-administration-syste",
+   "sequence": 10110
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-management-system-administration-separ",
+   "sequence": 10180
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-management-system-administration-admin",
+   "sequence": 10240
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-management-system-administration-softw",
+   "sequence": 10270
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "System administration",
+     "name": "overview",
+     "prose": "# System administration of cloud services\n\nSystem administration of cloud services brings unique challenges when compared to system administration of on-premises assets. Importantly, responsibility for system administration of cloud services is often shared between service providers and their customers. As the system administration processes and procedures implemented by service providers are often opaque to their customers, customers should consider a service provider’s control plane to operate within a different security domain.\n\n# Further information\n\nFurther information on system administration can be found in the Australian Signals Directorate’s (ASD) [Secure administration](#131048c7-a2e7-4da3-9257-7a058b06c1f8) publication.\n\nFurther information on change and configuration management plans can be found in the ‘System-specific cyber security documentation’ section of the [Guidelines for cyber security documentation](#578d0434-6b3f-46f3-aad8-c7ac75c2ebcc).\n\nFurther information on the use of privileged user accounts for system administration activities can be found in the ‘Access to systems and their resources’ section of the [Guidelines for personnel security](#7d16ae67-87a7-4861-b939-e13ec279b5a2).\n\nFurther information on network segmentation and segregation can be found in the ‘Network design and configuration’ section of the [Guidelines for networking](#f145ff5b-d396-4248-8f48-621349d6f0ed)."
+    }
+   ]
+  }
+ }
+}

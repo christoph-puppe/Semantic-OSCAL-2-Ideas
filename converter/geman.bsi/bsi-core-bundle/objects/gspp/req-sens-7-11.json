@@ -1,0 +1,80 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.7.11",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.7.11",
+ "lifecycle": "active",
+ "title": "Heimliche Aufzeichnung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende von VK-Anwendungen SOLLTE gegen die heimliche Bild- oder Tonaufzeichnung bei einer Videokonferenz sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "gegen die heimliche Bild- oder Tonaufzeichnung",
+     "result-specification": "bei einer Videokonferenz",
+     "target-object-categories": [
+      "Nutzende",
+      "VK-Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Heimliche Aufzeichnungen verletzen die Vertraulichkeit der Kommunikation. Eine Aufzeichnung von Wort und Bild ohne den Willen der Aufgezeichneten kann zudem eine Persönlichkeitsrechtverletzung bis hin zur Straftat (§ 201 StGB) darstellen. Dies gilt auch für Aufzeichnungen, die KI-gestützt ausgewertet werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "e5552e03-45ba-4bd4-8022-c4d46eb1c856"
+  }
+ ]
+}

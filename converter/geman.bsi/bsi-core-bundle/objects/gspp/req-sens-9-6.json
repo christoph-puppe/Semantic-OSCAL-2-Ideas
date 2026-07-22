@@ -1,0 +1,92 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.9.6",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.9.6",
+ "lifecycle": "active",
+ "title": "Mitnahme ins Ausland",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende KANN die Mitnahme nicht erforderlicher IT-Systeme und Datenträger bei Auslandsreisen untersagen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "untersagen",
+     "result": "die Mitnahme nicht erforderlicher IT-Systeme und Datenträger",
+     "result-specification": "bei Auslandsreisen",
+     "target-object-categories": [
+      "Nutzende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 3,
+     "tags": [
+      "Auslandsreisen"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Auf Auslandsreisen ist das Risiko für Spionage erhöht und der Rechtsschutz für Betroffene typischerweise geringer, insbesondere im EU-Ausland. Es ist daher ratsam, die mitgenommenen Geräte und sensiblen Informationen auf das für das Geschäft erforderliche Mindestmaß zu beschränken und stattdessen nach der Rückkehr an einem besser geschützten Standort weiter daran zu arbeiten. Welche IT-Systeme und Datenträger erforderlich sind, ergibt sich aus der Festlegung erlaubter Datenlokationen sowie den Aufgaben der Nutzenden. Ist die Nutzung von Informationen oder Assets der Institution im Ausland nicht vorgesehen (vgl. Anforderung Datenlokationen), dann ist die Anforderung entbehrlich."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "2181d821-efad-48d7-9c12-7c1aad40bfb1"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/ASST.3.10"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/ASST.3.10"
+  }
+ ]
+}

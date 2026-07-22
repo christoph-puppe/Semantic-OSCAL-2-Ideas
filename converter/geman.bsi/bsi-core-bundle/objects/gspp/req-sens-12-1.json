@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.12.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.12.1",
+ "lifecycle": "active",
+ "title": "Hohe Risiken",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende KANN gegen die in der Risikoanalyse festgestellten hohen Risiken sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "gegen die in der Risikoanalyse festgestellten hohen Risiken",
+     "target-object-categories": [
+      "Nutzende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "0",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.42"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Werden in einer Risikoanalyse bei hohem Schutzbedarf spezielle hohe Risiken festgestellt, so sind betroffene Nutzende auf diese Risiken hinzuweisen. Praktische Maßnahmen können (1) interaktive Trainings zu den jeweils relevanten Angriffsmethoden wie Social Engineering oder Ransomware umfassen, (2) Fallbeispiele aus der eigenen Branche einbeziehen, die konkrete Handlungsweisen aufzeigen, oder (3) wiederkehrende Awareness-Impulse wie Übungen einsetzen, die das Gelernte im Alltag verankern."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "f1191c38-3df5-4cc4-adfd-46863a2671a8"
+  }
+ ]
+}

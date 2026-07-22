@@ -1,0 +1,34 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/set/subset/rec-frp",
+ "version": "2026.07.14.01",
+ "lifecycle": "active",
+ "title": "FedRAMP Responsibilities",
+ "label": "FRP",
+ "members": [
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/REC-FRP-FOC",
+   "sequence": 1960
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/REC-FRP-RAO",
+   "sequence": 1970
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/req/REC-FRP-DRD",
+   "sequence": 1980
+  }
+ ],
+ "facets": {
+  "https://ns.fedramp.gov/cr26/facet/narrative@1": {
+   "description": "These rules apply to FedRAMP when evaluating independent assessment services for initial or ongoing FedRAMP Recognition."
+  },
+  "https://ns.fedramp.gov/cr26/facet/scope@1": {
+   "types": [],
+   "paths": [],
+   "classes": [],
+   "affects": [
+    "FedRAMP"
+   ]
+  }
+ }
+}

@@ -1,0 +1,80 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.4.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.4.4",
+ "lifecycle": "active",
+ "title": "Nachweis des Zugangs",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets für Daten KANN einen Nachweis des Zugangs protokollieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "protokollieren",
+     "result": "einen Nachweis des Zugangs",
+     "target-object-categories": [
+      "Daten"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Audit Log"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "0",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.43",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.15"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein Zugangsnachweis stellt sicher, dass bestimmte Nachrichten ihren Empfänger tatsächlich erreicht haben und dieser Zugang im Streitfall nachvollziehbar belegt werden kann. Dies ist insbesondere in rechtlich relevanten Kontexten oder bei Revisionen von Bedeutung – etwa wenn Fristen, Genehmigungen oder vertrauliche Informationen übermittelt werden. Kriterien können sich an der Nachvollziehbarkeit der Integrität der Informationen oder ihrer Rechtswirkung orientieren, z.B. wenn sie einen Vertragsabschluss oder die Bekanntgabe eines Verwaltungsaktes, auslösen. Beispiele hierfür sind arbeitsrechtlich relevante Dokumente wie Abmahnungen oder Kündigungen, Sicherheitsanweisungen, Änderungen an internen Richtlinien, Zugangsdaten zu sicherheitsrelevanten Systemen oder auch technische Anordnungen mit verbindlichem Charakter. Die Kriterien können zusammen mit anderen Kriterien dokumentiert sein, beispielsweise im Rahmen eines Informationssicherheitskonzepts oder Kommunikationsleitfadens. Die Umsetzung dieser Anforderung kann durch verschiedene technische und organisatorische Maßnahmen erfolgen. Dazu gehören u. a. die Nutzung von E-Mail-Systemen mit Empfangsbestätigung, das Verwenden von Systemprotokollen oder speziellen Portalen mit Zugriffsnachweis. Wichtig ist dabei, dass der Nachweis manipulationssicher gespeichert und nachvollziehbar archiviert wird – bis zum Ablauf einer definierten Aufbewahrungsfrist, z. B. drei oder fünf Jahre, je nach rechtlicher oder organisatorischer Vorgabe. Sinnvoll ist es hierbei nicht nur die Tatsache des Zugangs zu einem bestimmten Zeitpunkt sondern auch für den Nachweis relevante Inhalte zu dokumentieren, z.B. Titel, sowie Versand- und Zieladressen der Nachricht. Sie kann je nach Medium auch den Inhalt der Nachricht enthalten."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "7d11d172-7a6a-41ce-a4a6-733cbc34b874"
+  }
+ ]
+}

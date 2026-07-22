@@ -1,0 +1,82 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.12.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.12.2",
+ "lifecycle": "active",
+ "title": "Verschlüsselungsstatus der aktuellen Verbindung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für Webbrowser SOLLTE eine Anzeige der Verschlüsselung der aktuellen Verbindung aktivieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "aktivieren",
+     "result": "eine Anzeige der Verschlüsselung der aktuellen Verbindung",
+     "target-object-categories": [
+      "Webbrowser"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "0",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.15",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.43"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 1,
+     "tags": [
+      "Produktbeschreibung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Anzeige der Verschlüsselung der aktuellen Verbindung im Webbrowser, auch bekannt als Connection Encryption Indicator oder oft durch ein 🔒-Symbol dargestellt, ist ein essenzielles Merkmal für die Wahrnehmung der Vertrauenswürdigkeit einer Online-Kommunikation. Sie visualisiert, ob die Datenübertragung zwischen dem Browser des Benutzers und dem Webserver mittels eines kryptografischen Protokolls, typischerweise Transport Layer Security (TLS) (früher Secure Sockets Layer (SSL)), abgesichert ist. Diese Vorschrift zielt darauf ab, das Risiko des Abhörens von Daten durch Dritte (Eavesdropping) zu minimieren; denn ohne diese Anzeige könnte ein Benutzer unbemerkt sensible Informationen über eine ungesicherte Verbindung eingeben, was beispielsweise zur Kompromittierung von Anmeldedaten oder vertraulichen Geschäftsinformationen führen könnte."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "8e35ba9c-0926-4cef-bd95-ec79933a6ee2"
+  }
+ ]
+}

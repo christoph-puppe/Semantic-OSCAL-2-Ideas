@@ -1,0 +1,82 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.2.7",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.2.7",
+ "lifecycle": "active",
+ "title": "Souveräne Werkzeuge",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für IT-Systeme KANN Souveräne Werkzeuge installieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "installieren",
+     "result": "Souveräne Werkzeuge",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.11",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5,
+     "tags": [
+      "Hochverfügbarkeit"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "„Souveräne Werkzeuge“ sind Anwendungen, Systeme und physische Werkzeuge, die technisch, rechtlich und organisatorisch unabhängig von externen Herstellern, Cloud-Anbietern oder staatlicher Einflussnahme betrieben werden können. Das umfasst vor allem Lösungen, die lokal kontrollierbar und ohne zwingende Abhängigkeit zu externen Plattformen nutzbar sind. Der Sinn der Vorschrift liegt darin, die Handlungsfähigkeit und Sicherheit der Institution zu stärken: Ein rein cloudbasierter Konfigurationsdienst könnte durch einen plötzlichen Ausfall, eine staatlich erzwungene Sperrung oder durch nachträglich geänderte Lizenzbedingungen die Betriebsfähigkeit gefährden. Die Nutzung souveräner Werkzeuge kann dagegen die Verfügbarkeit kritischer Systeme erhöhen, die Datenhoheit bewahren und Manipulationsmöglichkeiten von Dritten minimieren. Souveräne Konfigurationssysteme machen unabhängig vor Ausfällen, Datenschutzverletzungen oder einseitigen Änderungen der Nutzungsbedingungen durch externe Dienstleister. Eine Institution kann diese Anforderung beispielsweise so umsetzen: (1) Es kann auf quelloffene Konfigurations-Frameworks zurückgegriffen werden, die lokal installiert und betrieben werden. (2) Virtualisierte oder containerisierte Varianten dieser Werkzeuge werden in der eigenen Infrastruktur betrieben, sodass keine unkontrollierten externen Abhängigkeiten entstehen. (3) Ergänzend kann ein internes Repository für Konfigurationsmodule eingerichtet werden, um eine vertrauenswürdige, geprüfte und nachvollziehbare Quellenbasis sicherzustellen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "9b18fd2e-8300-49d5-b244-88df6674c5c6"
+  }
+ ]
+}

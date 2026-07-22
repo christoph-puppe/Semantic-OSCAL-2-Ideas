@@ -1,0 +1,82 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.7.6",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.7.6",
+ "lifecycle": "active",
+ "title": "Automatische Updates",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für IT-Systeme SOLLTE Automatische Updates der Mechanismen zur Schadcodeerkennung aktivieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "aktivieren",
+     "result": "Automatische Updates der Mechanismen zur Schadcodeerkennung",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.39",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Produktbeschreibung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Da Schadprogramme und Angriffsmethoden ständig abgeändert werden um bekannte Erkennungsmuster zu umgehen, sind aktuelle Erkennungsfunktionen entscheidend um laufende Angriffe erkennen zu können, z.B. Signatur-Update oder Aktualisierungen der Lernfunktion zur Anomalieerkennung. Dies kann durch automatische Aktualisierungen der Signaturen und Mechanismen zur Angriffserkennung umgesetzt werden, z.B. als tagesaktueller Download von Viren-Signaturen. Die Anforderung kann auch durch einen schrittweisen Rollout der Erkennungsfunktionen umgesetzt werden, um einen Test in der Institution zu ermöglichen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "9ec7a448-9f0e-45bb-b71d-537fe2ef7f0c"
+  }
+ ]
+}

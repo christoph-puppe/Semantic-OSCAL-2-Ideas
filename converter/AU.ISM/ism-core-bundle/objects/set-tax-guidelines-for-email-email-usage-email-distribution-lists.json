@@ -1,0 +1,23 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-usage-email-distribution-lists",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Email distribution lists",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0269",
+   "sequence": 13080
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Email distribution lists",
+     "name": "overview",
+     "prose": "In some cases, the membership and nationality of members of email distribution lists will be unknown. As such, emails containing Australian Eyes Only, Australian Government Access Only or Releasable To data that are sent to email distribution lists could accidentally cause a data spill."
+    }
+   ]
+  }
+ }
+}

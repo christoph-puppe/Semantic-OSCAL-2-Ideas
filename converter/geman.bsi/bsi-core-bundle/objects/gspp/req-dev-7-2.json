@@ -1,0 +1,86 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DEV.7.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DEV.7.2",
+ "lifecycle": "active",
+ "title": "Zertifikatsmonitoring",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Entwicklung für Anwendungen SOLLTE die Ausstellung neuer Zertifikate für die von der Anwendung verwendeten Domains überwachen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überwachen",
+     "result": "die Ausstellung neuer Zertifikate",
+     "result-specification": "für die von der Anwendung verwendeten Domains",
+     "target-object-categories": [
+      "Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Detektions-Konzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.36",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.43"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Neue Zertifikate sind in diesem Kontext digitale Zertifikate, insbesondere TLS-/Serverzertifikate nach X.509, die zu einer von der Anwendung genutzten Domain oder Subdomain ausgestellt werden könnten und deren öffentliche Existenz regelmäßig über Certificate-Transparency-Protokolle, Zertifikatsregister oder vergleichbare Quellen erkennbar ist. Von der Anwendung verwendete Domains sind dabei die DNS-Namen, über die die Anwendung selbst, ihre Schnittstellen, Weiterleitungen, Mandantenbereiche oder technische Begleitdienste erreichbar sind, etwa Web-Frontends, API-Endpunkte, CDN- oder Load-Balancer-Namen; fachlich wird häufig von application domains, hostnames, FQDNs oder DNS names gesprochen.  Die Vorschrift zielt darauf ab, ungewöhnliche oder unberechtigte Zertifikatsausstellungen frühzeitig erkennbar zu machen, weil eine solche Ausstellung auf Fehlkonfigurationen, kompromittierte DNS-Kontrolle, Missbrauch einer Validierungsmethode oder Vorbereitungen für Phishing- und Man-in-the-Middle-Szenarien hinweisen könnte. Eine entsprechende Beobachtung kann die Zeit bis zur Erkennung verkürzen und ermöglichen, betroffene Domains, Zertifizierungsstellen, DNS-Einträge oder Validierungswege gezielt zu prüfen, bevor Nutzende oder technische Clients einer täuschend echt wirkenden Gegenstelle vertrauen. Hierzu ist es sinnvoll Abfragen öffentlicher Certificate-Transparency-Logs für definierte FQDNs und Wildcards, Alarmierungen bei neuen Zertifikaten außerhalb erwarteter Aussteller oder Namensmuster, sowie regelmäßige Abgleiche einer gepflegten Domainliste mit neu beobachteten Zertifikatseinträgen zu verwenden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "61b03a52-d68e-4bda-b715-91cac2e70e87"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/DET.4.8"
+  }
+ ]
+}

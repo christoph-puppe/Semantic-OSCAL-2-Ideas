@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-gateways-web-content-filters-using-web-conten",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Using web content filters",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0963",
+   "sequence": 16350
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0961",
+   "sequence": 16360
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1237",
+   "sequence": 16370
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Using web content filters",
+     "name": "overview",
+     "prose": "Effective web content filters can greatly reduce the likelihood of malicious code, or other inappropriate content, being accessed by users. Furthermore, web content filters can disrupt or prevent malicious actors from communicating with their malicious code if they manage to deploy it on an organisation’s networks."
+    }
+   ]
+  }
+ }
+}

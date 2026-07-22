@@ -1,0 +1,68 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/VRB.6.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "VRB.6.1",
+ "lifecycle": "active",
+ "title": "Überprüfung der erreichten Verbesserung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Verbesserung MUSS die Wirksamkeit der umgesetzten Korrektur- und Verbesserungsmaßnahmen {param:vrb.6.1-prm1} testen."
+   },
+   "parameters": [
+    {
+     "name": "vrb.6.1-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "testen",
+     "result": "die Wirksamkeit der umgesetzten Korrektur- und Verbesserungsmaßnahmen",
+     "result-specification": "{{regelmäßig}}"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Wirksamkeitsprüfung stellt sicher, dass der kontinuierliche Verbesserungsprozess zu messbaren und nachhaltigen Fortschritten führt. Sie schaffen Transparenz über den aktuellen Status und unterstützen die Institution dabei, ihre Ressourcen optimal einzusetzen und den Erfolg ihrer Verbesserungsbemühungen zu demonstrieren."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "vrb.6.1-prm1": {
+     "label": "regelmäßig",
+     "alt-identifier": "89d9eada-bcdb-4b47-a3de-b26e22cca2a4"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "89d9eada-bcdb-4b47-a3de-b26e22cca2a4"
+  }
+ ]
+}

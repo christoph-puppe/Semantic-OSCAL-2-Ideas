@@ -1,0 +1,95 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-authentication-hardening-mul",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Multi-factor authentication",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1504",
+   "sequence": 9240
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1679",
+   "sequence": 9250
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1680",
+   "sequence": 9260
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1892",
+   "sequence": 9270
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1893",
+   "sequence": 9280
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1681",
+   "sequence": 9290
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1919",
+   "sequence": 9300
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1173",
+   "sequence": 9310
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0974",
+   "sequence": 9320
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1505",
+   "sequence": 9330
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1401",
+   "sequence": 9340
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1872",
+   "sequence": 9350
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1873",
+   "sequence": 9360
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1874",
+   "sequence": 9370
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1682",
+   "sequence": 9380
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1894",
+   "sequence": 9390
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2011",
+   "sequence": 9400
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1920",
+   "sequence": 9410
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1683",
+   "sequence": 9420
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Multi-factor authentication",
+     "name": "overview",
+     "prose": "Multi-factor authentication uses two or more different authentication factors. This may include:\n\n- something users know, such as a password\n- something users have, such as a security key, smart card, passkey, smartphone or one-time password token\n- something users are, such as a fingerprint pattern or their facial geometry.\n\nUsers of online services, privileged users of systems and users with access to data repositories are more likely to be targeted by malicious actors due to their access. For this reason, it is especially important that multi-factor authentication is used for these user accounts. In addition, multi-factor authentication is vital to any administrative activities as it can limit the consequences of a compromise by preventing or slowing malicious actors’ ability to gain unrestricted access to assets. In this regard, multi-factor authentication can be implemented as part of jump server authentication where assets being administered do not support multi-factor authentication themselves.\n\nWhen implementing multi-factor authentication, several different authentication factors can be implemented. Unfortunately, some authentication factors, such as biometrics or codes sent via Short Message Service, Voice over Internet Protocol or email, are more susceptible to compromise than others. For this reason, authentication factors that involve something users have should be used with something users know. Alternatively, something users have that is unlocked by something users know or are (often known as passwordless multi-factor authentication) can be used. Furthermore, for increased security, the use of phishing-resistant multi-factor authentication is recommended to protect against real-time phishing attacks.\n\nFinally, centrally logging and analysing multi-factor authentication events can assist in monitoring the security posture of systems, detecting malicious behaviour and contributing to investigations following cyber security incidents."
+    }
+   ]
+  }
+ }
+}

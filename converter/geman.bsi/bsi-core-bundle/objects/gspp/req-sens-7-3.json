@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.7.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.7.3",
+ "lifecycle": "active",
+ "title": "Automatische Antworten",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende von Interpersoneller Kommunikation SOLLTE gegen die Ausgabe vertraulicher Daten durch AutoReply-Funktionen sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "gegen die Ausgabe vertraulicher Daten durch AutoReply-Funktionen",
+     "target-object-categories": [
+      "Nutzende",
+      "Interpersonelle Kommunikation"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "AutoReply-Funktionen – etwa automatische Abwesenheitsnotizen oder Standardantworten in E-Mail- oder Messaging-Systemen – könnten unbeabsichtigt vertrauliche Informationen an unberechtigte Empfänger preisgeben. In der Praxis könnte dies dazu führen, dass sensible Projektdetails, interne Kontaktdaten oder Hinweise auf Abwesenheiten an Angreifer gelangen, die solche Informationen gezielt zur Planung von Social-Engineering-Angriffen oder zur Umgehung von Sicherheitsmaßnahmen nutzen. Im Kontext dieser Anforderung bezeichnet „AutoReply“ die automatische Generierung und Versendung von Nachrichten durch Kommunikationssysteme ohne aktives Zutun der nutzenden Person, typischerweise ausgelöst durch eingehende Nachrichten."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "534179b0-fccb-42b5-95b3-e0d5a1778dec"
+  }
+ ]
+}

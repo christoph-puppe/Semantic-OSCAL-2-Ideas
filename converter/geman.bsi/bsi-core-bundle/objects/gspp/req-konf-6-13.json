@@ -1,0 +1,83 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.6.13",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.6.13",
+ "lifecycle": "active",
+ "title": "Dynamische Zugriffskontrolle in der Anwendung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für Anwendungen KANN dynamische Zugriffskontrolle in der Anwendung aktivieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "aktivieren",
+     "result": "dynamische Zugriffskontrolle",
+     "result-specification": "in der Anwendung",
+     "target-object-categories": [
+      "Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "2",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5,
+     "tags": [
+      "Produktbeschreibung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Dynamische Zugriffskontrolle („dynamic access control“, DAC) bezeichnet hier eine Form der Autorisierungsprüfung innerhalb einer Anwendung, bei der die Entscheidung über den Zugriff nicht ausschließlich anhand statischer Rollen oder Benutzergruppen erfolgt, sondern zusätzlich kontextabhängige Bedingungen („contextual attributes“) berücksichtigt werden. Solche Bedingungen können beispielsweise der aktuelle Standort der Anmeldung, die Geräteklasse, der Zeitpunkt des Zugriffs oder die Sensitivität der angeforderten Daten sein. Die zugrunde liegende Zugriffsrichtlinie („policy“) bleibt dabei fest definiert – die Dynamik betrifft ausschließlich die Bewertung der in ihr vorgesehenen Parameter. Dadurch unterscheidet sich DAC auf Anwendungsebene von klassischen „role-based access control“ (RBAC)-Mechanismen, indem sie feinere, situative Entscheidungen erlaubt, ohne dass Berechtigungen für den Einzelfall manuell vergeben werden. Die Möglichkeit, eine dynamische Zugriffskontrolle in der Anwendung zu aktivieren, kann wesentlich dazu beitragen, unbefugte oder unangemessene Zugriffe zu verhindern, wenn sich Sicherheitsbedingungen ändern. Ohne solche Mechanismen könnte ein Benutzer etwa trotz eines kompromittierten Geräts oder außerhalb sicherer Netzbereiche weiterhin auf vertrauliche Daten zugreifen, was zu Datenabfluss oder Manipulation führen könnte. Die dynamische Kontrolle kann hingegen sicherstellen, dass Zugriffe nur gewährt werden, wenn aktuelle Kontextparameter mit den definierten Sicherheitsrichtlinien übereinstimmen, wodurch das Risiko situativer Angriffe deutlich reduziert werden kann. Beispiele sind Anwendungen (1) eine Policy-Engine wie XACML-kompatible Systeme zur regelbasierten Entscheidungsfindung verwenden, (2) Attributquellen wie Identity Provider oder Endpoint-Sicherheitslösungen zur Kontextbewertung einbinden oder (3) adaptive Autorisierungsmechanismen, etwa über Open Policy Agent."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "55dfbf64-f1f3-4765-a0d3-78f0a1f00654"
+  }
+ ]
+}

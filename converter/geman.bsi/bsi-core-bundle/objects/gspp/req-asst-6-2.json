@@ -1,0 +1,75 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.6.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.6.2",
+ "lifecycle": "active",
+ "title": "Rückkehr abhandengekommener Assets",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets SOLLTE eine Vorgehensweise bei Rückkehr von abhandengekommenen Assets verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "eine Vorgehensweise bei Rückkehr von abhandengekommenen Assets"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "\"Abhandengekommene Assets\" bezeichnen Informationswerte, die ungewollt oder ungeplant außerhalb der direkten Kontrolle der Institution geraten sind - beispielsweise durch Verlust, Diebstahl, vergessene Mitnahme oder andere unbeabsichtigte Ereignisse. Eine \"Vorgehensweise bei Rückkehr\" meint einen strukturierten Prozess zur systematischen Wiederaufnahme und sicherheitstechnischen Bewertung solcher Assets nach ihrer Wiederbeschaffung oder ihrem Wiederauffinden. Diese Anforderung zielt auf die Risikominimierung bei der Wiederintegration potenziell kompromittierter Assets ab, da während der unkontrollierten Abwesenheit Manipulationen, unautorisierten Zugriffe oder Datenabflüsse aufgetreten sein könnten. Ohne strukturierte Rückkehrprozesse kann die unkontrollierte Wiederverwendung zurückgekehrter Assets zu Sicherheitslücken, Malware-Infektionen oder Datenschutzverletzungen führen. Umsetzungen können bei der Asset-Rückkehr (1) eine vollständige Identitätsprüfung anhand eindeutiger Kennzeichnungen wie Seriennummern oder Asset-Tags, (2) eine technische Integritätsprüfung durch Malware-Scans, Firmware-Vergleiche und Hardwareanalysen sowie (3) eine Datenintegrität-Bewertung mittels kryptografischer Prüfsummen oder forensischer Analysen umfassen. Als Alternative zur tiefergehenden Analyse von Systemen und Daten bietet sich auch die Löschung oder Entsorgung an. Prozessual kann die Einrichtung einer zentralen Asset-Return-Stelle mit definierten Eskalationswegen bei Auffälligkeiten, die Dokumentation aller Rückkehrfälle in einem Asset-Management-System und die Implementierung von Quarantäne-Verfahren für verdächtige Assets erfolgen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "74259c1e-dc72-42dc-b2b7-b93d700616e7"
+  }
+ ]
+}

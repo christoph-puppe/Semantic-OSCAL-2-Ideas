@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-0357",
+ "version": "2026.06.18",
+ "label": "ISM-0357",
+ "lifecycle": "active",
+ "title": "Control: ism-0357",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Non-volatile EPROM media is sanitised by applying three times the manufacturer’s specified ultraviolet erasure time and then overwriting it at least once in its entirety with a random pattern followed by a read back for verification."
+   }
+  }
+ ]
+}

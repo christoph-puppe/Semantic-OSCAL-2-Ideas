@@ -1,0 +1,83 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.6.5",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.6.5",
+ "lifecycle": "active",
+ "title": "Behandlung aufzubewahrender Aufzeichnungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Dienstleistungen SOLLTE Kontrollmechanismen zur Behandlung aufzubewahrender Aufzeichnungen für den Fall einer Kündigung vereinbaren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "vereinbaren",
+     "result": "Kontrollmechanismen zur Behandlung aufzubewahrender Aufzeichnungen",
+     "result-specification": "für den Fall einer Kündigung",
+     "target-object-categories": [
+      "Dienstleistungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Beschaffungskriterien"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.20"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4,
+     "tags": [
+      "Lieferketten",
+      "Exit-Strategie"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Der Begriff Kontrollmechanismen kann in diesem Kontext verstanden werden als vertraglich vereinbarte Verfahren, technische Maßnahmen oder organisatorische Vorkehrungen, die es der Institution ermöglichen, die Vollständigkeit, Integrität und Vertraulichkeit der betreffenden Aufzeichnungen sicherzustellen. Aufzubewahrende Aufzeichnungen bezeichnet hierbei jede Form von Daten oder Dokumenten – in physischer oder digitaler Form – die aufgrund gesetzlicher, vertraglicher oder interner Vorgaben über das Vertragsende hinaus (zumindest für einen bestimmten Zeitraum) vom Dienstleister aufbewahrt werden. Dabei kann es sich beispielsweise um Vertragsunterlagen, Protokolldateien oder Gesprächsprotokolle handeln, die etwa aus steuerlichen Gründen aufzubewahren sind."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "a397ee7e-3766-4454-9805-c2b31ffcb80e"
+  }
+ ]
+}

@@ -1,0 +1,89 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/req/IEC-CSO-EFI",
+ "version": "2026.07.14.01",
+ "label": "IEC-CSO-EFI",
+ "lifecycle": "active",
+ "title": "Estimate Federal Impact",
+ "statements": [
+  {
+   "id": "s1",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.fedramp.gov/cr26/party/providers"
+   ],
+   "prose": {
+    "en": "Providers SHOULD promptly estimate the likely adverse impact of an incident on agency customers to assign a Potential Agency Impact N-rating; this step is called Incident Rating."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.fedramp.gov/cr26/facet/narrative@1": {
+   "schema-name": "FedRAMP Incident Report (IEC-CSO-IIR / IEC-CSO-OIR / IEC-CSO-FIR)",
+   "note": "All incidents must be assigned a default PAIN-5 as required by IEC-CSO-DPR (Default PAIN Rating) if this step is not completed."
+  },
+  "https://ns.oscal.org/stdlib/facet/reporting-obligation@1": {
+   "following-information-bullets": [
+    "**N1** for a likely minimal customer effect on 1 or more agencies.",
+    "**N2** for a likely narrow customer effect on 1 or more agencies.",
+    "**N3** for a likely disruptive customer effect on 1 agency.",
+    "**N4** for a likely debilitating customer effect on 1 agency or a likely disruptive customer effect on more than 1 agency.",
+    "**N5** for a likely debilitating customer effect on more than 1 agency."
+   ]
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "required-artifacts": [
+    "An incident log showing an example of one or more incidents being evaluated including the reason for the determination. The log can be from real incidents, simulated incidents, or a combination of sources."
+   ]
+  }
+ },
+ "relations": [
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Agency"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Debilitating Customer Effect"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Disruptive Customer Effect"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Incident"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Likely"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Minimal Customer Effect"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Narrow Customer Effect"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Potential Agency Impact"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Promptly"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Provider"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.fedramp.gov/cr26/req/IEC-CSO-DPR"
+  },
+  {
+   "type": "schema",
+   "ref": "https://fedramp.gov/schemas/fedramp-incident-report-schema-2026-06-24.json"
+  }
+ ]
+}

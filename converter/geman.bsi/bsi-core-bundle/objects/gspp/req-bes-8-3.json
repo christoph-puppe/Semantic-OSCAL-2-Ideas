@@ -1,0 +1,83 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.8.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.8.3",
+ "lifecycle": "active",
+ "title": "Ressourcensouveränität",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Outsourcing KANN ausreichende interne Ressourcen für den Fall einer geplanten oder ungeplanten Beendigung des Vertrages zuweisen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "zuweisen",
+     "result": "ausreichende interne Ressourcen",
+     "result-specification": "für den Fall einer geplanten oder ungeplanten Beendigung des Vertrages",
+     "target-object-categories": [
+      "Outsourcing"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Geschäftsprozesse"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 4,
+     "tags": [
+      "Lieferketten",
+      "Exit-Strategie"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Bereithaltung ausreichender interner Ressourcen zielt hier darauf ab, für den Fall einer plötzlichen Einstellung der beschafften Dienste ausreichend ausgestattet zu sein, um einer übermäßigen Abhängigkeit gegenüber den Anbietenden von Outsourcing vorzubeugen. Zu den notwendigen Ressourcen gehört sowohl Personal, welches für die bei einem Ausfall des Dienstleisters erforderlichen Aufgaben qualifiziert ist, als auch die für diese Aufgaben erforderliche Infrastruktur (z.B. IT-Systeme, Anwendungslizenzen, Zugänge und Berechtigungen)."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "c928db22-3ace-445e-b501-7ebb8fbd9c2d"
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.3.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.3.3",
+ "lifecycle": "active",
+ "title": "Kennzeichnung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets SOLLTE die Kennzeichnung von Informationen verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "die Kennzeichnung von Informationen"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "0",
+     "availability": "0",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Archivierung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Kennzeichnungen helfen dabei sicherzustellen, dass vertrauliche, personenbezogene oder besonders kritische Daten im gesamten Lebenszyklus angemessen behandelt werden – von der Erstellung über die Verarbeitung bis hin zur Archivierung oder Löschung. Hierzu gehört sowohl die Kennzeichnung physikalischer Systeme oder Speichermedien als auch die virtuelle Kennzeichnung, z.B. durch Metadaten oder die Kopfzeile eines Dokumentes. Eine klare Kennzeichnung kann dazu beitragen, unbeabsichtigte Offenlegung, unsachgemäße Weitergabe oder unsichere Verarbeitung zu vermeiden, die Sensibilisierung für den Umgang mit verschiedenen Informationsarten fördern und rechtlichen oder regulatorischen Anforderungen (z. B. DSGVO, Geheimschutz) Rechnung tragen. Beispiele sind Informationen, die einer bestimmten Schutzbedarfsklasse (z. B. „vertraulich“, „intern“) zugeordnet sind. Auch personenbezogene Daten, Forschungsergebnisse, Finanzinformationen, Sicherheitskonzepte oder technische Spezifikationen können einer Kennzeichnungspflicht unterliegen. Die Art der Kennzeichnung kann visuell erfolgen, etwa durch Wasserzeichen, farbige Markierungen, Aufkleber, sowie Kopf-/Fußzeilen oder Metadaten in Dateien. Wichtig ist, dass die Kennzeichnung verständlich, konsistent und leicht erkennbar ist, um ihre Schutzwirkung zu entfalten. Zur Umsetzung ist es nicht erforderlich, dass alle Daten, Systeme oder Speichermedien gekennzeichnet sind sondern nur solche, deren Risikoprofil eine solche Kennzeichnung erforderlich macht - hier ist insbesondere die Vertraulichkeit oder Verfügbarkeit relevant. Dokumentvorlagen, automatisierte Klassifizierungsfunktionen in gängigen Office-Programmen oder Richtlinien in einem DMS können helfen die Einhaltung zu gewährleisten."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "627d3364-806b-4ea0-8ef0-43dfefd0b027"
+  }
+ ]
+}

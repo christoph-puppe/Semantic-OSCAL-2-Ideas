@@ -1,0 +1,23 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-wireless-networks-evaluation-of-80",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Evaluation of 802.1X authentication implementation",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1322",
+   "sequence": 14210
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Evaluation of 802.1X authentication implementation",
+     "name": "overview",
+     "prose": "The security of 802.1X authentication is dependent on four main elements and how they interact. These four elements include supplicants, authenticators, wireless access points and authentication servers. To provide assurance that these elements have been implemented correctly, they should have completed an evaluation."
+    }
+   ]
+  }
+ }
+}

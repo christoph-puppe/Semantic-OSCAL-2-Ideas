@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.8.12",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.8.12",
+ "lifecycle": "active",
+ "title": "Verwendung von Wasserschutzmitteln",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Mitarbeitende KANN zur korrekten Verwendung bereitgestellter Wasserschutz-Hilfsmittel sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "zur korrekten Verwendung bereitgestellter Wasserschutz-Hilfsmittel",
+     "target-object-categories": [
+      "Mitarbeitende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "0",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.3"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ohne ausreichende Kenntnisse könnte ein Mitarbeitender im Ernstfall zögern oder Hilfsmittel falsch anwenden, wodurch wertvolle Geräte ungeschützt bleiben oder unnötige Verzögerungen bei der Eindämmung eintreten könnten. Eine rechtzeitige und richtige Anwendung kann dagegen die Ausbreitung von Wasserschäden begrenzen, Datenverluste vermeiden und den Wiederanlauf kritischer Arbeitsprozesse erheblich erleichtern. Im Kontext dieser Anforderung bedeutet „Wasserschutz-Hilfsmittel“ einfache technische oder organisatorische Werkzeuge, die zur Eindämmung, Ableitung oder Beseitigung von Wasser im Notfall eingesetzt werden können, etwa Sandsäcke, Absperrschotten, Wassermelder oder Tauchpumpen. Konkrete Maßnahmen können sein: (1) Mitarbeitende regelmäßig in kurzen Übungen mit der Handhabung der vorhandenen Hilfsmittel vertraut machen, z. B. das Einsetzen von Absperrschotten an Türen oder den Betrieb einer Tauchpumpe an einem vorbereiteten Testbecken, (2) an den Aufbewahrungsorten der Hilfsmittel laminierte Schritt-für-Schritt-Anleitungen anbringen, die im Ernstfall sofort verständlich sind, (3) visuelle Markierungen oder QR-Codes platzieren, die auf kurze Videosequenzen zur Anwendung verweisen. Auch kleine Tipps können die Wirksamkeit erhöhen, etwa dass Hilfsmittel geordnet nach Dringlichkeit bereitliegen können oder dass bei Tauchpumpen vorab Kabel und Steckdosen auf sichere Reichweite geprüft werden können."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "75859261-aa48-4faf-9489-3d875e585f9d"
+  }
+ ]
+}

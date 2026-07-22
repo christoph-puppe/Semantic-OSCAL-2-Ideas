@@ -1,0 +1,60 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GC.4.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GC.4.1",
+ "lifecycle": "active",
+ "title": "Analyse der externen interessierten Parteien",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Governance und Compliance MUSS alle externen interessierten Parteien sowie ihre Bedürfnisse und Erwartungen an das Informationssicherheitsmanagement der Institution analysieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "analysieren",
+     "result": "alle externen interessierten Parteien sowie ihre Bedürfnisse und Erwartungen",
+     "result-specification": "an das Informationssicherheitsmanagement der Institution"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Alle relevanten externen interessierten Parteien werden ermittelt. Die externen interessierten Parteien umfassen beispielsweise: Gesetzgeber, Aufsichtsbehörden, Kunden, Dienstleister, Gesellschaft/Öffentlichkeit. Die Relevanz und Priorität der identifizierten Anforderungen werden bewertet und auf Grundlage dessen wird festgelegt, welche dieser Anforderungen als verbindliche Verpflichtungen in das ISMS aufgenommen werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "834c85a0-f793-4d6a-8eba-5f26f38979cd"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/GC.4.2"
+  }
+ ]
+}

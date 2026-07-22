@@ -1,0 +1,97 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.12.11",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.12.11",
+ "lifecycle": "active",
+ "title": "Anonyme oder Pseudonyme Kommunikation",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für TK-Anwendungen KANN die Übermittlung {param:konf.12.11-prm1} zur Gegenstelle aktivieren."
+   },
+   "parameters": [
+    {
+     "name": "konf.12.11-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "aktivieren",
+     "result": "die Übermittlung {{eines Pseudonyms oder gar keiner Anzeigekennung}}",
+     "result-specification": "zur Gegenstelle",
+     "target-object-categories": [
+      "TK-Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "0",
+     "availability": "0",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.14"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5,
+     "tags": [
+      "Produktbeschreibung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Wenn eine persönliche Identifikation von Kommunikationspartnern erforderlich ist, ist eine Verschleierung von Erreichbarkeiten sinnvoll. In der klassischen Telefonie kann hierfür die Rufnummerunterdrückung für ausgehende Anrufe (CLIR) oder eine Pseudonymisierung, z.B. durch Übermittlung der 0 statt der Nebenstelle, genutzt werden. Für die Verschleierung der Netzquelle können Proxy-Server oder Anonymisierungsgateways genutzt werden. Für weitere Details siehe \"Kompendium für organisationsinterne Telekommunikationssysteme mit erhöhtem Schutzbedarf\"."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "konf.12.11-prm1": {
+     "label": "eines Pseudonyms oder gar keiner Anzeigekennung",
+     "alt-identifier": "a06eca6b-f142-4808-b04d-c19adf178db4"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "a06eca6b-f142-4808-b04d-c19adf178db4"
+  }
+ ]
+}

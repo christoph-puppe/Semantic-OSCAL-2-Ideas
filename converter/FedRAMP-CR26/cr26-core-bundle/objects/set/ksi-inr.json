@@ -1,0 +1,24 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/set/ksi/inr",
+ "version": "2026.07.14.01",
+ "lifecycle": "active",
+ "title": "Incident Response",
+ "label": "INR",
+ "annotations": {
+  "web_name": "incident-response"
+ },
+ "members": [
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-INR-AAR",
+   "sequence": 3310
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-INR-RIR",
+   "sequence": 3320
+  },
+  {
+   "ref": "https://ns.fedramp.gov/cr26/ksi/KSI-INR-RPI",
+   "sequence": 3330
+  }
+ ]
+}

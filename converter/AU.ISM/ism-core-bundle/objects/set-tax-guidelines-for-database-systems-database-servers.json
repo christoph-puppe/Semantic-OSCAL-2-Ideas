@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-database-systems-database-servers",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Database servers",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-database-systems-database-servers-functional-",
+   "sequence": 12710
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-database-systems-database-servers-communicati",
+   "sequence": 12730
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-database-systems-database-servers-network-env",
+   "sequence": 12770
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-database-systems-database-servers-segregation",
+   "sequence": 12790
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Database servers",
+     "name": "overview",
+     "prose": "# Further information\n\nFurther information on the functional separation of operating environments can be found in the ‘Virtualisation hardening’ section of the [Guidelines for system hardening](#de7525f3-a466-40a5-abdd-3ae24a6d1b44).\n\nFurther information on encrypting communications can be found in the ‘Cryptographic fundamentals’ section of the [Guidelines for cryptography](#195abe87-bb1e-4006-8b42-eaecca4d51f1).\n\nFurther information on network segmentation and segregation can be found in the ‘Network design and configuration’ section of the [Guidelines for networking](#f145ff5b-d396-4248-8f48-621349d6f0ed).\n\nFurther information on database management system applications can be found in the ‘Server application hardening’ section of the [Guidelines for system hardening](#de7525f3-a466-40a5-abdd-3ae24a6d1b44)."
+    }
+   ]
+  }
+ }
+}

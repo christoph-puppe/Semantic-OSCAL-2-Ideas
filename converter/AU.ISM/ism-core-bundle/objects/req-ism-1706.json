@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-1706",
+ "version": "2026.06.18",
+ "label": "ISM-1706",
+ "lifecycle": "active",
+ "title": "Control: ism-1706",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Privileged user accounts (excluding backup administrator accounts) cannot access their own backups."
+   }
+  }
+ ]
+}

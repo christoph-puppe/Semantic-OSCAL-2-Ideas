@@ -1,0 +1,89 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.3.7",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.3.7",
+ "lifecycle": "active",
+ "title": "Einschränkung angeschlossener Peripherie",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für IT-Systeme SOLLTE angeschlossene Peripherie einschränken."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "einschränken",
+     "result": "angeschlossene Peripherie",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.39",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4,
+     "tags": [
+      "Produktbeschreibung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Peripherie bezeichnet angeschlossene Geräte, die über Schnittstellen wie USB, Bluetooth oder andere Ports mit dem IT-System kommunizieren. Gemeint sind sowohl physische Peripheriegeräte wie Drucker, USB-Sticks oder Netzanbindungen, als auch die Installation virtueller Peripherie z.B. virtuelle Druckertreiber. Einschränkung bedeutet hierbei, dass die Nutzung von Peripheriegeräten verhindert wird, die nicht von der Institution autorisiert wurden, abhängig vom Einsatzzweck des Systems. Der Sinn und Zweck dieser Regelung liegt darin, Angriffsflächen zu verringern und das Einschleusen oder Abfließen von Daten zu erschweren. So könnte ein unkontrollierter Anschluss externer USB-Sticks Schadsoftware einschleusen oder sensible Daten unbemerkt kopieren, während eine restriktive Konfiguration unautorisierte Datenabflüsse wirksam verhindern kann."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "e699dfd7-ecc7-4ca6-bce8-3cd1ba44804d"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/ASST.3.11.1"
+  }
+ ]
+}

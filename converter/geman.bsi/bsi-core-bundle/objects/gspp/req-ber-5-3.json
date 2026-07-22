@@ -1,0 +1,76 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BER.5.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BER.5.3",
+ "lifecycle": "active",
+ "title": "Deaktivierung einfacher Biometrie",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Berechtigung SOLLTE die Authentifizierung nur anhand von Biometrie deaktivieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "deaktivieren",
+     "result": "die Authentifizierung nur anhand von Biometrie"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.36",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Wenn die Authentifizierung nur biometrisch vorgenommen wird (z.B. anhand von Fingerabdrücken oder Abbildern des Gesichtes), dann könnten Angreifer Fälschungen oder gestohlene Fingerabdrücke missbrauchen, um sich Zugang zu verschaffen. Werden biometrische Verfahren dagegen mit weiteren Authentisierungsmittel (z.B. einer PIN) kombiniert, können sie den Zugriffsschutz verbessern. Ein häufig vorkommendes Beispiel sind Mobilgeräte wie Smartphones, die durch Fingerabdruck den Zugriff auf Daten oder Funktionen wie das mobile Bezahlen gestatten - obwohl auf dem Gerät selbst häufig noch Fingerabdrücke erkennbar sind."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "4483f020-da27-44af-ae23-edf7d676d72f"
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GEB.3.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GEB.3.4",
+ "lifecycle": "active",
+ "title": "Berechtigungsmarkierung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Gebäudemanagement für Nutzende von Standorten KANN zum Tragen von gut sichtbaren Berechtigungsmarkierungen innerhalb des Sicherheitsperimeters anweisen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "anweisen",
+     "result": "zum Tragen von gut sichtbaren Berechtigungsmarkierungen innerhalb des Sicherheitsperimeters",
+     "target-object-categories": [
+      "Nutzende",
+      "Standorte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.44",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.16",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.24"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Unter Berechtigungsmarkierungen sind physische Kennzeichen wie Ausweise, Badges, Namensschilder oder Kartenhalter zu verstehen, die eine eindeutige Zuordnung einer Person zu ihrer Zugangsberechtigung ermöglichen. Sie können zudem farblich, mit Fotos oder Barcodes gestaltet sein, um unterschiedliche Zutrittsrechte auf einfache Weise erkennbar zu machen. Der Sinn einer solchen Vorgabe liegt darin, dass unbefugte Personen leichter auffallen und damit potenzielle Gefährdungen frühzeitig erkannt werden. So könnte ein Vorfall entstehen, wenn sich Unbefugte unbemerkt Zutritt zu kritischen Bereichen verschaffen, indem sie sich in einer Gruppe mit berechtigten Personen bewegen. Dagegen kann eine sichtbare Berechtigungsmarkierung helfen, Anomalien rasch zu erkennen und eine unauffällige, aber effektive Zugangskontrolle im Alltag zu unterstützen. Dies gilt sowohl für Mitarbeitende als auch für Besuchende. Für die Umsetzung kann eine Institution beispielsweise darauf achten, dass Markierungen gut sichtbar an Kleidung oder einem Schlüsselband getragen werden können. Sie kann auch unterschiedliche Farbkennungen nutzen, um klar zwischen Besuchenden, Dienstleistern und Mitarbeitenden zu unterscheiden. Für Besuche kann ein einfaches Verfahren eingeführt werden, mit dem Besuchende beim Betreten des Gebäudes ein temporäres Ausweisdokument erhalten, das bei Verlassen wieder zurückzugeben ist. Um die Akzeptanz zu erhöhen, kann das Gebäudemanagement praktikable Trageoptionen wie Clips, Lanyards oder magnetische Halterungen bereitstellen, die den Alltag nicht behindern."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "63985f87-b50e-4c73-9962-f026b5e6d840"
+  }
+ ]
+}

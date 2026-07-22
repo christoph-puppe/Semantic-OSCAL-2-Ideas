@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GEB.4.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GEB.4.1",
+ "lifecycle": "active",
+ "title": "Einrichtung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Gebäudemanagement für Standorte KANN geschlossene Sicherheitsbereiche installieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "installieren",
+     "result": "geschlossene Sicherheitsbereiche",
+     "target-object-categories": [
+      "Standorte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Gebäudedokumentation"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.44",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.16",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.24",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein Sicherheitsbereich ist ein klar abgegrenzter physischer Raum, für die ein eigener Perimeter eingerichtet wird und dessen Betreten ausschließlich autorisiertem Personal oder unter engen Voraussetzungen gestattet wird. Solche Bereiche dienen dem Schutz von Personen, Anlagen, sensiblen Informationen oder betriebskritischen Prozessen. Standorte oder Teile eines Standortes mit erhöhtem Schutzbedarf können so vor unbefugten Eingriffen geschützt werden, z.B. Serverräume, Arbeitsplätze für Administrierende oder die Institutionsleitung. Zur Umsetzung können z.B. Zutrittskontrollanlagen oder Bewachung eingesetzt werden. Wenn es sich um Hochsicherheitsbereiche handelt, kann der Zutritt mit einem Mehr-Faktor-Verfahren (z.B. Smartcard mit PIN) davor geschützt werden, dass Unbefugte sich durch entwendete Schlüssel oder Authentifizierungstoken Zugang verschaffen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "b545c003-c5ea-4d18-bcf5-d5651f9eba7c"
+  }
+ ]
+}

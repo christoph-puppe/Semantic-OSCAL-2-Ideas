@@ -1,0 +1,82 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GEB.2.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GEB.2.2",
+ "lifecycle": "active",
+ "title": "Dokumentation öffentlicher Bereiche",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Gebäudemanagement für Gebäude SOLLTE Bereiche, die ohne Authentifizierung zugänglich sind, mit Begründung dokumentieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "dokumentieren",
+     "result": "Bereiche, die ohne Authentifizierung zugänglich sind,",
+     "result-specification": "mit Begründung",
+     "target-object-categories": [
+      "Gebäude"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Gebäudedokumentation"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.44",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.16",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.24"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 4
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Gebäude sind als stabiler und klar ersichtlicher Sicherheitsperimeter besonders geeignet. Viele Institutionen benötigen für ihre Aufgaben jedoch Bereiche, die ohne Authentifizierung zugänglich sind, z.B. Empfangs- oder Lieferzonen, Bürgerbüros, Kundenräume. Hierdurch könnte es leicht zu versehentlichen oder zielgerichteten Schäden an Assets, unbefugten Zutritten oder dem Abfluss vertraulicher Daten kommen. Daher ist es sinnvoll, diese Bereiche zu dokumentieren und die Gründe für ihre Bereitstellung nachzuhalten, um sicherzustellen, dass der Sicherheitsperimeter auch im Gebäude korrekt verläuft und geschützt ist."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "1147b820-ea85-4137-aad4-d7a5462baaaa"
+  }
+ ]
+}

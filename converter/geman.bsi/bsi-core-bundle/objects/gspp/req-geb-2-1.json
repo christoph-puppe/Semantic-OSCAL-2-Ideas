@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GEB.2.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GEB.2.1",
+ "lifecycle": "active",
+ "title": "Installation von Perimetern",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Gebäudemanagement für Standorte SOLLTE Sicherheitsperimeter installieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "installieren",
+     "result": "Sicherheitsperimeter",
+     "target-object-categories": [
+      "Standorte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Gebäudedokumentation"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.44",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.16",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.24"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Installation physischer Sicherheitsperimeter dient dem grundlegenden Schutz von Informationsressourcen und kritischer Infrastruktur vor unbefugtem Zugriff und physischen Bedrohungen. Ein effektiver Sicherheitsperimeter kann als mehrschichtige Barriere fungieren, die sensible Bereiche vor verschiedenen Risiken wie Einbruch, Diebstahl oder Sabotage schützt. Ohne angemessene physische Sicherheitsmaßnahmen könnten unbefugte Personen z.B. Zugang zu Serverräumen erlangen und dort Datenträger entwenden, Schadcode installieren oder Hardwarekomponenten manipulieren. Auch Naturereignisse wie Überschwemmungen oder Brände könnten ohne geeignete Perimeter leichter zu Datenverlust oder Betriebsunterbrechungen führen.  Bei der Implementierung physischer Sicherheitsperimeter kann eine Kombination verschiedener Sicherheitsebenen erwogen werden, beginnend mit äußeren Barrieren wie Zäunen, Schranken oder gesicherten Eingangsbereichen, die den Zugang zum Gelände regulieren. Im Gebäudeinneren können Zugangskontrollsysteme mit unterschiedlichen Authentifizierungsmethoden (Chipkarten, biometrische Verfahren, PIN-Codes) eingesetzt werden, um den Zutritt zu sensiblen Bereichen auf autorisierte Mitarbeiter zu beschränken. Die Effektivität dieser Maßnahmen kann durch ergänzende Systeme wie Videoüberwachung, Alarmanlagen oder Bewegungsmelder verstärkt werden, wobei ein ausgewogenes Verhältnis zwischen Sicherheitsanforderungen und Praktikabilität für den Arbeitsalltag zu finden ist. Bei der Planung kann eine Risikobewertung helfen, um festzulegen, welche Bereiche besonders schutzbedürftig sind und entsprechend abgesichert werden, etwa durch Sicherheitszonen mit gestaffelten Zugangsrechten oder spezielle Brandschutzbereiche für kritische IT-Infrastruktur."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "b801be80-6655-485d-bba9-3f1ca8953755"
+  }
+ ]
+}

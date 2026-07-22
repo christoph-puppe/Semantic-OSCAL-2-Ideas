@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-media-media-destruction-supervision-of-accoun",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Supervision of accountable material destruction",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0372",
+   "sequence": 7190
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0373",
+   "sequence": 7200
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Supervision of accountable material destruction",
+     "name": "overview",
+     "prose": "The successful destruction of media storing accountable material is more important than for other media. As such, its destruction should be supervised by at least two cleared personnel who sign a destruction certificate afterwards."
+    }
+   ]
+  }
+ }
+}

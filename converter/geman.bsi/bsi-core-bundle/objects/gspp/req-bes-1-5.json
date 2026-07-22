@@ -1,0 +1,97 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.1.5",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.1.5",
+ "lifecycle": "active",
+ "title": "Autorisierung des Bereitstellungsmodells",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Cloud-Dienste SOLLTE für jeden Cloud-Dienst das Bereitstellungsmodell durch {param:bes.1.5-prm1} autorisieren."
+   },
+   "parameters": [
+    {
+     "name": "bes.1.5-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "autorisieren",
+     "result": "für jeden Cloud-Dienst das Bereitstellungsmodell",
+     "result-specification": "durch {{eine zuständige Person oder Rolle}}",
+     "target-object-categories": [
+      "Cloud-Dienste"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Beschaffungskriterien"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Lieferketten",
+      "Shared Responsibility Model"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Hiermit ist die bewusste Entscheidung für ein Modell und die konzeptionelle Umsetzung (\"Shared Responsibility\") dieser Entscheidung gemeint. Bereitstellungsmodelle sind z.B.: Public Cloud, Private Cloud, Community Cloud, Hybrid Cloud. Es kann in der Praxis aber zu dadurch nicht abgedeckten Varianten, wie z. B. \"Virtual Private Cloud\" kommen. Die Anforderung ist erst dann umgesetzt, wenn auch zwischen den Vertragspartnern das Bereitstellungsmodell explizit vereinbart ist, so dass die Verteilung der Verantwortlichkeiten (Shared Responsibility) für Schutzmaßnahmen zwischen Institution und Dienstleister klar geregelt ist."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "bes.1.5-prm1": {
+     "label": "eine zuständige Person oder Rolle",
+     "alt-identifier": "6d50b322-84b8-4c9b-bd2a-0b48d6b61847"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "6d50b322-84b8-4c9b-bd2a-0b48d6b61847"
+  }
+ ]
+}

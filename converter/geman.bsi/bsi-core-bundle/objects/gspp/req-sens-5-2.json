@@ -1,0 +1,91 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.5.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.5.2",
+ "lifecycle": "active",
+ "title": "Weitergabe von Informationen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende von Informationen SOLLTE zu den Voraussetzungen der Weitergabe von Informationen sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "zu den Voraussetzungen der Weitergabe von Informationen",
+     "target-object-categories": [
+      "Nutzende",
+      "Informationen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.38",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.22",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.45"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Advanced Persistent Threats (APT)"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Als \"Voraussetzungen der Weitergabe\" werden die rechtlichen, vertraglichen, technischen und organisatorischen Bedingungen verstanden, die vor der Übermittlung von Informationen an interne oder externe Empfänger erfüllt sein müssen, um Vertraulichkeit und Compliance zu gewährleisten. So werden unkontrollierte Informationslecks und Compliance-Verletzungen verhindert, indem ein Bewusstsein für die Voraussetzungen geschaffen wird, unter denen Informationen an Dritte übermittelt werden dürfen. Hierzu gehört insbesondere, welche Kategorien von Informationen (z.B. Kundendaten) welchen internen und externen Personengruppen (z.B. Dienstleister) über welche Kommunikationskanäle (z.B. E-Mail, telefonisch) unter welchen Voraussetzungen (z.B. Nennung des Kundenkennwortes) weitergegeben werden dürfen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "a59c2b01-6240-49ef-b608-a9e3d07476c6"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/ASST.3.1.1"
+  }
+ ]
+}

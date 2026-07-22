@@ -1,0 +1,46 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/set/tax/ber",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "lifecycle": "active",
+ "title": "Berechtigung",
+ "members": [
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/ber-1",
+   "sequence": 4710
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/ber-2",
+   "sequence": 4780
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/ber-3",
+   "sequence": 5110
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/ber-4",
+   "sequence": 5210
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/ber-5",
+   "sequence": 5320
+  },
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/set/tax/ber-6",
+   "sequence": 5490
+  }
+ ],
+ "label": "BER",
+ "facets": {
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "description": {
+    "de": "Die Praktik Berechtigung stellt sicher, dass ausschließlich autorisierte Personen und IT-Systeme Zugriff auf sensible Informationen und Ressourcen erhalten. Sie regelt die Verwaltung von Identitäten und Berechtigungen, um die Vertraulichkeit, Integrität und Verfügbarkeit von Informationen zu gewährleisten.  Dabei bildet die Praktik Berechtigung eine zentrale Schnittstelle zwischen den Praktiken Personal, Dienstleistersteuerung, Asset Management und Gebäudemanagement. Während IT-Systeme den Zugriff regeln, behandeln die Praktik Personal den Umgang mit Mitarbeitenden. Die Praktik Berechtigung vereint diese organisatorischen und technischen Aspekte, um Zugriffsrechte sicher und effizient zu verwalten."
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "389cd5ad-fb81-4a95-8f7a-8f1fe1881709"
+  }
+ ]
+}

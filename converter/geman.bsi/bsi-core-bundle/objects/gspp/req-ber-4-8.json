@@ -1,0 +1,80 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BER.4.8",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BER.4.8",
+ "lifecycle": "active",
+ "title": "IT-System-Zugangskonto",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Berechtigung für IT-Systeme KANN diese genau einem Zugangskonto zuweisen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "zuweisen",
+     "result": "diese genau einem Zugangskonto",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Inventar Berechtigungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "2",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.36",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Wenn ein besonders schützenswertes IT-System nur von einer Person oder Identität genutzt wird, empfiehlt es sich dieses mit genau einem zugehörigen Zugangskonto zu verknüpfen. Dadurch wird ausgeschlossen, dass weitere Konten unnötig Zugriff erhalten. Bei Revisionen ist auf diese Weise eindeutig nachvollziehbar, welche Identität Zugriff auf das System hatte. Das Vorgehen ist auch auf virtualisierte IT-Systeme übertragbar. Ein Beispiel ist eine spezielle Administrationskonsole, die ausschließlich einem dedizierten Admin-Konto zugeordnet ist."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "7057a1f6-0804-49ac-9d7f-289ecc71fa33"
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/NOT.4.6",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "NOT.4.6",
+ "lifecycle": "active",
+ "title": "Geschützte Aufbewahrung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Notfallplanung SOLLTE eine geschützte Aufbewahrung von Datensicherungen verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "eine geschützte Aufbewahrung von Datensicherungen"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Datensicherungskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.45",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.39",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Eine geschützte Aufbewahrung von Datensicherungen bedeutet, dass Sicherungskopien nicht nur vorhanden sind, sondern auch vor Verlust, Manipulation, versehentlicher Löschung oder unbefugtem Zugriff bewahrt werden. Dabei wird berücksichtigt, dass Datensicherungen häufig ein attraktives Ziel für Angriffe darstellen und gleichzeitig im Notfall die einzige Möglichkeit zur Wiederherstellung von Systemen und Daten sein können. Beispiele für Schutzmaßnahmen sind die Ablage von Sicherungsmedien in feuer- und wasserfesten Tresoren, die Nutzung getrennter Räumlichkeiten oder externer Rechenzentren mit physischen Sicherheitsvorkehrungen sowie die Verschlüsselung von Backups, wenn diese an externen Standorten oder in Cloud-Umgebungen gespeichert werden. Auch organisatorische Maßnahmen wie eine klare Regelung, wer Zugriff auf die Sicherungen erhält, tragen zum Schutz bei."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "ac46110b-7f7f-4111-b7e8-5abf648563b9"
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.8.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.8.4",
+ "lifecycle": "active",
+ "title": "Schließen von Türen und Fenstern",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende von Gebäuden SOLLTE zum Verschließen von Fenstern und Türen beim Verlassen von Räumlichkeiten anweisen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "anweisen",
+     "result": "zum Verschließen von Fenstern und Türen",
+     "result-specification": "beim Verlassen von Räumlichkeiten",
+     "target-object-categories": [
+      "Nutzende",
+      "Gebäude"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.44"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Physical Access Control"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Durch unverschlossene Türen und Fenster könnten Unbefugte Zutritt erlangen und (in Außenwänden) auch Umwelteinflüsse wirksam werden (Regen, Sturm, Frost), so dass IT, sensible Informationen und andere Werte in Gefahr geraten, zerstört, beschädigt, ausgespäht oder entfernt werden könnten. Sobald die Anwesenheit von Pesonen in einem Raum endet, sind Türen und Fenster daher so  zu schließen, dass von Außen das unbefugte Öffnen und (in Außenwänden) das Eindringen von Umwelteinflüssen verhindert wird. Türen werden z.B. abgeschlossen oder Türschließsysteme in den entsprechenden Betriebszustand gebracht, Fenster ganz geschlossen und verriegelt. Nicht erforderlich ist das Verschließen der Türen von fensterlosen Innenräumen, in denen keine IT, sensible Informationen oder andere Werte aufbewahrt werden, oder wenn Risiken praktisch ausgeschlossen werden können (z.B. Kippen von Außenfenstern in höheren Geschossen bei gutem Wetter vor kurzer Abwesenheit). Dies gilt auch für Gemeinschaftsräume, in denen sich IT-Systeme oder Datenträger befinden, z.B. VK-Konferenzzimmer."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "2a761948-b26a-4e19-8a9d-75f78ac19811"
+  }
+ ]
+}

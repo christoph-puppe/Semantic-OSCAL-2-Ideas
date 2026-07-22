@@ -1,0 +1,77 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/VRB.7.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "VRB.7.1",
+ "lifecycle": "active",
+ "title": "Behandlung von Compliance-Verstößen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Verbesserung SOLLTE ein Verfahren zur Behandlung von Verstößen unter Berücksichtigung der Betroffenenrechte verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "ein Verfahren zur Behandlung von Verstößen",
+     "result-specification": "unter Berücksichtigung der Betroffenenrechte"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Compliance-Verpflichtungen"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Das Verfahren sollte eine klare Definition enthalten, was als Verstoß gilt und die verschiedenen Arten von Verstößen kategorisieren. Es sollten  Melde- und Eskalationswegen für erkannte oder vermutete Verstöße festgelegt werden, ein systematischer Prozess zur Untersuchung und Dokumentation von Verstößen etabliert werden, eine Entscheidungsfindung über angemessene Reaktionen und Konsequenzen stattfinden und die Umsetzung beschlossener Maßnahmen sollte nachverfolgt werden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "8a5be79d-22b6-4a78-a87e-6445c9fdd20d"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/GC.3.1.1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/UMS.7.1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/PERF.2.1"
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DEV.6.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DEV.6.1",
+ "lifecycle": "active",
+ "title": "Freigabe nach Änderungen und Tests",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Entwicklung SOLLTE die Freigabe zur Nutzung im Einklang mit den entsprechenden Verfahren und Regelungen für Änderungen und Tests autorisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "autorisieren",
+     "result": "die Freigabe zur Nutzung",
+     "result-specification": "im Einklang mit den entsprechenden Verfahren und Regelungen für Änderungen und Tests"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Entwicklungsdokumentation"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.26"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Eine Freigabe zur Nutzung (Release) meint hier die formelle und autorisierte Überführung einer entwickelten oder geänderten IT-Komponente (wie Software, Systemkonfiguration, Dienstleistung) von einer Test- oder Entwicklungsumgebung in eine Produktions- oder Betriebsumgebung, um den Endbenutzern zur Verfügung zu stehen. Die Vorschrift zielt darauf ab, sicherzustellen, dass nur getestete und abgestimmte Änderungen in den Betrieb gelangen. Ohne diese Autorisierung könnte ungetesteter Code oder eine nicht genehmigte Systemänderung zu schwerwiegenden Betriebsunterbrechungen, Datenverlust oder Sicherheitslücken führen. Eine formalisierte Freigabe kann die Integrität und Verfügbarkeit von Systemen schützen, indem sie die Einhaltung der etablierten Verfahren und Regelungen für Änderungen und Tests sicherstellt."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "f89b3d65-b38d-4269-80a1-2d5c6b8a9ad9"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/TEST.1.1"
+  }
+ ]
+}

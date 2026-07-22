@@ -1,0 +1,88 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.5.5",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.5.5",
+ "lifecycle": "active",
+ "title": "Wartungsfenster",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets für IT-Systeme SOLLTE bei voraussichtlichen Verfügbarkeiteinschränkungen durch bevorstehende Wartungen die Nutzenden über Dauer und Umfang der Einschränkungen informieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "informieren",
+     "result": "bei voraussichtlichen Verfügbarkeiteinschränkungen durch bevorstehende Wartungen die Nutzenden",
+     "result-specification": "über Dauer und Umfang der Einschränkungen",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.31",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.28",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.21"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Wenn durch Wartungsarbeiten die Verfügbarkeit von Systemen, Anwendungen oder Daten in Geschäftsprozessen beeinträchtigt werden könnte, ist eine Information über die bevorstehende Wartung sinnvoll. Dazu gehört, dass über die Dauer (Beginn und Ende), sowie über den Umfang der Einschränkungen (z.B. betroffene Anwendungen, Netze oder Funktionen) informiert wird. Beispiele sind Firmware- oder Betriebssystemupdates von zentralen Speichersystemen oder Netzkomponenten, der Austausch von Komponenten an zentralen Stromverteilern oder eine Wartung an den Klimasystemen eines nicht redundant ausgelegten Serverraumes."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "afaa993d-da28-4f69-93a0-41cb472e8e42"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/TEST.5.1"
+  }
+ ]
+}

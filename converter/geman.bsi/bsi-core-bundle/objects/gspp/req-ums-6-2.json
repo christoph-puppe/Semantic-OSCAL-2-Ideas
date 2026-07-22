@@ -1,0 +1,68 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/UMS.6.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "UMS.6.2",
+ "lifecycle": "active",
+ "title": "Fortschreibung des Umsetzungsplans",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Umsetzung MUSS ein Verfahren zur Fortschreibung des Umsetzungsplans verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "ein Verfahren zur Fortschreibung des Umsetzungsplans"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Umsetzungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Fortschreibung sollte die Anpassung von Zeitplänen und Ressourcenzuweisungen, Neubewertungen von Prioritäten, die Ergänzung neuer Maßnahmen und Streichung nicht mehr relevanter Maßnahmen sowie die Integration von Erkenntnissen aus der Wirksamkeitsprüfung umfassen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "2383a636-5eab-43e4-b026-c6fbaae7ae56"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/UMS.2.1"
+  }
+ ]
+}

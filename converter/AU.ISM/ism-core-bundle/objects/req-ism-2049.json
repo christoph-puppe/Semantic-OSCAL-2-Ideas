@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-2049",
+ "version": "2026.06.18",
+ "label": "ISM-2049",
+ "lifecycle": "active",
+ "title": "Control: ism-2049",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "When user permissions or credentials are changed, software forces all impacted users to re-authenticate."
+   }
+  }
+ ]
+}

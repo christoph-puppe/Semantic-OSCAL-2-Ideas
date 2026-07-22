@@ -1,0 +1,88 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.5.6",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.5.6",
+ "lifecycle": "active",
+ "title": "Wartung durch Externe",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets für Mitarbeitende KANN bei Wartungen, die von Externen ohne Sicherheitsüberprüfung vorgenommen werden, zur Beaufsichtigung durch internes Personal anweisen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "anweisen",
+     "result": "bei Wartungen, die von Externen ohne Sicherheitsüberprüfung vorgenommen werden,",
+     "result-specification": "zur Beaufsichtigung durch internes Personal",
+     "target-object-categories": [
+      "Mitarbeitende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.31",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.28",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.21"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 4
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Eine Sicherheitsüberprüfung bezeichnet hier die systematische Bewertung der Vertrauenswürdigkeit und Zuverlässigkeit von externen Dienstleistern oder deren Personal durch background checks, Referenzprüfungen oder formelle Sicherheitsclearance-Verfahren. Externe ohne Sicherheitsüberprüfung umfasst alle Dienstleister, Wartungstechniker oder Support-Personal von Drittanbietern, die nicht durch entsprechende Verfahren zur Vertrauenswürdigkeit validiert wurden. Beaufsichtigung durch internes Personal ist die kontinuierliche Anwesenheit und Überwachung von qualifizierten eigenen Mitarbeitenden während der gesamten Dauer der Wartungsarbeiten, um sowohl fachliche Aufsicht als auch Sicherheitskontrolle zu gewährleisten. Dazu gehört, dass die begleitenden Mitarbeitenden sicherstellen, dass Externe ausschließlich auf die für ihre Wartungsaufgabe notwendigen Systembereiche zugreifen und keine unauthorisierten Aktionen wie das Kopieren von Dateien oder die Installation nicht genehmigter Software durchführen. Externe Wartungskräfte ohne Sicherheitsüberprüfung könnten sonst vertrauliche Informationen einsehen, kopieren oder manipulieren, Malware einschleusen oder unbeabsichtigt Systemkonfigurationen beschädigen. Durch begleitendes internes Personal kann eine Institution kontinuierliche Aufsicht über alle durchgeführten Aktivitäten sicherstellen und gleichzeitig den Wissenstransfer für zukünftige Wartungsarbeiten fördern. Bei einer Fernwartung kann dies z.B. durch das Logging von Diagnose- und Wartungsaktivitäten, sowie die anschließende Überprüfung, dass alle Wartungsverbindungen getrennt sind, geschehen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "bcf1c916-4509-4461-b9a7-08803a4e96b1"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/SENS.8.6"
+  }
+ ]
+}

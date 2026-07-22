@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-0634",
+ "version": "2026.06.18",
+ "label": "ISM-0634",
+ "lifecycle": "active",
+ "title": "Control: ism-0634",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Security-relevant events for gateways are centrally logged, including:\n\n- data packets and data flows permitted through gateways\n- data packets and data flows attempting to leave gateways\n- real-time alerts for attempted intrusions."
+   }
+  }
+ ]
+}

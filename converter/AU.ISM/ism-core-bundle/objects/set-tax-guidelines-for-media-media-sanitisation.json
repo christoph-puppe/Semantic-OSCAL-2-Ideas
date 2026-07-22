@@ -1,0 +1,63 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-media-media-sanitisation",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Media sanitisation",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-media-media-sanitisation-media-sanitisation-p",
+   "sequence": 6680
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-media-media-sanitisation-volatile-media-sanit",
+   "sequence": 6710
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-media-media-sanitisation-treatment-of-volatil",
+   "sequence": 6730
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-media-media-sanitisation-non-volatile-magneti",
+   "sequence": 6770
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-media-media-sanitisation-treatment-of-non-vol",
+   "sequence": 6790
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-media-media-sanitisation-non-volatile-erasabl",
+   "sequence": 6810
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-media-media-sanitisation-non-volatile-electri",
+   "sequence": 6830
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-media-media-sanitisation-treatment-of-non-vol",
+   "sequence": 6850
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-media-media-sanitisation-non-volatile-flash-m",
+   "sequence": 6870
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-media-media-sanitisation-treatment-of-non-vol",
+   "sequence": 6890
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-media-media-sanitisation-media-that-cannot-be",
+   "sequence": 6910
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Media sanitisation",
+     "name": "overview",
+     "prose": "# Hybrid hard drives\n\nWhen sanitising hybrid hard drives, separate the non-volatile magnetic media from the circuit board containing non-volatile flash memory media and sanitise each separately.\n\n# Solid-state drives\n\nWhen sanitising solid-state drives, the method for sanitising non-volatile flash memory media applies.\n\n# Further information\n\nFurther information on the random-access memory testing tool [MemTest86](#629818d8-430c-4125-8fd2-5e3f988fce21) can be obtained from PassMark Software.\n\nFurther information on the graphics card random-access memory testing tools [MemtestG80](#39e186f3-d175-4eed-afe6-2b9a7a936a91) and [MemtestCL](#9d38f42d-eeff-4124-93db-4b29abaafb67) can be obtained from their GitHub projects.\n\nFurther information on HDDerase is available from the [Center for Memory and Recording Research](#401ed034-e2bd-43b4-9fde-05d07618039a) at the University of California San Diego. HDDerase can call the ATA secure erase command as well as reset the host-protected area and device configuration overlay table on non-volatile magnetic media."
+    }
+   ]
+  }
+ }
+}

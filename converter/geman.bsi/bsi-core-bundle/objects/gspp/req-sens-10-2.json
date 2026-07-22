@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.10.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.10.2",
+ "lifecycle": "active",
+ "title": "Umgang mit privilegierten Berechtigungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Administrierende SOLLTE zum Umgang mit privilegierten Berechtigungen sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "zum Umgang mit privilegierten Berechtigungen",
+     "target-object-categories": [
+      "Administrierende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.31",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.42"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Privilegierte Berechtigungen (auch „administrative Rechte“, „Root-Berechtigungen“ oder „elevated privileges“ genannt) ermöglichen weitreichende Systemeingriffe und können bei unsachgemäßer Verwendung schwerwiegende Sicherheitsvorfälle verursachen. Beispielsweise könnte ein Administrator mit Root-Zugriff versehentlich kritische Systemdateien löschen, sensible Daten einsehen, oder Angreifer könnten solche Zugangsdaten abgreifen und mit diesen durch Lateral Movement ungehindert im Netzwerk agieren. Dies wird besonders deutlich an realen Vorfällen, bei denen Administratoren durch Social Engineering zum Einsatz ihrer Berechtigungen manipuliert wurden oder durch mangelndes Bewusstsein für Sicherheitsimplikationen ihrer Handlungen Schwachstellen selbst geschaffen haben. Stattdessen ist es sinnvoll, solche Berechtigungen nur dann zu verwenden, wenn sie für die aktuelle Aktion erforderlich sind, z.B. durch sudo. Zudem ist es bei diesen Zugangsdaten besonders wichtig, dass sie nicht ungeschützt abgelegt werden. Das betrifft auch Zugangsdaten, die in Skripten oder Anwendungen hinterlegt werden um diese auszuführen: Werden diese beim Aufruf von Kommandozeilenbefehlen oder in Skripten mitgespeichert, könnten sie in Protokollen oder im Prozessspeicher sichtbar sein und missbraucht werden. Sinnvoll ist stattdessen die Verwendung von Passwort-Managern, Umgebungsvariablen oder speziellen Secrets-Management-Lösungen. Dazu gehört auch die regelmäßige Rotation solcher Zugangsdaten bei Dienstekonten (Service Accounts)."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "df690f55-b161-42fd-8cdb-383a553dddfe"
+  }
+ ]
+}

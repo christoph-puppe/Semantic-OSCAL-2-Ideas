@@ -1,0 +1,23 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-evaluated-products-evaluated-product-usage",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Evaluated product usage",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-evaluated-products-evaluated-product-usage-us",
+   "sequence": 5760
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Evaluated product usage",
+     "name": "overview",
+     "prose": "# Evaluated configuration\n\nAn evaluated product is operating in an evaluated configuration if:\n\n- functionality that it uses was in the scope of the evaluation and it is implemented in the specified manner\n- only product updates that have been assessed through maintenance and re-evaluation activities (known as assurance continuity) have been applied\n- the environment complies with assumptions or organisational security policies stated in the evaluation documentation.\n\n# Unevaluated configuration\n\nAn evaluated product is operating in an unevaluated configuration when it does not meet the requirements of the evaluated configuration and guidance provided in its certification report.\n\n# Patching evaluated products\n\nIn most cases, the latest patched version of an evaluated product will be more secure than an older unpatched version. While the application of patches will not normally place an evaluated product into an unevaluated configuration, some vendors may include new functionality that has not been evaluated with their patches. In such cases, an organisation should use their judgement to determine whether this deviation from the evaluated configuration constitutes additional security risk or not.\n\n# Further information\n\nFurther information on patching or updating IT equipment can be found in the ‘System maintenance’ section of the [Guidelines for system management](#c6ca6620-ccd5-4c5d-b97c-9d92f1162948).\n\nFurther information on the installation, configuration, administration and operation of Common Criteria products is available from vendors and can be found in evaluation documentation on the Common Criteria’s [Certified Products List](#29b04eaf-5f57-4ea1-a453-8047826dccf5).\n\nFurther information on the installation, configuration, administration and operation of high assurance IT equipment is available from ASD."
+    }
+   ]
+  }
+ }
+}

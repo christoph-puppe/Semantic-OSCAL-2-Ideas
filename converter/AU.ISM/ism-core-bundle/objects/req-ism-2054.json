@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-2054",
+ "version": "2026.06.18",
+ "label": "ISM-2054",
+ "lifecycle": "active",
+ "title": "Control: ism-2054",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "If a software bill of materials is available for imported third-party software components, it is used during software development to ensure such software components have no known vulnerabilities."
+   }
+  }
+ ]
+}

@@ -1,0 +1,88 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.5.7",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.5.7",
+ "lifecycle": "active",
+ "title": "Dokumentation von Wartungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets für IT-Systeme SOLLTE Wartungen mit Asset, Anlass, Zeitpunkt, Beteiligten, durchgefürten Maßnahmen und Ergebnissen dokumentieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "dokumentieren",
+     "result": "Wartungen",
+     "result-specification": "mit Asset, Anlass, Zeitpunkt, Beteiligten, durchgefürten Maßnahmen und Ergebnissen",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.31",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.37",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Dokumentation von Wartungen an IT-Systemen kann Nachvollziehbarkeit, Verantwortlichkeit und Beweisfähigkeit herstellen; ohne sie könnten unerkannte Konfigurationsänderungen, verdeckte Schwachstellen oder verlängerte Ausfälle entstehen. Zur Umsetzung kann die Institution ein schlankes, einheitliches Wartungsprotokoll verwenden, das je Vorgang erfasst: (1) eindeutig referenziertes Asset/CI, Umgebung und betroffener Service, (2) Anlass, Art der Wartung (präventiv/korrektiv/notfall) und geplanter Zeitraum, (3) Verantwortliche, Beteiligte/Dienstleister und Kontakt, (4) geplante Maßnahmen, Backout-Plan sowie definierte Vor-/Nach-Checks, (5) tatsächlich durchgeführte Schritte („as-built“), verwendete Versionen/Images und geänderte Parameter, (6) Messergebnisse/Logs/Screenshots/Hashes als Nachweis, (7) Auswirkungen (Downtime, Kapazität), Abnahme/Testresultat und Freigabe, (8) Verweise auf Tickets/Changes/Störungsmeldungen, (9) Datum/Zeit mit Zeitzone und Protokollversion. Die Erfassung kann in einem vorhandenen Ticket- oder CMDB-Werkzeug stattfinden."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "a2ecedcb-3515-4d40-b4d3-b745142af15b"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/TEST.4.1.3"
+  }
+ ]
+}

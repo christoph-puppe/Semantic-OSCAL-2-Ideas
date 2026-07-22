@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-cryptographic-algorithms-using-r",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Using Rivest-Shamir-Adleman",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0476",
+   "sequence": 15050
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1765",
+   "sequence": 15060
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0477",
+   "sequence": 15070
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Using Rivest-Shamir-Adleman",
+     "name": "overview",
+     "prose": "A modulus of 2048 bits for correctly implemented RSA provides 112 bits of effective security strength, with larger modulus sizes providing more bits of effective security strength.\n\nTaking into account projected technological advances in quantum computing, RSA will not be approved beyond 2030."
+    }
+   ]
+  }
+ }
+}

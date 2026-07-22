@@ -1,0 +1,63 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/RISK.1.10",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "RISK.1.10",
+ "lifecycle": "active",
+ "title": "Freigabe der Umsetzungsplanung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Risikomanagement MUSS die Umsetzungsplanung durch die Risikoeigentümer autorisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "autorisieren",
+     "result": "die Umsetzungsplanung",
+     "result-specification": "durch die Risikoeigentümer"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Umsetzungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Anforderungen-zum-Risikomanagement",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Auf der Grundlage des Umsetzungsplans ist eine systematische und transparente Umsetzung der Anforderung bzw. Sicherheitsmaßnahmen möglich. Der Umsetzungsplan enthält z. B. die Anforderungsbeschreibung, das Zielobjekt bzw. den Anwendungsbereich, die verantwortliche Stelle, Start und Zieldatum (Fristen), Prioritäten, Status der Umsetzung, ergänzende Aktivitäten (z. B. Schulungen), Risiken inkl. Begründung (Was bleibt offen? Was wurde nicht umgesetzt und warum?), Ressourcenplanung, Abhängigkeiten zu anderen Anforderungen, Datum der Freigabe und Unterschrift des Risikoeigentümers. Der Umsetzungsplan dient als Grundlage für die Fortschrittskontrolle, die Berichterstattung und Audits."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "6162c7df-8813-47d4-bbad-4f182c810292"
+  }
+ ]
+}

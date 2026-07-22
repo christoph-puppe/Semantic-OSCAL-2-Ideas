@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.3.8",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.3.8",
+ "lifecycle": "active",
+ "title": "Anonymisierung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets für Informationen KANN die Anonymisierung vor der Weitergabe verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "die Anonymisierung",
+     "result-specification": "vor der Weitergabe",
+     "target-object-categories": [
+      "Informationen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Bei der Anonymisierung werden Informationen so verändert, dass sie für den Empfänger nicht mehr dem ursprünglichen Informationswert oder Datensatz zugeordnet werden können. Dabei werden gezielt rückverfolgbare Merkmale entfernt oder verfremdet, sodass eine Zuordnung zu einem bestimmten Informationswert der Institution (z.B. einer Person, Systemkonfiguration oder Zugangskonto) nicht mehr möglich ist. Davon abzugrenzen ist die Pseudonymisierung („pseudonymization“), bei der eine Identifizierbarkeit theoretisch weiterhin besteht, etwa durch separate Zuordnungstabellen oder Schlüssel. Die Weitergabe meint hier jegliche Form des Teilens von Informationen über die Grenzen des Informationsverbundes hinaus – etwa an externe Dienstleister, Behörden oder Partnerinstitutionen – unabhängig davon, ob dies elektronisch, schriftlich oder mündlich geschieht. Beispiele sind die Bildung summarischer Statistiken aus personenbezogenen Daten oder die Ersetzung eines Gerätenamens durch eine zufällige Zeichenkette vor der Herausgabe zu Diagnosezwecken."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "09e9470c-c4d4-466a-9629-5efa6ddb4cd8"
+  }
+ ]
+}

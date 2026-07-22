@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-1536",
+ "version": "2026.06.18",
+ "label": "ISM-1536",
+ "lifecycle": "active",
+ "title": "Control: ism-1536",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "All queries to databases from software that are initiated by users, and any resulting crash or error messages, are centrally logged."
+   }
+  }
+ ]
+}

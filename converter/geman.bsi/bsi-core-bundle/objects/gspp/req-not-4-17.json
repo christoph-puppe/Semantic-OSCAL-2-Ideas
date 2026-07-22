@@ -1,0 +1,95 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/NOT.4.17",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "NOT.4.17",
+ "lifecycle": "active",
+ "title": "Anwendungstest",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Notfallplanung für Anwendungen KANN deren Funktionsfähigkeit nach Wiederherstellung {param:not.4.17-prm1} überprüfen."
+   },
+   "parameters": [
+    {
+     "name": "not.4.17-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überprüfen",
+     "result": "deren Funktionsfähigkeit nach Wiederherstellung",
+     "result-specification": "{{regelmäßig}}",
+     "target-object-categories": [
+      "Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Datensicherungskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.45",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.39",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Diese Anforderung zielt darauf ab, die Disaster-Recovery-Fähigkeiten einer Anwendung insgesamt zu gewährleisten. Durch regelmäßige Tests der Wiederherstellung aus Backups wird sichergestellt, dass im Ernstfall (Systemausfall, Datenverlust, Cyberangriff) eine funktionierende Wiederherstellung möglich ist. Dabei wird nicht nur die bloße Wiederherstellung getestet, sondern auch die Funktionalität der wiederhergestellten Anwendung verifiziert – inklusive Datenintegrität und korrekte Übernahme der Konfiguration."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "not.4.17-prm1": {
+     "label": "regelmäßig",
+     "alt-identifier": "97025637-17d4-48fc-ace6-67f20e7ccee6"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "97025637-17d4-48fc-ace6-67f20e7ccee6"
+  }
+ ]
+}

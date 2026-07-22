@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GEB.9.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GEB.9.3",
+ "lifecycle": "active",
+ "title": "Notaus",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Gebäudemanagement für Standorte KANN eine Notausschaltung für die Versorgungseinrichtungen installieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "installieren",
+     "result": "eine Notausschaltung für die Versorgungseinrichtungen",
+     "target-object-categories": [
+      "Standorte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Gebäudedokumentation"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "0",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.1",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.8",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.10",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Eine Notausschaltung bezeichnet in diesem Kontext eine zentral verfügbare, technisch implementierte Vorrichtung, mit der im Gefahrenfall die Energieversorgung kritischer Versorgungseinrichtungen wie Strom, Gas oder Klimaanlagen unmittelbar und vollständig unterbrochen werden kann. Der Sinn und Zweck einer solchen Einrichtung liegt darin, Gefahren für Menschen, Technik und Informationen schnell eingrenzen zu können: Ein unkontrollierter Brand könnte sich durch weiterlaufende Klimageräte verstärken, ein Stromschlag durch beschädigte Leitungen könnte Menschen gefährden, oder ein Wasserschaden durch defekte Kühlung könnte weitere Systeme zerstören. Gleichzeitig kann eine sofortige Unterbrechung der Energiezufuhr Folgeschäden eindämmen, indem Brandlast reduziert oder die Ausbreitung toxischer Gase verhindert werden kann. Zur Umsetzung kann eine Institution beispielsweise (1) physische Notausschalter an klar gekennzeichneten, jederzeit zugänglichen Stellen nahe den Ausgängen oder im Leitstand installieren, (2) die Schalter so konzipieren, dass sie nur für definierte Versorgungskreise wie IT-Serverräume oder Technikzonen wirken und nicht die gesamte Einrichtung unkontrolliert lahmlegen, und (3) ergänzende visuelle Hinweise oder Leitsymbole anbringen, die die Bedienung im Ernstfall erleichtern."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "1520f194-770f-4da5-9ac8-1094105e2d80"
+  }
+ ]
+}

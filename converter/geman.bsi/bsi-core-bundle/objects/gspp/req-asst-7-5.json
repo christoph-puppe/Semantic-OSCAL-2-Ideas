@@ -1,0 +1,82 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.7.5",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.7.5",
+ "lifecycle": "active",
+ "title": "Vernichtungseinrichtungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets für Standorte KANN an allen Standorten, an denen körperliche Dokumente verarbeitet werden, Vernichtungseinrichtungen vor dem Zugriff unbefugter geschützt installieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "installieren",
+     "result": "an allen Standorten, an denen körperliche Dokumente verarbeitet werden, Vernichtungseinrichtungen",
+     "result-specification": "vor dem Zugriff unbefugter geschützt",
+     "target-object-categories": [
+      "Standorte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "0",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.16",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.45",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.38"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 4
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Installation von Vernichtungseinrichtungen dient dem Schutz sensibler Daten vor unbefugtem Zugriff, Missbrauch oder unkontrollierter Weitergabe. Ziel ist es, die Vertraulichkeit, Integrität und Verfügbarkeit von Informationen auch über ihren gesamten Lebenszyklus hinweg sicherzustellen – einschließlich der ordnungsgemäßen Entsorgung. Unter Vernichtungseinrichtungen versteht man mechanische oder elektronische Geräte, die Dokumente so zerkleinern oder unlesbar machen, dass eine Rekonstruktion unmöglich ist; typische Beispiele sind Aktenvernichter mit Schutzklasse P-4 oder höher oder Entsorgungsbehälter mit gesichertem Zugriff (z.B. abschließbare Sicherheitsbehälter). Dies kann auch so realisiert werden, dass Datenträger gesammelt und zentral gelöscht oder vernichtet werden. Kann durch die Institution selbst oder Dienstleister für die Aktenvernichtung umgesetzt werden. Bei der Verwendung von Dienstleistern ist es sinnvoll, deren Professionalität zu verifzieren, z.B. durch ein Zertifikat. Bei der Umsetzung ist es sinnvoll darauf zu achten, dass solche Einrichtungen nicht nur ausreichend dimensioniert und technisch geeignet sind, sondern auch physisch gegen unbefugten Zugriff geschützt werden – etwa durch Aufstellung in abgeschlossenen Räumen oder durch Zugangskontrolle."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "85366b94-56c1-4c46-a34b-52b96d7ab1d4"
+  }
+ ]
+}

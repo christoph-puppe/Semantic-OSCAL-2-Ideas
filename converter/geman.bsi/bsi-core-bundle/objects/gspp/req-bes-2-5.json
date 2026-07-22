@@ -1,0 +1,82 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BES.2.5",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BES.2.5",
+ "lifecycle": "active",
+ "title": "Anhörung Administrierender",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Beschaffungsmanagement für Einkäufe SOLLTE Administrierende bei der Bedarfserfassung anhören."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "anhören",
+     "result": "Administrierende",
+     "result-specification": "bei der Bedarfserfassung",
+     "target-object-categories": [
+      "Einkäufe"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Prozess Beschaffung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Lieferketten"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ohne diese Einbindung könnte etwa eine Fachabteilung Systeme einkaufen, die keine sicheren Schnittstellen bieten, nicht mit bestehenden Sicherheitsrichtlinien kompatibel sind oder schwer zu administrieren sind, was später zu kostspieligen Nacharbeiten oder Sicherheitslücken führen könnte. Eine rechtzeitige Beteiligung kann hingegen gewährleisten, dass Produkte aus administrativer Sicht wartbar, updatefähig und kompatibel mit etablierten Sicherheitsmechanismen sind. Die Anforderung kann durch verschiedene Maßnahmen praktisch umgesetzt werden: (1) Ein definiertes Beschaffungsformular kann Eingabefelder enthalten, in denen die fachliche Einschätzung von Administrierenden dokumentiert werden kann. (2) Eine Checkliste mit Mindestkriterien wie Updatefähigkeit, Protokollierungsoptionen oder Berechtigungssteuerung kann bei jeder Bedarfserfassung hinzugezogen werden. (3) Ein kurzer, standardisierter Freigabeprozess über ein Ticket- oder Workflow-System kann sicherstellen, dass vor der endgültigen Beschaffung eine Rückmeldung aus administrativer Sicht eingeholt wird. (4) Zur Effizienzsteigerung kann eine Wissensdatenbank mit Erfahrungswerten zu bereits genutzten Produkten gepflegt werden, sodass Administrierende wiederkehrende Anforderungen schneller einschätzen können."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "64a8bc51-2358-41c0-820d-d306f71d13ad"
+  }
+ ]
+}

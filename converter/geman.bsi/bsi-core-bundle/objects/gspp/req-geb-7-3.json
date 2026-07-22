@@ -1,0 +1,93 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GEB.7.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GEB.7.3",
+ "lifecycle": "active",
+ "title": "Schlüsselaudit",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Gebäudemanagement für Standorte SOLLTE die vorhandenen Schlüssel {param:geb.7.3-prm1} überprüfen."
+   },
+   "parameters": [
+    {
+     "name": "geb.7.3-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überprüfen",
+     "result": "die vorhandenen Schlüssel",
+     "result-specification": "{{regelmäßig}}",
+     "target-object-categories": [
+      "Standorte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Übungs- und Prüfplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ohne eine solche Kontrolle könnten z. B. verlorene, vergessene oder unregistrierte Schlüssel im Umlauf bleiben, was zu einem unerkannten Sicherheitsrisiko führt. Ein Vorfall könnte darin bestehen, dass ein ehemaliger externer Dienstleister noch Zugang zu Räumen hat, in denen vertrauliche Unterlagen oder wertvolle Geräte aufbewahrt werden, oder dass ein entwendeter Schlüssel später unbemerkt für Einbruch und Diebstahl genutzt wird. Praktisch kann eine Institution dies umsetzen, indem sie ein aktuelles Schlüsselinventar führt und dieses in festgelegten Abständen mit den tatsächlich im Umlauf befindlichen Schlüsseln abgleicht. Sinnvoll ist auch, bei der Überprüfung nicht nur auf Vollständigkeit, sondern auf Plausibilität zu achten – beispielsweise ob Schlüssel für inzwischen nicht mehr genutzte Räume weiterhin im Umlauf sind. Bei normalen Schutzbedarf genügt eine stichprobenartige Kontrolle, Schlüssel mit höherem Schutzbedarf (z.B. für Sicherheitsbereiche) dagegen bedürfen in der Regel einer häufigeren, vollständigen Kontrolle."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "geb.7.3-prm1": {
+     "label": "regelmäßig",
+     "alt-identifier": "97d89e25-dbe3-4da7-bcfb-07537a05d6bf"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "97d89e25-dbe3-4da7-bcfb-07537a05d6bf"
+  }
+ ]
+}

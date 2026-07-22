@@ -1,0 +1,96 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/ASST.5.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "ASST.5.2",
+ "lifecycle": "active",
+ "title": "Geregelte Wartungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Informationen und Assets für IT-Systeme SOLLTE die Wartung {param:asst.5.2-prm1} ausführen."
+   },
+   "parameters": [
+    {
+     "name": "asst.5.2-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "ausführen",
+     "result": "die Wartung",
+     "result-specification": "{{regelmäßig oder prädiktiv}}",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Betriebshandbuch"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.31",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.28",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.21"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "„Wartung“ bezeichnet hier sämtliche planmäßigen oder zustandsabhängigen Maßnahmen zur Erhaltung der Funktionsfähigkeit, Sicherheit und Integrität von IT-Systemen, Anwendungen und den zugehörigen physischen wie logischen Assets („maintenance“). Verschleißende Systeme und Infrastrukturen könnten zu Fehlerzuständen und hierdurch zu Ausfallzeiten und Sicherheitsrisiken führen. Das betrifft auch die für das IT-System verwendete Stromversorgung, USV, Klimatechnik, sowie Brandabschottungen für Kabel- und Rohrdurchführungen. Beispiele hierfür können vielfältig sein: Ein Server kann turnusmäßig mit Firmware‑Updates versorgt oder nach einer bestimmten Betriebsdauer auf Staubablagerungen überprüft werden; Netzwerkkomponenten können per Lifecycle‑Plan aktualisiert oder lüfterseitig gereinigt werden; USV‑Batterien können nach Herstellerempfehlung getauscht werden; Software‑Module können per Patch‑Management in ein Wartungsfenster eingeplant werden. Eine „regelmäßige Wartung“ bedeutet hierbei ein turnusmäßiges Vorgehen nach festen Zeitintervallen (Vorausbestimmte Instandhaltungsstrategie), während prädiktive Wartung den tatsächlichen Abnutzungs- oder Belastungszustand auswertet, um Eingriffe bedarfsgerecht zu planen (Prädiktive Instandhaltungsstrategie). Beide Ansätze verfolgen das Ziel, Sicherheits- und Betriebsrisiken zu minimieren, die aus dem Ausfall oder der Fehlfunktion technischer Komponenten resultieren könnten."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "asst.5.2-prm1": {
+     "label": "regelmäßig oder prädiktiv",
+     "alt-identifier": "f4508940-fad1-49ff-b7f7-d6612790f145"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "f4508940-fad1-49ff-b7f7-d6612790f145"
+  }
+ ]
+}

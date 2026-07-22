@@ -1,0 +1,260 @@
+{
+ "id": "https://ns.fedramp.gov/cr26/req/IEC-CSO-FIR",
+ "version": "2026.07.14.01",
+ "label": "IEC-CSO-FIR",
+ "lifecycle": "active",
+ "title": "Final Incident Report",
+ "statements": [
+  {
+   "id": "s1",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.fedramp.gov/cr26/party/providers"
+   ],
+   "prose": {
+    "en": "Final Incident Report (requirement varies by certification class; see class tailorings and the class-variants payload)."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.fedramp.gov/cr26/facet/narrative@1": {
+   "schema-name": "FedRAMP Incident Report (IEC-CSO-IIR / IEC-CSO-OIR / IEC-CSO-FIR)"
+  },
+  "https://ns.oscal.org/stdlib/facet/reporting-obligation@1": {
+   "notification": [
+    {
+     "party": "FedRAMP",
+     "method": "email",
+     "target": "fedramp_security@fedramp.gov",
+     "name": "fedramp_security@fedramp.gov"
+    },
+    {
+     "party": "Agency Customers",
+     "method": "varies",
+     "target": "varies by agency",
+     "name": "Follow agency-specific incident reporting procedures"
+    },
+    {
+     "party": "All Necessary Parties",
+     "method": "update",
+     "target": "trust center",
+     "name": "Provider's Trust Center or USDA Connect"
+    }
+   ]
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "class-variants": {
+    "a": {
+     "statement": "Providers with Class A Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.",
+     "force": "MUST",
+     "pain_timeframes": {
+      "1": {
+       "fir": {
+        "timeframe_type": "bizdays",
+        "timeframe_num": 3,
+        "description": "Final Incident Report"
+       }
+      },
+      "2": {
+       "fir": {
+        "timeframe_type": "bizdays",
+        "timeframe_num": 3,
+        "description": "Final Incident Report"
+       }
+      },
+      "3": {
+       "fir": {
+        "timeframe_type": "bizdays",
+        "timeframe_num": 3,
+        "description": "Final Incident Report"
+       }
+      },
+      "4": {
+       "fir": {
+        "timeframe_type": "bizdays",
+        "timeframe_num": 3,
+        "description": "Final Incident Report"
+       }
+      },
+      "5": {
+       "fir": {
+        "timeframe_type": "bizdays",
+        "timeframe_num": 3,
+        "description": "Final Incident Report"
+       }
+      }
+     },
+     "artifacts": {
+      "all": [
+       "An Final Incident Report for one or more incidents. The report can be from real incidents, simulated incidents, or a combination of sources."
+      ]
+     }
+    },
+    "b": {
+     "statement": "Providers with Class B Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.",
+     "force": "MUST",
+     "pain_timeframes": {
+      "1": {
+       "fir": {
+        "timeframe_type": "bizdays",
+        "timeframe_num": 3,
+        "description": "Final Incident Report"
+       }
+      },
+      "2": {
+       "fir": {
+        "timeframe_type": "bizdays",
+        "timeframe_num": 3,
+        "description": "Final Incident Report"
+       }
+      },
+      "3": {
+       "fir": {
+        "timeframe_type": "bizdays",
+        "timeframe_num": 3,
+        "description": "Final Incident Report"
+       }
+      },
+      "4": {
+       "fir": {
+        "timeframe_type": "bizdays",
+        "timeframe_num": 3,
+        "description": "Final Incident Report"
+       }
+      },
+      "5": {
+       "fir": {
+        "timeframe_type": "bizdays",
+        "timeframe_num": 3,
+        "description": "Final Incident Report"
+       }
+      }
+     },
+     "artifacts": {
+      "all": [
+       "An Final Incident Report for one or more incidents. The report can be from real incidents, simulated incidents, or a combination of sources."
+      ]
+     }
+    },
+    "c": {
+     "statement": "Providers with Class C Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.",
+     "force": "MUST",
+     "pain_timeframes": {
+      "1": {
+       "fir": {
+        "timeframe_type": "bizdays",
+        "timeframe_num": 1,
+        "description": "Final Incident Report"
+       }
+      },
+      "2": {
+       "fir": {
+        "timeframe_type": "bizdays",
+        "timeframe_num": 1,
+        "description": "Final Incident Report"
+       }
+      },
+      "3": {
+       "fir": {
+        "timeframe_type": "hours",
+        "timeframe_num": 6,
+        "description": "Final Incident Report"
+       }
+      },
+      "4": {
+       "fir": {
+        "timeframe_type": "hours",
+        "timeframe_num": 6,
+        "description": "Final Incident Report"
+       }
+      },
+      "5": {
+       "fir": {
+        "timeframe_type": "hours",
+        "timeframe_num": 6,
+        "description": "Final Incident Report"
+       }
+      }
+     },
+     "artifacts": {
+      "all": [
+       "An Final Incident Report for one or more incidents. The report can be from real incidents, simulated incidents, or a combination of sources."
+      ]
+     }
+    },
+    "d": {
+     "statement": "Providers with Class D Certifications MUST responsibly notify all affected parties by providing a Final Incident Report once the incident has been resolved and recovery is complete, including final updates to all previously reported information.",
+     "force": "MUST",
+     "pain_timeframes": {
+      "1": {
+       "fir": {
+        "timeframe_type": "hours",
+        "timeframe_num": 24,
+        "description": "Final Incident Report"
+       }
+      },
+      "2": {
+       "fir": {
+        "timeframe_type": "hours",
+        "timeframe_num": 6,
+        "description": "Final Incident Report"
+       }
+      },
+      "3": {
+       "fir": {
+        "timeframe_type": "hours",
+        "timeframe_num": 3,
+        "description": "Final Incident Report"
+       }
+      },
+      "4": {
+       "fir": {
+        "timeframe_type": "hours",
+        "timeframe_num": 3,
+        "description": "Final Incident Report"
+       }
+      },
+      "5": {
+       "fir": {
+        "timeframe_type": "hours",
+        "timeframe_num": 3,
+        "description": "Final Incident Report"
+       }
+      }
+     },
+     "artifacts": {
+      "all": [
+       "An Final Incident Report for one or more incidents. The report can be from real incidents, simulated incidents, or a combination of sources."
+      ]
+     }
+    }
+   }
+  }
+ },
+ "relations": [
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/All Affected Parties"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Final Incident Report (FIR)"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Incident"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Provider"
+  },
+  {
+   "type": "uses-term",
+   "ref": "https://ns.fedramp.gov/cr26/term/Responsibly"
+  },
+  {
+   "type": "schema",
+   "ref": "https://fedramp.gov/schemas/fedramp-incident-report-schema-2026-06-24.json"
+  }
+ ]
+}

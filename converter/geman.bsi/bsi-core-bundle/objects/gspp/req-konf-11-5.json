@@ -1,0 +1,82 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.11.5",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.11.5",
+ "lifecycle": "active",
+ "title": "Einschränkung unauthentifizierter Anschlüsse",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für TK-Anwendungen SOLLTE von unauthentifizierten Anschlüssen erreichbare Gegenstellen einschränken."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "einschränken",
+     "result": "von unauthentifizierten Anschlüssen erreichbare Gegenstellen",
+     "target-object-categories": [
+      "TK-Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Produktbeschreibung"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Als unauthentifizierte Anschlüsse (engl. unauthenticated connections) sind hier alle Endpunkte zu verstehen, die eine Kommunikation ohne Anmeldung ermöglichen. Dies umfasst beispielsweise Notfalltelefone in Aufzügen, öffentlich zugängliche Telefone oder auch Faxgeräte in ungesicherten Bereichen. Aber auch an Konferenzraum-Systeme für Videokonferenzen oder den anonymen Gast-Zugang zu Online-Meetings ist zu denken. Die Anforderung zielt darauf ab, den Missbrauch dieser Kommunikationskanäle zu unterbinden, deren Nutzung nicht eindeutig einem authentifizierten Benutzer zugeordnet werden kann. Ohne eine Einschränkung der erreichbaren Gegenstellen – also der kontaktierbaren externen Domänen, Meeting-IDs oder Benutzerkonten – könnte ein Angreifer vertrauliche interne Besprechungen ausspähen oder ein unautorisierter Gast könnte von einem Konferenzraum aus sensible Daten per Bildschirmübertragung an externe Dritte weitergeben. Ohne eine solche Einschränkung könnte ein unberechtigter Nutzer auf Kosten der Institution kostenpflichtige Mehrwertdienste oder teure Auslandsnummern anwählen und so erheblichen finanziellen Schaden verursachen. Ebenso könnte eine missbräuchliche Nutzung zur Belästigung Dritter oder zur Absetzung von böswilligen Notrufen erfolgen, was die Verfügbarkeit kritischer Ressourcen beeinträchtigen könnte."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "09f3cad1-7245-42f4-a62c-e48ce193ce8a"
+  }
+ ]
+}

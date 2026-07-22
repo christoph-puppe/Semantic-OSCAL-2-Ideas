@@ -1,0 +1,64 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/VRB.2.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "VRB.2.1",
+ "lifecycle": "active",
+ "title": "Umgang mit Nicht-Konformitäten",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Verbesserung MUSS eine Methode zur Überprüfung von Nicht-Konformitäten hinsichtlich Ursachen und Wiederauftreten festlegen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "festlegen",
+     "result": "eine Methode zur Überprüfung von Nicht-Konformitäten",
+     "result-specification": "hinsichtlich Ursachen und Wiederauftreten"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Methode sollte eine systematische Erfassung und Dokumentation aller identifizierten Nicht-Konformitäten, unabhängig davon, ob sie durch interne Audits, externe Prüfungen, Vorfälle oder im Rahmen des regulären Betriebs entdeckt wurden, enthalten. Außerdem sollte sie sich auf eine gründliche Ursachenanalyse stützen, die nicht nur die unmittelbaren, sondern auch die grundlegenden Ursachen der Nicht-Konformität identifiziert (Root-Cause-Analysis)."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "55056da1-3773-4fb8-b7bf-9d5d7e42f5e6"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/VRB.2.2"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/PERF.3.2.2"
+  }
+ ]
+}

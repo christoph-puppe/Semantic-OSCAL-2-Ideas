@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/PERS.5.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "PERS.5.1",
+ "lifecycle": "active",
+ "title": "Maßregelung",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Personal SOLLTE ein Verfahren zur Maßregelung verankern."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "verankern",
+     "result": "ein Verfahren zur Maßregelung"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Prozess Personalmanagement"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3,
+     "tags": [
+      "Insider Threat"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Legen Sie fest unter welchen Voraussetzungen (z.B. Benennung konkreter Pflicht, Nachweis des Verstoßes) welche Maßregelungsmaßnahmen zu ergreifen sind, wenn Mitarbeitende gegen Anweisungen zur Informationssicherheit verstoßen. Maßnahmen können von Mitarbeitergesprächen über der Entzug der Berechtigung zum Zugriff auf vertrauliche Daten bis hin zu Abmahnungen oder Kündigungen reichen. Für arbeitsrechtliche Maßnahmen gilt der Grundsatz der Verhältnismäßigkeit und das Verbot der Maßregelung bei zulässiger Rechtsausübung. Aufgrund des engen Bezugs zum Arbeitsrecht ist im Zweifel eine Rechtsberatung empfehlenswert."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "3f47f4d9-18dc-4887-ba8b-83a32e8e52e0"
+  }
+ ]
+}

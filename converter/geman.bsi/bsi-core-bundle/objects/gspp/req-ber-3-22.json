@@ -1,0 +1,80 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/BER.3.22",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "BER.3.22",
+ "lifecycle": "active",
+ "title": "Keine Gruppenkonten",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Berechtigung SOLLTE Gruppenkonten im Regelbetrieb untersagen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "untersagen",
+     "result": "Gruppenkonten im Regelbetrieb"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "IT-Betriebskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "2",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.36",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.30",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Insider Threat"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Ein Gruppenkonto (englisch shared account) bezeichnet hier ein Zugangskonto, das von mehreren natürlichen Personen gemeinsam genutzt wird und daher keiner einzelnen natürlichen Person eindeutig zugeordnet werden kann. Vom Regelbetrieb erfasst ist die gewöhnliche, wiederkehrende Nutzung im Tagesgeschäft, nicht jedoch ein eng begrenzter Ausnahmefall mit gesonderter Begründung und Absicherung, sowie nachvollziehbarer Zuordnung der Nutzung zu einer konkreten Person. Der Ausschluss von Gruppenkonten hat das Ziel die Nachvollziehbarkeit von Zugriffen und Änderungen zu verbessern und eine eindeutige Verantwortlichkeit für die Nutzung von Berechtigungen sicherzustellen. Die Verwendung von Gruppenkonten im Regelbetrieb könnten hingegen die Aufklärung von Sicherheitsvorfällen erschweren, die missbräuchliche Nutzung von Zugriffsrechten begünstigen oder nach dem Ausscheiden einzelner Nutzer unbemerkte Zugriffsmöglichkeiten bestehen lassen. Für technisch unvermeidbare Sonderfälle können stattdessen speziell gekennzeichneter Funktions- oder Dienstkonten (service accounts) verwendet werden. Im Unterschied zu Gruppenkonten sind Service Accounts nicht zur gemeinsamen interaktiven Nutzung durch mehrere Mitarbeiter gedacht. Sie können beispielsweise einen Datenbankdienst mit einer Anwendung verbinden, automatisierte Datensicherungen durchführen oder den Datenaustausch zwischen zwei Systemen ermöglichen. Um klar von Gruppenkonten abgegrenzt zu sein benötigt ein Dienstkonto eine klar nachvollziehbare Zweckbindung, die Sperrung interaktiver Anmeldungen, sowie eine regelmäßige Erneuerung von Authentisierungsmerkmalen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "78e70d76-b423-4707-a3c4-27f416fa7d14"
+  }
+ ]
+}

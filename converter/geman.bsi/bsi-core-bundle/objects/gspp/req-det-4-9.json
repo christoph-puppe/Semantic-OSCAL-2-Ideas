@@ -1,0 +1,96 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/DET.4.9",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "DET.4.9",
+ "lifecycle": "active",
+ "title": "Manipulations-Checkup",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Detektion für IT-Systeme KANN das System auf Manipulationsversuche {param:det.4.9-prm1} überprüfen."
+   },
+   "parameters": [
+    {
+     "name": "det.4.9-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überprüfen",
+     "result": "das System auf Manipulationsversuche",
+     "result-specification": "{{regelmäßig}}",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Detektions-Konzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.39",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.41"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Falls Systeme einem erhöhten Manipulationsrisiko ausgesetzt sind (z.B. wegen öffentlicher Aufstellung), die Vertraulichkeit oder Integrität des Systems oder damit verbundener Daten oder Netze jedoch nicht vernachlässigenswert ist, so ist eine regelmäßige Überprüfung auf Manipulationen empfehlenswert. Hierfür können Gerätesiegel verwendet werden.  Maßnahmen bei Feststellung einer Manipulation können z.B. das Zurücksetzen auf den Werkszustand oder die Aussonderung sein."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "det.4.9-prm1": {
+     "label": "regelmäßig",
+     "alt-identifier": "77b66ddb-2066-47f6-b6f7-b5b447287b59"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "77b66ddb-2066-47f6-b6f7-b5b447287b59"
+  }
+ ]
+}

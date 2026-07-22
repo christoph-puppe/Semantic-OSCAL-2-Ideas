@@ -1,0 +1,69 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/UMS.2.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "UMS.2.2",
+ "lifecycle": "active",
+ "title": "Priorisierung von Maßnahmen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "must",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Umsetzung MUSS eine Priorisierung der festgelegten Maßnahmen auf Basis der der Risikobewertung, Abhängigkeiten und Ressourcenverfügbarkeit festlegen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "festlegen",
+     "result": "eine Priorisierung der festgelegten Maßnahmen",
+     "result-specification": "auf Basis der der Risikobewertung, Abhängigkeiten und Ressourcenverfügbarkeit"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Umsetzungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 0
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Es ist eine geeignete Priorisierung der Anforderungen und Maßnahmenumsetzung vorzunehmen. Gesetzliche Verpflichtungen und Compliance, der Umsetzungsaufwand einer Anforderung bzw. Maßnahme oder die Risikomitigierung der Anforderungen können bei der Priorisierung helfen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "03f6a09f-5be8-405f-a7b5-4f4fd7034413"
+  }
+ ],
+ "relations": [
+  {
+   "type": "required",
+   "ref": "https://ns.bsi.bund.de/gspp/req/UMS.2.1"
+  }
+ ]
+}

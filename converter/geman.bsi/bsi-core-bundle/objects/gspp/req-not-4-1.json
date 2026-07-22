@@ -1,0 +1,78 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/NOT.4.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "NOT.4.1",
+ "lifecycle": "active",
+ "title": "Dokumentation der Quellen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Notfallplanung SOLLTE die zu sichernden Daten dokumentieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "dokumentieren",
+     "result": "die zu sichernden Daten"
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Datensicherungskonzept"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.45",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.25",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.37"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Datensicherungen dienen der Wiederherstellung von Daten nach Vorfällen. Aufgrund der besonderen Bedeutung fordert auch die ISO/IEC 27001 die Sicherung von Informationen in Übereinstimmung mit themenspezifischen Regelungen zur Datensicherung. Hierzu gehört die Regelung, welche Daten konkret gesichert werden (Quellen, Kategorien oder Klassifikation der Daten, Umfang). Relevant sind dabei auch Daten, die bei Dienstleistern oder in der Cloud aufbewahrt werden. Die Datensicherung kann auch durch die Sicherung ganzer IT-Systeme, Datenträger oder Netzlaufwerke umgesetzt werden. Es empfiehlt sich auch zu prüfen, wie die Institution ihre Daten, welche bei einem Outsourcing Dienstleister liegen, sichern will. Es ist möglich eine Datensicherung durch den Dienstleister oder auch bei sich selbst zu erstellen."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "db78cca2-d85a-443d-8198-b5fa84d58b9d"
+  }
+ ]
+}

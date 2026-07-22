@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-1389",
+ "version": "2026.06.18",
+ "label": "ISM-1389",
+ "lifecycle": "active",
+ "title": "Control: ism-1389",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Executable files imported via gateways or CDSs are automatically executed in a sandbox to detect any suspicious behaviour."
+   }
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/GEB.5.2",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "GEB.5.2",
+ "lifecycle": "active",
+ "title": "Schutz gegen Manipulation",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "may",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Gebäudemanagement für IT-Systeme KANN Manipulationsschutzvorkehrungen installieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "installieren",
+     "result": "Manipulationsschutzvorkehrungen",
+     "target-object-categories": [
+      "IT-Systeme"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Betriebshandbuch"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "1",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.44",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.19",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.21"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "erhöht",
+     "effort": 5
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Manipulationsschutzvorkehrungen sind physische oder technische Schutzmaßnahmen („tamper protection measures“), die darauf ausgelegt sind, unbefugte Eingriffe, Veränderungen oder Beschädigungen an IT-Systemen oder deren Infrastruktur frühzeitig zu verhindern oder zumindest erkennbar zu machen. Der Begriff „gemeinsame Arbeitsbereiche“ („shared workspaces“) umfasst Räumlichkeiten, in denen mehrere Personen, Teams oder Abteilungen gleichzeitig arbeiten, wodurch sich naturgemäß ein erhöhtes Risiko unkontrollierter Zugriffe auf technische Einrichtungen ergibt. Der Zweck dieser Anforderung liegt darin, die Integrität und Verfügbarkeit der eingesetzten Systeme zu wahren und Manipulationen vorzubeugen, die durch unbeaufsichtigte physische Zugriffe oder verdeckte Eingriffe erfolgen könnten. Ein ungeschütztes Gerät in einem frei zugänglichen Raum könnte beispielsweise durch das unbemerkte Einstecken manipulierter USB-Geräte oder das Entfernen von Netzwerkkabeln kompromittiert werden, während ein gezielter Eingriff in eine Serversteckdose zu Systemausfällen führen könnte. Eine Manipulationsschutzvorkehrung kann hier den Nachweis eines Eingriffs ermöglichen oder diesen bereits im Ansatz verhindern. Beispielsweise kann sinnvoll sein: (1) die Verwendung manipulationssicherer Gehäuse oder Gehäusesiegel, (2) der Einsatz von abschließbaren IT-Racks oder gesicherten Anschlussfeldern, (3) die Integration physischer Sensoren, die bei Gehäuseöffnung Alarmmeldungen erzeugen, oder (4) die Kennzeichnung und regelmäßige Sichtprüfung von Geräten auf Manipulationsspuren. Auch der gezielte Einbau von IT-Komponenten in erhöhten, kameragesicherten oder besonders einsehbaren Bereichen kann eine praktikable Schutzwirkung entfalten."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "59810143-17bf-49b6-91d0-1266cb7eb9da"
+  }
+ ]
+}

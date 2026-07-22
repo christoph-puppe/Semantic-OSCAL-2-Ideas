@@ -1,0 +1,79 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/KONF.10.4",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "KONF.10.4",
+ "lifecycle": "active",
+ "title": "Deaktivierung nicht benötigter Anwendungsfunktionen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Konfiguration für Anwendungen SOLLTE nicht benötigte Anwendungsfunktionen deaktivieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "deaktivieren",
+     "result": "nicht benötigte Anwendungsfunktionen",
+     "target-object-categories": [
+      "Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Konfigurationshistorie"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "2",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.28",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.23"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Funktionen die für den Betrieb nicht benötigt werden stellen ein unnötiges Sicherheitsrisiko dar, da sie von Angreifern ausgenutzt werden oder durch Wechselwirkungen zu unvorhergesehenen Fehlern führen könnten. Hierzu gehören z.B. ungenutzte Cloud-Anbindungen, Module, Leistungsmerkmale oder Einstellungen. Installationspakete enthalten häufig eine Vielzahl von ausführbaren Dateien und Erweiterungen. Für den Betrieb nicht benötigte Anwendungskomponenten können Schwachstellen enthalten und sind ein unnötiges Sicherheitsrisiko."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "990f4798-6926-41be-b09d-ee0162c530a0"
+  }
+ ]
+}

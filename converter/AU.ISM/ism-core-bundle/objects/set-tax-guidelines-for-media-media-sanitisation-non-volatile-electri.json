@@ -1,0 +1,23 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-media-media-sanitisation-non-volatile-electri",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": "Non-volatile electrically erasable programmable read-only memory media sanitisation",
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0836",
+   "sequence": 6820
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Non-volatile electrically erasable programmable read-only memory media sanitisation",
+     "name": "overview",
+     "prose": "A single overwrite with a random pattern, followed by a read back for verification, is considered suitable for sanitising non-volatile electrically erasable programmable read-only memory (EEPROM) media."
+    }
+   ]
+  }
+ }
+}

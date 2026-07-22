@@ -1,0 +1,85 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.7.17",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.7.17",
+ "lifecycle": "active",
+ "title": "Unverschlüsseltes Telefonieren",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende von TK-Anwendungen SOLLTE gegen die Kommunikation über unverschlüsselte Telekommunikationsverbindungen sensibilisieren."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "sensibilisieren",
+     "result": "gegen die Kommunikation über unverschlüsselte Telekommunikationsverbindungen",
+     "target-object-categories": [
+      "Nutzende",
+      "TK-Anwendungen"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Schulungsplan"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Hilfreich ist es hierbei darüber zu informieren, zu welchen Empfängerkreisen mit welchem Schutzniveau über welche Anwendungen kommuniziert werden kann. Telefonie über das öffentliche Telefonnetz ist noch immer häufig unverschlüsselt, während z.B. viele moderne Messenger-Apps eine Ende-zu-Ende-Verschlüsselung ermöglichen. Relevant ist dabei auch der Aufbau von Konferenzschaltungen: Wählt sich z.B. ein Teilnehmer über das öffentliche Telefonnetz ein, so ist diese Verbindung typischerweise unverschlüsselt, wodurch die Gespräche aller Konferenzteilnehmer abgehört werden können, auch wenn die anderen Teilnehmer über eine verschlüsselte Verbindung in der Konferenz sind."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "789dbb4e-30fe-46ce-822c-06965e00f9c8"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/ASST.4.1"
+  }
+ ]
+}

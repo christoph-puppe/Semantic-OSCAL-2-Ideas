@@ -1,0 +1,81 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/PERF.2.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "PERF.2.1",
+ "lifecycle": "active",
+ "title": "Überwachung der Einhaltung von Verpflichtungen",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Monitoring-Evaluation SOLLTE die Einhaltung von Verpflichtungen {param:perf.2.1-prm1} sowie anlassbezogen überprüfen."
+   },
+   "parameters": [
+    {
+     "name": "perf.2.1-prm1",
+     "type": "string"
+    }
+   ]
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überprüfen",
+     "result": "die Einhaltung von Verpflichtungen",
+     "result-specification": "{{regelmäßig}} sowie anlassbezogen"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Compliance-Management"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Die Compliance-Überwachung umfasst regelmäßige Kontrollen zur Überprüfung der Einhaltung dokumentierter gesetzlicher und vertraglicher Anforderungen, anlassbezogene Überprüfungen bei Änderungen des regulatorischen Umfelds, bei Hinweisen auf mögliche Verstöße oder nach durchgeführten Änderungen in relevanten Systemen oder Prozessen, die Identifikation von Compliance-Lücken und deren systematische Dokumentation sowie die Entwicklung und Umsetzung von Maßnahmen zur Schließung identifizierter Compliance-Lücken."
+     }
+    }
+   }
+  },
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "param-extras": {
+    "perf.2.1-prm1": {
+     "label": "regelmäßig",
+     "alt-identifier": "9bb16672-4394-4ce9-bd14-12a080233f7a"
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "9bb16672-4394-4ce9-bd14-12a080233f7a"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/GC.3.1"
+  },
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/UMS.7.1"
+  }
+ ]
+}

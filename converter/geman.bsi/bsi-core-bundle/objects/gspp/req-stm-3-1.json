@@ -1,0 +1,60 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/STM.3.1",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "STM.3.1",
+ "lifecycle": "active",
+ "title": "Überprüfung des gesetzten Sicherheitsniveaus",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Strukturmodellierung SOLLTE die initiale Einstufung der Sicherheitsniveaus der Anforderungen im Anforderungspaket bei Abweichungen des Kontextes der Institution überprüfen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "überprüfen",
+     "result": "die initiale Einstufung der Sicherheitsniveaus der Anforderungen im Anforderungspaket",
+     "result-specification": "bei Abweichungen des Kontextes der Institution"
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Methodik-Grundschutz-plus-plus",
+     "sec-level": "normal-SdT",
+     "effort": 2
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Diese Anforderung ist besonders dann erforderlich, wenn Geschäftsprozesse oder die darin verarbeiteten Informationen einen hohen Schutzbedarf aufweisen. In diesem Teilschritt der Anforderungsanalyse´wird die initiale Einstellung des Sicherheitsniveaus überprüft und bei Bedarf, auch bei einzelnen Assets, geändert."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "ba3059a8-7745-451a-9601-f4c19c2b4b87"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/GC.7.1"
+  }
+ ]
+}

@@ -1,0 +1,85 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/PERS.3.3",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "PERS.3.3",
+ "lifecycle": "active",
+ "title": "Betriebs- und Geschäftsgeheimnisse",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Personal für Mitarbeitende SOLLTE zum Umgang mit definierten Betriebs- und Geschäftsgeheimnissen bei Neuzugang anweisen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "anweisen",
+     "result": "zum Umgang mit definierten Betriebs- und Geschäftsgeheimnissen",
+     "result-specification": "bei Neuzugang",
+     "target-object-categories": [
+      "Mitarbeitende"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "2",
+     "integrity": "1",
+     "availability": "1",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.31",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.33",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.32",
+      "https://ns.bsi.bund.de/gspp/threat/G-0.35"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 2,
+     "tags": [
+      "Insider Threat"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Eine Dienst- oder Arbeitsanweisung, die zu wahrende Betriebs- und Geschäftsgeheimnisse klar definiert, stellt sicher, dass Mitarbeitende ihre Pflichten genau kennen. Hierbei geht es insbesondere darum, klar zu definieren welche Informationen als Betriebs- und Geschäftsgeheimnisse zu behandeln sind, z.B. Kundendaten, Patente, alle nicht zur Veröffentlichung bestimmten oder mit bestimmten Schutzklassifizierungen versehene Dokumente. Außerdem relevant ist, dass diese Geheimnisse auch über das Ende des Vertragsverhältnisses hinaus zu wahren sind. Hier besteht ein enger Zusammenhang zum Informationsmanagement, wo z.B. auch geregelt wird, welche Anweisungen zum Schutz im Einzelnen einzuhalten sind (z.B. Markierung, Verwahrung). Damit die dort festgelegten Regelungen den Mitarbeitenden auch bekannt sind wird eine entsprechende Anweisung bei Neuzugang benötigt."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "6f72a6a1-b8fc-42e4-b0aa-479b2ad48f40"
+  }
+ ]
+}

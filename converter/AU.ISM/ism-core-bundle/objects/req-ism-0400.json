@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-0400",
+ "version": "2026.06.18",
+ "label": "ISM-0400",
+ "lifecycle": "active",
+ "title": "Control: ism-0400",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "Development, testing, staging and production environments are segregated."
+   }
+  }
+ ]
+}

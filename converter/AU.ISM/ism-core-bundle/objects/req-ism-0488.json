@@ -1,0 +1,19 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/req/ism-0488",
+ "version": "2026.06.18",
+ "label": "ISM-0488",
+ "lifecycle": "active",
+ "title": "Control: ism-0488",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "unspecified",
+   "obligated-parties": [
+    "https://ns.cyber.gov.au/ism/party/organisation"
+   ],
+   "prose": {
+    "en": "If using remote access without the use of a password for SSH connections, the ‘forced command’ option is used to specify what command is executed and parameter checking is enabled."
+   }
+  }
+ ]
+}

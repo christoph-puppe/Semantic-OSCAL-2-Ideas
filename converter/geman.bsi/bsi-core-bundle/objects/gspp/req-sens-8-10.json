@@ -1,0 +1,85 @@
+{
+ "id": "https://ns.bsi.bund.de/gspp/req/SENS.8.10",
+ "version": "2026-07-03T09:11:21.450351+00:00",
+ "label": "SENS.8.10",
+ "lifecycle": "active",
+ "title": "Vermeidung von Brandlasten",
+ "statements": [
+  {
+   "id": "smt",
+   "modality": "should",
+   "obligated-parties": [
+    "https://ns.bsi.bund.de/gspp/party/institution"
+   ],
+   "prose": {
+    "de": "Sensibilisierung für Nutzende von Standorten SOLLTE das ungesicherte Hinterlassen von Brandlasten untersagen."
+   }
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/stdlib/facet/statement-grammar@1": {
+   "by-statement": {
+    "smt": {
+     "action": "untersagen",
+     "result": "das ungesicherte Hinterlassen von Brandlasten",
+     "target-object-categories": [
+      "Nutzende",
+      "Standorte"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/assessment-criteria@1": {
+   "by-statement": {
+    "smt": {
+     "required-documentation": [
+      "Arbeitsanweisung"
+     ]
+    }
+   }
+  },
+  "https://ns.oscal.org/stdlib/facet/security-objectives@1": {
+   "by-statement": {
+    "smt": {
+     "confidentiality": "1",
+     "integrity": "1",
+     "availability": "2",
+     "authenticity": "0",
+     "threat-refs": [
+      "https://ns.bsi.bund.de/gspp/threat/G-0.18"
+     ]
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-taxonomy@1": {
+   "by-statement": {
+    "smt": {
+     "class": "BSI-Stand-der-Technik-Kernel-G0",
+     "sec-level": "normal-SdT",
+     "effort": 3
+    }
+   }
+  },
+  "https://ns.bsi.bund.de/facet/gspp-narrative@1": {
+   "by-statement": {
+    "smt": {
+     "guidance": {
+      "de": "Befinden sich Brandlasten wie Kartons, brennbare Dämmstoffe, Batterien oder Holzmöbel in der Nähe (oder sogar in) Räumen für technische Infrastruktur oder zentraler Versorgungseinrichtungen, so erhöhen sich Wahrscheinlichkeit und durchschnittliches Schadensausmaß von Bränden. Dies gilt auch für das Rauchen von Zigaretten oder Zigarren. Der einzuhaltende Abstand ergibt sich aus der Größe der Brandlast und dem Schutzbedarf des Ortes von dem Abstand zu halten ist - wenn möglich ist ein Abstand von mindestens einem Zwischenraum sinnvoll."
+     }
+    }
+   }
+  }
+ },
+ "aliases": [
+  {
+   "scheme": "bsi-uuid",
+   "value": "3c49b485-9113-4009-a2dc-598c9d9a3f5f"
+  }
+ ],
+ "relations": [
+  {
+   "type": "related",
+   "ref": "https://ns.bsi.bund.de/gspp/req/GEB.10.2"
+  }
+ ]
+}
