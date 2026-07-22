@@ -54,6 +54,10 @@ side of that paradox:
   eight profile documents, because consuming the profile mechanism costs more
   than inlining.
 
+**The specification:** [`oscal-semantic-core-specification-1.0.0-rc.1.md`](drafts/oscal-semantic-core-specification-1.0.0-rc.1.md)
+(release candidate, consolidated 2026-07-22) with its companion
+[Decision Rationale Register](drafts/oscal-semantic-core-decision-rationale-register.md).
+
 Full argument with sources: [Chapter 1 — Why This Exists](semantic-oscal/references/ch01-why-this-exists.md).
 
 ## The bet

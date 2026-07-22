@@ -1041,3 +1041,27 @@ dissolves — they cannot differ). The strict pins immediately earned
 their keep: first validation surfaced every undeclared payload key
 (cr26 narrative ×6 keys, scope ×4, ifa system ×12, risk ×7, gspp
 narrative ×1) — each now a declared contract, none smuggled.
+
+# Amendments — 1.0.0-rc.1 consolidation (2026-07-22)
+
+## The release candidate document
+**Decision.** The specification is consolidated into
+`drafts/oscal-semantic-core-specification-1.0.0-rc.1.md`: the normative
+Parts I–III as amended in place through every cycle, the corpus/coverage
+/ledger claims updated from *designed-for* to *measured* where the gates
+measured them, IV.5 marked delivered item by item, and the amendment
+journals (old IV.6–IV.11) compacted to one history table — the full
+journal remains THIS register + git history. The v0.5 file stays as the
+bannered working journal. The title page carries the name-pending note;
+naming candidates under review: KERN, SCON, CANON, CRUX (author
+decides; trademark/domain sweep before the tag).
+
+## D22 (rev 3) — The anticipated-convergence path closes at 1.0, unused
+**Decision.** As scheduled by D22 rev 2: the path expires with the 1.0
+line. It closes **unused** — zero promotions ever rode it (terminology
+landed via the absorption clause). Post-1.0, kernel promotion requires
+measured 2-of-3 and a major version under D3.5 governance. Recorded in
+the rc.1 spec text (D22, closing clause).
+
+## Next (IV.8 of the rc.1 spec)
+Name → P10 adversarial review of the CONSOLIDATED text → `v1.0.0` tag.

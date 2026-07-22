@@ -1,24 +1,35 @@
-> **SUPERSEDED (2026-07-22).** This file is the v0.5→v0.6 WORKING
-> JOURNAL, kept for history. The consolidated release candidate is
-> **`oscal-semantic-core-specification-1.0.0-rc.1.md`** (same
-> normative content, journals compacted); amendments continue in the
-> Decision Rationale Register only.
+# OSCAL Semantic Core — "Kernel + Registered Facets"
+## Specification 1.0.0-rc.1 (release candidate)
+### 2026-07-22 · consolidated from the v0.5 draft + the v0.6-cycle amendment journal
 
-# OSCAL Semantic Core (working name) — "Kernel + Registered Facets"
-## v0.5 — Corrected Specification with Decision Register and Normative Shapes
-### 2026-07-18
+> **Name note.** "OSCAL Semantic Core" is the working title; the final
+> name is under review and will be fixed before the 1.0.0 tag. Nothing
+> here is endorsed by NIST, BSI, ACSC, CCB, CIS, or FedRAMP; the
+> project is maintained in personal capacity.
 
-**Status.** A **well-supported architecture hypothesis** with a corrected,
-internally consistent specification. Five adversarial review passes and one
-validating pass have been adjudicated (changelog IV.6). The executable proof
-gate — full-corpus converters, schemas, measured complexity — moves honestly
-to **v0.6** (IV.5): the passes showed the specification had holes that had to
-close *before* code, and pretending otherwise would violate this project's
-own evidence-tier rule. Comparison baseline throughout: **OSCAL 1.2.2**
-(current NIST line, eight models including the Control Mapping Model
-introduced March 2026 with v1.2.1) — verified against NIST reference pages;
-an earlier reviewer claim that no 1.2.x line exists was a knowledge-cutoff
-artifact.
+**Status.** A **measured architecture**: every claim in this document has
+survived contact with real catalogs or is explicitly tiered below
+*measured*. The v0.6 executable gate is **delivered in full** (IV.5):
+twelve corpora converted losslessly (251,591 source leaf values,
+UNMAPPED = 0 everywhere), a 149-vector conformance corpus in twelve
+families, two independent-runtime reference validators (Python; a
+zero-dependency PowerShell 5.1 twin — together ~30× smaller than the
+OSCAL 1.x toolchain with the crypto engines included), DSSE
+verification, bundle composition, conditional-apply, and a
+bidirectional OSCAL 1.2.2 export that round-trips 5,647/5,647 catalog
+objects to semantic-digest equality against the official NIST schema.
+The spec-feedback backlog is **empty** — every item that ever entered
+it left through a register entry. Comparison baseline throughout:
+**OSCAL 1.2.2** (current NIST line, eight models including the Control
+Mapping Model introduced March 2026 with v1.2.1).
+
+**Provenance of this text.** The normative sections (Parts I–II,
+Appendices A–C) were amended in place through six adversarial review
+passes, three external review rounds, the P9 twin red-team runs, and
+four evidence gates; the full amendment journal lives in the
+**Decision Rationale Register** (companion document) and the git
+history. This release candidate is that text, consolidated: journals
+compacted to IV.6, gate results recorded in IV.5, nothing renumbered.
 
 **North star (session directive, governs every verdict):** *more simple ·
 closer to the needs of the customers · no more props · less need for custom
@@ -31,7 +42,8 @@ complexity.
 3 (SOL) + 4 (H) → v0.4 → passes 5 (Grok, validating), 6 (P6-F1…4),
 7 (P7-B1…4, gaps, mapping), 8 (P8-E1…4, gaps) → **v0.5** → v0.6 cycle:
 review rounds 1–2 (adjudicated, F.6/F.7) + P9 twin adversarial runs
-(adjudicated, F.8).
+(adjudicated, F.8) + gates 1–4 delivered + the converter rerun →
+**1.0.0-rc.1**.
 
 ---
 
@@ -70,8 +82,14 @@ and mappings are another. The defensible scope statement:
 > ISO/IEC 27001/27002 and PCI DSS, which have **no official OSCAL
 > publications** and must never be attributed as such.
 
-The census proof gate (v0.6) covers the three measured corpora: ISM, BSI,
-CR26. Everything beyond is *designed-for*.
+The census covered three corpora (ISM, BSI, CR26). At rc.1 the
+**measured** set is twelve: the census three, five validation corpora
+(BE.CyFun, CIS Controls v8.1, CIS Ubuntu 24.04 Benchmark, DE.C5,
+DE.C3A), and the gate-3 additions (NIST SP 800-53 Rev 5.2.0 + all four
+800-53B baselines, CSF 2.0, and the IFA GoodRead lifecycle set —
+SSP/AP/AR/POA&M + the leveraged pair), each converted census-first at
+100 % declared coverage with UNMAPPED = 0. CSA CCM, SCF, ISO and PCI
+targets remain *designed-for*, exactly as labeled in IV.4.
 
 ## 3. The convergence table
 
@@ -468,11 +486,18 @@ objects — the silent-ignore state P7-B3 exposed is unrepresentable.
 RFC-0024's approved-format slot maps to **Portable**.
 
 ## D16 — Migration: three guarantee levels; "information-preserving for the supported corpus."
-Unchanged (native / compatibility-facet / opaque-preservation; kernel→1.x
-export exists for the transition with kernel-native concepts flattening to
-props/links — syntactically valid, semantically reduced; round-trip corpus
-with published equivalence). New note: the 1.2.2 Mapping Model becomes a
-native-mapping source/target for D20 objects.
+Unchanged in structure (native / compatibility-facet /
+opaque-preservation) — and **measured at gate 4**: the kernel→1.x
+export exists as `export_oscal.py`, validated against the official NIST
+1.2.2 catalog schema, with a generic re-importer proving
+**5,647/5,647 catalog objects round-trip to semantic-digest equality**.
+The D16 asymmetries are now counted rather than predicted: OSCAL groups
+cannot mix subgroups and controls; params require label|select; link
+`rel` is a token, so URI-typed relation vocabularies cannot ride 1.x
+links; overlapping Set membership (baselines) has no catalog-model
+representation at all. The 1.2.2 Mapping Model becomes a native-mapping
+source/target for D20 objects (mapping/profile-model exports are the
+next expansion).
 
 ## D17 — Declared non-goals.
 Unchanged (flows as linked resources; template accreditation open (R6);
@@ -488,8 +513,9 @@ one-way, never authoring; consequence documented (R11).
 
 ## D19 — Positioning.
 Unchanged: engine that compiles to 1.x during transition; sunset trigger;
-name avoids "2.0"/"profile"/"kernel" — leading candidate **OSCAL Semantic
-Core**; on-ramps stated accurately (#58 and #2050 live; #2115/#2116 closed
+name avoids "2.0"/"profile" — **final name under review for 1.0.0**
+(the working title "OSCAL Semantic Core" carries a trademark-optics
+question that deserves a conscious decision); on-ramps stated accurately (#58 and #2050 live; #2115/#2116 closed
 design positions); RFC-0024's five-CSP clause recorded without endorsement.
 
 ## D20 — **`Mapping` as the ninth kernel type.** *(new, v0.5 — P7 mapping analysis accepted over P8's facet alternative)* *(rev. v0.6 cycle — R1 #5)*
@@ -611,6 +637,13 @@ terms, 188 aliases, 264 references resolving), yet every national
 framework publishes terminology; the computation (alias-aware term
 resolution) is already measured. The re-audit of the facet space under
 this clause is recorded in the register amendment.
+**Closed at 1.0 (D22 rev 3, rc.1 consolidation).** As scheduled by
+D22 rev 2, the anticipated-convergence path expires with this release:
+it was available only pre-1.0 (demotion would strand content against
+closed kernel shapes with no migration rule), and it closes **unused** —
+zero promotions ever rode it (terminology landed via the absorption
+clause). Post-1.0, kernel promotion requires measured 2-of-3 and a
+major version under D3.5 governance.
 **Customer.** Every authority pays for every kernel field forever (a tax on
 each Core validator); the census is the only party that may levy it.
 **Simplicity.** The bar is three questions with countable answers.
@@ -663,8 +696,17 @@ Schema 2020-12 · 8 primitives + a closed op vocabulary + 3 predicates ·
 **no general-purpose expression language** · 0 document conventions. The
 six retained subsystems (kernel schemas; content-manifest protocol; facet
 system; rule interpreter; tailoring resolver; attestation protocol) are
-each narrower and more boring than what they replace — a claim scheduled
-for **measurement at the v0.6 gate**, not asserted.
+each narrower and more boring than what they replace — a claim now
+**measured** (gate 4, `drafts/gate-4-measurement.md`): the complete
+reference validator — twelve vector families, both digests, closure,
+facet enforcement, tier derivation, op-law, Ed25519/DSSE, composition,
+conditional-apply — is **938 non-blank lines of Python** (+ jsonschema)
+and **1,110 lines of zero-dependency PowerShell 5.1**, against
+**30,905 lines / 162 files** for compliance-trestle 4.2.0, the OSCAL
+1.x validator+resolver toolchain (tests excluded) — ~30×. Measured
+size deltas versus the OSCAL sources: ISM −29 %, GS++ −50 %,
+CR26 +55 % — smaller where sources are redundant, larger where a
+bespoke format was terse.
 
 ## IV.2 Risk register (delta)
 
@@ -672,8 +714,9 @@ R1–R12 carry over with status updates (R4 softened by pinning+composition
 rule). New: **R13** — IR 8477/OLIR relationship code-system governance
 (stdlib ownership); **R14** — calendar-context dependency: calendar-periods
 are honest but push a real-world dependency (holiday calendars) into
-Authority publication duties; **R15** — CIS corpus status unverified
-(scope-statement item).
+Authority publication duties; **R15** — CIS corpus status unverified — **RESOLVED 2026-07-21**: both
+CIS corpora converted and measured (Controls v8.1; Ubuntu 24.04
+Benchmark with 635 mappings and recovered profile baselines).
 
 ## IV.3 Prior art (delta)
 Add: **NIST OSCAL 1.2.2 Control Mapping Model** — as demand evidence *and*
@@ -685,16 +728,17 @@ replaces; NIST IR 8477 / OLIR (relationship semantics).
 | User | Verdict | Basis |
 |---|---|---|
 | BSI, ASD, FedRAMP CR26 | Designed-for, **measured corpora**, proof at gate | census |
-| NIST 800-53 / 800-171 | Designed-for (D11 + sets/tailoring) | catalog layer |
-| NIST CSF 2.0 | Designed-for after **D21** (hierarchy) + prose-only statements | |
-| NIST full lifecycle (SSP/AP/AR/POA&M/Mapping round-trip) | **Not yet demonstrated** — gate corpus item | |
-| CIS | Catalog + IGs via sets; mappings via D20; corpus status R15 | |
+| NIST 800-53 | **Measured** (gate 3): Rev 5.2.0 + four 800-53B baselines, 115,680 leaves, zero kernel changes; all 373 pre-existing corpus mapping endpoints resolve | `US.SP800-53` |
+| NIST 800-171 | Designed-for (D11 + sets/tailoring) | catalog layer |
+| NIST CSF 2.0 | **Measured** (gate 3): 3-level D21 nesting, sixth declarative corpus, the 1.1→2.0 tombstone graph on `replaces[]` | `US.CSF` |
+| NIST full lifecycle (SSP/AP/AR/POA&M) | **Measured** (gate 3): the five lifecycle types at document scale with both digests; D5 inheritance via the leveraged pair; #9 seeds confirmed with zero enum additions | `US.IFA-GoodRead` |
+| CIS | **Measured**: Controls v8.1 + Ubuntu 24.04 Benchmark (635 D20 mappings; recovered profile baselines) | `CIS.Controls` · `CIS.Ubuntu2404` |
 | SCF | Catalog + **D20 mappings** (its central use case now first-class) | |
 | CSA CCM | Controls + CAIQ→assessment-criteria plausible; mappings via D20; full STAR package not claimed | |
 | ISO 27001/27002 | Structurally adaptable (attributes → framework facet; sealed manifests help licensed distribution); **management-system clauses not covered** — named target | |
 | PCI DSS | Testing procedures → assessment-criteria; compensating controls → Deviation; **customized approach encoding undefined** — named target | |
 
-## IV.5 The v0.6 gate (executable; renamed from v0.5 — reasons on title page)
+## IV.5 The v0.6 gate — DELIVERED IN FULL (items 1–4, 2026-07-21/22)
 
 1. Full-corpus converters + computed coverage for ISM, BSI, CR26 — zero
    unexplained fields.
@@ -715,259 +759,89 @@ replaces; NIST IR 8477 / OLIR (relationship semantics).
    P9 scope correction: 5,478 = 5,470 manifest-listed objects + 8
    manifest checks; the example bundle's 13 objects (the only instances
    of the five lifecycle types) are shape-checked without digest
-   verification. Appendix-B items parked "at gate item 2" that this
-   delivery did not include (B.1.3 negative corpus, B.1.8 conditional
-   instantiation, B.1.7 DSSE profile) are re-parked in backlog #18 —
-   they did not silently close.
-3. **Lifecycle corpus** beyond catalogs: NIST SSP/AP/AR/POA&M + 1.2.2
-   Mapping examples; FedRAMP implementation/assessment data; CSA CAIQ;
-   SCF mappings; representative PCI customized-approach cases. In scope
-   here (folded from the backlog, v0.6 cycle): confirm or extend the
-   seed code sets for finding states and assessment results from counted
-   lifecycle evidence (was backlog #9), and resolve CTL/ODP
-   statement-level addressing via the NIST catalog conversion (backlog
-   #10).
-4. Measured complexity comparison vs. an OSCAL 1.2.2 validator + resolver
-   (two languages, LoC, contributor-hours) — the weekend-validator
-   acceptance test. In scope here (folded from review round 2,
-   2026-07-21): the **bidirectional export test suite** — Semantic Core
-   objects compile to syntactically valid OSCAL 1.2.2 JSON for the
-   supported corpus and the round-trip is verified mechanically;
-   down-conversion moves from *designed-for* to *measured*.
+   verification. Appendix-B items parked "at gate item 2" (B.1.3 negative corpus,
+   B.1.8 conditional instantiation, B.1.7 DSSE profile) were re-parked
+   in backlog #18 rather than silently closing — and **closed at gate 4**
+   (dsse 5 · composition 7 · conditional 8 vector families with their
+   engines; disjointness cases cover B.1.3). Vector count at rc.1: 149.
+3. **Lifecycle corpus** beyond catalogs. **DELIVERED 2026-07-22 (gate
+   3, IV.6 row):** the IFA GoodRead set (SSP/AP/AR/POA&M + the
+   leveraged/leveraging pair + component-definition) exercises all five
+   lifecycle types at document scale with both digests; #9 seeds
+   CONFIRMED with zero enum additions; #10 CTL/ODP addressing decided
+   by measurement and DRAINED (16 set-parameter ops on the
+   `rev5-odp-overlay` Tailoring). The wishlist residue is scoped, not
+   silent: CSA CAIQ, SCF mappings, and PCI customized-approach cases
+   remain *designed-for* corpus expansions (IV.4).
+4. Measured complexity comparison — the weekend-validator acceptance
+   test + the bidirectional export suite. **DELIVERED 2026-07-22 (gate
+   4, `drafts/gate-4-measurement.md`):** two languages (Python 938 LoC
+   + jsonschema; PowerShell 5.1 1,110 LoC + nothing) vs
+   compliance-trestle 4.2.0 (30,905 LoC / 162 files) — ~30× with the
+   crypto engines included; 149/149 vector parity; full-corpus
+   wall-clocks stated (py ~50 s, PS 759 s — the zero-install tax).
+   Export: 10/10 catalog bundles schema-valid against the official NIST
+   1.2.2 release schema, round-trip **5,647/5,647** objects to
+   semantic-digest equality — down-conversion is *measured*.
+   Authorship recorded honestly (register R8): same author + AI;
+   independence = language/runtime; the third-party clean-room build
+   is the standing invitation.
 
-## IV.6 Changelog v0.4 → v0.5
+## IV.6 Amendment history (compact)
 
-| Finding | Verdict | Change |
-|---|---|---|
-| P7-B1 (manifest↔attestation hash cycle) + P6-F1 (strip breaks signature) | **Accept (merged)** | D3 content-manifest excludes attestations; D7 bi-modal verification (Full/Semantic) |
-| P6-F2 (tailoring parameter evasion) + P7-B2 (weakening invariant incomplete) | **Accept, bounded** | D13 per-operation rules incl. parameter-bounds, tightening direction, detach/prose rules; invariant honestly narrowed. **Rejected in part:** "exclude ⇒ Deviation" (selection ≠ weakening; would drown baselines) |
-| P6-F3 (JCS empty/omitted ambiguity) | **Accept** | D3 pre-JCS omission rule + vectors |
-| P6-F4 (`private:` fail-closed paradox) + P7-G4 (publisher-honesty default) | **Accept (merged)** | D10: `private:` ≡ modifies-semantics [] (preserve+ignore); undeclared registered ≡ all four classes (fail-closed) |
-| P7-B3 (Core silently ignores facets) + P8-E1 (Core/attestation-binds/JCS) | **Accept (merged)** | D15 Core = passive tier; semantic computation forbidden at Core; attestation-binds → Portable |
-| P7-B4 (supersedes ≠ equivalence) | **Accept** | D2 canonical-alias vs. replaces{relationship} |
-| P8-E2 (modality order undefined) | **Accept** | D9 normative partial order incl. may-only/DARF NUR |
-| P8-E3 (hop budget mismatch) | **Accept** | one predicate vocabulary, one ≤1-hop budget |
-| P8-E4 + P7-G5 (bundle composition of pins) | **Accept** | D3 semver-normative composition rule |
-| P7 mapping gap (ninth type) vs. P8 (stdlib facet) | **Accept P7, reject P8 variant** | **D20 Mapping kernel type**; type-count dogma retired (D4) |
-| P8 hierarchy gap | **Accept** | **D21** nested sets + normative `sequence` |
-| P7-G (authorization scoping) | **Accept** | D5 identified authorizations + includes[] |
-| P7-G (bizdays/calendar, decimal) | **Accept** | D9 elapsed vs. calendar-period (fail-closed computation); D3 decimal-as-string |
-| P7-U (undefined elements; resolution order) | **Accept** | Appendices A/B; D13 ordered ops, same-target = error, chaining for overrides, no auto-merge |
-| P7/P8 adopter-list & baseline corrections | **Accept; conflict resolved by search** | Part I §2 scope statement; baseline = **1.2.2** (P8's "no 1.2.x" was a cutoff artifact — verified against NIST pages); CIS status → R15 |
-| P8 minor (ledger wording; III.2 dates) | **Accept** | "no general-purpose expression language"; dates differentiated |
-| Pass 5 (Grok) | Validating; no blockers | v0.6 gate emphasis adopted |
+The full journal — every finding, adjudication, and rejected
+alternative — lives in the **Decision Rationale Register** and the git
+history. The compact line:
 
-## IV.7 v0.6-cycle decisions (2026-07-21; from the review-round-1 backlog)
+| Cycle | Date | What happened | Register section |
+|---|---|---|---|
+| v0.1 → v0.5 | 2026-07-14…18 | Six adversarial passes + census r1/r2; the architecture stabilized; Mapping promoted (D20), hierarchy normative (D21), promotion rule (D22) | D1–D22 |
+| v0.6 round 1 | 2026-07-19…21 | External review round 1 adjudicated: parameter `label`/`default` (D9 rev), consumption-tier duties (D13 rev), by-statement keying (D10 rev), supplement pattern (D20/D21 rev) | "Amendments — v0.6 cycle" |
+| Gate 1 + validation corpora | 2026-07-19…21 | 3 census + 5 validation corpora at 100 % / UNMAPPED 0 | conversion reports |
+| Gate 2 | 2026-07-21 | Kernel schema + stdlib descriptors + validator + 54→115 vectors; P9 twin red-team runs adjudicated (#16/#17/#19 closed) | "P9-applied" |
+| v0.6 round 2 | 2026-07-22 | P9c re-review + deep-research items: op-law completed, tier reported, canonical-alias self-policing, decimal canonical form; #12 `text` decided (EU-27 rationale) | "Amendments — round 2" |
+| Gate 3 | 2026-07-22 | NIST Rev 5.2.0 + 800-53B + CSF 2.0 + IFA lifecycle; zero kernel-schema changes; #10 drained by measurement; two validator shortcuts falsified and fixed (D13 rev 4, D9 rev 3) | "Amendments — gate 3" |
+| Gate 4 | 2026-07-22 | DSSE/composition/conditional engines; the weekend validator (PS 5.1, 149/149); bidirectional export 5,647/5,647; #18/#24 closed | "Amendments — gate 4" |
+| Converter rerun | 2026-07-22 | #12 `text` primitive delivered · #20 URI relations · #26 fail-closed pins — **the backlog reached zero** | "Amendments — the converter rerun" |
+| **1.0.0-rc.1** | 2026-07-22 | This consolidation; D22's anticipated path closed unused (rev 3) | this row |
 
-Backlog items decided per the standing rule (counts in, register entries
-out); rows leave `oscal-semantic-core-v0.6-spec-feedback-backlog.md`:
+## IV.7 Release artifacts (what this specification ships with)
 
-| Backlog | Decision | Change |
-|---|---|---|
-| #4 | **Accept** | **D22** kernel promotion rule normative (≥2-of-3 encodings · one shared computation · one vocabulary without flattening; existing-mechanism absorption clause) — was implicit, first stated in App. F Q22 |
-| #5 | **Accept** | Supplement pattern named normatively in D21; `supplements` registered as stdlib relationship extension code in D20 (non-chaining; OLIR down-translation to `supports`) |
-| #7 | **Accept** | D10: `by-statement` payload keying normative; unknown statement id = validation error |
-| #1 | **Accept** | D9: optional `label` + `default` on parameter declarations; defaults advisory, never silently substituted; empties the ×179 `param-extras` L2 residue (drains at next converter run) |
-| #2 | **Accept (Tailoring liturgy blessed for authorities)** | D13: Deviation duties bind at consumption tier; Authority-tier Tailorings exempt (weakening classification still computed). **Rejected:** `variants` carrier on Requirement — fails the D22 bar (1-of-3; mechanism exists) |
-| #3 | **Close, no change** | Duration union rejected for lack of evidence: 0 true unit-class crossings measured (the 51 first-pass flags were base-absent variants, resolved under #2); elapsed/calendar unit-class boundary stays strict. Re-enters only with a counted crossing |
-| — | **D22 rev (user directive)** | Anticipated-convergence path added: 1-of-3 promotion permitted for a major customer's semantic with credibly anticipated general use; evidence tier `anticipated`, re-verified per corpus, demotes after two dry gate cycles. Facet-space re-audit recorded in the register (terminology = strongest candidate; reporting-obligation = candidate pending an EU corpus) |
-| #6 | **Re-scoped** | Terminology: kernel home now permitted under the D22 anticipated path; final shape (carrier object vs. root-Set hosting) decides with the gate-2 schemas |
-| #8 | **Accept (promote all three)** | D10 rev 2: `security-objectives@1` → `[selection]`, `effectivity@1` → `[selection]`, `reporting-obligation@1` → `[assessment]`; principle: a tool that cannot handle a facet must stop working on that data. Stubs update at next converter run |
-| #9 | **Close, folded into gate 3** | Seed code sets stay as shipped; confirmation/extension from counted lifecycle evidence is now part of the gate-3 scope statement (IV.5) — no standing backlog row needed |
-| #11 | **Close, delivered** | Source-QA finding (9 MUSS-in-prose clauses without `modal_verb`, grammar coverage 99.1 %) reported to the BSI authors by the project; companion to the 216/issue #58; never was a spec change |
-| #6 | **Close (gate 2): root-Set hosting normative** | D22-applied: the absorption clause decides — `terminology@1` hosts on a Set (typically corpus root), whose identity/lifecycle govern the glossary; carrier object / tenth type rejected (264/264 resolution measured with zero new structure). Normative in the stdlib descriptor |
+Everything below is in the repository, reproducible, and green at the
+rc.1 commit:
 
-## IV.8 v0.6-cycle round 2 (2026-07-22) — P9c adjudication + deep-research items
+- **Kernel schema** `oscal-semantic-core-1.0.0.schema.json` — closed
+  shapes, shape-disjoint type inference, 9 types + Deviation + manifest;
+  the `text` primitive (`{BCP-47: string | [string]}`) on every
+  human-readable field.
+- **Seven stdlib facet descriptors** (incl. the normative DSSE envelope
+  profile) — pinned VERBATIM wherever bundled; divergence is a
+  validation error.
+- **Conformance corpus**: **149 vectors, 12 families** (jcs 8 ·
+  modality 21 · parameter 17 · tailoring 15 · attestation 5 · facet 7 ·
+  reference 11 · lifecycle 36 · tier 9 · dsse 5 · composition 7 ·
+  conditional 8).
+- **Two reference validators**: `validate_core.py` (Python, jsonschema
+  only) and `validate_core.ps1` (PowerShell 5.1, zero dependencies —
+  the stock Windows box every auditor already has). Full parity;
+  numbers in `drafts/gate-4-measurement.md`.
+- **Bidirectional export**: `export_oscal.py` — OSCAL 1.2.2 out,
+  validated against the official NIST release schema; generic
+  re-import; 5,647/5,647 round-trip.
+- **Twelve corpora** under `converted_examples/` — 6,675
+  manifest-listed objects, both SHA-256 digests re-verified per object,
+  each with a computed coverage report (UNMAPPED = 0) that declares
+  every rule and reports source defects rather than repairing them.
+- **The reader** (`one-page-apps/semantic-core-reader.html`, v1.6.1) —
+  a zero-dependency single-file browser, authoring workbench, and
+  digest verifier.
 
-Acting on the P9c re-review (the P9-cycle enforcement shipped narrower
-than the register's prose) and the deep-research open items. Full
-entries in the register ("Amendments — v0.6 cycle, round 2"); normative
-in D3/D9/D13, the schema, and Appendices A–C. Backlog #13/#14/#15/#21/
-#22/#23/#25/#27/#28 **closed**; #20/#24/#26 **narrowed** (residuals on
-the converter rerun / gate-4 engines); **#12 decided** (D9 rev 2 — the
-`text` primitive; EU-27-languages rationale; delivery rides the rerun);
-#10/#18 open. Summary:
-**#25** op-law completed (`set-parameter` bounds/tightening +
-`remove-relation(required)` now enforced — the P6-F2 backdoor was
-shipped unenforced); **#24** tier reported distinctly (spec:399), proven
-tier's signature check deferred to gate 4; **#14** canonical-alias
-self-policing; **#27** decimal no-leading-zeros + scale significant;
-**#21** `sequence` struck from the set-field whitelist; **#20** D13
-relation row aligned + C.8 `supersedes` deleted; **#13**
-`calendar-context@1` seeded; **#22** anticipated path scoped pre-1.0;
-**#23** nearest-Set = fewest hops; **#15** template accreditation a
-declared non-goal. Conformance **115 → 125 vectors**. Gate 3 plan:
-`drafts/gate-3-plan.md`.
+## IV.8 From rc.1 to 1.0.0
 
-## IV.9 Gate 3 DELIVERED (2026-07-22) — NIST/CSF/lifecycle corpus
-
-Census-first per ch14.4 (`drafts/gate-3-census.md`); register entries
-under "Amendments — gate 3". Three new bundles, one drained backlog
-item, two reference-validator defects found and fixed by the corpus:
-
-- **US.SP800-53** (`convert_nist.py`): Rev 5.2.0 catalog + four 800-53B
-  baselines → 1,014 Requirements + 25 Sets, 115,680 leaves, UNMAPPED 0.
-  **Zero kernel-schema changes forced — the customer test passed.** All
-  373 pre-existing corpus mapping endpoints resolve against the minted
-  ids. 182 withdrawn tombstones dropped with lineage inverted onto the
-  successors' kernel `replaces[]` (incl. one family-Set successor:
-  sa-12 → SR). The SP 800-53A layer rides `sp800-53a@1` (3,715
-  objectives — the CTL addressing surface); two-layer ODP params are
-  statement-scoped per the 216 rule.
-- **US.CSF** (`convert_csf.py`): CSF 2.0 → 106 Requirements + 29 Sets
-  (D21 3-level nesting), 4,726 leaves, UNMAPPED 0. Sixth declarative
-  corpus (modality `unspecified` ×106). Withdrawn measured 91 = 12
-  categories + 79 subcategories; 134 successor edges.
-- **US.IFA-GoodRead** (`convert_ifa.py`): the five lifecycle types at
-  document scale with both digests verified — SSP → Component (+ the
-  ATO as `authorizations[]` + an Attestation over semantic digests),
-  AP+AR → Assessment (result not-satisfied), POA&M risks → Findings
-  (in-remediation; one approved `risk-adjustment` Deviation), and the
-  leveraged/leveraging pair → `inherited-from{component, basis-ref}`
-  with the D5 edge-local closure enforced. Carried Requirements
-  (AC-6.1, AC-2) ride in-bundle — an authorization package carries its
-  baseline. **#9 seeds confirmed: every source state mapped into the
-  shipped enums, zero code additions.**
-- **#10 DRAINED** (`convert_cr26.py` rev): the CTL overlay's 16 ODP
-  assignments → `set-parameter` operations on a `rev5-odp-overlay`
-  Tailoring, each addressed via the DECLARING statement (measured: no
-  Rev 5 ODP is declared in two statements — the (requirement, ODP) pair
-  is a sufficient address). 14 tailored controls carried in-bundle.
-  Guidance entries stay parked (D20 supplements territory).
-- **Validator defects the corpus exposed (both fixed + vectored):**
-  (a) tier derivation stopped at the wrapper Set's id — a self-minted
-  Set around foreign content laundered consumer into authority-claimed
-  (D13 rev 4, above); (b) `param_check` ignored `cardinality: many` —
-  list values on multi-select choices had no legal form (D9: a list
-  value is legal exactly on `many`, every element declared).
-- Source findings (all REPORTED upstream): CSF underscore rel codes vs
-  Rev 5 hyphens; a fragment-marker-less href (DE.DP-04); 3
-  cross-control param insertions; 71 ODPs bound nowhere; `_stmt.` vs
-  `_smt.` statement-id spellings; FedRAMP multi-select values
-  flattened to prose strings (normalized to lists ×3); PUA codepoints
-  in IFA prose; placeholder uuids in the leveraged pair.
-
-Conformance **125 → 129 vectors**. Corpus at HEAD: **11 bundles, 6,675
-manifest-listed objects** (recompute via `validate_core.py`).
-
-## IV.10 Gate 4 DELIVERED (2026-07-22) — engines + the two economic claims measured
-
-Same-day with gate 3 (plan `drafts/gate-4-plan.md`; measurement
-`drafts/gate-4-measurement.md`; register "Amendments — gate 4").
-Backlog **#18 and #24 closed**; conformance **129 → 149 vectors** in 12
-families (+ dsse 5 · composition 7 · conditional 8).
-
-- **DSSE verification engine (#24, D7-applied).** Ed25519 (RFC 8032)
-  dependency-free in both implementations; envelope payload = the
-  Attestation's canonical form, signature input = PAE per DSSE v1;
-  trusted keys are INPUT, never bundle content. Verification mode makes
-  `authority-proven` require a verifying envelope — the unsigned-
-  attestation forgery (P9c-1) is closed; structural mode reports
-  `UNVERIFIED` distinctly.
-- **Composition engine (D3.5-applied).** `--compose A B`: highest
-  pinned minor wins with BOTH payload sets re-validated; major clashes,
-  divergent twins, and cross-version collisions are reported errors,
-  never silent picks.
-- **`conditional-apply` engine (B.1.8-applied).** One B.2 predicate
-  trigger (the one-hop budget and the no-nesting rule enforced
-  structurally), one instantiated primitive, the normative FAIL format
-  vector-locked; unbound trigger params error instead of silently-false.
-- **Bidirectional export suite (IV.5.4).** 10/10 catalog bundles →
-  OSCAL 1.2.2 validated against the OFFICIAL NIST release schema;
-  generic re-import; round-trip **5,647/5,647 objects semantic-digest-
-  equal (100 %)**. Down-conversion is now *measured*. D16 asymmetries
-  measured on the way: groups cannot mix subgroups+controls; params
-  require label|select; NIST's own JSON schema needs `\p{}` regexes
-  beyond Python's stdlib.
-- **The weekend validator (IV.5.4).** `validate_core.ps1` — PowerShell
-  5.1, zero installs, the stock auditor's Windows box: **149/149
-  vectors** with full parity to the Python reference. Sizes (one
-  counter, non-blank non-comment): Python reference **938** lines +
-  jsonschema; PowerShell **1,110** lines + *nothing*; vs
-  **30,905 lines / 162 files** for compliance-trestle 4.2.0 (the OSCAL
-  1.x validator+resolver toolchain, tests excluded) — ~30× with the
-  crypto engines included. Authorship recorded honestly in R8: same
-  author + AI, independence limited to language/runtime; the
-  clean-room third-party build is the standing invitation.
-
-## IV.11 The converter rerun (2026-07-22) — the backlog reaches zero
-
-The first step of the 1.0 release train (register "Amendments — the
-converter rerun"): the three decided-but-undelivered items land in one
-digest churn across all 11 bundles.
-
-- **#12 DELIVERED — the `text` primitive.** `langMap` → `text`;
-  `title`, `rationale` (Deviation/Mapping/excludes), `description`
-  (capabilities/actions) are `{BCP-47: string | [string]}` everywhere —
-  schema, bundles (GS++ and C3A carry `de`, the rest `en`), fixtures,
-  the 13 examples, the reader (v1.6.1), and the OSCAL export
-  (round-trip stays 5,647/5,647). Identifiers and labels stay strings.
-- **#20 DELIVERED — URI-shaped extension relations.** Relation `type` =
-  the five base codes ∪ `^https?://`; C5's `sharpens` ×28 →
-  `https://ns.bsi.bund.de/c5/rel/sharpens`. Measured on the way:
-  OSCAL 1.2.2 link `rel` is a token — URI relation vocabularies cannot
-  ride 1.x links at all (props channel, counted ×28).
-- **#26 DELIVERED — normative fail-closed pins.** Every pin closes its
-  shape; stdlib ids are pinned VERBATIM and both validators reject a
-  diverging stdlib pin. The strict pins immediately surfaced every
-  undeclared payload key (30 keys across 5 facets) — each now a
-  declared contract.
-
-**The v0.6 spec-feedback backlog is EMPTY** — every item that entered
-it left via a register entry. Remaining before the 1.0 tag: spec
-consolidation into a release document (+ the D22 pre-1.0 marker and
-the name decision), `v1.0.0-rc.1`, one adversarial review round (P10)
-of the consolidated text.
-
----
-
-# Appendix A — Normative kernel shapes (summary; JSON Schemas at the v0.6 gate)
-
-Common to all nine types: `id (URI) · version · label? · aliases[]? ·
-lifecycle (draft | active | deprecated | withdrawn) · canonical-alias[]? ·
-replaces[]? · facets{}? · annotations{}? · relations[]? {type (open token;
-normative cross-framework claims use Mapping), ref}`.
-
-- **Requirement:** `title · statements[] (D9) · deviations[]?` —
-  statements: `{id · modality · obligated-parties[] · parameters[] ·
-  prose{lang}}`.
-- **RequirementSet:** `title? · members[] {ref (requirement|set) ·
-  sequence}` (D21).
-- **Tailoring:** `selects[] {set-ref | predicate} · excludes[] {ref} ·
-  operations[] (ordered; D13 vocabulary)`.
-- **Component:** `kind · members[] {component-ref · context (free token)} ·
-  capabilities[] {id · requirement-ref? · description · parameter-
-  bindings?} · authorizations[] (D5)`.
-- **Implementation:** D6 field list.
-- **Assessment:** `subject-refs[] · method (facet-typed) · performer-ref ·
-  time · result (code) · evidence-refs[] · deviations[]?`.
-- **Finding:** `assessment-ref · requirement-ref · statement-ref? · state
-  (code) · risk (facet) · actions[] {description · due
-  (date|calendar-period) · status} · deviations[]?`.
-- **Attestation:** D7 field list (outside content manifests by
-  definition).
-- **Mapping:** D20 field list.
-- **Deviation (sub-object):** D8 field list.
-- **Content manifest:** `manifest-version · objects[] {id · version ·
-  package-digest · semantic-digest · path} · facet-schemas[] {id ·
-  exact-version · digest · path} · renderings[]?` — attestations/envelopes
-  excluded (D3).
-
-Code systems (stdlib): modality (with the D9 order), lifecycle, deviation
-types/states, responsibility, assessment results, mapping relationships
-(IR 8477/OLIR), duration units (elapsed/calendar), confidence.
-
-# Appendix B — Tailoring resolution (normative algorithm)
-
-1. Resolve `selects` (set-refs expanded via D21 nesting; predicates
-   evaluated with the shared ≤1-hop vocabulary) → candidate set;
-   apply `excludes`.
-2. Validate `operations[]`: addressing resolves (else fail closed);
-   no two operations share a target within this Tailoring (else error).
-3. Apply operations **in list order** to deep-copied objects; enforce D13
-   rules (parameter bounds, tightening, modality order, detach/prose) —
-   violations without an attached Deviation fail closed with rationale.
-4. Emit a resolved package with a fresh content manifest; provenance
-   records the Tailoring id+version. Tailoring-of-Tailoring = run again on
-   the emitted package (chaining is the only override path). Independent
-   Tailorings never auto-merge.
+1. **The name** — fixed by the author before the tag (D19 note).
+2. **P10** — one adversarial review round against THIS consolidated
+   text; findings dispositioned the standing way (counts in, register
+   entries out).
+3. **Tag `v1.0.0`** — after which kernel-shape changes ride major
+   versions under D3.5 governance, and the anticipated-convergence
+   path stays closed (D22 rev 3).
