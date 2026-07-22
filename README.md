@@ -108,7 +108,13 @@ a navigable catalog tree with baselines, a live Tailoring resolver
 (selection expansion, same-target conflict detection, before→after lattice
 verdicts), a filterable crosswalk table, an implementation inspector that
 checks inheritance basis-refs, and an assessment board with bi-modal
-attestation verification (Full/Semantic Match/Tamper).
+attestation verification (Full/Semantic Match/Tamper). Since v1.2 the
+stages also *author*: build your own Tailoring (with the weakening rules
+enforced live — easings demand a Deviation, unit-class crossings are
+blocked, same-target conflicts refused), assemble a system of assets that
+carry controls, and run a checklist assessment that mints real Assessment
+and Finding objects back into the graph — all exportable as
+schema-conformant JSON.
 
 ### As a specification
 
