@@ -13,14 +13,7 @@
    ],
    "prose": {
     "en": "Establish and maintain a service provider management policy. Ensure the policy addresses the classification, inventory, assessment, monitoring, and decommissioning of service providers. Review and update the policy annually, or when significant enterprise changes occur that could impact this Safeguard."
-   },
-   "parameters": [
-    {
-     "name": "frequency",
-     "type": "code",
-     "value": "annually"
-    }
-   ]
+   }
   }
  ],
  "facets": {
@@ -53,7 +46,8 @@
       }
      ]
     }
-   ]
+   ],
+   "frequency": "annually"
   }
  }
 }

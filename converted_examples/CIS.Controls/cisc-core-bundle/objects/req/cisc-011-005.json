@@ -13,14 +13,7 @@
    ],
    "prose": {
     "en": "Test backup recovery quarterly, or more frequently, for a sampling of in-scope enterprise assets."
-   },
-   "parameters": [
-    {
-     "name": "frequency",
-     "type": "code",
-     "value": "quarterly"
-    }
-   ]
+   }
   }
  ],
  "facets": {
@@ -47,7 +40,8 @@
       }
      ]
     }
-   ]
+   ],
+   "frequency": "quarterly"
   }
  },
  "relations": [

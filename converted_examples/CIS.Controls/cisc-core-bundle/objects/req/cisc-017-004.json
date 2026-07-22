@@ -13,14 +13,7 @@
    ],
    "prose": {
     "en": "Establish and maintain a documented incident response process that addresses roles and responsibilities, compliance requirements, and a communication plan. Review annually, or when significant enterprise changes occur that could impact this Safeguard."
-   },
-   "parameters": [
-    {
-     "name": "frequency",
-     "type": "code",
-     "value": "annually"
-    }
-   ]
+   }
   }
  ],
  "facets": {
@@ -53,7 +46,8 @@
       }
      ]
     }
-   ]
+   ],
+   "frequency": "annually"
   }
  }
 }

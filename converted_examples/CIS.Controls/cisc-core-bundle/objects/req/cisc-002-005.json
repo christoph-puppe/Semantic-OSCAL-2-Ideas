@@ -13,14 +13,7 @@
    ],
    "prose": {
     "en": "Use technical controls, such as application allowlisting, to ensure that only authorized software can execute or be accessed. Reassess bi-annually, or more frequently."
-   },
-   "parameters": [
-    {
-     "name": "frequency",
-     "type": "code",
-     "value": "bi-annually"
-    }
-   ]
+   }
   }
  ],
  "facets": {
@@ -47,7 +40,8 @@
       }
      ]
     }
-   ]
+   ],
+   "frequency": "bi-annually"
   }
  },
  "relations": [

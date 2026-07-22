@@ -658,7 +658,15 @@ replaces; NIST IR 8477 / OLIR (relationship semantics).
 2. Executable kernel + stdlib JSON Schemas; conformance corpus incl. JCS
    vectors (with empty-omission cases), modality-lattice cases,
    parameter-bounds cases, tailoring-conflict cases, bi-modal attestation
-   cases.
+   cases. **DELIVERED 2026-07-21:** `semantic-oscal/schemas/` (kernel
+   schema, closed shapes, shape-disjoint type inference + six normative
+   stdlib descriptors with the D10-rev-2 declarations) ·
+   `semantic-oscal/conformance/` (54 vectors across the five families) ·
+   `semantic-oscal/scripts/validate_core.py` (the executable). Measured
+   result: all vectors pass; all 8 corpus bundles + the example bundle
+   validate green — 5,478 object validations, both digests re-verified
+   per object, by-statement keys and `{param:}` bindings checked, every
+   object matching exactly one kernel shape; all nine types exercised.
 3. **Lifecycle corpus** beyond catalogs: NIST SSP/AP/AR/POA&M + 1.2.2
    Mapping examples; FedRAMP implementation/assessment data; CSA CAIQ;
    SCF mappings; representative PCI customized-approach cases. In scope
@@ -711,6 +719,7 @@ out); rows leave `oscal-semantic-core-v0.6-spec-feedback-backlog.md`:
 | #8 | **Accept (promote all three)** | D10 rev 2: `security-objectives@1` → `[selection]`, `effectivity@1` → `[selection]`, `reporting-obligation@1` → `[assessment]`; principle: a tool that cannot handle a facet must stop working on that data. Stubs update at next converter run |
 | #9 | **Close, folded into gate 3** | Seed code sets stay as shipped; confirmation/extension from counted lifecycle evidence is now part of the gate-3 scope statement (IV.5) — no standing backlog row needed |
 | #11 | **Close, delivered** | Source-QA finding (9 MUSS-in-prose clauses without `modal_verb`, grammar coverage 99.1 %) reported to the BSI authors by the project; companion to the 216/issue #58; never was a spec change |
+| #6 | **Close (gate 2): root-Set hosting normative** | D22-applied: the absorption clause decides — `terminology@1` hosts on a Set (typically corpus root), whose identity/lifecycle govern the glossary; carrier object / tenth type rejected (264/264 resolution measured with zero new structure). Normative in the stdlib descriptor |
 
 ---
 

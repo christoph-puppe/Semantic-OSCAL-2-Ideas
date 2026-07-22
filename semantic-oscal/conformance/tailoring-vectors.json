@@ -1,0 +1,69 @@
+{
+  "description": "Tailoring resolution laws (D13 / spec Appendix B): ordered application; two operations addressing the same target within one Tailoring = validation error (chaining is the only override); weakening ops need an attached Deviation at CONSUMER tier; Authority-tier Tailorings are normative source and owe none (D13 rev, backlog #2); excludes are selection, never weakening. Target key = requirement-ref + statement-id + (parameter | field | facet where applicable).",
+  "vectors": [
+    { "name": "same-target-conflict",
+      "tier": "consumer",
+      "operations": [
+        { "op": "set-modality", "requirement-ref": "https://ex.org/req/1", "statement-id": "s1", "modality": "must" },
+        { "op": "set-modality", "requirement-ref": "https://ex.org/req/1", "statement-id": "s1", "modality": "should" } ],
+      "verdict": "error",
+      "reason": "two operations share one target within one Tailoring - overrides happen auditable via Tailoring-of-Tailoring chaining, never silently" },
+    { "name": "distinct-statements-no-conflict",
+      "tier": "consumer",
+      "operations": [
+        { "op": "set-modality", "requirement-ref": "https://ex.org/req/1", "statement-id": "s1", "modality": "must" },
+        { "op": "set-modality", "requirement-ref": "https://ex.org/req/1", "statement-id": "s2", "modality": "must" } ],
+      "verdict": "valid" },
+    { "name": "same-statement-different-parameters-no-conflict",
+      "tier": "consumer",
+      "operations": [
+        { "op": "set-parameter", "requirement-ref": "https://ex.org/req/1", "statement-id": "s1", "parameter": "p1", "value": "a" },
+        { "op": "set-parameter", "requirement-ref": "https://ex.org/req/1", "statement-id": "s1", "parameter": "p2", "value": "b" } ],
+      "verdict": "valid",
+      "reason": "the target key includes the parameter name" },
+    { "name": "consumer-easing-without-deviation",
+      "tier": "consumer",
+      "base-modality": "must",
+      "operations": [
+        { "op": "set-modality", "requirement-ref": "https://ex.org/req/1", "statement-id": "s1", "modality": "should" } ],
+      "verdict": "error",
+      "reason": "easing without a record is how baselines rot invisibly (B.1.6 failure text)" },
+    { "name": "consumer-easing-with-deviation",
+      "tier": "consumer",
+      "base-modality": "must",
+      "operations": [
+        { "op": "set-modality", "requirement-ref": "https://ex.org/req/1", "statement-id": "s1", "modality": "should",
+          "deviation": { "type": "risk-adjustment", "state": "approved",
+            "rationale": "Compensating control X accepted by CISO.",
+            "approver-ref": "https://ex.org/party/ciso", "opened": "2026-07-01" } } ],
+      "verdict": "valid",
+      "reason": "the audited escape working as designed" },
+    { "name": "authority-easing-no-deviation-required",
+      "tier": "authority",
+      "base-modality": "must",
+      "operations": [
+        { "op": "set-modality", "requirement-ref": "https://ex.org/req/1", "statement-id": "s1", "modality": "should" } ],
+      "verdict": "valid",
+      "reason": "an Authority-tier Tailoring is normative source - publishing variance is not deviating from oneself (D13 rev, backlog #2); the easing still classifies and reports" },
+    { "name": "exclude-is-selection-never-deviation",
+      "tier": "consumer",
+      "excludes": [ { "ref": "https://ex.org/req/2", "rationale": "out of scope for classification P" } ],
+      "operations": [],
+      "verdict": "valid",
+      "reason": "baselines are made of exclusions (ISM x5; CR26 classes); a Deviation per exclusion would drown them (D13, rejected P7-B2)" },
+    { "name": "tightening-op-monotone",
+      "tier": "consumer",
+      "base-modality": "should",
+      "operations": [
+        { "op": "set-modality", "requirement-ref": "https://ex.org/req/1", "statement-id": "s1", "modality": "must" } ],
+      "verdict": "valid",
+      "reason": "upward along a drawn lattice line is free - the everyday hardening of every elevated baseline" },
+    { "name": "substantive-prose-without-deviation",
+      "tier": "consumer",
+      "operations": [
+        { "op": "replace-prose", "requirement-ref": "https://ex.org/req/1", "statement-id": "s1",
+          "prose": { "en": "Weakened text." }, "intent": "substantive" } ],
+      "verdict": "error",
+      "reason": "substantive prose replacement requires a Deviation; whether new prose is softer is undecidable, so the author's declaration is what gets audited" }
+  ]
+}

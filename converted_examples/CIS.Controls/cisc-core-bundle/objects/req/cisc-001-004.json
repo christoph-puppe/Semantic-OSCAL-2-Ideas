@@ -13,14 +13,7 @@
    ],
    "prose": {
     "en": "Use DHCP logging on all DHCP servers or Internet Protocol (IP) address management tools to update the enterprise's asset inventory. Review and use logs to update the enterprise's asset inventory weekly, or more frequently."
-   },
-   "parameters": [
-    {
-     "name": "frequency",
-     "type": "code",
-     "value": "weekly"
-    }
-   ]
+   }
   }
  ],
  "facets": {
@@ -47,7 +40,8 @@
       }
      ]
     }
-   ]
+   ],
+   "frequency": "weekly"
   }
  },
  "relations": [

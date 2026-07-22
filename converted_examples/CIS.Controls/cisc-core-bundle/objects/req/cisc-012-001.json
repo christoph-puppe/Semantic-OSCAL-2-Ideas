@@ -13,14 +13,7 @@
    ],
    "prose": {
     "en": "Ensure network infrastructure is kept up-to-date. Example implementations include running the latest stable release of software and/or using currently supported network as a service (Naas) offerings. Review software versions monthly, or more frequently, to verify software support."
-   },
-   "parameters": [
-    {
-     "name": "frequency",
-     "type": "code",
-     "value": "monthly"
-    }
-   ]
+   }
   }
  ],
  "facets": {
@@ -47,7 +40,8 @@
       }
      ]
     }
-   ]
+   ],
+   "frequency": "monthly"
   },
   "https://ns.cisecurity.org/controls/v8/facet/narrative@1": {
    "example": [

@@ -1,0 +1,48 @@
+{
+  "description": "Bi-modal verification (D7/D3): FULL MATCH = content-manifest digest AND all subject package-digests verify (byte-identical delivery). SEMANTIC MATCH = package bytes differ (re-serialization, re-indentation, annotation changes) but every subject's semantic-digest (JCS minus annotations) verifies - the signature survives legitimate repackaging. TAMPER = any subject semantic-digest fails - meaning changed, nothing survives. Attestations live beside the manifest; nothing signed contains its own signature.",
+  "vectors": [
+    { "name": "full-match",
+      "scenario": {
+        "subject": { "id": "https://ex.org/req/1", "version": "1", "lifecycle": "active",
+          "statements": [ { "id": "s1", "modality": "must",
+            "obligated-parties": ["https://ex.org/party/org"], "prose": { "en": "X must be done." } } ] },
+        "delivered-mutation": "none" },
+      "expected": "full-match" },
+    { "name": "semantic-match-reindented",
+      "scenario": {
+        "subject": { "id": "https://ex.org/req/1", "version": "1", "lifecycle": "active",
+          "statements": [ { "id": "s1", "modality": "must",
+            "obligated-parties": ["https://ex.org/party/org"], "prose": { "en": "X must be done." } } ] },
+        "delivered-mutation": "reindent",
+        "note": "package-digest changes (bytes moved), semantic-digest identical" },
+      "expected": "semantic-match" },
+    { "name": "semantic-match-annotation-added",
+      "scenario": {
+        "subject": { "id": "https://ex.org/req/1", "version": "1", "lifecycle": "active",
+          "statements": [ { "id": "s1", "modality": "must",
+            "obligated-parties": ["https://ex.org/party/org"], "prose": { "en": "X must be done." } } ] },
+        "delivered-mutation": "annotation-added",
+        "note": "annotations are digest-excluded chrome - adding them is legitimate repackaging" },
+      "expected": "semantic-match" },
+    { "name": "tamper-modality-eased",
+      "scenario": {
+        "subject": { "id": "https://ex.org/req/1", "version": "1", "lifecycle": "active",
+          "statements": [ { "id": "s1", "modality": "must",
+            "obligated-parties": ["https://ex.org/party/org"], "prose": { "en": "X must be done." } } ] },
+        "delivered-subject": { "id": "https://ex.org/req/1", "version": "1", "lifecycle": "active",
+          "statements": [ { "id": "s1", "modality": "should",
+            "obligated-parties": ["https://ex.org/party/org"], "prose": { "en": "X must be done." } } ] },
+        "delivered-mutation": "modality must->should after signing" },
+      "expected": "tamper" },
+    { "name": "tamper-prose-edited",
+      "scenario": {
+        "subject": { "id": "https://ex.org/req/1", "version": "1", "lifecycle": "active",
+          "statements": [ { "id": "s1", "modality": "must",
+            "obligated-parties": ["https://ex.org/party/org"], "prose": { "en": "X must be done." } } ] },
+        "delivered-subject": { "id": "https://ex.org/req/1", "version": "1", "lifecycle": "active",
+          "statements": [ { "id": "s1", "modality": "must",
+            "obligated-parties": ["https://ex.org/party/org"], "prose": { "en": "X may be done." } } ] },
+        "delivered-mutation": "prose edited after signing" },
+      "expected": "tamper" }
+  ]
+}

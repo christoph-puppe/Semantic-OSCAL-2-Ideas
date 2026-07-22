@@ -37,7 +37,7 @@ RULES = [
  (C + r"\.parts\[\]\.links\[\]\.(rel|href)$", "L1", "rel=assessment-for -> assessment-criteria@1 objectives[].assessment-for (resolved to Requirement URI)"),
  (C + r"\.props\[\]\.(name|value|ns)$", "L1",
   "dispatch: label -> Requirement.label; implementation-group -> baseline Sets ig1/ig2/ig3; "
-  "asset-class/security-function -> category Sets; frequency -> statement parameter (code); ns absorbed"),
+  "asset-class/security-function -> category Sets; frequency -> assessment-criteria@1 cadence; ns absorbed"),
  (C + r"\.links\[\]\.(rel|href)$", "L1",
   "rel=required -> relations required (safeguard URIs); rel=reference -> relations reference (resolved via back-matter)"),
  (r"^cisc\.catalog\.back-matter\.resources\[\]\.(uuid|title|rlinks\[\]\.href)$", "L1",
@@ -78,9 +78,7 @@ def convert_control(c, is_parent):
     st = {"id": stmt.get("id", c["id"] + "_stmt").rsplit("_", 1)[-1], "modality": mod,
           "obligated-parties": [f"{NS}/party/enterprise"], "prose": {"en": prose}}
     freq = next((p["value"] for p in props if p["name"] == "frequency"), None)
-    if freq:
-        st["parameters"] = [{"name": "frequency", "type": "code", "value": freq}]
-        freq_count[freq] += 1
+    if freq: freq_count[freq] += 1
     req = {"id": rid, "version": VER, "label": label, "lifecycle": "active",
            "title": c.get("title", c["id"]), "statements": [st]}
     def objective(p):
@@ -93,8 +91,11 @@ def convert_control(c, is_parent):
         if subs: o["objectives"] = subs
         return o
     objectives = [objective(p) for p in c.get("parts", []) or [] if p["name"] == "assessment-objective"]
-    if objectives:
-        req.setdefault("facets", {})[F_ACRIT] = {"objectives": objectives}
+    ac = {}
+    if objectives: ac["objectives"] = objectives
+    if freq: ac["frequency"] = freq
+    if ac:
+        req.setdefault("facets", {})[F_ACRIT] = ac
     narr = {}
     for p in c.get("parts", []) or []:
         if p["name"] in ("example", "guidance"):
@@ -191,10 +192,11 @@ j = report(
      f"- **asset-class / security-function -> category Sets** ("
      + ", ".join(f"{k} {len(set(v))}" for k, v in sorted(asset_members.items())) + " | "
      + ", ".join(f"{k} {len(set(v))}" for k, v in sorted(func_members.items())) + ").",
-     f"- **frequency -> statement parameter** (type code): "
+     f"- **frequency -> assessment-criteria@1 `frequency`** (assessment cadence, gate-2 schema alignment - "
+     f"a fixed stipulation is not an insertion point, so it is facet payload, not a parameter): "
      + ", ".join(f"{k} x{v}" for k, v in sorted(freq_count.items(), key=lambda x: -x[1]))
      + ". Typed-duration mapping deferred: 'bi-annually' is lexically ambiguous (two readings); a code "
-     f"parameter is the honest encoding until CIS defines the period (candidate authors'-queue item).",
+     f"is the honest encoding until CIS defines the period (candidate authors'-queue item).",
      f"- **assessment-objective parts -> assessment-criteria@1** objectives[] (top-level x"
      + str(sum(len(o['facets'][F_ACRIT]['objectives']) for o in bundle.objects.values()
                if o.get('facets', {}).get(F_ACRIT)))

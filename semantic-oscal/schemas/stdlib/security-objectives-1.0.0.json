@@ -1,0 +1,26 @@
+{
+  "id": "https://ns.oscal.org/stdlib/facet/security-objectives",
+  "version": "1.0.0",
+  "modifies-semantics": ["selection"],
+  "note": "NORMATIVE (gate item 2). Declaration promoted [] -> [selection] per D10 rev 2 (backlog #8): objective-driven baselining is a real selection use, and a tool that cannot handle this facet must stop working on that data - fail-closed engages only when declarations are honest. Rating values are the authority's own scale, frozen by the pinned schema, never normalized (the measured '1'/'0' scale shares nothing with anyone - App. F Q22).",
+  "schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object", "additionalProperties": false,
+    "properties": {
+      "by-statement": {
+        "type": "object", "minProperties": 1,
+        "additionalProperties": {
+          "type": "object", "additionalProperties": false,
+          "properties": {
+            "confidentiality": { "type": "string" },
+            "integrity": { "type": "string" },
+            "availability": { "type": "string" },
+            "authenticity": { "type": "string" },
+            "threat-refs": { "type": "array", "items": { "type": "string" } }
+          }
+        }
+      }
+    },
+    "required": ["by-statement"]
+  }
+}

@@ -13,14 +13,7 @@
    ],
    "prose": {
     "en": "Establish and maintain a documented data recovery process that includes detailed backup procedures. In the process, address the scope of data recovery activities, recovery prioritization, and the security of backup data. Review and update documentation annually, or when significant enterprise changes occur that could impact this Safeguard."
-   },
-   "parameters": [
-    {
-     "name": "frequency",
-     "type": "code",
-     "value": "annually"
-    }
-   ]
+   }
   }
  ],
  "facets": {
@@ -53,7 +46,8 @@
       }
      ]
     }
-   ]
+   ],
+   "frequency": "annually"
   }
  },
  "relations": [

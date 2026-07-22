@@ -411,6 +411,23 @@ Every stdlib facet re-checked under the amended rule:
 | `statement-grammar@1` | 1-of-3 encoded (BSI ×1,006) | grammar is universal in theory | Stays facet — the rejected-alternatives table already names the corpse: kernel grammar replaces NIST's bias with BSI's |
 | `assessment-criteria@1` | 2-of-3 (BSI `documentation` ×959 + CR26 artifacts/key_tests) | — | Stays facet — passes test 1, fails test 3: free-text document names vs. per-class artifact lists vs. KSI tests are irreconcilable shapes |
 
+## D22-applied — Terminology hosting: root-Set normative, carrier rejected *(backlog #6, gate 2)*
+**Decision.** A glossary is hosted as `terminology@1` on a RequirementSet —
+typically the corpus root — whose id, version, and lifecycle govern it; a
+dedicated carrier object (or tenth kernel type) is rejected. Normative in
+the stdlib descriptor: `uses-term` relations resolve against the nearest
+hosting Set; an unresolvable term ref is a Portable-tier validation error.
+**Customer.** The D22 anticipated path opened the kernel door; the
+absorption clause walked through it first: the existing mechanism (facet
+on a Set) measured 264/264 reference resolution with zero new structure.
+**Simplicity.** No tenth type; the ledger claim "nine shallow types"
+survives its strongest challenger.
+**Complexity ↓.** Identity, versioning, lifecycle, and digests come free
+from the host Set — a carrier would reimplement all four.
+**Trade-off.** A glossary shared by several corpora needs its own hosting
+Set (a one-member Set is legal and cheap) — accepted; re-opens only if a
+measured multi-corpus glossary corpus arrives (D22 clock discipline).
+
 ## D10 (rev 2) — Declaration-audit promotions *(backlog #8)*
 **Decision.** The three under-declared stdlib facets promote their
 `modifies-semantics` declarations: `security-objectives@1` → `[selection]`,

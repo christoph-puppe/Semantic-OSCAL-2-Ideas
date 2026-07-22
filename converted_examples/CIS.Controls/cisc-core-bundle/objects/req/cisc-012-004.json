@@ -13,14 +13,7 @@
    ],
    "prose": {
     "en": "Establish and maintain architecture diagram(s) and/or other network system documentation. Review and update documentation annually, or when significant enterprise changes occur that could impact this Safeguard."
-   },
-   "parameters": [
-    {
-     "name": "frequency",
-     "type": "code",
-     "value": "annually"
-    }
-   ]
+   }
   }
  ],
  "facets": {
@@ -47,7 +40,8 @@
       }
      ]
     }
-   ]
+   ],
+   "frequency": "annually"
   }
  }
 }
