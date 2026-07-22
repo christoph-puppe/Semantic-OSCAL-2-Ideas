@@ -49,6 +49,11 @@ def closure_errors(objs):
         if ref not in objs:
             errs.append(f"{oid}: closure-required {what} does not resolve in-bundle: {ref}")
     for oid, (t, o) in objs.items():
+        for ca in o.get("canonical-alias", []) or []:   # backlog #14: same-content is checkable
+            tgt = objs.get(ca.get("of"))
+            if tgt and content_digest(o) != content_digest(tgt[1]):
+                errs.append(f"{oid}: canonical-alias claims SAME content as {ca.get('of')} "
+                            f"but content digests differ — a meaning change must use `replaces` (backlog #14)")
         if t == "requirementSet":
             for m in o.get("members", []): need(oid, m["ref"], "member ref")
         elif t == "tailoring":
@@ -160,6 +165,23 @@ def tailoring_duty_errors(objs, pinned_decl=None, sdig_fn=None):
                 base = str(op.get("facet", "")).rsplit("@", 1)[0]
                 decl = STDLIB_DECL.get(base, pd.get(base))
                 if decl: duty = f"{op['op']} of a semantics-bearing facet {decl}"
+            elif op["op"] == "set-parameter":
+                tgt = objs.get(op["requirement-ref"])
+                stmt = next((s for s in tgt[1]["statements"] if s["id"] == op.get("statement-id")), None) \
+                    if tgt and tgt[0] == "requirement" else None
+                pdecl = next((p for p in stmt.get("parameters", []) if p["name"] == op.get("parameter")), None) \
+                    if stmt else None
+                if pdecl:
+                    verdict = param_check(pdecl, op.get("value"))
+                    if verdict == "invalid":   # type/cardinality/choice/range failure — malformed at ANY tier, not Deviation-escapable (D13)
+                        errs.append(f"{oid}: set-parameter '{op.get('parameter')}' value fails the declared type/bounds "
+                                    f"(D13; not Deviation-escapable)")
+                    elif verdict == "deviation-required":
+                        duty = "out-of-bounds / against-tightening set-parameter"
+            elif op["op"] == "remove-relation":
+                rel = op.get("relation")
+                if isinstance(rel, dict) and rel.get("type") == "required":
+                    duty = "remove-relation of a `required` edge"
             if duty and not has_dev and tier == "consumer":
                 errs.append(f"{oid}: {duty} without a Deviation at consumer tier "
                             f"(derived tier: {tier}; B.1.6/D13 rev 2)")
@@ -208,6 +230,15 @@ def canonical(obj):
 def sdig(obj):
     return "sha256:" + hashlib.sha256(canonical(obj).encode("utf-8")).hexdigest()
 
+def content_digest(obj):
+    # sameness modulo identity (backlog #14): strip the fields a rebrand may
+    # legitimately change, then digest what remains. canonical-alias asserts
+    # SAME content at a new home; if these differ, it should be `replaces`.
+    x = copy.deepcopy(obj)
+    for k in ("id", "version", "label", "canonical-alias", "replaces"):
+        x.pop(k, None)
+    return sdig(x)
+
 def optional_empty_violations(obj, path="$"):
     out = []
     if isinstance(obj, dict):
@@ -250,7 +281,9 @@ def param_check(decl, value):
         if "max" in decl and value > decl["max"]: return "deviation-required"
         return "valid"
     if t == "decimal":
-        if not isinstance(value, str) or not re.match(r"^-?[0-9]+(\.[0-9]+)?$", value): return "invalid"
+        # canonical decimal STRING (D3.4): no leading zeros; scale is lexically
+        # significant (trailing zeros distinguish "1.5" from "1.50" by design).
+        if not isinstance(value, str) or not re.match(r"^-?(0|[1-9][0-9]*)(\.[0-9]+)?$", value): return "invalid"
         v = float(value)
         if "min" in decl and v < decl["min"]: return "deviation-required"
         if "max" in decl and v > decl["max"]: return "deviation-required"
@@ -314,6 +347,13 @@ def run_tailoring():
                 if op["op"] == "set-modality" and "base-modality" in case:
                     needs_dev = modality_verdict(case["base-modality"], op["modality"]) != "monotone"
                 if op["op"] == "replace-prose" and op.get("intent") == "substantive":
+                    needs_dev = True
+                if op["op"] == "set-parameter" and "parameter-decl" in case:   # backlog #25
+                    pv = param_check(case["parameter-decl"], op.get("value"))
+                    if pv == "invalid": verdict = "error"                       # malformed at any tier
+                    elif pv == "deviation-required": needs_dev = True
+                if op["op"] == "remove-relation" and isinstance(op.get("relation"), dict) \
+                        and op["relation"].get("type") == "required":           # backlog #25 (B.3)
                     needs_dev = True
                 if needs_dev and case.get("tier") == "consumer" and "deviation" not in op and "deviation-ref" not in op:
                     verdict = "error"
@@ -546,6 +586,15 @@ def validate_bundle(bdir):
         fail(section, e)
     for e in facet_errors([(oid, o) for oid, (t, o) in bundle_objs.items()], pinned):
         fail(section, e)
+    # #24: report the derived Tailoring tier DISTINCTLY (spec:399) — a prefix
+    # claim is an honest-publisher signal, not proof; signature verification of
+    # the proven tier is gate-4 (DSSE engine).
+    for tid, (tt, tobj2) in sorted(bundle_objs.items()):
+        if tt == "tailoring":
+            tr = derive_tier(tobj2, bundle_objs, sdig)
+            note = {"authority-claimed": " [prefix claim - UNPROVEN]",
+                    "authority-proven": " [attestation digest-matched; signature check is gate-4]"}.get(tr, "")
+            print(f"    tier: {tid} = {tr}{note}")
     on_disk = set()
     for base, _, files in os.walk(bdir):
         for fn in files:

@@ -72,6 +72,24 @@
         { "id": "https://ex.org/req/1", "version": "1", "lifecycle": "active",
           "statements": [ { "id": "s1", "modality": "must", "obligated-parties": ["https://ns.fedramp.gov/cr26/party/provider"], "prose": { "en": "X." } } ] } ],
       "expected-errors": 0,
-      "reason": "parties have no kernel type (D22-checked: no corpus publishes party objects - 0-of-3); their URIs are identity landmarks" }
+      "reason": "parties have no kernel type (D22-checked: no corpus publishes party objects - 0-of-3); their URIs are identity landmarks" },
+    { "name": "canonical-alias-same-content-verifies",
+      "objects": [
+        { "id": "https://ns.gspp.example/req/KONF.14.1", "version": "1", "lifecycle": "active",
+          "canonical-alias": [ { "of": "https://ns.bsi.bund.de/gspp/req/KONF.14.1" } ],
+          "statements": [ { "id": "s1", "modality": "may", "obligated-parties": ["https://ex.org/p/o"], "prose": { "en": "X." } } ] },
+        { "id": "https://ns.bsi.bund.de/gspp/req/KONF.14.1", "version": "1", "lifecycle": "active",
+          "statements": [ { "id": "s1", "modality": "may", "obligated-parties": ["https://ex.org/p/o"], "prose": { "en": "X." } } ] } ],
+      "expected-errors": 0,
+      "reason": "backlog #14: a rebrand (same content, new home) is verifiable - content digests modulo id/version match, so the claim self-polices" },
+    { "name": "canonical-alias-content-changed-rejected",
+      "objects": [
+        { "id": "https://ns.gspp.example/req/KONF.14.1", "version": "2", "lifecycle": "active",
+          "canonical-alias": [ { "of": "https://ns.bsi.bund.de/gspp/req/KONF.14.1" } ],
+          "statements": [ { "id": "s1", "modality": "must", "obligated-parties": ["https://ex.org/p/o"], "prose": { "en": "STRENGTHENED text." } } ] },
+        { "id": "https://ns.bsi.bund.de/gspp/req/KONF.14.1", "version": "1", "lifecycle": "active",
+          "statements": [ { "id": "s1", "modality": "may", "obligated-parties": ["https://ex.org/p/o"], "prose": { "en": "X." } } ] } ],
+      "expected-errors": 1,
+      "reason": "backlog #14: the meaning changed (may->must, new prose) - a mis-issued canonical-alias that should have been `replaces`; the check catches the silent misalignment" }
   ]
 }

@@ -28,7 +28,7 @@
     "elapsedUnit": { "enum": ["seconds", "minutes", "hours"] },
     "calendarUnit": { "enum": ["days", "bizdays", "weeks", "months", "years"] },
     "tightening": { "enum": ["lower", "higher", "none"] },
-    "decimalString": { "type": "string", "pattern": "^-?[0-9]+(\\.[0-9]+)?$" },
+    "decimalString": { "type": "string", "pattern": "^-?(0|[1-9][0-9]*)(\\.[0-9]+)?$" },
 
     "alias": {
       "type": "object", "additionalProperties": false,
@@ -150,7 +150,7 @@
           "then": { "required": ["prose", "intent"] } },
         { "if": { "properties": { "op": { "const": "set-field" } }, "required": ["op"] },
           "then": { "required": ["field", "value"],
-            "properties": { "field": { "enum": ["title", "label", "sequence", "annotations"] } } } },
+            "properties": { "field": { "enum": ["title", "label", "annotations"] } } } },
         { "if": { "properties": { "op": { "const": "attach-facet" } }, "required": ["op"] },
           "then": { "required": ["facet", "payload"] } },
         { "if": { "properties": { "op": { "const": "detach-facet" } }, "required": ["op"] },

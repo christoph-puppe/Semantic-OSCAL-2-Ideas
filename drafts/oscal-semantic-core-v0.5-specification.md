@@ -146,7 +146,12 @@ relation (v0.4 — corrected).
    domain.
 4. **`decimal` is a canonical decimal string** (lexically defined scale/
    precision), never an IEEE-754 number — two tools MUST derive identical
-   digests and values (P7-G on decimals).
+   digests and values (P7-G on decimals). **Canonical form (rev. v0.6 cycle
+   — backlog #27):** no leading zeros (`01.5` is rejected — it is a
+   non-canonical spelling of one value); scale IS significant, so `1.5` and
+   `1.50` are DISTINCT values by design (the lexical form defines the scale)
+   and their differing digests are correct, not a divergence. Re-scaling a
+   value is forbidden. Schema pattern: `^-?(0|[1-9][0-9]*)(\.[0-9]+)?$`.
 5. **Facet pinning and bundle composition (P8-E4/P7-G5):** manifests pin
    exact facet versions + digests; objects may cite the major line. Registry
    semver policy makes minor versions backward-compatible **normatively**;
@@ -354,9 +359,9 @@ modality):**
 | `set-parameter` | MUST validate against the parameter's declared type / cardinality / choices / range (P6-F2); out-of-bounds only via Deviation. Additionally, an authority MAY declare per parameter `tightening: lower | higher | none`; a change against the declared direction ⇒ Deviation (CR26 deadlines would declare `lower`) |
 | `detach-facet` | Deviation when the facet's `modifies-semantics` ≠ [] |
 | `replace-prose` | carries `intent: editorial | substantive`; substantive ⇒ Deviation |
-| `set-field` | whitelisted non-normative fields only (`title`, `label`, `sequence`, `annotations`) — the whitelist is a schema enum since the P9 cycle; anything normative goes through its own operation |
+| `set-field` | whitelisted non-normative fields only (`title`, `label`, `annotations`) — the whitelist is a schema enum since the P9 cycle; `sequence` struck v0.6 (it lives on Set members, which operations cannot address — backlog #21); anything normative goes through its own operation |
 | `attach-facet` | Deviation when the attached facet's `modifies-semantics` ≠ [] (symmetric with detach — B.3) |
-| `add-relation` / `remove-relation` | free (relations are informative; normative cross-framework claims are Mapping objects, D20, with their own lifecycle) |
+| `add-relation` / `remove-relation` | informative edges are free; **removing a `required` edge ⇒ Deviation** (B.3 — dropping a dependency weakens the graph; enforced since backlog #25). Normative cross-framework claims are Mapping objects, D20, with their own lifecycle |
 | `excludes` | **selection, never weakening — no Deviation** |
 
 The last row is a documented **rejection of P7-B2's "exclude always
@@ -681,7 +686,9 @@ replaces; NIST IR 8477 / OLIR (relationship semantics).
    cases. **DELIVERED 2026-07-21:** `semantic-oscal/schemas/` (kernel
    schema, closed shapes, shape-disjoint type inference + six normative
    stdlib descriptors with the D10-rev-2 declarations) ·
-   `semantic-oscal/conformance/` (54 vectors across the five families) ·
+   `semantic-oscal/conformance/` (54 vectors across five families at first
+   delivery; **125 across nine families at HEAD** after the P9 + v0.6-round-2
+   additions — recompute via `validate_core.py`, backlog #28) ·
    `semantic-oscal/scripts/validate_core.py` (the executable). Measured
    result: all vectors pass; all 8 corpus bundles + the example bundle
    validate green — 5,478 object validations, both digests re-verified
@@ -751,6 +758,26 @@ out); rows leave `oscal-semantic-core-v0.6-spec-feedback-backlog.md`:
 | #9 | **Close, folded into gate 3** | Seed code sets stay as shipped; confirmation/extension from counted lifecycle evidence is now part of the gate-3 scope statement (IV.5) — no standing backlog row needed |
 | #11 | **Close, delivered** | Source-QA finding (9 MUSS-in-prose clauses without `modal_verb`, grammar coverage 99.1 %) reported to the BSI authors by the project; companion to the 216/issue #58; never was a spec change |
 | #6 | **Close (gate 2): root-Set hosting normative** | D22-applied: the absorption clause decides — `terminology@1` hosts on a Set (typically corpus root), whose identity/lifecycle govern the glossary; carrier object / tenth type rejected (264/264 resolution measured with zero new structure). Normative in the stdlib descriptor |
+
+## IV.8 v0.6-cycle round 2 (2026-07-22) — P9c adjudication + deep-research items
+
+Acting on the P9c re-review (the P9-cycle enforcement shipped narrower
+than the register's prose) and the deep-research open items. Full
+entries in the register ("Amendments — v0.6 cycle, round 2"); normative
+in D3/D9/D13, the schema, and Appendices A–C. Backlog #13/#14/#15/#21/
+#22/#23/#25/#27/#28 **closed**; #20/#24/#26 **narrowed** (residuals on
+the converter rerun / gate-4 engines); #10/#12/#18 open. Summary:
+**#25** op-law completed (`set-parameter` bounds/tightening +
+`remove-relation(required)` now enforced — the P6-F2 backdoor was
+shipped unenforced); **#24** tier reported distinctly (spec:399), proven
+tier's signature check deferred to gate 4; **#14** canonical-alias
+self-policing; **#27** decimal no-leading-zeros + scale significant;
+**#21** `sequence` struck from the set-field whitelist; **#20** D13
+relation row aligned + C.8 `supersedes` deleted; **#13**
+`calendar-context@1` seeded; **#22** anticipated path scoped pre-1.0;
+**#23** nearest-Set = fewest hops; **#15** template accreditation a
+declared non-goal. Conformance **115 → 125 vectors**. Gate 3 plan:
+`drafts/gate-3-plan.md`.
 
 ---
 
