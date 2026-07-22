@@ -1,6 +1,6 @@
 # JASCON — "Kernel + Registered Facets"
-## Specification 1.0.0-rc.1 (release candidate)
-### 2026-07-22 · consolidated from the v0.5 draft + the v0.6-cycle amendment journal
+## Specification 1.0.0
+### released 2026-07-22 at tag `v1.0.0` · consolidated from the v0.5 draft + the v0.6-cycle amendment journal · hardened by the P10 double review + fix pass
 
 > **Name.** **JASCON** — **J**SON **A**ttestable **S**emantic **C**ompliance
 > **O**bject-graph **N**otation; *one notation for every standard, in every
@@ -9,8 +9,12 @@
 > verified by collision scan the same day). Machine identifiers — namespace
 > URIs, the attestation media type
 > `application/vnd.oscal-semantic-core.attestation+json`, schema filenames —
-> deliberately retain the `oscal-semantic-core` string for digest stability;
-> their migration is decided with the `v1.0.0` tag. Nothing here is endorsed
+> deliberately retain the `oscal-semantic-core` string for digest stability.
+> **Decided at the tag: they remain.** Identifiers are opaque strings (D2);
+> the brand lives in prose; churning every digest and signature for a
+> spelling would contradict the stability the identifiers exist to provide
+> (register "Amendments — v1.0.0"; revisit only with a D3.5 major).
+> Nothing here is endorsed
 > by NIST, BSI, ACSC, CCB, CIS, or FedRAMP; the project is maintained in
 > personal capacity.
 
@@ -51,7 +55,8 @@ complexity.
 7 (P7-B1…4, gaps, mapping), 8 (P8-E1…4, gaps) → **v0.5** → v0.6 cycle:
 review rounds 1–2 (adjudicated, F.6/F.7) + P9 twin adversarial runs
 (adjudicated, F.8) + gates 1–4 delivered + the converter rerun →
-**1.0.0-rc.1**.
+1.0.0-rc.1 → P10 twice (in-repo + external, adjudicated) + the fix
+pass → **1.0.0**.
 
 ---
 
@@ -843,6 +848,7 @@ history. The compact line:
 | **1.0.0-rc.1** | 2026-07-22 | This consolidation; D22's anticipated path closed unused (rev 3) | this row |
 | P10 + P10b | 2026-07-22 | Adversarial review of THIS text (no Blockers; #29–#37 filed) + external Gemini review adjudicated (#38–#39 in; G-3/G-4/G-5 refuted) | "Amendments — P10" / "P10b" |
 | P10 fix pass | 2026-07-22 | All eleven items closed: op-law completed (pinned declarations, same-target on bundles, predicates schema-bound), D21 acyclicity — whose first run recovered **239 silently-merged ISM taxonomy sets** (corpus 6,675 → 6,914 objects; export 5,886/5,886); Part II aligned to the delivered schema; vectors 149 → 157; `DE.BSI` rename; errata swept | "Amendments — the P10 fix pass" |
+| **1.0.0** | 2026-07-22 | Released at tag `v1.0.0`; machine identifiers stay `oscal-semantic-core` by the tag-time decision (opaque strings, D2) | "Amendments — v1.0.0" |
 
 ## IV.7 Release artifacts (what this specification ships with)
 
@@ -892,7 +898,8 @@ rc.1 commit:
    round, adjudicated (#38–#39 in; three findings refuted); the fix
    pass closed all eleven items the standing way — register
    "Amendments — P10 / P10b / the P10 fix pass".
-3. **Tag `v1.0.0`** — remaining pre-tag: the author's trademark/domain
-   screen. After the tag, kernel-shape changes ride major versions
-   under D3.5 governance, and the anticipated-convergence path stays
-   closed (D22 rev 3).
+3. **Tag `v1.0.0`** — ✓ tagged 2026-07-22 on the author's go. Machine
+   identifiers remain `oscal-semantic-core` by the tag-time decision
+   (title block; register "Amendments — v1.0.0"). From here,
+   kernel-shape changes ride major versions under D3.5 governance, and
+   the anticipated-convergence path stays closed (D22 rev 3).

@@ -3,7 +3,8 @@
 > Semantic Core"; the project was renamed **JASCON** the same day
 > (naming entry in the rationale register). The consolidated release
 > candidate is
-> **`oscal-semantic-core-specification-1.0.0-rc.1.md`** (same
+> **`oscal-semantic-core-specification-1.0.0.md`** (consolidated as
+> rc.1, released as **1.0.0** at tag `v1.0.0`, 2026-07-22; same
 > normative content, journals compacted); amendments continue in the
 > Decision Rationale Register only.
 

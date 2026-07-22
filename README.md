@@ -61,8 +61,8 @@ side of that paradox:
   eight profile documents, because consuming the profile mechanism costs more
   than inlining.
 
-**The specification:** [`oscal-semantic-core-specification-1.0.0-rc.1.md`](drafts/oscal-semantic-core-specification-1.0.0-rc.1.md)
-(release candidate, consolidated 2026-07-22) with its companion
+**The specification:** [`oscal-semantic-core-specification-1.0.0.md`](drafts/oscal-semantic-core-specification-1.0.0.md)
+(**v1.0.0**, released 2026-07-22) with its companion
 [Decision Rationale Register](drafts/oscal-semantic-core-decision-rationale-register.md).
 
 Full argument with sources: [Chapter 1 — Why This Exists](semantic-oscal/references/ch01-why-this-exists.md).
@@ -158,11 +158,14 @@ The project moves through evidence gates; nothing advances on narrative.
   schema is **normative and fail-closed** (stdlib pins verbatim, divergence
   rejected by both validators). **The spec-feedback backlog is empty** —
   every item that ever entered it left through a register entry.
-- **Next: the 1.0 release train.** Spec consolidation into a release
-  document, `v1.0.0-rc.1`, one adversarial review round of the consolidated
-  text — plus OSCAL mapping/profile-model exports and the standing
-  invitation: a third-party clean-room validator build against the
-  conformance corpus.
+- **Released: `v1.0.0` (2026-07-22).** The consolidated specification
+  survived two independent adversarial review rounds (in-repo + an
+  external Gemini pass, both adjudicated on the record) and the fix pass
+  that closed every finding — including the cycle-detection rule that
+  recovered 239 silently-merged ISM taxonomy sets from the corpus
+  itself. Next: OSCAL mapping/profile-model exports, SSP-family
+  lifecycle exports, and the standing invitation — a third-party
+  clean-room validator build against the conformance corpus.
 
 Reproduce the whole verdict in one line (needs [uv](https://docs.astral.sh/uv/)):
 

@@ -1322,7 +1322,43 @@ Closures:
 
 Refuted stays refuted: G-3 · G-4 · G-5 (P10b entry) — none acted on.
 
-## Next (IV.8 of the rc.1 spec)
-Name ✓ **JASCON** → P10 ✓ → P10b ✓ → fix pass ✓ (this entry; the
-backlog is EMPTY) → **tag `v1.0.0`** once the author's trademark/domain
-screen clears; machine-identifier migration is decided with the tag.
+# Amendments — v1.0.0 (2026-07-22): the release
+
+**Tagged `v1.0.0` on the author's go** ("create the 1.0.0 and do a
+release"). The spec file promoted in place:
+`drafts/oscal-semantic-core-specification-1.0.0.md` (renamed from
+`…-1.0.0-rc.1.md`; title and IV.6/IV.8 updated; README and the v0.5
+banner repointed). Release notes:
+`drafts/jascon-1.0.0-release-notes.md` (doubles as the GitHub release
+body; the SKILL zip is the attachable artifact).
+
+**The tag-time decision — machine identifiers remain
+`oscal-semantic-core`.** Namespace URIs, the attestation media type
+(`application/vnd.oscal-semantic-core.attestation+json` — inside every
+DSSE PAE), schema filenames and `$id`s, and the skill's machine name
+keep the working-title string. Rationale: identifiers are opaque
+strings (D2) — their spelling carries no meaning by the kernel's own
+doctrine; the brand lives in prose and filenames of prose; migrating
+would churn every digest, every signature, and every pinned manifest in
+existence for zero semantic gain — the exact instability the
+identifiers exist to prevent. Revisit only with a D3.5 major version,
+should one ever exist.
+**Customer.** Every shipped bundle, attestation, and third-party pin
+stays verifiable forever against 1.0.0 artifacts.
+**Simplicity.** One rule: brands may move, identifiers do not.
+**Trade-off.** The string `oscal-semantic-core` outlives the working
+title inside URIs — cosmetic, documented in the spec's title block.
+
+Residual on the author (outside the repo): the DPMA/EUIPO/USPTO
+trademark screen and domain registrations for JASCON — noted here so
+the record shows the tag consciously preceded them. Also noted: the
+repository carries **no LICENSE file** — flagged to the author at
+release time; a license choice is the author's call and rides a
+follow-up commit.
+
+## The train, complete
+Name ✓ JASCON → P10 ✓ → P10b ✓ → fix pass ✓ → **`v1.0.0` tagged
+2026-07-22**. The backlog is EMPTY; both validators, the export suite,
+and 157/157 vectors are green at the release commit. Post-1.0 work
+rides the pending queue (OSCAL mapping/profile exports, SSP-family
+lifecycle exports, the clean-room invitation).
