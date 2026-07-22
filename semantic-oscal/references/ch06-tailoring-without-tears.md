@@ -158,6 +158,23 @@ props. Weakening means softening an obligation you *kept*; deciding
 what is in scope is a different act, and the model refuses to confuse
 them.
 
+One more boundary, decided in the v0.6 cycle (D13 rev): **whose record
+is a Deviation?** The consumer's. A Deviation documents an
+*implementation's* departure from its governing resolved set — so the
+duties in this section bind Tailorings at consumption, and **an
+authority tailoring at Authority tier owes none of them.** When FedRAMP
+publishes four class variants of its own rules, that is not FedRAMP
+deviating from FedRAMP; the published Tailoring *is* the norm, its
+audit record is the publication itself — versioned, signed, lifecycled
+like every authored object. The converter corpse that forced the
+question: 29 variant-only CR26 rules whose base prose had to be
+*synthesized* so a pseudo-Deviation had something to point at —
+ceremony without a wronged party. The weakening classification still
+computes, so any consumer can ask "which classes ease the base?"
+(CR26's measured answer across 111 class-variant modality moves:
+zero); what disappears is only the obligation to mint a record where
+nothing was departed from.
+
 ## 6.4 Resolution you can memorize
 
 The entire resolution algorithm — the successor to a specification-sized
@@ -285,10 +302,11 @@ Adding a statement *inside* someone else's Requirement is impossible
 by design: statements live within the owner's object and its semantic
 digest. Instead, publish your own Requirement and declare the
 attachment point — a `relations` edge (relation types are the one
-extensible surface; `supplements` is a natural minted type), or, for
-clause precision, a statement-scoped Mapping
-(`target-scope: ["statement:s2"]`, relationship `supports`). The
-graph carries what injection used to smuggle.
+extensible surface), or, for clause precision, a statement-scoped
+Mapping (`target-scope: ["statement:s2"]`, relationship
+`supplements` — since the v0.6 cycle a registered stdlib extension
+code, C.5, no longer merely minted; non-chaining, degrades to
+`supports`). The graph carries what injection used to smuggle.
 
 The verb split that replaces profile semantics: **modifying** upstream
 content (parameters, modality, prose) is Tailoring, under the

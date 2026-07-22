@@ -275,7 +275,8 @@ The second half of the answer: stdlib facets *are* first-class
 ecosystem citizens — default-shipped, schema-pinned, fail-closed —
 and a kernel field is a tax on every Core validator forever. **What
 landed:** the promotion rule was nowhere normative. It is now a v0.6
-backlog item, and this entry is its first public statement.
+backlog item, and this entry is its first public statement. *(Decided
+2026-07-21: normative as spec D22 — backlog #4 closed.)*
 
 **Q23. In 1.x I amend a catalog — add controls, possibly nested — via
 profile and resolution. Where did that go?**
@@ -293,7 +294,9 @@ artifacts whose lineage was a tool run, and the twin-catalog's ten
 silent divergences — forking-to-amend at any scale. **What landed:**
 the supplement pattern was genuinely missing from the book. It is now
 §6.A, a glossary entry, and a backlog item to give the pattern a
-normative name in the specification.
+normative name in the specification. *(Decided 2026-07-21: named in spec
+D21; `supplements` registered as a stdlib relationship extension code,
+D20/C.5 — backlog #5 closed.)*
 
 ---
 

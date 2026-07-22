@@ -51,11 +51,14 @@ registry-rot corpse; ISM's own OCR→ISM renumbering history.
 | `prose` | ● | {lang: string} | The normative text, language-tagged. |
 
 **Parameter algebra (D9/D14):** every parameter carries `name` ● and
-`type` ●, plus type-specific fields —
+`type` ●, optionally `label` ○ (display handle — never an identifier,
+never compared) and `default` ○ (advisory, type-valid; resolution
+never substitutes it silently — binding is `set-parameter`-only), plus
+type-specific fields —
 
 | type | extra fields | evidence |
 |---|---|---|
-| `string` | — | BSI params ×147 (label/default currently L2 — open D9 item). |
+| `string` | — | BSI params ×147 (label/default first-class since the v0.6 cycle — D9 rev, backlog #1; the L2 `param-extras` residue ×179 drains at the next converter run). |
 | `choice` | `choices[]{value,label}` ●, `cardinality` (one \| many) | the fused-alternatives lesson ("TLS 1.3 *oder* …"). |
 | `integer` | `min?`, `max?` | ODP bounds. |
 | `decimal` | canonical **string** value, `min?`, `max?` | JCS float hazard (D3). |
