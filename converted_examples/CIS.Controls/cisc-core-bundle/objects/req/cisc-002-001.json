@@ -13,14 +13,7 @@
    ],
    "prose": {
     "en": "Establish and maintain a detailed inventory of all licensed software installed on enterprise assets. The software inventory must document the title, publisher, initial install/use date, and business purpose for each entry; where appropriate, include the Uniform Resource Locator (URL), app store(s), version(s), deployment mechanism, decommission date, and number of licenses. Review and update the software inventory bi-annually, or more frequently."
-   },
-   "parameters": [
-    {
-     "name": "frequency",
-     "type": "code",
-     "value": "bi-annually"
-    }
-   ]
+   }
   }
  ],
  "facets": {
@@ -53,7 +46,8 @@
       }
      ]
     }
-   ]
+   ],
+   "frequency": "bi-annually"
   }
  },
  "relations": [

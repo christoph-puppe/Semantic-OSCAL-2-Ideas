@@ -13,14 +13,7 @@
    ],
    "prose": {
     "en": "Perform application updates on enterprise assets through automated patch management on a monthly, or more frequent, basis."
-   },
-   "parameters": [
-    {
-     "name": "frequency",
-     "type": "code",
-     "value": "monthly"
-    }
-   ]
+   }
   }
  ],
  "facets": {
@@ -47,7 +40,8 @@
       }
      ]
     }
-   ]
+   ],
+   "frequency": "monthly"
   }
  },
  "relations": [

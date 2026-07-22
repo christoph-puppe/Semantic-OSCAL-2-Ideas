@@ -1,0 +1,26 @@
+{
+  "description": "modality-monotonic (B.1.6) over the C.1 lattice. Verdicts: monotone (free), easing (Deviation at consumer tier), axis-change (Deviation at consumer tier - never monotone in either direction). Tier scope per D13 rev: Authority-tier Tailorings owe no Deviation; the classification still computes. unspecified sits below everything; may-only branches off may and is incomparable with should/must.",
+  "vectors": [
+    { "from": "unspecified", "to": "must", "verdict": "monotone", "note": "specifying is always tightening" },
+    { "from": "unspecified", "to": "should-not", "verdict": "monotone", "note": "specifying, prohibition axis" },
+    { "from": "may", "to": "should", "verdict": "monotone" },
+    { "from": "should", "to": "must", "verdict": "monotone" },
+    { "from": "may", "to": "must", "verdict": "monotone", "note": "transitive chain" },
+    { "from": "may", "to": "may-only", "verdict": "monotone", "note": "a permission narrowed is stronger" },
+    { "from": "should-not", "to": "must-not", "verdict": "monotone" },
+    { "from": "must", "to": "must", "verdict": "monotone", "note": "no-op" },
+    { "from": "must", "to": "should", "verdict": "easing" },
+    { "from": "should", "to": "may", "verdict": "easing" },
+    { "from": "must-not", "to": "should-not", "verdict": "easing" },
+    { "from": "may-only", "to": "may", "verdict": "easing", "note": "widening a narrowed permission" },
+    { "from": "must", "to": "unspecified", "verdict": "easing", "note": "unspecifying is always easing" },
+    { "from": "may", "to": "must-not", "verdict": "axis-change", "note": "the semantic about-face" },
+    { "from": "must", "to": "must-not", "verdict": "axis-change" },
+    { "from": "must-not", "to": "must", "verdict": "axis-change" },
+    { "from": "should-not", "to": "may", "verdict": "axis-change" },
+    { "from": "may-only", "to": "must", "verdict": "axis-change", "note": "incomparable branches" },
+    { "from": "must", "to": "may-only", "verdict": "axis-change", "note": "incomparable branches" },
+    { "from": "may-only", "to": "must-not", "verdict": "axis-change" },
+    { "from": "should", "to": "may-only", "verdict": "axis-change", "note": "incomparable - restriction is not on the obligation chain above may" }
+  ]
+}

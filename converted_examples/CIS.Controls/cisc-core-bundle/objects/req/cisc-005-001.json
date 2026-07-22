@@ -13,14 +13,7 @@
    ],
    "prose": {
     "en": "Establish and maintain an inventory of all accounts managed in the enterprise. The inventory must at a minimum include user, administrator, and service accounts. The inventory, at a minimum, should contain the person's name, username, start/stop dates, and department. Validate that all active accounts are authorized, on a recurring schedule at a minimum quarterly, or more frequently."
-   },
-   "parameters": [
-    {
-     "name": "frequency",
-     "type": "code",
-     "value": "quarterly"
-    }
-   ]
+   }
   }
  ],
  "facets": {
@@ -59,7 +52,8 @@
       }
      ]
     }
-   ]
+   ],
+   "frequency": "quarterly"
   }
  },
  "relations": [

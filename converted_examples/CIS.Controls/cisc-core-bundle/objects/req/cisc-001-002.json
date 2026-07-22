@@ -13,14 +13,7 @@
    ],
    "prose": {
     "en": "Ensure that a process exists to address unauthorized assets on a weekly basis. The enterprise may choose to remove the asset from the network, deny the asset from connecting remotely to the network, or quarantine the asset."
-   },
-   "parameters": [
-    {
-     "name": "frequency",
-     "type": "code",
-     "value": "weekly"
-    }
-   ]
+   }
   }
  ],
  "facets": {
@@ -53,7 +46,8 @@
       }
      ]
     }
-   ]
+   ],
+   "frequency": "weekly"
   }
  },
  "relations": [

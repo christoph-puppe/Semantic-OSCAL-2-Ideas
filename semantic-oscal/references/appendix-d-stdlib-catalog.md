@@ -7,15 +7,17 @@ below is quoted verbatim from the gate-item-1 bundles (ISM, BSI,
 CR26), not composed for the page: this catalog describes facets that
 have already carried 93,259 values.
 
-**Status convention.** The schemas shipping in the bundles are marked
-stubs; the normative JSON Schemas are gate item 2. Of the two shape
-conventions the converters established: (a) the `by-statement` keying
-pattern for per-clause payloads is **normative since the v0.6 cycle**
-(D10 rev, backlog #7 — a payload key naming no statement of the host
-is a validation error); (b) glossary hosting on a corpus root Set
-remains a **candidate decision** (backlog #6, decides at gate 2).
-Where a stub's `modifies-semantics` declaration leaves an open
-question, it appears here and again in the D.12 audit.
+**Status convention.** The normative JSON Schemas shipped with gate
+item 2 (2026-07-21): `schemas/stdlib/` carries the six descriptors,
+`scripts/validate_core.py` is the executable, and the bundles'
+in-place stubs are superseded (re-pinning lands with the next
+converter run). Both converter-established shape conventions are now
+decided: (a) the `by-statement` keying pattern is **normative** (D10
+rev, backlog #7 — a payload key naming no statement of the host is a
+validation error); (b) glossary hosting on a Set — typically the
+corpus root — is **normative** (backlog #6, closed at gate 2; carrier
+rejected via the D22 absorption clause). The D.12 audit promotions
+shipped in the descriptors (backlog #8).
 
 ---
 
@@ -72,10 +74,11 @@ metadata). **Field sample** (CR26, FRD-IIR):
  "aliases": ["initial incident report", "IIR", ...]}
 ```
 **Absorbs:** 75 FRD terms, 188 aliases; `uses-term` relations ×264
-point in. **Hosting note (candidate decision):** the converter hosts
-the glossary on the corpus **root Set** — honest v0; a dedicated
-glossary carrier is the alternative on the gate-2 table.
-**Status:** high; exercised.
+point in. **Hosting rule (decided at gate 2, backlog #6):** the glossary is
+hosted on a **Set** — typically the corpus root — whose identity,
+version, and lifecycle govern it; a dedicated carrier was rejected via
+the D22 absorption clause (264/264 resolution measured with zero new
+structure). **Status:** high; exercised; normative descriptor shipped.
 
 ## D.4 `reporting-obligation@1`
 
@@ -202,16 +205,20 @@ needed **no** facet at all.
 
 ## D.12 Declaration audit & the parked list
 
-| Facet | Shipped declaration | Open question (gate 2) |
+| Facet | Normative declaration (gate 2) | Disposition |
 |---|---|---|
-| statement-grammar | `[]` | none — chrome-for-computation confirmed |
-| security-objectives | `[]` | promote to `[selection]`? (objective-driven baselining) |
-| terminology | `[]` | none; **hosting shape** (root vs dedicated carrier) |
-| reporting-obligation | `[]` | promote to `[assessment]`? (duties are checkable) |
-| effectivity | `[]` | promote to `[selection]`? (calendar-gated applicability) |
-| assessment-criteria | `[assessment]` | confirmed by use |
-| cr26/scope (framework) | `[selection]` | exemplar for the promotions above |
-| system-context · assurance-levels | — | Rev5-cycle field verification (medium tier) |
+| statement-grammar | `[]` | chrome-for-computation confirmed |
+| security-objectives | `[selection]` | **promoted** (backlog #8): objective-driven baselining is selection |
+| terminology | `[]` | **hosting decided** (backlog #6): Set-hosted, typically corpus root; carrier rejected (D22 absorption) |
+| reporting-obligation | `[assessment]` | **promoted** (backlog #8): notification duties are checkable; anticipated kernel candidate when an EU corpus lands |
+| effectivity | `[selection]` | **promoted** (backlog #8): time-gated applicability is selection by calendar |
+| assessment-criteria | `[assessment]` | confirmed by use; gains `frequency` (CIS cadence) and audit/remediation/method (benchmark shape) |
+| cr26/scope (framework) | `[selection]` | the exemplar the promotions followed |
+| system-context · assurance-levels | — | still medium tier: Rev5-cycle field verification (gate 3) |
+
+The governing principle, quoted from the user directive that decided
+#8: **a tool that cannot handle a facet must stop working on that
+data** — fail-closed engages only when declarations are honest.
 
 **Parked:** `privacy-assessment@1` — deliberately not shipped until
 the Rev5-era privacy corpus is measured; a privacy facet designed

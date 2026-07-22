@@ -61,8 +61,10 @@ You must strictly adhere to the guidelines detailed in the handbook chapters and
 - **Companion Examples:** [attestation-acme-2026.json](examples/attestation-acme-2026.json) (Attestation signatures), [content-manifest.json](examples/content-manifest.json) (Package integrity manifest), [authorization-summary.md](examples/authorization-summary.md) (L4 rendering report)
 
 ### Requirement 11: Validator Implementation
-- **Description:** Ensure structural validation, facet schema checking, and resolution conformance. Adhere to JCS (JSON Canonicalization Schema) and tailoring resolution logic.
+- **Description:** Ensure structural validation, facet schema checking, and resolution conformance. Adhere to JCS (JSON Canonicalization Schema) and tailoring resolution logic. The normative kernel schema, stdlib facet descriptors, and conformance vectors ship with this skill and are the definitive contract.
 - **Reference Document:** [Chapter 12 — Building a Validator (The Weekend Chapter)](references/ch12-building-a-validator.md)
+- **Normative Artifacts:** [oscal-semantic-core-1.0.0.schema.json](schemas/oscal-semantic-core-1.0.0.schema.json) (kernel shapes, closed; shape-disjoint type inference), [schemas/stdlib/](schemas/stdlib/) (six facet descriptors with declared semantics), [conformance/](conformance/) (JCS, modality-lattice, parameter, tailoring, attestation vectors).
+- **Reference Implementation:** [validate_core.py](scripts/validate_core.py) — runs the conformance corpus and validates any bundle (schemas, digests, by-statement keys, `{param:}` bindings, manifest completeness).
 
 ### Requirement 12: Safe Consumption
 - **Description:** Handle unknown facets and annotations with standard fail-closed / warnings. Manage rendering, templates, and actionable error UX gracefully.

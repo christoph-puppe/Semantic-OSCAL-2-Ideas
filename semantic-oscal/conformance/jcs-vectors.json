@@ -1,0 +1,51 @@
+{
+  "description": "Canonical-form vectors (D3): SHA-256 over JCS-compatible serialization (sorted keys, no insignificant whitespace, minimal escaping, UTF-8) of the object minus `annotations`. Pre-normalization rule (D3.3): structurally OPTIONAL arrays/objects with zero elements MUST be absent - their presence is a validation error, so canonicalization never sees them; structurally REQUIRED fields remain even when empty. Decimals are canonical strings (D3.4), never IEEE floats.",
+  "vectors": [
+    {
+      "name": "key-sorting-and-compaction",
+      "input": { "b": 1, "a": "x" },
+      "canonical": "{\"a\":\"x\",\"b\":1}",
+      "sha256": null
+    },
+    {
+      "name": "annotations-excluded-from-semantic-domain",
+      "input": { "id": "https://ex.org/req/1", "annotations": { "web_name": "chrome" }, "version": "1" },
+      "canonical": "{\"id\":\"https://ex.org/req/1\",\"version\":\"1\"}",
+      "sha256": null
+    },
+    {
+      "name": "unicode-preserved-not-escaped",
+      "input": { "prose": { "de": "Verschlüsselung über Netze" } },
+      "canonical": "{\"prose\":{\"de\":\"Verschlüsselung über Netze\"}}",
+      "sha256": null
+    },
+    {
+      "name": "decimal-as-string-survives",
+      "input": { "value": "2.50" },
+      "canonical": "{\"value\":\"2.50\"}",
+      "sha256": null
+    },
+    {
+      "name": "nested-arrays-order-preserved",
+      "input": { "members": [ { "ref": "b" }, { "ref": "a" } ] },
+      "canonical": "{\"members\":[{\"ref\":\"b\"},{\"ref\":\"a\"}]}",
+      "sha256": null
+    },
+    {
+      "name": "empty-omission-optional-array-present-is-error",
+      "authoring-input": { "id": "https://ex.org/req/1", "version": "1", "lifecycle": "active",
+        "statements": [ { "id": "s1", "modality": "must",
+          "obligated-parties": ["https://ex.org/party/org"], "prose": { "en": "X must." } } ],
+        "relations": [] },
+      "expected": "invalid",
+      "reason": "structurally optional array `relations` present with zero elements - MUST be omitted before serialization (D3.3; the omitted-vs-empty hash-fragmentation corpse)"
+    },
+    {
+      "name": "empty-omission-required-array-stays",
+      "authoring-input": { "id": "https://ex.org/set/empty", "version": "1", "lifecycle": "active",
+        "title": "Placeholder set", "members": [] },
+      "expected": "valid",
+      "reason": "`members` is structurally REQUIRED on RequirementSet - it remains even when empty; only optional empties are omitted (measured live: the C5 GC domain Set)"
+    }
+  ]
+}

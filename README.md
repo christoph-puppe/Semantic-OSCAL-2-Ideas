@@ -87,8 +87,13 @@ Install by copying the directory into your skills folder, or unpack
 
 It carries 18 worked examples plus an index in [`examples/`](semantic-oscal/examples/) — a
 self-consistent bundle from a zero-facet minimum requirement through
-attestations with semantic digests — and three converters in
-[`scripts/`](semantic-oscal/scripts/).
+attestations with semantic digests — the converters in
+[`scripts/`](semantic-oscal/scripts/), and, since gate 2 (2026-07-21), the
+**normative kernel JSON Schema**, six stdlib facet descriptors, a
+54-vector conformance corpus, and the reference validator
+([`validate_core.py`](semantic-oscal/scripts/validate_core.py)) — which
+validates all nine corpus bundles green: 5,478 objects, both digests
+re-verified each, every object matching exactly one kernel shape.
 
 ### As a specification
 
