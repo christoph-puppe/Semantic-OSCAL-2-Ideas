@@ -1,0 +1,948 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Semantic Core Bundle Reader</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg-deep:oklch(0.13 0.02 280);
+  --bg-elev-1:oklch(0.95 0.005 280 / 0.04);
+  --bg-elev-2:oklch(0.95 0.005 280 / 0.06);
+  --bg-elev-3:oklch(0.95 0.005 280 / 0.08);
+  --border-1:oklch(0.95 0.005 280 / 0.06);
+  --border-2:oklch(0.95 0.005 280 / 0.10);
+  --text-primary:oklch(0.95 0.005 280);
+  --text-secondary:oklch(0.75 0.02 280);
+  --text-tertiary:oklch(0.65 0.02 280);
+  --text-quiet:oklch(0.55 0.02 280);
+  --accent:oklch(0.7 0.18 300);
+  --accent-soft:oklch(0.7 0.18 300 / 0.15);
+  --accent-glow:oklch(0.7 0.18 300 / 0.4);
+  --red:oklch(0.65 0.2 25);
+  --amber:oklch(0.80 0.15 80);
+  --green:oklch(0.75 0.18 145);
+  --blue:oklch(0.70 0.15 240);
+  --teal:oklch(0.75 0.14 190);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--bg-deep);color:var(--text-primary);font:14px/1.55 Inter,system-ui,sans-serif;overflow:hidden}
+::selection{background:oklch(0.7 0.18 300 / 0.35);color:var(--text-primary)}
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:var(--border-2);border-radius:3px}
+::-webkit-scrollbar-thumb:hover{background:var(--accent)}
+.mono{font-family:'JetBrains Mono',monospace}
+.nano{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-quiet)}
+.glass{background:var(--bg-elev-1);border:1px solid var(--border-1);backdrop-filter:blur(20px);border-radius:12px}
+
+#app{position:relative;z-index:1;display:grid;grid-template-rows:62px 1fr 210px;height:100vh}
+#topbar{display:flex;align-items:center;gap:14px;padding:0 20px;background:var(--bg-elev-1);border-bottom:1px solid var(--border-1);backdrop-filter:blur(20px)}
+#topbar .brand{font-weight:700;font-size:15px}
+#topbar .brand span{color:var(--accent)}
+.pill{font-family:'JetBrains Mono',monospace;font-size:10.5px;padding:3px 10px;border-radius:999px;border:1px solid var(--border-2);color:var(--text-tertiary);white-space:nowrap}
+.pill.on{border-color:var(--accent);color:var(--accent)}
+
+#mid{display:grid;grid-template-columns:248px 5px 1fr;min-height:0}
+#rail{padding:14px 12px;overflow-y:auto;border-right:1px solid var(--border-1);display:flex;flex-direction:column;gap:16px}
+#splitter{cursor:col-resize;background:transparent}
+#splitter:hover{background:var(--accent-soft)}
+#main{overflow-y:auto;min-height:0;padding:24px 28px;display:flex;flex-direction:column;gap:18px}
+
+.navitem{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:9px;cursor:pointer;color:var(--text-secondary);font-size:13px;transition:background .15s ease}
+.navitem:hover{background:var(--bg-elev-2)}
+.navitem.active{background:var(--accent-soft);color:var(--text-primary)}
+.navitem.active .glyph{color:var(--accent)}
+.glyph{width:16px;text-align:center;color:var(--text-quiet)}
+.railgroup{display:flex;flex-direction:column;gap:4px}
+.railgroup .nano{margin:0 0 4px 4px}
+
+button{font:inherit;color:var(--text-primary);background:var(--bg-elev-2);border:1px solid var(--border-2);border-radius:9px;padding:7px 12px;cursor:pointer;transition:background .15s ease}
+button:hover{background:var(--bg-elev-3)}
+button.primary{background:var(--accent);border-color:transparent;color:oklch(0.13 0.02 280);font-weight:600;box-shadow:0 6px 20px var(--accent-glow)}
+button.primary:hover{filter:brightness(1.08)}
+button:disabled{opacity:.45;cursor:default}
+input[type=text],textarea{font:inherit;color:var(--text-primary);background:var(--bg-elev-1);border:1px solid var(--border-2);border-radius:9px;padding:8px 11px;outline:none;width:100%}
+input[type=text]:focus,textarea:focus{border-color:var(--accent)}
+textarea{font-family:'JetBrains Mono',monospace;font-size:12px;resize:vertical;min-height:140px}
+
+.card{padding:16px 18px}
+.card h2{font-size:13px;font-weight:600;letter-spacing:.3px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.card h2 .glyph{color:var(--accent)}
+.cardhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.cardhead h2{margin:0}
+
+/* stages */
+#stages{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.stage{padding:13px 14px;border-radius:11px;background:var(--bg-elev-1);border:1px solid var(--border-1);cursor:pointer;transition:background .15s ease;position:relative}
+.stage:hover{background:var(--bg-elev-2)}
+.stage.active{border-color:var(--accent);background:var(--accent-soft)}
+.stage .nano{color:var(--accent)}
+.stage .stitle{font-weight:600;font-size:12.5px;margin:5px 0 3px}
+.stage .sdesc{font-size:11px;color:var(--text-tertiary);line-height:1.45}
+.stage .scount{position:absolute;top:10px;right:12px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-secondary)}
+.stage .arrow{position:absolute;right:-9px;top:50%;transform:translateY(-50%);color:var(--text-quiet);z-index:2;font-size:11px}
+@media (max-width:1100px){#stages{grid-template-columns:repeat(2,1fr)}.stage .arrow{display:none}}
+
+/* browser */
+#browser{display:grid;grid-template-columns:minmax(280px,380px) 1fr;gap:14px;min-height:420px}
+#objlist{overflow-y:auto;max-height:560px;min-height:0;display:flex;flex-direction:column;gap:4px;padding-right:4px}
+.objrow{padding:8px 10px;border-radius:9px;cursor:pointer;border:1px solid transparent}
+.objrow:hover{background:var(--bg-elev-2)}
+.objrow.active{background:var(--accent-soft);border-color:var(--accent)}
+.objrow .t{font-size:12.5px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.objrow .s{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-quiet);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#detail{overflow-y:auto;max-height:560px;min-height:0;padding:16px 18px}
+.filterrow{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.fpill{font-family:'JetBrains Mono',monospace;font-size:10.5px;padding:4px 10px;border-radius:999px;border:1px solid var(--border-2);cursor:pointer;color:var(--text-tertiary)}
+.fpill:hover{border-color:var(--accent)}
+.fpill.on{background:var(--accent-soft);border-color:var(--accent);color:var(--text-primary)}
+
+.badge{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:10px;padding:2px 8px;border-radius:999px;border:1px solid var(--border-2);margin-right:6px;vertical-align:middle}
+.kv{display:grid;grid-template-columns:170px 1fr;gap:4px 14px;font-size:12.5px}
+.kv .k{color:var(--text-quiet);font-family:'JetBrains Mono',monospace;font-size:11px;padding-top:1px}
+.kv .v{color:var(--text-secondary);word-break:break-word}
+.stmt{border:1px solid var(--border-1);border-radius:10px;padding:12px 14px;margin:10px 0;background:var(--bg-elev-1)}
+.stmt .prose{margin:8px 0;color:var(--text-primary);font-size:13px}
+.paramtok{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:var(--accent);background:var(--accent-soft);border-radius:5px;padding:0 5px}
+.facetbox{border:1px solid var(--border-1);border-left:3px solid var(--accent);border-radius:10px;padding:10px 13px;margin:8px 0;background:oklch(0.7 0.18 300 / 0.04)}
+.annbox{border:1px dashed var(--border-2);border-radius:10px;padding:10px 13px;margin:8px 0;color:var(--text-quiet)}
+.sectionlabel{margin:14px 0 6px}
+.reflink{color:var(--accent);cursor:pointer;text-decoration:none;border-bottom:1px dotted var(--accent-glow)}
+.reflink.dead{color:var(--text-quiet);border-bottom:none;cursor:default}
+details{margin:6px 0}
+details summary{cursor:pointer;color:var(--text-tertiary);font-size:12px}
+pre.raw{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-tertiary);background:var(--bg-elev-1);border:1px solid var(--border-1);border-radius:9px;padding:12px;overflow:auto;max-height:340px}
+
+/* stats */
+#statsgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.statcell{padding:12px 14px;border:1px solid var(--border-1);border-radius:10px;background:var(--bg-elev-1)}
+.hbar-row{display:grid;grid-template-columns:120px 1fr 34px;gap:8px;align-items:center;margin:5px 0}
+.hbar-label{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--text-tertiary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hbar-track{height:8px;background:var(--bg-elev-2);border-radius:4px;overflow:hidden}
+.hbar-fill{height:100%;border-radius:4px}
+.hbar-value{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-secondary);text-align:right}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px}
+.legend .li{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--text-tertiary)}
+.dot{width:9px;height:9px;border-radius:50%}
+
+/* progress + log */
+.progress-track{height:2px;background:var(--border-1);overflow:hidden;border-radius:1px;margin-top:8px}
+.progress-fill{height:100%;background:var(--accent);width:0%;transition:width .2s ease}
+.progress-fill.done{background:var(--green)}
+#logwrap{border-top:1px solid var(--border-1);background:var(--bg-elev-1);backdrop-filter:blur(20px);display:flex;flex-direction:column;min-height:0}
+#loghead{display:flex;align-items:center;gap:12px;padding:8px 16px;border-bottom:1px solid var(--border-1)}
+#log{flex:1;overflow-y:auto;padding:8px 16px;font-family:'JetBrains Mono',monospace;font-size:11px;line-height:1.7}
+.l-info{color:var(--blue)} .l-ok{color:var(--green)} .l-warn{color:var(--amber)} .l-err{color:var(--red)} .l-debug{color:var(--text-quiet)}
+#log .ts{color:var(--text-quiet);margin-right:8px}
+.hidden{display:none !important}
+.hint{font-size:11.5px;color:var(--text-quiet);line-height:1.5}
+.droptarget{outline:2px dashed var(--accent);outline-offset:-6px}
+svg text{font-family:'JetBrains Mono',monospace}
+</style>
+</head>
+<body>
+<div style="position:fixed;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,oklch(0.4 0.18 300/.5),transparent 70%);top:-200px;left:-100px;filter:blur(60px);pointer-events:none;z-index:0"></div>
+<div style="position:fixed;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,oklch(0.4 0.16 240/.4),transparent 70%);bottom:-300px;right:-200px;filter:blur(80px);pointer-events:none;z-index:0"></div>
+<div style="position:fixed;inset:0;opacity:0.03;pointer-events:none;z-index:0;background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22><filter id=%22n%22><feTurbulence baseFrequency=%220.9%22/></filter><rect width=%22100%22 height=%22100%22 filter=%22url(%23n)%22/></svg>')"></div>
+
+<div id="app">
+  <div id="topbar">
+    <div class="brand">◈ Semantic Core <span>Bundle Reader</span></div>
+    <div class="pill">OSCAL SEMANTIC CORE</div>
+    <div class="pill" id="pill-bundle">no bundle loaded</div>
+    <div class="pill hidden" id="pill-verify"></div>
+    <div style="flex:1"></div>
+    <div class="pill">v1.0.0 · build 2026-07-21</div>
+  </div>
+
+  <div id="mid">
+    <div id="rail">
+      <div class="railgroup">
+        <div class="nano">Load</div>
+        <button class="primary" id="btn-folder">⤒ Open bundle folder…</button>
+        <input type="file" id="folderpick" webkitdirectory multiple class="hidden">
+        <input type="file" id="filepick" accept=".json" multiple class="hidden">
+        <button id="btn-files">◇ Open JSON file(s)…</button>
+        <button id="btn-paste">✎ Paste an object…</button>
+        <div class="hint" style="margin-top:6px">or drop a bundle folder / JSON files anywhere on this page</div>
+      </div>
+      <div class="railgroup">
+        <div class="nano">Views</div>
+        <div class="navitem active" data-view="overview"><span class="glyph">◐</span>Overview</div>
+        <div class="navitem" data-view="stages"><span class="glyph">◬</span>Stages</div>
+        <div class="navitem" data-view="browser"><span class="glyph">⌕</span>Object browser</div>
+        <div class="navitem" data-view="stats"><span class="glyph">▣</span>Statistics</div>
+        <div class="navitem" data-view="legend"><span class="glyph">⬡</span>How to read this</div>
+      </div>
+      <div class="railgroup">
+        <div class="nano">Integrity</div>
+        <button id="btn-verify" disabled>◉ Verify all digests</button>
+        <div class="hint">Recomputes both SHA-256 digests of every object in the browser — package (bytes) and semantic (canonical form minus annotations) — against the manifest.</div>
+        <div class="progress-track"><div class="progress-fill" id="verifybar"></div></div>
+      </div>
+    </div>
+    <div id="splitter"></div>
+
+    <div id="main">
+      <!-- OVERVIEW -->
+      <div class="glass card" id="view-overview">
+        <h2><span class="glyph">◐</span>Overview</h2>
+        <div id="ov-empty">
+          <p style="max-width:66ch;color:var(--text-secondary)">
+            This is a reader for <b>OSCAL Semantic Core bundles</b> — the file format in which
+            compliance frameworks (BSI Grundschutz++, FedRAMP CR26, the ACSC ISM, CIS, CyFun, C5 …)
+            are represented as a <b>graph of nine shallow, globally identified objects</b> instead of
+            eight nested document models. A bundle is a folder: one <span class="mono">content-manifest.json</span>
+            (the sealed table of contents, with two integrity digests per object) plus an
+            <span class="mono">objects/</span> tree of small JSON files.
+          </p>
+          <p style="margin-top:10px;max-width:66ch;color:var(--text-secondary)">
+            Open a bundle folder (e.g. <span class="mono">converted_examples/DE.C5/c5-core-bundle</span>)
+            with the button on the left — everything runs locally in your browser, nothing is uploaded.
+            Then walk the <b>Stages</b>, browse objects, and verify the cryptographic digests yourself.
+          </p>
+        </div>
+        <div id="ov-data" class="hidden">
+          <div class="kv" id="ov-kv"></div>
+          <div class="nano sectionlabel">Pinned facet schemas</div>
+          <div id="ov-schemas" style="font-size:12px;color:var(--text-tertiary)"></div>
+        </div>
+      </div>
+
+      <!-- STAGES -->
+      <div class="glass card" id="view-stages">
+        <h2><span class="glyph">◬</span>The five stages of the compliance graph</h2>
+        <p class="hint" style="max-width:80ch;margin-bottom:12px">
+          Every document of the old world — catalog, profile, SSP, assessment plan, POA&amp;M — decomposes into
+          objects that belong to one of five stages. Documents become <i>renderings</i> of this graph.
+          Click a stage to browse its objects in this bundle.
+        </p>
+        <div id="stages"></div>
+        <div id="stage-detail" style="margin-top:14px" class="hint"></div>
+      </div>
+
+      <!-- BROWSER -->
+      <div class="glass card" id="view-browser">
+        <div class="cardhead">
+          <h2><span class="glyph">⌕</span>Object browser</h2>
+          <input type="text" id="search" placeholder="search id · label · title…" style="max-width:300px">
+        </div>
+        <div class="filterrow" id="typefilters"></div>
+        <div id="browser">
+          <div id="objlist" class="hint">Load a bundle to browse its objects.</div>
+          <div id="detail" class="glass"><div class="hint">Select an object on the left — or paste one via the rail — and it is rendered here for humans: kernel fields plain, <span style="color:var(--accent)">facets tinted violet</span> (registered extensions with declared semantics), <span style="border:1px dashed var(--border-2);border-radius:4px;padding:0 4px">annotations dashed</span> (chrome — never part of the signed meaning).</div></div>
+        </div>
+      </div>
+
+      <!-- STATS -->
+      <div class="glass card hidden" id="view-stats">
+        <h2><span class="glyph">▣</span>Statistics</h2>
+        <div id="statsgrid"></div>
+      </div>
+
+      <!-- LEGEND -->
+      <div class="glass card" id="view-legend">
+        <h2><span class="glyph">⬡</span>How to read a Semantic Core object</h2>
+        <div style="display:grid;grid-template-columns:1fr 300px;gap:20px">
+          <div style="font-size:12.5px;color:var(--text-secondary);max-width:70ch">
+            <p><b>Three layers, strictly separated.</b> Every object is built from the same三 layers:</p>
+            <p style="margin-top:8px"><b>1 · Kernel</b> — the fields every framework was <i>measured</i> to need:
+            identity (<span class="mono">id</span> — a global URI, compared as a string, never fetched),
+            <span class="mono">version</span>, <span class="mono">lifecycle</span>, statements with a typed
+            binding force (<i>modality</i>), obligated parties, typed parameters (with display
+            <span class="mono">label</span> and advisory <span class="mono">default</span>), membership,
+            aliases, relations.</p>
+            <p style="margin-top:8px"><b>2 · Facets</b> — registered, schema-pinned extensions
+            (<span class="mono">…facet/statement-grammar@1</span> etc.). Each declares which computations it may
+            change; a tool that cannot handle a semantics-bearing facet must <b>stop</b>, never guess.
+            Per-clause payloads are keyed <span class="mono">by-statement</span>.</p>
+            <p style="margin-top:8px"><b>3 · Annotations</b> — rendering chrome. Digest-excluded, strippable,
+            invisible to compliance.</p>
+            <p style="margin-top:8px"><b>Two digests</b> seal each object in the manifest:
+            the <b>package digest</b> binds the delivered bytes; the <b>semantic digest</b> binds the canonical
+            meaning (annotations removed). Signatures therefore survive legitimate repackaging — and tampering
+            with meaning has nowhere to hide. Use <i>Verify all digests</i> to check this bundle yourself.</p>
+            <p style="margin-top:8px"><b>The modality lattice</b> (right) orders binding force. Upward moves are
+            free tightening; downward or cross-branch moves are weakenings that require an audited
+            <b>Deviation</b> record — unless the tailoring authority is the framework owner itself.</p>
+          </div>
+          <div>
+            <div class="nano" style="margin-bottom:6px">Modality lattice</div>
+            <svg viewBox="0 0 300 240" width="100%" id="lattice"></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="logwrap">
+    <div id="loghead">
+      <span class="nano">Console</span>
+      <span class="nano" id="logcount">0 lines</span>
+      <div style="flex:1"></div>
+      <label class="hint" style="display:flex;align-items:center;gap:6px"><input type="checkbox" id="autoscroll" checked>autoscroll</label>
+      <button id="btn-clearlog" style="padding:3px 10px;font-size:11px">clear</button>
+    </div>
+    <div id="log"></div>
+  </div>
+</div>
+
+<script>
+"use strict";
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+/* ---------- log ---------- */
+const l = (() => {
+  let n = 0;
+  const write = (cls, msg) => {
+    n++;
+    const t = new Date();
+    const ts = t.toTimeString().slice(0,8) + "." + String(t.getMilliseconds()).padStart(3,"0");
+    const div = document.createElement("div");
+    div.className = "l-" + cls;
+    div.innerHTML = `<span class="ts">${ts}</span>${esc(msg)}`;
+    $("log").appendChild(div);
+    $("logcount").textContent = n + " lines";
+    if ($("autoscroll").checked) $("log").scrollTop = $("log").scrollHeight;
+  };
+  return { info: m => write("info", m), ok: m => write("ok", m), warn: m => write("warn", m),
+           err: m => write("err", m), debug: m => write("debug", m) };
+})();
+$("btn-clearlog").onclick = () => { $("log").innerHTML = ""; $("logcount").textContent = "0 lines"; };
+
+/* ---------- constants ---------- */
+const TYPES = {
+  requirement:   { glyph:"◇", color:"oklch(0.7 0.18 300)",  what:"One requirement of a framework, holding its clause layer: statements[] with modality, obligated parties, parameters and language-tagged prose." },
+  requirementSet:{ glyph:"▣", color:"oklch(0.70 0.15 240)", what:"Membership: taxonomies, chapters, baselines and profiles are all Sets of refs — nesting Sets is the only hierarchy mechanism." },
+  tailoring:     { glyph:"◬", color:"oklch(0.80 0.15 80)",  what:"Selection plus identity-addressed change operations. Weakening needs a Deviation record — unless the authority itself publishes the tailoring." },
+  mapping:       { glyph:"⇄", color:"oklch(0.75 0.14 190)", what:"A typed crosswalk claim between two requirements, with relationship code, confidence grade and provenance — contradictory mappings may coexist." },
+  component:     { glyph:"⬡", color:"oklch(0.75 0.18 145)", what:"A system, service or product with capabilities and identified authorizations — what a vendor claims." },
+  implementation:{ glyph:"◈", color:"oklch(0.75 0.18 145)", what:"The edge that says: this component satisfies this requirement, with responsibility split per clause and inheritance that names its authorization basis." },
+  assessment:    { glyph:"◉", color:"oklch(0.65 0.2 25)",   what:"An assessment run: subjects, method, performer, result." },
+  finding:       { glyph:"◉", color:"oklch(0.65 0.2 25)",   what:"A finding against a requirement (down to the statement), with states, deadline-bearing actions and Deviations as the audited escape." },
+  attestation:   { glyph:"✦", color:"oklch(0.95 0.005 280)",what:"The signature layer: semantic digests of the subjects + the manifest digest + the pinned rendering — bi-modal verification (Full vs Semantic Match)." },
+  manifest:      { glyph:"≡", color:"oklch(0.55 0.02 280)", what:"The sealed table of contents: every object with both digests, every facet schema pinned to an exact version and digest." },
+};
+const STAGES = [
+  { key:"author",   label:"1 · Author",    types:["requirement","requirementSet"],
+    desc:"An authority writes requirements and organizes them into Sets — taxonomy and baselines are the same mechanism.",
+    long:"The catalog stage. Requirements carry their clauses as statements[] — each with a typed binding force (the modality lattice), the parties it binds, typed parameters (label + advisory default), and language-tagged prose. RequirementSets carry every membership need: chapter trees, classification baselines, implementation groups. What OSCAL 1.x did with catalogs + profiles-as-selection, this stage does with two object types." },
+  { key:"tailor",   label:"2 · Tailor",    types:["tailoring"],
+    desc:"Anyone scopes and adapts published requirements — auditable, identity-addressed, never by copy.",
+    long:"A Tailoring selects (by Set or predicate), excludes (selection is never weakening), and applies a closed set of eight operations addressed by requirement + statement id. Weakening at consumer tier must carry a Deviation; an authority tailoring its own publication owes none — publishing variance is not deviating from oneself. Two operations on one target in one Tailoring is an error: overrides happen by chaining, never silently." },
+  { key:"map",      label:"3 · Map",       types:["mapping"],
+    desc:"Crosswalks between frameworks become first-class objects with provenance and confidence.",
+    long:"Mappings connect requirements across frameworks (IR 8477/OLIR codes: equal, subset-of, superset-of, intersects, supports, conflicts — plus the stdlib extension supplements). Statement-level scoping gives clause precision. Because every Mapping names its author and confidence, contradictory claims from different parties coexist — consumers choose whose crosswalk to trust, exactly as they choose catalogs." },
+  { key:"implement",label:"4 · Implement", types:["component","implementation"],
+    desc:"Systems declare what they are; Implementation edges declare who satisfies which clause, and on what basis.",
+    long:"Components (systems, services, software, policies) carry capabilities and identified authorizations. Implementation edges bind component to requirement with clause-level responsibility (provider / customer / shared / inherited) — and every inherited edge must name the authorization it leans on (basis-ref), so multi-tier supply chains verify link by link. This stage replaces both the component-definition and the SSP's implemented-requirements." },
+  { key:"assess",   label:"5 · Assess & Attest", types:["assessment","finding","attestation"],
+    desc:"Results, findings with deadlines and audited deviations — then signatures that survive repackaging.",
+    long:"Assessments record method and result; Findings track states with deadline-bearing actions and Deviations as the single audited weakening channel (one state machine — investigating → pending → approved | withdrawn). Attestations bind three things: the semantic digests of what was approved, the manifest digest of the package, and the pinned rendering template — so a signature proves meaning even when bytes were legitimately repackaged. This stage replaces AP, AR and POA&M." },
+];
+const MODALITY_COLORS = {
+  "must":"oklch(0.7 0.18 300)", "should":"oklch(0.70 0.15 240)", "may":"oklch(0.75 0.18 145)",
+  "may-only":"oklch(0.75 0.14 190)", "should-not":"oklch(0.80 0.15 80)", "must-not":"oklch(0.65 0.2 25)",
+  "unspecified":"oklch(0.55 0.02 280)",
+};
+const MODALITY_EXPLAIN = {
+  "must":"binding obligation (MUSS / shall)", "should":"expected unless justified (SOLLTE)",
+  "may":"explicit permission (KANN)", "may-only":"permitted exclusively under the stated condition (DARF NUR)",
+  "should-not":"discouraged (SOLLTE NICHT)", "must-not":"prohibition (DARF NICHT)",
+  "unspecified":"no modal verb in source — binding force rides baseline membership (declarative frameworks: ISM, CIS, C5)",
+};
+
+/* ---------- state ---------- */
+const state = {
+  files: new Map(),        // relpath -> {text, bytes}
+  manifest: null,
+  manifestByPath: new Map(),
+  objects: new Map(),      // id -> {obj, path, type, entry}
+  order: [],               // ids in manifest order
+  filterTypes: new Set(),
+  search: "",
+  selected: null,
+  verify: null,            // id -> {pkg:bool, sem:bool}
+};
+
+/* ---------- type inference (mirrors validate_core.py) ---------- */
+function inferType(o) {
+  if (!o || typeof o !== "object") return null;
+  if ("manifest-version" in o) return "manifest";
+  if ("statements" in o) return "requirement";
+  if ("selects" in o) return "tailoring";
+  if ("source-ref" in o && "target-ref" in o) return "mapping";
+  if ("kind" in o) return "component";
+  if ("component-ref" in o && "requirement-ref" in o && "responsibility" in o) return "implementation";
+  if ("subject-refs" in o && "method" in o) return "assessment";
+  if ("assessment-ref" in o && "state" in o) return "finding";
+  if ("subject-semantic-digests" in o) return "attestation";
+  if ("members" in o) return "requirementSet";
+  return null;
+}
+
+/* ---------- canonical form + sha256 ---------- */
+function canonical(obj) {
+  const strip = o => {
+    if (Array.isArray(o)) return o.map(strip);
+    if (o && typeof o === "object") {
+      const out = {};
+      for (const k of Object.keys(o).sort()) { if (k !== "__skip__") out[k] = strip(o[k]); }
+      return out;
+    }
+    return o;
+  };
+  const top = {};
+  for (const k of Object.keys(obj)) if (k !== "annotations") top[k] = obj[k];
+  return JSON.stringify(strip(top));
+}
+async function sha256hex(data) {  // data: Uint8Array | string
+  const bytes = typeof data === "string" ? new TextEncoder().encode(data) : data;
+  if (crypto.subtle) {
+    const h = await crypto.subtle.digest("SHA-256", bytes);
+    return [...new Uint8Array(h)].map(b => b.toString(16).padStart(2, "0")).join("");
+  }
+  return sha256Fallback(bytes);
+}
+/* compact pure-JS SHA-256 fallback (file:// without secure context) */
+function sha256Fallback(bytes) {
+  const K = [0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
+  let H = [0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
+  const len = bytes.length, bitLen = len * 8;
+  const padded = new Uint8Array(((len + 8) >> 6 << 6) + 64);
+  padded.set(bytes); padded[len] = 0x80;
+  new DataView(padded.buffer).setUint32(padded.length - 4, bitLen >>> 0);
+  new DataView(padded.buffer).setUint32(padded.length - 8, Math.floor(bitLen / 0x100000000));
+  const w = new Int32Array(64), rr = (x, n) => (x >>> n) | (x << (32 - n));
+  for (let i = 0; i < padded.length; i += 64) {
+    const dv = new DataView(padded.buffer, i, 64);
+    for (let t = 0; t < 16; t++) w[t] = dv.getUint32(t * 4);
+    for (let t = 16; t < 64; t++) {
+      const s0 = rr(w[t-15],7) ^ rr(w[t-15],18) ^ (w[t-15] >>> 3);
+      const s1 = rr(w[t-2],17) ^ rr(w[t-2],19) ^ (w[t-2] >>> 10);
+      w[t] = (w[t-16] + s0 + w[t-7] + s1) | 0;
+    }
+    let [a,b,c,d,e,f,g,h] = H;
+    for (let t = 0; t < 64; t++) {
+      const S1 = rr(e,6) ^ rr(e,11) ^ rr(e,25), ch = (e & f) ^ (~e & g);
+      const t1 = (h + S1 + ch + K[t] + w[t]) | 0;
+      const S0 = rr(a,2) ^ rr(a,13) ^ rr(a,22), maj = (a & b) ^ (a & c) ^ (b & c);
+      const t2 = (S0 + maj) | 0;
+      h=g; g=f; f=e; e=(d+t1)|0; d=c; c=b; b=a; a=(t1+t2)|0;
+    }
+    H = H.map((x, j) => (x + [a,b,c,d,e,f,g,h][j]) | 0);
+  }
+  return H.map(x => (x >>> 0).toString(16).padStart(8, "0")).join("");
+}
+
+/* ---------- loading ---------- */
+async function loadFileList(fileList) {
+  const files = [...fileList].filter(f => f.name.endsWith(".json"));
+  if (!files.length) { l.warn("no .json files in selection"); return; }
+  l.info(`reading ${files.length} json file(s)…`);
+  state.files.clear();
+  for (const f of files) {
+    const rel = (f.webkitRelativePath || f.name).split("/").slice(1).join("/") || f.name;
+    const bytes = new Uint8Array(await f.arrayBuffer());
+    state.files.set(rel, { text: new TextDecoder().decode(bytes), bytes });
+  }
+  indexBundle();
+}
+function indexBundle() {
+  state.objects.clear(); state.order = []; state.manifest = null;
+  state.manifestByPath.clear(); state.verify = null; state.selected = null;
+  let manifestPath = null;
+  for (const p of state.files.keys()) if (p.endsWith("content-manifest.json")) { manifestPath = p; break; }
+  const prefix = manifestPath ? manifestPath.slice(0, -"content-manifest.json".length) : "";
+  if (manifestPath) {
+    try {
+      state.manifest = JSON.parse(state.files.get(manifestPath).text);
+      for (const e of state.manifest.objects || []) state.manifestByPath.set(prefix + e.path, e);
+      l.ok(`manifest: ${state.manifest.objects?.length ?? 0} objects listed, ${state.manifest["facet-schemas"]?.length ?? 0} facet schemas pinned`);
+    } catch (e) { l.err("manifest parse failed: " + e.message); }
+  } else l.warn("no content-manifest.json found — loading loose objects without integrity data");
+  let parsed = 0, failed = 0, unknown = 0;
+  for (const [p, f] of state.files) {
+    if (p.endsWith("content-manifest.json")) continue;
+    if (/(^|\/)schemas\//.test(p)) continue;
+    let obj;
+    try { obj = JSON.parse(f.text); } catch (e) { l.err(`parse ${p}: ${e.message}`); failed++; continue; }
+    const t = inferType(obj);
+    if (!t || t === "manifest") { unknown++; l.debug(`skipped ${p}: not a kernel object`); continue; }
+    const id = obj.id || p;
+    state.objects.set(id, { obj, path: p, type: t, entry: state.manifestByPath.get(p) || null });
+    parsed++;
+  }
+  const entries = state.manifest?.objects || null;
+  state.order = entries
+    ? entries.map(e => { const rec = [...state.objects.values()].find(r => r.path === prefix + e.path); return rec?.obj.id; }).filter(Boolean)
+    : [...state.objects.keys()];
+  for (const id of state.objects.keys()) if (!state.order.includes(id)) state.order.push(id);
+  if (entries) {
+    const missing = entries.length - state.order.length;
+    if (missing > 0) l.warn(`${missing} manifest entries have no file in the selection`);
+  }
+  l.ok(`indexed ${parsed} objects (${failed} parse failures, ${unknown} non-kernel files skipped)`);
+  const counts = typeCounts();
+  l.info("types: " + Object.entries(counts).map(([k, v]) => `${k} ${v}`).join(" · "));
+  $("pill-bundle").textContent = (state.manifest?.provenance?.source || "bundle") + " · " + parsed + " objects";
+  $("pill-bundle").classList.add("on");
+  $("btn-verify").disabled = !state.manifest || !state.objects.size;
+  renderAll();
+  setView("stages");
+}
+function typeCounts() {
+  const c = {};
+  for (const r of state.objects.values()) c[r.type] = (c[r.type] || 0) + 1;
+  return c;
+}
+
+/* ---------- rendering: overview ---------- */
+function renderOverview() {
+  const has = state.objects.size > 0;
+  $("ov-empty").classList.toggle("hidden", has);
+  $("ov-data").classList.toggle("hidden", !has);
+  if (!has) return;
+  const p = state.manifest?.provenance || {};
+  const rows = [];
+  const add = (k, v) => v && rows.push(`<div class="k">${esc(k)}</div><div class="v">${esc(v)}</div>`);
+  if (p.sources) p.sources.forEach(s => add("source", `${s.title} · v${s.version} (OSCAL ${s["oscal-version"] || "—"})`));
+  else add("source", p.source);
+  add("source version", p["source-version"]);
+  add("source oscal", p["source-oscal-version"]);
+  add("converter", p.converter);
+  add("namespace note", p["namespace-note"]);
+  add("objects", String(state.objects.size));
+  add("manifest entries", state.manifest ? String(state.manifest.objects.length) : "—");
+  $("ov-kv").innerHTML = rows.join("");
+  $("ov-schemas").innerHTML = (state.manifest?.["facet-schemas"] || [])
+    .map(s => `<div class="mono" style="font-size:11px;margin:3px 0">◇ ${esc(s.id)} <span style="color:var(--text-quiet)">@${esc(s["exact-version"])} · ${esc((s.digest || "").slice(0, 23))}…</span></div>`)
+    .join("") || `<span class="hint">none pinned</span>`;
+}
+
+/* ---------- rendering: stages ---------- */
+function renderStages() {
+  const counts = typeCounts();
+  $("stages").innerHTML = STAGES.map((s, i) => {
+    const n = s.types.reduce((a, t) => a + (counts[t] || 0), 0);
+    return `<div class="stage" data-stage="${s.key}">
+      <div class="nano">${esc(s.label)}</div>
+      <div class="scount">${state.objects.size ? n : ""}</div>
+      <div class="stitle">${s.types.map(t => `<span style="color:${TYPES[t].color}">${TYPES[t].glyph}</span> ${t}`).join(" &nbsp;")}</div>
+      <div class="sdesc">${esc(s.desc)}</div>
+      ${i < 4 ? '<div class="arrow">▶</div>' : ""}
+    </div>`;
+  }).join("");
+  document.querySelectorAll(".stage").forEach(el => el.onclick = () => {
+    const s = STAGES.find(x => x.key === el.dataset.stage);
+    document.querySelectorAll(".stage").forEach(e => e.classList.toggle("active", e === el));
+    $("stage-detail").innerHTML =
+      `<div class="glass" style="padding:12px 16px"><b style="color:var(--text-secondary)">${esc(s.label)}</b><br>${esc(s.long)}<br><br>` +
+      s.types.map(t => `<span class="badge" style="border-color:${TYPES[t].color};color:${TYPES[t].color}">${TYPES[t].glyph} ${t}</span> <span class="hint">${esc(TYPES[t].what)}</span><br>`).join("") +
+      (state.objects.size ? `<br><button class="primary" id="stage-browse">⌕ Browse these objects</button>` : "") + `</div>`;
+    const b = $("stage-browse");
+    if (b) b.onclick = () => { state.filterTypes = new Set(s.types); state.search = ""; $("search").value = ""; renderBrowser(); setView("browser"); };
+  });
+}
+
+/* ---------- rendering: browser ---------- */
+function renderFilters() {
+  const counts = typeCounts();
+  $("typefilters").innerHTML = Object.keys(TYPES).filter(t => t !== "manifest" && counts[t])
+    .map(t => `<span class="fpill ${state.filterTypes.has(t) ? "on" : ""}" data-t="${t}" style="${state.filterTypes.has(t) ? "" : ""}">${TYPES[t].glyph} ${t} · ${counts[t]}</span>`)
+    .join("") || `<span class="hint">no objects loaded</span>`;
+  document.querySelectorAll(".fpill").forEach(el => el.onclick = () => {
+    const t = el.dataset.t;
+    state.filterTypes.has(t) ? state.filterTypes.delete(t) : state.filterTypes.add(t);
+    renderBrowser();
+  });
+}
+function visibleIds() {
+  const q = state.search.toLowerCase();
+  return state.order.filter(id => {
+    const r = state.objects.get(id);
+    if (!r) return false;
+    if (state.filterTypes.size && !state.filterTypes.has(r.type)) return false;
+    if (!q) return true;
+    return id.toLowerCase().includes(q) ||
+      (r.obj.label || "").toLowerCase().includes(q) ||
+      (r.obj.title || "").toLowerCase().includes(q);
+  });
+}
+function renderList() {
+  const ids = visibleIds();
+  const cap = 400;
+  const rows = ids.slice(0, cap).map(id => {
+    const r = state.objects.get(id);
+    const v = state.verify?.get(id);
+    const vmark = v ? (v.pkg && v.sem ? ` <span style="color:var(--green)">✓</span>` : ` <span style="color:var(--red)">✗</span>`) : "";
+    return `<div class="objrow ${state.selected === id ? "active" : ""}" data-id="${esc(id)}">
+      <div class="t"><span style="color:${TYPES[r.type].color}">${TYPES[r.type].glyph}</span> ${esc(r.obj.label || r.obj.title || id.split("/").pop())}${vmark}</div>
+      <div class="s">${esc(id)}</div></div>`;
+  }).join("");
+  $("objlist").innerHTML = (rows || `<div class="hint">nothing matches</div>`) +
+    (ids.length > cap ? `<div class="hint" style="padding:8px">…and ${ids.length - cap} more — narrow the search</div>` : "");
+  document.querySelectorAll(".objrow").forEach(el => el.onclick = () => { openObject(el.dataset.id); });
+}
+function renderBrowser() { renderFilters(); renderList(); }
+
+function refLink(uri) {
+  const known = state.objects.has(uri);
+  return known
+    ? `<a class="reflink" data-ref="${esc(uri)}">${esc(uri)}</a>`
+    : `<span class="reflink dead" title="not in this bundle">${esc(uri)}</span>`;
+}
+function wireRefs(root) {
+  root.querySelectorAll("[data-ref]").forEach(a => a.onclick = () => openObject(a.dataset.ref));
+}
+function proseHtml(txt) {
+  return esc(txt).replace(/\{param:([^}]+)\}/g, (_, p) => `<span class="paramtok">{param:${esc(p)}}</span>`);
+}
+function langBlocks(map, cls) {
+  return Object.entries(map || {}).map(([lang, txt]) =>
+    `<div class="${cls}"><span class="badge">${esc(lang)}</span>${Array.isArray(txt) ? "<ul style='margin-left:18px'>" + txt.map(x => `<li>${proseHtml(x)}</li>`).join("") + "</ul>" : proseHtml(txt)}</div>`).join("");
+}
+function kvRow(k, vHtml) { return `<div class="k">${esc(k)}</div><div class="v">${vHtml}</div>`; }
+function prettyVal(v, depth = 0) {
+  if (v === null || v === undefined) return `<span class="hint">—</span>`;
+  if (typeof v !== "object") return esc(String(v));
+  if (Array.isArray(v)) {
+    if (!v.length) return `<span class="hint">[]</span>`;
+    if (v.every(x => typeof x !== "object")) return v.map(x => `<span class="badge">${esc(String(x))}</span>`).join(" ");
+    return v.map(x => `<div style="margin:3px 0 3px ${depth ? 10 : 0}px;border-left:2px solid var(--border-2);padding-left:8px">${prettyVal(x, depth + 1)}</div>`).join("");
+  }
+  const langish = Object.keys(v).length && Object.keys(v).every(k => /^[a-z]{2,3}(-|$)/i.test(k) && (typeof v[k] === "string" || Array.isArray(v[k])));
+  if (langish) return langBlocks(v, "");
+  return `<div class="kv" style="grid-template-columns:${depth ? 130 : 150}px 1fr">` +
+    Object.entries(v).map(([k, x]) => kvRow(k, prettyVal(x, depth + 1))).join("") + `</div>`;
+}
+function modBadge(m) {
+  const c = MODALITY_COLORS[m] || "var(--text-quiet)";
+  return `<span class="badge" style="border-color:${c};color:${c}" title="${esc(MODALITY_EXPLAIN[m] || "")}">${esc(m)}</span>`;
+}
+function digestRow(r) {
+  if (!r.entry) return "";
+  const v = state.verify?.get(r.obj.id);
+  const mark = t => v ? (v[t] ? `<span style="color:var(--green)"> ✓ verified</span>` : `<span style="color:var(--red)"> ✗ MISMATCH</span>`) : "";
+  return `<div class="nano sectionlabel">Integrity (from manifest)</div><div class="kv">
+    ${kvRow("package-digest", `<span class="mono" style="font-size:10.5px">${esc(r.entry["package-digest"])}</span>${mark("pkg")}`)}
+    ${kvRow("semantic-digest", `<span class="mono" style="font-size:10.5px">${esc(r.entry["semantic-digest"])}</span>${mark("sem")}`)}
+  </div>`;
+}
+function commonHead(r) {
+  const o = r.obj, t = TYPES[r.type];
+  return `<div style="margin-bottom:10px">
+    <span class="badge" style="border-color:${t.color};color:${t.color}">${t.glyph} ${r.type}</span>
+    <span class="badge">${esc(o.lifecycle || "?")}</span>
+    ${o.label ? `<span class="badge">${esc(o.label)}</span>` : ""}
+    <span class="badge" title="object version">v ${esc(o.version || "?")}</span>
+  </div>
+  <h3 style="font-size:15px;margin-bottom:2px">${esc(o.title || o.label || o.id)}</h3>
+  <div class="mono" style="font-size:10.5px;color:var(--text-quiet);word-break:break-all">${esc(o.id)}</div>
+  <div class="hint" style="margin-top:6px">${esc(t.what)}</div>`;
+}
+function facetsHtml(o) {
+  if (!o.facets) return "";
+  return `<div class="nano sectionlabel">Facets — registered extensions (schema-pinned; declared semantics)</div>` +
+    Object.entries(o.facets).map(([fid, payload]) => {
+      let inner;
+      if (payload && payload["by-statement"]) {
+        inner = `<div class="hint" style="margin-bottom:4px">keyed by-statement — each key MUST name a statement of this object</div>` +
+          Object.entries(payload["by-statement"]).map(([sid, pv]) =>
+            `<div style="margin:6px 0"><span class="badge">stmt ${esc(sid)}</span>${prettyVal(pv, 1)}</div>`).join("");
+      } else inner = prettyVal(payload, 1);
+      return `<div class="facetbox"><div class="mono" style="font-size:10.5px;color:var(--accent);margin-bottom:6px">${esc(fid)}</div>${inner}</div>`;
+    }).join("");
+}
+function annotationsHtml(o) {
+  if (!o.annotations) return "";
+  return `<div class="nano sectionlabel">Annotations — chrome (digest-excluded, strippable)</div>
+    <div class="annbox">${prettyVal(o.annotations, 1)}</div>`;
+}
+function relationsHtml(o) {
+  if (!o.relations) return "";
+  return `<div class="nano sectionlabel">Relations</div><div class="kv">` +
+    o.relations.map(rel => kvRow(rel.type, refLink(rel.ref))).join("") + `</div>`;
+}
+function aliasesHtml(o) {
+  if (!o.aliases) return "";
+  return `<div class="nano sectionlabel">Aliases</div><div>` +
+    o.aliases.map(a => `<span class="badge" title="${esc(a.scheme)}">${esc(a.scheme)}: ${esc(a.value)}</span>`).join(" ") + `</div>`;
+}
+function renderRequirement(r) {
+  const o = r.obj;
+  return o.statements.map(s => {
+    const params = (s.parameters || []).map(p => {
+      const bits = [`type ${p.type}`];
+      if (p.label) bits.push(`label “${p.label}”`);
+      if (p.default !== undefined) bits.push(`default “${p.default}” (advisory — never silently applied)`);
+      if (p.tightening) bits.push(`tightening: ${p.tightening}`);
+      if (p.unit) bits.push(`${p.num} ${p.unit}`);
+      if (p.choices) bits.push("choices: " + p.choices.map(c => c.value).join(" | "));
+      return `<span class="badge" title="${esc(bits.join(" · "))}">⚙ ${esc(p.name)}</span>`;
+    }).join(" ");
+    return `<div class="stmt">
+      <div><span class="badge">stmt ${esc(s.id)}</span>${modBadge(s.modality)}
+        ${(s["obligated-parties"] || []).map(p => `<span class="badge" title="obligated party">◈ ${esc(p.split("/").pop())}</span>`).join("")}
+        ${params}</div>
+      ${langBlocks(s.prose, "prose")}
+    </div>`;
+  }).join("") + (o.deviations ? `<div class="nano sectionlabel">Deviations</div>${prettyVal(o.deviations)}` : "");
+}
+function renderSet(r) {
+  const mem = r.obj.members || [];
+  const rows = mem.slice(0, 300).map(m => {
+    const target = state.objects.get(m.ref);
+    const label = target ? (target.obj.label || target.obj.title || m.ref) : m.ref;
+    const glyph = target ? `<span style="color:${TYPES[target.type].color}">${TYPES[target.type].glyph}</span> ` : "";
+    return `<div style="display:flex;gap:10px;align-items:baseline;margin:3px 0">
+      <span class="mono" style="font-size:10px;color:var(--text-quiet);width:44px;text-align:right">${m.sequence ?? ""}</span>
+      <span>${glyph}${target ? `<a class="reflink" data-ref="${esc(m.ref)}">${esc(label)}</a>` : `<span class="reflink dead">${esc(m.ref)}</span>`}</span></div>`;
+  }).join("");
+  return `<div class="nano sectionlabel">Members (${mem.length})${mem.length > 300 ? " — first 300 shown" : ""}</div>${rows || '<div class="hint">empty (structurally required, may legally be empty)</div>'}`;
+}
+function renderTailoring(r) {
+  const o = r.obj;
+  const sel = (o.selects || []).map(s => s["set-ref"] ? refLink(s["set-ref"]) : `<span class="mono">${esc(JSON.stringify(s.predicate))}</span>`).join("<br>");
+  const ops = (o.operations || []).map(op => `<div class="stmt">
+      <span class="badge" style="border-color:var(--amber);color:var(--amber)">${esc(op.op)}</span>
+      ${op["statement-id"] ? `<span class="badge">stmt ${esc(op["statement-id"])}</span>` : ""}
+      ${op.modality ? modBadge(op.modality) : ""}
+      ${op.parameter ? `<span class="badge">⚙ ${esc(op.parameter)} = ${esc(JSON.stringify(op.value))}</span>` : ""}
+      ${op.deviation ? `<span class="badge" style="border-color:var(--red);color:var(--red)">carries Deviation</span>` : ""}
+      <div style="margin-top:5px">${refLink(op["requirement-ref"])}</div>
+    </div>`).join("");
+  return `<div class="nano sectionlabel">Selects</div><div class="v">${sel || "—"}</div>
+    ${o.excludes ? `<div class="nano sectionlabel">Excludes (selection — never a weakening)</div>${prettyVal(o.excludes)}` : ""}
+    <div class="nano sectionlabel">Operations (${(o.operations || []).length}) — ordered, identity-addressed</div>${ops || '<div class="hint">none</div>'}`;
+}
+function renderMapping(r) {
+  const o = r.obj;
+  return `<div class="kv">
+    ${kvRow("source", refLink(o["source-ref"]) + (o["source-scope"] ? " " + o["source-scope"].map(s => `<span class="badge">${esc(s)}</span>`).join("") : ""))}
+    ${kvRow("relationship", `<span class="badge" style="border-color:var(--teal);color:var(--teal)">${esc(o.relationship)}</span> <span class="hint">${o.relationship === "supports" ? "honest weak claim — untyped imports never flattered into equal" : ""}</span>`)}
+    ${kvRow("target", refLink(o["target-ref"]) + (o["target-scope"] ? " " + o["target-scope"].map(s => `<span class="badge">${esc(s)}</span>`).join("") : ""))}
+    ${kvRow("direction", esc(o.direction))}
+    ${kvRow("confidence", `<span class="badge">${esc(o.confidence)}</span>`)}
+    ${o.rationale ? kvRow("rationale", esc(o.rationale)) : ""}
+    ${kvRow("provenance", `${esc(o.provenance?.["author-ref"] || "")} · ${esc(o.provenance?.date || "")} <span class="hint">— whose claim this is</span>`)}
+  </div>`;
+}
+function renderGeneric(r) {
+  const skip = new Set(["id","version","label","title","lifecycle","aliases","relations","facets","annotations","statements","members"]);
+  const rest = Object.fromEntries(Object.entries(r.obj).filter(([k]) => !skip.has(k)));
+  return Object.keys(rest).length ? `<div class="nano sectionlabel">Fields</div>${prettyVal(rest)}` : "";
+}
+function openObject(id) {
+  const r = state.objects.get(id);
+  if (!r) { l.warn("ref not in bundle: " + id); return; }
+  state.selected = id;
+  setView("browser");
+  let body = commonHead(r);
+  if (r.type === "requirement") body += renderRequirement(r);
+  else if (r.type === "requirementSet") body += renderSet(r);
+  else if (r.type === "tailoring") body += renderTailoring(r);
+  else if (r.type === "mapping") body += renderMapping(r);
+  else body += renderGeneric(r);
+  body += aliasesHtml(r.obj) + relationsHtml(r.obj) + facetsHtml(r.obj) + annotationsHtml(r.obj) + digestRow(r);
+  body += `<details style="margin-top:12px"><summary>raw JSON</summary><pre class="raw">${esc(JSON.stringify(r.obj, null, 1))}</pre></details>`;
+  $("detail").innerHTML = body;
+  wireRefs($("detail"));
+  renderList();
+  $("detail").scrollTop = 0;
+}
+
+/* ---------- stats ---------- */
+function donutChart(slices, size = 160, innerRatio = 0.6) {
+  const total = slices.reduce((s, x) => s + x.value, 0);
+  if (!total) return "";
+  const cx = size/2, cy = size/2, r = size/2 - 8, ri = r * innerRatio;
+  let a = -Math.PI/2;
+  const paths = slices.filter(s => s.value > 0).map(s => {
+    const sweep = (s.value / total) * Math.PI * 2 * 0.99999;
+    const a1 = a, a2 = a + sweep; a = a + (s.value / total) * Math.PI * 2;
+    const x1 = cx + r*Math.cos(a1), y1 = cy + r*Math.sin(a1);
+    const x2 = cx + r*Math.cos(a2), y2 = cy + r*Math.sin(a2);
+    const xi1 = cx + ri*Math.cos(a1), yi1 = cy + ri*Math.sin(a1);
+    const xi2 = cx + ri*Math.cos(a2), yi2 = cy + ri*Math.sin(a2);
+    const large = sweep > Math.PI ? 1 : 0;
+    return `<path d="M ${x1} ${y1} A ${r} ${r} 0 ${large} 1 ${x2} ${y2} L ${xi2} ${yi2} A ${ri} ${ri} 0 ${large} 0 ${xi1} ${yi1} Z" fill="${s.color}"><title>${esc(s.label)}: ${s.value}</title></path>`;
+  }).join("");
+  return `<svg viewBox="0 0 ${size} ${size}" width="${size}" height="${size}">${paths}
+    <text x="${cx}" y="${cy-2}" text-anchor="middle" dominant-baseline="central" fill="currentColor" font-size="22" font-weight="600">${total}</text>
+    <text x="${cx}" y="${cy+18}" text-anchor="middle" fill="currentColor" opacity="0.55" font-size="9" letter-spacing="1.5">OBJECTS</text></svg>`;
+}
+function hBarRows(items) {
+  const max = Math.max(1, ...items.map(i => i.value));
+  return items.map(i => `<div class="hbar-row">
+    <div class="hbar-label" title="${esc(i.title || i.label)}">${esc(i.label)}</div>
+    <div class="hbar-track"><div class="hbar-fill" style="width:${(i.value/max)*100}%;background:${i.color}"></div></div>
+    <div class="hbar-value">${i.value}</div></div>`).join("");
+}
+function renderStats() {
+  const grid = $("statsgrid");
+  if (!state.objects.size) { $("view-stats").classList.add("hidden"); return; }
+  $("view-stats").classList.remove("hidden");
+  const counts = typeCounts();
+  const typeSlices = Object.entries(counts).map(([t, v]) => ({ label: t, value: v, color: TYPES[t].color }));
+  const mods = {};
+  let stmts = 0, params = 0, langs = {};
+  for (const r of state.objects.values()) if (r.type === "requirement")
+    for (const s of r.obj.statements) {
+      stmts++; mods[s.modality] = (mods[s.modality] || 0) + 1;
+      params += (s.parameters || []).length;
+      for (const k of Object.keys(s.prose || {})) langs[k] = (langs[k] || 0) + 1;
+    }
+  const life = {};
+  for (const r of state.objects.values()) life[r.obj.lifecycle] = (life[r.obj.lifecycle] || 0) + 1;
+  grid.innerHTML = `
+    <div class="statcell"><div class="nano" style="margin-bottom:8px">Objects by type</div>
+      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap">${donutChart(typeSlices)}
+      <div class="legend" style="flex-direction:column;align-items:flex-start">${typeSlices.map(s =>
+        `<div class="li"><span class="dot" style="background:${s.color}"></span>${s.label} · ${s.value}</div>`).join("")}</div></div></div>
+    <div class="statcell"><div class="nano" style="margin-bottom:8px">Modality of ${stmts} statements — the binding-force signature</div>
+      ${hBarRows(Object.entries(mods).sort((a,b)=>b[1]-a[1]).map(([m,v]) => ({label:m,value:v,color:MODALITY_COLORS[m]||"var(--text-quiet)",title:MODALITY_EXPLAIN[m]})))}
+      <div class="hint" style="margin-top:8px">unspecified is honest, not missing: declarative frameworks bind force via baseline membership.</div></div>
+    <div class="statcell"><div class="nano" style="margin-bottom:8px">Lifecycle · parameters · languages</div>
+      ${hBarRows(Object.entries(life).map(([k,v]) => ({label:k,value:v,color:"var(--blue)"})))}
+      <div class="kv" style="margin-top:10px">${kvRow("typed parameters", String(params))}${kvRow("prose languages", Object.entries(langs).map(([k,v])=>`${k} (${v})`).join(" · ") || "—")}</div></div>`;
+}
+
+/* ---------- lattice svg ---------- */
+function renderLattice() {
+  const N = {
+    unspecified:[150,215], may:[95,155], should:[95,95], must:[95,35],
+    "may-only":[205,110], "should-not":[245,165], "must-not":[245,80],
+  };
+  const E = [["unspecified","may"],["may","should"],["should","must"],["may","may-only"],["unspecified","should-not"],["should-not","must-not"]];
+  const lines = E.map(([a,b]) => `<line x1="${N[a][0]}" y1="${N[a][1]-10}" x2="${N[b][0]}" y2="${N[b][1]+10}" stroke="oklch(0.95 0.005 280 / 0.25)" stroke-width="1.2"/>`).join("");
+  const nodes = Object.entries(N).map(([m,[x,y]]) =>
+    `<g><circle cx="${x}" cy="${y}" r="4" fill="${MODALITY_COLORS[m]}"/>
+     <text x="${x}" y="${y-9}" text-anchor="middle" fill="${MODALITY_COLORS[m]}" font-size="10.5">${m}</text>
+     <title>${esc(MODALITY_EXPLAIN[m])}</title></g>`).join("");
+  $("lattice").innerHTML = lines + nodes +
+    `<text x="12" y="20" fill="oklch(0.55 0.02 280)" font-size="9" letter-spacing="1">▲ UP = TIGHTEN (FREE) · DOWN/ACROSS = WEAKEN (DEVIATION)</text>`;
+}
+
+/* ---------- verify ---------- */
+async function verifyAll() {
+  if (!state.manifest) return;
+  state.verify = new Map();
+  const ids = state.order.filter(id => state.objects.get(id)?.entry);
+  l.info(`verifying ${ids.length} objects — package + semantic digests…`);
+  const t0 = performance.now();
+  let ok = 0, bad = 0, i = 0;
+  for (const id of ids) {
+    const r = state.objects.get(id);
+    const pkg = "sha256:" + await sha256hex(state.files.get(r.path).bytes);
+    const sem = "sha256:" + await sha256hex(canonical(r.obj));
+    const res = { pkg: pkg === r.entry["package-digest"], sem: sem === r.entry["semantic-digest"] };
+    state.verify.set(id, res);
+    if (res.pkg && res.sem) ok++; else { bad++; l.err(`digest mismatch: ${id} (pkg ${res.pkg ? "ok" : "BAD"}, sem ${res.sem ? "ok" : "BAD"})`); }
+    if (++i % 40 === 0) { $("verifybar").style.width = (i / ids.length * 100) + "%"; await new Promise(r => setTimeout(r)); }
+  }
+  $("verifybar").style.width = "100%"; $("verifybar").classList.add("done");
+  setTimeout(() => { $("verifybar").style.width = "0%"; $("verifybar").classList.remove("done"); }, 1200);
+  const ms = Math.round(performance.now() - t0);
+  (bad ? l.err : l.ok)(`digest verification: ${ok} ok, ${bad} mismatches in ${ms}ms`);
+  $("pill-verify").classList.remove("hidden");
+  $("pill-verify").textContent = bad ? `✗ ${bad} digest mismatches` : `✓ ${ok} objects verified`;
+  $("pill-verify").style.color = bad ? "var(--red)" : "var(--green)";
+  renderList();
+  if (state.selected) openObject(state.selected);
+}
+
+/* ---------- views + wiring ---------- */
+function setView(v) {
+  document.querySelectorAll(".navitem").forEach(el => el.classList.toggle("active", el.dataset.view === v));
+  for (const id of ["overview","stages","browser","stats","legend"])
+    $("view-" + id).classList.toggle("hidden", id !== v && !(id === "stats" && v === "stats"));
+  if (v === "stats") renderStats();
+}
+document.querySelectorAll(".navitem").forEach(el => el.onclick = () => setView(el.dataset.view));
+function renderAll() { renderOverview(); renderStages(); renderBrowser(); renderStats(); }
+
+$("btn-folder").onclick = () => $("folderpick").click();
+$("btn-files").onclick = () => $("filepick").click();
+$("folderpick").onchange = e => loadFileList(e.target.files);
+$("filepick").onchange = e => loadFileList(e.target.files);
+$("btn-verify").onclick = verifyAll;
+$("search").oninput = e => { state.search = e.target.value; renderList(); };
+$("btn-paste").onclick = () => {
+  const txt = prompt("Paste one Semantic Core object (JSON):");
+  if (!txt) return;
+  try {
+    const obj = JSON.parse(txt);
+    const t = inferType(obj);
+    if (!t) { l.err("could not infer a kernel type from the pasted object"); return; }
+    const id = obj.id || "pasted:" + Date.now();
+    state.objects.set(id, { obj, path: "(pasted)", type: t, entry: null });
+    if (!state.order.includes(id)) state.order.push(id);
+    l.ok(`pasted object accepted as ${t}: ${id}`);
+    renderAll(); openObject(id);
+  } catch (e) { l.err("paste parse failed: " + e.message); }
+};
+
+/* drag & drop (folder-aware) */
+async function walkEntry(entry, out) {
+  if (entry.isFile) {
+    const f = await new Promise((res, rej) => entry.file(res, rej));
+    if (f.name.endsWith(".json")) {
+      Object.defineProperty(f, "webkitRelativePath", { value: entry.fullPath.replace(/^\//, "") });
+      out.push(f);
+    }
+  } else if (entry.isDirectory) {
+    const reader = entry.createReader();
+    let batch;
+    do {
+      batch = await new Promise((res, rej) => reader.readEntries(res, rej));
+      for (const e of batch) await walkEntry(e, out);
+    } while (batch.length);
+  }
+}
+document.body.addEventListener("dragover", e => { e.preventDefault(); document.body.classList.add("droptarget"); });
+document.body.addEventListener("dragleave", () => document.body.classList.remove("droptarget"));
+document.body.addEventListener("drop", async e => {
+  e.preventDefault(); document.body.classList.remove("droptarget");
+  const items = [...e.dataTransfer.items];
+  const out = [];
+  for (const it of items) {
+    const entry = it.webkitGetAsEntry?.();
+    if (entry) await walkEntry(entry, out);
+    else { const f = it.getAsFile?.(); if (f?.name.endsWith(".json")) out.push(f); }
+  }
+  if (out.length) loadFileList(out); else l.warn("drop contained no .json files");
+});
+
+/* splitter */
+(() => {
+  const saved = localStorage.getItem("scr-rail");
+  if (saved) $("mid").style.gridTemplateColumns = `${saved}px 5px 1fr`;
+  let drag = false;
+  $("splitter").onmousedown = () => { drag = true; document.body.style.userSelect = "none"; };
+  window.addEventListener("mousemove", e => {
+    if (!drag) return;
+    const w = Math.min(420, Math.max(200, e.clientX));
+    $("mid").style.gridTemplateColumns = `${w}px 5px 1fr`;
+  });
+  window.addEventListener("mouseup", e => {
+    if (!drag) return;
+    drag = false; document.body.style.userSelect = "";
+    localStorage.setItem("scr-rail", Math.min(420, Math.max(200, e.clientX)));
+  });
+})();
+
+/* boot */
+renderLattice();
+renderStages();
+setView("overview");
+l.info("Semantic Core Bundle Reader v1.0.0 · build 2026-07-21 — everything runs locally, nothing leaves this page");
+l.info("open a bundle folder (contains content-manifest.json + objects/) or drop it here");
+if (!crypto.subtle) l.warn("crypto.subtle unavailable in this context — digest verification uses the JS fallback (slower)");
+</script>
+</body>
+</html>

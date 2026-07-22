@@ -95,6 +95,16 @@ attestations with semantic digests — the converters in
 validates all nine corpus bundles green: 5,478 objects, both digests
 re-verified each, every object matching exactly one kernel shape.
 
+### As a human
+
+[`one-page-apps/semantic-core-reader.html`](one-page-apps/semantic-core-reader.html)
+is a zero-dependency, single-file bundle reader: open it in a browser, drop
+in any bundle folder from `converted_examples/`, and it renders the objects
+for humans — the five stages of the compliance graph explained, statements
+with their modality lattice, facets and annotations visually separated, and
+one-click re-verification of both SHA-256 digests per object, entirely
+client-side (nothing is uploaded anywhere).
+
 ### As a specification
 
 - [`drafts/oscal-semantic-core-v0.5-specification.md`](drafts/oscal-semantic-core-v0.5-specification.md) — the normative draft
