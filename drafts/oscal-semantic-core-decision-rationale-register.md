@@ -1095,6 +1095,84 @@ filenames — for digest stability; their migration is decided with the
 `v1.0.0` tag. Trademark screen (DPMA/EUIPO/USPTO) and domain
 registration remain on the author's pre-tag checklist.
 
+# Amendments — P10 (2026-07-22): the adversarial review of 1.0.0-rc.1
+
+One review round against the CONSOLIDATED rc.1 text (IV.8 step 2), run
+at HEAD `7199c26` under the P9 ground rules: every count recomputed or
+git-pinned, demonstrated outranks argued, the four defect classes kept
+separate. Method: full recount of every headline number; **both
+validators and the export suite re-run at HEAD**; the kernel schema read
+field-by-field against Part II; the enforcement code read against the
+D10/D13 tables; adversarial constructions run against the reference
+validator. Verdict: **no Blockers** — the P9-cycle holes stayed closed;
+what P10 found is enforcement completeness at the edges of the D10/D13
+tables plus consolidation drift.
+
+## What held (recomputed at HEAD, measured)
+149/149 vectors in **both** validators, family-exact (jcs 8 · modality
+21 · parameter 17 · tailoring 15 · attestation 5 · facet 7 · reference
+11 · lifecycle 36 · tier 9 · dsse 5 · composition 7 · conditional 8);
+**11 bundles / 6,675 manifest objects / 251,591 leaves / UNMAPPED 0 —
+exact**; SP800-53 115,680 leaves; the CR26 census row exact from the
+pinned source (force MUST 189 / SHOULD 84 / MAY 39 / MUST NOT 11 /
+SHOULD NOT 5 = 328); export 10/10 schema-valid + **5,647/5,647**
+round-trip at HEAD; composition smoke (US.SP800-53 + US.IFA-GoodRead)
+clean; tier reporting distinct incl. `rev5-odp-overlay` = consumer (the
+anti-laundering result); stdlib-pin VERBATIM enforcement live; decimal
+leading-zero rejection live; canonical-alias same-content check live;
+LoC counter parity reproduced exactly at the gate-4 commit (`9b953fd`:
+938/1,110/280); reader v1.7.0; seven stdlib descriptors; 13 examples;
+F.6/F.7/F.8 and C.9 present as cited; the backlog was EMPTY as claimed.
+External facts not re-verified this round (register-recorded, quoted
+tier): compliance-trestle 30,905 LoC / 162 files; the OSCAL 1.2.2 /
+Mapping-Model landscape; the JASCON collision scan.
+
+## Findings — 4 Major · 4 Minor · 1 erratum → backlog #29–#37 (counts in)
+- **#29 (Major, DEMONSTRATED)** — facet-op duty enforcement is
+  stdlib-only: `pinned_decl` exists but no call site passes it
+  (validate_core.py:974; ps1:220 builds only stdlib declarations), so
+  detach/attach of a pinned semantics-bearing facet carries no duty; an
+  unregistered facet in `attach-facet` gets decl = None → **no** duty —
+  D10 dangerous-by-default inverted. A constructed green bundle proves
+  it. D13 rev 3's "covers the full D13 table" is hereby narrowed:
+  the attach/detach rows enforced for stdlib ids only.
+- **#30 (Major, DEMONSTRATED)** — the D13 same-target law lives only in
+  the vector runner; bundle validation applies it in neither validator.
+- **#31 (Major, DEMONSTRATED)** — selection predicates: schema types
+  `selects[].predicate` as ANY object; no shape validation anywhere; the
+  B.2 machinery exists (`eval_predicate`) but only conditional-apply
+  uses it; zero shape vectors.
+- **#32 (Major, DEMONSTRATED)** — five Part II prose↔schema
+  divergences: D5 `includes` example; D6 responsibility enum missing
+  `inherited`; D6/D8 Implementation.deviations (schema rejects; schema
+  instead has Requirement + Assessment, unnamed in D8); D7
+  `provenance-map-ref` (schema rejects); D20 example's bare-string
+  `rationale` (schema: `text`).
+- **#33 (Minor)** — count errata: "twelve corpora" (rc.1 ×3) vs eleven
+  everywhere else incl. this register's naming entry; HEAD LoC
+  941/1,113/307 vs quoted 938/1,110/280; "**together** ~30×" is ~30×
+  **each**, ~15× together; R8 "three decimal orders" false (~1.5); R7
+  "×1 wrapper" is 2 at HEAD; IV.5.2 "129 … at HEAD" stale; §2 scope
+  statement pre-gate language (CIS "disputed" vs R15 resolved).
+- **#34 (Minor)** — D19/IV.8 name-note contradiction: D19 still says
+  "final name under review", calls JASCON "the working title", and
+  mis-attributes the trademark-OPTICS rationale that belonged to the
+  OSCAL-bearing old name (diff 42b4390→7199c26); the open item is the
+  trademark screen, not optics.
+- **#35 (Minor)** — appendix-D D.7/D.8 "(gate 3)" verification clock
+  expired with no recorded verdict while D22 cites `assurance-levels@1`
+  normatively.
+- **#36 (Minor)** — IV.7 ships no rows/paths for Appendices A–C, the
+  handbook, or this register — all cited normatively by the rc.1.
+- **#37 (erratum, latent)** — canonical-form residues: `-0` decimals;
+  empty `text` values (`{"en": []}`, `""`); bare `"https://"` relation
+  codes; float-compare decimal bounds. Zero corpus instances.
+
+**Standing-way note.** rc.1 froze with the backlog empty; P10 refills it
+by design; the pre-tag erratum/enforcement pass empties it again. Tag
+gate: **#29–#32** fixed (or explicitly waived by the author) before
+`v1.0.0`; #33–#37 ride the same pass.
+
 ## Next (IV.8 of the rc.1 spec)
-Name ✓ **JASCON** (entry above) → P10 adversarial review of the
-CONSOLIDATED text → `v1.0.0` tag.
+Name ✓ **JASCON** → P10 ✓ **DONE 2026-07-22** (this entry; findings
+#29–#37, no Blockers) → the P10 fix pass (#29–#32 gate) → `v1.0.0` tag.
