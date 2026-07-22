@@ -330,6 +330,13 @@ injury.
 **Sequence** — explicit ordering on Set members; absorbs sort-id
 (×2,870). (Ch. 5)
 
+**Shadow set (supplement pattern)** — amending a catalog you don't
+own by authorship instead of injection: your new Requirements under
+your prefix, composed with the upstream in a Set you publish,
+interleaved by sequence; clause-level attachment by reference.
+What profile resolution produced, the shadow Set *is*. (Ch. 6.A,
+App. F Q23)
+
 **Statement** — the identified clause: id, modality, parties,
 parameters, prose. The shared fine-grained address of the whole
 model. (Ch. 4)
