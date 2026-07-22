@@ -391,21 +391,28 @@ converter had to synthesize base prose just to have something to
 in the census and its mechanism (Tailoring) already exists, so it fails
 the D22 promotion bar on tests 1 and 2.
 
-**The tier anchor — layered (rev. v0.6 cycle — R3 #19).** The tier that
-decides Deviation duties is DERIVED from data, never stipulated:
-(1) **authority-claimed** iff the Tailoring's id URI origin (scheme +
-host) equals the single origin of all selected Sets' ids — a predicate
-select or mixed-origin selects block the claim, because tailoring
-across authorities is consumer work by definition; (2)
-**authority-proven** iff additionally (or instead — proof beats prefix)
-an in-bundle Attestation whose signer shares the selected content's
-origin lists the Tailoring among its subjects with a verifying semantic
-digest; (3) otherwise **consumer**. Duties bind at consumer tier only;
-conformant tools report claimed and proven distinctly, because a prefix
-is an honest-publisher signal while a signature is evidence — the same
-layering as the two digest domains. Derivation vectors:
-`tier-vectors.json` (8 cases, incl. proof rescuing a cross-origin id
-and an authority attestation over the wrong subject proving nothing).
+**The tier anchor — layered (rev. v0.6 cycle — R3 #19; rev 4 at gate
+3).** The tier that decides Deviation duties is DERIVED from data,
+never stipulated: (1) **authority-claimed** iff the Tailoring's id URI
+origin (scheme + host) equals the single origin of the selected
+**content** — resolved *through* selected Sets to their member ids
+(transitively, D21) and through the operations' `requirement-ref`
+targets, never stopping at a wrapper Set's own id: gate 3's CR26
+`rev5-odp-overlay` (a FedRAMP-minted Set around NIST controls) proved
+the wrapper shortcut launders consumer into authority-claimed, and the
+same resolution equally recognizes an authority's own content behind a
+foreign-minted wrapper. A predicate select or mixed-origin content
+blocks the claim, because tailoring across authorities' content is
+consumer work by definition; (2) **authority-proven** iff additionally
+(or instead — proof beats prefix) an in-bundle Attestation whose signer
+shares the selected content's origin lists the Tailoring among its
+subjects with a verifying semantic digest; (3) otherwise **consumer**.
+Duties bind at consumer tier only; conformant tools report claimed and
+proven distinctly, because a prefix is an honest-publisher signal while
+a signature is evidence — the same layering as the two digest domains.
+Derivation vectors: `tier-vectors.json` (9 cases, incl. proof rescuing
+a cross-origin id, an authority attestation over the wrong subject
+proving nothing, and the wrapper-Set laundering case).
 
 **Deterministic resolution (normative algorithm, Appendix B):** operations
 are an **ordered list**, applied sequentially after selection; **two
@@ -687,8 +694,8 @@ replaces; NIST IR 8477 / OLIR (relationship semantics).
    schema, closed shapes, shape-disjoint type inference + six normative
    stdlib descriptors with the D10-rev-2 declarations) ·
    `semantic-oscal/conformance/` (54 vectors across five families at first
-   delivery; **125 across nine families at HEAD** after the P9 + v0.6-round-2
-   additions — recompute via `validate_core.py`, backlog #28) ·
+   delivery; **129 across nine families at HEAD** after the P9 + v0.6-round-2
+   + gate-3 additions — recompute via `validate_core.py`, backlog #28) ·
    `semantic-oscal/scripts/validate_core.py` (the executable). Measured
    result: all vectors pass; all 8 corpus bundles + the example bundle
    validate green — 5,478 object validations, both digests re-verified
@@ -780,6 +787,57 @@ relation row aligned + C.8 `supersedes` deleted; **#13**
 **#23** nearest-Set = fewest hops; **#15** template accreditation a
 declared non-goal. Conformance **115 → 125 vectors**. Gate 3 plan:
 `drafts/gate-3-plan.md`.
+
+## IV.9 Gate 3 DELIVERED (2026-07-22) — NIST/CSF/lifecycle corpus
+
+Census-first per ch14.4 (`drafts/gate-3-census.md`); register entries
+under "Amendments — gate 3". Three new bundles, one drained backlog
+item, two reference-validator defects found and fixed by the corpus:
+
+- **US.SP800-53** (`convert_nist.py`): Rev 5.2.0 catalog + four 800-53B
+  baselines → 1,014 Requirements + 25 Sets, 115,680 leaves, UNMAPPED 0.
+  **Zero kernel-schema changes forced — the customer test passed.** All
+  373 pre-existing corpus mapping endpoints resolve against the minted
+  ids. 182 withdrawn tombstones dropped with lineage inverted onto the
+  successors' kernel `replaces[]` (incl. one family-Set successor:
+  sa-12 → SR). The SP 800-53A layer rides `sp800-53a@1` (3,715
+  objectives — the CTL addressing surface); two-layer ODP params are
+  statement-scoped per the 216 rule.
+- **US.CSF** (`convert_csf.py`): CSF 2.0 → 106 Requirements + 29 Sets
+  (D21 3-level nesting), 4,726 leaves, UNMAPPED 0. Sixth declarative
+  corpus (modality `unspecified` ×106). Withdrawn measured 91 = 12
+  categories + 79 subcategories; 134 successor edges.
+- **US.IFA-GoodRead** (`convert_ifa.py`): the five lifecycle types at
+  document scale with both digests verified — SSP → Component (+ the
+  ATO as `authorizations[]` + an Attestation over semantic digests),
+  AP+AR → Assessment (result not-satisfied), POA&M risks → Findings
+  (in-remediation; one approved `risk-adjustment` Deviation), and the
+  leveraged/leveraging pair → `inherited-from{component, basis-ref}`
+  with the D5 edge-local closure enforced. Carried Requirements
+  (AC-6.1, AC-2) ride in-bundle — an authorization package carries its
+  baseline. **#9 seeds confirmed: every source state mapped into the
+  shipped enums, zero code additions.**
+- **#10 DRAINED** (`convert_cr26.py` rev): the CTL overlay's 16 ODP
+  assignments → `set-parameter` operations on a `rev5-odp-overlay`
+  Tailoring, each addressed via the DECLARING statement (measured: no
+  Rev 5 ODP is declared in two statements — the (requirement, ODP) pair
+  is a sufficient address). 14 tailored controls carried in-bundle.
+  Guidance entries stay parked (D20 supplements territory).
+- **Validator defects the corpus exposed (both fixed + vectored):**
+  (a) tier derivation stopped at the wrapper Set's id — a self-minted
+  Set around foreign content laundered consumer into authority-claimed
+  (D13 rev 4, above); (b) `param_check` ignored `cardinality: many` —
+  list values on multi-select choices had no legal form (D9: a list
+  value is legal exactly on `many`, every element declared).
+- Source findings (all REPORTED upstream): CSF underscore rel codes vs
+  Rev 5 hyphens; a fragment-marker-less href (DE.DP-04); 3
+  cross-control param insertions; 71 ODPs bound nowhere; `_stmt.` vs
+  `_smt.` statement-id spellings; FedRAMP multi-select values
+  flattened to prose strings (normalized to lists ×3); PUA codepoints
+  in IFA prose; placeholder uuids in the leveraged pair.
+
+Conformance **125 → 129 vectors**. Corpus at HEAD: **11 bundles, 6,675
+manifest-listed objects** (recompute via `validate_core.py`).
 
 ---
 

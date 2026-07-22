@@ -1,6 +1,16 @@
 # Gate 3 — Lifecycle Corpus + NIST/CSF Conversion Plan
 ### v0.6 gate item 3 (spec IV.5.3) · prepared 2026-07-22
 
+> **DELIVERED 2026-07-22, same day** — every §6 criterion met: corpora
+> 1–5 converted at 100 % / UNMAPPED 0 (US.SP800-53 · US.CSF ·
+> US.IFA-GoodRead + the CR26 #10 drain), **zero kernel-schema changes
+> forced**, #10 decided AND drained (16 ops, D10 rev 3), lifecycle
+> bundle green with both digests (five types, #9 confirmed with zero
+> enum additions), 125 → 129 vectors. Outcomes: census §9, spec IV.9,
+> register "Amendments — gate 3". Bonus: two reference-validator
+> defects exposed by the corpus and fixed (D13 rev 4 tier
+> anti-laundering, D9 rev 3 multi-select lists).
+
 **Purpose.** Gate 3 is the corpus expansion that (a) moves the NIST
 coverage claims from *designed-for* to *measured*, (b) exercises the
 five lifecycle types (Assessment · Finding · Implementation ·

@@ -6,11 +6,12 @@ contact with real catalogs before it may stay.**
 
 This repository is a working design study, not a slide deck. It contains a
 draft specification with a public decision register, an **executable kernel
-schema** with a **125-vector conformance corpus** and a reference validator,
-**eight national and industry frameworks converted losslessly** (130,350
-source leaf values, coverage computed rather than asserted), and a
-zero-dependency **single-file reader & authoring studio** that turns the whole
-thing into something you can click.
+schema** with a **129-vector conformance corpus** and a reference validator,
+**eleven framework and lifecycle corpora converted losslessly** (251,591
+source leaf values, coverage computed rather than asserted — including NIST
+SP 800-53 Rev 5, its 800-53B baselines, and CSF 2.0), and a zero-dependency
+**single-file reader & authoring studio** that turns the whole thing into
+something you can click.
 
 > Status: **pre-1.0, evidence-gated**, maintained in personal capacity.
 > Nothing here is endorsed by NIST, BSI, ACSC, CCB, CIS, or FedRAMP.
@@ -90,13 +91,15 @@ The project moves through evidence gates; nothing advances on narrative.
   architecture was drawn: the kernel is what all three were measured to need.
 - **Gate 2 — executable (done).** The normative JSON Schema, seven stdlib
   facet descriptors (including a DSSE attestation envelope profile), a
-  **125-vector conformance corpus** in nine suites (canonicalization,
+  **129-vector conformance corpus** in nine suites (canonicalization,
   modality lattice, parameters, tailoring law, attestation, facet
   enforcement, reference closure, lifecycle, authority tiers), and
   [`validate_core.py`](semantic-oscal/scripts/validate_core.py) — which
-  re-verifies **5,470 objects across all eight bundles with both SHA-256
+  re-verifies **6,675 objects across all eleven bundles with both SHA-256
   digests each**, every object matching exactly one kernel shape. Current
-  totals: 3,450 Requirements · 1,013 Sets · 1,009 Mappings.
+  totals: 4,583 Requirements · 1,066 Sets · 1,008 Mappings · 5 Tailorings ·
+  and the five lifecycle types live at document scale (6 Components ·
+  3 Implementations · 1 Assessment · 2 Findings · 1 Attestation).
 - **Hardened by three external adversarial review rounds** (a FedRAMP
   automation-team exchange, a deep-research review, and twin
   independent red-team runs): findings land in the public backlog with
@@ -105,9 +108,19 @@ The project moves through evidence gates; nothing advances on narrative.
   size deltas versus the OSCAL sources: ISM **−29 %**, GS++ **−50 %**,
   CR26 **+55 %** — smaller where sources are redundant, larger where a
   bespoke format was terse. No round trips survive on marketing numbers.
-- **Gate 3 — next.** NIST SP 800-53 Rev 5 + 800-53B baselines, CSF 2.0, and a
-  full lifecycle corpus (SSP/AP/AR/POA&M equivalents), making the minted NIST
-  mapping targets real.
+- **Gate 3 — done (2026-07-22).** NIST SP 800-53 Rev 5.2.0 + all four
+  800-53B baselines, CSF 2.0, and a full lifecycle corpus (SSP/AP/AR/POA&M →
+  the five lifecycle types with digest verification). **Zero kernel-schema
+  changes forced — the customer test passed.** All 373 pre-existing NIST
+  mapping endpoints in the corpus now resolve against real objects; the
+  FedRAMP CTL ODP overlay drained from a parked payload into a real
+  `set-parameter` Tailoring addressed at declaring statements. The corpus
+  also exposed and fixed two reference-validator defects (a tier-laundering
+  wrapper-Set shortcut; multi-select list values) — exactly what
+  evidence-gating is for.
+- **Gate 4 — next.** The composition/instantiation engines (bundle semver,
+  conditional-apply), DSSE signature verification for the proven tier, and
+  the weekend-validator measurement.
 
 Reproduce the whole verdict in one line (needs [uv](https://docs.astral.sh/uv/)):
 
@@ -137,6 +150,16 @@ before these conversions ran, and first exercised by DE.C3A):
 | [CIS.Ubuntu2404](converted_examples/CIS.Ubuntu2404/cisb-coverage-report.md) | CIS Ubuntu 24.04 LTS Benchmark v1.0.0 | 312 Requirements · 635 Mappings (v7+v8) · 79 Sets (4 recovered profile baselines) | 20,698 / 20,698 |
 | [DE.C5](converted_examples/DE.C5/c5-coverage-report.md) | BSI C5:2026, OSCAL 1.2.2 | 623 Requirements · 190 Sets (basic baseline + additional criteria) | 5,868 / 5,868 |
 | [DE.C3A](converted_examples/DE.C3A/c3a-coverage-report.md) | BSI C3A v1.0, OSCAL 1.2.2 (GS++ grammar family) | 30 Requirements · 30 typed parameters (first `label`/`default` use) · 9 Sets | 1,093 / 1,093 |
+
+Gate-3 corpora (converted 2026-07-22; census first —
+[`drafts/gate-3-census.md`](drafts/gate-3-census.md) — zero kernel-schema
+changes forced):
+
+| Corpus | Source | Emitted | Coverage |
+|---|---|---|---|
+| [US.SP800-53](converted_examples/US.SP800-53/sp800-53-coverage-report.md) | NIST SP 800-53 Rev 5.2.0 catalog + four 800-53B baseline profiles, OSCAL 1.2.2 | 1,014 Requirements (1,600 statement-scoped ODP params, SP 800-53A layer as facet) · 25 Sets (20 families + 4 baselines + root); 182 withdrawn tombstones inverted onto successor `replaces[]` | 115,680 / 115,680 |
+| [US.CSF](converted_examples/US.CSF/csf-coverage-report.md) | NIST CSF 2.0, OSCAL 1.2.2 | 106 Requirements · 29 Sets (functions → categories → subcategories, 3-level nesting); 91 withdrawn (12 categories + 79 subcategories) inverted | 4,726 / 4,726 |
+| [US.IFA-GoodRead](converted_examples/US.IFA-GoodRead/ifa-coverage-report.md) | OSCAL IFA GoodRead example set (SSP + AP + AR + POA&M) + leveraged/leveraging SSP pair + component-definition | 6 Components · 3 Implementations (D5 `inherited-from` with basis-ref) · 1 Assessment · 2 Findings (one approved risk-adjustment Deviation) · 1 Attestation (the ATO) · 2 carried Requirements | 835 / 835 |
 
 Each conversion ships a computed coverage report that declares every rule with
 counts and **reports source defects rather than repairing them** — the BSI run

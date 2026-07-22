@@ -1,0 +1,2855 @@
+{
+ "totals": {
+  "leaf-values": 835,
+  "mapped": 835,
+  "unmapped": 0,
+  "coverage-pct": 100.0
+ },
+ "unmapped-paths": [],
+ "path-map": [
+  {
+   "path": "ap.assessment-plan.assessment-subjects[].description",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.assessment-subjects[].type",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.back-matter.resources[].remarks",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.back-matter.resources[].rlinks[].href",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.back-matter.resources[].rlinks[].media-type",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.back-matter.resources[].title",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.back-matter.resources[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.import-ssp.href",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.local-definitions.activities[].description",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.local-definitions.activities[].props[].name",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.local-definitions.activities[].props[].value",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.local-definitions.activities[].related-controls.control-selections[].include-controls[].control-id",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.local-definitions.activities[].responsible-roles[].party-uuids[]",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.local-definitions.activities[].responsible-roles[].role-id",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.local-definitions.activities[].steps[].description",
+   "count": 6,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.local-definitions.activities[].steps[].title",
+   "count": 6,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.local-definitions.activities[].steps[].uuid",
+   "count": 6,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.local-definitions.activities[].title",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.local-definitions.activities[].uuid",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.last-modified",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.oscal-version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.parties[].links[].href",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.parties[].links[].rel",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.parties[].member-of-organizations[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.parties[].name",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.parties[].short-name",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.parties[].type",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.parties[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.published",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.remarks",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.responsible-parties[].party-uuids[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.responsible-parties[].role-id",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.revisions[].last-modified",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.revisions[].links[].href",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.revisions[].links[].rel",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.revisions[].oscal-version",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.revisions[].remarks",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.revisions[].title",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.revisions[].version",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.roles[].id",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.roles[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.metadata.version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ap.assessment-plan.reviewed-controls.control-selections[].include-controls[].control-id",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.tasks[].associated-activities[].activity-uuid",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.tasks[].associated-activities[].subjects[].type",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.tasks[].remarks",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.tasks[].responsible-roles[].role-id",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.tasks[].title",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.tasks[].type",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.tasks[].uuid",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (assessment-plan@1): activities/steps/tasks/subjects/reviewed-controls"
+  },
+  {
+   "path": "ap.assessment-plan.uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.back-matter.resources[].rlinks[].href",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.back-matter.resources[].rlinks[].media-type",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.back-matter.resources[].title",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.back-matter.resources[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.import-ap.href",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.local-definitions.activities[].description",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (activities duplicated from AP; carried once)"
+  },
+  {
+   "path": "ar.assessment-results.local-definitions.activities[].props[].name",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (activities duplicated from AP; carried once)"
+  },
+  {
+   "path": "ar.assessment-results.local-definitions.activities[].props[].value",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (activities duplicated from AP; carried once)"
+  },
+  {
+   "path": "ar.assessment-results.local-definitions.activities[].related-controls.control-selections[].include-controls[].control-id",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (activities duplicated from AP; carried once)"
+  },
+  {
+   "path": "ar.assessment-results.local-definitions.activities[].responsible-roles[].party-uuids[]",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (activities duplicated from AP; carried once)"
+  },
+  {
+   "path": "ar.assessment-results.local-definitions.activities[].responsible-roles[].role-id",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (activities duplicated from AP; carried once)"
+  },
+  {
+   "path": "ar.assessment-results.local-definitions.activities[].steps[].description",
+   "count": 3,
+   "level": "L2",
+   "destination": "Assessment.method payload (activities duplicated from AP; carried once)"
+  },
+  {
+   "path": "ar.assessment-results.local-definitions.activities[].steps[].remarks",
+   "count": 2,
+   "level": "L2",
+   "destination": "Assessment.method payload (activities duplicated from AP; carried once)"
+  },
+  {
+   "path": "ar.assessment-results.local-definitions.activities[].steps[].title",
+   "count": 3,
+   "level": "L2",
+   "destination": "Assessment.method payload (activities duplicated from AP; carried once)"
+  },
+  {
+   "path": "ar.assessment-results.local-definitions.activities[].steps[].uuid",
+   "count": 3,
+   "level": "L2",
+   "destination": "Assessment.method payload (activities duplicated from AP; carried once)"
+  },
+  {
+   "path": "ar.assessment-results.local-definitions.activities[].title",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (activities duplicated from AP; carried once)"
+  },
+  {
+   "path": "ar.assessment-results.local-definitions.activities[].uuid",
+   "count": 1,
+   "level": "L2",
+   "destination": "Assessment.method payload (activities duplicated from AP; carried once)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.last-modified",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.oscal-version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.parties[].links[].href",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.parties[].links[].rel",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.parties[].member-of-organizations[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.parties[].name",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.parties[].short-name",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.parties[].type",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.parties[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.remarks",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.responsible-parties[].party-uuids[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.responsible-parties[].role-id",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.revisions[].last-modified",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.revisions[].links[].href",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.revisions[].links[].rel",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.revisions[].oscal-version",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.revisions[].remarks",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.revisions[].title",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.revisions[].version",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.roles[].id",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.roles[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.metadata.version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ar.assessment-results.results[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "Assessment id/title/time"
+  },
+  {
+   "path": "ar.assessment-results.results[].end",
+   "count": 1,
+   "level": "L1",
+   "destination": "Assessment id/title/time"
+  },
+  {
+   "path": "ar.assessment-results.results[].findings[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "Finding: target.status -> Assessment result + Finding state; target-id (53A objective) + implementation-statement-uuid -> risk@1 facet"
+  },
+  {
+   "path": "ar.assessment-results.results[].findings[].implementation-statement-uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "Finding: target.status -> Assessment result + Finding state; target-id (53A objective) + implementation-statement-uuid -> risk@1 facet"
+  },
+  {
+   "path": "ar.assessment-results.results[].findings[].related-observations[].observation-uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "Finding: target.status -> Assessment result + Finding state; target-id (53A objective) + implementation-statement-uuid -> risk@1 facet"
+  },
+  {
+   "path": "ar.assessment-results.results[].findings[].related-risks[].risk-uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "Finding: target.status -> Assessment result + Finding state; target-id (53A objective) + implementation-statement-uuid -> risk@1 facet"
+  },
+  {
+   "path": "ar.assessment-results.results[].findings[].target.description",
+   "count": 1,
+   "level": "L1",
+   "destination": "Finding: target.status -> Assessment result + Finding state; target-id (53A objective) + implementation-statement-uuid -> risk@1 facet"
+  },
+  {
+   "path": "ar.assessment-results.results[].findings[].target.status.state",
+   "count": 1,
+   "level": "L1",
+   "destination": "Finding: target.status -> Assessment result + Finding state; target-id (53A objective) + implementation-statement-uuid -> risk@1 facet"
+  },
+  {
+   "path": "ar.assessment-results.results[].findings[].target.target-id",
+   "count": 1,
+   "level": "L1",
+   "destination": "Finding: target.status -> Assessment result + Finding state; target-id (53A objective) + implementation-statement-uuid -> risk@1 facet"
+  },
+  {
+   "path": "ar.assessment-results.results[].findings[].target.type",
+   "count": 1,
+   "level": "L1",
+   "destination": "Finding: target.status -> Assessment result + Finding state; target-id (53A objective) + implementation-statement-uuid -> risk@1 facet"
+  },
+  {
+   "path": "ar.assessment-results.results[].findings[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "Finding: target.status -> Assessment result + Finding state; target-id (53A objective) + implementation-statement-uuid -> risk@1 facet"
+  },
+  {
+   "path": "ar.assessment-results.results[].findings[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "Finding: target.status -> Assessment result + Finding state; target-id (53A objective) + implementation-statement-uuid -> risk@1 facet"
+  },
+  {
+   "path": "ar.assessment-results.results[].local-definitions.tasks[].associated-activities[].activity-uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "risk content consolidated with the POA&M risks (same risk graph, later state)"
+  },
+  {
+   "path": "ar.assessment-results.results[].local-definitions.tasks[].associated-activities[].subjects[].type",
+   "count": 1,
+   "level": "L1",
+   "destination": "risk content consolidated with the POA&M risks (same risk graph, later state)"
+  },
+  {
+   "path": "ar.assessment-results.results[].local-definitions.tasks[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "risk content consolidated with the POA&M risks (same risk graph, later state)"
+  },
+  {
+   "path": "ar.assessment-results.results[].local-definitions.tasks[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "risk content consolidated with the POA&M risks (same risk graph, later state)"
+  },
+  {
+   "path": "ar.assessment-results.results[].local-definitions.tasks[].type",
+   "count": 1,
+   "level": "L1",
+   "destination": "risk content consolidated with the POA&M risks (same risk graph, later state)"
+  },
+  {
+   "path": "ar.assessment-results.results[].local-definitions.tasks[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "risk content consolidated with the POA&M risks (same risk graph, later state)"
+  },
+  {
+   "path": "ar.assessment-results.results[].observations[].collected",
+   "count": 2,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (methods/types/collected/expires carried)"
+  },
+  {
+   "path": "ar.assessment-results.results[].observations[].description",
+   "count": 2,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (methods/types/collected/expires carried)"
+  },
+  {
+   "path": "ar.assessment-results.results[].observations[].expires",
+   "count": 2,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (methods/types/collected/expires carried)"
+  },
+  {
+   "path": "ar.assessment-results.results[].observations[].methods[]",
+   "count": 2,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (methods/types/collected/expires carried)"
+  },
+  {
+   "path": "ar.assessment-results.results[].observations[].remarks",
+   "count": 2,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (methods/types/collected/expires carried)"
+  },
+  {
+   "path": "ar.assessment-results.results[].observations[].subjects[].subject-uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (methods/types/collected/expires carried)"
+  },
+  {
+   "path": "ar.assessment-results.results[].observations[].subjects[].type",
+   "count": 2,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (methods/types/collected/expires carried)"
+  },
+  {
+   "path": "ar.assessment-results.results[].observations[].title",
+   "count": 2,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (methods/types/collected/expires carried)"
+  },
+  {
+   "path": "ar.assessment-results.results[].observations[].types[]",
+   "count": 2,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (methods/types/collected/expires carried)"
+  },
+  {
+   "path": "ar.assessment-results.results[].observations[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (methods/types/collected/expires carried)"
+  },
+  {
+   "path": "ar.assessment-results.results[].reviewed-controls.control-selections[].include-controls[].control-id",
+   "count": 1,
+   "level": "L1",
+   "destination": "Assessment subject-refs"
+  },
+  {
+   "path": "ar.assessment-results.results[].risks[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "risk content consolidated with the POA&M risks (same risk graph, later state)"
+  },
+  {
+   "path": "ar.assessment-results.results[].risks[].statement",
+   "count": 1,
+   "level": "L1",
+   "destination": "risk content consolidated with the POA&M risks (same risk graph, later state)"
+  },
+  {
+   "path": "ar.assessment-results.results[].risks[].status",
+   "count": 1,
+   "level": "L1",
+   "destination": "risk content consolidated with the POA&M risks (same risk graph, later state)"
+  },
+  {
+   "path": "ar.assessment-results.results[].risks[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "risk content consolidated with the POA&M risks (same risk graph, later state)"
+  },
+  {
+   "path": "ar.assessment-results.results[].risks[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "risk content consolidated with the POA&M risks (same risk graph, later state)"
+  },
+  {
+   "path": "ar.assessment-results.results[].start",
+   "count": 1,
+   "level": "L1",
+   "destination": "Assessment id/title/time"
+  },
+  {
+   "path": "ar.assessment-results.results[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "Assessment id/title/time"
+  },
+  {
+   "path": "ar.assessment-results.results[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "Assessment id/title/time"
+  },
+  {
+   "path": "ar.assessment-results.uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "cdef.component-definition.back-matter.resources[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "cdef.component-definition.back-matter.resources[].rlinks[].href",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "cdef.component-definition.back-matter.resources[].rlinks[].media-type",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "cdef.component-definition.back-matter.resources[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "cdef.component-definition.components[].control-implementations[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "capabilities with requirement-ref (landmark - the component asserts support, no system binds it)"
+  },
+  {
+   "path": "cdef.component-definition.components[].control-implementations[].implemented-requirements[].control-id",
+   "count": 3,
+   "level": "L1",
+   "destination": "capabilities with requirement-ref (landmark - the component asserts support, no system binds it)"
+  },
+  {
+   "path": "cdef.component-definition.components[].control-implementations[].implemented-requirements[].description",
+   "count": 3,
+   "level": "L1",
+   "destination": "capabilities with requirement-ref (landmark - the component asserts support, no system binds it)"
+  },
+  {
+   "path": "cdef.component-definition.components[].control-implementations[].implemented-requirements[].set-parameters[].param-id",
+   "count": 2,
+   "level": "L1",
+   "destination": "capabilities with requirement-ref (landmark - the component asserts support, no system binds it)"
+  },
+  {
+   "path": "cdef.component-definition.components[].control-implementations[].implemented-requirements[].set-parameters[].values[]",
+   "count": 2,
+   "level": "L1",
+   "destination": "capabilities with requirement-ref (landmark - the component asserts support, no system binds it)"
+  },
+  {
+   "path": "cdef.component-definition.components[].control-implementations[].implemented-requirements[].statements[].description",
+   "count": 2,
+   "level": "L1",
+   "destination": "capabilities with requirement-ref (landmark - the component asserts support, no system binds it)"
+  },
+  {
+   "path": "cdef.component-definition.components[].control-implementations[].implemented-requirements[].statements[].responsible-roles[].role-id",
+   "count": 1,
+   "level": "L1",
+   "destination": "capabilities with requirement-ref (landmark - the component asserts support, no system binds it)"
+  },
+  {
+   "path": "cdef.component-definition.components[].control-implementations[].implemented-requirements[].statements[].statement-id",
+   "count": 2,
+   "level": "L1",
+   "destination": "capabilities with requirement-ref (landmark - the component asserts support, no system binds it)"
+  },
+  {
+   "path": "cdef.component-definition.components[].control-implementations[].implemented-requirements[].statements[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "capabilities with requirement-ref (landmark - the component asserts support, no system binds it)"
+  },
+  {
+   "path": "cdef.component-definition.components[].control-implementations[].implemented-requirements[].uuid",
+   "count": 3,
+   "level": "L1",
+   "destination": "capabilities with requirement-ref (landmark - the component asserts support, no system binds it)"
+  },
+  {
+   "path": "cdef.component-definition.components[].control-implementations[].source",
+   "count": 1,
+   "level": "L1",
+   "destination": "capabilities with requirement-ref (landmark - the component asserts support, no system binds it)"
+  },
+  {
+   "path": "cdef.component-definition.components[].control-implementations[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "capabilities with requirement-ref (landmark - the component asserts support, no system binds it)"
+  },
+  {
+   "path": "cdef.component-definition.components[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "Component (kind mapped) id/title"
+  },
+  {
+   "path": "cdef.component-definition.components[].protocols[].name",
+   "count": 3,
+   "level": "L2",
+   "destination": "protocols@1 facet"
+  },
+  {
+   "path": "cdef.component-definition.components[].protocols[].port-ranges[].end",
+   "count": 3,
+   "level": "L2",
+   "destination": "protocols@1 facet"
+  },
+  {
+   "path": "cdef.component-definition.components[].protocols[].port-ranges[].start",
+   "count": 3,
+   "level": "L2",
+   "destination": "protocols@1 facet"
+  },
+  {
+   "path": "cdef.component-definition.components[].protocols[].port-ranges[].transport",
+   "count": 3,
+   "level": "L2",
+   "destination": "protocols@1 facet"
+  },
+  {
+   "path": "cdef.component-definition.components[].protocols[].title",
+   "count": 3,
+   "level": "L2",
+   "destination": "protocols@1 facet"
+  },
+  {
+   "path": "cdef.component-definition.components[].protocols[].uuid",
+   "count": 3,
+   "level": "L2",
+   "destination": "protocols@1 facet"
+  },
+  {
+   "path": "cdef.component-definition.components[].purpose",
+   "count": 1,
+   "level": "L1",
+   "destination": "Component (kind mapped) id/title"
+  },
+  {
+   "path": "cdef.component-definition.components[].responsible-roles[].party-uuids[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "landmark party URIs (#16: parties stay landmark; roles ride provenance)"
+  },
+  {
+   "path": "cdef.component-definition.components[].responsible-roles[].role-id",
+   "count": 2,
+   "level": "L1",
+   "destination": "landmark party URIs (#16: parties stay landmark; roles ride provenance)"
+  },
+  {
+   "path": "cdef.component-definition.components[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "Component (kind mapped) id/title"
+  },
+  {
+   "path": "cdef.component-definition.components[].type",
+   "count": 1,
+   "level": "L1",
+   "destination": "Component (kind mapped) id/title"
+  },
+  {
+   "path": "cdef.component-definition.components[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "Component (kind mapped) id/title"
+  },
+  {
+   "path": "cdef.component-definition.metadata.last-modified",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "cdef.component-definition.metadata.oscal-version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "cdef.component-definition.metadata.parties[].links[].href",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "cdef.component-definition.metadata.parties[].links[].rel",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "cdef.component-definition.metadata.parties[].name",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "cdef.component-definition.metadata.parties[].type",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "cdef.component-definition.metadata.parties[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "cdef.component-definition.metadata.published",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "cdef.component-definition.metadata.roles[].id",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "cdef.component-definition.metadata.roles[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "cdef.component-definition.metadata.title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "cdef.component-definition.metadata.version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "cdef.component-definition.uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lev.system-security-plan.back-matter.resources[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lev.system-security-plan.back-matter.resources[].rlinks[].href",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lev.system-security-plan.back-matter.resources[].rlinks[].media-type",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lev.system-security-plan.back-matter.resources[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.description",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].control-id",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].remarks",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].set-parameters[].param-id",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].set-parameters[].values[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].component-uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].description",
+   "count": 2,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].export.description",
+   "count": 2,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].export.provided[].description",
+   "count": 2,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].export.provided[].responsible-roles[].party-uuids[]",
+   "count": 2,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].export.provided[].responsible-roles[].role-id",
+   "count": 2,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].export.provided[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].export.responsibilities[].description",
+   "count": 2,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].export.responsibilities[].provided-uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].export.responsibilities[].responsible-roles[].party-uuids[]",
+   "count": 2,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].export.responsibilities[].responsible-roles[].role-id",
+   "count": 2,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].export.responsibilities[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].statements[].remarks",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].statements[].statement-id",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].statements[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.control-implementation.implemented-requirements[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider Implementation: export.provided -> capabilities (consumer-inheritable), export.responsibilities -> system@1 customer-responsibilities; statement ids respelled _stmt.->smt. (counted)"
+  },
+  {
+   "path": "lev.system-security-plan.import-profile.href",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lev.system-security-plan.metadata.last-modified",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lev.system-security-plan.metadata.oscal-version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lev.system-security-plan.metadata.parties[].remarks",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lev.system-security-plan.metadata.parties[].type",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lev.system-security-plan.metadata.parties[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lev.system-security-plan.metadata.published",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lev.system-security-plan.metadata.roles[].id",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lev.system-security-plan.metadata.roles[].title",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lev.system-security-plan.metadata.title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lev.system-security-plan.metadata.version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.authorization-boundary.description",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.description",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.remarks",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.security-impact-level.security-objective-availability",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.security-impact-level.security-objective-confidentiality",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.security-impact-level.security-objective-integrity",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.security-sensitivity-level",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.status.state",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.system-ids[].id",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.system-information.information-types[].availability-impact.adjustment-justification",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.system-information.information-types[].availability-impact.base",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.system-information.information-types[].availability-impact.selected",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.system-information.information-types[].categorizations[].information-type-ids[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.system-information.information-types[].categorizations[].system",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.system-information.information-types[].confidentiality-impact.adjustment-justification",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.system-information.information-types[].confidentiality-impact.base",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.system-information.information-types[].confidentiality-impact.selected",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.system-information.information-types[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.system-information.information-types[].integrity-impact.adjustment-justification",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.system-information.information-types[].integrity-impact.base",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.system-information.information-types[].integrity-impact.selected",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.system-information.information-types[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.system-information.information-types[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-characteristics.system-name",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lev.system-security-plan.system-implementation.components[].description",
+   "count": 2,
+   "level": "L1",
+   "destination": "Components (kind mapped: appliance->hardware, application->software)"
+  },
+  {
+   "path": "lev.system-security-plan.system-implementation.components[].props[].name",
+   "count": 1,
+   "level": "L1",
+   "destination": "Components (kind mapped: appliance->hardware, application->software)"
+  },
+  {
+   "path": "lev.system-security-plan.system-implementation.components[].props[].value",
+   "count": 1,
+   "level": "L1",
+   "destination": "Components (kind mapped: appliance->hardware, application->software)"
+  },
+  {
+   "path": "lev.system-security-plan.system-implementation.components[].responsible-roles[].party-uuids[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "Components (kind mapped: appliance->hardware, application->software)"
+  },
+  {
+   "path": "lev.system-security-plan.system-implementation.components[].responsible-roles[].role-id",
+   "count": 1,
+   "level": "L1",
+   "destination": "Components (kind mapped: appliance->hardware, application->software)"
+  },
+  {
+   "path": "lev.system-security-plan.system-implementation.components[].status.state",
+   "count": 2,
+   "level": "L1",
+   "destination": "Components (kind mapped: appliance->hardware, application->software)"
+  },
+  {
+   "path": "lev.system-security-plan.system-implementation.components[].title",
+   "count": 2,
+   "level": "L1",
+   "destination": "Components (kind mapped: appliance->hardware, application->software)"
+  },
+  {
+   "path": "lev.system-security-plan.system-implementation.components[].type",
+   "count": 2,
+   "level": "L1",
+   "destination": "Components (kind mapped: appliance->hardware, application->software)"
+  },
+  {
+   "path": "lev.system-security-plan.system-implementation.components[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "Components (kind mapped: appliance->hardware, application->software)"
+  },
+  {
+   "path": "lev.system-security-plan.system-implementation.users[].authorized-privileges[].functions-performed[]",
+   "count": 1,
+   "level": "L2",
+   "destination": "system@1 facet users[]"
+  },
+  {
+   "path": "lev.system-security-plan.system-implementation.users[].authorized-privileges[].title",
+   "count": 1,
+   "level": "L2",
+   "destination": "system@1 facet users[]"
+  },
+  {
+   "path": "lev.system-security-plan.system-implementation.users[].role-ids[]",
+   "count": 1,
+   "level": "L2",
+   "destination": "system@1 facet users[]"
+  },
+  {
+   "path": "lev.system-security-plan.system-implementation.users[].uuid",
+   "count": 1,
+   "level": "L2",
+   "destination": "system@1 facet users[]"
+  },
+  {
+   "path": "lev.system-security-plan.uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lvg.system-security-plan.back-matter.resources[].description",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lvg.system-security-plan.back-matter.resources[].rlinks[].href",
+   "count": 5,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lvg.system-security-plan.back-matter.resources[].rlinks[].media-type",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lvg.system-security-plan.back-matter.resources[].uuid",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.description",
+   "count": 1,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].control-id",
+   "count": 1,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].remarks",
+   "count": 1,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].set-parameters[].param-id",
+   "count": 1,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].set-parameters[].values[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].component-uuid",
+   "count": 3,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].description",
+   "count": 3,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].inherited[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].inherited[].provided-uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].inherited[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].responsible-roles[].party-uuids[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].responsible-roles[].role-id",
+   "count": 1,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].satisfied[].description",
+   "count": 2,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].satisfied[].responsibility-uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].satisfied[].responsible-roles[].party-uuids[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].satisfied[].responsible-roles[].role-id",
+   "count": 1,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].satisfied[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].statements[].by-components[].uuid",
+   "count": 3,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].statements[].remarks",
+   "count": 1,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].statements[].statement-id",
+   "count": 1,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].statements[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.control-implementation.implemented-requirements[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "consumer Implementation: inherited -> satisfied-by inherited-from{component, basis-ref} (D5), satisfied -> consumer capability; responsibility shared"
+  },
+  {
+   "path": "lvg.system-security-plan.import-profile.href",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lvg.system-security-plan.metadata.last-modified",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lvg.system-security-plan.metadata.oscal-version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lvg.system-security-plan.metadata.parties[].remarks",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lvg.system-security-plan.metadata.parties[].type",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lvg.system-security-plan.metadata.parties[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lvg.system-security-plan.metadata.published",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lvg.system-security-plan.metadata.roles[].id",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lvg.system-security-plan.metadata.roles[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lvg.system-security-plan.metadata.title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lvg.system-security-plan.metadata.version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.authorization-boundary.description",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.description",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.remarks",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.security-impact-level.security-objective-availability",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.security-impact-level.security-objective-confidentiality",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.security-impact-level.security-objective-integrity",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.security-sensitivity-level",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.status.state",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.system-ids[].id",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.system-information.information-types[].availability-impact.adjustment-justification",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.system-information.information-types[].availability-impact.base",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.system-information.information-types[].availability-impact.selected",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.system-information.information-types[].categorizations[].information-type-ids[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.system-information.information-types[].categorizations[].system",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.system-information.information-types[].confidentiality-impact.adjustment-justification",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.system-information.information-types[].confidentiality-impact.base",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.system-information.information-types[].confidentiality-impact.selected",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.system-information.information-types[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.system-information.information-types[].integrity-impact.adjustment-justification",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.system-information.information-types[].integrity-impact.base",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.system-information.information-types[].integrity-impact.selected",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.system-information.information-types[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.system-information.information-types[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-characteristics.system-name",
+   "count": 1,
+   "level": "L1",
+   "destination": "provider/consumer Components: system@1 facet (description, FIPS-199 carried)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-implementation.components[].description",
+   "count": 4,
+   "level": "L1",
+   "destination": "Components (kind mapped: appliance->hardware, application->software)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-implementation.components[].props[].name",
+   "count": 8,
+   "level": "L1",
+   "destination": "Components (kind mapped: appliance->hardware, application->software)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-implementation.components[].props[].value",
+   "count": 8,
+   "level": "L1",
+   "destination": "Components (kind mapped: appliance->hardware, application->software)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-implementation.components[].status.state",
+   "count": 4,
+   "level": "L1",
+   "destination": "Components (kind mapped: appliance->hardware, application->software)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-implementation.components[].title",
+   "count": 4,
+   "level": "L1",
+   "destination": "Components (kind mapped: appliance->hardware, application->software)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-implementation.components[].type",
+   "count": 4,
+   "level": "L1",
+   "destination": "Components (kind mapped: appliance->hardware, application->software)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-implementation.components[].uuid",
+   "count": 4,
+   "level": "L1",
+   "destination": "Components (kind mapped: appliance->hardware, application->software)"
+  },
+  {
+   "path": "lvg.system-security-plan.system-implementation.leveraged-authorizations[].date-authorized",
+   "count": 1,
+   "level": "L1",
+   "destination": "leveraged-authorizations -> provider Component authorizations[] (the basis-ref anchor); users -> system@1"
+  },
+  {
+   "path": "lvg.system-security-plan.system-implementation.leveraged-authorizations[].links[].href",
+   "count": 1,
+   "level": "L1",
+   "destination": "leveraged-authorizations -> provider Component authorizations[] (the basis-ref anchor); users -> system@1"
+  },
+  {
+   "path": "lvg.system-security-plan.system-implementation.leveraged-authorizations[].links[].rel",
+   "count": 1,
+   "level": "L1",
+   "destination": "leveraged-authorizations -> provider Component authorizations[] (the basis-ref anchor); users -> system@1"
+  },
+  {
+   "path": "lvg.system-security-plan.system-implementation.leveraged-authorizations[].party-uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "leveraged-authorizations -> provider Component authorizations[] (the basis-ref anchor); users -> system@1"
+  },
+  {
+   "path": "lvg.system-security-plan.system-implementation.leveraged-authorizations[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "leveraged-authorizations -> provider Component authorizations[] (the basis-ref anchor); users -> system@1"
+  },
+  {
+   "path": "lvg.system-security-plan.system-implementation.leveraged-authorizations[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "leveraged-authorizations -> provider Component authorizations[] (the basis-ref anchor); users -> system@1"
+  },
+  {
+   "path": "lvg.system-security-plan.system-implementation.users[].authorized-privileges[].functions-performed[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "leveraged-authorizations -> provider Component authorizations[] (the basis-ref anchor); users -> system@1"
+  },
+  {
+   "path": "lvg.system-security-plan.system-implementation.users[].authorized-privileges[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "leveraged-authorizations -> provider Component authorizations[] (the basis-ref anchor); users -> system@1"
+  },
+  {
+   "path": "lvg.system-security-plan.system-implementation.users[].role-ids[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "leveraged-authorizations -> provider Component authorizations[] (the basis-ref anchor); users -> system@1"
+  },
+  {
+   "path": "lvg.system-security-plan.system-implementation.users[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "leveraged-authorizations -> provider Component authorizations[] (the basis-ref anchor); users -> system@1"
+  },
+  {
+   "path": "lvg.system-security-plan.uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.back-matter.resources[].rlinks[].href",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.back-matter.resources[].rlinks[].media-type",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.back-matter.resources[].title",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.back-matter.resources[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.import-ssp.href",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.metadata.last-modified",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.metadata.oscal-version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.metadata.published",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.metadata.revisions[].last-modified",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.metadata.revisions[].links[].href",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.metadata.revisions[].links[].rel",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.metadata.revisions[].oscal-version",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.metadata.revisions[].remarks",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.metadata.revisions[].title",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.metadata.revisions[].version",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.metadata.title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.metadata.version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.observations[].collected",
+   "count": 2,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (deduped against AR by uuid)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.observations[].description",
+   "count": 2,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (deduped against AR by uuid)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.observations[].expires",
+   "count": 1,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (deduped against AR by uuid)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.observations[].methods[]",
+   "count": 2,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (deduped against AR by uuid)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.observations[].remarks",
+   "count": 2,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (deduped against AR by uuid)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.observations[].subjects[].subject-uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (deduped against AR by uuid)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.observations[].subjects[].type",
+   "count": 2,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (deduped against AR by uuid)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.observations[].title",
+   "count": 2,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (deduped against AR by uuid)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.observations[].types[]",
+   "count": 2,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (deduped against AR by uuid)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.observations[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "observations@1 facet + landmark evidence URIs (deduped against AR by uuid)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.poam-items[].description",
+   "count": 2,
+   "level": "L1",
+   "destination": "poam-item titles ride the Finding titles; related-risks/observations resolved by uuid"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.poam-items[].related-observations[].observation-uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "poam-item titles ride the Finding titles; related-risks/observations resolved by uuid"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.poam-items[].related-risks[].risk-uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "poam-item titles ride the Finding titles; related-risks/observations resolved by uuid"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.poam-items[].title",
+   "count": 2,
+   "level": "L1",
+   "destination": "poam-item titles ride the Finding titles; related-risks/observations resolved by uuid"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.poam-items[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "poam-item titles ride the Finding titles; related-risks/observations resolved by uuid"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].characterizations[].facets[].name",
+   "count": 4,
+   "level": "L2",
+   "destination": "risk@1 facet characterizations (likelihood/impact, origin actors)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].characterizations[].facets[].system",
+   "count": 4,
+   "level": "L2",
+   "destination": "risk@1 facet characterizations (likelihood/impact, origin actors)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].characterizations[].facets[].value",
+   "count": 4,
+   "level": "L2",
+   "destination": "risk@1 facet characterizations (likelihood/impact, origin actors)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].characterizations[].origin.actors[].actor-uuid",
+   "count": 2,
+   "level": "L2",
+   "destination": "risk@1 facet characterizations (likelihood/impact, origin actors)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].characterizations[].origin.actors[].type",
+   "count": 2,
+   "level": "L2",
+   "destination": "risk@1 facet characterizations (likelihood/impact, origin actors)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].deadline",
+   "count": 2,
+   "level": "L1",
+   "destination": "Finding id/title/state (deviation-approved -> approved Deviation; open+remediation -> in-remediation); deadline -> risk@1"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].description",
+   "count": 2,
+   "level": "L1",
+   "destination": "Finding id/title/state (deviation-approved -> approved Deviation; open+remediation -> in-remediation); deadline -> risk@1"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].mitigating-factors[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "Deviation rationale (RISK-1) / risk@1 mitigating-factors; observation links -> evidence refs"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].mitigating-factors[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "Deviation rationale (RISK-1) / risk@1 mitigating-factors; observation links -> evidence refs"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].related-observations[].observation-uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "Deviation rationale (RISK-1) / risk@1 mitigating-factors; observation links -> evidence refs"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].remediations[].description",
+   "count": 2,
+   "level": "L1",
+   "destination": "Finding.actions[] (task title/status; within-date-range.end -> due)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].remediations[].lifecycle",
+   "count": 2,
+   "level": "L1",
+   "destination": "Finding.actions[] (task title/status; within-date-range.end -> due)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].remediations[].props[].name",
+   "count": 2,
+   "level": "L1",
+   "destination": "Finding.actions[] (task title/status; within-date-range.end -> due)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].remediations[].props[].value",
+   "count": 2,
+   "level": "L1",
+   "destination": "Finding.actions[] (task title/status; within-date-range.end -> due)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].remediations[].tasks[].description",
+   "count": 2,
+   "level": "L1",
+   "destination": "Finding.actions[] (task title/status; within-date-range.end -> due)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].remediations[].tasks[].timing.within-date-range.end",
+   "count": 2,
+   "level": "L1",
+   "destination": "Finding.actions[] (task title/status; within-date-range.end -> due)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].remediations[].tasks[].timing.within-date-range.start",
+   "count": 2,
+   "level": "L1",
+   "destination": "Finding.actions[] (task title/status; within-date-range.end -> due)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].remediations[].tasks[].title",
+   "count": 2,
+   "level": "L1",
+   "destination": "Finding.actions[] (task title/status; within-date-range.end -> due)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].remediations[].tasks[].type",
+   "count": 2,
+   "level": "L1",
+   "destination": "Finding.actions[] (task title/status; within-date-range.end -> due)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].remediations[].tasks[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "Finding.actions[] (task title/status; within-date-range.end -> due)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].remediations[].title",
+   "count": 2,
+   "level": "L1",
+   "destination": "Finding.actions[] (task title/status; within-date-range.end -> due)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].remediations[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "Finding.actions[] (task title/status; within-date-range.end -> due)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].statement",
+   "count": 2,
+   "level": "L1",
+   "destination": "Finding id/title/state (deviation-approved -> approved Deviation; open+remediation -> in-remediation); deadline -> risk@1"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].status",
+   "count": 2,
+   "level": "L1",
+   "destination": "Finding id/title/state (deviation-approved -> approved Deviation; open+remediation -> in-remediation); deadline -> risk@1"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].title",
+   "count": 2,
+   "level": "L1",
+   "destination": "Finding id/title/state (deviation-approved -> approved Deviation; open+remediation -> in-remediation); deadline -> risk@1"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.risks[].uuid",
+   "count": 2,
+   "level": "L1",
+   "destination": "Finding id/title/state (deviation-approved -> approved Deviation; open+remediation -> in-remediation); deadline -> risk@1"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.system-id.id",
+   "count": 1,
+   "level": "L1",
+   "destination": "provenance / system id (system@1)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.system-id.identifier-type",
+   "count": 1,
+   "level": "L1",
+   "destination": "provenance / system id (system@1)"
+  },
+  {
+   "path": "poam.plan-of-action-and-milestones.uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.back-matter.resources[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.back-matter.resources[].rlinks[].href",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.back-matter.resources[].rlinks[].media-type",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.back-matter.resources[].title",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.back-matter.resources[].uuid",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.control-implementation.description",
+   "count": 1,
+   "level": "L1",
+   "destination": "Implementation: requirement-ref = minted AC-6.1 (in-bundle copy), by-component -> capability + satisfied-by, set-parameters -> parameter-bindings (verified against the declared ODPs), implementation-status -> status"
+  },
+  {
+   "path": "ssp.system-security-plan.control-implementation.implemented-requirements[].by-components[].component-uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "Implementation: requirement-ref = minted AC-6.1 (in-bundle copy), by-component -> capability + satisfied-by, set-parameters -> parameter-bindings (verified against the declared ODPs), implementation-status -> status"
+  },
+  {
+   "path": "ssp.system-security-plan.control-implementation.implemented-requirements[].by-components[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "Implementation: requirement-ref = minted AC-6.1 (in-bundle copy), by-component -> capability + satisfied-by, set-parameters -> parameter-bindings (verified against the declared ODPs), implementation-status -> status"
+  },
+  {
+   "path": "ssp.system-security-plan.control-implementation.implemented-requirements[].by-components[].implementation-status.state",
+   "count": 1,
+   "level": "L1",
+   "destination": "Implementation: requirement-ref = minted AC-6.1 (in-bundle copy), by-component -> capability + satisfied-by, set-parameters -> parameter-bindings (verified against the declared ODPs), implementation-status -> status"
+  },
+  {
+   "path": "ssp.system-security-plan.control-implementation.implemented-requirements[].by-components[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "Implementation: requirement-ref = minted AC-6.1 (in-bundle copy), by-component -> capability + satisfied-by, set-parameters -> parameter-bindings (verified against the declared ODPs), implementation-status -> status"
+  },
+  {
+   "path": "ssp.system-security-plan.control-implementation.implemented-requirements[].control-id",
+   "count": 1,
+   "level": "L1",
+   "destination": "Implementation: requirement-ref = minted AC-6.1 (in-bundle copy), by-component -> capability + satisfied-by, set-parameters -> parameter-bindings (verified against the declared ODPs), implementation-status -> status"
+  },
+  {
+   "path": "ssp.system-security-plan.control-implementation.implemented-requirements[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "Implementation: requirement-ref = minted AC-6.1 (in-bundle copy), by-component -> capability + satisfied-by, set-parameters -> parameter-bindings (verified against the declared ODPs), implementation-status -> status"
+  },
+  {
+   "path": "ssp.system-security-plan.control-implementation.set-parameters[].param-id",
+   "count": 5,
+   "level": "L1",
+   "destination": "Implementation: requirement-ref = minted AC-6.1 (in-bundle copy), by-component -> capability + satisfied-by, set-parameters -> parameter-bindings (verified against the declared ODPs), implementation-status -> status"
+  },
+  {
+   "path": "ssp.system-security-plan.control-implementation.set-parameters[].values[]",
+   "count": 5,
+   "level": "L1",
+   "destination": "Implementation: requirement-ref = minted AC-6.1 (in-bundle copy), by-component -> capability + satisfied-by, set-parameters -> parameter-bindings (verified against the declared ODPs), implementation-status -> status"
+  },
+  {
+   "path": "ssp.system-security-plan.import-profile.href",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.last-modified",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.oscal-version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.parties[].links[].href",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.parties[].links[].rel",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.parties[].member-of-organizations[]",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.parties[].name",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.parties[].short-name",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.parties[].type",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.parties[].uuid",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.published",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.responsible-parties[].party-uuids[]",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.responsible-parties[].role-id",
+   "count": 3,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.revisions[].last-modified",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.revisions[].links[].href",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.revisions[].links[].rel",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.revisions[].oscal-version",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.revisions[].published",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.revisions[].title",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.revisions[].version",
+   "count": 2,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.roles[].id",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.roles[].title",
+   "count": 4,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.title",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.metadata.version",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.authorization-boundary.description",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.data-flow.description",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.date-authorized",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.description",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.network-architecture.description",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.security-impact-level.security-objective-availability",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.security-impact-level.security-objective-confidentiality",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.security-impact-level.security-objective-integrity",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.security-sensitivity-level",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.status.state",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.system-ids[].id",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.system-ids[].identifier-type",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.system-information.information-types[].availability-impact.base",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.system-information.information-types[].categorizations[].information-type-ids[]",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.system-information.information-types[].categorizations[].system",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.system-information.information-types[].confidentiality-impact.base",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.system-information.information-types[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.system-information.information-types[].integrity-impact.adjustment-justification",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.system-information.information-types[].integrity-impact.base",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.system-information.information-types[].integrity-impact.selected",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.system-information.information-types[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.system-information.information-types[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-characteristics.system-name",
+   "count": 1,
+   "level": "L1",
+   "destination": "system Component: authorizations[] (date-authorized -> the D5 anchor + Attestation) + system@1 facet (ids, status, sensitivity, FIPS-199 impact, boundary/network/data-flow, language-tagged)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.components[].description",
+   "count": 1,
+   "level": "L1",
+   "destination": "Component (kind system) id/title/status"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.components[].responsible-roles[].party-uuids[]",
+   "count": 2,
+   "level": "L1",
+   "destination": "Component (kind system) id/title/status"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.components[].responsible-roles[].role-id",
+   "count": 2,
+   "level": "L1",
+   "destination": "Component (kind system) id/title/status"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.components[].status.state",
+   "count": 1,
+   "level": "L1",
+   "destination": "Component (kind system) id/title/status"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.components[].title",
+   "count": 1,
+   "level": "L1",
+   "destination": "Component (kind system) id/title/status"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.components[].type",
+   "count": 1,
+   "level": "L1",
+   "destination": "Component (kind system) id/title/status"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.components[].uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "Component (kind system) id/title/status"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.inventory-items[].description",
+   "count": 6,
+   "level": "L2",
+   "destination": "system@1 facet inventory-items[] (asset props carried verbatim)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.inventory-items[].implemented-components[].component-uuid",
+   "count": 6,
+   "level": "L2",
+   "destination": "system@1 facet inventory-items[] (asset props carried verbatim)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.inventory-items[].implemented-components[].props[].name",
+   "count": 6,
+   "level": "L2",
+   "destination": "system@1 facet inventory-items[] (asset props carried verbatim)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.inventory-items[].implemented-components[].props[].value",
+   "count": 6,
+   "level": "L2",
+   "destination": "system@1 facet inventory-items[] (asset props carried verbatim)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.inventory-items[].props[].class",
+   "count": 19,
+   "level": "L2",
+   "destination": "system@1 facet inventory-items[] (asset props carried verbatim)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.inventory-items[].props[].name",
+   "count": 19,
+   "level": "L2",
+   "destination": "system@1 facet inventory-items[] (asset props carried verbatim)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.inventory-items[].props[].value",
+   "count": 19,
+   "level": "L2",
+   "destination": "system@1 facet inventory-items[] (asset props carried verbatim)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.inventory-items[].uuid",
+   "count": 6,
+   "level": "L2",
+   "destination": "system@1 facet inventory-items[] (asset props carried verbatim)"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.users[].authorized-privileges[].functions-performed[]",
+   "count": 13,
+   "level": "L2",
+   "destination": "system@1 facet users[]"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.users[].authorized-privileges[].title",
+   "count": 3,
+   "level": "L2",
+   "destination": "system@1 facet users[]"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.users[].description",
+   "count": 3,
+   "level": "L2",
+   "destination": "system@1 facet users[]"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.users[].role-ids[]",
+   "count": 2,
+   "level": "L2",
+   "destination": "system@1 facet users[]"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.users[].title",
+   "count": 3,
+   "level": "L2",
+   "destination": "system@1 facet users[]"
+  },
+  {
+   "path": "ssp.system-security-plan.system-implementation.users[].uuid",
+   "count": 3,
+   "level": "L2",
+   "destination": "system@1 facet users[]"
+  },
+  {
+   "path": "ssp.system-security-plan.uuid",
+   "count": 1,
+   "level": "L1",
+   "destination": "bundle manifest / L0 provenance (doc identity, parties -> landmark party URIs, imports)"
+  }
+ ],
+ "objects-emitted": {
+  "req": 2,
+  "component": 6,
+  "impl": 3,
+  "assessment": 1,
+  "finding": 2,
+  "attestation": 1
+ },
+ "carried-requirements": [
+  "https://ns.nist.gov/sp800-53/req/AC-6.1",
+  "https://ns.nist.gov/sp800-53/req/AC-2"
+ ],
+ "stmt-respell": 2,
+ "pua-codepoints": 1,
+ "placeholder-uuids": 4,
+ "unresolved-bindings": [
+  "ac-2_prm_1"
+ ],
+ "lang-wraps": {
+  "system": 6,
+  "observation": 4,
+  "ap": 7,
+  "risk": 3
+ }
+}

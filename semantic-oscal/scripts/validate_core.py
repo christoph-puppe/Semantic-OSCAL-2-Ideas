@@ -127,9 +127,29 @@ def uri_origin(u):
     return "/".join(p[:3]) if str(u).startswith("http") and len(p) >= 3 else str(u)
 
 def derive_tier(tobj, objs, sdig_fn):
+    # Content origin resolves THROUGH selected Sets to their members (and
+    # through op targets): a self-minted wrapper Set around foreign content
+    # must not launder consumer into authority-claimed (gate-3 finding: the
+    # CR26 rev5-odp-overlay wraps NIST controls in a FedRAMP Set).
     origins = set()
+    def set_member_origins(sid, depth=0):
+        tgt = objs.get(sid)
+        if depth > 4 or not tgt or tgt[0] != "requirementSet" or not tgt[1].get("members"):
+            origins.add(uri_origin(sid)); return
+        for m in tgt[1]["members"]:
+            mt = objs.get(m["ref"])
+            if mt and mt[0] == "requirementSet":
+                set_member_origins(m["ref"], depth + 1)
+            else:
+                origins.add(uri_origin(m["ref"]))
     for s in tobj.get("selects", []):
-        origins.add(uri_origin(s["set-ref"]) if "set-ref" in s else "<predicate>")
+        if "set-ref" in s:
+            set_member_origins(s["set-ref"])
+        else:
+            origins.add("<predicate>")
+    for op in tobj.get("operations", []) or []:
+        origins.add(uri_origin(op.get("requirement-ref", "")))
+    origins.discard("")
     content_origin = next(iter(origins)) if len(origins) == 1 and "<predicate>" not in origins else None
     claimed = content_origin is not None and uri_origin(tobj["id"]) == content_origin
     if content_origin:
@@ -274,6 +294,12 @@ def param_check(decl, value):
     if value is None: return "invalid"
     if t == "choice":
         allowed = [c["value"] for c in decl.get("choices", [])]
+        if isinstance(value, list):
+            # multi-select: legal only on cardinality `many`, every element declared
+            # (gate-3: the CR26 CTL overlay binds NIST many-cardinality ODPs as lists)
+            if decl.get("cardinality") != "many" or not value:
+                return "invalid"
+            return "valid" if all(v in allowed for v in value) else "deviation-required"
         return "valid" if value in allowed else "deviation-required"
     if t == "integer":
         if not isinstance(value, int) or isinstance(value, bool): return "invalid"

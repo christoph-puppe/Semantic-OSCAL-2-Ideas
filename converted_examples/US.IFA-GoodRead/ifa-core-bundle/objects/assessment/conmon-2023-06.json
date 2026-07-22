@@ -1,0 +1,121 @@
+{
+ "id": "https://ifa.gov/goodread/assessment/conmon-2023-06",
+ "version": "1.0.0",
+ "lifecycle": "active",
+ "title": "IFA SYSTEM1234 Continuous Monitoring Results June 2023",
+ "subject-refs": [
+  "https://ifa.gov/goodread/component/system1234",
+  "https://ns.nist.gov/sp800-53/req/AC-6.1"
+ ],
+ "method": {
+  "https://ifa.gov/goodread/facet/assessment-plan@1": {
+   "activities": [
+    {
+     "title": "Examine System Elements for Least Privilege Design and Implementation",
+     "description": {
+      "en": "The activity and it steps will be performed by the assessor and facilitated by owner, ISSO, and product team for the IFA SYSTEM1234 system with necessary information and access about least privilege design and implementation of the system's elements: the application, web framework, server, and cloud account infrastructure."
+     },
+     "steps": [
+      {
+       "title": "Obtain Network Access via VPN to IFA SYSTEM1234 Environment",
+       "description": {
+        "en": "The assessor will obtain network access with appropriately configured VPN account to see admin frontend to the application for PAO staff, which is only accessible via VPN with an appropriately configured role for PAO staff accounts."
+       }
+      },
+      {
+       "title": "Obtain Credentials and Access to AWSomeCloud Account for IFA SYSTEM1234 System",
+       "description": {
+        "en": "The assessor will obtain access to the SYSTEM1234 Product Team's AWSomeCloud account with their single sign-on credentials to a read-only assessor role."
+       }
+      },
+      {
+       "title": "Obtain Application Access Provided by Product Team",
+       "description": {
+        "en": "The assessor will obtain non-privileged account credentials with the PAO staff role to test this role in the application does not permit excessive administrative operations."
+       }
+      },
+      {
+       "title": "Confirm Load Balancer Blocks Access to Admin Frontend from Internet",
+       "description": {
+        "en": "The assessor will confirm that the load balancer for public access does not allow access to Admin Frontend of the application from the Internet."
+       }
+      },
+      {
+       "title": "Confirm SYSTEM1234's PAO Role Cannot Manage Users",
+       "description": {
+        "en": "The assessor will confirm that user's logged into the SYSTEM1234 Application with the PAO staff role cannot add, modify, or disable users from the system."
+       }
+      },
+      {
+       "title": "Confirm Django Admin Panel Not Available",
+       "description": {
+        "en": "The assessor will confirm with web-based interface and API methods users with the PAO Staff role cannot access the Django admin panel functions and interactively change application's database records."
+       }
+      }
+     ]
+    }
+   ],
+   "tasks": [
+    {
+     "title": "Examine Least Privilege Design and Implementation",
+     "type": "action"
+    }
+   ],
+   "reviewed-controls": [
+    "ac-6.1"
+   ]
+  }
+ },
+ "performer-ref": "https://ifa.gov/goodread/party/amy-assessor",
+ "time": "2023-06-02T08:31:20-04:00",
+ "result": "not-satisfied",
+ "evidence-refs": [
+  "https://ifa.gov/goodread/evidence/obs-8807eb6e",
+  "https://ifa.gov/goodread/evidence/obs-4a2fb32e",
+  "https://ifa.gov/goodread/evidence/obs-0c4de4fc"
+ ],
+ "facets": {
+  "https://ifa.gov/goodread/facet/observations@1": {
+   "observations": [
+    {
+     "id": "https://ifa.gov/goodread/evidence/obs-8807eb6e",
+     "title": "AwesomeCloud IAM Roles Test - SYSTEM1234 System Engineer Role",
+     "description": {
+      "en": "Test AwesomeCloud IAM Roles for least privilege design and implementation."
+     },
+     "methods": [
+      "TEST"
+     ],
+     "collected": "2023-06-02T08:31:20-04:00",
+     "expires": "2023-07-01T00:00:00-04:00",
+     "source-doc": "ar"
+    },
+    {
+     "id": "https://ifa.gov/goodread/evidence/obs-4a2fb32e",
+     "title": "AwesomeCloud IAM Roles Test - SYSTEM1234 Developer Role",
+     "description": {
+      "en": "Test AwesomeCloud IAM Roles for least privilege design and implementation."
+     },
+     "methods": [
+      "TEST"
+     ],
+     "collected": "2023-06-02T08:31:20-04:00",
+     "expires": "2023-07-01T00:00:00-04:00",
+     "source-doc": "ar"
+    },
+    {
+     "id": "https://ifa.gov/goodread/evidence/obs-0c4de4fc",
+     "title": "Django Framework Examination",
+     "description": {
+      "en": "Examine Django Framework for least privilege design and implementation."
+     },
+     "methods": [
+      "EXAMINE"
+     ],
+     "collected": "2023-05-19T12:14:16-04:00",
+     "source-doc": "poam"
+    }
+   ]
+  }
+ }
+}

@@ -179,3 +179,18 @@ the URI — lineage is D2's job). Version `2.0`.
   remediation lifecycle).
 - **#16 promotion:** with Rev 5 in-bundle, CR26/SCF mapping endpoints
   that were landmark become closure-checkable — re-run and report.
+
+---
+
+## 9. Outcome (2026-07-22, same day)
+
+All three converters delivered census-first and green — see the
+computed coverage reports beside each bundle, spec IV.9, and the
+register ("Amendments — gate 3"). Headlines: **UNMAPPED 0 on all three
+corpora** (115,680 + 4,726 + 835 leaves) · **zero kernel-schema changes
+forced** (customer test passed) · #10 drained by measurement (§7.4:
+multi-declared = 0) · all 373 corpus mapping endpoints resolve (§7.3:
+withdrawn hits = 0) · #9 confirmed with zero enum additions · two
+reference-validator defects exposed and fixed (tier wrapper-laundering,
+choice-many list values; 125 → 129 vectors) · the pre-registered
+findings of §7 all landed, plus five more source findings (see IV.9).

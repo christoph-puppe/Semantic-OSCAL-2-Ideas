@@ -10,9 +10,9 @@
  "objects": {
   "requirements(rules+ksi)": 292,
   "mappings": 373,
-  "sets": 91,
-  "tailorings": 4,
-  "total": 760
+  "sets": 92,
+  "tailorings": 5,
+  "total": 776
  },
  "modality(rule-level)": {
   "must": 136,
@@ -36,6 +36,9 @@
   "flows-dropped": 1,
   "ksi-class-variant": 5,
   "term-alts": 188,
+  "ctl-multiselect-normalized": 3,
+  "ctl-odp-ops": 16,
+  "ctl-carried-reqs": 14,
   "ctl-overlays": 79
  },
  "lang-wraps": {
@@ -56,49 +59,49 @@
    "path": "cr26.CTL.*.*.guidance[]",
    "count": 67,
    "level": "L2",
-   "destination": "CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3)"
+   "destination": "CTL guidance/variants: parked payload on /cr26/set/ctl-overlay - FedRAMP supplemental prose on external controls (D20 supplements territory, not ODP addressing)"
   },
   {
    "path": "cr26.CTL.*.*.parameters[].parameterId",
    "count": 16,
-   "level": "L2",
-   "destination": "CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3)"
+   "level": "L1",
+   "destination": "CTL ODP assignments -> set-parameter ops on the rev5-odp-overlay Tailoring, statement-addressed via the declaring statement; tailored Rev 5 Requirements carried in-bundle (backlog #10 DRAINED, gate 3)"
   },
   {
    "path": "cr26.CTL.*.*.parameters[].value",
    "count": 16,
-   "level": "L2",
-   "destination": "CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3)"
+   "level": "L1",
+   "destination": "CTL ODP assignments -> set-parameter ops on the rev5-odp-overlay Tailoring, statement-addressed via the declaring statement; tailored Rev 5 Requirements carried in-bundle (backlog #10 DRAINED, gate 3)"
   },
   {
    "path": "cr26.CTL.*.*.updated[].comment",
    "count": 1,
    "level": "L2",
-   "destination": "CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3)"
+   "destination": "CTL guidance/variants: parked payload on /cr26/set/ctl-overlay - FedRAMP supplemental prose on external controls (D20 supplements territory, not ODP addressing)"
   },
   {
    "path": "cr26.CTL.*.*.updated[].date",
    "count": 1,
    "level": "L2",
-   "destination": "CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3)"
+   "destination": "CTL guidance/variants: parked payload on /cr26/set/ctl-overlay - FedRAMP supplemental prose on external controls (D20 supplements territory, not ODP addressing)"
   },
   {
    "path": "cr26.CTL.*.*.varies_by_class.*.guidance[]",
    "count": 6,
    "level": "L2",
-   "destination": "CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3)"
+   "destination": "CTL guidance/variants: parked payload on /cr26/set/ctl-overlay - FedRAMP supplemental prose on external controls (D20 supplements territory, not ODP addressing)"
   },
   {
    "path": "cr26.CTL.*.*.varies_by_class.*.parameters[].parameterId",
    "count": 5,
    "level": "L2",
-   "destination": "CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3)"
+   "destination": "CTL guidance/variants: parked payload on /cr26/set/ctl-overlay - FedRAMP supplemental prose on external controls (D20 supplements territory, not ODP addressing)"
   },
   {
    "path": "cr26.CTL.*.*.varies_by_class.*.parameters[].value",
    "count": 5,
    "level": "L2",
-   "destination": "CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3)"
+   "destination": "CTL guidance/variants: parked payload on /cr26/set/ctl-overlay - FedRAMP supplemental prose on external controls (D20 supplements territory, not ODP addressing)"
   },
   {
    "path": "cr26.FRD.data.all.*.alts[]",

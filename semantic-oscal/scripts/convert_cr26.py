@@ -116,7 +116,8 @@ RULES=[
  (re.escape(KSI)+r"\.updated\[\]\.","L1","history -> L0 (counted)"),
  (re.escape(KVAR)+r"\.","L2","class-variants payload on the KSI Requirement"),
  (r"^cr26\.KSI\.\*\.(id|name|web_name|short_name|status)$","L1","KSI category Set: id/title/label/annotations/lifecycle"),
- (r"^cr26\.CTL\.\*\.\*\.","L2","CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3)"),
+ (r"^cr26\.CTL\.\*\.\*\.parameters\[\]\.","L1","CTL ODP assignments -> set-parameter ops on the rev5-odp-overlay Tailoring, statement-addressed via the declaring statement; tailored Rev 5 Requirements carried in-bundle (backlog #10 DRAINED, gate 3)"),
+ (r"^cr26\.CTL\.\*\.\*\.","L2","CTL guidance/variants: parked payload on /cr26/set/ctl-overlay - FedRAMP supplemental prose on external controls (D20 supplements territory, not ODP addressing)"),
 ]
 def dest(p):
     for pat,l,t in RULES:
@@ -257,7 +258,8 @@ def convert_ksi(catid,cat,iid,ind):
         objects[f"objects/map/{slug(iid)}--{slug(ctl)}.json"]=m; mappings+=1
     return uri
 
-if os.path.exists(OUT): shutil.rmtree(OUT)
+# in-place overwrite; stale-file cleanup happens after the write set is known
+# (house rule: never rmtree/rmdir - OneDrive/indexers hold transient dir handles)
 seq={"n":0}
 def nseq(): seq["n"]+=10; return seq["n"]
 class_members=collections.defaultdict(list); type_members=collections.defaultdict(list)
@@ -378,8 +380,66 @@ def _wrap_ctl_guidance(n):
     elif isinstance(n,list):
         for x in n: _wrap_ctl_guidance(x)
 _wrap_ctl_guidance(ctl_payload)
+
+# ---- backlog #10 drain (gate 3): CTL ODP assignments -> set-parameter Tailoring ----
+# The parameterIds are the Rev 5.2.0 ODP ids verbatim; the (requirement, ODP)
+# address resolves via the DECLARING statement (measured: no ODP is inserted
+# in >=2 statements). The tailored NIST Requirements ride along in-bundle
+# (closure; the IFA pattern: a tailoring package carries what it tailors).
+NISTB=os.path.join(ROOT,"converted_examples","US.SP800-53","sp800-53-core-bundle")
+def _ctl_cid(label):   # AC-06-01 -> ac-6.1; AU-10 -> au-10
+    ps=label.split("-")
+    cid=f"{ps[0].lower()}-{int(ps[1])}"
+    return cid+(f".{int(ps[2])}" if len(ps)>2 else "")
+ctl_ops=[]; ctl_carried={}; ctl_choice_conflicts=[]
+for fam,entries in d["CTL"].items():
+    for label,e in entries.items():
+        if not e.get("parameters"): continue
+        cid=_ctl_cid(label)
+        fp=os.path.join(NISTB,"objects","req",cid.replace(".","-")+".json")
+        if not os.path.exists(fp):
+            raise SystemExit(f"missing {fp} - run convert_nist.py first (backlog #10 drain)")
+        robj=json.load(open(fp,encoding="utf-8"))
+        for pa in e["parameters"]:
+            pid,val=pa["parameterId"],pa["value"]
+            sid=next((s["id"] for s in robj["statements"]
+                      for p in s.get("parameters",[]) if p["name"]==pid),None)
+            decl=next((p for s in robj["statements"] for p in s.get("parameters",[]) if p["name"]==pid),None)
+            if sid is None:
+                ctl_choice_conflicts.append((label,pid,"no such ODP on the Rev 5.2.0 control")); continue
+            if decl.get("type")=="choice" and val not in {c["value"] for c in decl.get("choices",[])}:
+                # FedRAMP flattens multi-selections into prose strings ("a; b",
+                # "a, b and c"); NIST declares cardinality-many choices. Split;
+                # if EVERY part is a declared choice it is pure serialization ->
+                # list value (counted); anything else is a real conflict (parked).
+                parts=[x.strip() for x in re.split(r";|,| and ",val) if x.strip()]
+                allowed={c["value"] for c in decl.get("choices",[])}
+                if decl.get("cardinality")=="many" and parts and all(x in allowed for x in parts):
+                    ctl_ops.append({"op":"set-parameter","requirement-ref":robj["id"],
+                                    "statement-id":sid,"parameter":pid,"value":parts})
+                    ctl_carried[cid]=robj
+                    counters["ctl-multiselect-normalized"]+=1
+                    continue
+                ctl_choice_conflicts.append((label,pid,"value outside the declared choices")); continue
+            ctl_ops.append({"op":"set-parameter","requirement-ref":robj["id"],
+                            "statement-id":sid,"parameter":pid,"value":val})
+            ctl_carried[cid]=robj
+        # drained: strip the parameters from the parked payload (guidance stays L2)
+        ctl_payload[fam][label].pop("parameters",None)
+        if not ctl_payload[fam][label]: del ctl_payload[fam][label]
+for cid,robj in sorted(ctl_carried.items()):
+    objects[f"objects/req/nist-{cid.replace('.','-')}.json"]=robj
+objects["objects/set/rev5-tailored.json"]={"id":f"{NS}/set/rev5-tailored","version":VER,
+    "lifecycle":"active","title":"Rev 5 controls tailored by the CTL ODP overlay (carried in-bundle)",
+    "members":[{"ref":o["id"],"sequence":(i+1)*10} for i,(c,o) in enumerate(sorted(ctl_carried.items()))]}
+objects["objects/tailoring/rev5-odp-overlay.json"]={"id":f"{NS}/tailoring/rev5-odp-overlay",
+    "version":VER,"lifecycle":"active",
+    "title":"FedRAMP CTL ODP assignments over NIST SP 800-53 Rev 5 (backlog #10 drained)",
+    "selects":[{"set-ref":f"{NS}/set/rev5-tailored"}],"operations":ctl_ops}
+counters["ctl-odp-ops"]=len(ctl_ops); counters["ctl-carried-reqs"]=len(ctl_carried)
+
 objects["objects/set/ctl-overlay.json"]={"id":f"{NS}/set/ctl-overlay","version":VER,
-    "lifecycle":"active","title":"Rev5 control overlay (parked L2)",
+    "lifecycle":"active","title":"Rev5 control overlay (guidance parked L2; ODP assignments drained to the rev5-odp-overlay Tailoring)",
     "members":[{"ref":f"{NS}/set/type/rev5","sequence":10}],
     "facets":{F_COMPAT:{"ctl":ctl_payload}}}
 counters["ctl-overlays"]=sum(len(v) for v in d["CTL"].values())
@@ -406,7 +466,30 @@ stub("schemas/cr26-scope-stub.json",F_SCOPE.split("@")[0],["selection"],{"classe
 stub("schemas/cr26-narrative-stub.json",F_NARR.split("@")[0],[],
      {"description":{"type":"object","additionalProperties":{"type":"string"}}})
 stub("schemas/oscal-1x-compat-stub.json",F_COMPAT.split("@")[0],[],{"class-variants":{"type":"object"},"ctl":{"type":"object"}})
+# carried Rev 5 Requirements bring their facet pins (#17 fail-closed)
+stub("schemas/sp800-53-narrative-stub.json","https://ns.nist.gov/sp800-53/facet/narrative",[],{"guidance":{"type":"array"}})
+stub("schemas/sp800-53a-stub.json","https://ns.nist.gov/sp800-53/facet/sp800-53a",[],{"objectives":{"type":"array"},"methods":{"type":"array"}})
+stub("schemas/sp800-53-odp-stub.json","https://ns.nist.gov/sp800-53/facet/odp",[],{"params":{"type":"object"}})
+stub("schemas/sp800-53-rmf-stub.json","https://ns.nist.gov/sp800-53/facet/rmf",[],{"contributes-to-assurance":{"type":"boolean"}})
 
+# stale-file cleanup (files only, never rmdir): everything not re-emitted goes
+want={os.path.normpath(r) for r in objects}|{"content-manifest.json"}
+want|={os.path.normpath(f"schemas/{s}") for s in
+       ("terminology-stub.json","reporting-obligation-stub.json","effectivity-stub.json",
+        "assessment-criteria-stub.json","cr26-scope-stub.json","cr26-narrative-stub.json",
+        "oscal-1x-compat-stub.json","sp800-53-narrative-stub.json","sp800-53a-stub.json",
+        "sp800-53-odp-stub.json","sp800-53-rmf-stub.json")}
+if os.path.exists(OUT):
+    import time as _t
+    for base,_,files in os.walk(OUT):
+        for fn in files:
+            full=os.path.join(base,fn)
+            if os.path.normpath(os.path.relpath(full,OUT)) not in want:
+                for i in range(5):
+                    try: os.remove(full); break
+                    except OSError:
+                        if i==4: raise
+                        _t.sleep(0.3*(i+1))
 for rel,o in objects.items(): w(rel,o)
 manifest={"manifest-version":"1",
  "provenance":{"source":d["info"]["title"],"source-version":VER,
@@ -467,6 +550,14 @@ md=[f"# CR26 -> Semantic Core: Coverage Report (computed)\n",
  f"- **KSI control lists -> {mappings} Mapping objects** (relationship `supports`, confidence `draft`, "
  f"rationale per handbook 8.6 untyped-import rule; targets minted under {NIST}/).",
  f"- **FRD -> terminology@1** hosted on the corpus root Set (glossary-info carries the FRD block metadata): 75 terms, {counters.get('term-alts',0)} aliases, links and chrome flags in-payload.",
+ f"- **CTL ODP assignments DRAINED (backlog #10, gate 3)**: {counters.get('ctl-odp-ops',0)} set-parameter ops on the "
+ f"`rev5-odp-overlay` Tailoring, each addressed (requirement-ref, statement-id, parameter) via the DECLARING "
+ f"statement of the Rev 5.2.0 ODP (measured: no ODP is declared in two statements); {counters.get('ctl-carried-reqs',0)} "
+ f"tailored Rev 5 Requirements carried in-bundle as byte-identical copies (closure; the authorization-package "
+ f"pattern). CTL guidance entries stay parked L2 - supplemental prose on external controls is D20 supplements "
+ f"territory, not ODP addressing. Multi-select serialization normalized x{counters.get('ctl-multiselect-normalized',0)} "
+ f"(FedRAMP flattens many-cardinality selections into prose strings 'a; b' / 'a, b and c'; every part matches a "
+ f"declared NIST choice -> list value; REPORTED upstream). Residual choice conflicts: {ctl_choice_conflicts or 'none'}.",
  f"- **notification/following_information -> reporting-obligation@1**; artifacts.all -> assessment-criteria@1; "
  f"note/notes/danger/examples/corrective_actions -> narrative@1.",
  f"- **rule/KSI term names resolved to FRD ids** via the term+alias index (unresolved x{counters.get('unresolved-terms',0)} kept as slugs, counted).",

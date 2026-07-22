@@ -6,7 +6,7 @@ Source: **FedRAMP Consolidated Rules for 2026** v2026.07.14.01 (bespoke JSON; no
 
 - Source leaf values inventoried (id-normalized paths): **7,294**
 - Mapped: **7,294** -> **UNMAPPED: 0** -> coverage **100.0 %**
-- Emitted: **292 Requirements** (FRR rules + KSIs), **373 Mapping objects**, **91 Sets** (families, subsets, classes, types, KSI categories, terms, root), **4 class Tailorings**, manifest with both digests, 7 pinned stubs.
+- Emitted: **292 Requirements** (FRR rules + KSIs), **373 Mapping objects**, **92 Sets** (families, subsets, classes, types, KSI categories, terms, root), **5 class Tailorings**, manifest with both digests, 11 pinned stubs.
 
 ## Conversion rules (declared, counted)
 
@@ -16,6 +16,7 @@ Source: **FedRAMP Consolidated Rules for 2026** v2026.07.14.01 (bespoke JSON; no
 - **varies_by_class** preserved in full as L2 `class-variants` payloads on 29 rules (+5 KSIs); computable deltas additionally emitted as ops. Variant-only rules (no base statement): synthesized base prose x29 (flagged).
 - **KSI control lists -> 373 Mapping objects** (relationship `supports`, confidence `draft`, rationale per handbook 8.6 untyped-import rule; targets minted under https://ns.nist.gov/sp800-53/req/).
 - **FRD -> terminology@1** hosted on the corpus root Set (glossary-info carries the FRD block metadata): 75 terms, 188 aliases, links and chrome flags in-payload.
+- **CTL ODP assignments DRAINED (backlog #10, gate 3)**: 16 set-parameter ops on the `rev5-odp-overlay` Tailoring, each addressed (requirement-ref, statement-id, parameter) via the DECLARING statement of the Rev 5.2.0 ODP (measured: no ODP is declared in two statements); 14 tailored Rev 5 Requirements carried in-bundle as byte-identical copies (closure; the authorization-package pattern). CTL guidance entries stay parked L2 - supplemental prose on external controls is D20 supplements territory, not ODP addressing. Multi-select serialization normalized x3 (FedRAMP flattens many-cardinality selections into prose strings 'a; b' / 'a, b and c'; every part matches a declared NIST choice -> list value; REPORTED upstream). Residual choice conflicts: none.
 - **notification/following_information -> reporting-obligation@1**; artifacts.all -> assessment-criteria@1; note/notes/danger/examples/corrective_actions -> narrative@1.
 - **rule/KSI term names resolved to FRD ids** via the term+alias index (unresolved x0 kept as slugs, counted).
 - **updated[] -> L0** (entries counted: 377; values not object-carried).
@@ -34,14 +35,14 @@ Source: **FedRAMP Consolidated Rules for 2026** v2026.07.14.01 (bespoke JSON; no
 ## Full path map
 | path | count | level | destination |
 |---|---:|---|---|
-| `cr26.CTL.*.*.guidance[]` | 67 | L2 | CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3) |
-| `cr26.CTL.*.*.parameters[].parameterId` | 16 | L2 | CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3) |
-| `cr26.CTL.*.*.parameters[].value` | 16 | L2 | CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3) |
-| `cr26.CTL.*.*.updated[].comment` | 1 | L2 | CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3) |
-| `cr26.CTL.*.*.updated[].date` | 1 | L2 | CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3) |
-| `cr26.CTL.*.*.varies_by_class.*.guidance[]` | 6 | L2 | CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3) |
-| `cr26.CTL.*.*.varies_by_class.*.parameters[].parameterId` | 5 | L2 | CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3) |
-| `cr26.CTL.*.*.varies_by_class.*.parameters[].value` | 5 | L2 | CTL Rev5 overlay: parked payload on /cr26/set/ctl-overlay - external-catalog ODP assignment resolves when the NIST catalog is converted (gate item 3) |
+| `cr26.CTL.*.*.guidance[]` | 67 | L2 | CTL guidance/variants: parked payload on /cr26/set/ctl-overlay - FedRAMP supplemental prose on external controls (D20 supplements territory, not ODP addressing) |
+| `cr26.CTL.*.*.parameters[].parameterId` | 16 | L1 | CTL ODP assignments -> set-parameter ops on the rev5-odp-overlay Tailoring, statement-addressed via the declaring statement; tailored Rev 5 Requirements carried in-bundle (backlog #10 DRAINED, gate 3) |
+| `cr26.CTL.*.*.parameters[].value` | 16 | L1 | CTL ODP assignments -> set-parameter ops on the rev5-odp-overlay Tailoring, statement-addressed via the declaring statement; tailored Rev 5 Requirements carried in-bundle (backlog #10 DRAINED, gate 3) |
+| `cr26.CTL.*.*.updated[].comment` | 1 | L2 | CTL guidance/variants: parked payload on /cr26/set/ctl-overlay - FedRAMP supplemental prose on external controls (D20 supplements territory, not ODP addressing) |
+| `cr26.CTL.*.*.updated[].date` | 1 | L2 | CTL guidance/variants: parked payload on /cr26/set/ctl-overlay - FedRAMP supplemental prose on external controls (D20 supplements territory, not ODP addressing) |
+| `cr26.CTL.*.*.varies_by_class.*.guidance[]` | 6 | L2 | CTL guidance/variants: parked payload on /cr26/set/ctl-overlay - FedRAMP supplemental prose on external controls (D20 supplements territory, not ODP addressing) |
+| `cr26.CTL.*.*.varies_by_class.*.parameters[].parameterId` | 5 | L2 | CTL guidance/variants: parked payload on /cr26/set/ctl-overlay - FedRAMP supplemental prose on external controls (D20 supplements territory, not ODP addressing) |
+| `cr26.CTL.*.*.varies_by_class.*.parameters[].value` | 5 | L2 | CTL guidance/variants: parked payload on /cr26/set/ctl-overlay - FedRAMP supplemental prose on external controls (D20 supplements territory, not ODP addressing) |
 | `cr26.FRD.data.all.*.alts[]` | 188 | L1 | terminology@1 payload per term (alts, links, chrome flags inside payload) |
 | `cr26.FRD.data.all.*.definition` | 75 | L1 | terminology@1 payload per term (alts, links, chrome flags inside payload) |
 | `cr26.FRD.data.all.*.do_not_link` | 4 | L1 | terminology@1 payload per term (alts, links, chrome flags inside payload) |
