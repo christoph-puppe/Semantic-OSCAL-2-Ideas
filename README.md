@@ -1,17 +1,28 @@
-# Semantic OSCAL — Ideas
+# OSCAL Semantic Core
 
-A design study for **OSCAL Semantic Core**: compliance data as a graph of nine
-shallow, globally identified objects instead of eight nested document models.
-This repository holds the handbook, the draft specification, eight converted
-corpora (the three-authority census base plus five validation frameworks),
-and a ready-to-install Claude skill that applies the standard.
+**Machine-readable compliance, rebuilt around meaning: nine shallow object
+types, two digests, and one house rule — every claim in the spec must survive
+contact with real catalogs before it may stay.**
 
-Status: **pre-1.0, evidence-gated.** The specification is at v0.5 with a v0.6
-feedback backlog open. Nothing here is endorsed by NIST, BSI, ACSC, or FedRAMP.
+This repository is a working design study, not a slide deck. It contains a
+draft specification with a public decision register, an **executable kernel
+schema** with a **115-vector conformance corpus** and a reference validator,
+**eight national and industry frameworks converted losslessly** (130,350
+source leaf values, coverage computed rather than asserted), and a
+zero-dependency **single-file reader & authoring studio** that turns the whole
+thing into something you can click.
 
----
+> Status: **pre-1.0, evidence-gated**, maintained in personal capacity.
+> Nothing here is endorsed by NIST, BSI, ACSC, CCB, CIS, or FedRAMP.
 
-## Why
+![The bundle reader on the FedRAMP CR26 corpus: the Tailor stage derives the authority tier from data (id origin + selected content + attestations), counts same-target conflicts, and gives every operation a modality-lattice verdict — live, client-side.](docs/img/reader-tailor.png)
+
+*Above: the reader on the FedRAMP CR26 corpus. The `tier: authority-claimed`
+chip is **derived from the data**, not asserted; every tailoring operation
+gets a before→after lattice verdict; weakening without a recorded Deviation is
+refused while you type.*
+
+## Why this exists
 
 OSCAL 1.x is *rigid where frameworks legitimately differ* and *contractless
 where meaning actually lives* — and every measured pathology flows from one
@@ -39,7 +50,7 @@ side of that paradox:
 
 Full argument with sources: [Chapter 1 — Why This Exists](semantic-oscal/references/ch01-why-this-exists.md).
 
-## What it is
+## The bet
 
 Nine kernel objects — Requirement, RequirementSet, Tailoring, Mapping,
 Component, Implementation, Assessment, Finding, Attestation — plus two
@@ -50,7 +61,7 @@ Three layers, strictly separated:
 
 | Layer | Holds | Contract |
 |---|---|---|
-| **Kernel** | What all three corpora were measured to need: binding force, clauses, typed parameters and deadlines, membership, aliases, history | Normative, fixed |
+| **Kernel** | What the census corpora were measured to need: binding force, clauses, typed parameters and deadlines, membership, aliases, history | Normative, fixed |
 | **Facets** | Framework-specific vocabulary | Registered, schema-pinned, machine-checked; fail-closed on unknown semantics |
 | **Annotations** | Rendering hints and chrome | Invisible to compliance |
 
@@ -62,88 +73,51 @@ carry it or stop with a reason, never guess.
 
 Every design decision is scored against four tests — *simpler · closer to
 measured customer needs · no more props · less need for bespoke JSON* — in the
-[Decision Rationale Register](drafts/oscal-semantic-core-decision-rationale-register.md).
+[Decision Rationale Register](drafts/oscal-semantic-core-decision-rationale-register.md)
+(22 decisions plus a public amendment log; rejected alternatives stay on the
+record).
 
 Start here: [Chapter 2 — The Core in One Hour](semantic-oscal/references/ch02-the-core-in-one-hour.md),
 or the [one-file explainer](semantic-core-explainer-concept-files-workflow.md)
 if you prefer diagrams.
 
-## How to use this repo
+## Proof, not promises
 
-### As a Claude skill
+The project moves through evidence gates; nothing advances on narrative.
 
-[`semantic-oscal/`](semantic-oscal/) is an installable skill that guides an
-agent through authoring, validating, and migrating Semantic Core content. Its
-[SKILL.md](semantic-oscal/SKILL.md) turns the 15 handbook chapters into 14
-numbered requirements, each with reference chapters and companion examples.
+- **Gate 1 — the census (done).** Three national corpora (ACSC ISM, BSI
+  Grundschutz++, FedRAMP CR26) inventoried to the last prop *before* the
+  architecture was drawn: the kernel is what all three were measured to need.
+- **Gate 2 — executable (done).** The normative JSON Schema, seven stdlib
+  facet descriptors (including a DSSE attestation envelope profile), a
+  **115-vector conformance corpus** in nine suites (canonicalization,
+  modality lattice, parameters, tailoring law, attestation, facet
+  enforcement, reference closure, lifecycle, authority tiers), and
+  [`validate_core.py`](semantic-oscal/scripts/validate_core.py) — which
+  re-verifies **5,470 objects across all eight bundles with both SHA-256
+  digests each**, every object matching exactly one kernel shape. Current
+  totals: 3,450 Requirements · 1,013 Sets · 1,009 Mappings.
+- **Hardened by three external adversarial review rounds** (a FedRAMP
+  automation-team exchange, a deep-research review, and twin
+  independent red-team runs): findings land in the public backlog with
+  counts, close via register entries, and corrections ship with
+  strikethrough — including the ones that made us look worse. Measured
+  size deltas versus the OSCAL sources: ISM **−29 %**, GS++ **−50 %**,
+  CR26 **+55 %** — smaller where sources are redundant, larger where a
+  bespoke format was terse. No round trips survive on marketing numbers.
+- **Gate 3 — next.** NIST SP 800-53 Rev 5 + 800-53B baselines, CSF 2.0, and a
+  full lifecycle corpus (SSP/AP/AR/POA&M equivalents), making the minted NIST
+  mapping targets real.
 
-Install by copying the directory into your skills folder, or unpack
-`SKILL_semantic-oscal.zip`:
+Reproduce the whole verdict in one line (needs [uv](https://docs.astral.sh/uv/)):
 
 ```
-~/.claude/skills/semantic-oscal/     # user-level
-.claude/skills/semantic-oscal/       # project-level
+uv run --no-project --with jsonschema python semantic-oscal/scripts/validate_core.py
 ```
 
-It carries 18 worked examples plus an index in [`examples/`](semantic-oscal/examples/) — a
-self-consistent bundle from a zero-facet minimum requirement through
-attestations with semantic digests — the converters in
-[`scripts/`](semantic-oscal/scripts/), and, since gate 2 (2026-07-21), the
-**normative kernel JSON Schema**, six stdlib facet descriptors, a
-54-vector conformance corpus, and the reference validator
-([`validate_core.py`](semantic-oscal/scripts/validate_core.py)) — which
-validates the eight corpus bundles plus the example bundle green:
-5,470 manifest-listed objects with both digests re-verified each (plus 8
-manifest checks and 13 example objects shape-checked without digests),
-every object matching exactly one kernel shape.
+### The corpus
 
-### As a human
-
-[`one-page-apps/semantic-core-reader.html`](one-page-apps/semantic-core-reader.html)
-is a zero-dependency, single-file bundle reader: open it in a browser, drop
-in any bundle folder from `converted_examples/`, and it renders the objects
-for humans — statements with their modality lattice, facets and annotations
-visually separated, and one-click re-verification of both SHA-256 digests
-per object, entirely client-side (nothing is uploaded anywhere). The five
-stages of the compliance graph are working views, not just explanations:
-a navigable catalog tree with baselines, a live Tailoring resolver
-(selection expansion, same-target conflict detection, before→after lattice
-verdicts), a filterable crosswalk table, an implementation inspector that
-checks inheritance basis-refs, and an assessment board with bi-modal
-attestation verification (Full/Semantic Match/Tamper). Since v1.2 the
-stages also *author*: build your own Tailoring (with the weakening rules
-enforced live — easings demand a Deviation, unit-class crossings are
-blocked, same-target conflicts refused), assemble a system of assets that
-carry controls, and run a checklist assessment that mints real Assessment
-and Finding objects back into the graph. Since v1.3 all five stages
-author (Requirements and Sets too, with `{param:}` tokens auto-declared;
-Mappings with external targets), a Tailoring resolves to an exportable
-resolved package (Appendix B steps 3–4 in the browser), and the whole
-workspace exports as a **real bundle**: a client-side ZIP whose
-content-manifest carries both SHA-256 digests per object — re-loadable
-here, verifiable by `validate_core.py`. Authored objects persist across
-reloads. v1.4 adds the control selector: attaching controls to an asset
-opens a filter bar auto-populated from everything the loaded corpus
-actually carries — kernel dimensions (modality, lifecycle, party), Set
-membership, and every facet field with an enumerable value space
-(sec-level, tags, implementation-group, …) — over a checkbox list of all
-matching controls with select-all and bulk attach.
-
-### As a specification
-
-- [`drafts/oscal-semantic-core-v0.5-specification.md`](drafts/oscal-semantic-core-v0.5-specification.md) — the normative draft
-- [`drafts/oscal-semantic-core-decision-rationale-register.md`](drafts/oscal-semantic-core-decision-rationale-register.md) — 22 decisions, each scored against the north star, with rejected alternatives
-- [`drafts/oscal-semantic-core-v0.6-spec-feedback-backlog.md`](drafts/oscal-semantic-core-v0.6-spec-feedback-backlog.md) — the living input queue for v0.6: items enter with counts, leave via register entries
-
-### As evidence
-
-[`converted_examples/`](converted_examples/) holds the three census corpora
-(the evidence base the architecture was derived from) plus five further
-frameworks converted as validation targets — each with a computed coverage
-report: a bundle of objects, pinned facet schemas, and a manifest carrying
-both digests per object.
-
-The census corpora (gate 1):
+The census corpora (gate 1 — the evidence base the architecture was derived from):
 
 | Corpus | Source | Emitted | Coverage |
 |---|---|---|---|
@@ -164,17 +138,95 @@ before these conversions ran, and first exercised by DE.C3A):
 | [DE.C5](converted_examples/DE.C5/c5-coverage-report.md) | BSI C5:2026, OSCAL 1.2.2 | 623 Requirements · 190 Sets (basic baseline + additional criteria) | 5,868 / 5,868 |
 | [DE.C3A](converted_examples/DE.C3A/c3a-coverage-report.md) | BSI C3A v1.0, OSCAL 1.2.2 (GS++ grammar family) | 30 Requirements · 30 typed parameters (first `label`/`default` use) · 9 Sets | 1,093 / 1,093 |
 
-The reports declare every conversion rule with counts, and report source
-defects rather than repairing them — the BSI run surfaces all 213
-pseudo-placeholders in the current GS++ catalog for the authors' queue
-(the census figure of 216 included MS-TLS's 3, dropped from the corpus
-2026-07-21).
+Each conversion ships a computed coverage report that declares every rule with
+counts and **reports source defects rather than repairing them** — the BSI run
+surfaces all 213 pseudo-placeholders in the current GS++ catalog for the
+authors' queue (the census figure of 216 included MS-TLS's 3, dropped from the
+corpus 2026-07-21); the C5 run surfaces a six-fold `gc-undefined` id collision.
+Finding real defects in shipping national catalogs is what "the converter is a
+measurement instrument" means.
 
-### Orientation
+## See it: the bundle reader
 
-[`oscal-models-overview-1x-vs-semantic-core.md`](oscal-models-overview-1x-vs-semantic-core.md)
-maps the eight OSCAL 1.x document models onto the nine objects, with reusable
-Mermaid sources.
+[`one-page-apps/semantic-core-reader.html`](one-page-apps/semantic-core-reader.html)
+is the whole model in one HTML file — no build, no dependencies, nothing
+leaves your browser. It reads any bundle from `converted_examples/` and makes
+the five stages of the compliance graph *functional*, not diagrammatic:
+
+<p>
+<img alt="Stage 1 · Author: the CIS Controls corpus as a catalog tree with taxonomy roots and IG baselines, plus the requirement/set authoring workbench" src="docs/img/reader-author.png" width="49%">
+<img alt="Stage 3 · Map: the CIS Ubuntu benchmark crosswalk — 635 mappings to CIS Controls v7 and v8 with relationship, confidence, and external-target chips" src="docs/img/reader-map.png" width="49%">
+</p>
+
+- **Read** — objects rendered for humans: kernel fields plain, facets tinted
+  (registered semantics), annotations dashed (chrome); modality lattice,
+  typed parameters, language-tagged prose.
+- **Verify** — one click recomputes both SHA-256 digests of every object
+  against the manifest, entirely client-side; attestations get the bi-modal
+  verdict (Full Match / Semantic Match / Tamper).
+- **Tailor** — build a Tailoring against the loaded corpus with the weakening
+  law enforced live: easings demand a Deviation, unit-class crossings are
+  blocked, same-target conflicts refused, and the authority tier is derived
+  from the data. Resolve it to an exportable package (Appendix B in the
+  browser).
+- **Author everything** — Requirements with `{param:}` tokens auto-declared,
+  Sets, Mappings with external targets, systems of assets with a
+  filter-driven control selector (auto-populated from every kernel and facet
+  dimension the corpus actually carries), checklist assessments that mint
+  real Assessment and Finding objects.
+- **Export a real bundle** — the workspace leaves as a ZIP with a
+  content-manifest carrying both digests per object: re-loadable here,
+  verifiable by `validate_core.py`. Authored objects persist across reloads.
+
+### Try it in 60 seconds
+
+No server: download the HTML file, open it, drag any
+`converted_examples/*/*-core-bundle` folder onto the page.
+
+With a server (enables URL loading and shareable deep links):
+
+```
+git clone https://github.com/christoph-puppe/Semantic-OSCAL-2-Ideas.git
+cd Semantic-OSCAL-2-Ideas
+python -m http.server 8000
+```
+
+then open
+
+```
+http://localhost:8000/one-page-apps/semantic-core-reader.html#load=../converted_examples/FedRAMP-CR26/cr26-core-bundle/&view=stage:tailor
+```
+
+— the `#load=<bundle-url>&view=<view>` fragment auto-loads any bundle and
+jumps to any view, so every screenshot in this README is a link you can
+reproduce.
+
+## Install as a Claude skill
+
+[`semantic-oscal/`](semantic-oscal/) is an installable skill that guides an
+agent through authoring, validating, and migrating Semantic Core content. Its
+[SKILL.md](semantic-oscal/SKILL.md) turns the 15 handbook chapters into 14
+numbered requirements, each with reference chapters and companion examples;
+it carries the worked example bundle in [`examples/`](semantic-oscal/examples/)
+(a self-consistent graph from a zero-facet minimum requirement through
+attestations with semantic digests), the converters in
+[`scripts/`](semantic-oscal/scripts/), the normative kernel schema, the seven
+stdlib descriptors, and the conformance corpus.
+
+Install by copying the directory into your skills folder, or unpack
+`SKILL_semantic-oscal.zip`:
+
+```
+~/.claude/skills/semantic-oscal/     # user-level
+.claude/skills/semantic-oscal/       # project-level
+```
+
+## Read the spec
+
+- [`drafts/oscal-semantic-core-v0.5-specification.md`](drafts/oscal-semantic-core-v0.5-specification.md) — the normative draft
+- [`drafts/oscal-semantic-core-decision-rationale-register.md`](drafts/oscal-semantic-core-decision-rationale-register.md) — every decision scored against the north star, with rejected alternatives and amendments
+- [`drafts/oscal-semantic-core-v0.6-spec-feedback-backlog.md`](drafts/oscal-semantic-core-v0.6-spec-feedback-backlog.md) — the living input queue for v0.6: items enter with counts, leave via register entries
+- [`oscal-models-overview-1x-vs-semantic-core.md`](oscal-models-overview-1x-vs-semantic-core.md) — the eight OSCAL 1.x document models mapped onto the nine objects, with reusable Mermaid sources
 
 ## House rules
 
