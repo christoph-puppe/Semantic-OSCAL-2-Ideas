@@ -2,14 +2,18 @@
  "id": "https://ns.bsi.bund.de/facet/gspp-narrative",
  "version": "1.0.0",
  "modifies-semantics": [],
- "note": "ILLUSTRATIVE STUB - normative schemas ship with the gate-2 deliverable",
+ "note": "NORMATIVE pinned payload schema (backlog #26): closed shape - unknown keys are rejected, never smuggled",
  "schema": {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "properties": {
    "by-statement": {
     "type": "object"
+   },
+   "description": {
+    "type": "object"
    }
-  }
+  },
+  "additionalProperties": false
  }
 }

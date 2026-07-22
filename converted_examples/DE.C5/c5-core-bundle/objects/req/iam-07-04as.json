@@ -3,7 +3,9 @@
  "version": "C5:2026",
  "label": "IAM-07-04AS",
  "lifecycle": "active",
- "title": "IAM-07 Additional Sharpen 04AS",
+ "title": {
+  "en": "IAM-07 Additional Sharpen 04AS"
+ },
  "statements": [
   {
    "id": "stmt",
@@ -33,7 +35,7 @@
  },
  "relations": [
   {
-   "type": "sharpens",
+   "type": "https://ns.bsi.bund.de/c5/rel/sharpens",
    "ref": "https://ns.bsi.bund.de/c5/req/iam-07-04b"
   }
  ]

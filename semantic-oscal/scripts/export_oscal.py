@@ -64,11 +64,25 @@ def prop(name, value, ns=SC, cls=None):
 def tail(uri):
     return uri.rstrip("/").rsplit("/", 1)[-1]
 
+def text_primary(v):
+    """#12: kernel `text` = {BCP-47: string|[string]}. Returns (display, extra)
+    where extra is a props list rebuilding the exact value on import."""
+    if not isinstance(v, dict):
+        return v, []
+    langs = sorted(v.keys())
+    first = v[langs[0]]
+    if len(langs) == 1 and isinstance(first, str):
+        if langs[0] == "en":
+            return first, []
+        return first, [prop("title-lang", langs[0])]
+    return (first if isinstance(first, str) else " ".join(first)), [prop("title-json", cjson(v))]
+
 def export_requirement(o, counters):
     cid = tail(o["id"]).lower()
-    c = {"id": cid, "title": o.get("title", cid)}
+    tdisp, textra = text_primary(o.get("title", cid))
+    c = {"id": cid, "title": tdisp}
     props = [prop("canonical-id", o["id"]), prop("version", o["version"]),
-             prop("lifecycle", o["lifecycle"])]
+             prop("lifecycle", o["lifecycle"])] + textra
     if o.get("label"): props.append({"name": "label", "value": o["label"]})
     params, parts = [], []
     for s in o["statements"]:
@@ -109,8 +123,16 @@ def export_requirement(o, counters):
     if params: c["params"] = params
     c["props"] = props
     c["parts"] = parts
-    links = [{"href": r["ref"], "rel": r["type"]} for r in o.get("relations", []) or []]
-    if links: c["links"] = links
+    rels = o.get("relations", []) or []
+    if any(str(r["type"]).startswith("http") for r in rels):
+        # OSCAL link rel is a TOKEN - URI-typed extension relations (#20)
+        # cannot ride links; the whole ordered list takes the props channel
+        # (order is digest-relevant). D16 asymmetry, counted.
+        c["props"].append(prop("relations-json", cjson(rels)))
+        counters["uri-rel-props-channel"] += 1
+    else:
+        links = [{"href": r["ref"], "rel": r["type"]} for r in rels]
+        if links: c["links"] = links
     for k in ("facets", "annotations", "replaces", "aliases", "canonical-alias"):
         if o.get(k) is not None:
             c["props"].append(prop(k, cjson(o[k])))
@@ -144,7 +166,8 @@ def export_bundle(bdir, out_path, counters):
     placed = set()
     def build_group(sid):
         s = sets[sid]
-        g = {"id": tail(sid).lower() or "g", "title": s.get("title", tail(sid)),
+        gt, _ = text_primary(s.get("title", tail(sid)))   # display only; the
+        g = {"id": tail(sid).lower() or "g", "title": gt,  # exact Set rides props
              "props": [prop("canonical-id", sid)]}
         ctrls, subgroups = [], []
         for m in s.get("members", []) or []:
@@ -209,7 +232,11 @@ def import_requirement(c):
          "lifecycle": pget(props, "lifecycle")}
     lab = next((p["value"] for p in props if p.get("name") == "label" and "ns" not in p), None)
     if lab: o["label"] = lab
-    if c.get("title") and c["title"] != c["id"]: o["title"] = c["title"]
+    tj = pget(props, "title-json")
+    if tj is not None:
+        o["title"] = json.loads(tj)
+    elif c.get("title") and c["title"] != c["id"]:
+        o["title"] = {pget(props, "title-lang") or "en": c["title"]}
     # params indexed by declaring statement
     by_stmt = collections.defaultdict(list)
     for pm in c.get("params", []) or []:
@@ -242,8 +269,12 @@ def import_requirement(c):
         if by_stmt.get(sid): s["parameters"] = by_stmt[sid]
         stmts.append(s)
     o["statements"] = stmts
-    links = c.get("links", [])
-    if links: o["relations"] = [{"type": l["rel"], "ref": l["href"]} for l in links]
+    rj = pget(props, "relations-json")
+    if rj is not None:
+        o["relations"] = json.loads(rj)
+    else:
+        links = c.get("links", [])
+        if links: o["relations"] = [{"type": l["rel"], "ref": l["href"]} for l in links]
     for k in ("facets", "annotations", "replaces", "aliases", "canonical-alias"):
         v = pget(props, k)
         if v is not None: o[k] = json.loads(v)

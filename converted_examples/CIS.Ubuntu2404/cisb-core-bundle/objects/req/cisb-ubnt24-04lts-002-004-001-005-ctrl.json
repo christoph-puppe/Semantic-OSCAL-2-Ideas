@@ -3,7 +3,9 @@
  "version": "1.0.0",
  "label": "2.4.1.5",
  "lifecycle": "active",
- "title": "Ensure permissions on /etc/cron.weekly are configured",
+ "title": {
+  "en": "Ensure permissions on /etc/cron.weekly are configured"
+ },
  "statements": [
   {
    "id": "s1",

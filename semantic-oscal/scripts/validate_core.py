@@ -32,11 +32,12 @@ VALIDATORS = {t: REGISTRY({"$ref": f"#/$defs/{t}", "$defs": SCHEMA["$defs"]}) fo
 VALIDATORS["contentManifest"] = REGISTRY({"$ref": "#/$defs/contentManifest", "$defs": SCHEMA["$defs"]})
 
 # normative stdlib facet descriptors (gate 2); payload validation per backlog #17
-STDLIB = {}
+STDLIB, STDLIB_RAW = {}, {}
 for _fn in sorted(os.listdir(os.path.join(SKILL, "schemas", "stdlib"))):
     if _fn.endswith(".json"):
         _d = json.load(open(os.path.join(SKILL, "schemas", "stdlib", _fn), encoding="utf-8"))
         STDLIB[_d["id"]] = REGISTRY(_d["schema"])
+        STDLIB_RAW[_d["id"]] = _d["schema"]
 
 # reference taxonomy (backlog #16): closure-required refs MUST land in-bundle;
 # landmark refs (Mapping endpoints, party/authority URIs, evidence, external
@@ -935,6 +936,10 @@ def validate_bundle(bdir):
         try:
             sd = json.loads(raw.decode("utf-8"))
             pinned[sd["id"]] = REGISTRY(sd.get("schema", {"type": "object"}))
+            # #26 (D26 final): a pin of a STDLIB id must be the descriptor
+            # VERBATIM - the pin and the normative schema cannot diverge
+            if sd["id"] in STDLIB_RAW and canonical(sd.get("schema")) != canonical(STDLIB_RAW[sd["id"]]):
+                fail(section, f"{fe['path']}: pin of stdlib facet {sd['id']} DIVERGES from the normative descriptor (D26)")
         except Exception as e:
             fail(section, f"{fe['path']}: pinned facet schema unreadable: {e}")
     # DSSE envelopes (#24): envelope-ref resolves to a file BESIDE the

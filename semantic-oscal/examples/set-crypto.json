@@ -1,13 +1,15 @@
 {
-  "id": "https://ns.bsi.bund.de/gspp/set/tax/crypto",
-  "version": "2026-07",
-  "label": "Kryptographie",
-  "lifecycle": "active",
-  "title": "Thematic set: cryptography",
-  "members": [
-    {
-      "ref": "https://ns.bsi.bund.de/gspp/req/KONF.14.1",
-      "sequence": 10
-    }
-  ]
+ "id": "https://ns.bsi.bund.de/gspp/set/tax/crypto",
+ "version": "2026-07",
+ "label": "Kryptographie",
+ "lifecycle": "active",
+ "title": {
+  "en": "Thematic set: cryptography"
+ },
+ "members": [
+  {
+   "ref": "https://ns.bsi.bund.de/gspp/req/KONF.14.1",
+   "sequence": 10
+  }
+ ]
 }

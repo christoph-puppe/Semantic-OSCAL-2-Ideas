@@ -194,9 +194,7 @@ for title, refs in sorted(profile_members.items()):
                 "title": f"Benchmark profile: {clean}",
                 "members": [{"ref": r, "sequence": (i + 1) * 10} for i, r in enumerate(sorted(set(refs)))]})
 
-bundle.stub("assessment-criteria-stub.json", F_ACRIT.split("@")[0], ["assessment"],
-            {"audit": {"type": "object"}, "remediation": {"type": "object"},
-             "method": {"type": "string", "enum": ["automated", "manual"]}})
+bundle.pin_stdlib("assessment-criteria-1.0.0.json")   # 26: stdlib pins are VERBATIM
 bundle.stub("cisb-narrative-stub.json", F_NARR.split("@")[0], [],
             {"description": {"type": "object"}, "rationale": {"type": "object"}})
 bundle.stub("cisb-external-references-stub.json", F_XREF.split("@")[0], [],

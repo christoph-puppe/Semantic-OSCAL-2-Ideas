@@ -2,7 +2,9 @@
  "id": "https://ns.cisecurity.org/benchmark/ubuntu-24.04-lts/set/tax/cisb-ubnt24-04lts-006-001-001-grp",
  "version": "1.0.0",
  "lifecycle": "active",
- "title": "Configure systemd-journald service",
+ "title": {
+  "en": "Configure systemd-journald service"
+ },
  "members": [
   {
    "ref": "https://ns.cisecurity.org/benchmark/ubuntu-24.04-lts/req/cisb-ubnt24.04lts-006.001.001.001_ctrl",

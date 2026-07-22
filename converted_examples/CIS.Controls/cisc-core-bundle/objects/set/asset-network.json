@@ -2,7 +2,9 @@
  "id": "https://ns.cisecurity.org/controls/v8/set/tax/asset-network",
  "version": "8.1",
  "lifecycle": "active",
- "title": "Asset class: network",
+ "title": {
+  "en": "Asset class: network"
+ },
  "members": [
   {
    "ref": "https://ns.cisecurity.org/controls/v8/req/cisc-008.004",

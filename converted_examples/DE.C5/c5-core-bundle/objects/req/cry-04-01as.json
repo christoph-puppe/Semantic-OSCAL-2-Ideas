@@ -3,7 +3,9 @@
  "version": "C5:2026",
  "label": "CRY-04-01AS",
  "lifecycle": "active",
- "title": "CRY-04 Additional Sharpen 01AS",
+ "title": {
+  "en": "CRY-04 Additional Sharpen 01AS"
+ },
  "statements": [
   {
    "id": "stmt",
@@ -27,7 +29,7 @@
  },
  "relations": [
   {
-   "type": "sharpens",
+   "type": "https://ns.bsi.bund.de/c5/rel/sharpens",
    "ref": "https://ns.bsi.bund.de/c5/req/cry-04-01b"
   }
  ]

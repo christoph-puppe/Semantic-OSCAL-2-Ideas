@@ -1,27 +1,29 @@
 {
-  "id": "https://ns.bsi.bund.de/gspp/tailoring/erhoeht",
-  "version": "2026-07",
-  "label": "Erhöht",
-  "lifecycle": "active",
-  "title": "Elevated protection level",
-  "selects": [
-    {
-      "set-ref": "https://ns.bsi.bund.de/gspp/set/baseline/example"
-    }
-  ],
-  "operations": [
-    {
-      "op": "set-modality",
-      "requirement-ref": "https://ns.bsi.bund.de/gspp/req/KONF.14.1",
-      "statement-id": "s1",
-      "modality": "must"
-    },
-    {
-      "op": "set-parameter",
-      "requirement-ref": "https://ns.bsi.bund.de/gspp/req/KONF.14.1",
-      "statement-id": "s1",
-      "parameter": "transport-crypto",
-      "value": "tls13"
-    }
-  ]
+ "id": "https://ns.bsi.bund.de/gspp/tailoring/erhoeht",
+ "version": "2026-07",
+ "label": "Erhöht",
+ "lifecycle": "active",
+ "title": {
+  "en": "Elevated protection level"
+ },
+ "selects": [
+  {
+   "set-ref": "https://ns.bsi.bund.de/gspp/set/baseline/example"
+  }
+ ],
+ "operations": [
+  {
+   "op": "set-modality",
+   "requirement-ref": "https://ns.bsi.bund.de/gspp/req/KONF.14.1",
+   "statement-id": "s1",
+   "modality": "must"
+  },
+  {
+   "op": "set-parameter",
+   "requirement-ref": "https://ns.bsi.bund.de/gspp/req/KONF.14.1",
+   "statement-id": "s1",
+   "parameter": "transport-crypto",
+   "value": "tls13"
+  }
+ ]
 }

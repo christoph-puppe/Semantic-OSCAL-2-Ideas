@@ -3,7 +3,9 @@
  "version": "1.0.0",
  "label": "5.1.7",
  "lifecycle": "active",
- "title": "Ensure sshd ClientAliveInterval and ClientAliveCountMax are configured",
+ "title": {
+  "en": "Ensure sshd ClientAliveInterval and ClientAliveCountMax are configured"
+ },
  "statements": [
   {
    "id": "s1",

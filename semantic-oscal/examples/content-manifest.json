@@ -1,109 +1,109 @@
 {
-  "manifest-version": "1",
-  "objects": [
-    {
-      "id": "https://ns.bsi.bund.de/gspp/req/KONF.14.1",
-      "version": "2026-07",
-      "package-digest": "sha256:f664aa43894f23c14c9ef27fd74de1b006d97b4914bddcf65d0fa5be783bb7b2",
-      "semantic-digest": "sha256:7aaf60aac02185ae45e9f5891adb1f1151991bfd162ce2f21ede1db1cd7d11d0",
-      "path": "req-konf-14-1.json"
-    },
-    {
-      "id": "https://ns.cyber.gov.au/ism/req/ISM-1234",
-      "version": "2026.06.18",
-      "package-digest": "sha256:46c28f895d562eadf32e2853465b7e05ec5234fd36876fe34bedffc067640054",
-      "semantic-digest": "sha256:fc11341fe65013f58abea141009ae437976cad47b8d30b379486e8259b7292c7",
-      "path": "req-ism-1234.json"
-    },
-    {
-      "id": "https://ns.fedramp.gov/cr26/req/IEC-CSO-IIR",
-      "version": "2026.07.14.01",
-      "package-digest": "sha256:375a0d88b1a730abfc96a8e86197afe5f659d67c564097faf2408b54a1452f51",
-      "semantic-digest": "sha256:27d2e043a93f382cf55ebc912308bf038a85fa5970b412ebbdcafa5c28da173e",
-      "path": "req-iec-cso-iir.json"
-    },
-    {
-      "id": "https://ns.bsi.bund.de/gspp/set/tax/crypto",
-      "version": "2026-07",
-      "package-digest": "sha256:9f9b976eeba656e96ba9cd3823e77ee062fef1a658890d462bed02ba95d66398",
-      "semantic-digest": "sha256:d16db04400570b4389d625243666de242088cde7a40aa8df28d33a7b14b5bd3e",
-      "path": "set-crypto.json"
-    },
-    {
-      "id": "https://ns.bsi.bund.de/gspp/set/baseline/example",
-      "version": "2026-07",
-      "package-digest": "sha256:930720a96ed0e2fec4af7d0021d992dc9864cd962b003fe4ad6c9902a29553d9",
-      "semantic-digest": "sha256:9ec9a45f5f9c25146aaa55d4e809f8c15889f9084125de26256e071cbe1cff84",
-      "path": "set-baseline.json"
-    },
-    {
-      "id": "https://ns.bsi.bund.de/gspp/tailoring/erhoeht",
-      "version": "2026-07",
-      "package-digest": "sha256:ce511f335262a860ad849600ed4e9282eefeb787e164b4206b18c86749e9e931",
-      "semantic-digest": "sha256:2670a82c811c2e1db497b2ba30eabb5b345a863d8029633f705fff3cc9d84744",
-      "path": "tailoring-elevated.json"
-    },
-    {
-      "id": "https://maps.example.org/map/2026-1/konf-14-1--ism-1234",
-      "version": "2026-1",
-      "package-digest": "sha256:178baf4e974466f0daa46ad4b855bdcd5a94a703010ad6d7054fff2630d0bfae",
-      "semantic-digest": "sha256:7b5a9efb1cb5686a259331f68b300cdf4b6014c8fb7bfbd70db70ba263826817",
-      "path": "mapping-konf-ism.json"
-    },
-    {
-      "id": "https://paas.example/component/platform",
-      "version": "2026-06",
-      "package-digest": "sha256:315b34bafc470548ad7c48a2f24c51aa42901d3d4d0d04d9b9319e1f637f4941",
-      "semantic-digest": "sha256:78eb3e77cc6867b34b2d92a49930b47d363c261da575bd442c8c04f5f18db14d",
-      "path": "component-paas.json"
-    },
-    {
-      "id": "https://cso.example/component/acme-saas",
-      "version": "2026-07",
-      "package-digest": "sha256:65083f2b5054b84c777d14d7fbfa3671fcef3b864104ad924eecf537f27b1bf8",
-      "semantic-digest": "sha256:c26d65937908fa2fb3019f6255cd355ce64b54b87cbcc31488e183ebe48471d9",
-      "path": "component-acme-saas.json"
-    },
-    {
-      "id": "https://cso.example/impl/acme--konf-14-1",
-      "version": "2026-07",
-      "package-digest": "sha256:d92efd89a569f7ce069fbde3f43e79afc9a95d6d52c11ff51367e5d283e8dd28",
-      "semantic-digest": "sha256:09de9745b1ce8d137b9fd8131cafbb79c12c4209487d37de012ce8bbcf052b10",
-      "path": "implementation-acme-konf.json"
-    },
-    {
-      "id": "https://assessor.example/assessment/2026-q3-acme",
-      "version": "1",
-      "package-digest": "sha256:6d04bee855f36557b82c244a67a78acff2d254bad7e0d5e03017cf3637c42a18",
-      "semantic-digest": "sha256:ba7917747e72b14137efe0066be41b8275a3a4a297b0c13790faeb5868a9ad9c",
-      "path": "assessment-2026q3.json"
-    },
-    {
-      "id": "https://assessor.example/finding/2026-q3-acme-017",
-      "version": "1",
-      "package-digest": "sha256:91e92ef5ede30885fe070f1f22487a900b2b5eaf93addb53f2a379bc4a9743c3",
-      "semantic-digest": "sha256:42ef4ba886409b6c153ef178d54323b04e637aeed5b5406960dd7ca2b1caf4bd",
-      "path": "finding-017.json"
-    }
-  ],
-  "facet-schemas": [
-    {
-      "id": "https://ns.bsi.bund.de/facet/gspp-taxonomy",
-      "exact-version": "1.0.0",
-      "digest": "sha256:d026566e91267371cdde4d09ded434dd538f9a239fab150f490e5498b624f0da",
-      "path": "gspp-taxonomy-1.0.0.json"
-    },
-    {
-      "id": "https://ns.oscal.org/stdlib/facet/assessment-criteria",
-      "exact-version": "1.0.0",
-      "digest": "sha256:51a28023f41f84693bee32cae02450974d4356fc41e90c6527d9211b8706e1bb",
-      "path": "assessment-criteria-1.0.0-stub.json"
-    }
-  ],
-  "renderings": [
-    {
-      "path": "authorization-summary.md",
-      "digest": "sha256:36405fcbe4e19ba3305b56c129e70925a27f4a16a10216a2ba3e0a13c625857e"
-    }
-  ]
+ "manifest-version": "1",
+ "objects": [
+  {
+   "id": "https://ns.bsi.bund.de/gspp/req/KONF.14.1",
+   "version": "2026-07",
+   "package-digest": "sha256:1a4a22b98326513a2d161d456f2cc18054f15f085f378917fdd2c5a40b85819b",
+   "semantic-digest": "sha256:6d9a22885ddaa2c6f164ad70dcb3e67d5afe6f569d0d8795f5f34553d4d46b17",
+   "path": "req-konf-14-1.json"
+  },
+  {
+   "id": "https://ns.cyber.gov.au/ism/req/ISM-1234",
+   "version": "2026.06.18",
+   "package-digest": "sha256:46c28f895d562eadf32e2853465b7e05ec5234fd36876fe34bedffc067640054",
+   "semantic-digest": "sha256:fc11341fe65013f58abea141009ae437976cad47b8d30b379486e8259b7292c7",
+   "path": "req-ism-1234.json"
+  },
+  {
+   "id": "https://ns.fedramp.gov/cr26/req/IEC-CSO-IIR",
+   "version": "2026.07.14.01",
+   "package-digest": "sha256:a0ad733e4ef30ffd884dcc0efe861d7a2d6aa83f13186e6cd276db60ddf7c4f6",
+   "semantic-digest": "sha256:9cffd8dd8aefe80a92024106c91a3b0e680a37f1e6c598f449075feafbee5887",
+   "path": "req-iec-cso-iir.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/gspp/set/tax/crypto",
+   "version": "2026-07",
+   "package-digest": "sha256:ea24e9f1383eaff7122383b034949d347785edef5499e670125d8d30e64527b8",
+   "semantic-digest": "sha256:cfb4b039a31024ad00300607d27698dcfb11f34ad041f051e913086fa31f491c",
+   "path": "set-crypto.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/gspp/set/baseline/example",
+   "version": "2026-07",
+   "package-digest": "sha256:ca50c770f333481ad8f12e4c3d581d78b9252fcfd11c5a213623f6d72ccde562",
+   "semantic-digest": "sha256:698b9723ee2cacef9884c8d0d5b8ee4e71d1fdb3d1932bb9642bf5ccdabacd76",
+   "path": "set-baseline.json"
+  },
+  {
+   "id": "https://ns.bsi.bund.de/gspp/tailoring/erhoeht",
+   "version": "2026-07",
+   "package-digest": "sha256:5837ac5f56c561df8b12583863e7c26d32c8afb6739f0d2cb0f745907a242b0e",
+   "semantic-digest": "sha256:687d6fd01be7053509635126d148b04890695fe28948954b2477dfb42a8c8634",
+   "path": "tailoring-elevated.json"
+  },
+  {
+   "id": "https://maps.example.org/map/2026-1/konf-14-1--ism-1234",
+   "version": "2026-1",
+   "package-digest": "sha256:9a54d51be73619343a060a9668c2769a75ac5a862b6d7d9e891ff89b4fd6409f",
+   "semantic-digest": "sha256:f98624624c9d0417a1ce7a6f092e8f7c21e5249a4a07c2e7487e5fa56d1e4743",
+   "path": "mapping-konf-ism.json"
+  },
+  {
+   "id": "https://paas.example/component/platform",
+   "version": "2026-06",
+   "package-digest": "sha256:315b34bafc470548ad7c48a2f24c51aa42901d3d4d0d04d9b9319e1f637f4941",
+   "semantic-digest": "sha256:78eb3e77cc6867b34b2d92a49930b47d363c261da575bd442c8c04f5f18db14d",
+   "path": "component-paas.json"
+  },
+  {
+   "id": "https://cso.example/component/acme-saas",
+   "version": "2026-07",
+   "package-digest": "sha256:9252ee4a97f29c4aaf7449afac3fdffcb5e181c7340ebd82e336f4409ed0a08d",
+   "semantic-digest": "sha256:c6cb03198bd6da55fdb14655af49c9c7c3e1c380337ac013a86d7b1f7fce8ca1",
+   "path": "component-acme-saas.json"
+  },
+  {
+   "id": "https://cso.example/impl/acme--konf-14-1",
+   "version": "2026-07",
+   "package-digest": "sha256:0014d8e715ded3ffd422b51602971c5922aab67eca2b064596656761126448b2",
+   "semantic-digest": "sha256:7b89f06e6b7cae8758c227083fb07d82cb224c143eece8bc5d72eddd9a0b2cb0",
+   "path": "implementation-acme-konf.json"
+  },
+  {
+   "id": "https://assessor.example/assessment/2026-q3-acme",
+   "version": "1",
+   "package-digest": "sha256:c10272bb3d6a7500dd121a8620cf3185ccde0142017ecfef1c76053477b40561",
+   "semantic-digest": "sha256:2d98311075be5aaf9e7179ea516e5d23924c25f5cdd4c69dd6cb7a075ddd5fac",
+   "path": "assessment-2026q3.json"
+  },
+  {
+   "id": "https://assessor.example/finding/2026-q3-acme-017",
+   "version": "1",
+   "package-digest": "sha256:77537265251ee24f80c01fd48fb4712fc7d498bb5478661056143b581f15f1b3",
+   "semantic-digest": "sha256:ec72d680807bf9c97ebe2917ab885e7f411c955f622187323a59ddbcf734feaf",
+   "path": "finding-017.json"
+  }
+ ],
+ "facet-schemas": [
+  {
+   "id": "https://ns.bsi.bund.de/facet/gspp-taxonomy",
+   "exact-version": "1.0.0",
+   "digest": "sha256:d026566e91267371cdde4d09ded434dd538f9a239fab150f490e5498b624f0da",
+   "path": "gspp-taxonomy-1.0.0.json"
+  },
+  {
+   "id": "https://ns.oscal.org/stdlib/facet/assessment-criteria",
+   "exact-version": "1.0.0",
+   "digest": "sha256:51a28023f41f84693bee32cae02450974d4356fc41e90c6527d9211b8706e1bb",
+   "path": "assessment-criteria-1.0.0-stub.json"
+  }
+ ],
+ "renderings": [
+  {
+   "path": "authorization-summary.md",
+   "digest": "sha256:36405fcbe4e19ba3305b56c129e70925a27f4a16a10216a2ba3e0a13c625857e"
+  }
+ ]
 }

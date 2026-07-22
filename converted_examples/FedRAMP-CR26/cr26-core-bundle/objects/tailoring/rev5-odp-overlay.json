@@ -2,7 +2,9 @@
  "id": "https://ns.fedramp.gov/cr26/tailoring/rev5-odp-overlay",
  "version": "2026.07.14.01",
  "lifecycle": "active",
- "title": "FedRAMP CTL ODP assignments over NIST SP 800-53 Rev 5 (backlog #10 drained)",
+ "title": {
+  "en": "FedRAMP CTL ODP assignments over NIST SP 800-53 Rev 5 (backlog #10 drained)"
+ },
  "selects": [
   {
    "set-ref": "https://ns.fedramp.gov/cr26/set/rev5-tailored"

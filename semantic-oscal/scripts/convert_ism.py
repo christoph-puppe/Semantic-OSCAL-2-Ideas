@@ -229,13 +229,14 @@ for cls, refs in sorted(class_members.items()):
         "id": uri, "version": version, "lifecycle": "active",
         "title": f"Category: {cls}", "members": [{"ref": r, "sequence": (i+1)*10} for i, r in enumerate(refs)]}
 
-# write objects + manifest
-if os.path.exists(OUT):
-    import shutil; shutil.rmtree(OUT)
+# write objects + manifest (in place; no rmtree - the OneDrive house rule.
+# this rerun changes no filenames, so there is nothing stale to remove)
+from oscal_conv_lib import textify
+for obj in objects.values(): textify(obj, LANG)   # 12 delivery
 for rel, obj in objects.items(): w(rel, obj)
 w("schemas/oscal-1x-compat-1.0.0-stub.json", {
     "id": "https://ns.oscal.org/compat/oscal-1x", "version": "1.0.0",
-    "note": "ILLUSTRATIVE STUB - Level-2 waiting room (intended deprecation; see D16/handbook 14.6)",
+    "note": "NORMATIVE pinned payload schema (backlog 26); Level-2 waiting room (intended deprecation; see D16/handbook 14.6)",
     "modifies-semantics": [],
     "schema": {"$schema": "https://json-schema.org/draft/2020-12/schema",
                "type": "object", "additionalProperties": False,

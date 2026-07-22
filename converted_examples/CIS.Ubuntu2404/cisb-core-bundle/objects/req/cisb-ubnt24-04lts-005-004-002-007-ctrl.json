@@ -3,7 +3,9 @@
  "version": "1.0.0",
  "label": "5.4.2.7",
  "lifecycle": "active",
- "title": "Ensure system accounts do not have a valid login shell",
+ "title": {
+  "en": "Ensure system accounts do not have a valid login shell"
+ },
  "statements": [
   {
    "id": "s1",

@@ -3,7 +3,9 @@
  "version": "1.0.0",
  "label": "2.3.2.2",
  "lifecycle": "active",
- "title": "Ensure systemd-timesyncd is enabled and running",
+ "title": {
+  "en": "Ensure systemd-timesyncd is enabled and running"
+ },
  "statements": [
   {
    "id": "s1",

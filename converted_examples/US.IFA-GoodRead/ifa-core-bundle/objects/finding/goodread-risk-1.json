@@ -2,13 +2,17 @@
  "id": "https://ifa.gov/goodread/finding/goodread-risk-1",
  "version": "1.2.1",
  "lifecycle": "active",
- "title": "IFA-GOODREAD-RISK-1: PAO Staff Have Over-Privileged Access to SYSTEM1234 System",
+ "title": {
+  "en": "IFA-GOODREAD-RISK-1: PAO Staff Have Over-Privileged Access to SYSTEM1234 System"
+ },
  "assessment-ref": "https://ifa.gov/goodread/assessment/conmon-2023-06",
  "requirement-ref": "https://ns.nist.gov/sp800-53/req/AC-6.1",
  "state": "in-remediation",
  "actions": [
   {
-   "description": "IFA-GOODREAD-RISK1-RESPONSE: IFA SYSTEM1234 Product Team Response: End of Year Project Management Report of Developed Remediations",
+   "description": {
+    "en": "IFA-GOODREAD-RISK1-RESPONSE: IFA SYSTEM1234 Product Team Response: End of Year Project Management Report of Developed Remediations"
+   },
    "status": "planned",
    "due": {
     "type": "datetime",
@@ -20,7 +24,9 @@
   {
    "type": "risk-adjustment",
    "state": "approved",
-   "rationale": "The SYSTEM1234 application is designed and implemented to only allow access to the administrative functions for those with PAO staff role via the VPN via network configuration between the IFA Enterprise Support Systems and the SYSTEM1234 AwesomeCloud account. Additionally, the load balanacer configuration only allows access to view shortlinks from the public internet.",
+   "rationale": {
+    "en": "The SYSTEM1234 application is designed and implemented to only allow access to the administrative functions for those with PAO staff role via the VPN via network configuration between the IFA Enterprise Support Systems and the SYSTEM1234 AwesomeCloud account. Additionally, the load balanacer configuration only allows access to view shortlinks from the public internet."
+   },
    "approver-ref": "https://ifa.gov/division/ociso/sca",
    "opened": "2023-05-19",
    "refs": [

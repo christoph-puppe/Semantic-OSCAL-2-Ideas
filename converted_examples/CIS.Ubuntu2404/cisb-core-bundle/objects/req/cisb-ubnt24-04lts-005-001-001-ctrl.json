@@ -3,7 +3,9 @@
  "version": "1.0.0",
  "label": "5.1.1",
  "lifecycle": "active",
- "title": "Ensure permissions on /etc/ssh/sshd_config are configured",
+ "title": {
+  "en": "Ensure permissions on /etc/ssh/sshd_config are configured"
+ },
  "statements": [
   {
    "id": "s1",

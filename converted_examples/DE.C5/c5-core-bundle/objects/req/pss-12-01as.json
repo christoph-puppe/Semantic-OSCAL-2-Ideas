@@ -3,7 +3,9 @@
  "version": "C5:2026",
  "label": "PSS-12-01AS",
  "lifecycle": "active",
- "title": "PSS-12 Additional Sharpen 01AS",
+ "title": {
+  "en": "PSS-12 Additional Sharpen 01AS"
+ },
  "statements": [
   {
    "id": "stmt",
@@ -27,7 +29,7 @@
  },
  "relations": [
   {
-   "type": "sharpens",
+   "type": "https://ns.bsi.bund.de/c5/rel/sharpens",
    "ref": "https://ns.bsi.bund.de/c5/req/pss-12-01b"
   }
  ]

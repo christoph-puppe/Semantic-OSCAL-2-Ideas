@@ -3,7 +3,9 @@
  "version": "1.0.0",
  "label": "Leveraged IaaS System",
  "lifecycle": "active",
- "title": "CSP IaaS System Security Plan",
+ "title": {
+  "en": "CSP IaaS System Security Plan"
+ },
  "kind": "system",
  "members": [
   {
@@ -15,12 +17,16 @@
   {
    "id": "cap-provided-1",
    "requirement-ref": "https://ns.nist.gov/sp800-53/req/AC-2",
-   "description": "Consumer-appropriate description of what a leveraging system may inherit from THIS SYSTEM in the context of satisfying satisfaction of AC-2, part a."
+   "description": {
+    "en": "Consumer-appropriate description of what a leveraging system may inherit from THIS SYSTEM in the context of satisfying satisfaction of AC-2, part a."
+   }
   },
   {
    "id": "cap-provided-2",
    "requirement-ref": "https://ns.nist.gov/sp800-53/req/AC-2",
-   "description": "Consumer-appropriate description of what may be inherited.\n\nIn the context of the application component in satisfaction of AC-2, part a."
+   "description": {
+    "en": "Consumer-appropriate description of what may be inherited.\n\nIn the context of the application component in satisfaction of AC-2, part a."
+   }
   }
  ],
  "authorizations": [

@@ -3,7 +3,9 @@
  "version": "1.0.0",
  "label": "6.1.3.3",
  "lifecycle": "active",
- "title": "Ensure journald is configured to send logs to rsyslog",
+ "title": {
+  "en": "Ensure journald is configured to send logs to rsyslog"
+ },
  "statements": [
   {
    "id": "s1",

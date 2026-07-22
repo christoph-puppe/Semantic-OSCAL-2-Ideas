@@ -3,7 +3,9 @@
  "version": "1.0.0",
  "label": "7.2.3",
  "lifecycle": "active",
- "title": "Ensure all groups in /etc/passwd exist in /etc/group",
+ "title": {
+  "en": "Ensure all groups in /etc/passwd exist in /etc/group"
+ },
  "statements": [
   {
    "id": "s1",

@@ -201,7 +201,7 @@ svg text{font-family:'JetBrains Mono',monospace}
     <div class="pill" id="pill-bundle">no bundle loaded</div>
     <div class="pill hidden" id="pill-verify"></div>
     <div style="flex:1"></div>
-    <div class="pill">v1.6.0 · build 2026-07-22</div>
+    <div class="pill">v1.6.1 · build 2026-07-22</div>
   </div>
 
   <div id="mid">
@@ -502,7 +502,7 @@ function sha256Fallback(bytes) {
 }
 
 /* ---------- loading ---------- */
-const READER_ID = "semantic-core-reader.html v1.6.0";
+const READER_ID = "semantic-core-reader.html v1.6.1";
 /* URL loading — works when this page and the bundle are served over http(s)
    (e.g. `python -m http.server` from the repo root); file:// blocks fetch by design. */
 async function loadFromUrl(input) {
@@ -608,6 +608,19 @@ function indexBundle() {
   renderAll();
   setView("stages");
 }
+/* #12 text primitive (v1.6.1): kernel human-readable fields are {BCP-47: string}.
+   tt() renders them; textifyJs() wraps authored strings at export time. */
+const tt = v => typeof v === "string" ? v : Array.isArray(v) ? v.join(" ") : (v && typeof v === "object") ? String(Object.values(v)[0] ?? "") : "";
+function textifyJs(o, lang = "en") {
+  const wrap = (c, k) => { if (typeof c?.[k] === "string") c[k] = { [lang]: c[k] }; };
+  wrap(o, "title"); wrap(o, "rationale");
+  (o.excludes || []).forEach(e => wrap(e, "rationale"));
+  (o.capabilities || []).forEach(c => wrap(c, "description"));
+  (o.actions || []).forEach(a => wrap(a, "description"));
+  (o.deviations || []).forEach(d => wrap(d, "rationale"));
+  (o.operations || []).forEach(op => { if (op.deviation) wrap(op.deviation, "rationale"); });
+  return o;
+}
 function typeCounts() {
   const c = {};
   for (const r of state.objects.values()) c[r.type] = (c[r.type] || 0) + 1;
@@ -704,7 +717,7 @@ function visibleIds() {
     if (!q) return true;
     return id.toLowerCase().includes(q) ||
       (r.obj.label || "").toLowerCase().includes(q) ||
-      (r.obj.title || "").toLowerCase().includes(q);
+      (tt(r.obj.title) || "").toLowerCase().includes(q);
   });
 }
 function renderList() {
@@ -715,7 +728,7 @@ function renderList() {
     const v = state.verify?.get(id);
     const vmark = v ? (v.pkg && v.sem ? ` <span style="color:var(--green)">✓</span>` : ` <span style="color:var(--red)">✗</span>`) : "";
     return `<div class="objrow ${state.selected === id ? "active" : ""}" data-id="${esc(id)}">
-      <div class="t"><span style="color:${TYPES[r.type].color}">${TYPES[r.type].glyph}</span> ${esc(r.obj.label || r.obj.title || id.split("/").pop())}${vmark}</div>
+      <div class="t"><span style="color:${TYPES[r.type].color}">${TYPES[r.type].glyph}</span> ${esc(r.obj.label || tt(r.obj.title) || id.split("/").pop())}${vmark}</div>
       <div class="s">${esc(id)}</div></div>`;
   }).join("");
   $("objlist").innerHTML = (rows || `<div class="hint">nothing matches</div>`) +
@@ -775,7 +788,7 @@ function commonHead(r) {
     ${o.label ? `<span class="badge">${esc(o.label)}</span>` : ""}
     <span class="badge" title="object version">v ${esc(o.version || "?")}</span>
   </div>
-  <h3 style="font-size:15px;margin-bottom:2px">${esc(o.title || o.label || o.id)}</h3>
+  <h3 style="font-size:15px;margin-bottom:2px">${esc(tt(o.title) || o.label || o.id)}</h3>
   <div class="mono" style="font-size:10.5px;color:var(--text-quiet);word-break:break-all">${esc(o.id)}</div>
   <div class="hint" style="margin-top:6px">${esc(t.what)}</div>`;
 }
@@ -831,7 +844,7 @@ function renderSet(r) {
   const mem = r.obj.members || [];
   const rows = mem.slice(0, 300).map(m => {
     const target = state.objects.get(m.ref);
-    const label = target ? (target.obj.label || target.obj.title || m.ref) : m.ref;
+    const label = target ? (target.obj.label || tt(target.obj.title) || m.ref) : m.ref;
     const glyph = target ? `<span style="color:${TYPES[target.type].color}">${TYPES[target.type].glyph}</span> ` : "";
     return `<div style="display:flex;gap:10px;align-items:baseline;margin:3px 0">
       <span class="mono" style="font-size:10px;color:var(--text-quiet);width:44px;text-align:right">${m.sequence ?? ""}</span>
@@ -1052,7 +1065,7 @@ function renderStageAuthor() {
     if (r.type === "requirement") {
       const mods = r.obj.statements.map(s => s.modality);
       return `<div class="leaf"><span style="color:${TYPES.requirement.color}">◇</span>
-        <a class="reflink" data-ref="${esc(ref)}">${esc(r.obj.label || r.obj.title || ref)}</a>
+        <a class="reflink" data-ref="${esc(ref)}">${esc(r.obj.label || tt(r.obj.title) || ref)}</a>
         ${mods.slice(0,3).map(modBadge).join("")}<span class="cnt">${r.obj.statements.length > 1 ? r.obj.statements.length + " stmts" : ""}</span></div>`;
     }
     if (depth > 7) return `<div class="leaf cnt">… depth cap</div>`;
@@ -1060,7 +1073,7 @@ function renderStageAuthor() {
     const mem = r.obj.members || [];
     const reqN = expandSet(ref).length;
     return `<details ${depth === 0 ? "open" : ""}><summary><span style="color:${TYPES.requirementSet.color}">▣</span>
-      <a class="reflink" data-ref="${esc(ref)}">${esc(r.obj.title || r.obj.label || ref)}</a>
+      <a class="reflink" data-ref="${esc(ref)}">${esc(tt(r.obj.title) || r.obj.label || ref)}</a>
       <span class="cnt">${mem.length} members · ${reqN} reqs</span></summary>
       ${cycle ? '<div class="leaf cnt">(already shown above)</div>' : mem.map(m => node(m.ref, depth + 1)).join("")}</details>`;
   }
@@ -1089,7 +1102,7 @@ function renderStageTailor() {
     `<p class="hint">No published Tailorings in this bundle yet — author one above; “Add to graph” drops it straight into the resolver.</p>`;
   const pick = state.stageSel?.tailor || ts[0].obj.id;
   const picker = `<div class="filterrow">${ts.map(t =>
-    `<span class="fpill ${t.obj.id === pick ? "on" : ""}" data-tsel="${esc(t.obj.id)}">${TYPES.tailoring.glyph} ${esc(t.obj.label || t.obj.title || t.obj.id.split("/").pop())}</span>`).join("")}</div>`;
+    `<span class="fpill ${t.obj.id === pick ? "on" : ""}" data-tsel="${esc(t.obj.id)}">${TYPES.tailoring.glyph} ${esc(t.obj.label || tt(t.obj.title) || t.obj.id.split("/").pop())}</span>`).join("")}</div>`;
   const T = state.objects.get(pick); if (!T) return stageHead("tailor") + picker;
   const o = T.obj;
   const selected = new Set();
@@ -1189,7 +1202,7 @@ function renderStageImplement() {
   comps.forEach(c => (c.obj.authorizations || []).forEach(a => authIds.set(a.id, c.obj.id)));
   const compCards = comps.map(c => `<div class="stmt">
     <span class="badge" style="border-color:${TYPES.component.color};color:${TYPES.component.color}">⬡ ${esc(c.obj.kind)}</span>
-    <a class="reflink" data-ref="${esc(c.obj.id)}"><b>${esc(c.obj.title || c.obj.label || c.obj.id)}</b></a>
+    <a class="reflink" data-ref="${esc(c.obj.id)}"><b>${esc(tt(c.obj.title) || c.obj.label || c.obj.id)}</b></a>
     ${(c.obj.capabilities || []).map(cap => `<span class="badge" title="${esc(cap.description || "")}">⚙ ${esc(cap.id)}</span>`).join("")}
     ${(c.obj.authorizations || []).map(a => `<span class="badge" style="border-color:var(--green);color:var(--green)" title="authority: ${esc(a["authority-ref"])}">✦ ${esc(a.id)}${a["scope-label"] ? " · " + esc(a["scope-label"]) : ""}</span>`).join("")}
     ${(c.obj.members || []).map(m => `<div class="leaf" style="margin-top:4px">↳ ${refLink(m["component-ref"])} ${m.context ? `<span class="hint">(${esc(m.context)})</span>` : ""}</div>`).join("")}
@@ -1360,7 +1373,7 @@ function restoreWorkspaceObjects() {
 }
 function workspaceObjects() {
   return state.order.map(id => state.objects.get(id))
-    .filter(r => r && r.path === "(workspace)").map(r => r.obj);
+    .filter(r => r && r.path === "(workspace)").map(r => textifyJs(JSON.parse(JSON.stringify(r.obj))));
 }
 async function buildWorkspaceBundleFiles(objs, provenance) {
   const enc = new TextEncoder();
@@ -1444,8 +1457,8 @@ function wirePicker(el, id, types, onPick) {
     const q = inp.value.toLowerCase();
     if (q.length < 2) { sugg.classList.add("hidden"); return; }
     const hits = state.order.map(i => state.objects.get(i)).filter(r => r && types.includes(r.type) &&
-      (r.obj.id.toLowerCase().includes(q) || (r.obj.label || "").toLowerCase().includes(q) || (r.obj.title || "").toLowerCase().includes(q))).slice(0, 12);
-    sugg.innerHTML = hits.map(r => `<div data-pick="${esc(r.obj.id)}"><span style="color:${TYPES[r.type].color}">${TYPES[r.type].glyph}</span> ${esc(r.obj.label || r.obj.title || r.obj.id)}<div class="s">${esc(r.obj.id)}</div></div>`).join("") || `<div class="s" style="padding:6px 10px">no match</div>`;
+      (r.obj.id.toLowerCase().includes(q) || (r.obj.label || "").toLowerCase().includes(q) || (tt(r.obj.title) || "").toLowerCase().includes(q))).slice(0, 12);
+    sugg.innerHTML = hits.map(r => `<div data-pick="${esc(r.obj.id)}"><span style="color:${TYPES[r.type].color}">${TYPES[r.type].glyph}</span> ${esc(r.obj.label || tt(r.obj.title) || r.obj.id)}<div class="s">${esc(r.obj.id)}</div></div>`).join("") || `<div class="s" style="padding:6px 10px">no match</div>`;
     sugg.classList.remove("hidden");
     sugg.querySelectorAll("[data-pick]").forEach(d => d.onclick = () => { sugg.classList.add("hidden"); inp.value = ""; onPick(d.dataset.pick); });
   };
@@ -1513,7 +1526,7 @@ function wbTailorHtml() {
       <label>label</label><input type="text" id="wb-t-label" value="${esc(t.label)}" style="width:150px"></div>
     <div class="wbrow"><label>select set</label>${pickerHtml("wb-t-selpick", "type to add a Set to selects…")}
       <span class="chip"><b>${scope.size}</b> requirements in scope</span></div>
-    <div>${t.selects.map(s => `<span class="wbchip">▣ ${esc((state.objects.get(s)?.obj.title) || s)}<span class="x" data-delsel="${esc(s)}">✕</span></span>`).join("") || '<span class="hint">no selects yet — pick a Set (a baseline, a chapter, the root)</span>'}</div>
+    <div>${t.selects.map(s => `<span class="wbchip">▣ ${esc(tt(state.objects.get(s)?.obj.title) || s)}<span class="x" data-delsel="${esc(s)}">✕</span></span>`).join("") || '<span class="hint">no selects yet — pick a Set (a baseline, a chapter, the root)</span>'}</div>
     <div class="wbrow"><label>exclude</label>${pickerHtml("wb-t-expick", "type to exclude a requirement (selection, never weakening)…")}</div>
     <div>${t.excludes.map(e => `<span class="wbchip">⊖ ${esc((state.objects.get(e)?.obj.label) || e)}<span class="x" data-delex="${esc(e)}">✕</span></span>`).join("")}</div>
     <div class="wbrow" style="border-top:1px solid var(--border-1);padding-top:10px"><label>operation on</label>${pickerHtml("wb-t-reqpick", "type to pick a requirement…")}
@@ -1670,7 +1683,7 @@ function dimIndex() {
     });
   if (dropped.length) l.debug(`filter index: not offered as filters (free text, values do not repeat): ${dropped.join(" · ")}`);
   const sets = [...state.objects.values()].filter(r => r.type === "requirementSet")
-    .map(r => ({ id: r.obj.id, title: r.obj.title || r.obj.label || r.obj.id }))
+    .map(r => ({ id: r.obj.id, title: tt(r.obj.title) || r.obj.label || r.obj.id }))
     .sort((a, b) => a.title.localeCompare(b.title)).slice(0, 200);
   _dimCache = { reqDims, usable, sets, setCache: new Map() };
   _dimGen = state.graphGen;
@@ -1683,7 +1696,7 @@ function reqMatchesFilter(rid, f, idx) {
   if (f.q) {
     const q = f.q.toLowerCase();
     if (!rid.toLowerCase().includes(q) && !(r.obj.label || "").toLowerCase().includes(q) &&
-        !(r.obj.title || "").toLowerCase().includes(q)) return false;
+        !(tt(r.obj.title) || "").toLowerCase().includes(q)) return false;
   }
   if (f.set) {
     if (!idx.setCache.has(f.set)) idx.setCache.set(f.set, new Set(expandSet(f.set)));
@@ -1711,7 +1724,7 @@ function controlSelectorHtml(ci) {
     const r = state.objects.get(id);
     return `<div class="leaf"><input type="checkbox" data-selreq="${esc(id)}" ${sel.has(id) ? "checked" : ""}>
       <a class="reflink" data-ref="${esc(id)}">${esc(r.obj.label || id.split("/").pop())}</a>
-      <span class="hint" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc((r.obj.title || "").slice(0, 70))}</span>
+      <span class="hint" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc((tt(r.obj.title) || "").slice(0, 70))}</span>
       ${r.obj.statements.slice(0, 1).map(s => modBadge(s.modality)).join("")}</div>`;
   }).join("");
   return `<div class="glass" style="padding:12px;margin:8px 0">
@@ -1870,7 +1883,7 @@ function assessScopes() {
   const parents = setsReferencing();
   for (const r of state.objects.values())
     if (r.type === "requirementSet" && !parents.has(r.obj.id))
-      scopes.push({ key: r.obj.id, label: "Set: " + (r.obj.title || r.obj.id), reqs: () => expandSet(r.obj.id) });
+      scopes.push({ key: r.obj.id, label: "Set: " + (tt(r.obj.title) || r.obj.id), reqs: () => expandSet(r.obj.id) });
   scopes.push({ key: "ALL", label: `ALL ${[...state.objects.values()].filter(r => r.type === "requirement").length} requirements in the bundle`,
     reqs: () => state.order.filter(id => state.objects.get(id)?.type === "requirement") });
   return scopes;
@@ -1882,14 +1895,14 @@ function wbAssessHtml() {
   const reqs = state.objects.size ? cur.reqs().filter(id => state.objects.get(id)?.type === "requirement") : [];
   const q = (d.azq || "").toLowerCase();
   const shown = reqs.filter(id => !q || id.toLowerCase().includes(q) ||
-    ((state.objects.get(id)?.obj.label || "") + (state.objects.get(id)?.obj.title || "")).toLowerCase().includes(q));
+    ((state.objects.get(id)?.obj.label || "") + (tt(state.objects.get(id)?.obj.title) || "")).toLowerCase().includes(q));
   const answered = reqs.filter(id => a.results[id]?.result).length;
   const counts = { satisfied: 0, "not-satisfied": 0, inconclusive: 0 };
   reqs.forEach(id => { const r = a.results[id]?.result; if (r) counts[r]++; });
   const rows = shown.slice(0, 250).map(id => {
     const r = state.objects.get(id), res = a.results[id]?.result;
     return `<tr><td style="width:38%"><a class="reflink" data-ref="${esc(id)}">${esc(r.obj.label || id.split("/").pop())}</a>
-        <div class="hint">${esc((r.obj.title || "").slice(0, 90))}</div></td>
+        <div class="hint">${esc((tt(r.obj.title) || "").slice(0, 90))}</div></td>
       <td>${r.obj.statements.slice(0, 2).map(s => modBadge(s.modality)).join("")}</td>
       <td><span class="seg">
         <button data-az="${esc(id)}|satisfied" class="${res === "satisfied" ? "on-sat" : ""}">satisfied</button>
@@ -1931,7 +1944,7 @@ function buildAssessObjects() {
   const findings = reqs.filter(id => a.results[id]?.result === "not-satisfied").map((id, i) => ({
     id: mintId("finding", "f-" + today() + "-" + (i + 1)), version: "1", label: "F-" + (i + 1), lifecycle: "draft",
     "assessment-ref": asmtId, "requirement-ref": id, state: "open",
-    actions: [{ description: "Remediate: " + ((state.objects.get(id)?.obj.title) || id) + (a.results[id]?.note ? " — " + a.results[id].note : ""), status: "planned" }] }));
+    actions: [{ description: "Remediate: " + (tt(state.objects.get(id)?.obj.title) || id) + (a.results[id]?.note ? " — " + a.results[id].note : ""), status: "planned" }] }));
   return [asmt, ...findings];
 }
 function wireAssessWb(el) {
@@ -1977,7 +1990,7 @@ function wbAuthorHtml() {
     <div class="wbrow" style="border-top:1px solid var(--border-1);padding-top:8px">
       <label>new set</label><input type="text" id="wb-au-settitle" placeholder="set title, e.g. 'My baseline'…" value="${esc(d.auSetTitle || "")}" style="min-width:200px">
       ${pickerHtml("wb-au-mempick", "type to add a member (requirement or set)…")}</div>
-    <div>${(a.setMembers || []).map(mid => `<span class="wbchip">${esc((state.objects.get(mid)?.obj.label || state.objects.get(mid)?.obj.title) || mid)}<span class="x" data-delmem="${esc(mid)}">✕</span></span>`).join("") || '<span class="hint">no members picked yet</span>'}</div>
+    <div>${(a.setMembers || []).map(mid => `<span class="wbchip">${esc((state.objects.get(mid)?.obj.label || tt(state.objects.get(mid)?.obj.title)) || mid)}<span class="x" data-delmem="${esc(mid)}">✕</span></span>`).join("") || '<span class="hint">no members picked yet</span>'}</div>
     <div class="wbrow"><button class="primary" id="wb-au-addset">＋ Add set to graph</button>
       <span class="hint">a Set is taxonomy AND baseline — membership is the one hierarchy mechanism (D21)</span></div></div>`;
 }
@@ -2262,7 +2275,7 @@ renderLattice();
 restoreWorkspaceObjects();
 renderStages();
 setView("overview");
-l.info("Semantic Core Bundle Reader v1.6.0 · build 2026-07-22 — everything runs locally, nothing leaves this page");
+l.info("Semantic Core Bundle Reader v1.6.1 · build 2026-07-22 — everything runs locally, nothing leaves this page");
 l.info("open a bundle folder (contains content-manifest.json + objects/) or drop it here — or serve the repo over http and deep-link: #load=<bundle-url>&view=stage:tailor");
 
 /* deep links: #load=<bundle-url>&view=<view> — shareable when served over http(s) */

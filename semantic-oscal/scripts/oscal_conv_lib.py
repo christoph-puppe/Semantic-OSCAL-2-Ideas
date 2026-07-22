@@ -22,6 +22,26 @@ def make_T(lang, counter=None):
         return {lang: v}
     return T
 
+def textify(obj, lang):
+    """#12 delivery (D9 rev 2): every kernel human-readable field is `text`
+    ({BCP-47: string}). Applied at write time so converters keep authoring
+    plain strings; identifiers/labels stay strings by decision. Returns the
+    number of fields wrapped."""
+    n = 0
+    def wrap(container, key):
+        nonlocal n
+        if isinstance(container.get(key), str):
+            container[key] = {lang: container[key]}; n += 1
+    wrap(obj, "title")
+    wrap(obj, "rationale")                                   # mapping
+    for ex in obj.get("excludes", []) or []: wrap(ex, "rationale")
+    for cap in obj.get("capabilities", []) or []: wrap(cap, "description")
+    for a in obj.get("actions", []) or []: wrap(a, "description")
+    for dv in obj.get("deviations", []) or []: wrap(dv, "rationale")
+    for op in obj.get("operations", []) or []:
+        if isinstance(op.get("deviation"), dict): wrap(op["deviation"], "rationale")
+    return n
+
 def slug(s):
     return re.sub(r"[^a-z0-9]+", "-", (s or "").lower()).strip("-")[:60] or "x"
 
@@ -41,17 +61,28 @@ def semantic_digest(obj):
     return "sha256:" + hashlib.sha256(c).hexdigest()
 
 class Bundle:
-    def __init__(self, out_dir):
+    def __init__(self, out_dir, lang="en"):
         self.out = out_dir
+        self.lang = lang           # corpus language: #12 textify at write time
         self.objects = {}          # relpath -> obj
-        self.schemas = {}          # relpath -> stub obj
+        self.schemas = {}          # relpath -> pinned schema obj
     def add(self, relpath, obj):
         self.objects[relpath] = obj
-    def stub(self, name, fid, mods, props, note="ILLUSTRATIVE STUB - normative schemas ship with the gate-2 deliverable"):
+    def stub(self, name, fid, mods, props,
+             note="NORMATIVE pinned payload schema (backlog #26): closed shape - unknown keys are rejected, never smuggled"):
+        # #26 delivered: pins are the normative payload contract, fail-closed.
+        # (method name kept for call-site stability; these are no longer stubs)
         self.schemas[f"schemas/{name}"] = {
             "id": fid, "version": "1.0.0", "modifies-semantics": mods, "note": note,
             "schema": {"$schema": "https://json-schema.org/draft/2020-12/schema",
-                       "type": "object", "properties": props}}
+                       "type": "object", "properties": props,
+                       "additionalProperties": False}}
+    def pin_stdlib(self, filename):
+        """#26: stdlib facets are pinned VERBATIM from the normative
+        descriptor - the pin and the descriptor cannot diverge."""
+        src = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "schemas", "stdlib", filename)
+        d = json.load(open(src, encoding="utf-8"))
+        self.schemas[f"schemas/{filename}"] = d
     def _w(self, relpath, obj):
         p = os.path.join(self.out, relpath)
         os.makedirs(os.path.dirname(p), exist_ok=True)
@@ -78,6 +109,7 @@ class Bundle:
                 if not dirs and not files and base != self.out:
                     try: os.rmdir(base)
                     except OSError: pass
+        for o in self.objects.values(): textify(o, self.lang)   # #12 delivery
         for rel, o in {**self.objects, **self.schemas}.items(): self._w(rel, o)
         manifest = {"manifest-version": "1", "provenance": provenance,
                     "objects": [{"id": o["id"], "version": o["version"],

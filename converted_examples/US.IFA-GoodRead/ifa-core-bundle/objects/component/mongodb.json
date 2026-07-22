@@ -3,23 +3,31 @@
  "version": "20231012",
  "label": "MongoDB",
  "lifecycle": "active",
- "title": "MongoDB",
+ "title": {
+  "en": "MongoDB"
+ },
  "kind": "service",
  "capabilities": [
   {
    "id": "cap-sc-8",
    "requirement-ref": "https://ns.nist.gov/sp800-53/req/SC-8",
-   "description": "MongoDB's implementation of SC-8 control. The details of the implementation are provided at the statement level."
+   "description": {
+    "en": "MongoDB's implementation of SC-8 control. The details of the implementation are provided at the statement level."
+   }
   },
   {
    "id": "cap-sc-8-1",
    "requirement-ref": "https://ns.nist.gov/sp800-53/req/SC-8.1",
-   "description": "MongoDB implements cryptographic mechanisms (TLS 1.x) to provide cryptographic protection for data in transit."
+   "description": {
+    "en": "MongoDB implements cryptographic mechanisms (TLS 1.x) to provide cryptographic protection for data in transit."
+   }
   },
   {
    "id": "cap-sa-4-9",
    "requirement-ref": "https://ns.nist.gov/sp800-53/req/SA-4.9",
-   "description": "Must ensure that MongoDB only listens for network connections on authorized interfaces by configuring the MongoDB configuration file to limit the services exposure to only the network interfaces on which MongoDB instances should listen for incoming connections."
+   "description": {
+    "en": "Must ensure that MongoDB only listens for network connections on authorized interfaces by configuring the MongoDB configuration file to limit the services exposure to only the network interfaces on which MongoDB instances should listen for incoming connections."
+   }
   }
  ],
  "facets": {

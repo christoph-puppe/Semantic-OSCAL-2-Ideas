@@ -1083,6 +1083,10 @@ function Validate-Bundle([string]$bdir) {
         $sd = Read-Json $fp
         $sch = $sd['schema']; if ($null -eq $sch) { $sch = [ordered]@{type = 'object'} }
         $pinned[$sd['id']] = $sch
+        # #26 (D26 final): stdlib pins must equal the descriptor VERBATIM
+        if ($STDLIB.ContainsKey($sd['id'])) {
+            if ((Format-Canonical $sch) -cne (Format-Canonical $STDLIB[$sd['id']])) {
+                FAIL $section "$($fe['path']): pin of stdlib facet $($sd['id']) DIVERGES from the normative descriptor (D26)" } }
     }
     $envelopes = @{}
     foreach ($oid in $bundleObjs.Keys) {

@@ -3,7 +3,9 @@
  "version": "C5:2026",
  "label": "HR-03-02AS",
  "lifecycle": "active",
- "title": "HR-03 Additional Sharpen 02AS",
+ "title": {
+  "en": "HR-03 Additional Sharpen 02AS"
+ },
  "statements": [
   {
    "id": "stmt",
@@ -18,7 +20,7 @@
  ],
  "relations": [
   {
-   "type": "sharpens",
+   "type": "https://ns.bsi.bund.de/c5/rel/sharpens",
    "ref": "https://ns.bsi.bund.de/c5/req/hr-03-02b"
   }
  ]

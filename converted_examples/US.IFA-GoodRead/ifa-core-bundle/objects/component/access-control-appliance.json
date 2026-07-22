@@ -3,13 +3,17 @@
  "version": "1.0.0",
  "label": "Access Control Appliance",
  "lifecycle": "active",
- "title": "Access Control Appliance",
+ "title": {
+  "en": "Access Control Appliance"
+ },
  "kind": "hardware",
  "capabilities": [
   {
    "id": "cap-consumer-ac-2a",
    "requirement-ref": "https://ns.nist.gov/sp800-53/req/AC-2",
-   "description": "Description that directly addresses how the consumer responsibility was satisfied."
+   "description": {
+    "en": "Description that directly addresses how the consumer responsibility was satisfied."
+   }
   }
  ]
 }
