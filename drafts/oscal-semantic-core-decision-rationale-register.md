@@ -1173,6 +1173,79 @@ by design; the pre-tag erratum/enforcement pass empties it again. Tag
 gate: **#29–#32** fixed (or explicitly waived by the author) before
 `v1.0.0`; #33–#37 ride the same pass.
 
+# Amendments — P10b (2026-07-22): the external-review adjudication
+
+A second, independent P10 report arrived on branch `review/p10-gemini`
+(commit 57bdb72, "P10 in-depth adversarial design review by Gemini 3.6
+Flash", 10 findings G-1…G-10). Adjudicated finding-by-finding at HEAD
+under the standing rules — nothing enters the backlog unverified, and
+refuted findings are recorded so they are not resurrected.
+
+**CONFIRMED, new → backlog:**
+- **G-1 → #38** — corpus directory `geman.bsi` is misspelled and
+  off-convention (`CC.NAME` siblings). Rename to `DE.BSI` in the fix
+  pass; dated records keep the historical spelling.
+- **G-6 → #39** — RequirementSet membership cycles validate green:
+  schema cannot see cycles, `closure_errors` checks resolution only,
+  and D21 never states acyclicity. Real consumer corpse (baseline
+  expansion / nearest-Set search loops). Fix: D21 DAG sentence + cycle
+  detection in both validators + vectors.
+
+**CONFIRMED in substance, folded:**
+- **G-2 → #37(e)** — `text` keys are case-ambiguous (`en-US` vs
+  `en-us`: one BCP-47 tag, two digests — the #27 one-value-one-spelling
+  class). G-2's proposed fix (lowercase normalization before digest
+  computation) is **rejected**: never-normalize is the D3.4 discipline
+  and digest-time rewriting would break every shipped digest. The
+  canonical spelling rides the schema (lowercase-only key pattern;
+  corpus carries only `en`/`de`).
+- **G-7 → #33(a)** — the twelve-vs-eleven corpora count, independently
+  confirmed; two reviews now say eleven — unify on eleven.
+- **G-8 → #34** — D19/IV.8 stale naming status, independently
+  confirmed (P10's #34 additionally records the mis-attributed
+  trademark-optics rationale).
+- **G-9 → #32(6)** — D9's `prose{lang}` shorthand predates the `text`
+  rename; cosmetic wording, same shape.
+- **G-10 → #33(e)** — the register's "D26" heading jumps the D-number
+  space (no D23–D25 exist; it is backlog #26 wearing a D-label); add
+  the editorial note, and retire the stale "(v0.5)" register header.
+
+**REFUTED (do not resurrect):**
+- **G-3** ("zero-dependency PowerShell claim inflated — fails on
+  non-Windows"): the claim is Windows-5.1-scoped at every occurrence
+  (README:14 "on a stock Windows box"; gate-4 §2 "the stock-Windows
+  story is the point"; R8 "a stock Windows box — the auditor's
+  machine"), and the technical premise is wrong — the script's SHA-2
+  comes from the .NET BCL (`System.Security.Cryptography.SHA256/512`,
+  ps1:91/448), which is cross-platform in .NET Core; nothing binds to
+  Windows CNG. Cross-platform consumers have the Python reference.
+- **G-4** ("DSSE verification grants authority-proven without binding
+  the key to the authority URI"): misreads the implementation. Trusted
+  keys are looked up **by signer URI** (validate_core.py:370), and
+  `derive_tier` only considers attestations whose signer origin equals
+  the selected content's origin (py:161) — a third-party signer never
+  reaches verification for a foreign origin, and a consumer who
+  registers a stranger's key under the authority's URI is corrupting
+  their own authority-local trust store, which D7-applied/R6 place
+  outside the threat model ("keys arrive as INPUT … never from the
+  bundle"). No `authority` field exists on Attestation (the report
+  cites one), and the shipped `wrong-key → consumer` dsse vector covers
+  exactly the described attack.
+- **G-5** ("SKILL/handbook naming drift, no old→new mapping"): the
+  requested mapping already ships verbatim — SKILL.md's description
+  reads 'JASCON (… formerly "Semantic OSCAL" / "OSCAL Semantic
+  Core")', which is the **only** occurrence of the old name under
+  `semantic-oscal/`; remaining `semantic-oscal`/schema-filename strings
+  are machine identifiers retained by the title-block rule.
+
+**Report-internal errata (for the record):** the report's census table
+contradicts the measured bundles and itself — CR26 row "292 Reqs · 91
+Sets · 4 Tailorings" vs the measured 306 · 92 · 5 (its own totals line
+says 5 Tailorings), and "999 statements" mislabels GS++ (999 source
+controls → 651 Requirements + 162 Sets). The P10 recount above stands.
+
 ## Next (IV.8 of the rc.1 spec)
-Name ✓ **JASCON** → P10 ✓ **DONE 2026-07-22** (this entry; findings
-#29–#37, no Blockers) → the P10 fix pass (#29–#32 gate) → `v1.0.0` tag.
+Name ✓ **JASCON** → P10 ✓ **DONE 2026-07-22** (findings #29–#37, no
+Blockers) → P10b external review adjudicated ✓ (#38–#39 in; G-3/G-4/G-5
+refuted) → the P10 fix pass (#29–#39; Majors are the gate) → `v1.0.0`
+tag.
