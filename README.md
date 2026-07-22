@@ -6,10 +6,15 @@ contact with real catalogs before it may stay.**
 
 This repository is a working design study, not a slide deck. It contains a
 draft specification with a public decision register, an **executable kernel
-schema** with a **129-vector conformance corpus** and a reference validator,
+schema** with a **149-vector conformance corpus** and *two* reference
+validators — Python, and a **zero-dependency PowerShell 5.1 twin that runs
+on a stock Windows box** (the weekend-validator claim, measured: ~30×
+smaller than the OSCAL 1.x toolchain, crypto engines included) —
 **eleven framework and lifecycle corpora converted losslessly** (251,591
 source leaf values, coverage computed rather than asserted — including NIST
-SP 800-53 Rev 5, its 800-53B baselines, and CSF 2.0), and a zero-dependency
+SP 800-53 Rev 5, its 800-53B baselines, and CSF 2.0), a **bidirectional
+OSCAL 1.2.2 export** that round-trips 5,647/5,647 objects to semantic-digest
+equality against the official NIST schema, and a zero-dependency
 **single-file reader & authoring studio** that turns the whole thing into
 something you can click.
 
@@ -91,9 +96,10 @@ The project moves through evidence gates; nothing advances on narrative.
   architecture was drawn: the kernel is what all three were measured to need.
 - **Gate 2 — executable (done).** The normative JSON Schema, seven stdlib
   facet descriptors (including a DSSE attestation envelope profile), a
-  **129-vector conformance corpus** in nine suites (canonicalization,
+  **149-vector conformance corpus** in twelve suites (canonicalization,
   modality lattice, parameters, tailoring law, attestation, facet
-  enforcement, reference closure, lifecycle, authority tiers), and
+  enforcement, reference closure, lifecycle, authority tiers, DSSE
+  verification, bundle composition, conditional-apply), and
   [`validate_core.py`](semantic-oscal/scripts/validate_core.py) — which
   re-verifies **6,675 objects across all eleven bundles with both SHA-256
   digests each**, every object matching exactly one kernel shape. Current
@@ -118,9 +124,24 @@ The project moves through evidence gates; nothing advances on narrative.
   also exposed and fixed two reference-validator defects (a tier-laundering
   wrapper-Set shortcut; multi-select list values) — exactly what
   evidence-gating is for.
-- **Gate 4 — next.** The composition/instantiation engines (bundle semver,
-  conditional-apply), DSSE signature verification for the proven tier, and
-  the weekend-validator measurement.
+- **Gate 4 — done (2026-07-22, same day).** The engines: **DSSE signature
+  verification** (Ed25519, dependency-free — in verification mode an
+  unsigned attestation can no longer prove authority), **bundle
+  composition** (D3.5: highest-minor resolve, both payload sets
+  re-validated, incompatibility reported never silently picked), and
+  **conditional-apply** (one predicate, one primitive, one leash). Plus the
+  two economic claims, measured: the **weekend validator**
+  ([`validate_core.ps1`](semantic-oscal/scripts/validate_core.ps1) —
+  PowerShell 5.1, zero installs, 149/149 vectors, ~30× smaller than
+  compliance-trestle with crypto included) and the **bidirectional export**
+  ([`export_oscal.py`](semantic-oscal/scripts/export_oscal.py) — 10/10
+  catalog bundles schema-valid against the official NIST 1.2.2 schema,
+  5,647/5,647 objects round-trip digest-equal). Numbers:
+  [`drafts/gate-4-measurement.md`](drafts/gate-4-measurement.md).
+- **Next.** The converter rerun (the `text` primitive delivery, `sharpens`→URI,
+  real pinned facet schemas), OSCAL mapping/profile-model exports, and the
+  standing invitation: a third-party clean-room validator build against the
+  conformance corpus.
 
 Reproduce the whole verdict in one line (needs [uv](https://docs.astral.sh/uv/)):
 

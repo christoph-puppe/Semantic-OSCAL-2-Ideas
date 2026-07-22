@@ -899,3 +899,100 @@ authorization anchor).
 |---|---|
 | #10 | **Close, DRAINED** — D10 rev 3: (requirement, ODP) resolves via the declaring statement; 16 CTL assignments → `rev5-odp-overlay` Tailoring; 14 controls carried in-bundle; guidance stays parked (D20 supplements territory, not ODP addressing) |
 | #9 | **Confirmation delivered** — #9-applied: zero enum additions; five lifecycle types at document scale, both digests |
+
+# Amendments — gate 4 (2026-07-22)
+
+Gate 4 delivered same-day (spec IV.10; plan `drafts/gate-4-plan.md`;
+measurement `drafts/gate-4-measurement.md`). The engines the conformance
+corpus had named gaps for now exist; the two economic claims are
+measured. Conformance grew 129 → **149 vectors** (12 families: + dsse 5,
+composition 7, conditional 8).
+
+## D7-applied — DSSE verification engine; the reference pins Ed25519 *(backlog #24 CLOSED)*
+**Decision.** `dsse-envelope@1` deliberately pins no algorithm; the
+reference engine pins **Ed25519 (RFC 8032)**, implemented
+dependency-free in both validators (pure Python; PowerShell over
+`System.Numerics.BigInteger`). Key distribution is authority-local (the
+R6 pattern): trusted keys arrive as INPUT (`--trusted-keys` /
+`-TrustedKeys` / vector fixtures), never from the bundle being
+verified. **Verification mode** (keys supplied): `authority-proven`
+additionally requires a VERIFYING envelope — an unsigned attestation
+can no longer prove (the P9c-1 forgery closed); structural mode (no
+keys) reports `UNVERIFIED` distinctly and grants nothing extra.
+**Evidence.** 5 vectors: signed→proven · unsigned-cannot-prove ·
+tampered-payload→attestation-binds FAIL · wrong-key→consumer ·
+missing-key→unverified-not-proven. Envelope payload = the Attestation's
+canonical form; signature input = PAE per DSSE v1.
+**Rejected.** Keys discovered from bundle content — the bundle would
+attest itself; `.well-known` key discovery stays an Authority-tier
+publication duty (D14 territory), not a validator default.
+
+## D3.5-applied — The composition engine *(backlog #18, half 1)*
+**Decision.** `--compose A B` implements the D3.5 sentence literally:
+facet pins in one major line resolve to the highest pinned minor with
+BOTH payload sets re-validated under the winner; major clashes,
+non-semver pins, re-validation failures, divergent twins (same
+id+version, different semantic digests), and cross-version id
+collisions are **reported errors, never silent picks**.
+**Evidence.** 7 vectors; real smoke: US.SP800-53 + US.IFA-GoodRead
+compose clean (the carried AC-6.1/AC-2 are byte-identical — the
+authorization-package pattern holds under composition).
+
+## B.1.8-applied — The conditional-apply engine *(backlog #18, half 2)*
+**Decision.** Instances = {instance-id, trigger: exactly one B.2
+predicate, enforcement: one instantiated primitive, rationale}. The
+one-hop budget is enforced structurally (a two-hop path is an error,
+not false); boolean composition is rejected; an unbound trigger
+parameter is its own error, never silently false; the FAIL format is
+normative and vector-locked. Reference primitives: `param-bounds`,
+`code-from` — additions arrive the Ch.15 way. `param-equals` compares
+the DECLARED default (bindings live in Implementations; a
+binding-aware trigger is an engine extension, recorded as future).
+**Evidence.** 8 vectors incl. the CR26 class-deadline pattern and the
+normative-format lock.
+
+## R7 — The bidirectional export suite: down-conversion measured *(IV.5.4)*
+**Decision.** `export_oscal.py` projects catalog bundles to OSCAL 1.2.2
+validated against the OFFICIAL NIST release schema, with a generic
+importer and per-object semantic-digest round-trip. Real OSCAL where
+OSCAL has the construct (statements→parts, params→params+select,
+relations→links, root-Set tree→groups); the D16 props channel
+(`https://ns.oscal-semantic.org/core`) for what it cannot say —
+including Sets in full, because the catalog model cannot represent
+overlapping membership (baselines).
+**Evidence (measured).** 10/10 catalog bundles schema-valid; round-trip
+**5,647/5,647 objects digest-equal (100 %)**. D16 asymmetries measured:
+groups cannot mix subgroups+controls (exclusive anyOf — why CIS
+contorts sections into controls-in-controls) ×1 wrapper; params require
+label|select ×154 synthetic labels; 3 empty groups dropped; NIST's own
+JSON schema needs `\p{}` regexes Python's stdlib cannot compile.
+**Declared scope.** The catalog graph; Mapping/Tailoring ride the
+OSCAL mapping/profile models at a later expansion; the lifecycle bundle
+awaits SSP-family exports. Skips counted, never silent.
+
+## R8 — The weekend-validator measurement *(IV.5.4)*
+**Decision + evidence.** Second implementation `validate_core.ps1`:
+PowerShell 5.1, ZERO installs, a stock Windows box — the auditor's
+machine. All 149 vectors pass with full parity to the Python reference
+(one authoring-time count divergence, fixed within minutes). Sizes,
+one counter (non-blank, non-comment): reference **938** lines Python
+(+ jsonschema), weekend impl **1,110** lines PowerShell (+ nothing),
+export suite 280 — vs **30,905 lines / 162 files** for
+compliance-trestle 4.2.0, the OSCAL 1.x validator+resolver toolchain
+(tests excluded) — a ~30× gap with the crypto engines INCLUDED.
+**Authorship, honestly:** both implementations by the project author
+with AI assistance from the same normative sources; the independence
+claim is limited to LANGUAGE and RUNTIME, not authorship — a
+third-party clean-room build remains the strongest form and is the
+standing invitation. What the measurement DOES establish: the spec +
+appendices + vectors suffice to reimplement without reading the
+reference (divergences would have surfaced as vector failures), and
+the implementation burden is three decimal orders below the 1.x
+toolchain.
+
+## Gate-4 backlog dispositions
+
+| Backlog | Disposition |
+|---|---|
+| #18 | **Close** — both named families delivered with their engines (composition 7 + conditional 8 vectors); B.1.3 negative corpus folded into the lifecycle family's disjointness cases (measured equivalent); DSSE profile verification live (D7-applied) |
+| #24 | **Close** — signature verification live behind trusted-key input; unsigned attestations cannot prove in verification mode; prefix-spoof + unsigned negative vectors shipped (dsse family) |
