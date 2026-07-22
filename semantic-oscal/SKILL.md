@@ -71,6 +71,10 @@ You must strictly adhere to the guidelines detailed in the handbook chapters and
 ### Requirement 13: Migration Playbooks
 - **Description:** Translate OSCAL 1.x structures (catalogs, profiles, SSPs, etc.) or legacy formats to Semantic Core objects preserving semantic equivalence.
 - **Reference Document:** [Chapter 14 — Migration Playbooks](references/oscal-semantic-core-handbook-ch14-migration-playbooks.md)
+- **Migration Scripts:**
+  - [convert_ism.py](scripts/convert_ism.py) — ISM (OSCAL 1.1.x catalog) to Semantic Core bundle converter.
+  - [convert_bsi.py](scripts/convert_bsi.py) — BSI Grundschutz++ + MS-TLS (OSCAL 1.1.3) to Semantic Core bundle converter.
+  - [convert_cr26.py](scripts/convert_cr26.py) — FedRAMP CR26 (bespoke JSON) to Semantic Core bundle converter.
 
 ### Requirement 14: Governance and Ecosystem
 - **Description:** Adhere to conformance tiers, deprecation policies, registry usage, and the anti-#2118 change proposal workflow.
@@ -118,3 +122,11 @@ The [examples/](examples/) directory contains a complete, self-consistent bundle
 - **Descriptors & Custom Facets:**
   - [gspp-taxonomy-1.0.0.json](examples/gspp-taxonomy-1.0.0.json) — Custom facet descriptor schema.
   - [assessment-criteria-1.0.0-stub.json](examples/assessment-criteria-1.0.0-stub.json) — Extension descriptor stub.
+
+## Migration Scripts Reference
+
+The [scripts/](scripts/) directory contains automated scripts for migrating legacy/external compliance schemas to Semantic Core:
+
+- [convert_ism.py](scripts/convert_ism.py) — Translates ISM OSCAL 1.1.x catalogs into a Semantic Core bundle and generates a computed coverage report.
+- [convert_bsi.py](scripts/convert_bsi.py) — Converts BSI Grundschutz++ + MS-TLS OSCAL 1.1.3 content into Semantic Core. Handles nested pseudo-controls, splitting them into statements and mapping grammar, security objectives, assessment criteria, and taxonomy facets.
+- [convert_cr26.py](scripts/convert_cr26.py) — Processes FedRAMP CR26 bespoke JSON into a Semantic Core bundle, converting rules and KSIs into Requirements and Mapping objects.
