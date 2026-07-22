@@ -201,7 +201,7 @@ svg text{font-family:'JetBrains Mono',monospace}
     <div class="pill" id="pill-bundle">no bundle loaded</div>
     <div class="pill hidden" id="pill-verify"></div>
     <div style="flex:1"></div>
-    <div class="pill">v1.3.0 · build 2026-07-21</div>
+    <div class="pill">v1.4.0 · build 2026-07-21</div>
   </div>
 
   <div id="mid">
@@ -547,6 +547,7 @@ function indexBundle() {
     const missing = entries.length - state.order.length;
     if (missing > 0) l.warn(`${missing} manifest entries have no file in the selection`);
   }
+  state.graphGen++;
   l.ok(`indexed ${parsed} objects (${failed} parse failures, ${unknown} non-kernel files skipped)`);
   const counts = typeCounts();
   l.info("types: " + Object.entries(counts).map(([k, v]) => `${k} ${v}`).join(" · "));
@@ -1263,6 +1264,7 @@ function addToGraph(objs, opts = {}) {
     if (!t) { l.err("workspace object has no inferable type: " + o.id); continue; }
     state.objects.set(o.id, { obj: o, path: "(workspace)", type: t, entry: null });
     if (!state.order.includes(o.id)) state.order.push(o.id);
+    state.graphGen++;
     if (!opts.silent) l.ok(`added to graph as ${t}: ${o.id}`);
     if (!opts.ephemeral) {
       work.created = work.created || [];
@@ -1308,7 +1310,7 @@ async function exportWorkspaceBundle() {
   if (!objs.length) { l.warn("workspace is empty — use 'Add to graph' in a workbench first"); return; }
   const files = await buildWorkspaceBundleFiles(objs, {
     source: "Semantic Core Bundle Reader workbench",
-    converter: "semantic-core-reader.html v1.3.0",
+    converter: "semantic-core-reader.html v1.4.0",
     created: new Date().toISOString() });
   const zip = buildZip(files.map(f => ({ name: "workspace-bundle/" + f.name, bytes: f.bytes })));
   const a = document.createElement("a");
@@ -1522,6 +1524,150 @@ function wireTailorWb(el) {
   const cl = el.querySelector("#wb-t-clear"); if (cl) cl.onclick = () => { work.tailor = { label: "my-tailoring", selects: [], excludes: [], operations: [] }; work._draft = {}; rerender(); };
 }
 
+/* ---------- control filter index: kernel + facet dimensions, auto-populated ---------- */
+let _dimCache = null, _dimGen = -1;
+state.graphGen = 0;
+function facetShort(fid) { return fid.split("/").pop().replace(/@[0-9]+$/, ""); }
+function collectDims(obj) {   // -> [ [dimKey, value], ... ]
+  const out = [];
+  const scalar = v => (typeof v === "string" || typeof v === "number" || typeof v === "boolean") && String(v).length <= 48;
+  out.push(["lifecycle", obj.lifecycle]);
+  for (const s of obj.statements || []) {
+    out.push(["modality", s.modality]);
+    for (const p of s["obligated-parties"] || []) out.push(["party", p.split("/").pop()]);
+  }
+  const walkPayload = (short, payload, depth) => {
+    if (!payload || typeof payload !== "object" || depth > 2) return;
+    for (const [k, v] of Object.entries(payload)) {
+      if (k === "by-statement" && v && typeof v === "object") {
+        for (const sub of Object.values(v)) walkPayload(short, sub, depth + 1);
+      } else if (scalar(v)) out.push([short + "." + k, String(v)]);
+      else if (Array.isArray(v)) { for (const el of v) if (scalar(el)) out.push([short + "." + k, String(el)]); }
+      else if (v && typeof v === "object" && depth < 2) walkPayload(short, v, depth + 1);
+    }
+  };
+  for (const [fid, payload] of Object.entries(obj.facets || {})) walkPayload(facetShort(fid), payload, 0);
+  return out;
+}
+function dimIndex() {
+  if (_dimCache && _dimGen === state.graphGen) return _dimCache;
+  const reqDims = new Map(), dims = new Map();   // dimKey -> Map(value -> count)
+  for (const r of state.objects.values()) {
+    if (r.type !== "requirement") continue;
+    const mine = new Map();
+    for (const [k, v] of collectDims(r.obj)) {
+      if (!mine.has(k)) mine.set(k, new Set());
+      mine.get(k).add(v);
+      if (!dims.has(k)) dims.set(k, new Map());
+      dims.get(k).set(v, (dims.get(k).get(v) || 0) + 1);
+    }
+    reqDims.set(r.obj.id, mine);
+  }
+  const KERNEL = ["modality", "lifecycle", "party"];
+  const usable = [...dims.entries()]
+    .filter(([k, vals]) => vals.size >= 1 && vals.size <= 40 &&
+      [...vals.values()].reduce((a, b) => a + b, 0) >= 2)
+    .sort((a, b) => {
+      const ka = KERNEL.indexOf(a[0]), kb = KERNEL.indexOf(b[0]);
+      if ((ka >= 0) !== (kb >= 0)) return ka >= 0 ? -1 : 1;
+      return [...b[1].values()].reduce((x, y) => x + y, 0) - [...a[1].values()].reduce((x, y) => x + y, 0);
+    }).slice(0, 12);
+  const sets = [...state.objects.values()].filter(r => r.type === "requirementSet")
+    .map(r => ({ id: r.obj.id, title: r.obj.title || r.obj.label || r.obj.id }))
+    .sort((a, b) => a.title.localeCompare(b.title)).slice(0, 200);
+  _dimCache = { reqDims, usable, sets, setCache: new Map() };
+  _dimGen = state.graphGen;
+  l.debug(`filter index: ${usable.length} dimensions auto-populated (${usable.map(u => u[0]).join(", ")}), ${sets.length} sets`);
+  return _dimCache;
+}
+function reqMatchesFilter(rid, f, idx) {
+  const r = state.objects.get(rid);
+  if (!r || r.type !== "requirement") return false;
+  if (f.q) {
+    const q = f.q.toLowerCase();
+    if (!rid.toLowerCase().includes(q) && !(r.obj.label || "").toLowerCase().includes(q) &&
+        !(r.obj.title || "").toLowerCase().includes(q)) return false;
+  }
+  if (f.set) {
+    if (!idx.setCache.has(f.set)) idx.setCache.set(f.set, new Set(expandSet(f.set)));
+    if (!idx.setCache.get(f.set).has(rid)) return false;
+  }
+  for (const [k, v] of Object.entries(f.dims || {})) {
+    if (!v) continue;
+    if (!idx.reqDims.get(rid)?.get(k)?.has(v)) return false;
+  }
+  return true;
+}
+function controlSelectorHtml(ci) {
+  const d = work._draft;
+  const f = d.cf = d.cf || { q: "", set: "", dims: {} };
+  const idx = dimIndex();
+  const all = state.order.filter(id => state.objects.get(id)?.type === "requirement");
+  const matching = all.filter(id => reqMatchesFilter(id, f, idx));
+  const sel = new Set(d.selIds || []);
+  const dimSelects = idx.usable.map(([k, vals]) => {
+    const opts = [...vals.entries()].sort((a, b) => b[1] - a[1]).map(([v, n]) =>
+      `<option value="${esc(v)}" ${f.dims[k] === v ? "selected" : ""}>${esc(v)} (${n})</option>`).join("");
+    return `<span><label style="margin-right:4px">${esc(k)}</label><select data-dim="${esc(k)}" style="max-width:170px"><option value="">any</option>${opts}</select></span>`;
+  }).join(" ");
+  const rows = matching.slice(0, 200).map(id => {
+    const r = state.objects.get(id);
+    return `<div class="leaf"><input type="checkbox" data-selreq="${esc(id)}" ${sel.has(id) ? "checked" : ""}>
+      <a class="reflink" data-ref="${esc(id)}">${esc(r.obj.label || id.split("/").pop())}</a>
+      <span class="hint" style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">${esc((r.obj.title || "").slice(0, 70))}</span>
+      ${r.obj.statements.slice(0, 1).map(s => modBadge(s.modality)).join("")}</div>`;
+  }).join("");
+  return `<div class="glass" style="padding:12px;margin:8px 0">
+    <div class="nano" style="margin-bottom:6px">Control selector — filters auto-populated from kernel fields and every facet in the loaded corpus</div>
+    <div class="wbrow"><input type="text" id="wb-cf-q" placeholder="text: id · label · title…" value="${esc(f.q)}" style="max-width:220px">
+      <label>member of</label><select id="wb-cf-set" style="max-width:260px"><option value="">any Set</option>${idx.sets.map(s => `<option value="${esc(s.id)}" ${f.set === s.id ? "selected" : ""}>${esc(s.title)}</option>`).join("")}</select></div>
+    <div class="wbrow" style="row-gap:6px">${dimSelects || '<span class="hint">no facet dimensions in this corpus</span>'}</div>
+    <div class="wbrow"><span class="chip"><b>${matching.length}</b> of ${all.length} controls match</span>
+      <span class="chip"><b>${sel.size}</b> selected</span>
+      <button id="wb-cf-selall">☑ select all matching</button>
+      <button id="wb-cf-clear">☐ clear selection</button>
+      <button class="primary" id="wb-cf-attach" data-ci="${ci}" ${sel.size ? "" : "disabled"}>＋ Attach ${sel.size} selected</button>
+      <button id="wb-cf-close">✕ close</button></div>
+    <div style="max-height:260px;overflow-y:auto;border-top:1px solid var(--border-1);padding-top:6px">${rows || '<span class="hint">nothing matches</span>'}
+      ${matching.length > 200 ? `<div class="hint" style="padding:6px">…${matching.length - 200} more match (all included in “select all matching”)</div>` : ""}</div></div>`;
+}
+function wireControlSelector(el, rerender) {
+  const d = work._draft, f = d.cf;
+  const q = el.querySelector("#wb-cf-q");
+  if (q) q.oninput = () => { f.q = q.value; clearTimeout(state._cfT); state._cfT = setTimeout(rerender, 250); };
+  const s = el.querySelector("#wb-cf-set"); if (s) s.onchange = () => { f.set = s.value; rerender(); };
+  el.querySelectorAll("[data-dim]").forEach(x => x.onchange = () => { f.dims[x.dataset.dim] = x.value; rerender(); });
+  el.querySelectorAll("[data-selreq]").forEach(x => x.onchange = () => {
+    const set = new Set(d.selIds || []);
+    x.checked ? set.add(x.dataset.selreq) : set.delete(x.dataset.selreq);
+    d.selIds = [...set]; rerender();
+  });
+  const sa = el.querySelector("#wb-cf-selall");
+  if (sa) sa.onclick = () => {
+    const idx = dimIndex();
+    d.selIds = state.order.filter(id => state.objects.get(id)?.type === "requirement" && reqMatchesFilter(id, f, idx));
+    rerender();
+  };
+  const cl = el.querySelector("#wb-cf-clear"); if (cl) cl.onclick = () => { d.selIds = []; rerender(); };
+  const x = el.querySelector("#wb-cf-close"); if (x) x.onclick = () => { d.selOpen = null; rerender(); };
+  const at = el.querySelector("#wb-cf-attach");
+  if (at) at.onclick = () => {
+    const ci = +at.dataset.ci, c = work.system.components[ci];
+    if (!c) return;
+    const resp = el.querySelector(`#wb-i-resp-${ci}`)?.value || "provider";
+    const stat = el.querySelector(`#wb-i-stat-${ci}`)?.value || "planned";
+    let added = 0;
+    for (const rid of d.selIds || []) {
+      if (work.system.implementations.some(e => e["component-ref"] === c.id && e["requirement-ref"] === rid)) continue;
+      work.system.implementations.push({ id: mintId("impl", c.title + "-" + rid.split("/").pop()),
+        "component-ref": c.id, "requirement-ref": rid, responsibility: resp, status: stat });
+      added++;
+    }
+    l.ok(`attached ${added} control(s) to ${c.title} via the selector (${(d.selIds || []).length - added} were already attached)`);
+    d.selIds = []; d.selOpen = null; rerender();
+  };
+}
+
 /* Implement workbench: system with assets carrying controls */
 function wbImplementHtml() {
   const s = work.system, d = work._draft;
@@ -1532,8 +1678,10 @@ function wbImplementHtml() {
       <b>${esc(c.title)}</b> <span class="mono" style="font-size:9.5px;color:var(--text-quiet)">${esc(c.id)}</span>
       <span class="x wbchip" data-delcomp="${ci}" style="float:right">✕ remove</span>
       <div class="wbrow"><label>attach control</label>${pickerHtml("wb-i-pick-" + ci, "requirement or Set (bulk)…")}
+        <button data-openctl="${ci}">⌕ filter &amp; select…</button>
         <label>responsibility</label><select id="wb-i-resp-${ci}">${["provider","customer","shared","inherited"].map(r => `<option ${d["resp" + ci] === r ? "selected" : ""}>${r}</option>`).join("")}</select>
         <label>status</label><select id="wb-i-stat-${ci}">${["planned","partial","implemented","not-applicable"].map(r => `<option ${d["stat" + ci] === r ? "selected" : ""}>${r}</option>`).join("")}</select></div>
+      ${d.selOpen === ci ? controlSelectorHtml(ci) : ""}
       ${edges.map(e => `<div class="wbchip">◇ ${esc((state.objects.get(e["requirement-ref"])?.obj.label) || e["requirement-ref"].split("/").pop())}
         <span class="badge">${esc(e.responsibility)}</span><span class="badge">${esc(e.status)}</span>
         <span class="x" data-delimpl="${esc(e.id)}">✕</span></div>`).join("") || '<span class="hint">no controls attached yet</span>'}
@@ -1575,6 +1723,11 @@ function wireImplementWb(el) {
     work.system.components.push({ id: mintId("comp", title), title, kind: el.querySelector("#wb-i-ckind").value });
     d.cTitle = ""; l.ok("asset added: " + title); rerender();
   };
+  el.querySelectorAll("[data-openctl]").forEach(b => b.onclick = () => {
+    d.selOpen = d.selOpen === +b.dataset.openctl ? null : +b.dataset.openctl;
+    d.selIds = d.selIds || []; rerender(); });
+  if (d.selOpen !== null && d.selOpen !== undefined && el.querySelector("#wb-cf-q"))
+    wireControlSelector(el, rerender);
   work.system.components.forEach((c, ci) => {
     ["resp","stat"].forEach(k => { const x = el.querySelector(`#wb-i-${k}-${ci}`); if (x) x.onchange = () => { d[k + ci] = x.value; saveWork(); }; });
     wirePicker(el, "wb-i-pick-" + ci, ["requirement", "requirementSet"], id => {
@@ -1857,7 +2010,7 @@ async function exportResolved(tObj) {
     .map(o => JSON.parse(JSON.stringify(o)));
   const files = await buildWorkspaceBundleFiles(objs, {
     source: "resolved package", tailoring: tObj.id, "tailoring-version": tObj.version,
-    converter: "semantic-core-reader.html v1.3.0", created: new Date().toISOString() });
+    converter: "semantic-core-reader.html v1.4.0", created: new Date().toISOString() });
   const zip = buildZip(files.map(f => ({ name: "resolved-bundle/" + f.name, bytes: f.bytes })));
   const a = document.createElement("a");
   a.href = URL.createObjectURL(new Blob([zip], { type: "application/zip" }));
@@ -2008,7 +2161,7 @@ renderLattice();
 restoreWorkspaceObjects();
 renderStages();
 setView("overview");
-l.info("Semantic Core Bundle Reader v1.3.0 · build 2026-07-21 — everything runs locally, nothing leaves this page");
+l.info("Semantic Core Bundle Reader v1.4.0 · build 2026-07-21 — everything runs locally, nothing leaves this page");
 l.info("open a bundle folder (contains content-manifest.json + objects/) or drop it here");
 if (!crypto.subtle) l.warn("crypto.subtle unavailable in this context — digest verification uses the JS fallback (slower)");
 </script>

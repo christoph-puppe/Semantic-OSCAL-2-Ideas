@@ -122,7 +122,12 @@ resolved package (Appendix B steps 3–4 in the browser), and the whole
 workspace exports as a **real bundle**: a client-side ZIP whose
 content-manifest carries both SHA-256 digests per object — re-loadable
 here, verifiable by `validate_core.py`. Authored objects persist across
-reloads.
+reloads. v1.4 adds the control selector: attaching controls to an asset
+opens a filter bar auto-populated from everything the loaded corpus
+actually carries — kernel dimensions (modality, lifecycle, party), Set
+membership, and every facet field with an enumerable value space
+(sec-level, tags, implementation-group, …) — over a checkbox list of all
+matching controls with select-all and bulk attach.
 
 ### As a specification
 
