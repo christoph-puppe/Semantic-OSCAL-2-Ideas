@@ -1,5 +1,5 @@
 ---
-name: semantic_oscal
+name: semantic-oscal
 description: Guidelines and requirements for authoring, validating, and migrating to Semantic OSCAL (OSCAL Semantic Core).
 ---
 
@@ -9,11 +9,12 @@ When triggered, this skill guides the agent in applying the OSCAL Semantic Core 
 
 ## Core Directives (Chapters as Requirements)
 
-You must strictly adhere to the guidelines detailed in the handbook chapters linked below:
+You must strictly adhere to the guidelines detailed in the handbook chapters and companion examples linked below:
 
 ### Requirement 1: Paradigm Alignment & Motivation
 - **Description:** Align all compliance data into a graph of nine shallow, globally identified objects (Requirement, RequirementSet, Tailoring, Mapping, Component, Implementation, Assessment, Finding, Attestation) and 2 sub-objects (Deviation, Authorization). Ensure strict separation of concerns between kernel semantics, registered facets, and rendering annotations.
 - **Reference Document:** [Chapter 1 — Why This Exists](references/oscal-semantic-core-handbook-ch01-why-this-exists.md) and [Chapter 2 — The Core in One Hour](references/oscal-semantic-core-handbook-ch02-the-core-in-one-hour.md)
+- **Companion Example:** [req-ism-1234.json](examples/req-ism-1234.json) (Zero-facet minimum requirement)
 
 ### Requirement 2: Identity, Versioning, and Lifecycle Management
 - **Description:** Govern namespaces strictly. Use canonical-alias vs. replaces rules correctly to ensure revision and rebranding integrity. Every reference to an object must use its unique identifier.
@@ -22,34 +23,42 @@ You must strictly adhere to the guidelines detailed in the handbook chapters lin
 ### Requirement 3: Writing Requirements, Statements, and Parameters
 - **Description:** Requirement clauses must have statement-level granularity to allow precise tailoring, mappings, and responsibility assignment. Adhere strictly to the modality lattice (obligations vs. permissions). Deadlines must be structured using explicit, typed parameters or duration systems instead of free-text placeholders.
 - **Reference Document:** [Chapter 4 — Writing Requirements: Statements, Modality, Parameters](references/oscal-semantic-core-handbook-ch04-writing-requirements.md)
+- **Companion Examples:** [req-konf-14-1.json](examples/req-konf-14-1.json) (Multi-statement split, choice parameter), [req-iec-cso-iir.json](examples/req-iec-cso-iir.json) (Calendar period with tightening rule)
 
 ### Requirement 4: Sets, Hierarchy, and Baselines
 - **Description:** Use nested `RequirementSets` as the singular taxonomy mechanism. Define baselines using membership sets rather than inline properties.
 - **Reference Document:** [Chapter 5 — Sets, Hierarchy, and Baselines](references/oscal-semantic-core-handbook-ch05-sets-hierarchy-baselines.md)
+- **Companion Examples:** [set-crypto.json](examples/set-crypto.json) (Nested sets), [set-baseline.json](examples/set-baseline.json) (Baseline membership set)
 
 ### Requirement 5: Tailoring Semantic Core
 - **Description:** Define changes via selection rules and identity-addressed operations. Apply per-operation weakening rules and require a `Deviation` object where needed. Follow the deterministic tailoring resolution algorithm.
 - **Reference Document:** Detailed chapter reference is pending (Chapter 6). Refer to tailoring resolution logic in Chapter 12 and Appendix B.
+- **Companion Example:** [tailoring-elevated.json](examples/tailoring-elevated.json) (Monotone tailoring operations)
 
 ### Requirement 6: Facet Extensions
 - **Description:** Extend the kernel only via registered, schema-pinned facets (`modifies-semantics`, fail-closed rules) or annotations (purely styling/chrome). Never add custom top-level fields to kernel objects.
 - **Reference Document:** [Chapter 7 — Facets: Extending Without Fracturing](references/oscal-semantic-core-handbook-ch07-facets-extending-without-fracturing.md)
+- **Companion Examples:** [gspp-taxonomy-1.0.0.json](examples/gspp-taxonomy-1.0.0.json) (Custom facet schema), [assessment-criteria-1.0.0-stub.json](examples/assessment-criteria-1.0.0-stub.json) (Descriptor stub)
 
 ### Requirement 7: Mappings and Crosswalks
 - **Description:** Map relationships using `Mapping` objects with IR 8477/OLIR relationship semantics. Always map at the statement-level scope for high precision.
 - **Reference Document:** [Chapter 8 — Mappings and Crosswalks](references/oscal-semantic-core-handbook-ch08-mappings-and-crosswalks.md)
+- **Companion Example:** [mapping-konf-ism.json](examples/mapping-konf-ism.json) (Third-party statement mapping)
 
 ### Requirement 8: Systems, Components, and Inheritance
 - **Description:** Structure system components, composition boundaries, and responsibility matrices. Implement CRM inheritance and the edge-local boundary rule for multi-tenant chains.
 - **Reference Document:** [Chapter 9 — Systems, Components, and Inheritance](references/oscal-semantic-core-handbook-ch09-systems-components-inheritance.md)
+- **Companion Examples:** [component-paas.json](examples/component-paas.json), [component-acme-saas.json](examples/component-acme-saas.json) (Platform/SaaS components), [implementation-acme-konf.json](examples/implementation-acme-konf.json) (CRM implementation referencing upstream authorizations)
 
 ### Requirement 9: Assessment, Findings, and Deviations
 - **Description:** Define assessment methods, track finding statuses and action deadlines, and manage the lifecycle of deviations as an audited weakening channel.
 - **Reference Document:** [Chapter 10 — Assessment, Findings, Deviations](references/oscal-semantic-core-handbook-ch10-assessment-findings-deviations.md)
+- **Companion Examples:** [assessment-2026q3.json](examples/assessment-2026q3.json) (Assessment result), [finding-017.json](examples/finding-017.json) (Finding with Deviation sub-object)
 
 ### Requirement 10: Integrity, Attestation, and Air-Gaps
 - **Description:** Apply both package digests (for byte transport) and semantic digests (for meaning preservation). Follow the DSSE profile checklist and attestation structures for air-gapped security assurance.
 - **Reference Document:** [Chapter 11 — Integrity, Attestation, and Air-Gaps](references/oscal-semantic-core-handbook-ch11-integrity-attestation-airgaps.md)
+- **Companion Examples:** [attestation-acme-2026.json](examples/attestation-acme-2026.json) (Attestation signatures), [content-manifest.json](examples/content-manifest.json) (Package integrity manifest), [authorization-summary.md](examples/authorization-summary.md) (L4 rendering report)
 
 ### Requirement 11: Validator Implementation
 - **Description:** Ensure structural validation, facet schema checking, and resolution conformance. Adhere to JCS (JSON Canonicalization Schema) and tailoring resolution logic.
@@ -76,3 +85,36 @@ You must strictly adhere to the guidelines detailed in the handbook chapters lin
 - [Appendix E: Worked corpora](references/oscal-semantic-core-handbook-appendix-e-worked-corpora.md) — KONF.14.1, IEC-CSO-IIR + class tailoring, ISM control, SCF mapping.
 - [Appendix F: Objections and answers](references/oscal-semantic-core-handbook-appendix-f-objections.md) — Adversarial FAQ (why not CEL / XML / JSON Patch, etc.).
 - [Appendix G: Glossary](references/oscal-semantic-core-handbook-appendix-g-glossary.md).
+
+## Worked Examples Reference
+
+The [examples/](examples/) directory contains a complete, self-consistent bundle of illustrative Semantic Core files:
+
+- **Index/Overview:** [examples/README_1.md](examples/README_1.md)
+- **Requirement:**
+  - [req-konf-14-1.json](examples/req-konf-14-1.json) — Multi-statement clause split, choice parameter, annotations.
+  - [req-ism-1234.json](examples/req-ism-1234.json) — Zero-facet minimum kernel requirement.
+  - [req-iec-cso-iir.json](examples/req-iec-cso-iir.json) — Requirement with calendar-period and tightening rule.
+- **RequirementSet:**
+  - [set-crypto.json](examples/set-crypto.json) — Nested requirement sets.
+  - [set-baseline.json](examples/set-baseline.json) — Baseline membership set.
+- **Tailoring:**
+  - [tailoring-elevated.json](examples/tailoring-elevated.json) — Monotone modality shifts and parameter settings.
+- **Mapping:**
+  - [mapping-konf-ism.json](examples/mapping-konf-ism.json) — Third-party statement-level mapping.
+- **Component:**
+  - [component-paas.json](examples/component-paas.json) — Upstream platform component.
+  - [component-acme-saas.json](examples/component-acme-saas.json) — Downstream SaaS component.
+- **Implementation:**
+  - [implementation-acme-konf.json](examples/implementation-acme-konf.json) — Implementation with CRM responsibility sharing.
+- **Assessment:**
+  - [assessment-2026q3.json](examples/assessment-2026q3.json) — Assessment execution details.
+- **Finding & Deviation:**
+  - [finding-017.json](examples/finding-017.json) — Auditable finding with Deviation sub-object.
+- **Attestation & Package Integrity:**
+  - [attestation-acme-2026.json](examples/attestation-acme-2026.json) — Attestation with semantic digests.
+  - [content-manifest.json](examples/content-manifest.json) — Package integrity manifest pinning schemas.
+  - [authorization-summary.md](examples/authorization-summary.md) — L4 markdown report.
+- **Descriptors & Custom Facets:**
+  - [gspp-taxonomy-1.0.0.json](examples/gspp-taxonomy-1.0.0.json) — Custom facet descriptor schema.
+  - [assessment-criteria-1.0.0-stub.json](examples/assessment-criteria-1.0.0-stub.json) — Extension descriptor stub.
