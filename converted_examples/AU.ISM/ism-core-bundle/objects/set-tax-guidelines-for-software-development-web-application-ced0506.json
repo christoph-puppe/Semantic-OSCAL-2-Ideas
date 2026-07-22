@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-web-application-ced0506",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Web application output encoding"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1241",
+   "sequence": 12660
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Web application output encoding",
+     "name": "overview",
+     "prose": {
+      "en": "The likelihood of cross-site scripting and other content injection attacks can be reduced by using output encoding. Output encoding is particularly useful when external data sources, which may not be subject to the same level of input filtering, are output to users. The most common example of output encoding is the conversion of potentially dangerous HTML characters into their encoded equivalents, such as ‘\\<’, ‘\\>’ and ‘\\&’ into ‘\\<’, ‘\\>’ and ‘\\&’."
+     }
+    }
+   ]
+  }
+ }
+}

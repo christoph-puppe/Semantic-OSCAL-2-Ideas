@@ -1,0 +1,39 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-emanati-0e776d3",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Emanation security risk assessments"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1137",
+   "sequence": 4270
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0249",
+   "sequence": 4280
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0246",
+   "sequence": 4290
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1885",
+   "sequence": 4300
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Emanation security risk assessments",
+     "name": "overview",
+     "prose": {
+      "en": "Obtaining advice from ASD on emanation security risks is vital to protecting SECRET and TOP SECRET systems, inside and outside of Australian borders. This can assist in preventing SECRET and TOP SECRET systems from emanating compromising signals, which if intercepted and analysed, could lead to serious consequences. The implementation of such advice is in addition to, and not a replacement for, industry and government standards relating to electromagnetic interference/electromagnetic compatibility.\n\nIn conducting emanation security risk assessments, it is important that they are sought by system owners as early as possible in a system’s life cycle as development timeframes and costs will be much greater if changes need to be made to systems once they have been designed and implemented.\n\nOn completion of emanation security risk assessments, system owners will receive emanation security mitigation advice that contains recommended actions to be taken to reduce emanation security risks. In doing so, any recommendations not implemented by system owners will need to be accepted by a system’s authorising officer."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-procurement-and-outsourcing-managed-s-ad76a86",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Outsourced cloud services"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1637",
+   "sequence": 1840
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1638",
+   "sequence": 1850
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1529",
+   "sequence": 1860
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Outsourced cloud services",
+     "name": "overview",
+     "prose": {
+      "en": "Outsourcing can be a cost-effective option for providing cloud services, as well as potentially delivering a superior service. However, outsourcing can affect an organisation’s security risk profile. Ultimately, an organisation will still need to decide whether a particular outsourced cloud service represents an acceptable security risk and, if appropriate to do so, authorise it for their own use."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-cabling-77beeee",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Labelling building management cables"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1639",
+   "sequence": 3580
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Labelling building management cables",
+     "name": "overview",
+     "prose": {
+      "en": "All facilities will contain structured cabling systems to support building management and control functions. As Australian Standards require some structured cabling systems to use specified colours, such as red for fire control systems, it is important that all building management cables are appropriately labelled."
+     }
+    }
+   ]
+  }
+ }
+}

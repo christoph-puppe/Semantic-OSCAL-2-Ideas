@@ -1,0 +1,39 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-1c4e1bb",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Authoritative source for software"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2023",
+   "sequence": 11320
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2024",
+   "sequence": 11330
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1422",
+   "sequence": 11340
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1816",
+   "sequence": 11350
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Authoritative source for software",
+     "name": "overview",
+     "prose": {
+      "en": "Software developers need to ensure that they are using a secure authoritative source for software as part of their development environment, as doing so can reduce the security risks related to unauthorised access to software artefacts, tampering of software artefacts and other possible cyber supply chain attacks on software artefacts. In doing so, the authoritative source for software should be able to provide sufficient access control and event logging for access to, and modification of, any software artefacts."
+     }
+    }
+   ]
+  }
+ }
+}

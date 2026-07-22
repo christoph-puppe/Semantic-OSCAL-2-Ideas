@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-procurement-and-outsourcing-cyber-sup-bfc2501",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Delivery of operating systems, applications, IT equipment, OT equipment and services"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1790",
+   "sequence": 1730
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1791",
+   "sequence": 1740
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1792",
+   "sequence": 1750
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Delivery of operating systems, applications, IT equipment, OT equipment and services",
+     "name": "overview",
+     "prose": {
+      "en": "As part of the delivery of operating systems, applications, IT equipment, OT equipment and services, measures should be implemented to protect their integrity, with these measures differing depending on whether delivery relates to digital or physical distribution channels. For example, operating systems and applications may benefit from delivery via encrypted communication channels while IT equipment and OT equipment may benefit from tracking and tamper-evident packaging. In doing so, such measures are only beneficial if they are assessed as part of acceptance of products and services. In all cases, suppliers should be consulted on how best to confirm the integrity of their products and services.\n\nWhile ensuring the integrity of operating systems, applications, IT equipment, OT equipment and services is important, so is ensuring their authenticity. For example, a counterfeit product or service securely delivered is still a counterfeit product or service that may not operate as intended or pose a risk to the security of a system. To assist in identifying counterfeit products and services, suppliers should be consulted on how best to confirm the authenticity of their products and services."
+     }
+    }
+   ]
+  }
+ }
+}

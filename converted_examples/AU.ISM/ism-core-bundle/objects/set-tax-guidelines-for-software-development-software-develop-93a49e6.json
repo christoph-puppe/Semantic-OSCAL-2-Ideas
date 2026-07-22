@@ -1,0 +1,47 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-93a49e6",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Network application programming interfaces"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1818",
+   "sequence": 11880
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2013",
+   "sequence": 11890
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1817",
+   "sequence": 11900
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2014",
+   "sequence": 11910
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1910",
+   "sequence": 11920
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2015",
+   "sequence": 11930
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Network application programming interfaces",
+     "name": "overview",
+     "prose": {
+      "en": "Network application programming interfaces (APIs) can facilitate the exchange of data between computing devices. As such, common security risks associated with their use should be mitigated during their development, especially for network APIs that are accessible over the internet. This includes mitigating poorly secured network APIs that facilitate unauthorised modification of data or access to data not authorised for release into the public domain. In such cases, ensuring authentication and authorisation of clients is performed when clients call network APIs can assist in mitigating unauthorised modification of, or access to, data. Finally, centrally logging and analysing network API use can assist in detecting malicious behaviour and contributing to investigations following cyber security incidents."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-information-technology-equipment-it-e-39cd26f",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Sanitising highly sensitive IT equipment"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1218",
+   "sequence": 6140
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0312",
+   "sequence": 6150
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Sanitising highly sensitive IT equipment",
+     "name": "overview",
+     "prose": {
+      "en": "IT equipment located overseas that has processed, stored or communicated Australian Eyes Only (AUSTEO) or Australian Government Access Only (AGAO) data can have more severe consequences for Australian interests if not sanitised appropriately."
+     }
+    }
+   ]
+  }
+ }
+}

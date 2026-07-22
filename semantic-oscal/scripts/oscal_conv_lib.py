@@ -43,7 +43,11 @@ def textify(obj, lang):
     return n
 
 def slug(s):
-    return re.sub(r"[^a-z0-9]+", "-", (s or "").lower()).strip("-")[:60] or "x"
+    s = re.sub(r"[^a-z0-9]+", "-", (s or "").lower()).strip("-")
+    if len(s) <= 60:
+        return s or "x"
+    # P10 #39: never bare-truncate - collided ids silently merge objects
+    return s[:52].rstrip("-") + "-" + hashlib.sha256(s.encode()).hexdigest()[:7]
 
 def _canon(o):
     """RFC 8785 member ordering: keys sorted by UTF-16 code units, not code

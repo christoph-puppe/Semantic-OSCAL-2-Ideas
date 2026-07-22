@@ -285,11 +285,13 @@ function Param-Check($decl, $value) {
         return 'valid'
     }
     if ($t -eq 'decimal') {
+        # D3.4 canonical form (rev P10 #37): no leading zeros, no negative
+        # zero; bounds compare exactly via [decimal] (double loses precision)
         if (-not ($value -is [string])) { return 'invalid' }
-        if (-not [System.Text.RegularExpressions.Regex]::IsMatch($value, '^-?(0|[1-9][0-9]*)(\.[0-9]+)?$')) { return 'invalid' }
-        $d = [double]::Parse($value, $INV)
-        if ($decl.Contains('min') -and $d -lt $decl['min']) { return 'deviation-required' }
-        if ($decl.Contains('max') -and $d -gt $decl['max']) { return 'deviation-required' }
+        if (-not [System.Text.RegularExpressions.Regex]::IsMatch($value, '^(-?[1-9][0-9]*(\.[0-9]+)?|0(\.[0-9]+)?|-0\.[0-9]*[1-9][0-9]*)$')) { return 'invalid' }
+        $d = [decimal]::Parse($value, $INV)
+        if ($decl.Contains('min') -and $d -lt [decimal]::Parse([string]$decl['min'], $INV)) { return 'deviation-required' }
+        if ($decl.Contains('max') -and $d -gt [decimal]::Parse([string]$decl['max'], $INV)) { return 'deviation-required' }
         return 'valid'
     }
     if ($t -eq 'elapsed-duration' -or $t -eq 'calendar-period') {
@@ -361,6 +363,33 @@ function Closure-Errors($objs) {
                         $sid = ([string]$sc).Split(':', 2)[1]
                         if ($sids -cnotcontains $sid) {
                             [void]$errs.Add("${oid}: $side-scope '$sc' names no statement of the in-bundle endpoint") } } } }
+        }
+    }
+    # membership graphs are DAGs (D21; P10 #39): overlap is legal, cycles
+    # are not - naive baseline expansion / nearest-Set search would loop.
+    $color = @{}
+    foreach ($root in @($objs.Keys)) {
+        if ($objs[$root].t -cne 'requirementSet' -or $color.ContainsKey($root)) { continue }
+        $refs0 = New-Object System.Collections.ArrayList
+        foreach ($m in @($objs[$root].o['members'])) { if ($null -ne $m) { [void]$refs0.Add([string]$m['ref']) } }
+        $stack = New-Object System.Collections.ArrayList
+        [void]$stack.Add(@{sid = $root; refs = $refs0; i = 0})
+        $color[$root] = 1
+        while ($stack.Count -gt 0) {
+            $fr = $stack[$stack.Count - 1]
+            if ($fr['i'] -ge $fr['refs'].Count) { $color[$fr['sid']] = 2; $stack.RemoveAt($stack.Count - 1); continue }
+            $adv = $fr['refs'][$fr['i']]
+            $fr['i'] = $fr['i'] + 1
+            if (-not $objs.Contains($adv) -or $objs[$adv].t -cne 'requirementSet') { continue }
+            if ($color.ContainsKey($adv) -and $color[$adv] -eq 1) {
+                $names = @(); foreach ($f in $stack) { $names += $f['sid'] }; $names += $adv
+                [void]$errs.Add("$($fr['sid']): RequirementSet membership cycle: $($names -join ' -> ') (D21: membership graphs are acyclic; P10 #39)")
+            } elseif (-not $color.ContainsKey($adv)) {
+                $color[$adv] = 1
+                $r2 = New-Object System.Collections.ArrayList
+                foreach ($m in @($objs[$adv].o['members'])) { if ($null -ne $m) { [void]$r2.Add([string]$m['ref']) } }
+                [void]$stack.Add(@{sid = $adv; refs = $r2; i = 0})
+            }
         }
     }
     return ,$errs
@@ -567,8 +596,16 @@ function Duty-Errors($objs, $pinnedDecl, $envelopes, $trusted) {
         if ($objs[$oid].t -cne 'tailoring') { continue }
         $tobj = $objs[$oid].o
         $tier = Derive-Tier $tobj $objs $envelopes $trusted
+        $seenT = New-Object System.Collections.ArrayList
         foreach ($op in @($tobj['operations'])) {
             if ($null -eq $op) { continue }
+            # D13: two operations addressing the same target = validation
+            # error (P10 #30 - was vector-only)
+            $tkey = "$($op['requirement-ref'])|$($op['statement-id'])|$($op['parameter'])|$($op['field'])|$($op['facet'])"
+            if ($seenT -ccontains $tkey) {
+                [void]$errs.Add("${oid}: two operations address the same target ($tkey) within one Tailoring (D13: override rides Tailoring-of-Tailoring chaining, never in-place; P10 #30)")
+            }
+            [void]$seenT.Add($tkey)
             $hasDev = $op.Contains('deviation') -or $op.Contains('deviation-ref')
             $duty = $null
             $kind = $op['op']
@@ -583,11 +620,19 @@ function Duty-Errors($objs, $pinnedDecl, $envelopes, $trusted) {
             } elseif ($kind -eq 'replace-prose') {
                 if ($op['intent'] -eq 'substantive') { $duty = 'substantive replace-prose' }
             } elseif ($kind -eq 'attach-facet' -or $kind -eq 'detach-facet') {
-                $base = ([string]$op['facet'])
+                $fid = ([string]$op['facet'])
+                $base = $fid
                 if ($base.Contains('@')) { $base = $base.Substring(0, $base.LastIndexOf('@')) }
-                $decl = $STDLIB_DECL[$base]
-                if ($null -eq $decl -and $null -ne $pinnedDecl) { $decl = $pinnedDecl[$base] }
-                if ($null -ne $decl -and @($decl).Count -gt 0) { $duty = "$kind of a semantics-bearing facet" }
+                if ($fid.StartsWith('private:') -or $base.StartsWith('private:')) {
+                    # modifies-semantics [] by definition (D10)
+                } elseif ($STDLIB_DECL.ContainsKey($base) -or ($null -ne $pinnedDecl -and $pinnedDecl.ContainsKey($base))) {
+                    $decl = $STDLIB_DECL[$base]
+                    if ($null -eq $decl -and $null -ne $pinnedDecl) { $decl = $pinnedDecl[$base] }
+                    if ($null -ne $decl -and @($decl).Count -gt 0) { $duty = "$kind of a semantics-bearing facet" }
+                } else {
+                    # neither stdlib nor pinned nor private: (P10 #29)
+                    [void]$errs.Add("${oid}: $kind references facet '$fid' that is neither stdlib, nor pinned in the manifest, nor private: (dangerous-by-default, D10; P10 #29)")
+                }
             } elseif ($kind -eq 'set-parameter') {
                 $pdecl = $null
                 if ($objs.Contains($op['requirement-ref']) -and $objs[$op['requirement-ref']].t -eq 'requirement') {
@@ -833,6 +878,15 @@ function Run-Tailoring {
                     elseif ($pv -eq 'deviation-required') { $needsDev = $true } }
                 if ($op['op'] -eq 'remove-relation' -and (Is-Map $op['relation']) -and $op['relation']['type'] -ceq 'required') {
                     $needsDev = $true }
+                if ($op['op'] -eq 'attach-facet' -or $op['op'] -eq 'detach-facet') {   # P10 #29
+                    $fid = ([string]$op['facet']); $fbase = $fid
+                    if ($fbase.Contains('@')) { $fbase = $fbase.Substring(0, $fbase.LastIndexOf('@')) }
+                    if ($fid.StartsWith('private:') -or $fbase.StartsWith('private:')) {
+                        # [] by definition (D10)
+                    } elseif ($case.Contains('facet-decls') -and $case['facet-decls'].Contains($fbase)) {
+                        if (@($case['facet-decls'][$fbase]).Count -gt 0) { $needsDev = $true }
+                    } else {
+                        $verdict = 'error' } }
                 if ($needsDev -and $case['tier'] -eq 'consumer' -and -not $op.Contains('deviation') -and -not $op.Contains('deviation-ref')) {
                     $verdict = 'error' }
             }
@@ -1049,6 +1103,7 @@ function Validate-Object([string]$section, [string]$path, $obj) {
 }
 function Validate-Bundle([string]$bdir) {
     $section = $bdir.Replace($ROOT, '').TrimStart('\').Replace('\', '/')
+    Write-Host "  -> $section"   # sign of life: big bundles run minutes with no output (P10 user report)
     $mpath = Join-Path $bdir 'content-manifest.json'
     if (-not (Test-Path $mpath)) { FAIL $section 'no content-manifest.json'; return }
     $manifest = Read-Json $mpath
@@ -1074,6 +1129,7 @@ function Validate-Bundle([string]$bdir) {
         if ($null -ne $t) { $bundleObjs[$obj['id']] = @{t = $t; o = $obj} }
     }
     $pinned = @{}
+    $pinnedDecl = @{}
     foreach ($fe in @($manifest['facet-schemas'])) {
         if ($null -eq $fe) { continue }
         $fp = Join-Path $bdir $fe['path']
@@ -1083,6 +1139,11 @@ function Validate-Bundle([string]$bdir) {
         $sd = Read-Json $fp
         $sch = $sd['schema']; if ($null -eq $sch) { $sch = [ordered]@{type = 'object'} }
         $pinned[$sd['id']] = $sch
+        # P10 #29: the pin's declaration feeds the attach/detach op-law; a
+        # pin that omits it is dangerous-by-default (D10: all four classes)
+        $md = $sd['modifies-semantics']
+        if ($null -eq $md) { $md = @('assessment', 'tailoring', 'selection', 'rendering') }
+        $pinnedDecl[$sd['id']] = $md
         # #26 (D26 final): stdlib pins must equal the descriptor VERBATIM
         if ($STDLIB.ContainsKey($sd['id'])) {
             if ((Format-Canonical $sch) -cne (Format-Canonical $STDLIB[$sd['id']])) {
@@ -1097,7 +1158,7 @@ function Validate-Bundle([string]$bdir) {
         else { FAIL $section "${oid}: envelope-ref '$($e.o['envelope-ref'])' does not resolve beside the manifest" }
     }
     foreach ($e in (Closure-Errors $bundleObjs)) { FAIL $section $e }
-    foreach ($e in (Duty-Errors $bundleObjs $null $envelopes $TRUSTED)) { FAIL $section $e }
+    foreach ($e in (Duty-Errors $bundleObjs $pinnedDecl $envelopes $TRUSTED)) { FAIL $section $e }
     $pairs = New-Object System.Collections.ArrayList
     foreach ($oid in $bundleObjs.Keys) { [void]$pairs.Add(@($oid, $bundleObjs[$oid].o)) }
     foreach ($e in (Facet-Errors $pairs $pinned)) { FAIL $section $e }

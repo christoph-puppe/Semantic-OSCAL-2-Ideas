@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-cryptographic-algorithms-adcd87c",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Using Elliptic Curve Cryptography"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1446",
+   "sequence": 14860
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Using Elliptic Curve Cryptography",
+     "name": "overview",
+     "prose": {
+      "en": "The curve used within an elliptic curve cryptographic algorithm impacts the security of the cryptographic algorithm. As such, only suitable curves from NIST SP 800-186 should be used."
+     }
+    }
+   ]
+  }
+ }
+}

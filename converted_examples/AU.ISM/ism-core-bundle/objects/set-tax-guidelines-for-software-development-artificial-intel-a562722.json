@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-artificial-intel-a562722",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Artificial intelligence model poisoning"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2086",
+   "sequence": 12310
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2087",
+   "sequence": 12320
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2088",
+   "sequence": 12330
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Artificial intelligence model poisoning",
+     "name": "overview",
+     "prose": {
+      "en": "AI models, especially when embedded in other applications, risk exposing sensitive data, proprietary algorithms or confidential details through their output. This can result in unauthorised data access, privacy violations and intellectual property breaches."
+     }
+    }
+   ]
+  }
+ }
+}

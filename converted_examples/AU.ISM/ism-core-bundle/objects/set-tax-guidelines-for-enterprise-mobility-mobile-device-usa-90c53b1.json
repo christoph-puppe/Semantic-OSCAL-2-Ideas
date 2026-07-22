@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-enterprise-mobility-mobile-device-usa-90c53b1",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Maintaining control of mobile devices"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0871",
+   "sequence": 5500
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0870",
+   "sequence": 5510
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1084",
+   "sequence": 5520
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Maintaining control of mobile devices",
+     "name": "overview",
+     "prose": {
+      "en": "As mobile devices are portable in nature, and can be easily lost or stolen, personnel should maintain continual direct supervision of them when being actively used and ensure they are carried or stored in a secured state when not being actively used. While mobile devices may be encrypted, the effectiveness of encryption might be reduced if they are lost or stolen while in sleep mode or powered on with a locked screen."
+     }
+    }
+   ]
+  }
+ }
+}

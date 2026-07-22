@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-wireless-networks-wireless-5e87b2d",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Wireless network footprint"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1338",
+   "sequence": 14370
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1013",
+   "sequence": 14380
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Wireless network footprint",
+     "name": "overview",
+     "prose": {
+      "en": "Instead of deploying a small number of wireless access points that broadcast on high power, a greater number of wireless access points that use less broadcast power can be deployed to achieve the desired footprint for wireless networks. This has the benefit of providing service continuity should wireless access points become unserviceable. In such cases, the output power of nearby wireless access points can be increased to cover the footprint gap until the unserviceable wireless access points can be replaced.\n\nIn addition to minimising the output power of wireless access points to reduce the footprint of wireless networks, the use of radio frequency (RF) shielding can be used for an organisation’s facilities. While expensive, this will limit wireless communications to areas under the control of an organisation. RF shielding on an organisation’s facilities also has the added benefit of preventing the jamming of wireless networks from outside of the facilities in which wireless networks are operating."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-personnel-security-access-to-systems-9cb35e0",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Unprivileged access to systems by foreign nationals"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0409",
+   "sequence": 3050
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0411",
+   "sequence": 3060
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Unprivileged access to systems by foreign nationals",
+     "name": "overview",
+     "prose": {
+      "en": "Due to the extra sensitivities associated with AUSTEO, AGAO and REL data, foreign access to such data is strictly controlled."
+     }
+    }
+   ]
+  }
+ }
+}

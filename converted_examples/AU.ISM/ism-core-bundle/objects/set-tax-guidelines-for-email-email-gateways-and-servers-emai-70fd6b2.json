@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-gateways-and-servers-emai-70fd6b2",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Email gateway maintenance activities"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0570",
+   "sequence": 13140
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Email gateway maintenance activities",
+     "name": "overview",
+     "prose": {
+      "en": "As backup and alternative email gateways are often poorly maintained in terms of patches and email content filtering, malicious actors will often seek to exploit this when sending malicious emails to an organisation. As such, it is important that backup and alternative email gateways are maintained at the same standard as an organisation’s primary email gateway."
+     }
+    }
+   ]
+  }
+ }
+}

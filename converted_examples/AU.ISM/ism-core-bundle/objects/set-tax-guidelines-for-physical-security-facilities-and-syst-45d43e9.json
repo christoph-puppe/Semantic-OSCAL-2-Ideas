@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-physical-security-facilities-and-syst-45d43e9",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Preventing observation by unauthorised people"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0164",
+   "sequence": 2560
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Preventing observation by unauthorised people",
+     "name": "overview",
+     "prose": {
+      "en": "Without sufficient perimeter security, the inside of a facility is often observable by unauthorised people, such as via direct observation or by using equipment with a telephoto lens. Ensuring systems, in particular workstation displays and keyboards, are not visible through windows, such as via the use of blinds, curtains, privacy films or workstation positioning, will assist in reducing this security risk."
+     }
+    }
+   ]
+  }
+ }
+}

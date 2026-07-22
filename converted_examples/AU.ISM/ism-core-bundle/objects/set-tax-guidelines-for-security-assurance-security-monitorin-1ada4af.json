@@ -1,0 +1,67 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-security-assurance-security-monitorin-1ada4af",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Event log monitoring"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0120",
+   "sequence": 10950
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2116",
+   "sequence": 10960
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2117",
+   "sequence": 10970
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1986",
+   "sequence": 10980
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1906",
+   "sequence": 10990
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1907",
+   "sequence": 11000
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0109",
+   "sequence": 11010
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1987",
+   "sequence": 11020
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1960",
+   "sequence": 11030
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1961",
+   "sequence": 11040
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1228",
+   "sequence": 11050
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Event log monitoring",
+     "name": "overview",
+     "prose": {
+      "en": "Event log monitoring is critical to maintaining the security posture of systems. It involves the timely analysis of event logs to detect cyber security events and identify potential cyber security incidents. In doing so, successful detection of cyber security events, and identification of cyber security incidents, requires trained cyber security personnel with access to sufficient tools that support manual and automated analysis of system behaviour."
+     }
+    }
+   ]
+  }
+ }
+}

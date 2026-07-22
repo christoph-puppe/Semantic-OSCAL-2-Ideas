@@ -1,0 +1,67 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-roles-system-owners-pr-c37cb34",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Protecting systems and their resources"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1633",
+   "sequence": 1070
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1203",
+   "sequence": 1080
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1634",
+   "sequence": 1090
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0009",
+   "sequence": 1100
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1635",
+   "sequence": 1110
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1636",
+   "sequence": 1120
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1967",
+   "sequence": 1130
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0027",
+   "sequence": 1140
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1968",
+   "sequence": 1150
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1526",
+   "sequence": 1160
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2021",
+   "sequence": 1170
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Protecting systems and their resources",
+     "name": "overview",
+     "prose": {
+      "en": "Broadly, the risk management framework defined by the [Information security manual](#e7ce6e23-4bbb-45c1-a657-7e563c0837ed) has six steps: define the system, select controls, implement controls, assess controls, authorise the system and monitor the system. System owners are responsible for the implementation of this six-step risk management framework for each of their systems."
+     }
+    }
+   ]
+  }
+ }
+}

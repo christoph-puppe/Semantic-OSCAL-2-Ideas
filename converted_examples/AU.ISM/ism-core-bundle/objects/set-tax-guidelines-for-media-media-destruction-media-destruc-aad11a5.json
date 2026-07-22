@@ -1,0 +1,55 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-media-media-destruction-media-destruc-aad11a5",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Media destruction methods"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1517",
+   "sequence": 7000
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1722",
+   "sequence": 7010
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1723",
+   "sequence": 7020
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1724",
+   "sequence": 7030
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1725",
+   "sequence": 7040
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1726",
+   "sequence": 7050
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1727",
+   "sequence": 7060
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0368",
+   "sequence": 7070
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Media destruction methods",
+     "name": "overview",
+     "prose": {
+      "en": "The destruction methods identified below are designed to ensure that recovery of data is impossible or impractical."
+     }
+    }
+   ]
+  }
+ }
+}

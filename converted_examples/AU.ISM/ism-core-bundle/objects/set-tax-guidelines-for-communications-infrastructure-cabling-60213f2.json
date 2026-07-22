@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-cabling-60213f2",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Sealing cable reticulation systems and conduits"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0195",
+   "sequence": 3810
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0194",
+   "sequence": 3820
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Sealing cable reticulation systems and conduits",
+     "name": "overview",
+     "prose": {
+      "en": "In shared facilities, uniquely identifiable Security Construction and Equipment Committee (SCEC)-approved tamper-evident seals should be used to provide evidence of any tampering or illicit access to TOP SECRET cable reticulation systems. In addition, TOP SECRET conduits should be sealed with a visible smear of conduit glue to prevent access."
+     }
+    }
+   ]
+  }
+ }
+}

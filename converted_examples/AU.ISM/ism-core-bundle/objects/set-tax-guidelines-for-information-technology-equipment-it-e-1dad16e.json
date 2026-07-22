@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-information-technology-equipment-it-e-1dad16e",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Maintenance or repairs of high assurance IT equipment"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1079",
+   "sequence": 5960
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Maintenance or repairs of high assurance IT equipment",
+     "name": "overview",
+     "prose": {
+      "en": "Due to the nature of high assurance IT equipment, it is important that ASD’s approval is sought before any maintenance or repairs are undertaken."
+     }
+    }
+   ]
+  }
+ }
+}

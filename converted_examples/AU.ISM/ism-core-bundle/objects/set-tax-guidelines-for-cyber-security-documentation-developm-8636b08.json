@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-documentation-developm-8636b08",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Approval of cyber security documentation"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0047",
+   "sequence": 2110
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1739",
+   "sequence": 2120
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Approval of cyber security documentation",
+     "name": "overview",
+     "prose": {
+      "en": "If cyber security documentation is not reviewed and approved by an appropriate authority, system owners risk failing in their duty to ensure that appropriate controls have been identified and implemented for systems and their operating environments. In doing so, it is important that a system’s security architecture, as outlined within the system security plan and supported by the cyber security incident response plan, change and configuration management plan, and continuous monitoring plan, is approved by the system’s authorising officer prior to the development of the system."
+     }
+    }
+   ]
+  }
+ }
+}

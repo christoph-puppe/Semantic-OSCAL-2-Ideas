@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-server-application-h-433e161",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Microsoft Entra Connect"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1950",
+   "sequence": 9090
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1951",
+   "sequence": 9100
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1952",
+   "sequence": 9110
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Microsoft Entra Connect",
+     "name": "overview",
+     "prose": {
+      "en": "Microsoft Entra Connect is responsible for synchronising identity information between Microsoft AD DS and Microsoft Entra ID services within hybrid on-premises and cloud-based environments. As such, particular care should be taken to secure servers that perform this role."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -257,6 +257,24 @@
     "privileged accounts"
    ],
    "verdict": "invalid"
+  },
+  {
+   "name": "decimal-negative-zero-is-non-canonical",
+   "parameter": {
+    "name": "threshold",
+    "type": "decimal"
+   },
+   "value": "-0",
+   "verdict": "invalid"
+  },
+  {
+   "name": "decimal-negative-fraction-stays-legal",
+   "parameter": {
+    "name": "threshold",
+    "type": "decimal"
+   },
+   "value": "-0.5",
+   "verdict": "valid"
   }
  ]
 }

@@ -1,0 +1,87 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-da6c46f",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Software development fundamentals"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-53c5897",
+   "sequence": 11310
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-1c4e1bb",
+   "sequence": 11360
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-091e2ec",
+   "sequence": 11380
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-8d8b643",
+   "sequence": 11450
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-e256b93",
+   "sequence": 11480
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-f92b064",
+   "sequence": 11780
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-29856ee",
+   "sequence": 11810
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-e97f69d",
+   "sequence": 11840
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-0b65e13",
+   "sequence": 11870
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-93a49e6",
+   "sequence": 11940
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-8539e90",
+   "sequence": 12000
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-00c36be",
+   "sequence": 12050
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-fe20c6e",
+   "sequence": 12110
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-64ad27c",
+   "sequence": 12160
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-58d8c0d",
+   "sequence": 12200
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-91074e8",
+   "sequence": 12220
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Software development fundamentals",
+     "name": "overview",
+     "prose": {
+      "en": "# Introduction to software development\n\nThis section applies to human, artificial intelligence (AI)-assisted, AI-powered and AI-driven software development activities for traditional applications (including user applications and server applications), AI applications, mobile applications and web applications. Additional sections of these guidelines should also be consulted depending on the type of software development being undertaken. For example, the ‘Web application development’ section of these guidelines should be consulted for additional controls applicable to web applications. Where references are made to software developers, they apply to humans and AI.\n\n# Further information\n\nFurther information on a secure software development framework can be found in National Institute of Standards and Technology Special Publication 800-218, [Secure Software Development Framework (SSDF) Version 1.1: Recommendations for Mitigating the Risk of Software Vulnerabilities](#6f1f2f2b-abe6-46e4-9c9d-8339f1d9dab7).\n\nFurther information on Secure by Design and Secure by Default principles and practices can be found in the following publications:\n\n- ASD’s [Secure by Design foundations](#6494bba4-bdb5-4b19-8f6c-8d5506a8bb09)\n- ASD’s [IoT Secure by Design guidance for manufacturers](#0d9d5f12-3519-4585-82d9-bc0f42abcd3c)\n- United Kingdom’s National Cyber Security Centre’s [Secure development and deployment guidance](#c74c6e7a-2209-4337-bb3a-715ce6e792a4)\n- United Kingdom’s Central Digital and Data Office’s [Secure by Design Principles](#89a4e4d7-0075-40f1-ae05-dff0a19183f9) and [Secure by Design Activities](#9898653e-fc87-4b42-a1fa-f7e323902841)\n- United States’ Cybersecurity \\& Infrastructure Security Agency’s [Safe Software Deployment: How Software Manufacturers Can Ensure Reliability for Customers](#94d9fbcb-e8d1-4ef2-b543-5938f4387fee)\n- United States’ Cybersecurity \\& Infrastructure Security Agency’s [Shifting the Balance of Cybersecurity Risk: Principles and Approaches for Secure by Design Software](#b794a062-2339-48ed-89ac-14aa4c3a61db).\n\nFurther information on [secure programming practices](#672e85cc-2d40-46ba-9e94-c604b9731c75) is available from the Carnegie Mellon University’s Software Engineering Institute.\n\nFurther information on the need for memory-safe programming languages can be found the following publications:\n\n- United States’ Cybersecurity \\& Infrastructure Security Agency’s [The Case for Memory Safe Roadmaps: Why Both C-Suite Executives and Technical Experts Need to Take Memory Safe Coding Seriously](#bdb9d443-a877-4197-b9ad-ec5853f081c7)\n- United States’ Cybersecurity \\& Infrastructure Security Agency’s [Exploring Memory Safety in Critical Open Source Projects](#a9307fb2-8003-4e6e-9d64-2c00ea8b0ec8)\n- United States’ National Security Agency’s [Software Memory Safety](#26137381-dc34-485c-8331-3bc9876ed48c)\n- United States’ National Security Agency and Cybersecurity \\& Infrastructure Security Agency’s [Memory Safe Languages: Reducing Vulnerabilities in Modern Software Development](#afe3656f-2a78-488f-9eae-3cb9af69b018).\n\nFurther information on [cyber supply chain transparency](#d0ace151-3c21-49af-bde7-eda58ab18a82), and recommended content for a software bill of materials, can be found in the United States’ National Telecommunications and Information Administration’s [The Minimum Elements For a Software Bill of Materials (SBOM)](#70371e26-f3fb-4b05-85ea-7f6e1f2ee184) publication.\n\nFurther information on software bill of materials can also be found in the United States’ Cybersecurity \\& Infrastructure Security Agency’s [A Shared Vision of Software Bill of Materials (SBOM) for Cybersecurity](#ea6f8148-55ea-4540-8b39-f35cc3411eb2) publication.\n\nFurther information on strong authentication can be found in the ‘Authentication hardening’ section of the [Guidelines for system hardening](#de7525f3-a466-40a5-abdd-3ae24a6d1b44).\n\nFurther information on software security testing can be found on the Open Worldwide Application Security Project’s (OWASP) [DevSecOps Guidelines](#5516125f-d0eb-4196-8dc4-f8db55fca032) and [Source Code Analysis Tools](#cc618df8-757e-4d6c-9ad2-405554cb487d) websites.\n\nFurther information on using AI models for software security testing activities can be found in ASD’s [Opportunities for AI in cyber defence](#aff92212-4cd2-459a-9ba1-d4dd1815ebec) publication.\n\nFurther information on vulnerability identification success rates using frontier AI models is available from the [CyberGym](#c81898f4-ae8b-486f-b175-ae8e4dd5e60f) website.\n\nFurther information on implementing a vulnerability disclosure program can be found in the following publications:\n\n- Google’s [Starting a Vulnerability Disclosure Program](#78a48231-9963-4f78-962a-861c96c58ead)\n- Carnegie Mellon University’s Software Engineering Institute’s [The CERT Guide to Coordinated Vulnerability Disclosure](#7ffd20ed-4f40-43be-a37b-97e7a1b31e2f)\n- International Organization for Standardization/International Electrotechnical Commission 29147:2018, [Information technology – Security techniques – Vulnerability disclosure](#8f1965a9-a6a1-4342-bfb8-797ea358db30)\n- International Organization for Standardization/International Electrotechnical Commission 30111:2019, [Information technology – Security techniques – Vulnerability handling processes](#99c117f0-78e0-4196-adc8-705405d996bc).\n\nFurther information on [developing a vulnerability disclosure policy](#aab0523a-513e-48c9-978e-32d5b9adeea6) is available from the disclose.io project to assist an organisation with their implementation.\n\nFurther information on [recommended contents for a ‘security.txt’ file](#24eb9af8-fb43-4772-a461-2c36dd0f6d7e) is available to assist an organisation with their implementation.\n\nFurther information on [reporting vulnerabilities](#03f761fa-7014-459c-aa16-02c303d50abb) to ASD as an independent coordinator, including ASD’s [limited use obligation](#cae0ac6b-e69b-4359-bfd7-5ee5eff1049d), is available from ASD.\n\nFurther information on event logging can be found in the ‘Security monitoring’ section of the [Guidelines for security assurance](#ef60c0e4-acfb-4a8b-b5ed-25675c6e117c)."
+     }
+    }
+   ]
+  }
+ }
+}

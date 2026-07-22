@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-database-systems-databases-protecting-527ecb3",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Protecting database contents"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0393",
+   "sequence": 12850
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1255",
+   "sequence": 12860
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1268",
+   "sequence": 12870
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Protecting database contents",
+     "name": "overview",
+     "prose": {
+      "en": "Database administrators and database users should know the sensitivity or classification associated with databases and their contents. In cases where a database’s contents are all the same sensitivity or classification, an organisation should classify the entire database at this level and protect it as such. Alternatively, in cases where a database’s contents are of varying sensitivities or classifications, and database users have varying levels of access to the database’s contents, an organisation should protect the database’s contents at a more granular level.\n\nRestricting database users’ ability to access, insert, modify or remove database contents, based on their work duties, ensures that the likelihood of unauthorised access, modification or deletion of database contents is reduced. Furthermore, where concerns exist that the aggregation of separate pieces of content from within a database could lead to malicious actors determining more sensitive or classified content, the need-to-know principle can be enforced by using minimum privileges, database views and database roles. Alternatively, the content of concern could be separated by implementing multiple databases, each with restricted data sets."
+     }
+    }
+   ]
+  }
+ }
+}

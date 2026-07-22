@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-incidents-responding-t-fae0a69",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Handling and containing malicious code infections"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0917",
+   "sequence": 1440
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1969",
+   "sequence": 1450
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1970",
+   "sequence": 1460
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Handling and containing malicious code infections",
+     "name": "overview",
+     "prose": {
+      "en": "Taking immediate remediation steps after the discovery of malicious code can minimise the time and cost spent eradicating and recovering from the infection. As a priority, all infected systems and media should be isolated to prevent the infection from spreading. Once isolated, infected systems and media can be scanned by antivirus applications to potentially remove the infection or recover data. It is important to note though, a complete system restoration from a known good backup or rebuild may be the only reliable way to ensure that malicious code can be truly eradicated."
+     }
+    }
+   ]
+  }
+ }
+}

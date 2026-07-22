@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-enterprise-mobility-mobile-device-man-f0c4923",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Encrypted storage"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0869",
+   "sequence": 5110
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1868",
+   "sequence": 5120
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Encrypted storage",
+     "name": "overview",
+     "prose": {
+      "en": "Suitably encrypting the internal storage, and any removable media, for mobile devices will help prevent malicious actors from gaining easy access to any sensitive or classified data stored on them if they are lost or stolen. As such, it is critical that ASD-approved cryptography is used."
+     }
+    }
+   ]
+  }
+ }
+}

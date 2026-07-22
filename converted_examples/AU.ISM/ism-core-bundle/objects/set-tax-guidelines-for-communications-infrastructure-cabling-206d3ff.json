@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-cabling-206d3ff",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Common cable reticulation systems"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1114",
+   "sequence": 3750
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Common cable reticulation systems",
+     "name": "overview",
+     "prose": {
+      "en": "When cable reticulation systems are used for more than one cable bundle or conduit, it is important that there is a dividing partition or visible gap between cable bundles and conduits to facilitate easier cable inspection."
+     }
+    }
+   ]
+  }
+ }
+}

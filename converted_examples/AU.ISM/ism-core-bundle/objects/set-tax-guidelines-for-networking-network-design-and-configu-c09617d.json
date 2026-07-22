@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configu-c09617d",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Network device event logging"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1963",
+   "sequence": 13970
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1964",
+   "sequence": 13980
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Network device event logging",
+     "name": "overview",
+     "prose": {
+      "en": "Centrally logging and analysing security-relevant events, including configuration changes, for network devices, especially internet-facing network devices, can assist in monitoring the security posture of systems, detecting malicious behaviour and contributing to investigations following cyber security incidents."
+     }
+    }
+   ]
+  }
+ }
+}

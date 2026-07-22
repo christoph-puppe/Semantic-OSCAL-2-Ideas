@@ -1,0 +1,39 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-roles-board-of-directo-f1e16b7",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Embedding cyber security"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1997",
+   "sequence": 580
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1998",
+   "sequence": 590
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1999",
+   "sequence": 600
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2000",
+   "sequence": 610
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Embedding cyber security",
+     "name": "overview",
+     "prose": {
+      "en": "To ensure that cyber security is embedded throughout an organisation, it is important that the board of directors or executive committee commits to defining clear roles and responsibilities for cyber security and integrating cyber security throughout all business functions within their organisation. They should also align their organisation’s cyber security strategy with their organisation’s overarching strategic direction and business strategy and seek regular briefings or reporting on the cyber security posture of their organisation and the threat environment in which it operates."
+     }
+    }
+   ]
+  }
+ }
+}

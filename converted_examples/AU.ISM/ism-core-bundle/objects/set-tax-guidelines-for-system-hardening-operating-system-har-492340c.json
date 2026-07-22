@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-operating-system-har-492340c",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Standard Operating Environments"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1406",
+   "sequence": 7380
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1608",
+   "sequence": 7390
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1588",
+   "sequence": 7400
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Standard Operating Environments",
+     "name": "overview",
+     "prose": {
+      "en": "Allowing users to setup, configure and maintain their own workstations and servers can result in an inconsistent operating environment. Such operating environments may assist malicious actors in gaining an initial foothold on networks due to the higher likelihood of poorly configured or maintained workstations and servers. Conversely, a Standard Operating Environment (SOE), provided via an automated build process or a golden image, is designed to facilitate a standardised and consistent operating environment within an organisation.\n\nWhen SOEs are obtained from third parties, such as service providers, there are additional cyber supply chain risks that should be considered, such as the accidental or deliberate inclusion of malicious code or configurations. To reduce the likelihood of such occurrences, an organisation should endeavour to obtain their SOEs from trustworthy third parties while also scanning them for malicious code and configurations.\n\nAs operating environments naturally change over time, such as patches or updates are applied, configurations are changed, and applications are added or removed, it is essential that SOEs are reviewed and updated at least annually to ensure that an up-to-date baseline is maintained."
+     }
+    }
+   ]
+  }
+ }
+}

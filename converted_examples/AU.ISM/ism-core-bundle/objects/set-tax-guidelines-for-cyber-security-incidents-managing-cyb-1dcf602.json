@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-incidents-managing-cyb-1dcf602",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Cyber security incident register"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0125",
+   "sequence": 1260
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1803",
+   "sequence": 1270
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Cyber security incident register",
+     "name": "overview",
+     "prose": {
+      "en": "Developing, implementing and maintaining a cyber security incident register can assist in ensuring that appropriate remediation activities are undertaken in response to cyber security incidents. In addition, the types and frequency of cyber security incidents, along with the costs of any remediation activities, can be used as input to future risk assessment activities."
+     }
+    }
+   ]
+  }
+ }
+}

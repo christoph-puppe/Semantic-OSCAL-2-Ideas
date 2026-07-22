@@ -14,9 +14,9 @@ import json, hashlib, os, re, copy, collections
 from oscal_conv_lib import Bundle
 
 ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".."))
-OUT = os.path.join(ROOT, "converted_examples", "geman.bsi", "bsi-core-bundle")
-RMD = os.path.join(ROOT, "converted_examples", "geman.bsi", "bsi-coverage-report.md")
-RJS = os.path.join(ROOT, "converted_examples", "geman.bsi", "bsi-coverage-report.json")
+OUT = os.path.join(ROOT, "converted_examples", "DE.BSI", "bsi-core-bundle")
+RMD = os.path.join(ROOT, "converted_examples", "DE.BSI", "bsi-coverage-report.md")
+RJS = os.path.join(ROOT, "converted_examples", "DE.BSI", "bsi-coverage-report.json")
 SOURCES = [("gspp", os.path.join(ROOT, "sources", "Grundschutz++-catalog.json"),
             "https://ns.bsi.bund.de/gspp")]
 CENSUS = {"version": "2026-07-03", "controls": 998, "defects-gspp": 213,
@@ -39,7 +39,10 @@ def sha_file(path): return "sha256:"+hashlib.sha256(open(os.path.join(OUT,path),
 def semantic_digest(o):
     o=copy.deepcopy(o); o.pop("annotations",None)
     return "sha256:"+hashlib.sha256(json.dumps(o,sort_keys=True,separators=(",",":"),ensure_ascii=False).encode()).hexdigest()
-def slug(s): return re.sub(r"[^a-z0-9]+","-",(s or "").lower()).strip("-")[:60] or "x"
+def slug(s):
+    s = re.sub(r"[^a-z0-9]+","-",(s or "").lower()).strip("-")
+    if len(s) <= 60: return s or "x"
+    return s[:52].rstrip("-") + "-" + hashlib.sha256(s.encode()).hexdigest()[:7]   # P10 #39: no bare truncation
 def split_list(v): return [x.strip() for x in v.split(",") if x.strip()]
 
 # ---------- inventory ----------

@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-systems-multifunction-103c314",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Authenticating to multifunction devices"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1854",
+   "sequence": 4790
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0590",
+   "sequence": 4800
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Authenticating to multifunction devices",
+     "name": "overview",
+     "prose": {
+      "en": "To prevent users from printing sensitive or classified documents and forgetting to collect them, as well as assisting with the collection of sufficiently detailed event logs, MFDs should implement authentication measures that are of the same strength as used for other devices on the same network they are connected to, such as user workstations. For example, if user access to workstations on a network requires multi-factor authentication, so should user access to MFDs before users can print, scan or copy documents."
+     }
+    }
+   ]
+  }
+ }
+}

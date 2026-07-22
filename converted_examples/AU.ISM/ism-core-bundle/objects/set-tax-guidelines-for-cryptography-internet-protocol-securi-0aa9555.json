@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-internet-protocol-securi-0aa9555",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Key exchange"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1233",
+   "sequence": 15580
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Key exchange",
+     "name": "overview",
+     "prose": {
+      "en": "There are several methods for establishing shared keying material for IPsec connections, including manual keying and the IKE protocol. As the IKE protocol addresses several security risks associated with manual keying, it is the preferred method for key establishment. As IKE version 1 has been deprecated, IKE version 2 should be used."
+     }
+    }
+   ]
+  }
+ }
+}

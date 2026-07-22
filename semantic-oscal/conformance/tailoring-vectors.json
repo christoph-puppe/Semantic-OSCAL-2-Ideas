@@ -116,6 +116,40 @@
             "rationale": "Dependency satisfied by an equivalent compensating control.",
             "approver-ref": "https://ex.org/party/ao", "opened": "2026-07-01" } } ],
       "verdict": "valid",
-      "reason": "the audited escape channel working as designed" }
+      "reason": "the audited escape channel working as designed" },
+    { "name": "consumer-detach-of-pinned-selection-facet-without-deviation",
+      "tier": "consumer",
+      "facet-decls": { "https://acme.example/facet/scope": ["selection"] },
+      "operations": [
+        { "op": "detach-facet", "requirement-ref": "https://ex.org/req/1",
+          "facet": "https://acme.example/facet/scope@1" } ],
+      "verdict": "error",
+      "reason": "P10 #29: the pin declares [selection]; detaching it eases scoping - Deviation duty at consumer tier (D13 table)" },
+    { "name": "consumer-detach-of-pinned-selection-facet-with-deviation",
+      "tier": "consumer",
+      "facet-decls": { "https://acme.example/facet/scope": ["selection"] },
+      "operations": [
+        { "op": "detach-facet", "requirement-ref": "https://ex.org/req/1",
+          "facet": "https://acme.example/facet/scope@1",
+          "deviation": { "type": "operational-requirement", "state": "approved",
+            "rationale": { "en": "Scoping facet superseded by contract-level scoping." },
+            "approver-ref": "https://ex.org/party/ao", "opened": "2026-07-01" } } ],
+      "verdict": "valid",
+      "reason": "P10 #29: same detach through the audited escape channel" },
+    { "name": "attach-of-unregistered-facet-is-an-error-at-any-tier",
+      "tier": "authority",
+      "facet-decls": {},
+      "operations": [
+        { "op": "attach-facet", "requirement-ref": "https://ex.org/req/1",
+          "facet": "https://evil.example/facet/mystery@9", "payload": { "note": "x" } } ],
+      "verdict": "error",
+      "reason": "P10 #29: neither stdlib, nor pinned, nor private: - dangerous-by-default (D10), an error at ANY tier, not a Deviation duty" },
+    { "name": "attach-of-private-facet-is-free",
+      "tier": "consumer",
+      "operations": [
+        { "op": "attach-facet", "requirement-ref": "https://ex.org/req/1",
+          "facet": "private:notes@1", "payload": { "note": "x" } } ],
+      "verdict": "valid",
+      "reason": "private: carries modifies-semantics [] by definition (D10) - no duty, no registration" }
   ]
 }

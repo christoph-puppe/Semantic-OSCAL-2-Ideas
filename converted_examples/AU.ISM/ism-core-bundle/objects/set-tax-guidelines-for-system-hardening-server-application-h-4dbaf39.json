@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-server-application-h-4dbaf39",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Server application event logging"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1978",
+   "sequence": 9130
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1979",
+   "sequence": 9140
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Server application event logging",
+     "name": "overview",
+     "prose": {
+      "en": "Centrally logging and analysing security-relevant events, including configuration changes, for server applications can assist in monitoring the security posture of systems, detecting malicious behaviour and contributing to investigations following cyber security incidents."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-roles-chief-informatio-c7f963b",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Working with suppliers"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0731",
+   "sequence": 940
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Working with suppliers",
+     "name": "overview",
+     "prose": {
+      "en": "The CISO is responsible for ensuring that consistent vendor management processes are applied across their organisation, from discovery through to management. As supplier relationships come with additional security risks, the CISO should assist personnel with assessing cyber supply chain risks and understanding the security impacts of entering into contracts with suppliers."
+     }
+    }
+   ]
+  }
+ }
+}

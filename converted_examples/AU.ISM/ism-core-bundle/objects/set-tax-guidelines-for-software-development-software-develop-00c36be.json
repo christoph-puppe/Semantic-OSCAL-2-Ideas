@@ -1,0 +1,39 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-00c36be",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Software interaction with databases"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1275",
+   "sequence": 12010
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1276",
+   "sequence": 12020
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1278",
+   "sequence": 12030
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1536",
+   "sequence": 12040
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Software interaction with databases",
+     "name": "overview",
+     "prose": {
+      "en": "Structured Query Language (SQL) injection attacks, facilitated by dynamically generated queries, are a significant threat to the confidentiality, integrity and availability of database contents. Specifically, SQL injection attacks can allow malicious actors to steal database contents, modify database contents, delete an entire database or even in some circumstances gain control of the underlying database server. Furthermore, when database queries from software fail, they may display detailed error information about the structure of databases. This can be used by malicious actors to tailor their SQL injection attacks.\n\nFinally, centrally logging and analysing all queries to databases from software that are initiated by users can assist in monitoring the security posture of databases, detecting malicious behaviour and contributing to investigations following cyber security incidents."
+     }
+    }
+   ]
+  }
+ }
+}

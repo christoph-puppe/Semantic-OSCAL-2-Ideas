@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-cryptographic-algorithms-c1e77db",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Using the Elliptic Curve Digital Signature Algorithm"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0475",
+   "sequence": 14920
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1763",
+   "sequence": 14930
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1764",
+   "sequence": 14940
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Using the Elliptic Curve Digital Signature Algorithm",
+     "name": "overview",
+     "prose": {
+      "en": "When identifying a suitable curve from NIST SP 800-186, a base point order and key size of 224 bits for correctly implemented ECDSA provides 112 bits of effective security strength, with larger key sizes providing more bits of effective security strength. Security of a curve selected from another source cannot be assumed to have the same security using base point order and key size alone.\n\nTaking into account projected technological advances in quantum computing, ECDSA will not be approved beyond 2030."
+     }
+    }
+   ]
+  }
+ }
+}

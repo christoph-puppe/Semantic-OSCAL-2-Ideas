@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-artificial-intel-14bf117",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Excessive agency"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2092",
+   "sequence": 12390
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2093",
+   "sequence": 12400
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Excessive agency",
+     "name": "overview",
+     "prose": {
+      "en": "Excessive agency vulnerabilities allow for damaging actions to be performed in response to unexpected, ambiguous or manipulated output from AI applications, regardless of what is causing an AI application to malfunction."
+     }
+    }
+   ]
+  }
+ }
+}

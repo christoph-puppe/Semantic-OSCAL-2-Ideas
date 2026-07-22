@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-emanati-29bc851",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Emanation security doctrine"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1884",
+   "sequence": 4250
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Emanation security doctrine",
+     "name": "overview",
+     "prose": {
+      "en": "The Australian Signals Directorate (ASD) specifies emanation security requirements in its Emanation security manual and Australian Communications Security Instructions that must be complied with. Such requirements supplement these guidelines and, where conflicts occur, take precedence."
+     }
+    }
+   ]
+  }
+ }
+}

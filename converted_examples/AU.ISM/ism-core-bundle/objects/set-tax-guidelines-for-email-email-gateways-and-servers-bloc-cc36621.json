@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-gateways-and-servers-bloc-cc36621",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Blocking suspicious emails"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1502",
+   "sequence": 13340
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Blocking suspicious emails",
+     "name": "overview",
+     "prose": {
+      "en": "Blocking specific types of suspicious emails, such as where the email source address uses an internal domain, or internal subdomain, reduces the likelihood of phishing emails entering an organisation’s network."
+     }
+    }
+   ]
+  }
+ }
+}

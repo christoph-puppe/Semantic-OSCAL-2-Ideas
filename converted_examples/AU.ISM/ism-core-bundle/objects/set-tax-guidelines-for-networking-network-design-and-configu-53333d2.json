@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configu-53333d2",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Using the Server Message Block protocol"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1962",
+   "sequence": 13740
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Using the Server Message Block protocol",
+     "name": "overview",
+     "prose": {
+      "en": "The Server Message Block (SMB) protocol is used to share files and printers across networks. Unfortunately, multiple weaknesses exist in SMB version 1 that can be used by malicious actors to gain access to resources on networks, including Microsoft Active Directory Domain Services domain controllers."
+     }
+    }
+   ]
+  }
+ }
+}

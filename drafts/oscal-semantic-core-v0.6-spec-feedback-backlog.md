@@ -6,19 +6,20 @@ proposed disposition, and its source. This file is the input queue
 for the v0.6 specification revision; items leave it only via a
 decision recorded in the register.
 
-**STATUS (2026-07-22 evening): P10 re-opened the file.** The converter
-rerun emptied it (**#12 · #20 · #26 DELIVERED** — register "Amendments —
-the converter rerun"; history in the collapsed block below), then the
-**P10 adversarial review of the 1.0.0-rc.1 text** (at HEAD `7199c26`;
-register "Amendments — P10") filed **#29–#37**: 4 Major · 4 Minor ·
-1 erratum, every one demonstrated or recounted at HEAD. **The Majors
-(#29–#32) are the `v1.0.0` tag gate.** The **p10-gemini external
-review** (branch `review/p10-gemini`, commit 57bdb72, 10 findings) was
-adjudicated at HEAD the same evening (register "Amendments — P10b"):
-2 CONFIRMED new (**#38 · #39**), 4 folded into #32/#33/#34/#37,
-3 REFUTED (G-3 · G-4 · G-5 — do not resurrect).
+**THE BACKLOG IS EMPTY AGAIN** (2026-07-22, the P10 fix pass — register
+"Amendments — the P10 fix pass"): the P10 review of the 1.0.0-rc.1 text
+filed **#29–#37** (4 Major · 4 Minor · 1 erratum; register "Amendments —
+P10"), the p10-gemini external review was adjudicated (**#38 · #39** in,
+4 folded, **G-3 · G-4 · G-5 REFUTED — do not resurrect**; register
+"Amendments — P10b"), and the fix pass closed **all eleven** the
+standing way. 157/157 vectors + 11 bundles green in BOTH validators;
+export 5,886/5,886. Headline: enforcing #39 (D21 acyclicity) exposed a
+converter slug collision that had silently merged **239 ISM taxonomy
+sets** — recovered by re-conversion (corpus 6,675 → 6,914 objects).
+Every item that ever entered this file has left it through a register
+entry.
 
-## OPEN — P10 findings (2026-07-22, review of 1.0.0-rc.1)
+<details><summary>The P10/P10b rows as they stood (all eleven closed by the fix pass)</summary>
 
 | # | Item | Evidence | Proposed disposition | Source |
 |---|---|---|---|---|
@@ -33,6 +34,8 @@ adjudicated at HEAD the same evening (register "Amendments — P10b"):
 | 38 | **Corpus directory `geman.bsi` misspelled and off-convention** *(Minor, class b/d; G-1 CONFIRMED)*: the BSI bundle directory is `geman.bsi` (typo for "german") while every sibling follows `CC.NAME` (`DE.C5`, `DE.C3A`, `US.SP800-53`); the typo ships in the 1.0 release inventory and in every living reference (README, gate-4 table, reader hints). | Measured (directory listing) | `git mv` → `converted_examples/DE.BSI`; update living references (README incl. deep links, reader hint URLs — reader version bump, converter output path, gate-4 table label); dated register/census entries keep the historical spelling | P10b G-1 |
 | 39 | **RequirementSet membership cycles validate green** *(Minor, class a; G-6 CONFIRMED)*: the schema cannot see cycles and `closure_errors` checks resolution only, so a bundle with Set A ∋ Set B ∋ Set A passes both validators; naive baseline expansion or `uses-term` nearest-Set search loops forever. D21 never states acyclicity (overlapping membership is legal — cycles are not). | Argued in G-6; trivially constructible | D21 sentence: membership graphs are DAGs — a membership cycle is a validation error; cycle detection in `closure_errors` + the PS twin; +2 reference vectors | P10b G-6 |
 | 37 | **Canonical-form residues, latent** *(erratum, the #27 tier)*: (a) `decimalString` admits `-0`/`-0.0` — two spellings of zero, the #27 leading-zero class; (b) `text` values admit `{"en": []}` and `""` (zero-length translations — absent-vs-empty divergence on the new primitive); (c) the relation extension pattern `^https?://` admits bare `"https://"`; (d) `param_check` decimal bounds compare via `float()` (precision loss beyond 2^53); (e — G-2 CONFIRMED in substance) `text` keys are case-ambiguous: `en-US` and `en-us` are two spellings of one BCP-47 tag (tags are case-insensitive by RFC 5646) with two digests — the #27 "one value, one spelling" class on the new primitive. G-2's proposed fix (normalize at digest time) is REJECTED — never-normalize is the D3.4 discipline; the canonical spelling rides the schema instead (lowercase-only key pattern; corpus carries only `en`/`de`). Zero corpus instances of any. | **Demonstrated** (schema-accepts runs) | Tighten at the next schema touch: exclude `-0`, minLength/minItems on text values, lowercase text-key pattern, require substance after `https?://`, exact decimal compare; +3–4 vectors | P10-10 · P10b G-2 |
+
+</details>
 
 <details><summary>The last open rows as they stood (closed by the rerun)</summary>
 

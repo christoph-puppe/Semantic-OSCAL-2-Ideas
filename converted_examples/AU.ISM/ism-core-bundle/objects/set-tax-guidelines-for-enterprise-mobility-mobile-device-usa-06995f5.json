@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-enterprise-mobility-mobile-device-usa-06995f5",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Mobile device usage policy"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1082",
+   "sequence": 5280
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Mobile device usage policy",
+     "name": "overview",
+     "prose": {
+      "en": "Since mobile devices routinely leave the office environment, and the protection it affords, it is important that an organisation develops, implements and maintains a mobile device usage policy governing their use."
+     }
+    }
+   ]
+  }
+ }
+}

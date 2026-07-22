@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-enterprise-mobility-mobile-device-usa-d87e0d2",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Using mobile devices within or near connected vehicles"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2100",
+   "sequence": 5430
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2101",
+   "sequence": 5440
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Using mobile devices within or near connected vehicles",
+     "name": "overview",
+     "prose": {
+      "en": "Personnel should be aware of the environment in which they use mobile devices to view or communicate sensitive or classified data. Including by ensuring that sensitive or classified data is not viewed or communicated within or near connected vehicles due to the potential for mobile device screens to be recorded by cameras or for conversations to be recorded, retained and communicated by connected vehicle infotainment systems or connected services."
+     }
+    }
+   ]
+  }
+ }
+}

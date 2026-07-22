@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-cryptographic-fundamenta-eed2d6a",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Cryptographic key management processes and procedures"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0507",
+   "sequence": 14600
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Cryptographic key management processes and procedures",
+     "name": "overview",
+     "prose": {
+      "en": "Well-documented cryptographic key management processes and procedures can assist in the secure use and management of cryptographic keys and associated hardware and software. In doing so, cryptographic key management processes and procedures should cover cryptographic key generation, registration, distribution, installation, usage, protection, storage, access, recovery and destruction."
+     }
+    }
+   ]
+  }
+ }
+}

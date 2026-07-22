@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-artificial-intel-a491200",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Data collection, retention and use"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2103",
+   "sequence": 12280
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2123",
+   "sequence": 12290
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Data collection, retention and use",
+     "name": "overview",
+     "prose": {
+      "en": "To ensure organisational data is not used to train AI models without explicit data owner consent, organisational data generated, collected or processed by AI applications should not be used for training, fine-tuning or improving AI models unless informed and explicit consent has been obtained in advance. Furthermore, to prevent excessive retention of data, all prompts and outputs associated with chat sessions should be securely deleted when chat sessions are removed from AI applications."
+     }
+    }
+   ]
+  }
+ }
+}

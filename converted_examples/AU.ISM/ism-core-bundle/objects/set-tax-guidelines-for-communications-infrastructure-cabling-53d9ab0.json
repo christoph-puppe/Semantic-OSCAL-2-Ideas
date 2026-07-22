@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-cabling-53d9ab0",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Physical separation of cabinets and patch panels"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0216",
+   "sequence": 4140
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0217",
+   "sequence": 4150
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1116",
+   "sequence": 4160
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Physical separation of cabinets and patch panels",
+     "name": "overview",
+     "prose": {
+      "en": "Physical separation between TOP SECRET systems and non-TOP SECRET systems reduces the chance of cross-patching. This reduces the possibility of unauthorised personnel gaining access to TOP SECRET systems."
+     }
+    }
+   ]
+  }
+ }
+}

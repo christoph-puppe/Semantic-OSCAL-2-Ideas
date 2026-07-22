@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-cabling-a11f9ff",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Audio secure rooms"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0198",
+   "sequence": 4180
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Audio secure rooms",
+     "name": "overview",
+     "prose": {
+      "en": "Audio secure rooms are designed to prevent audio conversations from being overheard. The Australian Security Intelligence Organisation should be consulted before any modifications are made to TOP SECRET audio secure rooms."
+     }
+    }
+   ]
+  }
+ }
+}

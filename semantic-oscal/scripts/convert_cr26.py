@@ -38,7 +38,10 @@ def _canon(o):
 def sdig(o):
     o=copy.deepcopy(o); o.pop("annotations",None)
     return "sha256:"+hashlib.sha256(json.dumps(_canon(o),separators=(",",":"),ensure_ascii=False).encode()).hexdigest()
-def slug(s): return re.sub(r"[^a-z0-9]+","-",(s or "").lower()).strip("-")[:60] or "x"
+def slug(s):
+    s = re.sub(r"[^a-z0-9]+","-",(s or "").lower()).strip("-")
+    if len(s) <= 60: return s or "x"
+    return s[:52].rstrip("-") + "-" + hashlib.sha256(s.encode()).hexdigest()[:7]   # P10 #39: no bare truncation
 
 LANG="en"   # corpus language: payload free text is language-tagged {LANG: value}
 lang_wraps=collections.Counter()

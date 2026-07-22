@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-cabling-a05d7e8",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Floor plan diagrams"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1645",
+   "sequence": 3510
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1646",
+   "sequence": 3520
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Floor plan diagrams",
+     "name": "overview",
+     "prose": {
+      "en": "Floor plan diagrams that are developed using computer-aided design and drafting applications, and use alphanumeric grid referencing, can provide an accurate scaled view for each floor and are critical to ensuring that cabling infrastructure components can be easily located by installers and inspectors. In doing so, floor plan diagrams should track all cabling infrastructure changes throughout the life of a system."
+     }
+    }
+   ]
+  }
+ }
+}

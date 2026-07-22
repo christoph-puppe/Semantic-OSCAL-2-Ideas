@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-e256b93",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Build solution"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2031",
+   "sequence": 11460
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2032",
+   "sequence": 11470
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Build solution",
+     "name": "overview",
+     "prose": {
+      "en": "The build process for software can unintentionally allow vulnerabilities in software to make it into production environments. This security risk can be reduced by ensuring the build solution uses all available security features and that all automated testing is completed as part of the build process."
+     }
+    }
+   ]
+  }
+ }
+}

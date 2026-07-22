@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-information-technology-equipment-it-e-fb2f686",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Hardening IT equipment configurations"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1913",
+   "sequence": 5810
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1858",
+   "sequence": 5820
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Hardening IT equipment configurations",
+     "name": "overview",
+     "prose": {
+      "en": "When IT equipment is deployed in its default state, or with an unapproved configuration, it can lead to an insecure operating environment that may allow malicious actors to gain an initial foothold on networks. Many settings exist within IT equipment enabling them to be configured in an approved secure state to minimise this security risk. As such, the Australian Signals Directorate (ASD) and vendors often produce hardening guidance to assist in hardening the configuration of IT equipment. However, in situations where ASD and vendor hardening guidance conflicts, precedence should be given to implementing the most restrictive guidance."
+     }
+    }
+   ]
+  }
+ }
+}

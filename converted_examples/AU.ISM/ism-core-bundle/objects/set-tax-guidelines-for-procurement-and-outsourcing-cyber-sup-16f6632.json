@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-procurement-and-outsourcing-cyber-sup-16f6632",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Supplier relationship management"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1785",
+   "sequence": 1660
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1786",
+   "sequence": 1670
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Supplier relationship management",
+     "name": "overview",
+     "prose": {
+      "en": "Developing, implementing and maintaining a supplier relationship management policy can assist an organisation in identifying, prioritising and maintaining strong relationships with suppliers that have demonstrated a commitment to the security of their products and services. In doing so, these suppliers should be documented on an approved supplier list."
+     }
+    }
+   ]
+  }
+ }
+}

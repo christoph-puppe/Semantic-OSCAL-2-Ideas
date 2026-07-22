@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-cryptographic-fundamenta-e14101c",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Handling encrypted IT equipment and media"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0462",
+   "sequence": 14690
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Handling encrypted IT equipment and media",
+     "name": "overview",
+     "prose": {
+      "en": "When a user authenticates to the encryption functionality of IT equipment or media, encrypted data is made available. At such a time, the IT equipment or media should be handled according to its original sensitivity or classification. Once the user deauthenticates from the encryption functionality, such as shutting down a device or activating a lock screen, the IT equipment or media can be considered protected by the encryption functionality again."
+     }
+    }
+   ]
+  }
+ }
+}

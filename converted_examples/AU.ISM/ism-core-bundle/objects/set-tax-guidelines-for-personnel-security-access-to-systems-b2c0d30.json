@@ -1,0 +1,59 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-personnel-security-access-to-systems-b2c0d30",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Privileged access to systems"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1507",
+   "sequence": 3080
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1508",
+   "sequence": 3090
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1175",
+   "sequence": 3100
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1883",
+   "sequence": 3110
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1649",
+   "sequence": 3120
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0445",
+   "sequence": 3130
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1263",
+   "sequence": 3140
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1509",
+   "sequence": 3150
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1650",
+   "sequence": 3160
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Privileged access to systems",
+     "name": "overview",
+     "prose": {
+      "en": "Privileged user accounts are considered those that can alter or circumvent system controls. This also applies to user accounts that may only have limited privileges but still have the ability to bypass some system controls.\n\nPrivileged user accounts are often targeted by malicious actors as they can potentially give full access to systems and their resources. As such, ensuring that privileged user accounts are prevented from accessing the internet, email and web services minimises opportunities for these accounts to be compromised. However, if privileged user accounts are explicitly authorised to access online services, they should be strictly limited to only what is required for users and services to undertake their duties.\n\nFinally, centrally logging and analysing privileged access events, as well as privileged user account and security group management events, can assist in monitoring the security posture of systems and their resources, detecting malicious behaviour and contributing to investigations following cyber security incidents."
+     }
+    }
+   ]
+  }
+ }
+}

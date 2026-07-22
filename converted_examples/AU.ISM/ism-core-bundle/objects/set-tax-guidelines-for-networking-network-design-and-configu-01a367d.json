@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configu-01a367d",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Using Virtual Local Area Networks"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1532",
+   "sequence": 13480
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0529",
+   "sequence": 13490
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0530",
+   "sequence": 13500
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0535",
+   "sequence": 13510
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1364",
+   "sequence": 13520
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Using Virtual Local Area Networks",
+     "name": "overview",
+     "prose": {
+      "en": "Virtual Local Area Networks (VLANs) can be used to implement network segmentation and segregation when networks belong to the same security domain. In such cases, if a data spill occurs the impact will be less than if a data spill occurred between two networks of different classifications or between an organisation’s network and public network infrastructure. Should an organisation choose to risk manage implementing VLANs between networks belonging to different security domains, such as at the same classification, additional controls for network devices will apply, such as not sharing VLAN trunks and terminating VLANs on separate physical network interfaces.\n\nFor the purposes of this topic, Multiprotocol Label Switching is considered equivalent to VLANs and subject to the same controls."
+     }
+    }
+   ]
+  }
+ }
+}

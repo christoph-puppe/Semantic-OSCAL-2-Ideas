@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-database-systems-databases-protecting-da22977",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Protecting databases"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1256",
+   "sequence": 12830
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Protecting databases",
+     "name": "overview",
+     "prose": {
+      "en": "Databases can be protected from unauthorised copying, and subsequent offline analysis, by applying file-based access controls to database files."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-incidents-managing-cyb-c18c7c3",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Insider threat mitigation program"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1625",
+   "sequence": 1290
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1626",
+   "sequence": 1300
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Insider threat mitigation program",
+     "name": "overview",
+     "prose": {
+      "en": "As an insider’s authorised access to systems and their resources may make them harder to detect when intentionally performing malicious activities, establishing and maintaining an insider threat mitigation program can assist an organisation to detect and respond to indicators of potential insider threats before they occur, or limit damage if they do occur. In doing so, an organisation will likely obtain the most benefit by logging and analysing the following user activities:\n\n- excessive copying or modification of data\n- unauthorised or excessive use of removable media\n- connecting devices capable of data storage to systems\n- unusual system usage outside of normal business hours\n- excessive data access or printing compared to their peers\n- data transfers to unauthorised cloud services or webmail\n- use of unauthorised Virtual Private Networks, file transfer applications or anonymity networks."
+     }
+    }
+   ]
+  }
+ }
+}

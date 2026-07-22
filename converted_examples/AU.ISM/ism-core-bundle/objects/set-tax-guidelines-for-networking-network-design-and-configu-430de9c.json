@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configu-430de9c",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Network segmentation and segregation"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1181",
+   "sequence": 13450
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1577",
+   "sequence": 13460
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Network segmentation and segregation",
+     "name": "overview",
+     "prose": {
+      "en": "Network segmentation and segregation is one of the most effective controls in preventing malicious actors from easily propagating throughout networks once initial access has been gained. To achieve this, networks can be segregated into multiple network zones to protect servers, services and data. For example, administrative infrastructure used for managing critical servers, high-value servers and regular servers should be segregated from each other. In addition, all administrative infrastructure should be segregated from other assets on networks."
+     }
+    }
+   ]
+  }
+ }
+}

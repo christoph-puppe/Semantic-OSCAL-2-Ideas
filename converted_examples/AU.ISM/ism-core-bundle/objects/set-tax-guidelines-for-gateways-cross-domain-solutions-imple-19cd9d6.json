@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-gateways-cross-domain-solutions-imple-19cd9d6",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Implementing Cross Domain Solutions"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0626",
+   "sequence": 16030
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Implementing Cross Domain Solutions",
+     "name": "overview",
+     "prose": {
+      "en": "As there are significant security risks associated with connecting SECRET or TOP SECRET networks to other networks in different security domains, CDSs will need to be implemented."
+     }
+    }
+   ]
+  }
+ }
+}

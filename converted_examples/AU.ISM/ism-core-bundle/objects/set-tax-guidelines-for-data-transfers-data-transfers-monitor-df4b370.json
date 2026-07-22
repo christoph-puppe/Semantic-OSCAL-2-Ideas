@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-data-transfers-data-transfers-monitor-df4b370",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Monitoring data import and export"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1586",
+   "sequence": 16950
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1294",
+   "sequence": 16960
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0660",
+   "sequence": 16970
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Monitoring data import and export",
+     "name": "overview",
+     "prose": {
+      "en": "To ensure the ongoing confidentiality and integrity of systems, it is important to log all data transfers. This applies to all forms of data transfers, such as those performed using removable media, gateways or CDSs. Ideally, data transfer logs should contain information on who authorised the data transfer, what data was transferred, where the data was transferred from or to, when the data was transferred, why the data was transferred, and how the data was transferred. Monitoring of such activities, via periodic verification of data transfer logs, can assist in identifying abuse of data transfer privileges and any unusual usage patterns that may indicate attempts by malicious actors to surreptitiously import malicious code or exfiltrate data from SECRET and TOP SECRET systems."
+     }
+    }
+   ]
+  }
+ }
+}

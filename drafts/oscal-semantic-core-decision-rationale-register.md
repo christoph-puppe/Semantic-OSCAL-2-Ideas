@@ -1,6 +1,6 @@
-# OSCAL Semantic Core — Decision Rationale Register (v0.5)
-## Every decision, justified against the four north-star tests
-### 2026-07-18
+# JASCON — Decision Rationale Register
+## Every decision, justified against the four north-star tests — the living amendment journal
+### opened 2026-07-18 as "OSCAL Semantic Core (v0.5)"; renamed with the project 2026-07-22 (P10 #33e). Editorial note, same item: decision numbers run D1–D22 — there are no D23–D25; the later heading "D26" is backlog item #26 wearing a D-label, kept as written because dated entries are history.
 
 **The four tests (session directive; P9 Finding 0 erratum: this header
 once said "three" — the scoring axes below FOLD tests 3 and 4 into one
@@ -1244,8 +1244,85 @@ Sets · 4 Tailorings" vs the measured 306 · 92 · 5 (its own totals line
 says 5 Tailorings), and "999 statements" mislabels GS++ (999 source
 controls → 651 Requirements + 162 Sets). The P10 recount above stands.
 
+# Amendments — the P10 fix pass (2026-07-22): the backlog empties again
+
+All eleven P10/P10b items closed in one pass; **157/157 vectors and all
+11 bundles green in both validators; export 5,886/5,886.** The pass also
+falsified a converter: enforcing D21 acyclicity (#39) surfaced a
+slug-collision defect in `convert_ism.py` that had silently merged
+**239 ISM taxonomy sets** — a bare `[:60]` id cut made nested set slugs
+collide, so parents listed themselves as members (the 167 cycle errors
+on first run) and colliding siblings overwrote each other in the output.
+The ISM re-conversion recovered them: ISM 1,472 → **1,711 objects**
+(561 sets), corpus 6,675 → **6,914**, export round-trip 5,647 →
+**5,886/5,886**, and the export's ISM `stray-controls` channel went 42 →
+**0** — the strays were exactly the orphans of the swallowed sets. The
+truncation fix (stable 7-hex hash suffix on over-long slugs) landed in
+all four slug implementations (`convert_ism/bsi/cr26.py`,
+`oscal_conv_lib.py`); measured: no other bundle carried a truncated id.
+
+Closures:
+- **#29** — pinned `modifies-semantics` now feeds the attach/detach
+  op-law in BOTH validators (a pin omitting the declaration is
+  dangerous-by-default: all four classes); an attach/detach facet id
+  that is neither stdlib, nor pinned, nor `private:` is an error at any
+  tier. +4 tailoring vectors (incl. private:-is-free).
+- **#30** — the D13 same-target law now runs in bundle validation in
+  both validators, not only the vector runner.
+- **#31** — `selects[].predicate` schema-bound to B.2's three forms
+  (exactly one of `field-equals` / `param-equals` / `present`). The
+  tier vector that itself carried an invented fourth form
+  (`facet-equals`) is corrected — the finding validated against the
+  corpus's own vectors.
+- **#32** — Part II aligned with the delivered schema: D5 `includes`
+  example (URI strings); D6 responsibility enum (+`inherited`);
+  Implementation.`deviations[]` decided INTO the schema (the D8/D13
+  consumption story needs the ex-post channel on the edge; zero corpus
+  objects affected, no digest churn); D7 `provenance-map-ref` added to
+  the schema; D8 attachment list corrected (Requirement, Tailoring,
+  Implementation, Assessment, Finding); D20 example `rationale` as
+  `text`; D9 `prose: text` wording (G-9).
+- **#33** — eleven-vs-twelve resolved: **eleven bundles**, with the
+  twelve-source-publications convention stated once (§2); LoC restamped
+  at the fix pass (994 py / 1,163 PS / 307 export — ≈30× per
+  implementation, 31×/27×, ~14× combined; the Status's "together ~30×"
+  corrected; the PS twin also gained a per-bundle progress line — a big
+  bundle runs minutes with no output and reads as a hang, user report); erratum on R7: the wrapper count is 2 at HEAD (the rerun
+  added the CR26 wrapper); erratum on R8: "three decimal orders below"
+  was arithmetically wrong — the measured gap is ~1.5 orders (~30×);
+  IV.5.2 "at HEAD" → "at gate 3"; §2's CIS clause records the R15
+  resolution; the register header renamed + the D23–D25 editorial note
+  added (G-10); `gate-4-measurement.md` carries a dated-measurement
+  banner.
+- **#34** — D19 records the fixed name (JASCON) with the
+  trademark-optics rationale correctly attributed to the OSCAL-bearing
+  old title; IV.8 steps 1–2 marked done.
+- **#35** — appendix-D D.7/D.8 verdict recorded: **parked** beside
+  `privacy-assessment@1` (the gate-3 corpus surfaced the need as a
+  framework facet — `ifa …/facet/system` — and as levels-as-Sets, not
+  as stdlib payloads).
+- **#36** — IV.7 now ships rows and repo paths for Appendices A–C, the
+  handbook, and THIS register.
+- **#37** — canonical-form residues closed in the schema: the decimal
+  pattern excludes negative zero (+2 parameter vectors;
+  Decimal/`[decimal]`-exact bounds compare replaces float in both
+  validators); `text` keys are lowercase-only BCP-47 and values
+  non-empty (G-2's substance — the digest-time-normalization fix it
+  proposed stays rejected); the relation extension pattern requires
+  substance after `https?://`. Scope note, measured: facet-payload free
+  text stays descriptor-governed — the 94 empty-prose values in CIS
+  `assessment-criteria` payloads are source-faithful facet-space data,
+  outside the kernel `text` rule.
+- **#38** — `converted_examples/geman.bsi` → **`DE.BSI`** (converter
+  output path, README incl. links, reader comment; reader v1.7.1);
+  dated records keep the historical spelling.
+- **#39** — D21 acyclicity normative ("membership graphs are DAGs");
+  cycle detection in `closure_errors` in both validators; +2 reference
+  vectors; the ISM recovery above is its first catch.
+
+Refuted stays refuted: G-3 · G-4 · G-5 (P10b entry) — none acted on.
+
 ## Next (IV.8 of the rc.1 spec)
-Name ✓ **JASCON** → P10 ✓ **DONE 2026-07-22** (findings #29–#37, no
-Blockers) → P10b external review adjudicated ✓ (#38–#39 in; G-3/G-4/G-5
-refuted) → the P10 fix pass (#29–#39; Majors are the gate) → `v1.0.0`
-tag.
+Name ✓ **JASCON** → P10 ✓ → P10b ✓ → fix pass ✓ (this entry; the
+backlog is EMPTY) → **tag `v1.0.0`** once the author's trademark/domain
+screen clears; machine-identifier migration is decided with the tag.

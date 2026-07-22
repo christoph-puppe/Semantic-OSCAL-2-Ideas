@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-personnel-security-access-to-systems-6d18711",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Temporary access to systems"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0441",
+   "sequence": 3290
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0443",
+   "sequence": 3300
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Temporary access to systems",
+     "name": "overview",
+     "prose": {
+      "en": "Under strict circumstances, temporary access to systems and their resources may be granted to personnel who lack an appropriate security clearance or briefing. In such circumstances, personnel should have their access controlled in such a way that they only have access to data required for them to undertake their duties."
+     }
+    }
+   ]
+  }
+ }
+}

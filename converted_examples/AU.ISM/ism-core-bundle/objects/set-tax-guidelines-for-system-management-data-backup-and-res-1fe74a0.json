@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-management-data-backup-and-res-1fe74a0",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Performing and retaining backups"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1511",
+   "sequence": 10660
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1810",
+   "sequence": 10670
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1811",
+   "sequence": 10680
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Performing and retaining backups",
+     "name": "overview",
+     "prose": {
+      "en": "To mitigate the security risk of losing system availability or data as part of a ransomware attack, or other form of destructive attack, backups of data, applications and settings should be performed and retained in accordance with an organisation’s business criticality and business continuity requirements. In doing so, backups of all data, applications and settings should be synchronised to enable restoration to a common point in time. Furthermore, it is essential that all backups are retained in a secure and resilient manner. This will ensure that should a system fall victim to a ransomware attack, or other form of destructive attack, data will not be lost and, if necessary, systems can be quickly restored."
+     }
+    }
+   ]
+  }
+ }
+}

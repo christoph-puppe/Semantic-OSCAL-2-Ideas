@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-information-technology-equipment-it-e-f0bff9e",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Classifying IT equipment"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0293",
+   "sequence": 5910
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Classifying IT equipment",
+     "name": "overview",
+     "prose": {
+      "en": "The purpose of classifying IT equipment is to acknowledge the sensitivity or classification of data that it is approved for processing, storing or communicating.\n\nClassifying IT equipment also assists in ensuring that the appropriate sanitisation, destruction and disposal processes are followed at the end of its life."
+     }
+    }
+   ]
+  }
+ }
+}

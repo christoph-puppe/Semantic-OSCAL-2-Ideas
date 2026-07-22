@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-91074e8",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Software event logging"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1911",
+   "sequence": 12210
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Software event logging",
+     "name": "overview",
+     "prose": {
+      "en": "Centrally logging and analysing security-relevant usage, error messages and crashes for software can assist in monitoring the security posture of software, detecting malicious behaviour and contributing to investigations following cyber security incidents."
+     }
+    }
+   ]
+  }
+ }
+}

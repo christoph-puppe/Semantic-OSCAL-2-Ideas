@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-cabling-5e84c3f",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Connecting cable reticulation systems to cabinets"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1102",
+   "sequence": 4050
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1101",
+   "sequence": 4060
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1103",
+   "sequence": 4070
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Connecting cable reticulation systems to cabinets",
+     "name": "overview",
+     "prose": {
+      "en": "Controlling the routing from cable reticulation systems to cabinets can assist in preventing unauthorised modifications and tampering while also providing easy inspection of cables."
+     }
+    }
+   ]
+  }
+ }
+}

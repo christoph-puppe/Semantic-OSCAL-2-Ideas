@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configu-c26039c",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Using the Simple Network Management Protocol"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1311",
+   "sequence": 13760
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1312",
+   "sequence": 13770
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Using the Simple Network Management Protocol",
+     "name": "overview",
+     "prose": {
+      "en": "The Simple Network Management Protocol (SNMP) can be used to monitor the status of network devices. The first two iterations of SNMP were inherently insecure as they used trivial authentication methods. Furthermore, changing all default SNMP community strings on network devices, and limiting their access to read-only, is strongly encouraged."
+     }
+    }
+   ]
+  }
+ }
+}

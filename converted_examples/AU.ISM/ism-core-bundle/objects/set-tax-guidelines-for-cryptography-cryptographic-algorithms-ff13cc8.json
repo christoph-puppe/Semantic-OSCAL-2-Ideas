@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-cryptographic-algorithms-ff13cc8",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Using post-quantum cryptographic algorithms"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1990",
+   "sequence": 14960
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Using post-quantum cryptographic algorithms",
+     "name": "overview",
+     "prose": {
+      "en": "Post-quantum cryptographic algorithms are more complex than their traditional counterparts. To reduce the risk that vulnerabilities are introduced via implementation errors, approval is given to specific post-quantum cryptographic standards. In doing so, FIPS 204 and FIPS 203 state that other foundational standards must also be adhered to, including the required use of FIPS 140-3 validated cryptographic modules. However, while the use of FIPS 140-3 validated modules is preferred, it is not required."
+     }
+    }
+   ]
+  }
+ }
+}

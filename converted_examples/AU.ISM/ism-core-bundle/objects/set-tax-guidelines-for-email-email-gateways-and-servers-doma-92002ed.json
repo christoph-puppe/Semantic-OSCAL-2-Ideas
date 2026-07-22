@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-gateways-and-servers-doma-92002ed",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "DomainKeys Identified Mail"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0861",
+   "sequence": 13250
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1026",
+   "sequence": 13260
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1027",
+   "sequence": 13270
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "DomainKeys Identified Mail",
+     "name": "overview",
+     "prose": {
+      "en": "DKIM enables the detection of spoofed email contents. This is achieved by DKIM records specifying the public key used to verify the digital signature in an email. Specifically, if the signed digest in an email header does not match the signed contents of the email, verification will not pass."
+     }
+    }
+   ]
+  }
+ }
+}

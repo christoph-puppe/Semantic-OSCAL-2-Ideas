@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-web-application-a3f4e69",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Web application programming interfaces"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1851",
+   "sequence": 12640
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Web application programming interfaces",
+     "name": "overview",
+     "prose": {
+      "en": "Web APIs can facilitate the exchange of data between computing devices. As such, common security risks associated with their use should be mitigated during their development."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-operating-system-har-f79344e",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Operating system event logging"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1976",
+   "sequence": 7930
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1977",
+   "sequence": 7940
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0582",
+   "sequence": 7950
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Operating system event logging",
+     "name": "overview",
+     "prose": {
+      "en": "Centrally logging and analysing security-relevant events, including configuration changes, for operating systems can assist in monitoring the security posture of systems, detecting malicious behaviour and contributing to investigations following cyber security incidents.\n\nTypical security-relevant events for operating systems that can be logged include:\n\n- changes to security policies\n- failed user logons and account lockouts\n- failures, restarts and changes to important processes, services and scheduled tasks\n- operating system and application usage, error messages and crashes\n- security product-related events\n- successful process creations and terminations\n- successful user logons and logoffs\n- system startups and shutdowns."
+     }
+    }
+   ]
+  }
+ }
+}

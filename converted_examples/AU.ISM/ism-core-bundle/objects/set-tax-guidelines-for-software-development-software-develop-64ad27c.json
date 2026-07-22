@@ -1,0 +1,39 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-64ad27c",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Vulnerability disclosure program"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1616",
+   "sequence": 12120
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1755",
+   "sequence": 12130
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1756",
+   "sequence": 12140
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1717",
+   "sequence": 12150
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Vulnerability disclosure program",
+     "name": "overview",
+     "prose": {
+      "en": "Implementing a vulnerability disclosure program, based on responsible disclosure, can assist an organisation to improve the security of their products and services as it provides a way for internal and external parties to responsibly notify the organisation of vulnerabilities in a coordinated manner. Furthermore, following the resolution of reported vulnerabilities, it can assist an organisation in notifying their consumers of vulnerabilities that have been discovered in their products and services, and any patches, updates or vendor mitigations that should be applied.\n\nA vulnerability disclosure program should include processes and procedures for receiving, identifying, documenting, validating and prioritising vulnerabilities disclosed by internal and external parties. In support of this, a vulnerability disclosure policy should be made publicly available that covers:\n\n- the purpose of the vulnerability disclosure program\n- types of security research that are and are not allowed\n- how to report any vulnerabilities and their severities\n- actions, and associated timeframes, upon notification of vulnerabilities\n- expectations regarding the public disclosure of vulnerabilities\n- any recognition or reward for finders of vulnerabilities.\n\nFinally, ASD encourages security researchers and other members of the public to report vulnerabilities directly to an organisation. However, ASD recognises that this is not always practical, initial attempts at communication may be unsuccessful or the person making the report may not wish to do so directly. In such cases, vulnerabilities can be reported to ASD as an independent coordinator. Under ASD’s limited use obligation, any information voluntarily provided to ASD about vulnerabilities cannot be used for regulatory purposes."
+     }
+    }
+   ]
+  }
+ }
+}

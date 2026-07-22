@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-media-media-destruction-outsourcing-m-b8a8aa3",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Outsourcing media destruction"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0839",
+   "sequence": 7220
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0840",
+   "sequence": 7230
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Outsourcing media destruction",
+     "name": "overview",
+     "prose": {
+      "en": "While media storing accountable material cannot be outsourced, media storing non-accountable material can be outsourced when using a National Association for Information Destruction AAA certified destruction service with endorsements, as specified in ASIO’s Protective Security Circular-167, External destruction of security classified information. This publication is available from the Protective Security Policy GovTEAMS community or ASIO by email."
+     }
+    }
+   ]
+  }
+ }
+}

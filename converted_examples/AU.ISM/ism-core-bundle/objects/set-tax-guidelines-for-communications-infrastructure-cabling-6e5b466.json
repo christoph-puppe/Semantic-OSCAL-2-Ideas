@@ -1,0 +1,39 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-cabling-6e5b466",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Wall outlet box colours"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1822",
+   "sequence": 3960
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1107",
+   "sequence": 3970
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1720",
+   "sequence": 3980
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1721",
+   "sequence": 3990
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Wall outlet box colours",
+     "name": "overview",
+     "prose": {
+      "en": "The use of designated wall outlet box colours can provide an easy way to distinguish wall outlet boxes for SECRET and TOP SECRET systems from wall outlet boxes for other systems. For example, while SECRET and TOP SECRET wall outlet boxes have designated wall outlet box colours, wall outlet boxes for other systems may be any colour except for those reserved for SECRET and TOP SECRET systems. In addition, wall outlet box colours for other systems, such as non-classified, OFFICIAL: Sensitive and PROTECTED systems, may use the same colour, such as blue. Ideally, wall outlet boxes should be the same colour that is used for associated cabling."
+     }
+    }
+   ]
+  }
+ }
+}

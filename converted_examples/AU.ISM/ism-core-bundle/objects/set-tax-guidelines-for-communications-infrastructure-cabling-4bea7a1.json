@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-cabling-4bea7a1",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Wall penetrations"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1122",
+   "sequence": 3900
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Wall penetrations",
+     "name": "overview",
+     "prose": {
+      "en": "Penetrating a wall between a TOP SECRET area and a lower classified area requires the integrity of the TOP SECRET area to be maintained. In such scenarios, TOP SECRET cables should be encased in conduit with all gaps between the TOP SECRET conduit and the wall filled with an appropriate sealing compound."
+     }
+    }
+   ]
+  }
+ }
+}

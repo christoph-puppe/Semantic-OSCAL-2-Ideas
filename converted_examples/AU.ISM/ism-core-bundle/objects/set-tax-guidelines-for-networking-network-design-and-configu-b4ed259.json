@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configu-b4ed259",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Network management traffic"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1006",
+   "sequence": 13720
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Network management traffic",
+     "name": "overview",
+     "prose": {
+      "en": "Implementing security measures specifically for network management traffic provides another layer of defence should malicious actors find an opportunity to connect to networks. In addition, this also makes it more difficult for malicious actors to enumerate networks."
+     }
+    }
+   ]
+  }
+ }
+}

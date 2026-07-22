@@ -17,13 +17,14 @@
 **Status.** A **measured architecture**: every claim in this document has
 survived contact with real catalogs or is explicitly tiered below
 *measured*. The v0.6 executable gate is **delivered in full** (IV.5):
-twelve corpora converted losslessly (251,591 source leaf values,
-UNMAPPED = 0 everywhere), a 149-vector conformance corpus in twelve
-families, two independent-runtime reference validators (Python; a
-zero-dependency PowerShell 5.1 twin — together ~30× smaller than the
+eleven corpora converted losslessly (251,591 source leaf values,
+UNMAPPED = 0 everywhere; twelve source publications when the 800-53B
+baselines are counted separately), a 157-vector conformance corpus in
+twelve families, two independent-runtime reference validators (Python;
+a zero-dependency PowerShell 5.1 twin — **each** ≈30× smaller than the
 OSCAL 1.x toolchain with the crypto engines included), DSSE
 verification, bundle composition, conditional-apply, and a
-bidirectional OSCAL 1.2.2 export that round-trips 5,647/5,647 catalog
+bidirectional OSCAL 1.2.2 export that round-trips 5,886/5,886 catalog
 objects to semantic-digest equality against the official NIST schema.
 The spec-feedback backlog is **empty** — every item that ever entered
 it left through a register entry. Comparison baseline throughout:
@@ -85,17 +86,20 @@ and mappings are another. The defensible scope statement:
 > fragmentation), and **FedRAMP CR26** (bespoke JSON, not OSCAL); plus the
 > **CIS** OSCAL corpus (repository status disputed between passes —
 > archived vs. maintained v8.1 — verification item, treated as test corpus
-> either way); plus **licensed or independently modeled targets** for
+> either way — since settled by measurement: both CIS corpora converted
+> at 100 % on 2026-07-21, R15 resolved); plus **licensed or independently modeled targets** for
 > ISO/IEC 27001/27002 and PCI DSS, which have **no official OSCAL
 > publications** and must never be attributed as such.
 
 The census covered three corpora (ISM, BSI, CR26). At rc.1 the
-**measured** set is twelve: the census three, five validation corpora
-(BE.CyFun, CIS Controls v8.1, CIS Ubuntu 24.04 Benchmark, DE.C5,
-DE.C3A), and the gate-3 additions (NIST SP 800-53 Rev 5.2.0 + all four
-800-53B baselines, CSF 2.0, and the IFA GoodRead lifecycle set —
-SSP/AP/AR/POA&M + the leveraged pair), each converted census-first at
-100 % declared coverage with UNMAPPED = 0. CSA CCM, SCF, ISO and PCI
+**measured** set is **eleven bundles** — twelve source publications when
+NIST SP 800-53 and the 800-53B baselines are counted separately (the
+counting convention, stated once here): the census three, five
+validation corpora (BE.CyFun, CIS Controls v8.1, CIS Ubuntu 24.04
+Benchmark, DE.C5, DE.C3A), and the gate-3 additions (NIST SP 800-53
+Rev 5.2.0 + all four 800-53B baselines, CSF 2.0, and the IFA GoodRead
+lifecycle set — SSP/AP/AR/POA&M + the leveraged pair), each converted
+census-first at 100 % declared coverage with UNMAPPED = 0. CSA CCM, SCF, ISO and PCI
 targets remain *designed-for*, exactly as labeled in IV.4.
 
 ## 3. The convergence table
@@ -179,10 +183,13 @@ relation (v0.4 — corrected).
    precision), never an IEEE-754 number — two tools MUST derive identical
    digests and values (P7-G on decimals). **Canonical form (rev. v0.6 cycle
    — backlog #27):** no leading zeros (`01.5` is rejected — it is a
-   non-canonical spelling of one value); scale IS significant, so `1.5` and
+   non-canonical spelling of one value); **no negative zero** (`-0`,
+   `-0.0` are second spellings of zero — rev. P10 #37; a negative
+   fraction such as `-0.5` stays legal); scale IS significant, so `1.5` and
    `1.50` are DISTINCT values by design (the lexical form defines the scale)
    and their differing digests are correct, not a divergence. Re-scaling a
-   value is forbidden. Schema pattern: `^-?(0|[1-9][0-9]*)(\.[0-9]+)?$`.
+   value is forbidden. Schema pattern:
+   `^(-?[1-9][0-9]*(\.[0-9]+)?|0(\.[0-9]+)?|-0\.[0-9]*[1-9][0-9]*)$`.
 5. **Facet pinning and bundle composition (P8-E4/P7-G5):** manifests pin
    exact facet versions + digests; objects may cite the major line. Registry
    semver policy makes minor versions backward-compatible **normatively**;
@@ -217,7 +224,7 @@ deep document models* (1.2.2's, including its March-2026 Mapping Model).
   { "id": "https://cso.example/auth/fedramp-high",
     "authority-ref": "https://ns.fedramp.gov/party/jab",
     "scope-label": "FedRAMP High P-ATO",
-    "includes": [ {"component-ref": "…"}, {"component-ref": "…"} ] } ]
+    "includes": [ "https://cso.example/comp/db", "https://cso.example/comp/api" ] } ]
 ```
 
 `includes[]` scopes which members belong to this context (default: the
@@ -234,8 +241,9 @@ dead), separate System type, multi-hop traversal.
 ## D6 — One `Implementation` edge (comp-def + SSP implemented-requirements unified).
 Unchanged: `{component-ref, requirement-ref, statement-refs[]?,
 satisfied-by[] (capability-ref | inherited-from{component-ref, basis-ref →
-authorization id}), responsibility: provider|customer|shared,
-parameter-bindings, status, evidence-refs[], deviations[]}`. Evidence: the
+authorization id}), responsibility: provider|customer|shared|inherited,
+parameter-bindings, status, evidence-refs[], deviations[]}` *(enum and
+`deviations[]` aligned with the delivered schema — P10 #32)*. Evidence: the
 public PR #8 retreat; historical Rev4 enums mapping 1:1. Per-clause
 responsibility via `statement-refs` is how shared responsibility actually
 works.
@@ -268,15 +276,18 @@ the anti-tamper guarantee and the stripping right.
 
 ## D8 — `Deviation` sub-object.
 Unchanged: `{type (code system), state (investigating → pending → approved |
-withdrawn), rationale, approver-ref, opened, refs[]}` on Implementation,
-Finding, Tailoring. Evidence: four identical historical state machines; CR26
+withdrawn), rationale, approver-ref, opened, refs[]}` on Requirement (the
+ex-ante channel, App. A), Tailoring, Implementation, Assessment, and
+Finding *(attachment list corrected to the delivered shapes — P10 #32)*. Evidence: four identical historical state machines; CR26
 `corrective_actions`; BSI Abweichungspraxis. Its role widens in D13: it is
 the audited channel for *every* recognized weakening, not only modality.
 
 ## D9 — Statements: identified collection; **normative modality order**; obligated-parties; **elapsed vs. calendar durations**; parameter algebra. *(rev. v0.5 — P8-E2, P7-G on calendars/decimal)* *(rev. v0.6 cycle — R1 #1)*
 **Decision.** As v0.4 (`statements[] {id, modality, obligated-parties[],
-parameters[], prose{lang}}`), completed where the passes proved it
-unevaluatable:
+parameters[], prose: text}` — the `text` language map, née `langMap`;
+rev. P10 #37: `text` keys are **lowercase BCP-47** — one tag, one
+spelling, the D3.4 discipline — and values are non-empty), completed
+where the passes proved it unevaluatable:
 
 **Modality partial order (normative — the lattice `modality-monotonic`
 evaluates against):**
@@ -377,8 +388,10 @@ addition: **`mapping` is *not* here** — mappings are kernel objects (D20),
 precisely so that they cannot regress into relation-string props.
 
 ## D13 — Tailoring: bounded selection; identity-addressed operations; **weakening rules per operation**; deterministic resolution. *(rev. v0.5 — P6-F2, P7-B2, P8-E3, P7-U)* *(rev. v0.6 cycle — R1 #2)*
-**Decision.** As v0.4 (set-ref or the three bounded predicates; closed
-op vocabulary addressed by requirement-ref + statement-id + name), completed:
+**Decision.** As v0.4 (set-ref or the three bounded predicates — B.2's
+`field-equals` · `param-equals` · `present`, exactly one, schema-bound
+since P10 #31; closed op vocabulary addressed by requirement-ref +
+statement-id + name), completed:
 
 **Operation-level weakening rules (replacing the overbroad v0.4 claim
 "weakening ⇒ Deviation", which P7-B2 correctly showed was only enforced for
@@ -388,10 +401,10 @@ modality):**
 |---|---|
 | `set-modality` | monotone per the D9 order, else Deviation |
 | `set-parameter` | MUST validate against the parameter's declared type / cardinality / choices / range (P6-F2); out-of-bounds only via Deviation. Additionally, an authority MAY declare per parameter `tightening: lower | higher | none`; a change against the declared direction ⇒ Deviation (CR26 deadlines would declare `lower`) |
-| `detach-facet` | Deviation when the facet's `modifies-semantics` ≠ [] |
+| `detach-facet` | Deviation when the facet's `modifies-semantics` ≠ [] — the declaration read from the stdlib descriptor **or the manifest pin**; a facet id that is neither stdlib, nor pinned, nor `private:` is an **error at any tier** (dangerous-by-default, D10; P10 #29) |
 | `replace-prose` | carries `intent: editorial | substantive`; substantive ⇒ Deviation |
 | `set-field` | whitelisted non-normative fields only (`title`, `label`, `annotations`) — the whitelist is a schema enum since the P9 cycle; `sequence` struck v0.6 (it lives on Set members, which operations cannot address — backlog #21); anything normative goes through its own operation |
-| `attach-facet` | Deviation when the attached facet's `modifies-semantics` ≠ [] (symmetric with detach — B.3) |
+| `attach-facet` | Deviation when the attached facet's `modifies-semantics` ≠ [] (symmetric with detach — B.3; same registration rule — P10 #29) |
 | `add-relation` / `remove-relation` | informative edges are free; **removing a `required` edge ⇒ Deviation** (B.3 — dropping a dependency weakens the graph; enforced since backlog #25). Normative cross-framework claims are Mapping objects, D20, with their own lifecycle |
 | `excludes` | **selection, never weakening — no Deviation** |
 
@@ -454,7 +467,8 @@ proving nothing, and the wrapper-Set laundering case).
 are an **ordered list**, applied sequentially after selection; **two
 operations addressing the same target within one Tailoring = validation
 error** (overrides happen auditable via Tailoring-of-Tailoring chaining,
-never silently); independent Tailorings over one catalog are separate
+never silently; enforced in bundle validation since the P10 fix pass —
+#30); independent Tailorings over one catalog are separate
 artifacts — there is **no auto-merge**, by design and by history (1.x
 merge semantics are the corpse in the basement). Hop budget harmonized with
 D14 (P8-E3): one shared predicate vocabulary, one budget — at most one
@@ -497,7 +511,8 @@ Unchanged in structure (native / compatibility-facet /
 opaque-preservation) — and **measured at gate 4**: the kernel→1.x
 export exists as `export_oscal.py`, validated against the official NIST
 1.2.2 catalog schema, with a generic re-importer proving
-**5,647/5,647 catalog objects round-trip to semantic-digest equality**.
+**5,886/5,886 catalog objects round-trip to semantic-digest equality**
+(5,647 at gate 4; the P10 ISM-taxonomy repair added the recovered sets).
 The D16 asymmetries are now counted rather than predicted: OSCAL groups
 cannot mix subgroups and controls; params require label|select; link
 `rel` is a token, so URI-typed relation vocabularies cannot ride 1.x
@@ -520,9 +535,11 @@ one-way, never authoring; consequence documented (R11).
 
 ## D19 — Positioning.
 Unchanged: engine that compiles to 1.x during transition; sunset trigger;
-name avoids "2.0"/"profile" — **final name under review for 1.0.0**
-(the working title "JASCON" carries a trademark-optics
-question that deserves a conscious decision); on-ramps stated accurately (#58 and #2050 live; #2115/#2116 closed
+name avoids "2.0"/"profile" — **fixed 2026-07-22: JASCON** (register
+naming entry; the trademark-optics question that shaped the old working
+title — "OSCAL" is NIST's mark — is retired by the rename; residual
+pre-tag items are the author's DPMA/EUIPO/USPTO screen and domain
+registration); on-ramps stated accurately (#58 and #2050 live; #2115/#2116 closed
 design positions); RFC-0024's five-CSP clause recorded without endorsement.
 
 ## D20 — **`Mapping` as the ninth kernel type.** *(new, v0.5 — P7 mapping analysis accepted over P8's facet alternative)* *(rev. v0.6 cycle — R1 #5)*
@@ -542,7 +559,7 @@ design positions); RFC-0024's five-CSP clause recorded without endorsement.
                                        //   extension code, v0.6 cycle)
   "direction": "source-to-target",
   "confidence": "reviewed",
-  "rationale": "…",
+  "rationale": {"en": "…"},
   "provenance": { "author-ref": "…", "date": "…" },
   "evidence-refs": ["…"] }
 ```
@@ -589,6 +606,10 @@ order — no normative semantics beyond order). Taxonomies are nested sets:
 CSF Functions → Categories → Subcategories, SCF's 34 domains, ISO 27002
 themes, CIS Controls → Safeguards — all sets-of-sets with sequence; ISM's
 `sort-id` ×1,150 absorption is thereby *specified*, not just asserted.
+Membership graphs are **DAGs** (rev. P10 #39): overlapping membership is
+legal — baselines are made of it — but a membership **cycle is a
+validation error**; the rule's first enforcement run recovered 239 ISM
+taxonomy sets that a converter slug collision had silently merged.
 **Rejected.** Reintroducing group/part nesting on Requirements (the #2118
 attractor); order-as-annotation (props by another name).
 
@@ -623,7 +644,9 @@ A candidate that passes test 1 but whose kernel *mechanism* already exists
 is absorbed by that mechanism, not by a new field — assurance levels are
 the instructive case: genuinely 3-of-3, yet level-as-a-field is the
 5,301-marker corpse; level-as-a-Set composes, while the incommensurable
-vocabularies stay in `assurance-levels@1`. Future "why isn't X kernel"
+vocabularies stay in `assurance-levels@1` (a cataloged, parked stdlib
+design — appendix D.8; it ships when a corpus demands the payload shape,
+per the P10 #35 verdict). Future "why isn't X kernel"
 disputes cite this rule; a promotion PR that cannot show its three passes
 is rejected without further argument — the anti-#2118 discipline applied
 to the kernel itself.
@@ -707,10 +730,12 @@ each narrower and more boring than what they replace — a claim now
 **measured** (gate 4, `drafts/gate-4-measurement.md`): the complete
 reference validator — twelve vector families, both digests, closure,
 facet enforcement, tier derivation, op-law, Ed25519/DSSE, composition,
-conditional-apply — is **938 non-blank lines of Python** (+ jsonschema)
-and **1,110 lines of zero-dependency PowerShell 5.1**, against
-**30,905 lines / 162 files** for compliance-trestle 4.2.0, the OSCAL
-1.x validator+resolver toolchain (tests excluded) — ~30×. Measured
+conditional-apply — is **994 non-blank, non-comment lines of Python**
+(+ jsonschema) and **1,163 lines of zero-dependency PowerShell 5.1**
+(at the P10 fix-pass commit; the gate-4-commit figures were 938/1,110),
+against **30,905 lines / 162 files** for compliance-trestle 4.2.0, the
+OSCAL 1.x validator+resolver toolchain (tests excluded) — **≈30×
+each** (31×/27×), ~14× combined. Measured
 size deltas versus the OSCAL sources: ISM −29 %, GS++ −50 %,
 CR26 +55 % — smaller where sources are redundant, larger where a
 bespoke format was terse.
@@ -756,8 +781,9 @@ replaces; NIST IR 8477 / OLIR (relationship semantics).
    schema, closed shapes, shape-disjoint type inference + six normative
    stdlib descriptors with the D10-rev-2 declarations) ·
    `semantic-oscal/conformance/` (54 vectors across five families at first
-   delivery; **129 across nine families at HEAD** after the P9 + v0.6-round-2
-   + gate-3 additions — recompute via `validate_core.py`, backlog #28) ·
+   delivery; **129 across nine families at gate 3** after the P9 +
+   v0.6-round-2 + gate-3 additions — recompute via `validate_core.py`,
+   backlog #28) ·
    `semantic-oscal/scripts/validate_core.py` (the executable). Measured
    result: all vectors pass; all 8 corpus bundles + the example bundle
    validate green — 5,478 object validations, both digests re-verified
@@ -770,7 +796,9 @@ replaces; NIST IR 8477 / OLIR (relationship semantics).
    B.1.8 conditional instantiation, B.1.7 DSSE profile) were re-parked
    in backlog #18 rather than silently closing — and **closed at gate 4**
    (dsse 5 · composition 7 · conditional 8 vector families with their
-   engines; disjointness cases cover B.1.3). Vector count at rc.1: 149.
+   engines; disjointness cases cover B.1.3). Vector count at rc.1: 149;
+   **157 after the P10 fix pass** (parameter 17→19, tailoring 15→19,
+   reference 11→13).
 3. **Lifecycle corpus** beyond catalogs. **DELIVERED 2026-07-22 (gate
    3, IV.6 row):** the IFA GoodRead set (SSP/AP/AR/POA&M + the
    leveraged/leveraging pair + component-definition) exercises all five
@@ -792,7 +820,9 @@ replaces; NIST IR 8477 / OLIR (relationship semantics).
    semantic-digest equality — down-conversion is *measured*.
    Authorship recorded honestly (register R8): same author + AI;
    independence = language/runtime; the third-party clean-room build
-   is the standing invitation.
+   is the standing invitation. *(At the P10 fix pass the suite is 157
+   vectors and the repaired ISM taxonomy lifts the round-trip to
+   **5,886/5,886** — re-measured, ALL GREEN in both validators.)*
 
 ## IV.6 Amendment history (compact)
 
@@ -811,6 +841,8 @@ history. The compact line:
 | Gate 4 | 2026-07-22 | DSSE/composition/conditional engines; the weekend validator (PS 5.1, 149/149); bidirectional export 5,647/5,647; #18/#24 closed | "Amendments — gate 4" |
 | Converter rerun | 2026-07-22 | #12 `text` primitive delivered · #20 URI relations · #26 fail-closed pins — **the backlog reached zero** | "Amendments — the converter rerun" |
 | **1.0.0-rc.1** | 2026-07-22 | This consolidation; D22's anticipated path closed unused (rev 3) | this row |
+| P10 + P10b | 2026-07-22 | Adversarial review of THIS text (no Blockers; #29–#37 filed) + external Gemini review adjudicated (#38–#39 in; G-3/G-4/G-5 refuted) | "Amendments — P10" / "P10b" |
+| P10 fix pass | 2026-07-22 | All eleven items closed: op-law completed (pinned declarations, same-target on bundles, predicates schema-bound), D21 acyclicity — whose first run recovered **239 silently-merged ISM taxonomy sets** (corpus 6,675 → 6,914 objects; export 5,886/5,886); Part II aligned to the delivered schema; vectors 149 → 157; `DE.BSI` rename; errata swept | "Amendments — the P10 fix pass" |
 
 ## IV.7 Release artifacts (what this specification ships with)
 
@@ -824,9 +856,9 @@ rc.1 commit:
 - **Seven stdlib facet descriptors** (incl. the normative DSSE envelope
   profile) — pinned VERBATIM wherever bundled; divergence is a
   validation error.
-- **Conformance corpus**: **149 vectors, 12 families** (jcs 8 ·
-  modality 21 · parameter 17 · tailoring 15 · attestation 5 · facet 7 ·
-  reference 11 · lifecycle 36 · tier 9 · dsse 5 · composition 7 ·
+- **Conformance corpus**: **157 vectors, 12 families** (jcs 8 ·
+  modality 21 · parameter 19 · tailoring 19 · attestation 5 · facet 7 ·
+  reference 13 · lifecycle 36 · tier 9 · dsse 5 · composition 7 ·
   conditional 8).
 - **Two reference validators**: `validate_core.py` (Python, jsonschema
   only) and `validate_core.ps1` (PowerShell 5.1, zero dependencies —
@@ -834,21 +866,33 @@ rc.1 commit:
   numbers in `drafts/gate-4-measurement.md`.
 - **Bidirectional export**: `export_oscal.py` — OSCAL 1.2.2 out,
   validated against the official NIST release schema; generic
-  re-import; 5,647/5,647 round-trip.
-- **Twelve corpora** under `converted_examples/` — 6,675
+  re-import; 5,886/5,886 round-trip.
+- **Eleven corpus bundles** under `converted_examples/` (twelve source
+  publications counting 800-53B separately, §2) — 6,914
   manifest-listed objects, both SHA-256 digests re-verified per object,
   each with a computed coverage report (UNMAPPED = 0) that declares
   every rule and reports source defects rather than repairing them.
-- **The reader** (`one-page-apps/jascon-reader.html`, v1.7.0) —
+- **The normative appendices** — A (shapes) · B (primitives,
+  operations, predicates — the deterministic resolution algorithm) ·
+  C (code systems) — at `semantic-oscal/references/appendix-{a,b,c}-*.md`,
+  with the handbook chapters ch01–ch15 and appendices D–G beside them.
+- **The Decision Rationale Register** —
+  `drafts/oscal-semantic-core-decision-rationale-register.md`: the full
+  amendment journal this text compacts (IV.6).
+- **The reader** (`one-page-apps/jascon-reader.html`, v1.7.1) —
   a zero-dependency single-file browser, authoring workbench, and
   digest verifier.
 
 ## IV.8 From rc.1 to 1.0.0
 
-1. **The name** — fixed by the author before the tag (D19 note).
-2. **P10** — one adversarial review round against THIS consolidated
-   text; findings dispositioned the standing way (counts in, register
-   entries out).
-3. **Tag `v1.0.0`** — after which kernel-shape changes ride major
-   versions under D3.5 governance, and the anticipated-convergence
-   path stays closed (D22 rev 3).
+1. **The name** — ✓ fixed: **JASCON** (2026-07-22, register naming
+   entry; machine-identifier migration is decided with the tag).
+2. **P10** — ✓ done twice over (2026-07-22): the in-repo adversarial
+   round (findings #29–#37, no Blockers) plus the external Gemini
+   round, adjudicated (#38–#39 in; three findings refuted); the fix
+   pass closed all eleven items the standing way — register
+   "Amendments — P10 / P10b / the P10 fix pass".
+3. **Tag `v1.0.0`** — remaining pre-tag: the author's trademark/domain
+   screen. After the tag, kernel-shape changes ride major versions
+   under D3.5 governance, and the anticipated-convergence path stays
+   closed (D22 rev 3).

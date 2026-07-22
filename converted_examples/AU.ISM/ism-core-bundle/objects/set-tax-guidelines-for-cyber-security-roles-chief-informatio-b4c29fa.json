@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-roles-chief-informatio-b4c29fa",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Overseeing cyber security incident response activities"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0733",
+   "sequence": 870
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1618",
+   "sequence": 880
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Overseeing cyber security incident response activities",
+     "name": "overview",
+     "prose": {
+      "en": "To ensure the CISO can accurately report to their organisation’s board of directors or executive committee on cyber security matters, it is important they are fully aware of all cyber security incidents within their organisation.\n\nThe CISO is also responsible for overseeing their organisation’s response to cyber security incidents, including how internal teams respond and communicate with each other during cyber security incidents. In the event of a major cyber security incident, the CISO should be prepared to step into a crisis management role. They should understand how to bring clarity to the situation and communicate effectively with internal and external stakeholders."
+     }
+    }
+   ]
+  }
+ }
+}

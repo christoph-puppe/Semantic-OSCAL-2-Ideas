@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-systems-video-conferen-4fa72a8",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Protecting video conferencing and Internet Protocol telephony traffic"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0548",
+   "sequence": 4540
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0547",
+   "sequence": 4550
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Protecting video conferencing and Internet Protocol telephony traffic",
+     "name": "overview",
+     "prose": {
+      "en": "Video conferencing and IP telephony traffic can be vulnerable to eavesdropping, denial-of-service, person-in-the-middle and call spoofing attacks. To mitigate this security risk, video conferencing and IP telephony signalling and audio/video data can be protected with the use of Transport Layer Security. This is achieved by using the Session Initiation Protocol Secure protocol and the Secure Real-time Transport Protocol."
+     }
+    }
+   ]
+  }
+ }
+}

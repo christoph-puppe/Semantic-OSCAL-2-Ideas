@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-web-application-13f4b17",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Web security policy response headers"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1424",
+   "sequence": 12600
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Web security policy response headers",
+     "name": "overview",
+     "prose": {
+      "en": "Web security policy response header measures, such as Content-Security-Policy, Hypertext Transfer Protocol Strict Transport Security and X-Frame-Options, can be applied by web browsers to help protect themselves. This is achieved by web server software specifying security policy in response headers that web browsers then apply."
+     }
+    }
+   ]
+  }
+ }
+}

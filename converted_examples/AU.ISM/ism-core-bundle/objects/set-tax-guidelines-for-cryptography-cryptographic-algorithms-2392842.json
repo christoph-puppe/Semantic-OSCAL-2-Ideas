@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-cryptographic-algorithms-2392842",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Using Secure Hashing Algorithms"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1766",
+   "sequence": 15090
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1767",
+   "sequence": 15100
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1768",
+   "sequence": 15110
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Using Secure Hashing Algorithms",
+     "name": "overview",
+     "prose": {
+      "en": "For most purposes, a hashing algorithm with an output size of 224 bits provides 112 bits of effective security strength, with larger output sizes providing more bits of effective security strength.\n\nOnly SHA-2 hashing algorithms are approved for general-purpose use. SHA-3 and XOF approval (i.e. SHA3-256, SHA3-512, SHAKE128 and SHAKE256) is restricted to use within internal steps of ML-DSA and ML-KEM.\n\nFor interoperability and maintainability reasons, SHA-224 and SHA-256 will not be approved beyond 2030."
+     }
+    }
+   ]
+  }
+ }
+}

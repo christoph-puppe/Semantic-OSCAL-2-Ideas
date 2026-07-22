@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-artificial-intel-14231ad",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Secure artificial intelligence application development"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2084",
+   "sequence": 12240
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2072",
+   "sequence": 12250
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2085",
+   "sequence": 12260
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Secure artificial intelligence application development",
+     "name": "overview",
+     "prose": {
+      "en": "Secure coding resources for software developers should be followed when developing AI applications. In addition, AI applications should be designed to reduce their attack surface with AI models being stored in a non-executable file format that does not allow arbitrary code execution."
+     }
+    }
+   ]
+  }
+ }
+}

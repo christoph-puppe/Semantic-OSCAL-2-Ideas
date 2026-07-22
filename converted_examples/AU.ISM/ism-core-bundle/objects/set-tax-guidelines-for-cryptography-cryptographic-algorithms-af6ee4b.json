@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-cryptographic-algorithms-af6ee4b",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Asymmetric cryptographic algorithms"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0994",
+   "sequence": 14800
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Asymmetric cryptographic algorithms",
+     "name": "overview",
+     "prose": {
+      "en": "ECDH is vulnerable to different types of attacks than DH. Consequently, ECDH offers more effective security per bit increase in key size than DH. This leads to smaller data requirements, which in turn means that the elliptic curve variants have become de facto global standards. For reduced data cost, and to promote interoperability, ECDH should be used in preference to DH where possible."
+     }
+    }
+   ]
+  }
+ }
+}

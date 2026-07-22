@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-cryptographic-fundamenta-b9b12e8",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Transporting cryptographic equipment"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0501",
+   "sequence": 14710
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Transporting cryptographic equipment",
+     "name": "overview",
+     "prose": {
+      "en": "Transporting cryptographic equipment in a keyed state may expose its keying material to potential compromise. Therefore, if cryptographic equipment is transported in a keyed state, it should be done based on the sensitivity or classification of its keying material."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-server-application-h-c3b8013",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Restricting privileges for server applications"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1249",
+   "sequence": 8560
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1250",
+   "sequence": 8570
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Restricting privileges for server applications",
+     "name": "overview",
+     "prose": {
+      "en": "If a server application operating as a local administrator or root account is compromised by malicious actors, it can present a significant security risk to the underlying server. In addition, server applications by default are often capable of widely accessing their underlying server’s file system. Therefore, restricting the ability of server applications to access their underlying server’s file system can limit damage should malicious actors compromise the server application."
+     }
+    }
+   ]
+  }
+ }
+}

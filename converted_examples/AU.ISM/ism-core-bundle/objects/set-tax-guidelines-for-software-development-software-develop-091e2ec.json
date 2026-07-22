@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-091e2ec",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Issue tracking"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2025",
+   "sequence": 11370
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Issue tracking",
+     "name": "overview",
+     "prose": {
+      "en": "To provide visibility into code changes and support traceability, software developers should be able to link all changes, including security updates, change or feature updates, or bug fixes to a request or decision that is documented within an issue tracking solution."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,103 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-server-application-h-c3ed503",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Microsoft Active Directory Domain Services account hardening"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1832",
+   "sequence": 8710
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1932",
+   "sequence": 8720
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1933",
+   "sequence": 8730
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2010",
+   "sequence": 8740
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1834",
+   "sequence": 8750
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1833",
+   "sequence": 8760
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1934",
+   "sequence": 8770
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1835",
+   "sequence": 8780
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1935",
+   "sequence": 8790
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1836",
+   "sequence": 8800
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1838",
+   "sequence": 8810
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1936",
+   "sequence": 8820
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1937",
+   "sequence": 8830
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1839",
+   "sequence": 8840
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1840",
+   "sequence": 8850
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1841",
+   "sequence": 8860
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1842",
+   "sequence": 8870
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1843",
+   "sequence": 8880
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1844",
+   "sequence": 8890
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1938",
+   "sequence": 8900
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Microsoft Active Directory Domain Services account hardening",
+     "name": "overview",
+     "prose": {
+      "en": "Misconfigured user accounts and computer accounts within Microsoft AD DS can pose a significant threat to the security of a system. For example, when malicious actors obtain credentials for a user account, along with associated system access, they may further compromise the system by querying Microsoft AD DS to assist in gaining an understanding of the environment, moving laterally through the network and escalating privileges by compromising privileged user accounts. Furthermore, malicious actors with this level of access can become difficult to detect and remove, as they may not need to use exploits for vulnerabilities to achieve their goals. Malicious activities performed by compromised user accounts or computer accounts may also appear very similar to legitimate system activities."
+     }
+    }
+   ]
+  }
+ }
+}

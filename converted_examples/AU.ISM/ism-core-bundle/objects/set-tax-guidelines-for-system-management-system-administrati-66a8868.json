@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-management-system-administrati-66a8868",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "System administration processes and procedures"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0042",
+   "sequence": 10090
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1211",
+   "sequence": 10100
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "System administration processes and procedures",
+     "name": "overview",
+     "prose": {
+      "en": "A key component of system administration is ensuring that administrative activities are undertaken in a repeatable and accountable manner using system administration processes and procedures. In doing so, requirements for administrative activities may cover:\n\n- configuring applications, operating systems, network devices or networked information technology (IT) equipment\n- applying patches, updates or vendor mitigations to applications, drivers, operating systems or firmware\n- installing or removing applications, operating systems, network devices or networked IT equipment\n- implementing system changes or enhancements\n- resolving problems identified by users.\n\nFurthermore, in support of change management processes and procedures, system administrators should document requirements for administrative activities, consider potential security impacts, obtain any necessary approvals, notify users of any disruptions or outages, and maintain system and cyber security documentation."
+     }
+    }
+   ]
+  }
+ }
+}

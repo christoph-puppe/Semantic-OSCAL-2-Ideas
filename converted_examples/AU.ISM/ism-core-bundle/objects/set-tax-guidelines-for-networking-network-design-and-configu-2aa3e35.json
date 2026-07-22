@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configu-2aa3e35",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Network encryption"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1781",
+   "sequence": 13610
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Network encryption",
+     "name": "overview",
+     "prose": {
+      "en": "While physical security can provide a degree of protection against unauthorised physical access to network infrastructure, unauthorised access to unencrypted data can still be gained via other means, such as compromised network devices. For this reason, all data communicated over network infrastructure should be suitably encrypted, even within appropriately secure areas. As such, it is critical that Australian Signals Directorate (ASD)-approved cryptography is used. However, where protocols do not have encrypted equivalents, an organisation should consider transitioning to alternative protocols that support suitable encryption where practical and feasible."
+     }
+    }
+   ]
+  }
+ }
+}

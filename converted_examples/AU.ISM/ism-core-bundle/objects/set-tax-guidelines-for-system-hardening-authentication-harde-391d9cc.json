@@ -1,0 +1,67 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-authentication-harde-391d9cc",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Password strength"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1559",
+   "sequence": 9470
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1560",
+   "sequence": 9480
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1561",
+   "sequence": 9490
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0421",
+   "sequence": 9500
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1557",
+   "sequence": 9510
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0422",
+   "sequence": 9520
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1558",
+   "sequence": 9530
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2078",
+   "sequence": 9540
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2079",
+   "sequence": 9550
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2080",
+   "sequence": 9560
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2081",
+   "sequence": 9570
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Password strength",
+     "name": "overview",
+     "prose": {
+      "en": "When implementing passwords as an authentication factor, it is important that suitably robust and secure passwords are used. In doing so, the degree of password security required will depend on the sensitivity or classification of the system involved and whether passwords are implemented as part of multi-factor authentication or single-factor authentication."
+     }
+    }
+   ]
+  }
+ }
+}

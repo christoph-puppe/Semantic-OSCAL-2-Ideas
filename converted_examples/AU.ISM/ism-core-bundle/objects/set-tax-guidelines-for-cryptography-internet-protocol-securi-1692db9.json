@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-internet-protocol-securi-1692db9",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Encryption algorithms"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1771",
+   "sequence": 15600
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Encryption algorithms",
+     "name": "overview",
+     "prose": {
+      "en": "The only approved encryption algorithm for IPsec connections is AES. IKE version 2 supports the use of AES with Cipher Block Chaining, Counter Mode, Counter with Cipher Block Chaining Message Authentication Code, and Galois/Counter Mode. However, supported modes may vary between different cryptographic equipment, applications and libraries."
+     }
+    }
+   ]
+  }
+ }
+}

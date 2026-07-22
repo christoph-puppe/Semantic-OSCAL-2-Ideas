@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configu-807a219",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Network access controls"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0520",
+   "sequence": 13690
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1182",
+   "sequence": 13700
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Network access controls",
+     "name": "overview",
+     "prose": {
+      "en": "If malicious actors have reduced opportunities to physically connect unauthorised network devices, or networked information technology (IT) equipment, to networks, they also have reduced opportunities to compromise such networks. Network access controls can not only prevent unauthorised physical access to networks, but also prevent personnel from carelessly bridging networks by connecting one network to another network. Furthermore, network access controls can also be useful for limiting the flow of network traffic between network segments."
+     }
+    }
+   ]
+  }
+ }
+}

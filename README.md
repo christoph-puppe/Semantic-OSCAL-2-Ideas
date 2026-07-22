@@ -9,14 +9,14 @@ contact with real catalogs before it may stay.**
 
 This repository is a working design study, not a slide deck. It contains a
 draft specification with a public decision register, an **executable kernel
-schema** with a **149-vector conformance corpus** and *two* reference
+schema** with a **157-vector conformance corpus** and *two* reference
 validators — Python, and a **zero-dependency PowerShell 5.1 twin that runs
 on a stock Windows box** (the weekend-validator claim, measured: ~30×
 smaller than the OSCAL 1.x toolchain, crypto engines included) —
 **eleven framework and lifecycle corpora converted losslessly** (251,591
 source leaf values, coverage computed rather than asserted — including NIST
 SP 800-53 Rev 5, its 800-53B baselines, and CSF 2.0), a **bidirectional
-OSCAL 1.2.2 export** that round-trips 5,647/5,647 objects to semantic-digest
+OSCAL 1.2.2 export** that round-trips 5,886/5,886 objects to semantic-digest
 equality against the official NIST schema, and a zero-dependency
 **single-file reader & authoring studio** that turns the whole thing into
 something you can click.
@@ -107,12 +107,12 @@ The project moves through evidence gates; nothing advances on narrative.
   architecture was drawn: the kernel is what all three were measured to need.
 - **Gate 2 — executable (done).** The normative JSON Schema, seven stdlib
   facet descriptors (including a DSSE attestation envelope profile), a
-  **149-vector conformance corpus** in twelve suites (canonicalization,
+  **157-vector conformance corpus** in twelve suites (canonicalization,
   modality lattice, parameters, tailoring law, attestation, facet
   enforcement, reference closure, lifecycle, authority tiers, DSSE
   verification, bundle composition, conditional-apply), and
   [`validate_core.py`](semantic-oscal/scripts/validate_core.py) — which
-  re-verifies **6,675 objects across all eleven bundles with both SHA-256
+  re-verifies **6,914 objects across all eleven bundles with both SHA-256
   digests each**, every object matching exactly one kernel shape. Current
   totals: 4,583 Requirements · 1,066 Sets · 1,008 Mappings · 5 Tailorings ·
   and the five lifecycle types live at document scale (6 Components ·
@@ -143,11 +143,11 @@ The project moves through evidence gates; nothing advances on narrative.
   **conditional-apply** (one predicate, one primitive, one leash). Plus the
   two economic claims, measured: the **weekend validator**
   ([`validate_core.ps1`](semantic-oscal/scripts/validate_core.ps1) —
-  PowerShell 5.1, zero installs, 149/149 vectors, ~30× smaller than
+  PowerShell 5.1, zero installs, 157/157 vectors, ~30× smaller than
   compliance-trestle with crypto included) and the **bidirectional export**
   ([`export_oscal.py`](semantic-oscal/scripts/export_oscal.py) — 10/10
   catalog bundles schema-valid against the official NIST 1.2.2 schema,
-  5,647/5,647 objects round-trip digest-equal). Numbers:
+  5,886/5,886 objects round-trip digest-equal). Numbers:
   [`drafts/gate-4-measurement.md`](drafts/gate-4-measurement.md).
 - **The converter rerun — done (2026-07-22, same day).** The three
   decided-but-undelivered items landed in one digest churn: the **`text`
@@ -176,8 +176,8 @@ The census corpora (gate 1 — the evidence base the architecture was derived fr
 
 | Corpus | Source | Emitted | Coverage |
 |---|---|---|---|
-| [AU.ISM](converted_examples/AU.ISM/ism-coverage-report.md) | ACSC ISM, OSCAL 1.1.2 catalog, 1,150 controls | 1,150 Requirements · 322 Sets | 36,161 / 36,161 leaf values |
-| [geman.bsi](converted_examples/geman.bsi/bsi-coverage-report.md) | Grundschutz++ v2026-07-16, OSCAL 1.1.3 (MS-TLS dropped by decision — defects reported to BSI) | 651 Requirements carrying 999 statements · 221 params with label/default · 162 Sets | 49,431 / 49,431 |
+| [AU.ISM](converted_examples/AU.ISM/ism-coverage-report.md) | ACSC ISM, OSCAL 1.1.2 catalog, 1,150 controls | 1,150 Requirements · 561 Sets (P10 fix pass recovered 239 taxonomy sets a slug collision had silently merged) | 36,161 / 36,161 leaf values |
+| [DE.BSI](converted_examples/DE.BSI/bsi-coverage-report.md) | Grundschutz++ v2026-07-16, OSCAL 1.1.3 (MS-TLS dropped by decision — defects reported to BSI) | 651 Requirements carrying 999 statements · 221 params with label/default · 162 Sets | 49,431 / 49,431 |
 | [FedRAMP-CR26](converted_examples/FedRAMP-CR26/cr26-coverage-report.md) | CR26 bespoke JSON, v2026.07.14.01 | 292 Requirements · 373 Mappings · 91 Sets · 4 Tailorings | 7,294 / 7,294 |
 
 Validation corpora (converted 2026-07-21; the model held without kernel

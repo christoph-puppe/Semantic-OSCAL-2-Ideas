@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-documentation-system-s-85e933e",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Continuous monitoring plan"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1163",
+   "sequence": 2250
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Continuous monitoring plan",
+     "name": "overview",
+     "prose": {
+      "en": "A continuous monitoring plan can assist an organisation in proactively identifying, prioritising and responding to vulnerabilities in systems. Furthermore, undertaking security assessment activities as part of continuous monitoring is important as cyber threats and the effectiveness of controls change over time.\n\nThree types of security assessment activities are vulnerability scans, vulnerability assessments and penetration tests. A vulnerability scan involves using tools to conduct automated checks for known vulnerabilities whereas a vulnerability assessment typically consists of a review of a system’s architecture or an in-depth hands-on assessment. In each case, the goal is to identify as many vulnerabilities as possible. A penetration test however is designed to exercise real-world scenarios to achieve a specific goal, such as compromising critical system components or data."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-systems-telephone-syst-1836d04",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Cordless telephone systems"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0233",
+   "sequence": 4420
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Cordless telephone systems",
+     "name": "overview",
+     "prose": {
+      "en": "Cordless telephone handsets and headsets typically have minimal transmission security and are susceptible to interception. This may result in the disclosure of sensitive or classified conversations to malicious actors unless suitable encryption is used. As such, it is critical that Australian Signals Directorate (ASD)-approved cryptography is used."
+     }
+    }
+   ]
+  }
+ }
+}

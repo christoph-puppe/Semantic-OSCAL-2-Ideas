@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-procurement-and-outsourcing-cyber-sup-f903305",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Sourcing operating systems, applications, IT equipment, OT equipment and services"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1787",
+   "sequence": 1690
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1788",
+   "sequence": 1700
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1789",
+   "sequence": 1710
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Sourcing operating systems, applications, IT equipment, OT equipment and services",
+     "name": "overview",
+     "prose": {
+      "en": "In sourcing operating systems, applications, IT equipment, OT equipment and services, an organisation should use trustworthy suppliers as part of cyber supply chain risk management assessments and subsequently documented on their approved supplier list.\n\nFurthermore, to support system availability, an organisation should aim to identify multiple potential suppliers for critical operating systems, applications, IT equipment, OT equipment and services. This coupled with keeping sufficient spares of critical IT equipment and OT equipment in reserve, can assist in mitigating the impact of cyber supply chain disruptions."
+     }
+    }
+   ]
+  }
+ }
+}

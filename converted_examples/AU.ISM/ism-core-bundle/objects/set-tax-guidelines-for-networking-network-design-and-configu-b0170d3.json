@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configu-b0170d3",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Networked management interfaces"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1863",
+   "sequence": 13560
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Networked management interfaces",
+     "name": "overview",
+     "prose": {
+      "en": "To assist in reducing the attack surface of networks, IT equipment residing on networks (such as servers) or constituting the makeup of network infrastructure (such as network devices) should not directly expose their networked management interfaces to the internet. In situations where this is not possible, such as for some cloud services and web applications, additional compensating controls will need to be implemented to protect weak or vulnerable networked management interfaces from being exploited by malicious actors to remotely compromise networks. Ideally, IT equipment on networks, or constituting the makeup of network infrastructure, should be managed via administrative infrastructure segregated from the wider network and the internet."
+     }
+    }
+   ]
+  }
+ }
+}

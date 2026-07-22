@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-enterprise-mobility-mobile-device-man-7c2f093",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Encrypted communications"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1085",
+   "sequence": 5140
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2108",
+   "sequence": 5150
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Encrypted communications",
+     "name": "overview",
+     "prose": {
+      "en": "Failure to suitably encrypt mobile device communications, including those of mobile applications, when communicating sensitive or classified data presents an unacceptable security risk. As such, when encrypting data in transit, it is critical that ASD-approved cryptography is used."
+     }
+    }
+   ]
+  }
+ }
+}

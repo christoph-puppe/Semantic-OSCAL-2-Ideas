@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-29856ee",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Software bill of materials"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2054",
+   "sequence": 11790
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1730",
+   "sequence": 11800
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Software bill of materials",
+     "name": "overview",
+     "prose": {
+      "en": "A software bill of materials is a list of open source and commercial software components used in software development. This can assist software developers in ensuring they are not using software components with known vulnerabilities. It can also assist in providing greater cyber supply chain transparency for consumers of software by enabling easier identification and management of security risks associated with individual software components used by software."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-personnel-security-cyber-security-awa-9933670",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Posting work-related information on online services"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0820",
+   "sequence": 2730
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2104",
+   "sequence": 2740
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2105",
+   "sequence": 2750
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2106",
+   "sequence": 2760
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Posting work-related information on online services",
+     "name": "overview",
+     "prose": {
+      "en": "Personnel should be advised to take particular care not to post work-related information on online services unless authorised to do so, especially for chat services, internet forums, social media and artificial intelligence (AI) tools. Even information that appears to be benign in isolation could, along with other information, have a considerable security impact or lead to increased targeting by malicious actors."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-documentation-developm-696b8ca",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Maintenance of cyber security documentation"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0888",
+   "sequence": 2140
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Maintenance of cyber security documentation",
+     "name": "overview",
+     "prose": {
+      "en": "Threat environments are dynamic. If cyber security documentation is not kept up to date to reflect the current threat environment, policies, processes and procedures may cease to be effective. In such situations, resources could be devoted to cyber security initiatives or investments that are less effective or no longer relevant."
+     }
+    }
+   ]
+  }
+ }
+}

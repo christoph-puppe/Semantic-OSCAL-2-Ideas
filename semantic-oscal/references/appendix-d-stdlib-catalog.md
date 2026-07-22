@@ -214,7 +214,7 @@ needed **no** facet at all.
 | effectivity | `[selection]` | **promoted** (backlog #8): time-gated applicability is selection by calendar |
 | assessment-criteria | `[assessment]` | confirmed by use; gains `frequency` (CIS cadence) and audit/remediation/method (benchmark shape) |
 | cr26/scope (framework) | `[selection]` | the exemplar the promotions followed |
-| system-context · assurance-levels | — | still medium tier: Rev5-cycle field verification (gate 3) |
+| system-context · assurance-levels | — | **parked** (P10 #35, 2026-07-22 — the gate-3 clock ran out and the verdict is recorded): the Rev5/IFA corpus surfaced the need as a *framework* facet (`https://ifa.gov/goodread/facet/system`) and as levels-as-Sets, not as stdlib payloads; both park beside `privacy-assessment@1` and ship when a corpus demands the stdlib shape |
 
 The governing principle, quoted from the user directive that decided
 #8: **a tool that cannot handle a facet must stop working on that

@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-systems-video-conferen-779c807",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Microphones and webcams"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0559",
+   "sequence": 4680
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1450",
+   "sequence": 4690
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Microphones and webcams",
+     "name": "overview",
+     "prose": {
+      "en": "Microphones (including headsets and Universal Serial Bus \\[USB\\] handsets) and webcams can pose a security risk in SECRET and TOP SECRET areas. Specifically, malicious actors can email or host malicious code on a compromised website and use social engineering techniques to convince users into executing the malicious code on their workstation. Such malicious code may then activate microphones or webcams that are attached to the workstation to act as remote listening and recording devices."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-personnel-security-cyber-security-awa-9a32b4d",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Sending and receiving files via online services"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0824",
+   "sequence": 2820
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Sending and receiving files via online services",
+     "name": "overview",
+     "prose": {
+      "en": "When personnel send and receive files via unauthorised online services, such as messaging apps and social media, they often bypass controls put in place to detect and quarantine malicious code. Advising personnel to send and receive files via authorised online services instead will ensure files are appropriately protected and scanned for malicious code."
+     }
+    }
+   ]
+  }
+ }
+}

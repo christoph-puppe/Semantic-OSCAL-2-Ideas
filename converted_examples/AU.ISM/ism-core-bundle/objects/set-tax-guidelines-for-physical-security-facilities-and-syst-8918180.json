@@ -1,0 +1,47 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-physical-security-facilities-and-syst-8918180",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Physical access to servers, network devices and cryptographic equipment"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1974",
+   "sequence": 2360
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1053",
+   "sequence": 2370
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1975",
+   "sequence": 2380
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1530",
+   "sequence": 2390
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0813",
+   "sequence": 2400
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1074",
+   "sequence": 2410
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Physical access to servers, network devices and cryptographic equipment",
+     "name": "overview",
+     "prose": {
+      "en": "The second layer of physical security is the use of an additional security zone for a server room or communications room. This is then further supplemented by security containers for the protection of servers, network devices and cryptographic equipment."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -423,6 +423,53 @@
    ],
    "expected-errors": 1,
    "reason": "backlog #14: the meaning changed (may->must, new prose) - a mis-issued canonical-alias that should have been `replaces`; the check catches the silent misalignment"
+  },
+  {
+   "name": "set-membership-cycle-is-an-error",
+   "objects": [
+    {
+     "id": "https://ex.org/set/A",
+     "version": "1",
+     "lifecycle": "active",
+     "members": [
+      {
+       "ref": "https://ex.org/set/B",
+       "sequence": 10
+      }
+     ]
+    },
+    {
+     "id": "https://ex.org/set/B",
+     "version": "1",
+     "lifecycle": "active",
+     "members": [
+      {
+       "ref": "https://ex.org/set/A",
+       "sequence": 10
+      }
+     ]
+    }
+   ],
+   "expected-errors": 1,
+   "reason": "P10 #39 (D21): membership graphs are DAGs - overlap is legal, cycles are not; naive baseline expansion would loop forever"
+  },
+  {
+   "name": "set-self-membership-is-a-cycle",
+   "objects": [
+    {
+     "id": "https://ex.org/set/C",
+     "version": "1",
+     "lifecycle": "active",
+     "members": [
+      {
+       "ref": "https://ex.org/set/C",
+       "sequence": 10
+      }
+     ]
+    }
+   ],
+   "expected-errors": 1,
+   "reason": "P10 #39 (D21): the degenerate one-Set cycle"
   }
  ]
 }

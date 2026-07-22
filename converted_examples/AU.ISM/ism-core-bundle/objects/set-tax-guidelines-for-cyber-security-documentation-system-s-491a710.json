@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-documentation-system-s-491a710",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Security assessment report"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1563",
+   "sequence": 2270
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Security assessment report",
+     "name": "overview",
+     "prose": {
+      "en": "At the conclusion of a security assessment for a system, a security assessment report should be produced by the assessor. This will assist the system owner in performing any initial remediation actions as well as guiding the development of the system’s plan of action and milestones."
+     }
+    }
+   ]
+  }
+ }
+}

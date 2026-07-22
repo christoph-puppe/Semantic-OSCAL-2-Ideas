@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-personnel-security-cyber-security-awa-71a8db5",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Managing and reporting suspicious requests to disclose or change user account details"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2071",
+   "sequence": 2690
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Managing and reporting suspicious requests to disclose or change user account details",
+     "name": "overview",
+     "prose": {
+      "en": "Suspicious requests to disclose or change user account details, such as changing mobile phone numbers or email addresses, could indicate a malicious actor attempting to access private user details, facilitate password resets or conduct multi-factor authentication bypass attacks against user accounts.\n\nIn dealing with such situations, personnel should have clear guidance to think critically before actioning unusual requests as well as a process to report threatening demands for immediate action, pressure for secrecy or requests to circumvent normal business processes and procedures."
+     }
+    }
+   ]
+  }
+ }
+}

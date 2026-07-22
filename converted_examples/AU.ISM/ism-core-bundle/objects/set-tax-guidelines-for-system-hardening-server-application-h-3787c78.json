@@ -1,0 +1,39 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-server-application-h-3787c78",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Microsoft Active Directory services"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1926",
+   "sequence": 8590
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1927",
+   "sequence": 8600
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1928",
+   "sequence": 8610
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1830",
+   "sequence": 8620
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Microsoft Active Directory services",
+     "name": "overview",
+     "prose": {
+      "en": "Due to the critical role that Microsoft Active Directory services perform for domain services, certification services, federated services and identity services within networks, it is crucial that servers performing these services are hardened and access to them is strictly limited, including to their backups. Specifically, this includes servers for Microsoft Active Directory Domain Services (AD DS), Microsoft Active Directory Certificate Services (AD CS), Microsoft Active Directory Federation Services (AD FS) and Microsoft Entra Connect.\n\nIn addition, centrally logging and analysing security-relevant events, including configuration changes, for Microsoft Active Directory services can assist in monitoring the security posture of systems, detecting malicious behaviour and contributing to investigations following cyber security incidents."
+     }
+    }
+   ]
+  }
+ }
+}

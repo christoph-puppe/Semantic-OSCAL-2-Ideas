@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-systems-video-conferen-48af6d9",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Video conferencing unit and Internet Protocol phone authentication"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0554",
+   "sequence": 4570
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0553",
+   "sequence": 4580
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0555",
+   "sequence": 4590
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0551",
+   "sequence": 4600
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1014",
+   "sequence": 4610
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Video conferencing unit and Internet Protocol phone authentication",
+     "name": "overview",
+     "prose": {
+      "en": "Blocking unauthorised or unauthenticated devices by default will reduce the likelihood of unauthorised access to a video conferencing or IP telephony network."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-personnel-security-access-to-systems-1c4defb",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Suspension of access to systems"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0430",
+   "sequence": 3210
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1591",
+   "sequence": 3220
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1404",
+   "sequence": 3230
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1648",
+   "sequence": 3240
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1647",
+   "sequence": 3250
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Suspension of access to systems",
+     "name": "overview",
+     "prose": {
+      "en": "Removing or suspending access to systems and their resources, ideally using an automatic mechanism, can prevent them from being accessed when there is no longer a legitimate business requirement for their use, such as when personnel change duties, leave an organisation or are detected undertaking malicious activities."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-secure-multipurpose-inte-2cd3519",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Configuring Secure/Multipurpose Internet Mail Extension"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0490",
+   "sequence": 15510
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Configuring Secure/Multipurpose Internet Mail Extension",
+     "name": "overview",
+     "prose": {
+      "en": "S/MIME version 2.0 required the use of weaker cryptography than approved for use in these guidelines. As such, S/MIME version 3.0 was the first version to be approved for use as an AACP."
+     }
+    }
+   ]
+  }
+ }
+}

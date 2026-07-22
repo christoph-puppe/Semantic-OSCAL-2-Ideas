@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-cabling-a1e4bd2",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Cables in party walls"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1133",
+   "sequence": 3880
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Cables in party walls",
+     "name": "overview",
+     "prose": {
+      "en": "In shared facilities, TOP SECRET cables are not run in party walls. However, an inner wall can be used to run TOP SECRET cables where sufficient space exists for their inspection."
+     }
+    }
+   ]
+  }
+ }
+}

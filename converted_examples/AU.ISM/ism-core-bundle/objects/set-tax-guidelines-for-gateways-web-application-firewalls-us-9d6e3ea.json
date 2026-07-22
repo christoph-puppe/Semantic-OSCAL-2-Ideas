@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-gateways-web-application-firewalls-us-9d6e3ea",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Using web application firewalls"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1862",
+   "sequence": 16210
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Using web application firewalls",
+     "name": "overview",
+     "prose": {
+      "en": "When using a web application firewall (WAF), care should be taken with their configuration to ensure that the IP addresses of an organisation’s web servers (referred to as origin servers) are not identifiable by malicious actors, as knowledge of origin server IP addresses could allow for protections provided by a WAF to be bypassed. Additionally, appropriate controls should be applied to only enable communication between origin servers, the WAF and authorised management networks."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-documentation-system-s-25c9eb1",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Change and configuration management plan"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0912",
+   "sequence": 2230
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Change and configuration management plan",
+     "name": "overview",
+     "prose": {
+      "en": "Having a change and configuration management plan ensures that changes to the configuration of systems can be made in an accountable manner, with appropriate consultation, consideration and approvals, to maintain the security of such systems. Furthermore, change management and configuration management processes and procedures provide an opportunity for the security impact of changes to configuration of systems to be considered and, if necessary, additional risk management activities to be undertaken."
+     }
+    }
+   ]
+  }
+ }
+}

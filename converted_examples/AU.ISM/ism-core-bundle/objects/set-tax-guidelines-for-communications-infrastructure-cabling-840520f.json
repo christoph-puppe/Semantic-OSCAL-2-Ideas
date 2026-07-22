@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-cabling-840520f",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Cabling infrastructure standards"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0181",
+   "sequence": 3440
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Cabling infrastructure standards",
+     "name": "overview",
+     "prose": {
+      "en": "Cabling infrastructure should be installed by an endorsed cable installer to the relevant Australian Standards to ensure personnel safety and system availability."
+     }
+    }
+   ]
+  }
+ }
+}

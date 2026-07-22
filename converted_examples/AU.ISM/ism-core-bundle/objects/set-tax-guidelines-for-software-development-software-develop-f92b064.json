@@ -1,0 +1,139 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-f92b064",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Secure software development"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2120",
+   "sequence": 11490
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2033",
+   "sequence": 11500
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2034",
+   "sequence": 11510
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2035",
+   "sequence": 11520
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2036",
+   "sequence": 11530
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2121",
+   "sequence": 11540
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2037",
+   "sequence": 11550
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2038",
+   "sequence": 11560
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0401",
+   "sequence": 11570
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1238",
+   "sequence": 11580
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2039",
+   "sequence": 11590
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2040",
+   "sequence": 11600
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2041",
+   "sequence": 11610
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2042",
+   "sequence": 11620
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1780",
+   "sequence": 11630
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2043",
+   "sequence": 11640
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1796",
+   "sequence": 11650
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1797",
+   "sequence": 11660
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2044",
+   "sequence": 11670
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2045",
+   "sequence": 11680
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2046",
+   "sequence": 11690
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2047",
+   "sequence": 11700
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2048",
+   "sequence": 11710
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2049",
+   "sequence": 11720
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2050",
+   "sequence": 11730
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2051",
+   "sequence": 11740
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2052",
+   "sequence": 11750
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1798",
+   "sequence": 11760
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2053",
+   "sequence": 11770
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Secure software development",
+     "name": "overview",
+     "prose": {
+      "en": "The use of Secure by Design principles and practices, including secure programming practices and either memory-safe programming languages (such as C#, Go, Java, Ruby, Rust and Swift) or less preferably memory-safe programming practices, along with threat modelling and mitigation of common security risks, is an important part of secure software development. In addition, providing mechanisms to assist in determining the authenticity and integrity of software, while configuring it in a secure manner, can assist with cyber supply chain security activities.\n\nAs part of secure software development, software should be designed and built to be Secure by Default, that is, the software is secure ‘out of the box’ with little to no additional setup or configuration required to achieve an adequate level of security. Importantly, all built-in security measures, such as multi-factor authentication and event logging, are included in the base product at no extra cost to consumers."
+     }
+    }
+   ]
+  }
+ }
+}

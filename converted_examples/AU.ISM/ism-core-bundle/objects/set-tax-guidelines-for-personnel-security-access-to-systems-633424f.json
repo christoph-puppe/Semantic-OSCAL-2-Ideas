@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-personnel-security-access-to-systems-633424f",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Unprivileged access to systems"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0405",
+   "sequence": 3010
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1852",
+   "sequence": 3020
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1566",
+   "sequence": 3030
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Unprivileged access to systems",
+     "name": "overview",
+     "prose": {
+      "en": "Personnel seeking access to systems and their resources should have a genuine business requirement validated by their manager or another appropriate authority.\n\nIn addition, centrally logging and analysing unprivileged access events can assist in monitoring the security posture of systems and their resources, detecting malicious behaviour and contributing to investigations following cyber security incidents."
+     }
+    }
+   ]
+  }
+ }
+}

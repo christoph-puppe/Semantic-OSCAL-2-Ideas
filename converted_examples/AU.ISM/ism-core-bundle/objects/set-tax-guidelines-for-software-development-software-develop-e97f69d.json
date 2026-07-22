@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-e97f69d",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Cryptographic bill of materials"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2082",
+   "sequence": 11820
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2083",
+   "sequence": 11830
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Cryptographic bill of materials",
+     "name": "overview",
+     "prose": {
+      "en": "A cryptographic bill of materials acts as an extension of a software bill of materials by communicating information about relevant cryptographic dependencies and implementations that are relied upon by software. At a high level, a cryptographic bill of materials will map the use of cryptography to the security function it performs and where it performs it. In practice, a cryptographic bill of materials will capture details on cryptographic libraries, algorithms, protocols, parameters and configurations. This can be used to ensure software components are providing support for standardised implementations of cryptographic algorithms that are approved by the Australian Signals Directorate (ASD).\n\nWhile the format for a cryptographic bill of materials is not yet subject to formal standardisation, there are emerging tools to assist with their generation and management. This is particularly important for software developers in managing their migration to post-quantum cryptographic standards as part of software development activities."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configu-dae9938",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Functional separation between servers"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0385",
+   "sequence": 13580
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1479",
+   "sequence": 13590
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Functional separation between servers",
+     "name": "overview",
+     "prose": {
+      "en": "Implementing functional separation between servers reduces the likelihood that a server compromised by malicious actors will pose an increased security risk to other servers."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -419,10 +419,9 @@
      "selects": [
       {
        "predicate": {
-        "facet-equals": [
-         "x",
-         "y"
-        ]
+        "present": {
+         "path": "annotations"
+        }
        }
       }
      ],

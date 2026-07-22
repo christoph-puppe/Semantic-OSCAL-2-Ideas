@@ -1,0 +1,47 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-server-application-h-89a4f8a",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Microsoft Active Directory Certificate Services"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1943",
+   "sequence": 9000
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1944",
+   "sequence": 9010
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1945",
+   "sequence": 9020
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1946",
+   "sequence": 9030
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1947",
+   "sequence": 9040
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1948",
+   "sequence": 9050
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Microsoft Active Directory Certificate Services",
+     "name": "overview",
+     "prose": {
+      "en": "Microsoft AD CS is responsible for the management of Public Key Infrastructure certificates used to secure authentication and communication protocols for systems. As such, particular care should be taken to secure servers that perform this role, such as Certification Authorities (CAs)."
+     }
+    }
+   ]
+  }
+ }
+}

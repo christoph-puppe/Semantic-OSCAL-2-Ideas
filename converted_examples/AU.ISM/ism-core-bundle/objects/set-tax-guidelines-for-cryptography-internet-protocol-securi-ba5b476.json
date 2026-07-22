@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-internet-protocol-securi-ba5b476",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Integrity algorithms"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0998",
+   "sequence": 15640
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Integrity algorithms",
+     "name": "overview",
+     "prose": {
+      "en": "The approved integrity algorithms for IPsec connections are HMAC-SHA256, HMAC-SHA384 and HMAC-SHA512. However, if using AES with Galois/Counter Mode as the encryption algorithm, it can also be used for authentication purposes. In such cases, the integrity algorithm should be configured as NONE.\n\nFor interoperability and maintainability reasons, HMAC-SHA256 will not be approved beyond 2030."
+     }
+    }
+   ]
+  }
+ }
+}

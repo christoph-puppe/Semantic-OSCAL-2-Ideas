@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-service-continuity-for-onl-1df8555",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Cloud-based hosting of online services"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1437",
+   "sequence": 14410
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Cloud-based hosting of online services",
+     "name": "overview",
+     "prose": {
+      "en": "Using cloud service providers can enable an organisation to build highly resilient online services due to the increased computing resources, bandwidth and multiple separate physical sites made available by cloud service providers. An organisation can attempt to achieve the same results using their own infrastructure; however, doing so may require significant upfront costs and may still result in a limited capability to scale resources dynamically to meet genuine spikes in demand. In cases of denial-of-service attacks, cloud-based hosting can also provide segregation from self-hosted or other cloud-hosted services ensuring that other systems, such as email, are not affected."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-documentation-system-s-6e076eb",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Cyber security incident response plan"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0043",
+   "sequence": 2210
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Cyber security incident response plan",
+     "name": "overview",
+     "prose": {
+      "en": "Having a cyber security incident response plan ensures that when a cyber security incident occurs, a plan is in place to respond appropriately to the situation. In most situations, the aim of the response will be to prevent the cyber security incident from escalating, restore any impacted system or data, and preserve any evidence."
+     }
+    }
+   ]
+  }
+ }
+}

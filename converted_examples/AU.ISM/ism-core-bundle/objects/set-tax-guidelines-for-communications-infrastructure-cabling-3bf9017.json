@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-cabling-3bf9017",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Enclosed cable reticulation systems"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1130",
+   "sequence": 3770
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Enclosed cable reticulation systems",
+     "name": "overview",
+     "prose": {
+      "en": "In shared facilities, cables should be enclosed in a sealed cable reticulation system to prevent access and enhance cable management."
+     }
+    }
+   ]
+  }
+ }
+}

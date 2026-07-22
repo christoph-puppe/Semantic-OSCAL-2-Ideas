@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-enterprise-mobility-mobile-device-usa-e857688",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Using paging, message services and messaging apps"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0240",
+   "sequence": 5330
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Using paging, message services and messaging apps",
+     "name": "overview",
+     "prose": {
+      "en": "As paging, messaging services and many messaging apps do not sufficiently encrypt data in transit, they cannot be relied upon for the communication of sensitive or classified data."
+     }
+    }
+   ]
+  }
+ }
+}

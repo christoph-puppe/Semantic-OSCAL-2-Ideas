@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-enterprise-mobility-mobile-device-usa-4f58245",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Mobile device emergency sanitisation processes and procedures"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0701",
+   "sequence": 5540
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0702",
+   "sequence": 5550
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Mobile device emergency sanitisation processes and procedures",
+     "name": "overview",
+     "prose": {
+      "en": "The sanitisation of mobile devices in emergencies can assist in reducing the potential for compromise of data by malicious actors. This may be achieved by using a remote wipe capability, a cryptographic key zeroise or sanitisation function if present."
+     }
+    }
+   ]
+  }
+ }
+}

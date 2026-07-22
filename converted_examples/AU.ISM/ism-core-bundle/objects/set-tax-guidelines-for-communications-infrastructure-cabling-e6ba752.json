@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-cabling-e6ba752",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Terminating cables on patch panels"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0213",
+   "sequence": 4120
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Terminating cables on patch panels",
+     "name": "overview",
+     "prose": {
+      "en": "Terminating SECRET and TOP SECRET cables on different patch panels in cabinets can assist in preventing accidental or deliberate cross-patching and makes inspection of cables easier."
+     }
+    }
+   ]
+  }
+ }
+}

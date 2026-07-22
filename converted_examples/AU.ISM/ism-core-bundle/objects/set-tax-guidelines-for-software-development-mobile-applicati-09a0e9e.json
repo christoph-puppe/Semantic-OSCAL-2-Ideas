@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-mobile-applicati-09a0e9e",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Secure mobile application development"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1922",
+   "sequence": 12470
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Secure mobile application development",
+     "name": "overview",
+     "prose": {
+      "en": "OWASP provides comprehensive resources for software developers that should be followed when developing mobile applications."
+     }
+    }
+   ]
+  }
+ }
+}

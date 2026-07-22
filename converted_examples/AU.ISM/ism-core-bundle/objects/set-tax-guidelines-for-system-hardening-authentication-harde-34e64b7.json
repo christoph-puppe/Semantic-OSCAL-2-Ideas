@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-authentication-harde-34e64b7",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Screen locking"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2012",
+   "sequence": 9940
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Screen locking",
+     "name": "overview",
+     "prose": {
+      "en": "Screen locking prevents unauthorised access to a system that a user has already authenticated to."
+     }
+    }
+   ]
+  }
+ }
+}

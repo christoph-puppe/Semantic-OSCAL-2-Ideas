@@ -201,7 +201,7 @@ svg text{font-family:'JetBrains Mono',monospace}
     <div class="pill" id="pill-bundle">no bundle loaded</div>
     <div class="pill hidden" id="pill-verify"></div>
     <div style="flex:1"></div>
-    <div class="pill">v1.7.0 · build 2026-07-22</div>
+    <div class="pill">v1.7.1 · build 2026-07-22</div>
   </div>
 
   <div id="mid">
@@ -502,7 +502,7 @@ function sha256Fallback(bytes) {
 }
 
 /* ---------- loading ---------- */
-const READER_ID = "jascon-reader.html v1.7.0";
+const READER_ID = "jascon-reader.html v1.7.1";
 /* URL loading — works when this page and the bundle are served over http(s)
    (e.g. `python -m http.server` from the repo root); file:// blocks fetch by design. */
 async function loadFromUrl(input) {
@@ -1666,7 +1666,7 @@ function dimIndex() {
      248+ distinct (grammar.result-specification), while the largest true vocabulary is 63
      (required-documentation); the weakest true vocabulary is ratio 1.9 (CR26
      required-artifacts). The old ≤40 cap silently dropped tags(55),
-     required-documentation(63), threat-refs(43), target-object-categories(41) on geman.bsi. */
+     required-documentation(63), threat-refs(43), target-object-categories(41) on DE.BSI. */
   const dropped = [];
   const usable = [...dims.entries()]
     .filter(([k, vals]) => {
@@ -2275,7 +2275,7 @@ renderLattice();
 restoreWorkspaceObjects();
 renderStages();
 setView("overview");
-l.info("JASCON Bundle Reader v1.7.0 · build 2026-07-22 — everything runs locally, nothing leaves this page");
+l.info("JASCON Bundle Reader v1.7.1 · build 2026-07-22 — everything runs locally, nothing leaves this page");
 l.info("open a bundle folder (contains content-manifest.json + objects/) or drop it here — or serve the repo over http and deep-link: #load=<bundle-url>&view=stage:tailor");
 
 /* deep links: #load=<bundle-url>&view=<view> — shareable when served over http(s) */

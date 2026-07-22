@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-physical-security-facilities-and-syst-b1a3e36",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Bringing photographic and video recording devices into facilities"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2069",
+   "sequence": 2490
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2070",
+   "sequence": 2500
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Bringing photographic and video recording devices into facilities",
+     "name": "overview",
+     "prose": {
+      "en": "Photographic and video recording devices, such as cameras, video cameras and smart glasses, can pose a security risk to an organisation, especially when they can record photographs or videos in an inconspicuous manner. In SECRET and TOP SECRET areas, it is important that an organisation understands the security risks associated with the introduction of photographic and video recording devices and develop, implement, maintain and regularly verify a register of those that have been authorised for use in such environments."
+     }
+    }
+   ]
+  }
+ }
+}

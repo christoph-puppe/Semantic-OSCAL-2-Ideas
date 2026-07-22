@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-database-systems-database-servers-com-b4ff45f",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Communications between database servers and web servers"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1277",
+   "sequence": 12720
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Communications between database servers and web servers",
+     "name": "overview",
+     "prose": {
+      "en": "Data communicated between database servers and web servers, especially over the internet, is susceptible to capture by malicious actors. As such, it is important that all data communicated between database servers and web servers is suitably encrypted using Australian Signals Directorate-approved cryptography."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configu-10bb0b7",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Flashing network devices with trusted firmware before first use"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1800",
+   "sequence": 13890
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Flashing network devices with trusted firmware before first use",
+     "name": "overview",
+     "prose": {
+      "en": "Flashing network devices with trusted firmware, obtained from vendors via trusted means, before network devices are used for the first time can assist in reducing cyber supply chain risks, such as the introduction of malicious firmware resulting from a cyber supply chain interdiction attack or a compromised vendor development environment or authoritative source for software."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,59 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-web-application-7dbd5c4",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Secure web application design and development"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1239",
+   "sequence": 12500
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0971",
+   "sequence": 12510
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1849",
+   "sequence": 12520
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1850",
+   "sequence": 12530
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2063",
+   "sequence": 12540
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2064",
+   "sequence": 12550
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2065",
+   "sequence": 12560
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2066",
+   "sequence": 12570
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2067",
+   "sequence": 12580
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Secure web application design and development",
+     "name": "overview",
+     "prose": {
+      "en": "Web application frameworks can be leveraged by software developers to enhance the security of web applications while decreasing development time. These resources can assist in securely implementing complex software functions, such as session management, input handling and cryptographic operations. In addition, OWASP provides comprehensive resources for software developers that should be followed when developing web applications."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-enterprise-mobility-mobile-device-usa-48d0ceb",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Using mobile devices in public spaces"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0866",
+   "sequence": 5460
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1145",
+   "sequence": 5470
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1644",
+   "sequence": 5480
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Using mobile devices in public spaces",
+     "name": "overview",
+     "prose": {
+      "en": "Personnel should be aware of the environment in which they use mobile devices to view or communicate sensitive or classified data. Including by ensuring that sensitive or classified data is not observed by other parties in public areas, such as on public transport, in transit lounges and at coffee shops. In some cases, privacy filters can be applied to the screen of a mobile device to prevent onlookers from reading content off its screen.\n\nIn addition, personnel should maintain awareness of the environments from which they conduct sensitive or classified phone calls and the potential for their conversations to be overheard."
+     }
+    }
+   ]
+  }
+ }
+}

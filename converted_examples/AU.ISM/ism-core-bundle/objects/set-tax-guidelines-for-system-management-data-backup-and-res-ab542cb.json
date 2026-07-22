@@ -1,0 +1,39 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-management-data-backup-and-res-ab542cb",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Backup access"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1812",
+   "sequence": 10700
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1813",
+   "sequence": 10710
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1705",
+   "sequence": 10720
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1706",
+   "sequence": 10730
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Backup access",
+     "name": "overview",
+     "prose": {
+      "en": "To mitigate the security risk of unauthorised access to backups, an organisation should ensure that access to backups is controlled by using appropriate access controls."
+     }
+    }
+   ]
+  }
+ }
+}

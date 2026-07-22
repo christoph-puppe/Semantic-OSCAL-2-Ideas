@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-procurement-and-outsourcing-managed-s-1707ba3",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Assessment of outsourced cloud service providers"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1570",
+   "sequence": 1880
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1972",
+   "sequence": 1890
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Assessment of outsourced cloud service providers",
+     "name": "overview",
+     "prose": {
+      "en": "Outsourced cloud service providers and their cloud services will need to undergo regular security assessments against the requirements of the ISM to determine their security posture and security risks associated with their use. Following an initial security assessment, subsequent security assessments should focus on any new cloud services that are being offered as well as any ISM or security-related system changes that have occurred since the previous security assessment."
+     }
+    }
+   ]
+  }
+ }
+}

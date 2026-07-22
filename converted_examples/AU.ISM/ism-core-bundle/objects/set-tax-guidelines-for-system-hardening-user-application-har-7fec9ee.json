@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-user-application-har-7fec9ee",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Email clients"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1748",
+   "sequence": 8130
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Email clients",
+     "name": "overview",
+     "prose": {
+      "en": "Users’ ability to change the security settings of email clients can be exploited by malicious actors using social engineering. To prevent users from removing security functionality, or breaking security functionality, users should not have the ability to change security settings for email clients."
+     }
+    }
+   ]
+  }
+ }
+}

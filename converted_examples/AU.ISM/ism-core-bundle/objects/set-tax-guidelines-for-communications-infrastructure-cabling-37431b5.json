@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-cabling-37431b5",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Use of fibre-optic cables"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1111",
+   "sequence": 3460
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Use of fibre-optic cables",
+     "name": "overview",
+     "prose": {
+      "en": "Fibre-optic cables do not produce electromagnetic emanations and are not influenced by them. As a result, they offer the highest degree of protection from electromagnetic emanation effects."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cryptography-internet-protocol-securi-5c47906",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Mode of operation"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0494",
+   "sequence": 15540
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Mode of operation",
+     "name": "overview",
+     "prose": {
+      "en": "IPsec can be operated in tunnel mode or transport mode. The tunnel mode of operation is preferred as it provides full encapsulation of IP packets while the transport mode of operation only encapsulates the payload of IP packets."
+     }
+    }
+   ]
+  }
+ }
+}

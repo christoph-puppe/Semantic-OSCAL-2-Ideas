@@ -1,0 +1,39 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-cabling-e47ea04",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Cable colours"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1820",
+   "sequence": 3620
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0926",
+   "sequence": 3630
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1718",
+   "sequence": 3640
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1719",
+   "sequence": 3650
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Cable colours",
+     "name": "overview",
+     "prose": {
+      "en": "To avoid confusion, it is important that, regardless of the type of cabling involved, a consistent cable colour is used. Furthermore, the use of designated cable colours can provide an easy way to distinguish cables for SECRET and TOP SECRET systems from cables for other systems. For example, while SECRET and TOP SECRET cables have designated cable colours, cables for other systems may be any colour except for those reserved for SECRET and TOP SECRET systems. In addition, cable colours for other systems, such as non-classified, OFFICIAL: Sensitive and PROTECTED systems, may use the same colour, such as blue."
+     }
+    }
+   ]
+  }
+ }
+}

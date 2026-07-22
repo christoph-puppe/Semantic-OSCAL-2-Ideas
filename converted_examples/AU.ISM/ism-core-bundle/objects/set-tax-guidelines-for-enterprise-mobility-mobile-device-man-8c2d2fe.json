@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-enterprise-mobility-mobile-device-man-8c2d2fe",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Mobile device management policy"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1533",
+   "sequence": 5050
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1195",
+   "sequence": 5060
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Mobile device management policy",
+     "name": "overview",
+     "prose": {
+      "en": "Since mobile devices routinely leave the office environment, and the protection it affords, it is important that a mobile device management policy is developed, implemented and maintained to ensure that mobile devices are sufficiently hardened. In doing so, it is important that Mobile Device Management solutions that have completed a Common Criteria evaluation against the Protection Profile for Mobile Device Management, version 4.0 or later, are used to enforce mobile device management policy."
+     }
+    }
+   ]
+  }
+ }
+}

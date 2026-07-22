@@ -7,6 +7,13 @@ LoC, contributor-hours), and a mechanically verified round-trip to
 OSCAL 1.2.2. This file is those numbers. Every count is reproducible
 from this repository; the counter is stated with each table.
 
+> **Dated measurement (P10 #33).** All figures below are as measured at
+> the gate-4 commit (`9b953fd`). The P10 fix pass then grew the suite
+> (157 vectors; validators 994/1,163 non-blank non-comment lines) and
+> repaired the ISM taxonomy (the `geman.bsi` directory is now `DE.BSI`;
+> ISM round-trips 1,711/1,711 with stray-controls 0; corpus total
+> 5,886/5,886) — §5 re-measures at HEAD.
+
 ## 1. Implementation sizes
 
 One counter for every row: total lines and non-blank non-comment lines

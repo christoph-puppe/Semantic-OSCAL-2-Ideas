@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-artificial-intel-1222ac6",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Prompt injection"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1924",
+   "sequence": 12420
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Prompt injection",
+     "name": "overview",
+     "prose": {
+      "en": "Prompt injection vulnerabilities exist in how AI applications process user prompts, and how such input may force AI models to incorrectly pass prompt data to other parts of the model, potentially causing them to violate guidelines, generate harmful content, enable unauthorised access or influence critical decisions."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-53c5897",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Development, testing, staging and production environments"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0400",
+   "sequence": 11280
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1419",
+   "sequence": 11290
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1420",
+   "sequence": 11300
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Development, testing, staging and production environments",
+     "name": "overview",
+     "prose": {
+      "en": "Segregating development, testing, staging and production environments, and their associated data, can minimise the likelihood of faulty or malicious content being introduced into a production environment. Furthermore, protecting the authoritative source for software is critical to preventing malicious content being surreptitiously introduced into software."
+     }
+    }
+   ]
+  }
+ }
+}

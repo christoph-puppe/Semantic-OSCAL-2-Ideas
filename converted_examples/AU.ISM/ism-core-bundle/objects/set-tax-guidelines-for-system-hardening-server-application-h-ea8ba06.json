@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-server-application-h-ea8ba06",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Microsoft Active Directory Federation Services"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1949",
+   "sequence": 9070
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Microsoft Active Directory Federation Services",
+     "name": "overview",
+     "prose": {
+      "en": "Microsoft AD FS is responsible for the sharing of identity and access management rights across security boundaries. As such, particular care should be taken to secure servers that perform this role."
+     }
+    }
+   ]
+  }
+ }
+}

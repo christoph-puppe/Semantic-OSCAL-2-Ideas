@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-database-systems-database-servers-seg-31dbea7",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Segregation of development, testing, staging and production database servers"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1273",
+   "sequence": 12780
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Segregation of development, testing, staging and production database servers",
+     "name": "overview",
+     "prose": {
+      "en": "Using database servers across different environments, such as development, testing, staging and production environments, could result in accidental damage to their integrity or exposure of their hosted database contents."
+     }
+    }
+   ]
+  }
+ }
+}

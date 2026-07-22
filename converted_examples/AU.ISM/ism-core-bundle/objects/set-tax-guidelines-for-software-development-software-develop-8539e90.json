@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-8539e90",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Software input handling"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1240",
+   "sequence": 11950
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2016",
+   "sequence": 11960
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2057",
+   "sequence": 11970
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2058",
+   "sequence": 11980
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2059",
+   "sequence": 11990
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Software input handling",
+     "name": "overview",
+     "prose": {
+      "en": "Many vulnerabilities in software are caused by a lack of secure input handling. As such, it is essential that software does not trust any input, such as website addresses and their parameters, Hypertext Markup Language (HTML) form data, cookie values, or request headers, without performing validation or sanitisation. Examples of validation and sanitisation include ensuring a telephone form field contains only numerals, ensuring data used in a Structured Query Language query is sanitised properly and ensuring Unicode input is handled appropriately."
+     }
+    }
+   ]
+  }
+ }
+}

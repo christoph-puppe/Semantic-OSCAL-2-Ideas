@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configu-23ca31a",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Default user accounts and credentials for network devices"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1304",
+   "sequence": 13910
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Default user accounts and credentials for network devices",
+     "name": "overview",
+     "prose": {
+      "en": "Network devices can come pre-configured with default user accounts and credentials. For example, wireless access points with a user account named ‘admin’ and a password of ‘admin’. Ensuring that default user accounts or credentials are changed, disabled or removed during initial setup can assist in reducing the likelihood of network devices being exploited by malicious actors."
+     }
+    }
+   ]
+  }
+ }
+}

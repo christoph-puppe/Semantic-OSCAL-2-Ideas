@@ -17,7 +17,12 @@ Runs, in order:
 Exit 0 = all green. Usage: uv run --with jsonschema validate_core.py [bundle-dir ...]
 """
 import json, hashlib, os, re, sys, copy, collections, base64
+from decimal import Decimal
 import jsonschema
+
+# canonical decimal string (D3.4; rev P10 #37: leading zeros AND negative
+# zero are non-canonical spellings — one value, one spelling)
+DECIMAL_RE = r"^(-?[1-9][0-9]*(\.[0-9]+)?|0(\.[0-9]+)?|-0\.[0-9]*[1-9][0-9]*)$"
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, "..", ".."))
@@ -90,6 +95,31 @@ def closure_errors(objs):
                         sid = sc.split(":", 1)[1]
                         if sid not in sids:
                             errs.append(f"{oid}: {side}-scope '{sc}' names no statement of the in-bundle endpoint")
+    # membership graphs are DAGs (D21; P10 #39): overlapping membership is
+    # legal, cycles are not — naive baseline expansion / nearest-Set search
+    # would loop forever on a cyclic graph.
+    color = {}
+    for root, (rt, _ro) in list(objs.items()):
+        if rt != "requirementSet" or root in color:
+            continue
+        stack = [[root, [m["ref"] for m in objs[root][1].get("members", [])], 0]]
+        color[root] = 1
+        while stack:
+            sid, refs, i = stack[-1]
+            if i >= len(refs):
+                color[sid] = 2; stack.pop(); continue
+            stack[-1][2] += 1
+            adv = refs[i]
+            tgt = objs.get(adv)
+            if not tgt or tgt[0] != "requirementSet":
+                continue
+            if color.get(adv) == 1:
+                errs.append(f"{sid}: RequirementSet membership cycle: "
+                            f"{' -> '.join([f[0] for f in stack] + [adv])} "
+                            f"(D21: membership graphs are acyclic; P10 #39)")
+            elif adv not in color:
+                color[adv] = 1
+                stack.append([adv, [m["ref"] for m in objs[adv][1].get("members", [])], 0])
     return errs
 
 def facet_errors(objs_or_obj, pinned, path="?"):
@@ -183,7 +213,17 @@ def tailoring_duty_errors(objs, pinned_decl=None, sdig_fn=None, envelopes=None, 
     for oid, (t, tobj) in objs.items():
         if t != "tailoring": continue
         tier = derive_tier(tobj, objs, sdig_fn or sdig, envelopes=envelopes, trusted=trusted)
+        seen_targets = set()
         for op in tobj.get("operations", []):
+            # D13: two operations addressing the same target within one
+            # Tailoring = validation error (P10 #30 — was vector-only)
+            tkey = (op.get("requirement-ref"), op.get("statement-id"),
+                    op.get("parameter"), op.get("field"), op.get("facet"))
+            if tkey in seen_targets:
+                errs.append(f"{oid}: two operations address the same target "
+                            f"{[x for x in tkey if x]} within one Tailoring "
+                            f"(D13: override rides Tailoring-of-Tailoring chaining, never in-place; P10 #30)")
+            seen_targets.add(tkey)
             has_dev = "deviation" in op or "deviation-ref" in op
             duty = None
             if op["op"] == "set-modality":
@@ -196,9 +236,17 @@ def tailoring_duty_errors(objs, pinned_decl=None, sdig_fn=None, envelopes=None, 
             elif op["op"] == "replace-prose" and op.get("intent") == "substantive":
                 duty = "substantive replace-prose"
             elif op["op"] in ("attach-facet", "detach-facet"):
-                base = str(op.get("facet", "")).rsplit("@", 1)[0]
-                decl = STDLIB_DECL.get(base, pd.get(base))
-                if decl: duty = f"{op['op']} of a semantics-bearing facet {decl}"
+                fid = str(op.get("facet", ""))
+                base = fid.rsplit("@", 1)[0]
+                if fid.startswith("private:") or base.startswith("private:"):
+                    pass                     # modifies-semantics [] by definition (D10)
+                elif base in STDLIB_DECL or base in pd:
+                    decl = STDLIB_DECL.get(base, pd.get(base))
+                    if decl: duty = f"{op['op']} of a semantics-bearing facet {decl}"
+                else:                        # neither stdlib nor pinned nor private: (P10 #29)
+                    errs.append(f"{oid}: {op['op']} references facet '{fid}' that is neither "
+                                f"stdlib, nor pinned in the manifest, nor private: "
+                                f"(dangerous-by-default, D10; P10 #29)")
             elif op["op"] == "set-parameter":
                 tgt = objs.get(op["requirement-ref"])
                 stmt = next((s for s in tgt[1]["statements"] if s["id"] == op.get("statement-id")), None) \
@@ -576,12 +624,14 @@ def param_check(decl, value):
         if "max" in decl and value > decl["max"]: return "deviation-required"
         return "valid"
     if t == "decimal":
-        # canonical decimal STRING (D3.4): no leading zeros; scale is lexically
-        # significant (trailing zeros distinguish "1.5" from "1.50" by design).
-        if not isinstance(value, str) or not re.match(r"^-?(0|[1-9][0-9]*)(\.[0-9]+)?$", value): return "invalid"
-        v = float(value)
-        if "min" in decl and v < decl["min"]: return "deviation-required"
-        if "max" in decl and v > decl["max"]: return "deviation-required"
+        # canonical decimal STRING (D3.4): no leading zeros, no negative zero
+        # (P10 #37); scale is lexically significant (trailing zeros
+        # distinguish "1.5" from "1.50" by design). Bounds compare exactly
+        # via Decimal — float() loses precision beyond 2^53 (P10 #37d).
+        if not isinstance(value, str) or not re.match(DECIMAL_RE, value): return "invalid"
+        v = Decimal(value)
+        if "min" in decl and v < Decimal(str(decl["min"])): return "deviation-required"
+        if "max" in decl and v > Decimal(str(decl["max"])): return "deviation-required"
         return "valid"
     if t in ("elapsed-duration", "calendar-period"):
         ELAPSED = {"seconds", "minutes", "hours"}; CAL = {"days", "bizdays", "weeks", "months", "years"}
@@ -650,6 +700,15 @@ def run_tailoring():
                 if op["op"] == "remove-relation" and isinstance(op.get("relation"), dict) \
                         and op["relation"].get("type") == "required":           # backlog #25 (B.3)
                     needs_dev = True
+                if op["op"] in ("attach-facet", "detach-facet"):                # P10 #29
+                    fid = str(op.get("facet", "")); base = fid.rsplit("@", 1)[0]
+                    fdecls = case.get("facet-decls", {})
+                    if fid.startswith("private:") or base.startswith("private:"):
+                        pass                                # [] by definition (D10)
+                    elif base in fdecls:
+                        if fdecls[base]: needs_dev = True   # semantics-bearing
+                    else:
+                        verdict = "error"                   # unknown facet id, any tier
                 if needs_dev and case.get("tier") == "consumer" and "deviation" not in op and "deviation-ref" not in op:
                     verdict = "error"
         if verdict == case["verdict"]: ok("tailoring")
@@ -926,6 +985,7 @@ def validate_bundle(bdir):
     # pinned facet schemas: files must exist, digests must verify, and they
     # form the registry for non-stdlib facet payload validation (#17)
     pinned = {}
+    pinned_decl = {}
     for fe in manifest.get("facet-schemas", []):
         fp = os.path.join(bdir, fe["path"])
         if not os.path.exists(fp):
@@ -936,6 +996,10 @@ def validate_bundle(bdir):
         try:
             sd = json.loads(raw.decode("utf-8"))
             pinned[sd["id"]] = REGISTRY(sd.get("schema", {"type": "object"}))
+            # P10 #29: the pin's declaration feeds the attach/detach op-law;
+            # a pin that omits it is dangerous-by-default (D10: all four)
+            pinned_decl[sd["id"]] = sd.get("modifies-semantics",
+                                           ["assessment", "tailoring", "selection", "rendering"])
             # #26 (D26 final): a pin of a STDLIB id must be the descriptor
             # VERBATIM - the pin and the normative schema cannot diverge
             if sd["id"] in STDLIB_RAW and canonical(sd.get("schema")) != canonical(STDLIB_RAW[sd["id"]]):
@@ -971,7 +1035,8 @@ def validate_bundle(bdir):
     # reference taxonomy (#16) + facet payloads (#17) + tier duties (#19/#24)
     for e in closure_errors(bundle_objs):
         fail(section, e)
-    for e in tailoring_duty_errors(bundle_objs, envelopes=envelopes, trusted=TRUSTED):
+    for e in tailoring_duty_errors(bundle_objs, pinned_decl=pinned_decl,
+                                   envelopes=envelopes, trusted=TRUSTED):
         fail(section, e)
     for e in facet_errors([(oid, o) for oid, (t, o) in bundle_objs.items()], pinned):
         fail(section, e)

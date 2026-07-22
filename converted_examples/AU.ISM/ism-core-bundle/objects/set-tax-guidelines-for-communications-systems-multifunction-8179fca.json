@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-systems-multifunction-8179fca",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Multifunction device usage policy"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0588",
+   "sequence": 4750
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Multifunction device usage policy",
+     "name": "overview",
+     "prose": {
+      "en": "As multifunction devices (MFDs) are a potential source of cyber security incidents, it is important that an organisation develops, implements and maintains a policy governing their use."
+     }
+    }
+   ]
+  }
+ }
+}

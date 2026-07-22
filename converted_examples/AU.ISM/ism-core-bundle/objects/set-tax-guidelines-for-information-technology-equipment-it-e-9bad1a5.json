@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-information-technology-equipment-it-e-9bad1a5",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Labelling high assurance IT equipment"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0296",
+   "sequence": 5890
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Labelling high assurance IT equipment",
+     "name": "overview",
+     "prose": {
+      "en": "High assurance IT equipment often has tamper-evident seals placed on its external surfaces. To assist users in noticing changes to these seals, and to prevent functionality being degraded, an organisation should limit the use of labels on high assurance IT equipment."
+     }
+    }
+   ]
+  }
+ }
+}

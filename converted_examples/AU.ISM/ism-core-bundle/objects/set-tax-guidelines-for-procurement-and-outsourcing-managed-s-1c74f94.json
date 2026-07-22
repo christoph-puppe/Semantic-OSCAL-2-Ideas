@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-procurement-and-outsourcing-managed-s-1c74f94",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Assessment of managed service providers"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1793",
+   "sequence": 1810
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1971",
+   "sequence": 1820
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Assessment of managed service providers",
+     "name": "overview",
+     "prose": {
+      "en": "Managed service providers will need to undergo regular security assessments against the requirements of the [Information security manual](#e7ce6e23-4bbb-45c1-a657-7e563c0837ed) (ISM) to determine their security posture and security risks associated with their use. Following an initial security assessment, subsequent security assessments should focus on any new services that are being offered as well as any ISM or security-related system changes that have occurred since the previous security assessment."
+     }
+    }
+   ]
+  }
+ }
+}

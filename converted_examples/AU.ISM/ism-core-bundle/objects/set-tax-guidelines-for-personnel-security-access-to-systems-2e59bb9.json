@@ -1,0 +1,39 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-personnel-security-access-to-systems-2e59bb9",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "User identification"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0414",
+   "sequence": 2960
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0415",
+   "sequence": 2970
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1583",
+   "sequence": 2980
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0420",
+   "sequence": 2990
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "User identification",
+     "name": "overview",
+     "prose": {
+      "en": "Having uniquely identifiable users ensures accountability for access to systems and their resources. Furthermore, where systems process, store or communicate Australian Eyes Only (AUSTEO), Australian Government Access Only (AGAO) or Releasable To (REL) data, and foreign nationals have access, it is important that the foreign nationals are identified as such."
+     }
+    }
+   ]
+  }
+ }
+}

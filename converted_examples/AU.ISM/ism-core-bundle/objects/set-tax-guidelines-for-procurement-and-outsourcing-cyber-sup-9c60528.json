@@ -1,0 +1,51 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-procurement-and-outsourcing-cyber-sup-9c60528",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Cyber supply chain risk management activities"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1631",
+   "sequence": 1580
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1452",
+   "sequence": 1590
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1567",
+   "sequence": 1600
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1568",
+   "sequence": 1610
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1882",
+   "sequence": 1620
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1632",
+   "sequence": 1630
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1569",
+   "sequence": 1640
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Cyber supply chain risk management activities",
+     "name": "overview",
+     "prose": {
+      "en": "Cyber supply chain risk management activities should be conducted during the procurement of operating systems, applications, information technology (IT) equipment, operational technology (OT) equipment and services. This includes considering security risks as systems and their components are being designed, built, stored, delivered, installed, operated, maintained and decommissioned. Furthermore, this also includes identifying and managing jurisdictional, governance, privacy and security risks associated with the use of suppliers, such as software developers, IT equipment manufacturers, OT equipment manufacturers, service providers and other organisations involved in distribution channels. For example, outsourced artificial intelligence applications or cloud services may be located offshore and subject to lawful and covert data collection without their customers’ knowledge. Additionally, use of offshore services introduces jurisdictional risks as foreign countries’ laws could change with little warning. Finally, foreign-owned suppliers operating in Australia may be subject to a foreign government’s lawful access to data belonging to their customers.\n\nWhen procuring operating systems, applications, IT equipment, OT equipment and services, it is important for an organisation to choose vendors that have demonstrated a commitment to the security of their products and services. This will assist in not only reducing the potential number of vulnerabilities, but also increasing the likelihood that timely patches, updates or vendor mitigations will be released to remediate any vulnerabilities that are found. Furthermore, it is important for an organisation to choose suppliers that have demonstrated a commitment to transparency and that have a strong track record of maintaining the security of their own systems. In support of this, suppliers should openly provide evidence of their implementation of such commitments, especially when requested by their customers. Finally, a shared responsibility model that clearly defines the responsibilities of suppliers and their customers can be highly beneficial and should be created and shared between both parties."
+     }
+    }
+   ]
+  }
+ }
+}

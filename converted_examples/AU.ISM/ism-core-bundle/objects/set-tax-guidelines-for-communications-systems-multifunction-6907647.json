@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-systems-multifunction-6907647",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Connecting multifunction devices to digital telephone systems"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0245",
+   "sequence": 4770
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Connecting multifunction devices to digital telephone systems",
+     "name": "overview",
+     "prose": {
+      "en": "When MFDs are connected to both a network and a digital telephone system, they can act as a bridge between the two. As such, and to avoid potential data spills, MFDs should not be connected to digital telephone systems."
+     }
+    }
+   ]
+  }
+ }
+}

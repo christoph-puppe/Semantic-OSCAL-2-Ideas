@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-web-application-09430e8",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Web application interactions"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1552",
+   "sequence": 12620
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Web application interactions",
+     "name": "overview",
+     "prose": {
+      "en": "Hypertext Transfer Protocol Secure (HTTPS) is the Hypertext Transfer Protocol secured by Transport Layer Security (TLS) encryption. The use of HTTPS for web applications ensures that interactions with web applications are confidential and that the integrity of such interactions are maintained."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-cabling-a44654e",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Common cable bundles and conduits"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0187",
+   "sequence": 3720
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1821",
+   "sequence": 3730
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Common cable bundles and conduits",
+     "name": "overview",
+     "prose": {
+      "en": "In some circumstances, cables for different systems can be bundled together or run in a common conduit to reduce costs, such as cables for OFFICIAL: Sensitive and PROTECTED systems."
+     }
+    }
+   ]
+  }
+ }
+}

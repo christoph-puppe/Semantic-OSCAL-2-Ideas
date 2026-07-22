@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-personnel-security-access-to-systems-23b20a5",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "System usage policy"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1864",
+   "sequence": 2850
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "System usage policy",
+     "name": "overview",
+     "prose": {
+      "en": "To enable an organisation to be capable of holding personnel accountable for the actions they perform on their systems, it is important that the organisation develops, implements and maintains a system usage policy governing the use of systems and their resources."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-management-system-administrati-12c9895",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Software registers"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1493",
+   "sequence": 10250
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1643",
+   "sequence": 10260
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Software registers",
+     "name": "overview",
+     "prose": {
+      "en": "To assist with system administration activities, including monitoring information sources for details of relevant patches or updates, an organisation should develop, implement, maintain and regularly verify software registers for workstations, servers, network devices and networked IT equipment."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,39 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-user-application-har-8d1c878",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Web browsers"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1486",
+   "sequence": 8390
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1485",
+   "sequence": 8400
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1412",
+   "sequence": 8410
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1585",
+   "sequence": 8420
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Web browsers",
+     "name": "overview",
+     "prose": {
+      "en": "When web browsers are deployed in their default state, or with an unapproved configuration, it can lead to an insecure operating environment that may allow malicious actors to gain an initial foothold on networks. Many settings exist within web browsers enabling them to be configured in an approved secure state to minimise this security risk. As such, ASD and vendors often produce hardening guidance to assist in hardening the configuration of web browsers. However, in situations where ASD and vendor hardening guidance conflicts, precedence should be given to implementing the most restrictive guidance.\n\nIn addition, users’ ability to change the security settings of web browsers can be exploited by malicious actors using social engineering. To prevent users from removing security functionality, or breaking security functionality, users should not have the ability to change the security settings for web browsers."
+     }
+    }
+   ]
+  }
+ }
+}

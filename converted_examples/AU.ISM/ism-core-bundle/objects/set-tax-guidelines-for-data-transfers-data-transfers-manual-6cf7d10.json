@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-data-transfers-data-transfers-manual-6cf7d10",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Manual import of data"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0657",
+   "sequence": 16840
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1778",
+   "sequence": 16850
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Manual import of data",
+     "name": "overview",
+     "prose": {
+      "en": "When manually importing data to systems, such as via the use of removable media, the data should be scanned for malicious and active content to reduce the likelihood of causing a malicious code infection. In cases where security checks fail, data should be quarantined until it can be reviewed and subsequently approved or not approved for release."
+     }
+    }
+   ]
+  }
+ }
+}

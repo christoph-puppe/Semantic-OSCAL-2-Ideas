@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-evaluated-products-evaluated-product-dfbf55c",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Delivery of evaluated products"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0285",
+   "sequence": 5700
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0286",
+   "sequence": 5710
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Delivery of evaluated products",
+     "name": "overview",
+     "prose": {
+      "en": "It is important that an organisation ensures that products they source are the actual products that are delivered. In the case of evaluated products, if the product delivered differs from an evaluated version, then the assurance gained from the evaluation may not necessarily apply.\n\nPackaging and delivery practices can vary greatly from product to product. For most evaluated products, standard commercial packaging and delivery practices are likely to be sufficient. However, in some cases more secure packaging and delivery practices, including tamper-evident seals and secure transportation, may be required. In the case of the digital delivery of evaluated products, digital signatures or cryptographic checksums can often be used to ensure the integrity of the product that was delivered."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-incidents-responding-t-e7ca961",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Maintaining the integrity of evidence"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0138",
+   "sequence": 1540
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Maintaining the integrity of evidence",
+     "name": "overview",
+     "prose": {
+      "en": "When gathering evidence following a cyber security incident, it is important that it is gathered in an appropriate manner and that its integrity is maintained. In addition, if ASD is requested to assist with investigations, no actions that could affect the integrity of evidence should be carried out before ASD becomes involved."
+     }
+    }
+   ]
+  }
+ }
+}

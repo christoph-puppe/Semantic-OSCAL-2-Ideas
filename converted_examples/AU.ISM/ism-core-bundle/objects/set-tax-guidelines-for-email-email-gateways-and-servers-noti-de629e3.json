@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-email-email-gateways-and-servers-noti-de629e3",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Notifications of undeliverable emails"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1024",
+   "sequence": 13360
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Notifications of undeliverable emails",
+     "name": "overview",
+     "prose": {
+      "en": "Notifications of undeliverable emails are commonly sent by receiving email servers when emails cannot be delivered, usually because destination addresses are invalid. Due to the common spamming practice of spoofing sender addresses, this often results in many undeliverable email notifications being sent to innocent third parties. Sending notifications of undeliverable emails only to senders that can be verified via SPF, or other trusted means, avoids contributing to this problem while allowing legitimate senders to be notified."
+     }
+    }
+   ]
+  }
+ }
+}

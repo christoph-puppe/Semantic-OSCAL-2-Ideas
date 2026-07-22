@@ -1,0 +1,51 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-hardening-server-application-h-e0f2f59",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Microsoft Active Directory Domain Services security group memberships"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1620",
+   "sequence": 8920
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1939",
+   "sequence": 8930
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1940",
+   "sequence": 8940
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1941",
+   "sequence": 8950
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1942",
+   "sequence": 8960
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1845",
+   "sequence": 8970
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1846",
+   "sequence": 8980
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Microsoft Active Directory Domain Services security group memberships",
+     "name": "overview",
+     "prose": {
+      "en": "Microsoft AD DS contains several built-in security groups that have elevated permissions or deliberately relaxed security policies. These security groups are often required for a specific purpose; however, overuse or inappropriate use may allow malicious actors to more easily move laterally throughout a network or escalate their privileges. Highly privileged security groups, such as the Domain Admins and Enterprise Admins security groups, should have their membership limited to the smallest set of possible user accounts to limit malicious actors’ opportunities for privilege escalation. In doing so, such highly privileged security groups should exclude service accounts and computer accounts. In addition, the Domain Computers security group should be excluded from belonging to any privileged or highly privileged security groups."
+     }
+    }
+   ]
+  }
+ }
+}

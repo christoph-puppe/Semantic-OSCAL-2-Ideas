@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-information-technology-equipment-it-e-7c24f43",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Labelling IT equipment"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0294",
+   "sequence": 5870
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Labelling IT equipment",
+     "name": "overview",
+     "prose": {
+      "en": "Applying protective markings to IT equipment assists to reduce the likelihood that a user will accidentally input data into it that it is not approved for processing, storing or communicating.\n\nWhile text-based protective markings are typically used for labelling IT equipment, there may be circumstances where colour-based protective markings or other marking schemes need to be used instead. In such cases, the marking scheme will need to be documented and personnel trained in its use."
+     }
+    }
+   ]
+  }
+ }
+}

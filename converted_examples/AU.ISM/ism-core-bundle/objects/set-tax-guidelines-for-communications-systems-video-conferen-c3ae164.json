@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-systems-video-conferen-c3ae164",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Video conferencing and Internet Protocol telephony infrastructure hardening"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1562",
+   "sequence": 4500
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Video conferencing and Internet Protocol telephony infrastructure hardening",
+     "name": "overview",
+     "prose": {
+      "en": "Video conferencing and IP telephony infrastructure can be hardened to reduce its attack surface. For example, by ensuring that a Session Initiation Protocol server has a fully patched operating system, uses fully patched applications and only runs required services."
+     }
+    }
+   ]
+  }
+ }
+}

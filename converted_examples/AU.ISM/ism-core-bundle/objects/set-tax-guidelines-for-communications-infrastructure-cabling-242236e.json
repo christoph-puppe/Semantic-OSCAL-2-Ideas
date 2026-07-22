@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-cabling-242236e",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Power reticulation"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1123",
+   "sequence": 4200
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Power reticulation",
+     "name": "overview",
+     "prose": {
+      "en": "It is important that TOP SECRET systems have control over the power system to prevent denial of service by deliberate or accidental means."
+     }
+    }
+   ]
+  }
+ }
+}

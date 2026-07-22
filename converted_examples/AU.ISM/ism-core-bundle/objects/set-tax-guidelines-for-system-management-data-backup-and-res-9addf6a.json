@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-system-management-data-backup-and-res-9addf6a",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Testing restoration of backups"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1515",
+   "sequence": 10790
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Testing restoration of backups",
+     "name": "overview",
+     "prose": {
+      "en": "To ensure that backups can be restored when the need arises, and that any dependencies can be identified and managed beforehand, it is important that the restoration of data, applications and settings from backups to a common point in time is tested in a coordinated manner as part of disaster recovery exercises."
+     }
+    }
+   ]
+  }
+ }
+}

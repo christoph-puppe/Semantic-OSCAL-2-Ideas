@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-systems-fax-machines-a-8619155",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Sending and receiving fax messages"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2075",
+   "sequence": 4890
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Sending and receiving fax messages",
+     "name": "overview",
+     "prose": {
+      "en": "As fax machines, and associated communications protocols, are legacy information technology, they should not be used for sending or receiving fax messages. Instead, more secure communications methods, such as scanning documents and attaching them to emails, should be used."
+     }
+    }
+   ]
+  }
+ }
+}

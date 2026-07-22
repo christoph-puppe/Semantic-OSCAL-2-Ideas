@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-service-continuity-for-onl-7f60e55",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Capacity and availability planning and monitoring for online services"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1579",
+   "sequence": 14430
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1580",
+   "sequence": 14440
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1581",
+   "sequence": 14450
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Capacity and availability planning and monitoring for online services",
+     "name": "overview",
+     "prose": {
+      "en": "It is important that connectivity between an organisation and their cloud service providers meets requirements for bandwidth, latency and availability. In support of this, an organisation and their cloud service providers should discuss the ability to scale resources dynamically in response to genuine spikes in demand. This should include any authorised activities that can be undertaken to verify measures implemented to support such requirements, especially where high availability is required. For example, an organisation and their cloud service providers may discuss whether dedicated communication links or internet connections will be used, and whether secondary communications links will provide sufficient capacity to maintain operational requirements if the primary communication link becomes unavailable.\n\nFurthermore, capacity and availability monitoring should be performed to manage workloads and monitor the health of online services. This can be achieved through continuous real-time monitoring of metrics, such as latency, jitter, packet loss, throughput and availability. In addition, feedback should be provided to cloud service providers when performance does not meet service level agreement targets. To assist with this, anomaly detection can be performed through network telemetry that is integrated into security monitoring tools."
+     }
+    }
+   ]
+  }
+ }
+}

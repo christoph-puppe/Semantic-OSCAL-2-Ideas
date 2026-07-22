@@ -1,0 +1,39 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configu-cb735ea",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Network documentation"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0518",
+   "sequence": 13400
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0516",
+   "sequence": 13410
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1912",
+   "sequence": 13420
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1178",
+   "sequence": 13430
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Network documentation",
+     "name": "overview",
+     "prose": {
+      "en": "It is important that accurate and sufficiently detailed network documentation is developed as this can assist in troubleshooting network problems as well as responding to and recovering from cyber security incidents. As such, network documentation should include high-level network diagrams showing all connections into networks; logical network diagrams showing all critical servers, high-value servers, network devices and network security appliances; and device settings for all critical servers, high-value servers, network devices and network security appliances. Finally, as network documentation could be used by malicious actors to assist in compromising networks, it is important that it is appropriately protected."
+     }
+    }
+   ]
+  }
+ }
+}

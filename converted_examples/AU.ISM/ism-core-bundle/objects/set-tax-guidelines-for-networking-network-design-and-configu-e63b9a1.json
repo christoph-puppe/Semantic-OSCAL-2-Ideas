@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-networking-network-design-and-configu-e63b9a1",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Regularly restarting network devices"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1801",
+   "sequence": 13950
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Regularly restarting network devices",
+     "name": "overview",
+     "prose": {
+      "en": "Implementing measures to restart network devices at least monthly can assist in maintaining network device performance as well as removing malicious actors that may have compromised a network device but failed to gain persistence."
+     }
+    }
+   ]
+  }
+ }
+}

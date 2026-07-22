@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-58d8c0d",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Reporting and resolving vulnerabilities"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1908",
+   "sequence": 12170
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1754",
+   "sequence": 12180
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1909",
+   "sequence": 12190
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Reporting and resolving vulnerabilities",
+     "name": "overview",
+     "prose": {
+      "en": "Following the identification of vulnerabilities in software, via either internal software security testing or external security researchers, it is important that they are publicly disclosed in a responsible and timely manner. This allows users of impacted software to determine their risk exposure as part of their own cyber supply chain risk management activities. In doing so, such vulnerabilities should be resolved in a timely manner. In support of this, root cause analysis should be performed and, to the greatest extent possible, entire vulnerability classes should be remediated.\n\nIf vulnerabilities cannot be resolved in a timely manner via patches or updates, advice should be provided on how, to the greatest extent possible, the likelihood of vulnerabilities being exploited can be reduced, the impact of vulnerabilities being exploited can be reduced or both."
+     }
+    }
+   ]
+  }
+ }
+}

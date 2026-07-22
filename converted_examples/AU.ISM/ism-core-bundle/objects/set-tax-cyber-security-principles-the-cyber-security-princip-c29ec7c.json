@@ -1,0 +1,43 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/cyber-security-principles-the-cyber-security-princip-c29ec7c",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Detect cyber security principles"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-principle-det-01",
+   "sequence": 410
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-principle-det-04",
+   "sequence": 420
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-principle-det-02",
+   "sequence": 430
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-principle-det-03",
+   "sequence": 440
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-principle-det-05",
+   "sequence": 450
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Detect cyber security principles",
+     "name": "overview",
+     "prose": {
+      "en": "The Detect (DET) cyber security principles are:"
+     }
+    }
+   ]
+  }
+ }
+}

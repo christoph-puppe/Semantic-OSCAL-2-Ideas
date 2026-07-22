@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-procurement-and-outsourcing-managed-s-39553db",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Access to systems by service providers"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1073",
+   "sequence": 2040
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1576",
+   "sequence": 2050
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Access to systems by service providers",
+     "name": "overview",
+     "prose": {
+      "en": "To perform their contracted duties, service providers may need to access their customers’ systems. However, without proper controls in place, this could leave systems vulnerable – especially when access occurs from outside of Australian borders. As such, an organisation should ensure that their systems are not accessed or administered by service providers unless such requirements, and associated measures to control such requirements, are documented in contractual arrangements with service providers. In doing so, it is important that sufficient measures are also in place to detect and record any unauthorised access, such as customer support representatives or platform engineers accessing encryption keys. In such cases, the service provider should immediately report the cyber security incident to their customer and make available all logs pertaining to the unauthorised access."
+     }
+    }
+   ]
+  }
+ }
+}

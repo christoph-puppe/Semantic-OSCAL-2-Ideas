@@ -1,0 +1,35 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-information-technology-equipment-it-e-bbce0a2",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "On-site maintenance or repairs"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0305",
+   "sequence": 5980
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0307",
+   "sequence": 5990
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0306",
+   "sequence": 6000
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "On-site maintenance or repairs",
+     "name": "overview",
+     "prose": {
+      "en": "Undertaking maintenance or repairs to IT equipment could impact its integrity. As such, using an appropriately cleared technician to undertake such work is considered the most secure approach. This ensures that if data is disclosed, the technician understands the requirements for its protection. Conversely, an organisation choosing to use a technician who is not appropriately cleared to undertake such work should ensure that cleared and knowledgeable personnel escort the technician while the work is undertaken."
+     }
+    }
+   ]
+  }
+ }
+}

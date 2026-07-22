@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-physical-security-facilities-and-syst-304546f",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Physical access to systems"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1973",
+   "sequence": 2330
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0810",
+   "sequence": 2340
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Physical access to systems",
+     "name": "overview",
+     "prose": {
+      "en": "The application of the defence-in-depth principle to the protection of systems is enhanced through successive layers of physical security. The first layer of physical security for facilities that contain systems is generally the use of a security zone.\n\nDeployable platforms should also meet physical security requirements. In some cases, physical security certification authorities may have specific requirements for deployable platforms that supersede the controls in these guidelines. This may include perimeter controls, building standards and staffing levels. As such, an organisation implementing deployable platforms should contact their physical security certification authority to seek additional guidance."
+     }
+    }
+   ]
+  }
+ }
+}

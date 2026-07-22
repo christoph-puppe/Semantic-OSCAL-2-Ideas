@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-communications-infrastructure-cabling-0c3345a",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Labelling cables"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1096",
+   "sequence": 3560
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Labelling cables",
+     "name": "overview",
+     "prose": {
+      "en": "Labelling cables with the correct source and destination details minimises the likelihood of cross-patching and aids in fault finding and configuration management."
+     }
+    }
+   ]
+  }
+ }
+}

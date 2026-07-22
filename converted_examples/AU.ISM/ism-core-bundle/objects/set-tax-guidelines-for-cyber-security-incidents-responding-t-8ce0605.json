@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-incidents-responding-t-8ce0605",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Handling and containing data spills"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0133",
+   "sequence": 1420
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Handling and containing data spills",
+     "name": "overview",
+     "prose": {
+      "en": "When a data spill occurs, an organisation should inform data owners and restrict access to the data. In doing so, affected systems can be powered off, have their network connectivity removed or have additional access controls applied to the data. However, powering off systems could destroy data that would be useful for forensic investigations. Furthermore, users should be made aware of appropriate actions to take in the event of a data spill, such as not deleting, copying, printing or emailing the data."
+     }
+    }
+   ]
+  }
+ }
+}

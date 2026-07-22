@@ -8,7 +8,7 @@ Source: ACSC ISM OSCAL catalog v2026.06.18 (oscal-version 1.1.2) - 1,150 control
 - Mapped (declared destination): **36,161**
 - **UNMAPPED: 0**  ->  coverage **100.0 %**
 
-- Objects emitted: **1,150 Requirements**, **322 Sets**, manifest with both digests per object.
+- Objects emitted: **1,150 Requirements**, **561 Sets**, manifest with both digests per object.
 
 ## Conversion rules (declared, counted)
 

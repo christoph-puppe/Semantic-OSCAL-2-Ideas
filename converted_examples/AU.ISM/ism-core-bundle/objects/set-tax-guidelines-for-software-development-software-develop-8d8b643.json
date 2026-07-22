@@ -1,0 +1,47 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-software-development-software-develop-8d8b643",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Software artefacts"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2026",
+   "sequence": 11390
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2027",
+   "sequence": 11400
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2028",
+   "sequence": 11410
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2102",
+   "sequence": 11420
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2029",
+   "sequence": 11430
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-2030",
+   "sequence": 11440
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Software artefacts",
+     "name": "overview",
+     "prose": {
+      "en": "Software artefacts can include compiled code, third-party libraries, configuration files and any other files consumed by the software development process. Software artefacts, whether developed internally or externally, may include malicious content or weaknesses designed for exploitation at a later stage. To assist in preventing the introduction of malicious content or weak software artefacts into an authoritative source for software, all software artefacts should be scanned for malicious content and undergo security testing (where appropriate) before being stored in the authoritative source for software."
+     }
+    }
+   ]
+  }
+ }
+}

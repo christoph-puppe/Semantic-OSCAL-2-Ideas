@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-incidents-managing-cyb-8812ffc",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Reporting cyber security incidents to customers and the public"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1880",
+   "sequence": 1360
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1881",
+   "sequence": 1370
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Reporting cyber security incidents to customers and the public",
+     "name": "overview",
+     "prose": {
+      "en": "Reporting cyber security incidents to customers and the public in a timely manner after they occur or are discovered is one way that an organisation can demonstrate their commitment to transparency. In addition, an organisation should be cognisant of any legislative obligations regarding the reporting of cyber security incidents to customers and the public."
+     }
+    }
+   ]
+  }
+ }
+}

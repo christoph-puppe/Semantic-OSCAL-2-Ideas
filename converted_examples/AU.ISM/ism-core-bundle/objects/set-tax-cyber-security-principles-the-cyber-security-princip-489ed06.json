@@ -1,0 +1,31 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/cyber-security-principles-the-cyber-security-princip-489ed06",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Recover cyber security principles"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-principle-rec-02",
+   "sequence": 530
+  },
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-principle-rec-01",
+   "sequence": 540
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Recover cyber security principles",
+     "name": "overview",
+     "prose": {
+      "en": "The Recover (REC) cyber security principles are:"
+     }
+    }
+   ]
+  }
+ }
+}

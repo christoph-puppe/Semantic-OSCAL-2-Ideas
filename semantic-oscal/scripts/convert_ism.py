@@ -41,7 +41,12 @@ def semantic_digest(obj):
 
 def slug(s):
     s = re.sub(r"[^a-z0-9]+", "-", (s or "").lower()).strip("-")
-    return s[:60] or "x"
+    if len(s) <= 60:
+        return s or "x"
+    # P10 #39: a bare [:60] cut collided nested taxonomy ids (parent==child
+    # -> self-loops; sibling==sibling -> silently merged sets). Truncation
+    # keeps a stable disambiguating hash of the full slug instead.
+    return s[:52].rstrip("-") + "-" + hashlib.sha256(s.encode()).hexdigest()[:7]
 
 # ---------- 1) full source path inventory ----------
 def inventory(node, prefix, counter):
@@ -229,11 +234,18 @@ for cls, refs in sorted(class_members.items()):
         "id": uri, "version": version, "lifecycle": "active",
         "title": f"Category: {cls}", "members": [{"ref": r, "sequence": (i+1)*10} for i, r in enumerate(refs)]}
 
-# write objects + manifest (in place; no rmtree - the OneDrive house rule.
-# this rerun changes no filenames, so there is nothing stale to remove)
+# write objects + manifest (in place; no rmtree - the OneDrive house rule)
 from oscal_conv_lib import textify
 for obj in objects.values(): textify(obj, LANG)   # 12 delivery
 for rel, obj in objects.items(): w(rel, obj)
+# P10 #39 rerun: previously-truncated slugs changed, and formerly-merged
+# sets re-emerge - remove stale object files FILE-BY-FILE (never rmtree)
+for _base, _, _files in os.walk(os.path.join(OUT, "objects")):
+    for _fn in _files:
+        _fp = os.path.join(_base, _fn)
+        _rel = os.path.relpath(_fp, OUT).replace("\\", "/")
+        if _rel.endswith(".json") and _rel not in objects:
+            os.remove(_fp)
 w("schemas/oscal-1x-compat-1.0.0-stub.json", {
     "id": "https://ns.oscal.org/compat/oscal-1x", "version": "1.0.0",
     "note": "NORMATIVE pinned payload schema (backlog 26); Level-2 waiting room (intended deprecation; see D16/handbook 14.6)",

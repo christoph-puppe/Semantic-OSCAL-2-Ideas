@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-personnel-security-access-to-systems-c6780d2",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Recording authorisation for personnel to access systems"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0407",
+   "sequence": 3270
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Recording authorisation for personnel to access systems",
+     "name": "overview",
+     "prose": {
+      "en": "Retaining records of account requests for systems and their resources will assist in maintaining personnel accountability. Such records should include each user’s user identification, their agreement to abide by system usage policies, who provided the authorisation for their access, when their authorisation was granted and when their access was last reviewed."
+     }
+    }
+   ]
+  }
+ }
+}

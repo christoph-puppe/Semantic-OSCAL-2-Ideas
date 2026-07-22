@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-information-technology-equipment-it-e-e765142",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Off-site maintenance or repairs"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-0310",
+   "sequence": 6020
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Off-site maintenance or repairs",
+     "name": "overview",
+     "prose": {
+      "en": "An organisation choosing to have IT equipment maintained or repaired off site should do so at facilities approved for handling the sensitivity or classification of the IT equipment. However, an organisation may be able to sanitise the IT equipment prior to transport, and subsequent maintenance or repairs, to change how it needs to be handled."
+     }
+    }
+   ]
+  }
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "id": "https://ns.cyber.gov.au/ism/set/tax/guidelines-for-cyber-security-documentation-system-s-40976e1",
+ "version": "2026.06.18",
+ "lifecycle": "active",
+ "title": {
+  "en": "Plan of action and milestones"
+ },
+ "members": [
+  {
+   "ref": "https://ns.cyber.gov.au/ism/req/ism-1564",
+   "sequence": 2290
+  }
+ ],
+ "facets": {
+  "https://ns.oscal.org/compat/oscal-1x@1": {
+   "group-parts": [
+    {
+     "group": "Plan of action and milestones",
+     "name": "overview",
+     "prose": {
+      "en": "At the conclusion of a security assessment for a system, and after the production of a security assessment report by the assessor, a plan of action and milestones should be produced by the system owner. This will assist in tracking any of the system’s identified weaknesses and recommended remediation actions identified during the security assessment."
+     }
+    }
+   ]
+  }
+ }
+}
