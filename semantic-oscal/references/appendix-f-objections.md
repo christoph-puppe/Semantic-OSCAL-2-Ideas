@@ -360,8 +360,9 @@ schemas and backlog #6 as pending; both had shipped hours earlier
 The project's own P9 prompt (`drafts/oscal-semantic-core-p9-review-prompt.md`)
 ran twice, independently — run 1 fresh, run 2 with disclosed limitations
 and a concordance section. Two runs of one prompt make agreements
-replication evidence; both reports are in `drafts/`, both adjudicated
-same-day. The joint verdict, in their own words: *the executable layer
+replication evidence; both were adjudicated same-day, their reports
+since consolidated into the v0.6 backlog. The joint verdict, in their
+own words: *the executable layer
 currently proves less than the prose says it proves; none of it is
 architectural; every item has a named corpse and a countable fix.*
 
